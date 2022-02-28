@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title>로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap-select/concept_stor_swraid_local.html" />
+	<meta property="og:description" content="소프트웨어 RAID는 ONTAP 소프트웨어 스택 내에 구현된 RAID 추상화 계층입니다. FAS와 같은 기존 ONTAP 플랫폼 내에서 RAID 계층과 동일한 기능을 제공합니다. RAID 계층은 드라이브 패리티 계산을 수행하고 ONTAP Select 노드 내의 개별 드라이브 장애에 ..." />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap-select/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="소프트웨어 RAID는 ONTAP 소프트웨어 스택 내에 구현된 RAID 추상화 계층입니다. FAS와 같은 기존 ONTAP 플랫폼 내에서 RAID 계층과 동일한 기능을 제공합니다. RAID 계층은 드라이브 패리티 계산을 수행하고 ONTAP Select 노드 내의 개별 드라이브 장애에 ...">
+  <meta name="keywords" content=" ontap select, software raid, local attached storage, protection">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ko-kr/ontap-select/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/ontap-select/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/ontap-select/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/ontap-select/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ko-kr/ontap-select/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ko-kr/ontap-select/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ko-kr/ontap-select/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/ontap-select/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/ontap-select/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ko-kr/ontap-select/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ko-kr/ontap-select/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ko-kr/ontap-select/js/na-search.js'></script>
+  
+
+  
+  <script src='/ko-kr/ontap-select/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ko-kr/ontap-select/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/ontap-select/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ko-kr/ontap-select/js/na-utility.js'></script>
+  <script src='/ko-kr/ontap-select/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ko-kr/ontap-select/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ko-kr/ontap-select/js/toc.js'></script>
+  <script src='/ko-kr/ontap-select/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ko-kr/ontap-select/js/version-dropdown.js'></script>
+  <script src='/ko-kr/ontap-select/js/product-family.js'></script>
+  <script src='/ko-kr/ontap-select/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/ontap-select/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/ontap-select/js/jszip.min.js'></script>
+  <script src='/ko-kr/ontap-select/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">제품 및 솔루션</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">지원 및 교육</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">커뮤니티</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">블로그</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">고객 성공 사례</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ko-kr/ontap-select/search.html"
+          data-type="widget" 
+          data-placeholder="설명서 검색" 
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
+          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">한국어</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/ontap-select/concept_stor_swraid_local.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/ontap-select/concept_stor_swraid_local.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/ontap-select/concept_stor_swraid_local.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>사용 가능한 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ko-kr/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_설명서.pdf" >
+          <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/개념.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            개념
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/비즈니스_사용_사례.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            비즈니스 사용 사례
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/계획.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            계획
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/ONTAP_Select.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            ONTAP Select
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/ONTAP_Select_구축.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            ONTAP Select 구축
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/라이센스.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            라이센스
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/옵션.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            옵션
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/용량_풀_라이센스_모델.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            용량 풀 라이센스 모델
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/구매.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            구매
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/설치합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            설치합니다
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/설치_전_체크리스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            설치 전 체크리스트
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/관리.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            관리
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/노드_및_호스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            노드 및 호스트
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/딥_다이브.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            딥 다이브
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/스토리지.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            스토리지
+          </a>
+          
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ko-kr/ontap-select/pdfs/pages/concept_stor_swraid_local.pdf" >
+    <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/네트워킹.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            네트워킹
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/고가용성_아키텍처.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            고가용성 아키텍처
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/성능.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            성능
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/vCenter와_통합.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            vCenter와 통합
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/시작하기.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            시작하기
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/플러그인을_관리합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            플러그인을 관리합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/관리.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            관리
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/REST를_사용하여_자동화.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            REST를 사용하여 자동화
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/개념.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            개념
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/브라우저를_사용하여_에_액세스합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            브라우저를 사용하여 에 액세스합니다
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/워크플로_프로세스.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            워크플로 프로세스
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/Python으로_액세스하십시오.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            Python으로 액세스하십시오
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/Python_코드_샘플.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            Python 코드 샘플
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/CLI를_사용합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            CLI를 사용합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/노드_및_호스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            노드 및 호스트
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/배포_유틸리티.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf.png" width="16" height="16"/>
+            배포 유틸리티
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ko-kr/ontap-select/images/pdf-zip.png" width="16" height="16"/>
+      <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/index.html">
+        ONTAP Select 9.10.1 문서
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_release_notes.html">
+        릴리즈 노트
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 개념</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_ots_overview.html">
+        제품 개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_ots_deploy.html">
+        ONTAP Select 구축
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 비즈니스 사용 사례</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_usecase_overview.html">
+        비즈니스 요구 및 사용 시나리오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_usecase_robo.html">
+        원격 사무소 및 지점 사무소
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_usecase_private_cloud.html">
+        프라이빗 클라우드 및 데이터 센터
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_terminology.html">
+        용어
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 계획</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_workflow_deploy.html">
+        구축 워크플로우
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_general.html">
+        일반 요구 사항
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_hardware.html">
+        하이퍼바이저 및 하드웨어
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_storage.html">
+        스토리지 및 RAID
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_vnas.html">
+        ONTAP Select vNAS를 선택합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_networking.html">
+        네트워킹
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_two_node.html">
+        2노드 클러스터
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_robo.html">
+        원격 사무소 및 지점 사무소
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_vcenter.html">
+        VMware vCenter를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_ots_plugin.html">
+        VMware vCenter 플러그인
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select 구축</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_dep_general.html">
+        일반 요구 사항
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_dep_vmware.html">
+        구축하는 것입니다
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_plan_best_practices.html">
+        모범 사례
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 라이센스</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 옵션</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_evaluation.html">
+        평가판 라이센스
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_production.html">
+        운영 라이센스
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_platforms.html">
+        플랫폼 라이센스 제공
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 용량 풀 라이센스 모델</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_cp_operation.html">
+        운영 세부 정보
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_cp_serial_number.html">
+        노드 일련 번호입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_cp_restrictions.html">
+        제한 사항
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_cp_compare_ct.html">
+        용량 풀 및 용량 계층 비교
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_cp_benefits.html">
+        이점 요약
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 구매</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_lic_workflow.html">
+        라이선스 워크플로
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_lic_acquire_ct.html">
+        용량 계층
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_lic_acquire_cp.html">
+        용량 풀
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_lic_ontap_features.html">
+        ONTAP 기능
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 설치합니다</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 설치 전 체크리스트</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_chk_host_prep.html">
+        호스트 준비 체크리스트
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_chk_deploy_req_info.html">
+        유틸리티 필수 정보를 배포합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_chk_select_req_info.html">
+        ONTAP Select 필수 정보입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_chk_nvme_configure.html">
+        NVMe 호스트 구성
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_install_deploy.html">
+        ONTAP Select Deploy를 설치합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_deploy_cluster.html">
+        클러스터 구축
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_initial_state.html">
+        초기 클러스터 상태입니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 관리</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_adm_before.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_adm_upgrading_nodes.html">
+        노드 업그레이드
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_support.html">
+        진단 및 지원
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_security.html">
+        보안
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_connectivity.html">
+        네트워크 연결
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_mediators.html">
+        중개자
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_clusters.html">
+        클러스터
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 노드 및 호스트</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_video_console.html">
+        VM 비디오 콘솔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_resize.html">
+        클러스터 노드 크기 조정
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_replace_drives_swraid.html">
+        오류가 발생한 SW RAID 드라이브를 교체합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_upgrade_vmfs6.html">
+        VMFS6으로 업그레이드 중입니다
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_adm_licenses.html">
+        추가 수익 실적을
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 딥 다이브</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 스토리지</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_concepts_chars.html">
+        일반 개념 및 특성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_hwraid_local.html">
+        로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_swraid_local.html">
+        로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_vsan_external.html">
+        vSAN 및 외부 스토리지 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_capacity_inc.html">
+        스토리지 용량 증가
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_stor_eff_support.html">
+        스토리지 효율성 지원
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 네트워킹</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_concepts_chars.html">
+        일반 개념 및 특성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_single_multi_node.html">
+        단일 및 다중 노드 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_internal_external.html">
+        내부 및 외부 네트워크
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_supported_configs.html">
+        지원되는 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_vsphere_vswitch_config.html">
+        VMware vSphere vSwitch 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_physical_switch_config.html">
+        물리적 스위치 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_nw_data_mgmt_separation.html">
+        데이터 및 관리 분리
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 고가용성 아키텍처</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_ha_config.html">
+        HA 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_ha_mirroring.html">
+        동기식 복제 및 미러링된 애그리게이트
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_ha_other.html">
+        기타 고가용성 기능
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 성능</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_perf_general.html">
+        일반 고려 사항
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_94.html">
+        9.4 프리미엄 HA 직접 연결 SSD 스토리지
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_95.html">
+        9.5 프리미엄 HA 직접 연결 SSD 스토리지
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html">
+        9.6 프리미엄 HA 직접 연결 SSD 스토리지
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> vCenter와 통합</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 시작하기</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_vpi_overview.html">
+        개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_vpi_architecture.html">
+        있습니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_vpi_planning.html">
+        계획 수립
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 플러그인을 관리합니다</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_vpi_manage_before.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_install.html">
+        설치합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_access.html">
+        액세스
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_upgrade.html">
+        업그레이드 및 제거
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_manually_remove.html">
+        플러그인을 수동으로 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_deploy_cluster.html">
+        클러스터 구축
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_vpi_vcenter_integration.html">
+        vCenter 통합
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 관리</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_adm_support.html">
+        진단 및 지원
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_adm_network.html">
+        네트워킹
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_adm_clusters.html">
+        클러스터
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_vpi_adm_licenses.html">
+        추가 수익 실적을
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_vpi_troubleshooting.html">
+        문제 해결
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> REST를 사용하여 자동화</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 개념</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_rest.html">
+        REST 웹 서비스
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_how_access.html">
+        배포 API에 액세스합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_versions.html">
+        API 버전 관리 배포
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_operation.html">
+        기본 작동
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_transaction.html">
+        요청 및 응답 트랜잭션
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_async_proc.html">
+        비동기 처리
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 브라우저를 사용하여 에 액세스합니다</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_before_browser.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_api_access_doc_page.html">
+        문서 페이지에 액세스합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_api_understanding_call.html">
+        API 호출 이해
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 워크플로 프로세스</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_before_workflows.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_workflow01.html">
+        워크플로우 1 클러스터 생성
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python으로 액세스하십시오</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_before_python.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_api_understanding_scripts.html">
+        스크립트 이해
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python 코드 샘플</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_script_cc.html">
+        클러스터를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_json_cc.html">
+        JSON으로 클러스터를 생성하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_script_anl.html">
+        노드 라이센스를 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_script_dc.html">
+        클러스터를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_script_common.html">
+        공통 지원 모듈
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_api_script_resize.html">
+        클러스터 노드 크기 조정
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_automate_ansible.html">
+        Ansible을 통한 자동화
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CLI를 사용합니다</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/concept_cli_before.html">
+        시작하기 전에
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_signing_in.html">
+        SSH를 사용하여 로그인합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_deploy_cluster.html">
+        클러스터 구축
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_security.html">
+        보안
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_connectivity.html">
+        네트워크 연결
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_clusters.html">
+        클러스터
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 노드 및 호스트</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_upgrade_esxi65.html">
+        ESXi를 6.5 이상으로 업그레이드하는 중입니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 배포 유틸리티</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_upgrade_deploy.html">
+        배포 인스턴스를 업그레이드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_migrate_deploy.html">
+        배포 인스턴스 마이그레이션
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_deploy_image_add.html">
+        ONTAP Select 이미지를 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_deploy_image_remove.html">
+        ONTAP Select 이미지를 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/task_cli_deploy_recover_two_node.html">
+        2노드 클러스터에 대한 구축 복구
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_faq.html">
+        FAQ 를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_additional_info.html">
+        자세한 정보를 확인하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_earlier_versions.html">
+        이전 버전
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap-select/reference_legal_notices.html">
+        법적 고지
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">홈</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">설명서</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ko-kr/ontap-select/">ONTAP&nbsp;Select</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-02-28 19:53:28 +0000">02/28/2022</time>
+    
+  
+
+<span>기여자
+  <a target="_blank" href="https://github.com/netapp-barbe">
+    <img  class="avatar avatar-small"
+          alt="netapp-barbe"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/veekannan">
+    <img  class="avatar avatar-small"
+          alt="veekannan"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/48808470?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>소프트웨어 RAID는 ONTAP 소프트웨어 스택 내에 구현된 RAID 추상화 계층입니다. FAS와 같은 기존 ONTAP 플랫폼 내에서 RAID 계층과 동일한 기능을 제공합니다. RAID 계층은 드라이브 패리티 계산을 수행하고 ONTAP Select 노드 내의 개별 드라이브 장애에 대한 보호를 제공합니다.</p>
+</div>
+<div class="paragraph">
+<p>하드웨어 RAID 구성과 상관없이 ONTAP Select는 소프트웨어 RAID 옵션도 제공합니다. ONTAP Select를 소형 폼 팩터 상용 하드웨어에 배포하는 경우와 같이 특정 환경에서 하드웨어 RAID 컨트롤러를 사용하지 않거나 사용하지 않는 것이 좋습니다. 소프트웨어 RAID는 이러한 환경을 포함하도록 사용 가능한 배포 옵션을 확장합니다. 사용자 환경에서 소프트웨어 RAID를 활성화하려면 다음 사항을 기억해야 합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>이 제품은 Premium 또는 Premium XL 라이센스와 함께 사용할 수 있습니다.</p>
+</li>
+<li>
+<p>ONTAP 루트 및 데이터 디스크용 SSD 또는 NVMe(Premium XL 라이센스 필요) 드라이브만 지원합니다.</p>
+</li>
+<li>
+<p>ONTAP Select VM 부팅 파티션에는 별도의 시스템 디스크가 필요합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SSD 또는 NVMe 드라이브 중 하나의 개별 디스크를 선택하여 시스템 디스크(NVRAM, 부팅/CF 카드, 코어 덤프 및 다중 노드 설정의 중재자)용 데이터 저장소를 생성합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>참고 *</p>
+</li>
+<li>
+<p>서비스 디스크 및 시스템 디스크라는 용어는 서로 바꿔서 사용할 수 있습니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>서비스 디스크는 ONTAP Select VM 내에서 클러스터링, 부팅 등과 같은 다양한 항목을 제공하는 데 사용되는 VMDK입니다.</p>
+</li>
+<li>
+<p>서비스 디스크는 호스트에서 보는 것처럼 물리적으로 단일 물리 디스크(통칭하여 서비스/시스템 물리 디스크라고 함)에 위치합니다. 해당 물리적 디스크에는 DAS 데이터 저장소가 포함되어야 합니다. ONTAP Deploy는 클러스터 구축 중에 ONTAP Select VM용 서비스 디스크를 생성합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>여러 데이터 저장소 또는 여러 물리적 드라이브에서 ONTAP Select 시스템 디스크를 더 이상 분리할 수 없습니다.</p>
+</li>
+<li>
+<p>하드웨어 RAID는 더 이상 사용되지 않습니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="로컬-연결-스토리지를-위한-소프트웨어-raid-구성">로컬 연결 스토리지를 위한 소프트웨어 RAID 구성</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>소프트웨어 RAID를 사용하는 경우 하드웨어 RAID 컨트롤러가 없는 것이 좋지만 시스템에 기존 RAID 컨트롤러가 있는 경우 다음 요구 사항을 준수해야 합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템에 디스크를 직접 제공할 수 있도록 하드웨어 RAID 컨트롤러를 비활성화해야 합니다(JBOD). 이러한 변경은 일반적으로 RAID 컨트롤러 BIOS에서 수행할 수 있습니다</p>
+</li>
+<li>
+<p>또는 하드웨어 RAID 컨트롤러가 SAS HBA 모드에 있어야 합니다. 예를 들어, 일부 BIOS 구성에서는 RAID 외에 “AHCI” 모드가 허용되며, 이는 JBOD 모드를 활성화하도록 선택할 수 있습니다. 이렇게 하면 물리적 드라이브가 호스트에 있는 것처럼 표시되도록 패스스루를 사용할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>컨트롤러에서 지원되는 최대 드라이브 수에 따라 추가 컨트롤러가 필요할 수 있습니다. SAS HBA 모드를 사용하는 경우 최소 6Gb/s 속도로 IO 컨트롤러(SAS HBA)가 지원되는지 확인합니다. 그러나 NetApp에서는 12GBps 속도를 권장합니다.</p>
+</div>
+<div class="paragraph">
+<p>다른 하드웨어 RAID 컨트롤러 모드 또는 구성은 지원되지 않습니다. 예를 들어, 일부 컨트롤러는 디스크를 인위적으로 통과시킬 수 있지만 그 의미는 바람직하지 않을 수 있는 RAID 0 지원을 허용합니다. 지원되는 물리적 디스크 크기(SSD만 해당)는 200GB~16TB 사이입니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="참고">
+</td>
+<td class="content">
+관리자는 ONTAP Select VM에서 사용 중인 드라이브를 추적하고 호스트에서 해당 드라이브를 실수로 사용하지 않도록 해야 합니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ontap-select-가상-및-물리-디스크">ONTAP Select 가상 및 물리 디스크</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>하드웨어 RAID 컨트롤러 구성의 경우 RAID 컨트롤러에서 물리 디스크 이중화를 제공합니다. ONTAP Select에는 ONTAP 관리자가 데이터 애그리게이트를 구성할 수 있는 하나 이상의 VMDK가 제공됩니다. 이러한 VMDK는 RAID 0 형식으로 스트라이핑됩니다. ONTAP 소프트웨어 RAID는 하드웨어 수준에서 제공되는 복원력으로 인해 중복되고 비효율적이며 효과가 없기 때문입니다. 또한 시스템 디스크에 사용되는 VMDK는 사용자 데이터를 저장하는 데 사용되는 VMDK와 동일한 데이터 저장소에 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>소프트웨어 RAID를 사용할 때 ONTAP 배포는 ONTAP Select SSD 및 패스쓰루 또는 DirectPath IO 장치의에 VMDK(가상 디스크) 및 물리 디스크 RDM(Raw Device Mappings)을 제공합니다.</p>
+</div>
+<div class="paragraph">
+<p>다음 그림에서는 이 관계를 보다 자세히 보여 주고, ONTAP Select VM 내부 작업에 사용되는 가상 디스크와 사용자 데이터를 저장하는 데 사용되는 물리적 디스크 간의 차이점을 보여 줍니다.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Select 소프트웨어 RAID: 가상화 디스크 및 RDM * 사용</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ST_18.PNG" alt="ONTAP Select 소프트웨어 RAID: 가상화 디스크 및 RDM 사용"></span></p>
+</div>
+<div class="paragraph">
+<p>시스템 디스크(VMDK)는 동일한 데이터 저장소와 동일한 물리적 디스크에 상주합니다. 가상 NVRAM 디스크에는 빠르고 내구성이 있는 미디어가 필요합니다. 따라서 NVMe 및 SSD 유형 데이터 저장소만 지원됩니다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ST_19.PNG" alt="NVMe 드라이브가 포함된 ONTAP Select 소프트웨어 RAID: 가상화된 디스크 및 패스스루 장치 사용"></span></p>
+</div>
+<div class="paragraph">
+<p>시스템 디스크(VMDK)는 동일한 데이터 저장소와 동일한 물리적 디스크에 상주합니다. 가상 NVRAM 디스크에는 빠르고 내구성이 있는 미디어가 필요합니다. 따라서 NVMe 및 SSD 유형 데이터 저장소만 지원됩니다. NVMe 드라이브를 데이터에 사용할 때 성능 상의 이유로 시스템 디스크도 NVMe 장치여야 합니다. All NVMe 구성에서 시스템 디스크를 사용할 수 있는 적합한 후보는 Intel Optane 카드입니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="참고">
+</td>
+<td class="content">
+현재 릴리즈에서는 여러 데이터 저장소 또는 여러 물리적 드라이브에서 ONTAP Select 시스템 디스크를 더 이상 분리할 수 없습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>각 데이터 디스크는 작은 루트 파티션(스트라이프)과 같은 크기의 파티션 두 개로 나뉘어 ONTAP Select VM 내에서 보이는 두 개의 데이터 디스크를 만듭니다. 파티션은 단일 노드 클러스터 및 HA 쌍의 노드에 대해 다음 그림에 표시된 대로 루트 데이터 데이터(RD2) 스키마를 사용합니다.</p>
+</div>
+<div class="paragraph">
+<p>P는 패리티 드라이브를 나타냅니다. dP는 이중 패리티 드라이브를, S는 예비 드라이브를 나타냅니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>단일 노드 클러스터를 위한 RDD 디스크 파티셔닝 *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ST_19.jpg" alt="단일 노드 클러스터를 위한 RDD 디스크 파티셔닝"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>다중 노드 클러스터를 위한 RDD 디스크 파티셔닝(HA 쌍) *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ST_20.jpg" alt="다중 노드 클러스터를 위한 RDD 디스크 파티셔닝(HA 쌍)"></span></p>
+</div>
+<div class="paragraph">
+<p>ONTAP 소프트웨어 RAID는 RAID 4, RAID-DP 및 RAID-TEC와 같은 RAID 유형을 지원합니다. 이는 FAS 및 AFF 플랫폼에서 사용되는 RAID 구문과 동일합니다. 루트 프로비저닝의 경우 ONTAP Select는 RAID 4 및 RAID-DP만 지원합니다. 데이터 애그리게이트에 RAID-TEC를 사용할 때는 전반적인 보호 기능이 RAID-DP입니다. ONTAP Select HA는 각 노드의 구성을 다른 노드로 복제하는 무공유 아키텍처를 사용합니다. 즉, 각 노드는 루트 파티션과 해당 피어의 루트 파티션 복제본을 저장해야 합니다. 데이터 디스크에는 단일 루트 파티션이 있으므로 최소 데이터 디스크 수는 ONTAP Select 노드가 HA 쌍의 일부인지 여부에 따라 달라집니다.</p>
+</div>
+<div class="paragraph">
+<p>단일 노드 클러스터의 경우 모든 데이터 파티션이 로컬(활성) 데이터를 저장하는 데 사용됩니다. HA 쌍의 일부인 노드의 경우 데이터 파티션 하나는 해당 노드의 로컬(활성) 데이터를 저장하는 데 사용되고, 두 번째 데이터 파티션은 HA 피어의 활성 데이터를 미러링하는 데 사용됩니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="통과-연결directpath-io-디바이스와-rdmraw-device-maps">통과 연결(DirectPath IO) 디바이스와 RDM(Raw Device Maps)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>VMware ESX는 현재 NVMe 디스크를 원시 장치 맵으로 지원하지 않습니다. ONTAP Select에서 NVMe 디스크를 직접 제어하려면 NVMe 드라이브를 ESX에서 통과 장치로 구성해야 합니다. NVMe 장치를 통과 장치로 구성하려면 서버 BIOS에서 지원해야 하며 중단 프로세스이므로 ESX 호스트를 재부팅해야 합니다. 또한 ESX 호스트당 최대 통과 장치 수는 16개입니다. 그러나 ONTAP 배포에서는 이 제한이 14로 제한됩니다. ONTAP Select 노드당 14개의 NVMe 장치로 이 제한이 있다는 것은 모든 NVMe 구성이 총 용량을 희생하여 매우 높은 IOP 밀도(IOPS/TB)를 제공한다는 의미입니다. 또는 더 큰 스토리지 용량을 제공하는 고성능 구성을 원할 경우 대규모 ONTAP Select VM 크기, 시스템 디스크용 Intel Optane 카드, 데이터 스토리지용 SSD 드라이브 수를 지정하는 것이 좋습니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="참고">
+</td>
+<td class="content">
+NVMe 성능을 최대한 활용하려면 대규모 ONTAP Select VM 크기를 고려하십시오.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>패스스루 장치와 RDM 간에는 추가적인 차이점이 있습니다. RDM은 실행 중인 VM에 매핑할 수 있습니다. 패스스루 디바이스에는 VM 재부팅이 필요합니다. 즉, NVMe 드라이브 교체 또는 용량 확장(드라이브 추가) 절차를 수행하려면 ONTAP Select VM을 재부팅해야 합니다. 드라이브 교체 및 용량 확장(드라이브 추가) 작업은 ONTAP Deploy의 워크플로우에 따라 달라집니다. ONTAP Deploy는 단일 노드 클러스터의 ONTAP Select 재부팅과 HA 쌍의 페일오버/페일백을 관리합니다. 하지만 SSD 데이터 드라이브 작업(ONTAP Select 재부팅/장애 조치는 필요 없음)과 NVMe 데이터 드라이브 작업(ONTAP Select 재부팅/장애 조치 필요) 간의 차이점을 반드시 알아야 합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="물리-및-가상-디스크-프로비저닝">물리 및 가상 디스크 프로비저닝</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>보다 간소화된 사용자 환경을 제공하기 위해 ONTAP Deploy는 지정된 데이터 저장소(물리적 시스템 디스크)에서 시스템(가상) 디스크를 자동으로 프로비저닝하고 ONTAP Select VM에 연결합니다. 이 작업은 ONTAP Select VM이 부팅될 수 있도록 초기 설정 중에 자동으로 수행됩니다. RDM은 파티셔닝되고 루트 애그리게이트는 자동으로 구축됩니다. ONTAP Select 노드가 HA 쌍의 일부인 경우 데이터 파티션이 로컬 스토리지 풀 및 미러 스토리지 풀에 자동으로 할당됩니다. 이 할당은 클러스터 생성 작업과 스토리지 추가 작업 모두에서 자동으로 수행됩니다.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Select VM의 데이터 디스크는 기본 물리적 디스크와 연결되기 때문에 더 많은 수의 물리적 디스크를 사용하여 구성을 생성할 때 성능에 영향을 미칩니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="참고">
+</td>
+<td class="content">
+루트 애그리게이트의 RAID 그룹 유형은 사용 가능한 디스크 수에 따라 다릅니다. ONTAP 배포는 적절한 RAID 그룹 유형을 선택합니다. 노드에 할당된 디스크가 충분한 경우 RAID-DP를 사용하고, 그렇지 않은 경우 RAID-4 루트 애그리게이트를 생성합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>소프트웨어 RAID를 사용하여 ONTAP Select VM에 용량을 추가할 때 관리자는 물리적 드라이브 크기와 필요한 드라이브 수를 고려해야 합니다. 자세한 내용은 섹션을 참조하십시오 <a href="concept_stor_capacity_inc.html">"스토리지 용량 증가"</a>.</p>
+</div>
+<div class="paragraph">
+<p>FAS 및 AFF 시스템과 마찬가지로 용량이 동일하거나 더 큰 드라이브만 기존 RAID 그룹에 추가할 수 있습니다. 대용량 드라이브의 크기가 큽니다. 새 RAID 그룹을 생성하는 경우 새 RAID 그룹 크기가 기존 RAID 그룹 크기와 일치하여 전체적인 애그리게이트 성능이 저하되지 않도록 해야 합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ontap-select-디스크를-해당-esx-디스크에-일치시킵니다">ONTAP Select 디스크를 해당 ESX 디스크에 일치시킵니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP Select 디스크에는 보통 net x.x.y라는 레이블이 지정됩니다 다음 ONTAP 명령을 사용하여 디스크 UUID를 얻을 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;system name&gt;::&gt; disk show NET-1.1
+Disk: NET-1.1
+Model: Micron_5100_MTFD
+Serial Number: 1723175C0B5E
+UID: *500A0751:175C0B5E*:00000000:00000000:00000000:00000000:00000000:00000000:00000000:00000000
+BPS: 512
+Physical Size: 894.3GB
+Position: shared
+Checksum Compatibility: advanced_zoned
+Aggregate: -
+Plex: -This UID can be matched with the device UID displayed in the ‘storage devices’ tab for the ESX host</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ST_21.jpg" alt="ONTAP Select 디스크를 해당 ESX 디스크에 일치시킵니다"></span></p>
+</div>
+<div class="paragraph">
+<p>ESXi 셸에서 다음 명령을 입력하여 지정된 물리적 디스크(na.unique-id로 식별)의 LED를 깜박일 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>esxcli storage core device set -d &lt;naa_id&gt; -l=locator -L=&lt;seconds&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="소프트웨어-raid를-사용할-때-다중-드라이브-오류가-발생합니다">소프트웨어 RAID를 사용할 때 다중 드라이브 오류가 발생합니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>여러 드라이브가 동시에 오류 상태에 있는 경우, 시스템이 여러 개의 상황을 경험할 수 있습니다. 시스템의 동작은 애그리게이트 RAID 보호 및 장애 발생 드라이브 수에 따라 다릅니다.</p>
+</div>
+<div class="paragraph">
+<p>RAID4 애그리게이트는 한 번의 디스크 장애를 견딜 수 있고, RAID-DP 애그리게이트는 2번의 디스크 장애를 견딜 수 있으며, RAID-TEC 애그리게이트는 3번의 디스크 장애를 견딜 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>장애가 발생한 디스크 수가 RAID 유형이 지원하는 최대 장애 수보다 적고, 스페어 디스크를 사용할 수 있는 경우 재구성 프로세스가 자동으로 시작됩니다. 스페어 디스크를 사용할 수 없는 경우 aggregate는 스페어 디스크를 추가할 때까지 저하된 상태로 데이터를 제공합니다.</p>
+</div>
+<div class="paragraph">
+<p>장애가 발생한 디스크 수가 RAID 유형이 지원하는 최대 장애 수보다 많은 경우 로컬 플렉스를 장애 발생 으로 표시하고 애그리게이트 상태는 성능 저하 로 표시됩니다. 데이터는 HA 파트너에 있는 두 번째 플렉스에서 제공됩니다. 즉, 노드 1에 대한 모든 I/O 요청은 클러스터 인터커넥트 포트 e0e(iSCSI)를 통해 노드 2에 물리적으로 위치한 디스크로 전송됩니다. 두 번째 플렉스도 실패하면 애그리게이트는 실패로 표시되고 데이터를 사용할 수 없게 됩니다.</p>
+</div>
+<div class="paragraph">
+<p>오류가 발생한 플렉스를 삭제하고 다시 생성해야 적절한 데이터 미러링을 재개할 수 있습니다. 다중 디스크 장애로 인해 데이터 애그리게이트의 성능이 저하되어 루트 애그리게이트의 성능이 저하됩니다. ONTAP Select는 RDD(루트 데이터 데이터) 파티셔닝 스키마를 사용하여 각 물리적 드라이브를 루트 파티션과 두 개의 데이터 파티션으로 분할합니다. 따라서 하나 이상의 디스크를 분실하면 로컬 루트 또는 원격 루트 애그리게이트의 복사본과 로컬 데이터 애그리게이트 및 원격 데이터 애그리게이트의 복사본을 비롯하여 여러 애그리게이트가 영향을 미칠 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>C3111E67::&gt; storage aggregate plex delete -aggregate aggr1 -plex plex1
+Warning: Deleting plex "plex1" of mirrored aggregate "aggr1" in a non-shared HA configuration will disable its synchronous mirror protection and disable
+         negotiated takeover of node "sti-rx2540-335a" when aggregate "aggr1" is online.
+Do you want to continue? {y|n}: y
+[Job 78] Job succeeded: DONE
+
+C3111E67::&gt; storage aggregate mirror -aggregate aggr1
+Info: Disks would be added to aggregate "aggr1" on node "sti-rx2540-335a" in the following manner:
+      Second Plex
+        RAID Group rg0, 5 disks (advanced_zoned checksum, raid_dp)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          shared     NET-3.2                   SSD               -        -
+          shared     NET-3.3                   SSD               -        -
+          shared     NET-3.4                   SSD         208.4GB  208.4GB
+          shared     NET-3.5                   SSD         208.4GB  208.4GB
+          shared     NET-3.12                  SSD         208.4GB  208.4GB
+
+      Aggregate capacity available for volume use would be 526.1GB.
+      625.2GB would be used from capacity license.
+Do you want to continue? {y|n}: y
+
+C3111E67::&gt; storage aggregate show-status -aggregate aggr1
+Owner Node: sti-rx2540-335a
+ Aggregate: aggr1 (online, raid_dp, mirrored) (advanced_zoned checksums)
+  Plex: /aggr1/plex0 (online, normal, active, pool0)
+   RAID Group /aggr1/plex0/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-1.1                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.2                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.3                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.10                     0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.11                     0   SSD        -  205.1GB  447.1GB (normal)
+  Plex: /aggr1/plex3 (online, normal, active, pool1)
+   RAID Group /aggr1/plex3/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-3.2                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.3                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.4                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.5                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.12                     1   SSD        -  205.1GB  447.1GB (normal)
+10 entries were displayed..</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-select/images/note.svg" alt="참고">
+</td>
+<td class="content">
+하나 이상의 드라이브 장애를 테스트하거나 시뮬레이션하려면 'storage disk fail-disk net-x.y -immediate' 명령을 사용합니다. 시스템에 스페어가 있는 경우 aggregate가 재구성되기 시작합니다. 'Storage aggregate show' 명령어를 사용해 재구성 상태를 확인할 수 있다. ONTAP Deploy를 사용하여 시뮬레이션된 오류 드라이브를 제거할 수 있습니다. ONTAP는 드라이브를 '파손&#8217;으로 표시했습니다. 드라이브는 실제로 파손되지 않으며 ONTAP 배포를 사용하여 다시 추가할 수 있습니다. 손상된 레이블을 지우려면 ONTAP Select CLI에서 다음 명령을 입력합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>set advanced
+disk unfail -disk NET-x.y -spare true
+disk show -broken</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>마지막 명령의 출력은 비어 있어야 합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="nvram을-가상화했습니다">NVRAM을 가상화했습니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp FAS 시스템은 일반적으로 물리적 NVRAM PCI 카드를 사용합니다. 이 카드는 비휘발성 플래시 메모리가 포함된 고성능 카드로 쓰기 성능이 크게 향상됩니다. 이 작업은 ONTAP가 들어오는 쓰기를 클라이언트에 즉시 확인할 수 있도록 허용하여 수행합니다. 또한 디스테이징이라고 하는 프로세스에서 수정된 데이터 블록을 느린 스토리지 미디어로 다시 이동하도록 예약할 수도 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>일반 시스템에는 일반적으로 이러한 유형의 장비가 장착되지 않습니다. 따라서 NVRAM 카드의 기능이 가상화되어 ONTAP Select 시스템 부팅 디스크의 파티션에 배치됩니다. 따라서 인스턴스의 시스템 가상 디스크를 배치하는 것이 매우 중요합니다.</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다](https://docs.netapp.com/ko-kr/ontap-select/concept_stor_swraid_local.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap-select/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/main/concept_stor_swraid_local.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap-select/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap-select/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">이 페이지의 내용</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap-select/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">의견을 공유해 주십시오</a>
+  <a href="https://docs.netapp.com/ko-kr/announcements/" class="n-footer__copyright">공지 사항</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/ontap-select/js/www-ntap.js'></script>
+    <script src='/ko-kr/ontap-select/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
