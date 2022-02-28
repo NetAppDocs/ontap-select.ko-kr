@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task_cli_connectivity.html 
+keywords: administer, administering, cli, connectivity, network connectivity, network checker 
+summary: 내부 클러스터 네트워크의 두 개 이상의 ONTAP Select 노드 간에 네트워크 연결을 테스트할 수 있습니다. 일반적으로 다중 노드 클러스터를 구축하여 작업에 실패할 수 있는 문제를 감지하기 전에 이 테스트를 실행합니다. 
+---
+= ONTAP Select 노드 간의 네트워크 연결을 확인합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+내부 클러스터 네트워크의 두 개 이상의 ONTAP Select 노드 간에 네트워크 연결을 테스트할 수 있습니다. 일반적으로 다중 노드 클러스터를 구축하여 작업에 실패할 수 있는 문제를 감지하기 전에 이 테스트를 실행합니다.
+
+테스트에 포함된 모든 ONTAP Select 노드를 구성하고 전원을 켜야 합니다.
+
+테스트를 시작할 때마다 백그라운드에서 새 프로세스 실행이 생성되고 고유한 실행 식별자가 할당됩니다. 한 번에 하나의 시리즈만 활성화할 수 있습니다.
+
+이 테스트에는 작동을 제어하는 두 가지 모드가 있습니다.
+
+* Quick 이 모드는 기본적인 무중단 테스트를 수행합니다. 네트워크 MTU 크기 및 vSwitch 테스트와 함께 Ping 테스트가 수행됩니다.
+* 확장 이 모드는 모든 중복 네트워크 경로에 대해 보다 포괄적인 테스트를 수행합니다. 활성 ONTAP Select 클러스터에서 이 작업을 실행할 경우 클러스터의 성능에 영향을 줄 수 있습니다.
+
+
+
+NOTE: 다중 노드 클러스터를 생성하기 전에 항상 빠른 테스트를 수행하는 것이 좋습니다. 빠른 테스트가 성공적으로 완료된 후 필요에 따라 생산 요구 사항에 따라 확장 테스트를 수행할 수 있습니다.
+
+.단계
+. 관리자 계정을 사용하여 배포 유틸리티 CLI에 로그인합니다.
+. 네트워크 연결 검사기의 현재 실행을 표시하고 활성화된 시리즈가 없는지 확인합니다.
++
+네트워크 연결 확인 쇼
+
+. 네트워크 연결 검사기를 시작하고 명령 출력에 실행 식별자를 기록합니다.
++
+'network connectivity - check start-host-names hostname - vSwitch-type vSwitch_type-mode'
+
++
+예
+
++
+[listing]
+----
+network connectivity-check start -host-names 10.234.81.14
+10.234.81.15 -vswitch-type StandardVSwitch -mode quick
+----
+. 실행 식별자를 기반으로 네트워크 연결 검사기의 진행 상황을 모니터링합니다.
++
+'network connectivity-check show-run-id run_ID
+
+
+
+네트워크 연결 검사기는 일반적으로 ONTAP-내부 포트 그룹에 추가된 임시 포트 및 IP 주소를 제거하여 데이터를 정리합니다. 그러나 연결 검사기가 임시 포트를 제거하지 못한 경우에는 '-mode cleanup' 옵션을 사용하여 CLI 명령을 다시 실행하여 수동 정리 작업을 수행해야 합니다. ONTAP - 내부 포트 그룹에서 임시 포트를 제거하지 않으면 ONTAP Select 가상 머신이 성공적으로 생성되지 않을 수 있습니다.

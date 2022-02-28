@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: concept_vpi_architecture.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, architecture 
+summary: Deploy vCenter 플러그인은 ONTAP Select Deploy 및 VMware vCenter와 긴밀하게 통합됩니다. vSphere 인터페이스를 사용하는 플러그인을 통해 Deploy 관리 유틸리티에 액세스할 수 있는 두 가지 경로가 있습니다. 
+---
+= 플러그인 아키텍처
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Deploy vCenter 플러그인은 ONTAP Select Deploy 및 VMware vCenter와 긴밀하게 통합됩니다. vSphere 인터페이스를 사용하는 플러그인을 통해 Deploy 관리 유틸리티에 액세스할 수 있는 두 가지 경로가 있습니다.
+
+image:plugin_architecture.png["에는 vCenter 플러그인 구축 아키텍처가 나와 있습니다."]

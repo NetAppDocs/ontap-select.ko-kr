@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept_usecase_mc_sds.html 
+keywords: ontap select, metrocluster software defined storage, mc sds storage 
+summary: ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다. 
+---
+= MetroCluster 소프트웨어 정의 스토리지
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다.
+
+특정 최소 요구사항을 충족할 경우 2노드 클러스터를 2개 위치 간에 확장 가능 이 아키텍처는 하드웨어 기반 MetroCluster와 단일 데이터 센터 클러스터(하드웨어 정의 또는 소프트웨어 정의) 사이에 적합합니다. ONTAP Select MetroCluster SDS 요구사항을 충족하려면 소프트웨어 정의 스토리지 솔루션의 일반적인 유연성과 IT와 하드웨어 기반 MetroCluster SDS 간의 차이점을 강조합니다. 전용 하드웨어가 필요하지 않습니다.
+
+MetroCluster와 달리 ONTAP Select는 기존 네트워크 인프라를 사용하며 최대 5ms의 최대 지터로 5ms RTT의 네트워크 지연 시간을 지원하여 총 10ms의 최대 지연 시간을 제공합니다. 최대 거리는 10km이지만, 지연 시간 프로필이 더 중요합니다. 시장 공간의 분리 요구 사항은 실제 거리보다 물리적 분리를 더 많이 필요로 합니다. 경우에 따라 이는 다른 건물을 의미할 수 있습니다. 다른 경우에는, 같은 건물에 있는 다른 방을 의미할 수 있습니다. 실제 물리적 배치와 관계없이 2노드 클러스터를 MetroCluster SDS로 정의하는 것은 각 노드가 별도의 업링크 스위치를 사용한다는 것입니다.
+
+2노드 HA 구성의 일부로, 중재자가 페일오버 중에 액티브 노드를 제대로 식별하고 네트워크 파티션 중에 두 노드가 독립적으로 활성 상태로 유지되는 브레인 분할 시나리오를 피해야 합니다. 이 작업은 이전에 사용할 수 있었던 일반 2노드 HA 구성과 동일합니다. 사이트 장애 시 적절한 보호와 페일오버를 위해 중재자는 2개의 HA 노드와 다른 사이트에 있어야 합니다. 중재자와 각 ONTAP Select 노드 사이의 최대 지연 시간은 125ms를 초과할 수 없습니다.
+
+이 솔루션을 사용하는 엔터프라이즈 고객은 일반 하드웨어에서 소프트웨어 정의 스토리지 솔루션의 유연성을 안심하고 활용할 수 있습니다. 엔터프라이즈급 0 RPO 솔루션으로 데이터가 보호되므로 안심하고 구축할 수 있습니다.
+
+ONTAP Select MetroCluster SDS는 다음과 같은 이점을 제공합니다.
+
+* MetroCluster SDS는 ONTAP Select에 대한 또 다른 차원의 보호 기능(데이터 센터와 데이터 센터 간)을 제공합니다. 이제 고객은 소프트웨어 정의 스토리지 및 ONTAP의 모든 이점을 활용할 뿐만 아니라 이러한 추가 보호 수준을 활용할 수 있습니다.
+* MetroCluster SDS는 0 RPO 및 자동 페일오버로 비즈니스 크리티컬 데이터 보호를 제공합니다. 데이터 스토리지와 애플리케이션 액세스 지점 모두 별도의 작업 없이 정상적인 데이터 센터 또는 노드로 자동 전환됩니다.
+* MetroCluster SDS는 비용 효율적입니다. 기존 네트워킹 인프라를 활용하여 HA 쌍 간에 확장 복원력을 제공하며 추가 하드웨어가 필요하지 않습니다. 또한 동일한 클러스터에서 액티브/액티브 데이터 액세스 및 데이터 센터 이중화를 제공합니다.
+
+
+* MetroCluster SDS *
+
+image:MCSDS_01.jpg["DAS를 기반으로 하는 프라이빗 클라우드"]
+
+자세한 모범 사례 및 기타 요구 사항은 섹션을 참조하십시오 link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["2노드 HA와 다중 노드 HA 비교"] 및 .

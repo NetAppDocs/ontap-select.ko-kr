@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_plugin.html 
+keywords: plan, planning, vcenter plug-in, deploy plug-in 
+summary: VMware 환경에 ONTAP Select를 구축할 때는 배포 관리 유틸리티 대신 VMware vCenter 플러그인을 사용할 수 있습니다. 
+---
+= VMware vCenter 플러그인
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware 환경에 ONTAP Select를 구축할 때는 배포 관리 유틸리티 대신 VMware vCenter 플러그인을 사용할 수 있습니다.
+
+VMware vCenter 플러그인은 Deploy 관리 유틸리티와 함께 패키지로 제공됩니다. 플러그인을 사용하려면 Deploy 유틸리티를 설치한 다음 deploy 사용자 인터페이스를 사용하여 vCenter 서버에 플러그인을 설치해야 합니다. 플러그인을 설치한 후에는 vSphere 웹 사용자 인터페이스를 사용하여 ONTAP Select 클러스터를 구축하고 관리할 수 있습니다. 플러그인 자체 관리(설치, 제거, 업데이트)를 제외하고 플러그인과 함께 제공되는 기능은 배포 유틸리티 사용자 인터페이스와 동일합니다.
+
+를 참조하십시오 link:concept_vpi_overview.html["vCenter와 통합"] 섹션: 플러그인 설치 및 사용에 대한 요구 사항 및 제한 사항

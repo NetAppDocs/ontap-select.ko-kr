@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_adm_licenses.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, administer, administering, licenses, licensing 
+summary: ONTAP Select 라이센스 관리의 일부로 수행할 수 있는 몇 가지 관련 작업이 있습니다. 
+---
+= ONTAP Select 라이센스
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 라이센스 관리의 일부로 수행할 수 있는 몇 가지 관련 작업이 있습니다.
+
+
+
+== 라이센스 관리
+
+필요에 따라 ONTAP Select 용량 계층 라이센스를 추가, 편집 및 삭제할 수 있습니다.
+
+.단계
+. 글로벌 인벤토리 목록 * 창에서 * ONTAP Select 배포 * 를 클릭합니다.
+. Administration * 탭을 클릭합니다.
+. 라이센스 * 옵션을 확장하고 * 용량 계층 * 또는 * 용량 풀 * 을 클릭하여 라이센스 유형을 선택합니다.
++
+현재 라이센스 및 문제가 표시됩니다.
+
+. 필요한 경우 * Filtering * 을 클릭하고 필터를 만들어 표시되는 라이센스를 제한합니다.
+. 원하는 작업을 수행합니다.
++
+.. 라이센스를 추가하려면 * + 추가 * 를 클릭하고 * 라이센스 업로드 * 를 클릭한 다음 라이센스 파일을 선택합니다.
+.. 기존 라이센스를 삭제하려면 라이센스 오른쪽에 있는 휴지통 아이콘을 클릭합니다.
+
+
+

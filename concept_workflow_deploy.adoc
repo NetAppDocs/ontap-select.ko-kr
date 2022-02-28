@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: concept_workflow_deploy.html 
+keywords: plan, planning, cluster deployment workflow, deployment workflow, workflow, deployment steps 
+summary: ONTAP Select 클러스터를 구현하는 데 사용할 수 있는 워크플로우 프로세스가 있습니다. 
+---
+= ONTAP Select 설치 및 구축 워크플로우
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+다음 워크플로우를 사용하여 ONTAP Select 클러스터를 구축하고 관리할 수 있습니다.
+
+image:deploy_workflow2.png["에서는 ONTAP Select 클러스터를 구축하는 데 필요한 전체 워크플로우를 설명합니다."]

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept_usecase_robo.html 
+keywords: ontap select, ROBO, remote office/branch office 
+summary: 'ROBO(원격 사무소/지사)에 ONTAP Select를 구축하여 소규모 사무소를 지원하는 동시에 중앙 집중식 관리 및 제어를 유지합니다.' 
+---
+= 원격 사무소 및 지점 사무소
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ROBO(원격 사무소/지사)에 ONTAP Select를 구축하여 소규모 사무소를 지원하는 동시에 중앙 집중식 관리 및 제어를 유지합니다.
+
+VMware ESXi에서 지원되는 ROBO 구성은 다음과 같습니다.
+
+* HA 기능이 있는 2노드 클러스터
+* 단일 노드 클러스터
+
+
+ONTAP Select VM을 애플리케이션 VM과 함께 배치할 수 있으므로 ROO를 위한 최적의 솔루션이 됩니다.
+
+ONTAP Select를 사용하여 엔터프라이즈급 파일 서비스를 제공하는 동시에 다른 ONTAP Select 또는 FAS 클러스터로 양방향 복제를 수행하면 복원력이 뛰어난 솔루션이 로우터치 또는 저비용 환경에 구축됩니다. ONTAP Select에는 CIFS, NFS, iSCSI 프로토콜 서비스에 대한 기능 라이센스와 SnapMirror 및 SnapVault 복제 기술이 모두 포함되어 있습니다. 따라서 이러한 모든 기능은 배포 즉시 사용할 수 있습니다.
+
+
+NOTE: 모든 VMware vSphere 라이센스가 지원되므로 Enterprise 또는 Enterprise Plus 라이센스 대신 vSphere Remote Office Branch Office Standard 또는 Advanced 라이센스를 선택할 수 있습니다. 이제 모든 vSphere 및 VSAN 라이센스가 지원됩니다.
+
+원격 중재자가 있는 ONTAP Select 2노드 클러스터는 소규모 데이터 센터에 적합한 솔루션입니다. 이 구성에서 HA 기능은 ONTAP Select에서 제공합니다. 2노드 ONTAP Select ROBO 솔루션의 최소 네트워킹 요구사항은 4개의 1Gb 링크입니다. 단일 10Gb 네트워크 연결도 지원됩니다. VSAN에서 실행 중인 vNAS ONTAP Select 솔루션(2노드 VSAN ROBO 구성 포함)도 또 다른 옵션입니다. 이 구성에서는 VSAN에서 HA 기능을 제공합니다. 마지막으로, 데이터를 핵심 위치로 복제하는 단일 노드 ONTAP Select 클러스터는 일반 서버를 기반으로 강력한 엔터프라이즈 데이터 관리 툴 세트를 제공할 수 있습니다.
+
+다음 그림은 ONTAP Select를 사용하는 일반적인 원격 사무소 구성을 보여 줍니다. 일정 중심의 SnapMirror 관계는 원격 사무소의 데이터를 기본 데이터 센터에 있는 통합된 단일 엔지니어링 스토리지 어레이로 주기적으로 복제합니다.
+
+* 원격 사무실을 기업 데이터 센터로 예약 백업 *
+
+image:ROBO_01.jpg["회사 데이터 센터에 원격 사무소의 예약된 백업"]

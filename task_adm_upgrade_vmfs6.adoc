@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: task_adm_upgrade_vmfs6.html 
+keywords: administer, administering, web, storage vmotion, upgrade vmfs6 
+summary: VMware는 VMFS 5에서 VMFS 6으로의 데이터 이동 없는 업그레이드를 지원하지 않습니다. Storage vMotion을 사용하여 기존 ONTAP Select 노드의 VMFS 5 데이터 저장소에서 VMFS 6 데이터 저장소로 전환할 수 있습니다. 
+---
+= Storage vMotion을 사용하여 VMFS6으로 업그레이드
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware는 VMFS 5에서 VMFS 6으로의 데이터 이동 없는 업그레이드를 지원하지 않습니다. Storage vMotion을 사용하여 기존 ONTAP Select 노드의 VMFS 5 데이터 저장소에서 VMFS 6 데이터 저장소로 전환할 수 있습니다.
+
+ONTAP Select 가상 머신의 경우 Storage vMotion을 단일 노드 및 다중 노드 클러스터에 사용할 수 있습니다. 스토리지 전용뿐만 아니라 컴퓨팅과 스토리지 마이그레이션에 사용할 수 있습니다.
+
+image:ST_10.jpg["마이그레이션"]
+
+새 호스트가 ONTAP Select 노드를 지원할 수 있는지 확인합니다. 예를 들어, RAID 컨트롤러 및 DAS 스토리지를 원래 호스트에서 사용하는 경우 새 호스트에 유사한 구성이 있어야 합니다.
+
+
+CAUTION: ONTAP Select VM이 적합하지 않은 환경에서 재호스팅될 경우 심각한 성능 문제가 발생할 수 있습니다.
+
+.단계
+. ONTAP Select 가상 머신을 종료합니다.
++
+노드가 HA 쌍의 일부인 경우 먼저 스토리지 페일오버를 수행합니다.
+
+. CD/DVD 드라이브 * 옵션을 지웁니다.
++
+ONTAP Deploy를 사용하지 않고 ONTAP Select를 설치한 경우에는 이 단계가 적용되지 않습니다.
+
++
+image:ST_11.jpg["설정을 편집합니다"]
+
+. Storage vMotion 작업이 완료된 후 ONTAP Select 가상 머신의 전원을 켭니다.
++
+이 노드가 HA 쌍의 일부인 경우 수동 반환을 수행할 수 있습니다.
+
+. Deploy 유틸리티를 사용하여 '클러스터 새로 고침' 작업을 수행하고 성공적으로 수행되었는지 확인합니다.
+. 배포 유틸리티 데이터베이스를 백업합니다.
+
+
+Storage vMotion 작업이 완료되면 Deploy 유틸리티를 사용하여 "클러스터 새로 고침" 작업을 수행해야 합니다. '클러스터 새로 고침'은 ONTAP 구축 데이터베이스를 ONTAP Select 노드의 새 위치로 업데이트합니다.

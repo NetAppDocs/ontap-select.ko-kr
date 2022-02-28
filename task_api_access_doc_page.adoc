@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task_api_access_doc_page.html 
+keywords: rest api, deploy rest api, rest, deploy documentation, access, accessing 
+summary: API 문서를 표시하고 API 호출을 수동으로 발급하려면 ONTAP Select 배포 온라인 설명서 페이지에 액세스해야 합니다. 
+---
+= 배포 문서 페이지 액세스
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+API 문서를 표시하고 API 호출을 수동으로 발급하려면 ONTAP Select 배포 온라인 설명서 페이지에 액세스해야 합니다.
+
+다음 항목이 있어야 합니다.
+
+* ONTAP Select Deploy 가상 머신의 IP 주소 또는 도메인 이름입니다
+* 관리자의 사용자 이름 및 암호입니다
+
+
+.단계
+. 브라우저에 URL을 입력하고 * Enter * 를 누릅니다.
++
+'\https://<ip_address>/api/ui`
+
+. 관리자 사용자 이름 및 암호를 사용하여 로그인합니다.
+
+
+문서 배포 웹 페이지가 표시되고 페이지 아래쪽에 범주별로 분류된 통화가 표시됩니다.

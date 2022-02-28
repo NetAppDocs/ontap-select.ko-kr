@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_manually_remove.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, vcenter, remove, removing, manually removing 
+summary: vCenter 서버에서 배포 플러그인을 수동으로 제거할 수 있습니다. 
+---
+= vCenter에서 배포 플러그인을 수동으로 제거합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+vCenter 서버에서 배포 플러그인을 수동으로 제거할 수 있습니다.
+
+
+
+== 시작하기 전에
+
+먼저 VMware MOB(Managed Object Browser)를 사용하여 플러그인을 제거한 다음 vCenter Server 내의 vSphere 디렉토리에서 제거해야 합니다.
+
+플러그인을 수동으로 제거해야 하는 여러 가지 경우가 있습니다.
+
+* 이 플러그인은 Deploy utility 기본 사용자 인터페이스를 사용하여 제거되었지만 vCenter 서버를 재부팅할 수 없습니다.
+* Deploy 유틸리티는 플러그인을 제거하지 않고 폐기되었습니다.
+
+
+
+
+== VMware MOB를 사용하여 플러그인을 제거합니다
+
+MOB는 VMware vCenter Server에서 객체를 보고 관리할 수 있는 VMware 애플리케이션입니다. MOB를 사용하여 Deploy vCenter 플러그인을 제거할 수 있습니다.
+
+.단계
+. 브라우저를 사용하여 vCenter Server에서 MOB에 액세스하고 로그인합니다.
++
+'\https://<FQDN_or_IP-address>/mob`
+
+. content*를 클릭한 다음 *ExtensionManager*를 클릭합니다.
+. 제거할 내선 번호가 전체 이름에 따라 표시되는지 확인합니다.
++
+"com.netapp.selectdeploy`
+
+. UnregisterExtension * 을 클릭합니다.
+. 확장명의 이름을 입력하고 * InvokeMethod * 를 클릭합니다.
+
+
+플러그인이 확장명 목록에서 제거됩니다.
+
+
+
+== vSphere UI 폴더에서 플러그인 제거
+
+vCenter Server에서 vSphere UI 디렉토리를 검토하고 구축 플러그인이 있는 경우 제거해야 합니다.
+
+vCenter Server의 루트 계정에 대한 암호가 있어야 합니다. vSphere MOB를 사용하여 플러그인을 제거해야 합니다.
+
+.단계
+. SSH를 사용하여 vCenter Server에 액세스하고 로그인합니다.
++
+'ssh root@<FQDN_or_ip-address>'
+
+. shell * 을 입력하고 * Enter * 를 눌러 Bash 셸을 시작합니다.
+. vSphere-UI 서비스의 'vSphere-client-en레니티' 디렉토리로 이동합니다.
++
+'cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-environment
+
+. 제거해야 하는 com.netapp.selectdeploy` 형식의 디렉토리가 있는지 확인합니다.
++
+'ls-al'
+
+. HTML5 vSphere-UI 웹 클라이언트를 중지합니다.
++
+'Service-control--stop vSphere-UI
+
+. UI 확장자가 포함된 디렉토리를 제거합니다.
++
+rm-rf com.netapp.selectdeploy-1.0.0`
+
+. HTML5 vSphere-UI 웹 클라이언트를 다시 시작합니다.
++
+'Service-control--start vSphere-UI'를 선택합니다
+
+
+
+배포 플러그인을 다시 시작하고 사용할 수 있게 되기까지 몇 분이 걸릴 수 있습니다.
+
+
+
+== vSphere Client 폴더에서 플러그인을 제거합니다
+
+vCenter Server에서 vSphere Client 디렉토리를 검토하고 구축 플러그인이 있는 경우 제거해야 합니다. 배포 플러그인에서 플래시를 사용하지 않지만 플러그인 제거 절차의 일부로 이 디렉토리를 검사하는 것이 좋습니다.
+
+vCenter Server의 루트 계정에 대한 암호가 있어야 합니다. vSphere MOB를 사용하여 플러그인을 제거하고 vSphere UI 디렉토리에서 플러그인을 제거해야 합니다.
+
+.단계
+. SSH를 사용하여 vCenter Server에 액세스하고 로그인합니다.
++
+'ssh root@<FQDN_or_ip-address>'
+
+. shell * 을 입력하고 * Enter * 를 눌러 Bash 셸을 시작합니다.
+. vSphere-Client 서비스의 'vSphere-client-en레니티' 디렉토리로 이동합니다.
++
+'cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-environment
+
+. 제거해야 하는 com.netapp.selectdeploy` 형식의 디렉토리가 있는지 확인합니다.
++
+'ls-al'
+
+. HTML5 vSphere-UI 웹 클라이언트를 중지합니다.
++
+'Service-control--stop vSphere-client'
+
+. 클라이언트 확장이 포함된 디렉토리를 제거합니다.
++
+rm-rf com.netapp.selectdeploy-1.0.0`
+
+. HTML5 vSphere-UI 웹 클라이언트를 다시 시작합니다.
++
+'service-control--start vSphere-client'
+
+
+
+배포 플러그인을 다시 시작하고 사용할 수 있게 되기까지 몇 분이 걸릴 수 있습니다.

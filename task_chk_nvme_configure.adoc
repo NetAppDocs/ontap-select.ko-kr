@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: task_chk_nvme_configure.html 
+keywords: ontap select, nvme storage, host preparation 
+summary: 소프트웨어 RAID와 함께 NVMe 드라이브를 사용하려는 경우 드라이브를 인식하도록 호스트를 구성해야 합니다. 
+---
+= NVMe 드라이브를 사용하도록 호스트 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+소프트웨어 RAID와 함께 NVMe 드라이브를 사용하려는 경우 드라이브를 인식하도록 호스트를 구성해야 합니다.
+
+NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율성을 극대화합니다. 이 설정은 드라이브를 ONTAP Select 가상 시스템에 노출시켜 ONTAP가 장치에 PCI를 직접 액세스할 수 있도록 합니다.
+
+배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.
+
+* 관련 배포 관리 유틸리티를 사용하는 ONTAP Select 9.7 이상
+* Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
+* VMware ESXi 버전 6.7 이상
+* 사양 1.0 이상을 준수하는 NVMe 장치
+
+
+를 따릅니다 link:reference_chk_host_prep.html["호스트 준비 체크리스트"]를 검토합니다 , 및  항목을 참조하십시오.
+
+이 절차는 새 ONTAP Select 클러스터를 생성하기 전에 수행하도록 설계되었습니다. 기존 SW-RAID NVMe 클러스터에 대해 추가 NVMe 드라이브를 구성하는 절차를 수행할 수도 있습니다. 이 경우 드라이브를 구성한 후 추가 SSD 드라이브와 마찬가지로 Deploy를 통해 추가해야 합니다. 주요 차이점은 배포는 NVMe 드라이브를 감지하고 노드를 재부팅한다는 점입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때 재부팅 프로세스에 대해 다음 사항을 확인하십시오.
+
+* Deploy가 재부팅 오케스트레이션을 처리합니다.
+* HA 테이크오버 및 반환은 질서정연하게 수행되지만 애그리게이트를 재동기화하는 데 시간이 걸릴 수 있습니다.
+* 단일 노드 클러스터에서는 다운타임이 발생합니다.
+
+
+을 참조하십시오 link:concept_stor_capacity_inc.html["스토리지 용량 증가"] 자세한 내용은 를 참조하십시오.
+
+.단계
+. I/O 가상화 지원을 활성화하려면 호스트의 * BIOS 구성 * 메뉴에 액세스하십시오.
+. Directed I/O용 * 인텔(R) VT(VT-d) * 설정을 활성화합니다.
++
+image:nvme_01.png["소켓 구성"]
+
+. 일부 서버는 * 인텔 볼륨 관리 장치(인텔 VMD) * 를 지원합니다. 이 옵션을 설정하면 사용 가능한 NVMe 디바이스가 ESXi 하이퍼바이저에 표시되지 않습니다. 계속하기 전에 이 옵션을 비활성화하십시오.
++
+image:nvme_07.png["소켓 구성, VMD"]
+
+. 가상 머신에 대한 패스스루(pass-through)를 위해 NVMe 드라이브를 구성합니다.
++
+.. vSphere에서 호스트 * 구성 * 보기를 열고 * 하드웨어:PCI 장치 * 에서 * 편집 * 을 클릭합니다.
+.. ONTAP Select에 사용할 NVMe 드라이브를 선택합니다.
++
+image:nvme_02.png["PCI 장치 가용성을 편집합니다"]
+
++
+
+NOTE: ONTAP Select VM 시스템 디스크와 가상 NVRAM을 호스팅하려면 NVMe 디바이스에서 지원하는 VMFS 데이터 저장소가 필요합니다. PCI 패스스스루(pass-through)를 위해 다른 NVMe 드라이브를 구성할 때는 이 목적으로 하나 이상의 NVMe 드라이브를 사용할 수 있는 상태로 두십시오.
+
+.. 확인 * 을 클릭합니다. 선택한 장치는 * 사용 가능(보류 중) * 을 나타냅니다.
+
+
+. 호스트 재부팅 * 을 클릭합니다.
++
+image:nvme_03.png["이 호스트를 재부팅합니다"]
+
+
+
+호스트가 준비되면 ONTAP Select 배포 유틸리티를 설치할 수 있습니다. 새로 준비한 호스트에서 ONTAP Select 스토리지 클러스터를 생성하는 방법을 안내합니다. 이 프로세스 중에 배포는 패스스스루(pass-through)로 구성된 NVMe 드라이브가 있는지 감지하고 ONTAP 데이터 디스크로 사용할 NVMe 드라이브를 자동으로 선택합니다. 필요한 경우 기본 선택을 조정할 수 있습니다.
+
+
+NOTE: 각 ONTAP Select 노드마다 최대 14개의 NVMe 장치가 지원됩니다.
+
+image:nvme_04.png["ONTAP Select 클러스터 구축"]
+
+클러스터를 성공적으로 구축한 후 ONTAP System Manager를 사용하면 모범 사례에 따라 스토리지를 프로비저닝할 수 있습니다. ONTAP는 NVMe 스토리지를 최대한 활용하는 플래시 최적화 스토리지 효율성 기능을 자동으로 지원합니다.
+
+image:nvme_05.png["로컬 스토리지 준비 중"]
+
+image:nvme_06.png["ONTAP 시스템 관리자"]

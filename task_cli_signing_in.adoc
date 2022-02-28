@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task_cli_signing_in.html 
+keywords: administer, administering, cli, deploy, sign in, signing in 
+summary: SSH를 사용하여 배포 관리 셸에 로그인해야 합니다. 로그인한 후 CLI 명령을 실행하여 ONTAP Select 클러스터를 생성하고 관련 관리 절차를 수행할 수 있습니다. 
+---
+= SSH를 사용하여 배포하려면 로그인합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SSH를 사용하여 배포 관리 셸에 로그인해야 합니다. 로그인한 후 CLI 명령을 실행하여 ONTAP Select 클러스터를 생성하고 관련 관리 절차를 수행할 수 있습니다.
+
+배포 관리자(admin) 계정의 현재 암호가 있어야 합니다. 처음 로그인하는 경우 vCenter를 사용하여 가상 머신 구축을 설치하는 경우 설치 중에 설정된 암호를 사용해야 합니다.
+
+.단계
+. 배포 가상 컴퓨터의 관리자 계정 및 관리 IP 주소를 사용하여 로그인합니다. 예를 들면 다음과 같습니다.
++
+'ssh admin@<10.235.82.22>'
+
+. 처음 로그인하는 경우 vCenter에서 사용할 수 있는 마법사를 사용하여 배포를 설치하지 않은 경우 메시지가 표시되면 다음 구성 정보를 제공합니다.
++
+** 관리자 계정의 새 암호(필수)
+** 회사 이름(필수)
+** 프록시 URL(선택 사항)
+
+
+. 사용 가능한 관리 셸 명령 목록을 표시하려면 *? * 를 입력하고 * Enter * 를 누릅니다.
+

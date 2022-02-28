@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task_cli_deploy_image_remove.html 
+keywords: administer, administering, cli, deploy, ontap select image, remove 
+summary: 더 이상 필요하지 않은 경우 배포 관리 유틸리티의 인스턴스에서 ONTAP Select 이미지를 제거할 수 있습니다. 
+---
+= 배포에서 ONTAP Select 이미지 제거
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+더 이상 필요하지 않은 경우 배포 관리 유틸리티의 인스턴스에서 ONTAP Select 이미지를 제거할 수 있습니다.
+
+
+CAUTION: 클러스터에서 사용 중인 ONTAP Select 이미지를 제거해서는 안 됩니다.
+
+현재 클러스터에서 사용하지 않거나 향후 클러스터 배포에 사용하도록 계획되어 있지 않은 이전 ONTAP Select 이미지를 제거할 수 있습니다.
+
+.단계
+. admin (admin) 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
+. 배포로 관리되는 클러스터를 표시하고 사용 중인 ONTAP 이미지를 기록합니다.
++
+'클러스터 쇼'
+
++
+각 경우에 버전 번호와 하이퍼바이저 플랫폼을 기록해 두십시오.
+
+. Bash 쉘을 시작합니다.
++
+'지옥배시'
+
+. 사용 가능한 모든 ONTAP Select 영상을 표시합니다.
++
+'ls - LH/opt/NetApp/images'(ls - LH/OPT/NetApp/이미지)
+
+. 선택적으로 ESXi 이미지를 제거합니다.
++
+예: rm-r/opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
+
+. ONTAP Select 9.10.1 이전의 릴리스를 사용할 경우 KVM 이미지를 선택적으로 제거합니다.
++
+예: rm-r/opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
+
+

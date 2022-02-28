@@ -1,0 +1,323 @@
+---
+settings:
+  name: ONTAP Select
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ko-kr,us-en,ja-jp,zh-cn
+sidebar:
+  entries:
+  - title: ONTAP Select 9.10.1 문서
+    url: "/index.html"
+  - title: 릴리즈 노트
+    url: "/reference_release_notes.html"
+  - title: 개념
+    entries:
+    - title: 제품 개요
+      url: "/concept_ots_overview.html"
+    - title: ONTAP Select 구축
+      url: "/concept_ots_deploy.html"
+    - title: 비즈니스 사용 사례
+      entries:
+      - title: 비즈니스 요구 및 사용 시나리오
+        url: "/concept_usecase_overview.html"
+      - title: 원격 사무소 및 지점 사무소
+        url: "/concept_usecase_robo.html"
+      - title: 프라이빗 클라우드 및 데이터 센터
+        url: "/concept_usecase_private_cloud.html"
+      - title: MetroCluster SDS
+        url: "/concept_usecase_mc_sds.html"
+    - title: 용어
+      url: "/concept_terminology.html"
+  - title: 계획
+    entries:
+    - title: 구축 워크플로우
+      url: "/concept_workflow_deploy.html"
+    - title: ONTAP Select
+      entries:
+      - title: 일반 요구 사항
+        url: "/reference_plan_ots_general.html"
+      - title: 하이퍼바이저 및 하드웨어
+        url: "/reference_plan_ots_hardware.html"
+      - title: 스토리지 및 RAID
+        url: "/reference_plan_ots_storage.html"
+      - title: ONTAP Select vNAS를 선택합니다
+        url: "/reference_plan_ots_vnas.html"
+      - title: 네트워킹
+        url: "/reference_plan_ots_networking.html"
+      - title: 2노드 클러스터
+        url: "/reference_plan_ots_two_node.html"
+      - title: 원격 사무소 및 지점 사무소
+        url: "/reference_plan_ots_robo.html"
+      - title: MetroCluster SDS
+        url: "/reference_plan_ots_mcc_sds.html"
+      - title: VMware vCenter를 참조하십시오
+        url: "/reference_plan_ots_vcenter.html"
+      - title: VMware vCenter 플러그인
+        url: "/reference_plan_ots_plugin.html"
+    - title: ONTAP Select 구축
+      entries:
+      - title: 일반 요구 사항
+        url: "/reference_plan_dep_general.html"
+      - title: 구축하는 것입니다
+        url: "/reference_plan_dep_vmware.html"
+    - title: 모범 사례
+      url: "/reference_plan_best_practices.html"
+  - title: 라이센스
+    entries:
+    - title: 옵션
+      entries:
+      - title: 평가판 라이센스
+        url: "/concept_lic_evaluation.html"
+      - title: 운영 라이센스
+        url: "/concept_lic_production.html"
+      - title: 플랫폼 라이센스 제공
+        url: "/concept_lic_platforms.html"
+    - title: 용량 풀 라이센스 모델
+      entries:
+      - title: 운영 세부 정보
+        url: "/concept_lic_cp_operation.html"
+      - title: 노드 일련 번호입니다
+        url: "/concept_lic_cp_serial_number.html"
+      - title: 제한 사항
+        url: "/concept_lic_cp_restrictions.html"
+      - title: 용량 풀 및 용량 계층 비교
+        url: "/concept_lic_cp_compare_ct.html"
+      - title: 이점 요약
+        url: "/concept_lic_cp_benefits.html"
+    - title: 구매
+      entries:
+      - title: 라이선스 워크플로
+        url: "/concept_lic_workflow.html"
+      - title: 용량 계층
+        url: "/task_lic_acquire_ct.html"
+      - title: 용량 풀
+        url: "/task_lic_acquire_cp.html"
+    - title: ONTAP 기능
+      url: "/reference_lic_ontap_features.html"
+  - title: 설치합니다
+    entries:
+    - title: 설치 전 체크리스트
+      entries:
+      - title: 호스트 준비 체크리스트
+        url: "/reference_chk_host_prep.html"
+      - title: 유틸리티 필수 정보를 배포합니다
+        url: "/reference_chk_deploy_req_info.html"
+      - title: ONTAP Select 필수 정보입니다
+        url: "/reference_chk_select_req_info.html"
+      - title: NVMe 호스트 구성
+        url: "/task_chk_nvme_configure.html"
+    - title: ONTAP Select Deploy를 설치합니다
+      url: "/task_install_deploy.html"
+    - title: 클러스터 구축
+      url: "/task_deploy_cluster.html"
+    - title: 초기 클러스터 상태입니다
+      url: "/reference_initial_state.html"
+  - title: 관리
+    entries:
+    - title: 시작하기 전에
+      url: "/concept_adm_before.html"
+    - title: 노드 업그레이드
+      url: "/concept_adm_upgrading_nodes.html"
+    - title: 진단 및 지원
+      url: "/task_adm_support.html"
+    - title: 보안
+      url: "/task_adm_security.html"
+    - title: 네트워크 연결
+      url: "/task_adm_connectivity.html"
+    - title: 중개자
+      url: "/task_adm_mediators.html"
+    - title: 클러스터
+      url: "/task_adm_clusters.html"
+    - title: 노드 및 호스트
+      entries:
+      - title: VM 비디오 콘솔
+        url: "/task_adm_video_console.html"
+      - title: 클러스터 노드 크기 조정
+        url: "/task_adm_resize.html"
+      - title: 오류가 발생한 SW RAID 드라이브를 교체합니다
+        url: "/task_adm_replace_drives_swraid.html"
+      - title: VMFS6으로 업그레이드 중입니다
+        url: "/task_adm_upgrade_vmfs6.html"
+    - title: 추가 수익 실적을
+      url: "/task_adm_licenses.html"
+  - title: 딥 다이브
+    entries:
+    - title: 스토리지
+      entries:
+      - title: 일반 개념 및 특성
+        url: "/concept_stor_concepts_chars.html"
+      - title: 로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다
+        url: "/concept_stor_hwraid_local.html"
+      - title: 로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다
+        url: "/concept_stor_swraid_local.html"
+      - title: vSAN 및 외부 스토리지 구성
+        url: "/concept_stor_vsan_external.html"
+      - title: 스토리지 용량 증가
+        url: "/concept_stor_capacity_inc.html"
+      - title: 스토리지 효율성 지원
+        url: "/concept_stor_eff_support.html"
+    - title: 네트워킹
+      entries:
+      - title: 일반 개념 및 특성
+        url: "/concept_nw_concepts_chars.html"
+      - title: 단일 및 다중 노드 구성
+        url: "/concept_nw_single_multi_node.html"
+      - title: 내부 및 외부 네트워크
+        url: "/concept_nw_internal_external.html"
+      - title: 지원되는 구성
+        url: "/concept_nw_supported_configs.html"
+      - title: VMware vSphere vSwitch 구성
+        url: "/concept_nw_vsphere_vswitch_config.html"
+      - title: 물리적 스위치 구성
+        url: "/concept_nw_physical_switch_config.html"
+      - title: 데이터 및 관리 분리
+        url: "/concept_nw_data_mgmt_separation.html"
+    - title: 고가용성 아키텍처
+      entries:
+      - title: HA 구성
+        url: "/concept_ha_config.html"
+      - title: 동기식 복제 및 미러링된 애그리게이트
+        url: "/concept_ha_mirroring.html"
+      - title: 기타 고가용성 기능
+        url: "/concept_ha_other.html"
+    - title: 성능
+      entries:
+      - title: 일반 고려 사항
+        url: "/concept_perf_general.html"
+      - title: 9.4 프리미엄 HA 직접 연결 SSD 스토리지
+        url: "/concept_perf_premium_ha_direct_ssd_94.html"
+      - title: 9.5 프리미엄 HA 직접 연결 SSD 스토리지
+        url: "/concept_perf_premium_ha_direct_ssd_95.html"
+      - title: 9.6 프리미엄 HA 직접 연결 SSD 스토리지
+        url: "/concept_perf_premium_ha_direct_ssd_96.html"
+  - title: vCenter와 통합
+    entries:
+    - title: 시작하기
+      entries:
+      - title: 개요
+        url: "/concept_vpi_overview.html"
+      - title: 있습니다
+        url: "/concept_vpi_architecture.html"
+      - title: 계획 수립
+        url: "/concept_vpi_planning.html"
+    - title: 플러그인을 관리합니다
+      entries:
+      - title: 시작하기 전에
+        url: "/concept_vpi_manage_before.html"
+      - title: 설치합니다
+        url: "/task_vpi_install.html"
+      - title: 액세스
+        url: "/task_vpi_access.html"
+      - title: 업그레이드 및 제거
+        url: "/task_vpi_upgrade.html"
+    - title: 플러그인을 수동으로 제거합니다
+      url: "/task_vpi_manually_remove.html"
+    - title: 클러스터 구축
+      url: "/task_vpi_deploy_cluster.html"
+    - title: vCenter 통합
+      url: "/concept_vpi_vcenter_integration.html"
+    - title: 관리
+      entries:
+      - title: 진단 및 지원
+        url: "/task_vpi_adm_support.html"
+      - title: 네트워킹
+        url: "/task_vpi_adm_network.html"
+      - title: 클러스터
+        url: "/task_vpi_adm_clusters.html"
+      - title: 추가 수익 실적을
+        url: "/task_vpi_adm_licenses.html"
+    - title: 문제 해결
+      url: "/reference_vpi_troubleshooting.html"
+  - title: REST를 사용하여 자동화
+    entries:
+    - title: 개념
+      entries:
+      - title: REST 웹 서비스
+        url: "/concept_api_rest.html"
+      - title: 배포 API에 액세스합니다
+        url: "/concept_api_how_access.html"
+      - title: API 버전 관리 배포
+        url: "/concept_api_versions.html"
+      - title: 기본 작동
+        url: "/concept_api_operation.html"
+      - title: 요청 및 응답 트랜잭션
+        url: "/concept_api_transaction.html"
+      - title: 비동기 처리
+        url: "/concept_api_async_proc.html"
+    - title: 브라우저를 사용하여 에 액세스합니다
+      entries:
+      - title: 시작하기 전에
+        url: "/concept_api_before_browser.html"
+      - title: 문서 페이지에 액세스합니다
+        url: "/task_api_access_doc_page.html"
+      - title: API 호출 이해
+        url: "/task_api_understanding_call.html"
+    - title: 워크플로 프로세스
+      entries:
+      - title: 시작하기 전에
+        url: "/concept_api_before_workflows.html"
+      - title: 워크플로우 1 클러스터 생성
+        url: "/reference_api_workflow01.html"
+    - title: Python으로 액세스하십시오
+      entries:
+      - title: 시작하기 전에
+        url: "/concept_api_before_python.html"
+      - title: 스크립트 이해
+        url: "/concept_api_understanding_scripts.html"
+    - title: Python 코드 샘플
+      entries:
+      - title: 클러스터를 생성합니다
+        url: "/reference_api_script_cc.html"
+      - title: JSON으로 클러스터를 생성하십시오
+        url: "/reference_api_json_cc.html"
+      - title: 노드 라이센스를 추가합니다
+        url: "/reference_api_script_anl.html"
+      - title: 클러스터를 삭제합니다
+        url: "/reference_api_script_dc.html"
+      - title: 공통 지원 모듈
+        url: "/reference_api_script_common.html"
+      - title: 클러스터 노드 크기 조정
+        url: "/reference_api_script_resize.html"
+  - title: Ansible을 통한 자동화
+    url: "/concept_automate_ansible.html"
+  - title: CLI를 사용합니다
+    entries:
+    - title: 시작하기 전에
+      url: "/concept_cli_before.html"
+    - title: SSH를 사용하여 로그인합니다
+      url: "/task_cli_signing_in.html"
+    - title: 클러스터 구축
+      url: "/task_cli_deploy_cluster.html"
+    - title: 보안
+      url: "/task_cli_security.html"
+    - title: 네트워크 연결
+      url: "/task_cli_connectivity.html"
+    - title: 클러스터
+      url: "/task_cli_clusters.html"
+    - title: 노드 및 호스트
+      entries:
+      - title: ESXi를 6.5 이상으로 업그레이드하는 중입니다
+        url: "/task_cli_upgrade_esxi65.html"
+    - title: 배포 유틸리티
+      entries:
+      - title: 배포 인스턴스를 업그레이드합니다
+        url: "/task_cli_upgrade_deploy.html"
+      - title: 배포 인스턴스 마이그레이션
+        url: "/task_cli_migrate_deploy.html"
+      - title: ONTAP Select 이미지를 추가합니다
+        url: "/task_cli_deploy_image_add.html"
+      - title: ONTAP Select 이미지를 제거합니다
+        url: "/task_cli_deploy_image_remove.html"
+      - title: 2노드 클러스터에 대한 구축 복구
+        url: "/task_cli_deploy_recover_two_node.html"
+  - title: FAQ 를 참조하십시오
+    url: "/reference_faq.html"
+  - title: 자세한 정보를 확인하십시오
+    url: "/reference_additional_info.html"
+  - title: 이전 버전
+    url: "/reference_earlier_versions.html"
+  - title: 법적 고지
+    url: "/reference_legal_notices.html"

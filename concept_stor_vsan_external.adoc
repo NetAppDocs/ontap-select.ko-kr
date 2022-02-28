@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: concept_stor_vsan_external.html 
+keywords: ontap select, vsan and external array configurations, vnas architecture 
+summary: 'vNAS(Virtual NAS) 구축은 VSAN의 ONTAP Select 클러스터, 일부 HCI 제품, NetApp HCI 기술 및 외부 스토리지 유형의 데이터 저장소를 지원합니다. 이러한 구성의 기본 인프라는 데이터 저장소 복원력을 제공합니다.' 
+---
+= vSAN 및 외부 스토리지 구성
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+vNAS(Virtual NAS) 구축은 VSAN의 ONTAP Select 클러스터, 일부 HCI 제품, NetApp HCI 기술 및 외부 스토리지 유형의 데이터 저장소를 지원합니다. 이러한 구성의 기본 인프라는 데이터 저장소 복원력을 제공합니다.
+
+최소 요구 사항은 기본 구성이 VMware에서 지원되며 해당 VMware HCL에 나열되어 있어야 한다는 것입니다.
+
+
+
+== vNAS 아키텍처
+
+vNAS는 DAS를 사용하지 않는 모든 설정에 사용됩니다. 다중 노드 ONTAP Select 클러스터의 경우 동일한 HA 쌍의 두 ONTAP Select 노드가 단일 데이터 저장소(vSAN 데이터 저장소 포함)를 공유하는 아키텍처를 포함합니다. 노드는 동일한 공유 외부 스토리지의 개별 데이터 저장소에 설치할 수도 있습니다. 따라서 어레이 측 스토리지 효율성을 통해 전체 ONTAP Select HA 쌍의 전체 설치 공간을 줄일 수 있습니다. ONTAP Select vNAS 솔루션의 아키텍처는 로컬 RAID 컨트롤러를 사용하는 DAS상의 ONTAP Select 아키텍처와 매우 유사합니다. 즉, 각 ONTAP Select 노드에는 HA 파트너의 데이터 사본이 계속 있습니다. ONTAP 스토리지 효율성 정책의 범위는 노드 범위입니다. 따라서 두 ONTAP Select 노드의 데이터 세트 전체에 적용할 수 있으므로 어레이 측 스토리지 효율성을 높이는 것이 좋습니다.
+
+HA 쌍의 각 ONTAP Select 노드가 별도의 외부 어레이를 사용할 수도 있습니다. 이는 외부 스토리지에 ONTAP Select MetroCluster SDS를 사용할 때 일반적으로 사용되는 방법입니다.
+
+각 ONTAP Select 노드에 대해 별도의 외부 어레이를 사용할 때는 두 어레이가 ONTAP Select VM과 유사한 성능 특성을 제공하는 것이 매우 중요합니다.
+
+
+
+=== vNAS 아키텍처와 하드웨어 RAID 컨트롤러 기반 로컬 DAS 비교
+
+vNAS 아키텍처는 DAS 및 RAID 컨트롤러를 사용하는 서버의 아키텍처와 논리적으로 가장 유사합니다. 두 경우 모두 ONTAP Select는 데이터 저장소 공간을 사용합니다. 해당 데이터 저장소 공간은 VMDK로 구성되었으며 이러한 VMDK는 기존의 ONTAP 데이터 애그리게이트를 구성합니다. ONTAP 구축을 사용하면 클러스터 생성 및 스토리지 추가 작업 중에 VMDK가 적절하게 사이징되고 올바른 plex(HA 쌍의 경우)에 할당되어 있는지 확인할 수 있습니다.
+
+RAID 컨트롤러에서 vNAS와 DAS에는 두 가지 주요 차이점이 있습니다. 가장 즉각적인 차이점은 vNAS에는 RAID 컨트롤러가 필요하지 않는다는 점입니다. vNAS는 기본 외부 스토리지가 RAID 컨트롤러 설정으로 DAS가 제공할 수 있는 데이터 지속성 및 복원력을 제공한다고 가정합니다. 두 번째 차이점과 더 미묘한 차이점은 NVRAM 성능과 관련된 것입니다.
+
+
+
+== vNAS NVRAM입니다
+
+ONTAP Select NVRAM은 VMDK입니다. 즉, ONTAP Select는 블록 주소 지정 가능 장치(VMDK) 위에 바이트 주소 지정 가능 공간(기존 NVRAM)을 에뮬레이트합니다. 하지만 NVRAM의 성능은 ONTAP Select 노드의 전체 성능에 매우 중요합니다.
+
+하드웨어 RAID 컨트롤러가 있는 DAS 설정의 경우, NVRAM VMDK에 대한 모든 쓰기는 RAID 컨트롤러 캐시에 처음 호스팅되므로 하드웨어 RAID 컨트롤러 캐시가 사실상 NVRAM 캐시 역할을 합니다.
+
+VNAS 아키텍처의 경우 ONTAP Deploy는 SIDL(Single Instance Data Logging)이라는 부팅 인수를 사용하여 ONTAP Select 노드를 자동으로 구성합니다. 이 부팅 인수가 있으면 ONTAP Select는 NVRAM을 건너뛰고 데이터 페이로드를 데이터 애그리게이트에 직접 씁니다. NVRAM은 쓰기 작업에 의해 변경된 블록의 주소를 기록하는 데만 사용됩니다. 이 기능의 이점은 NVRAM에 1개의 쓰기 작업이 두 배로 늘어나면 NVRAM에 1개의 쓰기 작업이 두 번째 쓰기로 디스테이징되는 것입니다. 이 기능은 RAID 컨트롤러 캐시에 대한 로컬 쓰기 작업이 추가적인 지연 시간을 무시할 정도로 크기 때문에 vNAS에 대해서만 설정됩니다.
+
+SIDL 기능은 일부 ONTAP Select 스토리지 효율성 기능과 호환되지 않습니다. SIDL 기능은 다음 명령을 사용하여 애그리게이트 레벨에서 비활성화할 수 있습니다.
+
+[listing]
+----
+storage aggregate modify -aggregate aggr-name -single-instance-data-logging off
+----
+SIDL 기능이 꺼져 있으면 쓰기 성능에 영향을 줍니다. 해당 애그리게이트의 모든 볼륨에 대한 모든 스토리지 효율성 정책이 비활성화된 후에 SIDL 기능을 다시 활성화할 수 있습니다.
+
+[listing]
+----
+volume efficiency stop -all true -vserver * -volume * (all volumes in the affected aggregate)
+----
+
+
+== vNAS를 사용할 때 ONTAP Select 노드를 배치합니다
+
+ONTAP Select는 공유 스토리지에서 다중 노드 ONTAP Select 클러스터를 지원합니다. ONTAP Deploy를 사용하면 동일한 클러스터에 속한 노드가 아닌 한 동일한 ESX 호스트에서 여러 ONTAP Select 노드를 구성할 수 있습니다. 이 구성은 VNAS 환경(공유 데이터 저장소)에만 유효합니다. DAS 스토리지를 사용할 경우 이러한 인스턴스가 동일한 하드웨어 RAID 컨트롤러에서 경쟁하기 때문에 호스트당 여러 ONTAP Select 인스턴스가 지원되지 않습니다.
+
+ONTAP 구축 환경에서는 다중 노드 VNAS 클러스터를 처음 구축할 때 동일한 호스트의 동일한 클러스터에 있는 여러 ONTAP Select 인스턴스를 배치하지 않습니다. 다음 그림에서는 두 호스트에서 교차하는 두 개의 4노드 클러스터를 올바르게 구축한 예를 보여 줍니다.
+
+* 다중 노드 VNAS 클러스터의 초기 구축 *
+
+image:ST_14.jpg["다중 노드 VNAS 클러스터의 초기 구축"]
+
+구축 후 ONTAP Select 노드를 호스트 간에 마이그레이션할 수 있습니다. 따라서 같은 클러스터의 두 개 이상의 ONTAP Select 노드가 동일한 기본 호스트를 공유하는 구성이 최적화되지 않고 지원되지 않을 수 있습니다. VMware가 동일한 HA 쌍의 노드뿐만 아니라 동일한 클러스터의 노드 간에 물리적 분리를 자동으로 유지할 수 있도록 VM 반유사성 규칙을 수동으로 생성하는 것이 좋습니다.
+
+
+NOTE: 반유사성 규칙은 ESX 클러스터에서 DRS를 활성화해야 합니다.
+
+ONTAP Select VM에 대한 반유사성 규칙을 생성하는 방법은 다음 예를 참조하십시오. ONTAP Select 클러스터에 2개 이상의 HA 쌍이 포함되어 있는 경우 클러스터의 모든 노드를 이 규칙에 포함해야 합니다.
+
+image:ST_15.jpg["VM/호스트 규칙"]
+
+image:ST_16.jpg["VM/호스트 규칙을 편집합니다"]
+
+다음 이유 중 하나로 동일한 ONTAP Select 클러스터의 ONTAP Select 노드 두 개 이상이 동일한 ESX 호스트에서 발견될 수 있습니다.
+
+* DRS는 VMware vSphere 라이센스 제한 때문에 또는 DRS가 활성화되지 않은 경우 표시되지 않습니다.
+* VMware HA 작업 또는 관리자가 시작한 VM 마이그레이션이 우선하므로 DRS 반유사성 규칙이 무시됩니다.
+
+
+ONTAP 배포는 ONTAP Select VM 위치를 사전 예방적으로 모니터링하지 않습니다. 그러나 클러스터 업데이트 작업은 ONTAP 배포 로그에 지원되지 않는 다음과 같은 구성을 반영합니다.
+
+image:ST_17.PNG["ONTAP 배포 로그"]

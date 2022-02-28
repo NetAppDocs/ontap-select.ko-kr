@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference_additional_info.html 
+keywords: community, forums, help, support, blogs, videos, imt, release notes, bugs, limitations, known issues 
+summary: ONTAP Select에 대한 자세한 정보를 확인하고 도움말을 볼 수 있는 추가 리소스가 있습니다. 
+---
+= 도움을 받을 수 있는 곳 및 자세한 정보를 얻을 수 있는 곳
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select에 대한 자세한 정보를 확인하고 도움말을 볼 수 있는 추가 리소스가 있습니다.
+
+
+
+=== ONTAP Select 제품 리소스
+
+다음 제품 페이지에는 다양한 ONTAP Select 리소스에 대한 링크가 포함되어 있습니다.
+
+* https://www.netapp.com/data-management/software-defined-storage-ontap-select/documentation["NetApp ONTAP Select 리소스"^]
+* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx["NetApp ONTAP Select 제품 페이지"^]
+
+
+
+
+=== ONTAP 9 리소스
+
+* https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
++
+ONTAP 9(CLI 명령 제외)에 대한 설명서를 제공합니다.
+
+* https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 문서 센터"^]
++
+ONTAP 9 CLI 명령에 대한 설명서를 제공합니다.
+
+
+
+
+
+=== 블로그
+
+ONTAP Select의 다양한 측면을 다루는 블로그 기사의 컬렉션이 있습니다.
+
+* https://blog.netapp.com/tag/ontap-select/["NetApp ONTAP Select 블로그"^]
+
+
+
+
+=== 커뮤니티
+
+다른 사용자와 연결하여 질문을 하고 NetApp ONTAP Select 커뮤니티에 참여할 수 있습니다.
+
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select["NetApp 커뮤니티: ONTAP Select"^]
+
+
+
+
+=== NetApp 상호 운용성 매트릭스 툴
+
+상호 운용성 매트릭스 툴은 자세한 구성 및 제품 지원 정보를 제공합니다.
+
+* https://mysupport.netapp.com/matrix/["NetApp IMT를 참조하십시오"^]
+

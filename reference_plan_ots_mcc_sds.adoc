@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_mcc_sds.html 
+keywords: plan, planning, metrocluster, metrocluster sds 
+summary: MetroCluster 구축 계획의 일부로 고려해야 하는 몇 가지 ONTAP Select SDS 요구 사항이 있습니다. 
+---
+= MetroCluster SDS 구축을 위한 준비
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 선택할 수 있는 구성 옵션입니다. ROBO(Remote Office/Branch Office) 구축과 비슷하지만 두 노드 간의 거리는 최대 10km입니다 향상된 2노드 배포로 추가 사용 사례 시나리오를 제공합니다. MetroCluster SDS 구축을 위한 준비의 일부로 요구사항 및 제한 사항을 숙지해야 합니다.
+
+MetroCluster SDS를 구축하기 전에 는 다음 요구사항을 충족해야 합니다.
+
+
+
+===== 라이센싱
+
+각 노드에는 프리미엄 이상의 ONTAP Select 라이센스가 있어야 합니다.
+
+
+
+===== 하이퍼바이저 플랫폼
+
+MetroCluster SDS는 ROBO 환경에서 2노드 클러스터를 지원하는 것과 동일한 VMware ESXi 및 KVM 하이퍼바이저에 구축할 수 있습니다. KVM은 ONTAP Select 9.10.1부터 더 이상 지원되지 않습니다.
+
+
+
+===== 네트워크 구성
+
+참여 사이트 간에 계층 2 연결이 필요합니다. 다음 구성을 포함하여 10GbE 및 1GbE가 모두 지원됩니다.
+
+* 10GbE 1개
+* 1GbE 4개
+
+
+
+NOTE: 데이터 서비스 포트 및 인터커넥트 포트는 동일한 첫 번째 스위치에 연결해야 합니다.
+
+
+
+===== 노드 간 지연 시간
+
+두 노드 사이의 네트워크는 5ms의 평균 지연 시간과 5ms의 추가적인 주기적 지터를 지원해야 합니다. 클러스터를 구축하기 전에 에 설명된 절차를 사용하여 네트워크를 테스트해야 합니다 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
+
+ ONTAP Select Product Architecture and Best Practices technical report.
+
+
+===== 중재자 서비스
+
+모든 2노드 ONTAP Select 클러스터와 마찬가지로 Deploy 가상 머신에 노드를 모니터링하고 장애 관리를 지원하는 별도의 중재자 서비스가 포함되어 있습니다. MetroCluster SDS의 향상된 거리를 사용하면 네트워크 토폴로지에 3개의 개별 사이트가 생성됩니다. 중재자와 노드 간 링크의 지연 시간은 왕복 125ms 미만이어야 합니다.
+
+
+
+===== 스토리지
+
+DAS(직접 연결 스토리지)는 HDD 및 SSD 디스크를 사용하여 지원됩니다. VMware 환경의 외부 스토리지 어레이 및 vSAN을 포함하여 vNAS도 지원됩니다.
+
+
+NOTE: MetroCluster SDS를 구축할 때는 분산형 또는 "확장" 토폴로지에서 vSAN을 사용할 수 없습니다.
+
+
+
+===== 배포에 할당된 정적 IP 주소입니다
+
+배포 관리 유틸리티에 정적 IP 주소를 할당해야 합니다. 이 요구사항은 하나 이상의 ONTAP Select 2노드 클러스터를 관리하는 모든 배포 인스턴스에 적용됩니다.

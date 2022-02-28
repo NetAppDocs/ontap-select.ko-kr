@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_adm_clusters.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, administer, administering, clusters 
+summary: ONTAP Select 클러스터를 관리하기 위해 수행할 수 있는 몇 가지 관련 작업이 있습니다. 
+---
+= ONTAP Select 클러스터
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 클러스터를 관리하기 위해 수행할 수 있는 몇 가지 관련 작업이 있습니다.
+
+
+
+== ONTAP Select 클러스터를 오프라인 및 온라인 상태로 이동
+
+클러스터를 생성한 후에는 필요에 따라 해당 상태를 오프라인 또는 온라인으로 변경할 수 있습니다.
+
+.단계
+. 글로벌 인벤토리 목록 * 창에서 * ONTAP Select 클러스터 * 를 클릭합니다.
+. 원하는 클러스터를 마우스 오른쪽 버튼으로 클릭하여 사용 가능한 작업을 표시합니다.
+. [오프라인 상태로 전환] * 또는 [온라인 상태로 전환]을 클릭하고 * 예 * 를 클릭하여 요청을 확인합니다.
+
+
+
+
+== ONTAP Select 클러스터 삭제
+
+ONTAP Select 클러스터가 더 이상 필요하지 않은 경우 삭제할 수 있습니다.
+
+클러스터가 오프라인 상태여야 합니다.
+
+.단계
+. 글로벌 인벤토리 목록 * 창에서 * ONTAP Select 클러스터 * 를 클릭합니다.
+. 원하는 클러스터를 마우스 오른쪽 버튼으로 클릭하여 사용 가능한 작업을 표시합니다.
+. 클러스터 삭제 * 를 클릭하고 * 예 * 를 클릭하여 요청을 확인합니다.
++
+삭제 옵션을 사용할 수 없는 경우 클러스터가 오프라인 상태가 아닙니다.
+
+

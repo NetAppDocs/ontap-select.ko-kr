@@ -1,0 +1,239 @@
+---
+sidebar: sidebar 
+permalink: reference_api_json_cc.html 
+keywords: rest api, deploy rest api, rest, python script, json, create cluster 
+summary: Python 코드 샘플을 사용하여 ONTAP Select 클러스터를 생성하거나 삭제할 때 JSON 파일을 스크립트에 입력으로 제공해야 합니다. 배포 계획에 따라 적절한 JSON 샘플을 복사하여 수정할 수 있습니다. 
+---
+= 따라서 스크립트를 사용하여 클러스터를 생성하는 JSON입니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Python 코드 샘플을 사용하여 ONTAP Select 클러스터를 생성하거나 삭제할 때 JSON 파일을 스크립트에 입력으로 제공해야 합니다. 배포 계획에 따라 적절한 JSON 샘플을 복사하여 수정할 수 있습니다.
+
+
+
+== ESXi의 단일 노드 클러스터
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name": "host-1234",
+      "type": "ESX",
+      "username": "admin"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+        ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+      },
+      "ontap_image_version": "9.7",
+      "gateway": "10.206.80.1",
+      "ip": "10.206.80.115",
+      "name": "mycluster",
+      "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+      "ontap_admin_password": "mypassword2",
+      "netmask": "255.255.254.0"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip": "10.206.80.114",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan": 1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
+}
+----
+
+
+== vCenter를 사용하는 ESXi의 단일 노드 클러스터
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "name":"host-1234",
+      "type":"ESX",
+      "mgmt_server":"vcenter-1234"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {"domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+      "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+      "dns_ips": ["10.206.80.135","10.206.80.136"]
+  },
+
+  "ontap_image_version":"9.7",
+  "gateway":"10.206.80.1",
+  "ip":"10.206.80.115",
+  "name":"mycluster",
+  "ntp_servers": ["10.206.80.183","10.206.80.142"],
+  "ontap_admin_password":"mypassword2",
+  "netmask":"255.255.254.0"
+  },
+
+  "vcenter": {
+    "password":"mypassword2",
+    "hostname":"vcenter-1234",
+    "username":"selectadmin"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip":"10.206.80.114",
+      "name":"node-1",
+      "networks": [
+        {
+          "name":"ONTAP-Management",
+          "purpose":"mgmt",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-External",
+          "purpose":"data",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-Internal",
+          "purpose":"internal",
+          "vlan":null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk":[],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity":5685190380748
+          }
+        ]
+      }
+    }
+  ]
+}
+----
+
+
+== KVM의 단일 노드 클러스터
+
+
+NOTE: ONTAP Select 9.10.1 버전부터는 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 아래 샘플은 KVM을 지원하는 이전 릴리스에 적용됩니다.
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name":"host-1234",
+      "type":"KVM",
+      "username":"root"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+    },
+
+    "ontap_image_version": "9.7",
+    "gateway":"10.206.80.1",
+    "ip":"10.206.80.115",
+    "name":"CBF4ED97",
+    "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+    "ontap_admin_password": "mypassword2",
+    "netmask":"255.255.254.0"
+  },
+  "nodes": [
+    {
+      "serial_number":"3200000nn",
+      "ip":"10.206.80.115",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan":1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
+}
+----

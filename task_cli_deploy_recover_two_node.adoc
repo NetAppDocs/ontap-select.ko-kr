@@ -1,0 +1,231 @@
+---
+sidebar: sidebar 
+permalink: task_cli_deploy_recover_two_node.html 
+keywords: administer, administering, cli, two node cluster, recover, recovering 
+summary: ONTAP Select Deploy 유틸리티가 실패하거나 어떤 이유로 사용할 수 없는 경우 ONTAP Select 노드와 클러스터를 관리할 수 없습니다. 또한 배포에 포함된 중재자 서비스를 사용할 수 없기 때문에 모든 2노드 클러스터에서 HA 기능이 손실됩니다. 복구할 수 없는 장애가 발생하면 deploy 유틸리티 인스턴스를 복구하여 관리 및 HA 기능을 복원해야 합니다. 
+---
+= 2노드 클러스터의 배포 유틸리티 복구
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select Deploy 유틸리티가 실패하거나 어떤 이유로 사용할 수 없는 경우 ONTAP Select 노드와 클러스터를 관리할 수 없습니다. 또한 배포에 포함된 중재자 서비스를 사용할 수 없기 때문에 모든 2노드 클러스터에서 HA 기능이 손실됩니다. 복구할 수 없는 장애가 발생하면 deploy 유틸리티 인스턴스를 복구하여 관리 및 HA 기능을 복원해야 합니다.
+
+
+
+== 시작하기 전에
+
+Deploy 유틸리티의 인스턴스를 복구하려고 하기 전에 준비해야 성공할 수 있습니다.
+
+
+
+===== 필요한 기술 및 정보
+
+여러 관리 절차를 숙지하고 필요한 정보를 가지고 있어야 합니다.
+
+
+
+===== 구축 가상 머신 설치
+
+하이퍼바이저 환경에 ONTAP Select 배포 유틸리티의 새 인스턴스를 설치할 수 있어야 합니다.
+
+
+
+===== ONTAP 명령줄 인터페이스입니다
+
+ONTAP Select 클러스터의 ONTAP CLI에 로그인하여 셸 인터페이스를 사용할 수 있어야 합니다.
+
+
+
+===== 배포 유틸리티 구성 백업의 가용성
+
+ONTAP Select 2노드 클러스터가 포함된 실패한 배포 유틸리티 인스턴스에서 구성 데이터 백업이 있는지 확인해야 합니다. 클러스터가 포함되지 않은 백업도 있을 수 있습니다.
+
+
+
+===== 배포 구성의 백업 복원
+
+사용된 복구 절차에 따라 배포 구성 데이터의 백업을 복원할 수 있어야 합니다.
+
+
+
+===== 원래 구축 가상 머신의 IP 주소입니다
+
+실패한 원래 배포 유틸리티 가상 시스템의 IP 주소를 알고 있어야 합니다.
+
+
+
+===== 스토리지 용량 라이센스
+
+용량 풀 또는 용량 계층 라이센스를 사용할지 결정해야 합니다. 용량 풀 라이센스를 사용하는 경우 배포 인스턴스를 복구 또는 복원한 후 각 용량 풀 라이센스를 다시 설치해야 합니다.
+
+
+
+===== 사용할 복구 절차를 결정합니다
+
+ONTAP Select 배포 유틸리티의 인스턴스를 복구할 때 사용할 절차를 결정해야 합니다. 이 결정은 ONTAP Select 2노드 클러스터가 포함된 원래의 실패한 배포 유틸리티에서 구성 데이터를 백업했는지 여부에 따라 결정됩니다.
+
+[cols="35,65"]
+|===
+| 2노드 클러스터를 포함하는 구축 백업이 있습니까? | 사용할 복구 절차입니다 
+
+
+| 예 | 구성 백업을 사용하여 배포 유틸리티 인스턴스 복원 
+
+
+| 아니요 | 배포 유틸리티 인스턴스 재구성 및 복구 
+|===
+
+
+== 구성 백업을 사용하여 배포 유틸리티 인스턴스 복원
+
+2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스 백업이 있는 경우 구성 데이터를 새 배포 가상 시스템 인스턴스로 복원할 수 있습니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.
+
+2노드 클러스터를 포함하는, 장애가 발생한 원래 가상 시스템의 구성 데이터 백업이 있어야 합니다. 2노드 클러스터의 ONTAP CLI에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.
+
+복원하는 구성 백업에는 2노드 클러스터가 포함되어 있으므로 중재자인 iSCSI 타겟과 사서함이 새 배포 유틸리티 가상 시스템에서 다시 생성됩니다.
+
+.단계
+. ONTAP Select 배포 유틸리티의 새 인스턴스를 준비합니다.
++
+.. 새 배포 유틸리티 가상 시스템을 설치합니다.
+.. 이전 백업에서 새 가상 머신으로 구축 구성을 복구합니다.
++
+설치 및 복원 절차에 대한 자세한 내용은 관련 작업을 참조하십시오.
+
+
+
+. ONTAP Select 2노드 클러스터의 ONTAP 명령줄 인터페이스에 로그인합니다.
+. 고급 권한 모드 시작:
++
+'세트 adv'
+
+. 새 배포 가상 시스템의 IP 주소가 원본 배포 가상 시스템과 다른 경우 이전 중재자 iSCSI 대상을 제거하고 새 대상을 추가해야 합니다.
++
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+"<ip_address>" 매개변수는 새 배포 가상 시스템의 IP 주소입니다.
+
++
+이러한 명령을 사용하면 ONTAP Select 노드에서 새 Deploy 유틸리티 가상 머신의 메일박스 디스크를 검색할 수 있습니다.
+
+. 중재 디스크의 이름을 확인합니다.
++
+'디스크 쇼 컨테이너 형식의 중재자'
+
+. 메일박스 디스크를 두 노드에 할당합니다.
++
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
+. 스토리지 페일오버가 설정되었는지 확인합니다.
++
+'스토리지 페일오버 쇼'
+
+
+
+용량 풀 라이센스를 사용하는 경우 각 용량 풀 라이센스를 다시 설치해야 합니다. 자세한 내용은 _용량 풀 라이센스 재설치_를 참조하십시오.
+
+
+
+== 배포 유틸리티 인스턴스 재구성 및 복구
+
+2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스의 백업이 없는 경우 새 배포 가상 시스템에서 중재자 iSCSI 대상 및 사서함을 구성해야 합니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.
+
+새 배포 유틸리티 인스턴스의 중재 대상 이름이 있어야 합니다. 2노드 클러스터의 ONTAP CLI에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.
+
+2노드 클러스터가 포함되어 있지 않더라도 필요에 따라 구성 백업을 새 구축 가상 머신에 복구할 수 있습니다. 2노드 클러스터는 복구를 통해 다시 생성되지 않으므로 배포에 있는 ONTAP Select 온라인 설명서 웹 페이지를 통해 중재 iSCSI 대상과 사서함을 새 배포 유틸리티 인스턴스에 수동으로 추가해야 합니다. 2노드 클러스터에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.
+
+
+NOTE: 복구 절차의 목표는 정상 HA 테이크오버 및 반환 작업을 수행할 수 있는 정상 상태로 2노드 클러스터를 복원하는 것입니다.
+
+.단계
+. ONTAP Select 배포 유틸리티의 새 인스턴스를 준비합니다.
++
+.. 새 배포 유틸리티 가상 시스템을 설치합니다.
+.. 필요에 따라 이전 백업에서 새 가상 머신으로 구축 구성을 복구합니다.
++
+이전 백업을 복원하면 새 배포 인스턴스에 2노드 클러스터가 포함되지 않습니다. 설치 및 복원 절차에 대한 자세한 내용은 관련 정보 섹션을 참조하십시오.
+
+
+
+. ONTAP Select 2노드 클러스터의 ONTAP 명령줄 인터페이스에 로그인합니다.
+. 고급 특별 권한 모드 시작:
++
+'세트 adv'
+
+. 중재자 iSCSI 대상 이름 가져오기:
++
+'스토리지 iSCSI-initiator show-target-type mailbox'
+
+. 새 배포 유틸리티 가상 컴퓨터에서 온라인 설명서 웹 페이지에 액세스하고 관리자 계정을 사용하여 로그인합니다.
++
+'\http://<ip_address>/api/ui`
+
++
+구축 가상 머신의 IP 주소를 사용해야 합니다.
+
+. 중재자 * 를 클릭한 다음 * GET/mediators * 를 클릭합니다.
+. 배포에서 유지 관리하는 중개자 목록을 표시하려면 * 시험 사용! * 을 클릭합니다.
++
+원하는 중재자 인스턴스의 ID를 확인합니다.
+
+. 중재자 * 를 클릭한 다음 * POST * 를 클릭합니다.
+. 중재자_ID의 값을 제공하십시오
+. ISCSI_TARGET 옆의 * Model * 을 클릭하고 이름 값을 입력합니다.
++
+iqn_name 매개 변수의 대상 이름을 사용합니다.
+
+. 중재자 iSCSI 대상을 만들려면 * 시험 사용! * 을 클릭합니다.
++
+요청이 성공하면 HTTP 상태 코드 200을 받게 됩니다.
+
+. 새 배포 가상 시스템의 IP 주소가 원본 배포 가상 시스템과 다른 경우 ONTAP CLI를 사용하여 이전의 중재 iSCSI 대상을 제거하고 새 대상을 추가해야 합니다.
++
+....
+storage iscsi-initiator remove-target -node * -target-type mailbox
+
+storage iscsi-initiator add-target -node <node1_name> -label mediator -target-type mailbox -target-portal <ip_address> -target-name <target>
+
+storage iscsi-initiator add-target -node <node2_name> -label mediator-target-type mailbox -target-portal <ip_address> -target-name <target>
+....
++
+"<ip_address>" 매개변수는 새 배포 가상 시스템의 IP 주소입니다.
+
+
+
+이러한 명령을 사용하면 ONTAP Select 노드에서 새 Deploy 유틸리티 가상 머신의 메일박스 디스크를 검색할 수 있습니다.
+
+. 중재 디스크의 이름을 확인합니다.
++
+'디스크 쇼 컨테이너 형식의 중재자'
+
+. 메일박스 디스크를 두 노드에 할당합니다.
++
+....
+disk assign -disk <mediator-disk1-name> -owner <node1-name>
+
+disk assign -disk <mediator-disk2-name> -owner <node2-name>
+....
+. 스토리지 페일오버가 설정되었는지 확인합니다.
++
+'스토리지 페일오버 쇼'
+
+
+
+용량 풀 라이센스를 사용하는 경우 각 용량 풀 라이센스를 다시 설치해야 합니다. 자세한 내용은 용량 풀 라이센스 재설치 를 참조하십시오.
+
+link:task_install_deploy.html["ONTAP Select 배포 설치 중"]
+
+

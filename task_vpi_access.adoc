@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_access.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, access, accessing 
+summary: vSphere 웹 클라이언트를 통해 Deploy vCenter 플러그인에 액세스할 수 있습니다. 
+---
+= vSphere를 통해 vCenter 플러그인 액세스
+
+
+[role="lead"]
+vSphere 웹 클라이언트를 통해 Deploy vCenter 플러그인에 액세스할 수 있습니다.
+
+vCenter 플러그인을 설치해야 합니다. 또한 vSphere에 로그인할 때 사용하는 vCenter 계정에는 다음 권한이 있어야 합니다.
+
+* 넷엡
++
+** ONTAP Select 구축
++
+*** 관리자
+
+
+
+
+
+
+.단계
+. 로그인한 경우 vSphere 웹 클라이언트에서 로그아웃합니다.
+. vSphere 웹 클라이언트를 사용하여 vCenter에 로그인하고 HTML5를 선택한 다음 SSL 인증서를 수락합니다.
++
+로그아웃했다가 다시 로그인하면 vCenter 구성 정보가 새로 고쳐집니다.
+
+. 글로벌 재고 목록 * 을 클릭합니다.
+
+
+왼쪽의 창에서 * ONTAP Select 클러스터 * 및 * ONTAP Select 배포 * 옵션을 사용할 수 있습니다. 표시되지 않으면 로그아웃한 다음 다시 로그인해야 합니다.

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: concept_api_before_workflows.html 
+keywords: rest api, deploy rest api, rest, workflows, before you begin 
+summary: 워크플로 프로세스를 검토하고 사용할 준비를 해야 합니다. 
+---
+= API 워크플로우를 사용하기 전에
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+워크플로 프로세스를 검토하고 사용할 준비를 해야 합니다.
+
+
+
+=== 워크플로에 사용되는 API 호출 이해
+
+ONTAP Select 온라인 설명서 페이지에는 모든 REST API 호출에 대한 세부 정보가 포함되어 있습니다. 여기서 이러한 세부 정보를 반복하는 대신 워크플로 샘플에 사용되는 각 API 호출에는 문서 페이지에서 호출을 찾는 데 필요한 정보만 포함됩니다. 특정 API 호출을 찾은 후에는 입력 매개 변수, 출력 형식, HTTP 상태 코드 및 요청 처리 유형을 비롯한 전체 호출 세부 정보를 검토할 수 있습니다.
+
+문서 페이지에서 호출을 쉽게 찾을 수 있도록 워크플로 내의 각 API 호출에 대해 다음 정보가 포함되어 있습니다.
+
+* 범주 API 호출은 문서 페이지에서 기능적으로 관련된 영역이나 범주로 구성됩니다. 특정 API 호출을 찾으려면 페이지 하단으로 스크롤하여 해당 API 범주를 클릭합니다.
+* HTTP 동사 HTTP 동사는 리소스에 대해 수행되는 작업을 식별합니다. 각 API 호출은 단일 HTTP 동사를 통해 실행됩니다.
+* 경로 경로는 호출 수행 시 작업이 적용되는 특정 리소스를 결정합니다. 경로 문자열이 핵심 URL에 추가되어 리소스를 식별하는 전체 URL을 구성합니다.
+
+
+
+
+=== REST API에 직접 액세스하기 위한 URL 생성
+
+ONTAP Select 설명서 페이지 외에도 Python과 같은 프로그래밍 언어를 통해 REST API 배포에 직접 액세스할 수도 있습니다. 이 경우, 코어 URL은 온라인 설명서 페이지에 액세스할 때 사용되는 URL과 약간 다릅니다. API에 직접 액세스할 때는 /API를 도메인과 포트 문자열에 추가해야 합니다. 예: `\http://deploy.mycompany.com/api`

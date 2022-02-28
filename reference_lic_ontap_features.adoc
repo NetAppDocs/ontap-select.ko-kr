@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: reference_lic_ontap_features.html 
+keywords: license, licensing, ontap features, default ontap features 
+summary: ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 제외하고 대부분의 ONTAP 기능을 완벽하게 지원합니다. 
+---
+= ONTAP 기능은 기본적으로 사용하도록 설정되어 있습니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 제외하고 대부분의 ONTAP 기능을 완벽하게 지원합니다.
+
+ONTAP Select에서는 클러스터를 구축할 때 각 노드에 대해 몇 가지 기능에 대한 라이센스를 자동으로 부여합니다.
+
+
+
+===== 포함된 기능
+
+기본적으로 다음 기능이 포함되어 있고 라이센스가 부여됩니다.
+
+* NFS 를 참조하십시오
+* CIFS를 선택합니다
+* iSCSI
+* SnapMirror를 참조하십시오
+* SnapVault
+* 플랙스클론
+* SnapRestore
+* NetApp 볼륨 암호화
+* 중복제거 및 압축
+* ONTAP 멀티 테넌시 기능
+* NetApp 볼륨 암호화(제한 없는 국가만 해당)
+
+
+
+
+===== 별도로 라이센스가 부여된 기능
+
+다음을 포함한 다른 기능에 대해서는 별도의 라이센스를 취득해야 합니다.
+
+* SnapLock 엔터프라이즈
+* FabricPool
+* 데이터 가용성 서비스
+* FlexCache(무료)
+* SyncMirror(무료)
+* MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
+
+
+
+NOTE: StorageGRID Webscale을 사용할 경우 FabricPool 라이센스가 필요하지 않습니다.
+
+.관련 정보
+* link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
+
