@@ -6,6 +6,7 @@ summary: 구축된 클러스터의 초기 상태를 인식하고 필요에 따�
 ---
 = 구축 후 클러스터의 초기 상태입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

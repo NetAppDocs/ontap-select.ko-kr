@@ -6,6 +6,7 @@ summary: 일부 배포 API 호출, 특히 리소스를 생성하거나 수정하
 ---
 = 작업 개체를 사용한 비동기 처리
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

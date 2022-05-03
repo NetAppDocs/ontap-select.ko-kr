@@ -6,6 +6,7 @@ summary: 하드웨어 RAID 컨트롤러를 사용할 수 있는 경우, ONTAP Se
 ---
 = 로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

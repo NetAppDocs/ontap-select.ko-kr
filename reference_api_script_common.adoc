@@ -6,6 +6,7 @@ summary: 모든 Python 스크립트는 단일 모듈에서 공통 Python 클래�
 ---
 = 공통 지원 모듈
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

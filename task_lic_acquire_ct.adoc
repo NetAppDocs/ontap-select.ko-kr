@@ -6,6 +6,7 @@ summary: 용량 계층 라이센스를 사용하는 경우 각 ONTAP Select 노�
 ---
 = 용량 계층 라이센스 획득
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

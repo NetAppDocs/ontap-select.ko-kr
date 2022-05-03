@@ -6,6 +6,7 @@ summary: ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를
 ---
 = ONTAP Select 배포 설치 중
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

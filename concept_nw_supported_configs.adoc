@@ -6,6 +6,7 @@ summary: 최적의 하드웨어를 선택하고 네트워크를 구성하여 성
 ---
 = 지원되는 네트워크 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

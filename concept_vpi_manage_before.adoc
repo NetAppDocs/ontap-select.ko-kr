@@ -6,6 +6,7 @@ summary: Deploy vCenter 플러그인을 설치 및 관리하려면 몇 가지 �
 ---
 = 시작하기 전에
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

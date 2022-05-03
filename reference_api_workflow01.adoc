@@ -6,6 +6,7 @@ summary: vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP
 ---
 = 워크플로우 1: ESXi에서 단일 노드 평가 클러스터 생성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

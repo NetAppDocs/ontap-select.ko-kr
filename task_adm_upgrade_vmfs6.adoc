@@ -6,6 +6,7 @@ summary: VMware는 VMFS 5에서 VMFS 6으로의 데이터 이동 없는 업그�
 ---
 = Storage vMotion을 사용하여 VMFS6으로 업그레이드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

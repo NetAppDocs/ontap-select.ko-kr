@@ -6,6 +6,7 @@ summary: ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령�
 ---
 = CLI를 사용하여 ONTAP Select 클러스터 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 모든 배포 API 호출은 클라이언트에 대한 관련 응답을 
 ---
 = 요청 및 응답 API 트랜잭션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

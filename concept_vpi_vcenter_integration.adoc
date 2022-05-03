@@ -6,6 +6,7 @@ summary: Deploy 플러그인은 vCenter Server와 긴밀하게 통합되어 있�
 ---
 = 플러그인과 vCenter의 통합 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

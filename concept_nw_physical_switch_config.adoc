@@ -6,6 +6,7 @@ summary: 단일 스위치 및 다중 스위치 환경을 기반으로 하는 업
 ---
 = 물리적 스위치 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

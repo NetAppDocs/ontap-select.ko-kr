@@ -6,6 +6,7 @@ summary: REST는 일반적인 기술과 모범 사례를 설정하지만 각 API
 ---
 = 기본 작동 특성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

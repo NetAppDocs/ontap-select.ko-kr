@@ -6,6 +6,7 @@ summary: ONTAP Select가 귀사에 적합한지 확인한 후 프로덕션 배�
 ---
 = 운영 구축을 위해 라이센스를 구입했습니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

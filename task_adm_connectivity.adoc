@@ -6,6 +6,7 @@ summary: 내부 클러스터 네트워크의 두 개 이상의 ONTAP Select 노�
 ---
 = ONTAP Select 노드 간 연결을 확인하는 중입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

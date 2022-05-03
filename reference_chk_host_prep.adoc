@@ -6,6 +6,7 @@ summary: ONTAP Select 노드가 구축된 각 하이퍼바이저 호스트를 �
 ---
 = 호스트 구성 및 준비 체크리스트
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

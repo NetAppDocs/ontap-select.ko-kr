@@ -6,6 +6,7 @@ summary: ONTAP Select를 구축하기 전에 하이퍼바이저 네트워크를 
 ---
 = 네트워킹 고려 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -143,7 +144,7 @@ NOTE: 필요한 경우 네트워크 설계에 따라 클러스터 MTU 값을 수
 
 ONTAP Select 배포 환경의 여러 참가자 간에 네트워크 트래픽이 흐르도록 방화벽이 올바르게 구성되어 있는지 확인해야 합니다.
 
-참가자::
+참가자:: ONTAP Select 배포의 일부로 네트워크 트래픽을 교환하는 여러 참가자 또는 엔터티가 있습니다. 이러한 정보는 네트워크 트래픽 요구 사항에 대한 요약 설명에서 소개되고 사용됩니다.
 +
 --
 * ONTAP Select 배포 관리 유틸리티를 배포합니다

@@ -6,6 +6,7 @@ summary: SSH를 사용하여 배포 관리 셸에 액세스할 수 있습니다.
 ---
 = 시작하기 전에
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

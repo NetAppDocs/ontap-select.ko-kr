@@ -6,6 +6,7 @@ summary: 배포 관리 유틸리티의 인스턴스에 ONTAP Select 이미지를
 ---
 = 배포할 ONTAP Select 이미지 추가
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

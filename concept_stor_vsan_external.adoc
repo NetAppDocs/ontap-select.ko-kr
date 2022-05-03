@@ -6,6 +6,7 @@ summary: 'vNAS(Virtual NAS) 구축은 VSAN의 ONTAP Select 클러스터, 일부 
 ---
 = vSAN 및 외부 스토리지 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

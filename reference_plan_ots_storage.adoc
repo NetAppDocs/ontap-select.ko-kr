@@ -6,6 +6,7 @@ summary: ONTAP Select 호스트 스토리지와 관련하여 고려해야 할 �
 ---
 = 스토리지 및 RAID 고려 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: VMware 환경과 관련하여 고려해야 할 몇 가지 하드웨어 
 ---
 = VMware 하이퍼바이저 및 하드웨어 고려 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

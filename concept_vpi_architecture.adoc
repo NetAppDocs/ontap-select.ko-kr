@@ -6,6 +6,7 @@ summary: Deploy vCenter 플러그인은 ONTAP Select Deploy 및 VMware vCenter�
 ---
 = 플러그인 아키텍처
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

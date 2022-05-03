@@ -6,6 +6,7 @@ summary: ONTAP Select가 실행 중인 ESXi 가상 머신의 비디오 콘솔에
 ---
 = ONTAP Select 비디오 콘솔 액세스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

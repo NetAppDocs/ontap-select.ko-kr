@@ -6,6 +6,7 @@ summary: HA 디스크 하트비팅, HA 메일박스, HA 하트비팅, HA 페일�
 ---
 = HA 추가 정보
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

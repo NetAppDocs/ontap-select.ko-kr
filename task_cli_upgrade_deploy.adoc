@@ -6,6 +6,7 @@ summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 �
 ---
 = 배포 인스턴스 업그레이드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

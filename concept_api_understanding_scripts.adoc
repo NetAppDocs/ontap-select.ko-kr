@@ -6,6 +6,7 @@ summary: 샘플 Python 스크립트를 사용하여 여러 가지 작업을 수�
 ---
 = Python 스크립트 이해
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

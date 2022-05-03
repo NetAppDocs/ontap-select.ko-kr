@@ -6,6 +6,7 @@ summary: VMware 환경에 ONTAP Select를 구축할 때는 배포 관리 유틸�
 ---
 = VMware vCenter 플러그인
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

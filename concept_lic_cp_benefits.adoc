@@ -6,6 +6,7 @@ summary: 용량 계층 라이센스 모델 대신 용량 풀 라이센스 모델
 ---
 = 이점 요약
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 환경에 가장 적합한 HA 구성을 선택할 수 있는 고가용�
 ---
 = 고가용성 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

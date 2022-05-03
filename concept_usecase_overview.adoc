@@ -6,6 +6,7 @@ summary: ONTAP Select는 하이퍼바이저 가상화를 통해 제공되는 고
 ---
 = 비즈니스 요구 및 사용 시나리오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 먼저 ONTAP Select 환경에 적용되는 일반적인 네트워킹 �
 ---
 = 네트워킹: 일반 개념 및 특성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

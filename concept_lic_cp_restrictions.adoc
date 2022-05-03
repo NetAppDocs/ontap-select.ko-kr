@@ -6,6 +6,7 @@ summary: 용량 풀 라이센스 모델을 사용할 때 적용되는 제한 사
 ---
 = 용량 풀 라이센스에 대한 구축 제한
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

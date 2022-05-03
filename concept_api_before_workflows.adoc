@@ -6,6 +6,7 @@ summary: 워크플로 프로세스를 검토하고 사용할 준비를 해야 �
 ---
 = API 워크플로우를 사용하기 전에
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

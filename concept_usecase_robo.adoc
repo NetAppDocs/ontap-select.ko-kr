@@ -6,6 +6,7 @@ summary: 'ROBO(원격 사무소/지사)에 ONTAP Select를 구축하여 소규�
 ---
 = 원격 사무소 및 지점 사무소
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

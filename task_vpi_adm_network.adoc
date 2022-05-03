@@ -6,6 +6,7 @@ summary: 탐색 및 표시할 수 있는 네트워크의 몇 가지 측면이 �
 ---
 = 네트워크 연결을 확인하는 중입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

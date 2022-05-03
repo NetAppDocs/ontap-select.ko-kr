@@ -6,6 +6,7 @@ summary: 구매를 결정하기 전에 ONTAP Select를 평가하려는 경우 �
 ---
 = 평가판 라이센스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

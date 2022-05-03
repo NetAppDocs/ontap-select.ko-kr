@@ -6,6 +6,7 @@ summary: Ansible 역할을 사용하여 ONTAP Select 구축을 자동화합니�
 ---
 = Ansible을 사용하여 ONTAP Select 구축 자동화
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

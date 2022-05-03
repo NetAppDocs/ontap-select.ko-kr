@@ -6,6 +6,7 @@ summary: 모든 API 호출의 세부 사항은 ONTAP Select 배포 온라인 설
 ---
 = API 호출 이해 및 실행
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

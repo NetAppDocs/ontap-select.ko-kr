@@ -6,6 +6,7 @@ summary: 샘플 Python 스크립트를 실행하기 전에 환경을 준비해�
 ---
 = Python을 사용하여 API에 액세스하기 전에
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

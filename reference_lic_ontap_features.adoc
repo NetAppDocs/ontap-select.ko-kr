@@ -6,6 +6,7 @@ summary: ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 �
 ---
 = ONTAP 기능은 기본적으로 사용하도록 설정되어 있습니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

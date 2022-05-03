@@ -6,6 +6,7 @@ summary: 용량 계층 라이센스 모델에서는 9자리 노드 일련 번호
 ---
 = 노드 일련 번호입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

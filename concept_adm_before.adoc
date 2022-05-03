@@ -6,6 +6,7 @@ summary: ONTAP Select 클러스터를 생성한 후 다양한 관리 작업을 �
 ---
 = ONTAP Select 관리를 시작하기 전에
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

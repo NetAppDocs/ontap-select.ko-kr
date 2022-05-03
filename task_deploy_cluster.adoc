@@ -6,6 +6,7 @@ summary: ONTAP Select 배포 관리 유틸리티와 함께 제공되는 웹 사�
 ---
 = ONTAP Select 클러스터 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -26,7 +27,7 @@ TIP: Deploy 유틸리티 CLI를 사용하여 ONTAP Select 클러스터를 구축
 
 배포를 성공적으로 수행할 수 있도록 준비해야 합니다.
 
-초기 계획::
+초기 계획:: 문서의 _Plan_and_License_섹션을 검토합니다. 이를 기반으로 다음을 비롯하여 클러스터에 대한 결정을 내릴 수 있습니다.
 +
 --
 * 하이퍼바이저
@@ -37,7 +38,7 @@ TIP: Deploy 유틸리티 CLI를 사용하여 ONTAP Select 클러스터를 구축
 
 
 --
-호스트 준비::
+호스트 준비:: ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 준비하고 라이센스 모델에 따라 필요한 스토리지 라이센스 파일을 가지고 있어야 합니다. 준비 요구 사항을 보려면
 +
 --
 . 배포 웹 사용자 인터페이스에 로그인합니다.
@@ -50,7 +51,7 @@ TIP: Deploy 유틸리티 CLI를 사용하여 ONTAP Select 클러스터를 구축
 사용권 파일:: 운영 환경에 클러스터를 구축할 계획이라면 라이센스 모델을 기반으로 스토리지 라이센스 파일을 얻어야 합니다.
 설치 및 계정 자격 증명 배포:: 배포 관리 유틸리티를 설치하고 초기 구성을 수행해야 합니다. 을 참조하십시오 link:task_install_deploy.html["ONTAP Select 배포 설치 중"] 를 참조하십시오. 설치 프로세스의 일부로 구성된 배포 관리자 계정의 암호가 있어야 합니다.
 이전 ONTAP Select 노드 이미지 설치:: 기본적으로 배포 관리 유틸리티는 릴리스 시점에 최신 버전의 ONTAP Select를 포함합니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 link:task_cli_deploy_image_add.html["배포할 ONTAP Select 이미지 추가"] 를 참조하십시오.
-시작 페이지 시작 중::
+시작 페이지 시작 중:: 초기 페이지 * ONTAP Select 배포 시작하기 * 는 클러스터를 생성하는 다단계 프로세스를 안내합니다. 다음과 같은 5가지 주요 단계가 있습니다.
 +
 --
 * 라이센스를 추가합니다

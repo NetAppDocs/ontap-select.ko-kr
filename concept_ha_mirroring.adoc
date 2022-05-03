@@ -6,6 +6,7 @@ summary: 'RAID RSM(SyncMirror), 미러링된 애그리게이트 및 쓰기 경�
 ---
 = HA RSM 및 미러링된 애그리게이트
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

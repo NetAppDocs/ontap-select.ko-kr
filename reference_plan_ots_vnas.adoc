@@ -6,6 +6,7 @@ summary: ONTAP Select vNAS 사용과 관련하여 고려해야 할 몇 가지 �
 ---
 = ONTAP Select vNAS 요구 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

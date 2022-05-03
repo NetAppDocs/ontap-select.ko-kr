@@ -6,6 +6,7 @@ summary: ONTAP Select 라이센스 관리의 일부로 수행할 수 있는 몇 
 ---
 = ONTAP Select 라이센스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

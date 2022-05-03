@@ -6,6 +6,7 @@ summary: NIC 2개 및 NIC 4개 구성에 대한 ONTAP Select vSwitch 구성 및 
 ---
 = VMware vSphere vSwitch 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

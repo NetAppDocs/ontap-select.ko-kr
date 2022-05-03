@@ -6,6 +6,7 @@ summary: ONTAP Select 배포에 포함된 REST API에는 버전 번호가 할당
 ---
 = API 버전 관리 배포
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

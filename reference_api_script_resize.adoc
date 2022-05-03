@@ -6,6 +6,7 @@ summary: 다음 스크립트를 사용하여 ONTAP Select 클러스터에서 노
 ---
 = 클러스터 노드의 크기를 조정하는 스크립트입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

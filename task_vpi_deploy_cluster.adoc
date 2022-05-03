@@ -6,6 +6,7 @@ summary: vSphere 웹 사용자 인터페이스를 통해 vCenter 구축 플러�
 ---
 = ONTAP Select 클러스터 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

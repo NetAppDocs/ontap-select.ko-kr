@@ -6,6 +6,7 @@ summary: ONTAP Deploy를 사용하여 ONTAP Select 클러스터의 각 노드에
 ---
 = 스토리지 용량 증가
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

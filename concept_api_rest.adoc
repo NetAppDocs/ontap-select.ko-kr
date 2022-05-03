@@ -6,6 +6,7 @@ summary: 'REST(Representational State Transfer)는 분산된 웹 애플리케이
 ---
 = REST 웹 서비스 기반
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: VMware 환경에 ONTAP Select 클러스터를 구축하기 위한 준�
 ---
 = ONTAP Select 설치에 필요한 정보입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

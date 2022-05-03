@@ -6,6 +6,7 @@ summary: vCenter 배포 플러그인을 지원하기 위한 일환으로 사용 
 ---
 = 문제 해결
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

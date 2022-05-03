@@ -6,6 +6,7 @@ summary: 다음 스크립트를 사용하여 ONTAP Select 노드에 대한 라�
 ---
 = 노드 라이센스를 추가하는 스크립트입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

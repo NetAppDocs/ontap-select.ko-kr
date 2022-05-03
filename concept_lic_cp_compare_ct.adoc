@@ -6,6 +6,7 @@ summary: 용량 풀과 용량 계층 라이센스 모델 간에는 몇 가지 �
 ---
 = 용량 풀 및 용량 계층 라이센스 비교
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

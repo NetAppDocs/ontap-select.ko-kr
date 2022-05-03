@@ -6,6 +6,7 @@ summary: VMware vCenter Plug-in for ONTAP Select Deploy는 VMware 환경에서 �
 ---
 = vCenter 플러그인 구축 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

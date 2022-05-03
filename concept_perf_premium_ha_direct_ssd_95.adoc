@@ -6,6 +6,7 @@ summary: ONTAP Select 9.5 성능 - 프리미엄 HA 직접 연결 SSD 스토리�
 ---
 = ONTAP Select 9.5 성능: 프리미엄 HA 직접 연결 SSD 스토리지
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

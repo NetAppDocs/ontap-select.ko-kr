@@ -6,6 +6,7 @@ summary: ONTAP Select 노드에서 사용하는 각 용량 풀에 대해 라이�
 ---
 = 용량 풀 라이센스 획득
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

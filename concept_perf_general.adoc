@@ -6,6 +6,7 @@ summary: 성능은 하드웨어 구성에 따라 다릅니다.
 ---
 = 성능 일반 고려 사항
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

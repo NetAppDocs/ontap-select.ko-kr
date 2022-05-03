@@ -6,6 +6,7 @@ summary: REST 웹 서비스의 고유한 유연성 때문에 ONTAP Select Deploy
 ---
 = 배포 API에 액세스하는 방법
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

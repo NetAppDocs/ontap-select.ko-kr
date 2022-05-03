@@ -6,6 +6,7 @@ summary: VMware 환경에 ONTAP Select 배포 유틸리티를 설치하기 전�
 ---
 = VMware 하이퍼바이저 환경
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

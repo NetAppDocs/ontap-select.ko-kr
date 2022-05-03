@@ -6,6 +6,7 @@ summary:
 ---
 = ONTAP Select 릴리즈 노트
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

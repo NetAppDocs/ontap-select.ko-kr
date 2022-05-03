@@ -6,6 +6,7 @@ summary: Python 코드 샘플을 사용하여 ONTAP Select 클러스터를 생�
 ---
 = 따라서 스크립트를 사용하여 클러스터를 생성하는 JSON입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

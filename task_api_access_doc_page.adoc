@@ -6,6 +6,7 @@ summary: API 문서를 표시하고 API 호출을 수동으로 발급하려면 O
 ---
 = 배포 문서 페이지 액세스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

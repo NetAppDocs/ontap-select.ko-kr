@@ -6,6 +6,7 @@ summary: 더 이상 필요하지 않은 경우 배포 관리 유틸리티의 인
 ---
 = 배포에서 ONTAP Select 이미지 제거
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

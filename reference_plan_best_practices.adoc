@@ -6,6 +6,7 @@ summary: ONTAP Select 배포 계획의 일부로 고려해야 하는 모범 사�
 ---
 = 모범 사례 요약
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

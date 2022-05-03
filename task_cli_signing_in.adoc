@@ -6,6 +6,7 @@ summary: SSH를 사용하여 배포 관리 셸에 로그인해야 합니다. 로
 ---
 = SSH를 사용하여 배포하려면 로그인합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

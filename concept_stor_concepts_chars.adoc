@@ -6,6 +6,7 @@ summary: 특정 스토리지 구성 요소를 살펴보기 전에 ONTAP Select �
 ---
 = 스토리지: 일반 개념 및 특징
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

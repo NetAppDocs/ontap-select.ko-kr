@@ -5,6 +5,7 @@ keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, access, accessing
 summary: vSphere 웹 클라이언트를 통해 Deploy vCenter 플러그인에 액세스할 수 있습니다. 
 ---
 = vSphere를 통해 vCenter 플러그인 액세스
+:allow-uri-read: 
 
 
 [role="lead"]

@@ -6,6 +6,7 @@ summary: VMware vCenter와 관련된 몇 가지 계획 요구 사항을 고려�
 ---
 = VMware vCenter Server를 참조하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

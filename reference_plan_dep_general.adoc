@@ -6,6 +6,7 @@ summary: ONTAP Select 배포 관리 유틸리티 설치 계획의 일부로 고�
 ---
 = ONTAP Select은 일반 요구 사항 및 계획을 배포합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 워크플로우를 따라 ONTAP Select 배포에 대한 라이선스를
 ---
 = 라이선스를 구매할 때의 워크플로
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

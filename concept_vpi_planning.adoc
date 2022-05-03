@@ -6,6 +6,7 @@ summary: Deploy vCenter 플러그인을 설치 및 사용하기 전에 성공을
 ---
 = Deploy vCenter 플러그인을 사용할 계획입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

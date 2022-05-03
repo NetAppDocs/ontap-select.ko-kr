@@ -6,6 +6,7 @@ summary: 'ONTAP Select를 ROBO(원격 사무소/지사) 환경에 구축할 수 
 ---
 = 원격 사무소 및 지점 배포
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

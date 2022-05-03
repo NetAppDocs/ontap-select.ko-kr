@@ -6,6 +6,7 @@ summary: VMware ESXi에서 ONTAP Select를 실행하는 경우 ESXi 소프트웨
 ---
 = VMware ESXi를 버전 6.5 이상으로 업그레이드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Select은 조직 내에서 하나 이상의 프라이빗 클라�
 ---
 = 프라이빗 클라우드 및 데이터 센터
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

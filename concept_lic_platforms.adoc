@@ -6,6 +6,7 @@ summary: ONTAP Select 용량 계층 또는 용량 풀 라이센스를 3가지 �
 ---
 = 플랫폼 라이센스 제공 이해
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

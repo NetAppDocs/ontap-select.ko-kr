@@ -6,6 +6,7 @@ summary: ONTAP Select 클러스터를 구축한 후 표준 ONTAP 소프트웨어
 ---
 = ONTAP Select 노드 업그레이드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

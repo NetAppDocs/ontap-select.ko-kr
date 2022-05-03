@@ -6,6 +6,7 @@ summary: 용량 풀 라이센스 모델은 용량 계층 모델과 다릅니다.
 ---
 = 운영 세부 정보
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

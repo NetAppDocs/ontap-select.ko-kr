@@ -6,6 +6,7 @@ summary: VMware 환경에 배포 관리 유틸리티를 설치하기 전에 기�
 ---
 = 배포 유틸리티 설치에 필요한 정보
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

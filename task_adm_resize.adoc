@@ -6,6 +6,7 @@ summary: ONTAP Select 클러스터를 구축한 후 배포 관리 유틸리티�
 ---
 = ONTAP Select 클러스터 노드 크기 조정
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Select Deploy 웹 사용자 인터페이스를 사용하여 vCent
 ---
 = Deploy vCenter 플러그인 확인 및 제거
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

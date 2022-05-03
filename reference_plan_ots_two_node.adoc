@@ -6,6 +6,7 @@ summary: HA로 2노드 클러스터를 구축하려면 다른 클러스터 노�
 ---
 = HA가 포함된 ONTAP Select 2노드 클러스터
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

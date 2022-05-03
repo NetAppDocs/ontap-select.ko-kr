@@ -6,6 +6,7 @@ summary: ONTAP Select는 FAS 및 AFF 어레이에 제공되는 스토리지 효�
 ---
 = 스토리지 효율성 지원
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리�
 ---
 = ONTAP Select 구축
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
