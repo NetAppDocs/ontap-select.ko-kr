@@ -21,7 +21,7 @@ vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select �
 * ESXi 호스트가 vCenter에서 관리되지 않음(독립 실행형 호스트)
 * 클러스터 내에서 여러 노드 또는 호스트가 사용됩니다
 * 클러스터는 구매한 라이센스가 있는 운영 환경에 구축됩니다
-* KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(KVM은 ONTAP Select 9.10.1부터 더 이상 지원되지 않음).
+* KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(ONTAP Select 9.10.1 이상을 사용하여 새 클러스터를 생성할 때 KVM은 더 이상 지원되지 않음).
 
 
 

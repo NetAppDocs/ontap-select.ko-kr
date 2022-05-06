@@ -39,7 +39,7 @@ ONTAP Select는 다음 하이퍼바이저에 구축할 수 있습니다.
 
 * VMware ESXi 6.5 U2(빌드 8294253 이상)
 * 6.7 U1, U2 및 U3을 포함한 VMware ESXi 6.7 GA(빌드 8169922 이상
-* 7.0 U1 및 U2를 포함한 VMware ESXi 7.0 GA(빌드 15843807 이상
+* 7.0 U1, U2 및 U3C를 포함한 VMware ESXi 7.0 GA(빌드 15843807 이상
 
 
 

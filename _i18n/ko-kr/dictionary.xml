@@ -208,7 +208,6 @@
   <block id="33476e54e425c79d4fbac2f9f1b2b4aa" category="list-text">ONTAP Select와 ONTAP Select 배포 관리 유틸리티는 모두 하이퍼바이저에 독립적입니다. 다음 하이퍼바이저는 둘 다 지원됩니다.</block>
   <block id="f7eea647714641318ee86fedbbed4691" category="list-text">VMware ESXi</block>
   <block id="c361c20443811fad6f41fa10f5dde140" category="list-text">커널 기반 가상 머신(KVM)</block>
-  <block id="4799fc3e383defae7faf34dbc8d855ef" category="admonition">ONTAP Select 9.10.1 버전부터는 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
   <block id="a2fdc01936e7294727af3355cc284843" category="paragraph">지원되는 플랫폼에 대한 자세한 내용은 하이퍼바이저별 계획 정보 및 릴리스 노트를 참조하십시오.</block>
   <block id="ea51f3ae402e2a34b5af47d7dcc3dbb7" category="list-text">ONTAP Select 노드용 하이퍼바이저 및 관리 유틸리티</block>
   <block id="1cc3032009578783bd053fa9e9aafa64" category="list-text">Deploy 관리 유틸리티와 ONTAP Select 노드 모두 가상 머신으로 실행됩니다. 배포 유틸리티에 대해 선택하는 하이퍼바이저는 ONTAP Select 노드에 대해 선택하는 하이퍼바이저와 독립적입니다. 두 가지를 페어링할 때 완벽한 유연성이 있습니다.</block>
@@ -510,7 +509,6 @@
   <block id="31b7bb22df4e14e27e8d94676de87687" category="list-text">ESXi 호스트가 vCenter에서 관리되지 않음(독립 실행형 호스트)</block>
   <block id="7f99b6195696eb3b2dd6306108e31199" category="list-text">클러스터 내에서 여러 노드 또는 호스트가 사용됩니다</block>
   <block id="23792fd2201db7e4a90f1bb62205da33" category="list-text">클러스터는 구매한 라이센스가 있는 운영 환경에 구축됩니다</block>
-  <block id="f6caae73592c829ae0d34701246f1d75" category="list-text">KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(KVM은 ONTAP Select 9.10.1부터 더 이상 지원되지 않음).</block>
   <block id="02a3feeefaee61409aecc3199ba633fd" category="section-title">vCenter Server 자격 증명을 등록합니다</block>
   <block id="9769928a2568daa5e0ec428f55c04f89" category="paragraph">vCenter Server에서 관리하는 ESXi 호스트에 구축하는 경우 호스트를 등록하기 전에 자격 증명을 추가해야 합니다. 그러면 Deploy 관리 유틸리티에서 자격 증명을 사용하여 vCenter를 인증할 수 있습니다.</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">범주</block>
@@ -665,7 +663,6 @@
   <block id="e597139c74e6edb603d769f2441e9aec" category="list-text">배포에는 관리자 암호 변경과 같은 몇 가지 절차가 있습니다.</block>
   <block id="44c3d61a6cd78f834dce18458a846592" category="summary">ONTAP Select에 대한 일반적인 질문에 대한 답변을 찾아보십시오.</block>
   <block id="af2a4d2810d86aa0169c117f82682f9a" category="doc">자주 묻는 질문</block>
-  <block id="9c45ca5469e5d468a08d32c41ddb256f" category="admonition">ONTAP Select 9.10.1 버전부터는 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. KVM 관련 질문은 KVM을 지원하는 이전 릴리스에만 해당됩니다.</block>
   <block id="0db377921f4ce762c62526131097968f" category="section-title">일반</block>
   <block id="765cd9e9991cada43c9b9d9159809b2a" category="paragraph">일반적인 질문과 대답을 찾아보십시오.</block>
   <block id="7bd99abd8b8356e930247cbe6676d400" category="section-title">ONTAP 구축과 ONTAP Select의 차이점은 무엇입니까?</block>
@@ -714,7 +711,6 @@
   <block id="4e0891be88802b935c566dc6245269b2" category="section-title">소프트웨어 RAID는 하드웨어 RAID 구성과 어떻게 다릅니까?</block>
   <block id="22e0f3c76aa3f16b504047703ee442db" category="paragraph">소프트웨어 RAID는 ONTAP 소프트웨어 스택의 계층입니다. 소프트웨어 RAID는 물리적 드라이브가 분할되어 ONTAP Select VM 내에서 원시 디스크로 사용할 수 있으므로 더 많은 관리 제어를 제공합니다. 반면, 하드웨어 RAID를 사용하면 하나의 대규모 LUN을 일반적으로 사용할 수 있으며, 이 LUN을 조각하여 ONTAP Select 내에 VMDISKK를 생성할 수 있습니다. 소프트웨어 RAID는 옵션으로 제공되며 하드웨어 RAID 대신 사용할 수 있습니다.</block>
   <block id="6ec2a86943d66b46f70e5d87ac537fd4" category="paragraph">소프트웨어 RAID에 대한 일부 요구 사항은 다음과 같습니다.</block>
-  <block id="b74ce4eae578d8c2c381398102112755" category="list-text">KVM 및 ESX에 대해 지원됩니다</block>
   <block id="daa9446dd725dfc008580c725c26e90b" category="list-text">지원되는 물리 디스크 크기: 200GB – 32TB</block>
   <block id="94615c9042eb14ee228868c999ca7b3b" category="list-text">DAS 구성에서만 지원됩니다</block>
   <block id="103ab2c767b1be091ad46e82ec44d53c" category="list-text">SSD에서만 지원됩니다</block>
@@ -1095,7 +1091,6 @@
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">라이센싱</block>
   <block id="b06ea299e97a88792e784ae5e265bc85" category="paragraph">각 노드에는 프리미엄 이상의 ONTAP Select 라이센스가 있어야 합니다.</block>
   <block id="58af1c2597d085d648724676529071f9" category="section-title">하이퍼바이저 플랫폼</block>
-  <block id="bf3007c0073cf0eb34e66b112442d0ee" category="paragraph">MetroCluster SDS는 ROBO 환경에서 2노드 클러스터를 지원하는 것과 동일한 VMware ESXi 및 KVM 하이퍼바이저에 구축할 수 있습니다. KVM은 ONTAP Select 9.10.1부터 더 이상 지원되지 않습니다.</block>
   <block id="5dd57c2a315d3af44c2eb40eefc47111" category="section-title">네트워크 구성</block>
   <block id="f2f4f127985b8989606d460ea282483e" category="paragraph">참여 사이트 간에 계층 2 연결이 필요합니다. 다음 구성을 포함하여 10GbE 및 1GbE가 모두 지원됩니다.</block>
   <block id="e7fea67b35768c83fc1eee5ad2800c96" category="list-text">10GbE 1개</block>
@@ -1204,7 +1199,6 @@
   <block id="f71bd299279ae929e22ae20c531b3f74" category="list-text">공통 지원 모듈 사용 일반 지원 모듈_deploy_requests.py_contains 단일 클래스를 포함합니다. 각 스크립트에서 가져오고 사용합니다.</block>
   <block id="b64e2f96d46281df4a5271bb1d831855" category="section-title">클러스터 생성</block>
   <block id="760f03544eb4b2b91f56abddab79a76a" category="paragraph">script cluster.py를 사용하여 ONTAP Select 클러스터를 생성할 수 있습니다. JSON 입력 파일의 CLI 매개 변수 및 콘텐츠를 기준으로 다음과 같이 스크립트를 배포 환경에 수정할 수 있습니다.</block>
-  <block id="56604b8e2d77b886d8365b994af30957" category="list-text">하이퍼바이저 ESXi 또는 KVM에 배포할 수 있습니다. ESXi에 배포할 때 vCenter에서 하이퍼바이저를 관리하거나 독립 실행형 호스트로 사용할 수 있습니다.</block>
   <block id="cedae47753ff0de17bdaf98b12774e30" category="list-text">클러스터 크기 단일 노드 또는 다중 노드 클러스터를 구축할 수 있습니다.</block>
   <block id="d27666ce040cf738c8c777bc858da479" category="list-text">평가판 또는 운영 라이센스 운영 라이센스 평가판 또는 구입한 라이센스가 있는 클러스터를 구축할 수 있습니다.</block>
   <block id="acc90e8d6f746df313ee42d6b4de8519" category="paragraph">스크립트의 CLI 입력 매개 변수는 다음과 같습니다.</block>
@@ -1416,11 +1410,7 @@
   <block id="7436b418bed093768e360d32105591d2" category="doc">ONTAP Select 설명서</block>
   <block id="8a7497698e274b257189171d812c4134" category="paragraph">NetApp ONTAP Select는 VMware ESXi 하이퍼바이저를 실행하는 다양한 일반 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다.</block>
   <block id="1fde0727b387439572ade83eecff4f68" category="section-title">새로운 기능 알아보기</block>
-  <block id="a893ac072bb3f2961f7b5dcbc0425fdd" category="inline-link-macro">ONTAP Select 9.10.1의 새로운 기능</block>
-  <block id="3fdd80ed88fcff5c2bcd2d7da641336b" category="list-text"><block ref="3fdd80ed88fcff5c2bcd2d7da641336b" category="inline-link-macro-rx"></block></block>
-  <block id="2380ad5ce6796e080b2fcb896e8b4d72" category="admonition">ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다. 그러나 이전 릴리즈에서 9.10.1로 클러스터를 업그레이드하는 경우에도 Deploy 유틸리티를 사용하여 클러스터를 관리할 수 있습니다.</block>
   <block id="93c13bfba0d6bca47835d55338a89bcb" category="section-title">제품 설명서를 탐색합니다</block>
-  <block id="7c5a8b0739d1a57c8b5e1392f49b5d35" category="paragraph">ONTAP Select 9.10.1은 VMware ESXi에 구축할 수 있습니다. 이 사이트에는 VMware ESXi에서 실행되는 ONTAP Select 9.10.1, 9.9.1, 9.8 및 9.7에 대한 설명서와 REST API와 같은 하이퍼바이저에 독립적인 문서가 포함되어 있습니다.</block>
   <block id="fa0fa8503380df9df5c58ad57a531ff5" category="inline-link">ONTAP Select 제품 라이브러리</block>
   <block id="f24c86f59b1831aca015361d668be674" category="paragraph">의 이전 릴리스에서 지원되는 KVM 버전의 제품에 대한 설명서뿐만 아니라 릴리스 노트를 찾을 수 있습니다<block ref="39a2274ac9dcd1e1802780008f8c7665" category="inline-link-rx"></block>.</block>
   <block id="a753bf5f3b9313fdceb106b5c3e89d3f" category="section-title">더 많은 정보를 얻고 동료들과 교류하십시오</block>
@@ -1547,7 +1537,6 @@
   <block id="18889d3b7d7412c773430265b3f7a703" category="list-text">다중 노드 클러스터를 구축할 경우 네트워크 검사기에 익숙해야 합니다.</block>
   <block id="4680945aec88d9bcced06d39ec485a67" category="list-text">클러스터를 구축한 후</block>
   <block id="3a4abd9eeeda413a4bf9956a7ec34228" category="paragraph">ONTAP Select Deploy 웹 사용자 인터페이스를 사용하여 단일 노드 ONTAP Select 클러스터를 구축할 수 있습니다.</block>
-  <block id="0565b53a378763b72b2f36fb9cd7e98e" category="paragraph">을 참조하십시오 <block ref="e559ac7e82f005f616afeb5e37e466ee" category="inline-link-macro-rx"></block> 클러스터 구축 준비 구축 관리를 설치하고 초기 구성해야 합니다(암호, AutoSupport, vCenter).</block>
   <block id="25ba26f357a31d39960ce1746018e712" category="paragraph">운영 구축을 위해 노드 하나가 포함된 ONTAP Select 클러스터가 생성됩니다.</block>
   <block id="55e9b658bcd6b4ca65de5ed9557f68db" category="list-text">관리자 계정(admin)을 사용하여 웹 인터페이스를 통해 배포 유틸리티에 로그인합니다.</block>
   <block id="f419e9f320490f02ec41e0cead19dc2a" category="list-text">ONTAP Select * 시작 * 팝업 창이 표시되면 구성 사전 요구 사항이 충족되었는지 확인하고 * 확인 * 을 클릭합니다.</block>
@@ -1891,8 +1880,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
   <block id="531245fe0415d5f672afee491f44b87a" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="bd07337ccf7d6246b22445470850a71d" category="inline-link-macro">ONTAP Select 9.10.1에 대한 고지 사항</block>
-  <block id="3e39688b7514b3c2ffa40690402efd27" category="list-text"><block ref="3e39688b7514b3c2ffa40690402efd27" category="inline-link-macro-rx"></block></block>
   <block id="ffc775822cbd19e463401855c97e8181" category="summary">ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다.</block>
   <block id="787fb8fbafed37b77c3881f9e0c851a0" category="doc">MetroCluster 소프트웨어 정의 스토리지</block>
   <block id="468c7067a5232ce7f7b5f71d1c6e1685" category="paragraph">특정 최소 요구사항을 충족할 경우 2노드 클러스터를 2개 위치 간에 확장 가능 이 아키텍처는 하드웨어 기반 MetroCluster와 단일 데이터 센터 클러스터(하드웨어 정의 또는 소프트웨어 정의) 사이에 적합합니다. ONTAP Select MetroCluster SDS 요구사항을 충족하려면 소프트웨어 정의 스토리지 솔루션의 일반적인 유연성과 IT와 하드웨어 기반 MetroCluster SDS 간의 차이점을 강조합니다. 전용 하드웨어가 필요하지 않습니다.</block>
@@ -2266,11 +2253,7 @@
   <block id="27918c15d26a489a97622613b0f53097" category="summary">ONTAP Select의 현재 릴리즈에는 여러 가지 새로운 기능과 변경된 기능이 제공됩니다.</block>
   <block id="6536ba690a368bc5eb96e1579c795e23" category="doc">ONTAP Select 9.10.1의 새로운 기능</block>
   <block id="5986999240906508e3084d84dd2552d8" category="section-title">VMware NSX-T 지원</block>
-  <block id="5d591e45f8eab37ab8bdb818733107f9" category="paragraph">ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다. 그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 다음과 같은 요구 사항과 제한 사항에 유의해야 합니다.</block>
   <block id="1cef2a766ec9481a104c678cacd69cd5" category="list-text">클러스터 MTU</block>
-  <block id="ad136d3e5fb5acdd03500618ef8e1a95" category="list-text">클러스터를 구축하여 추가 오버헤드를 고려하기 전에 클러스터 MTU 크기를 수동으로 8800으로 조정해야 합니다. VMware 지침은 NSX-T를 사용할 때 200바이트 버퍼를 허용합니다</block>
-  <block id="be4edc608044981ff1193ab01e2a80a8" category="list-text">네트워크 4x10Gb 구성</block>
-  <block id="e3f9b3ee4bd0f7a9715c1acd839cb82b" category="list-text">4개의 NIC로 구성된 VMware ESXi 호스트에 ONTAP Select를 구축하는 경우, Deploy 유틸리티를 사용하면 두 개의 서로 다른 포트 그룹 및 외부 트래픽을 서로 다른 두 포트 그룹으로 분할하는 Best Practice를 따르게 됩니다. 그러나 오버레이 네트워크를 사용하는 경우 이 구성이 작동하지 않으므로 권장 사항을 무시해야 합니다. 이 경우 대신 내부 포트 그룹과 외부 포트 그룹을 하나만 사용해야 합니다.</block>
   <block id="97ba2ef50ca50de240503a53bf0d9347" category="list-text">네트워크 연결 검사기</block>
   <block id="9272e0dade1877b24e5ef4ad453f2c08" category="list-text">Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행될 때 실패합니다.</block>
   <block id="51e3f7647537ef4a51cd74ad4edcb9c6" category="section-title">KVM 하이퍼바이저는 더 이상 지원되지 않습니다</block>
@@ -2428,8 +2411,6 @@
   <block id="12f423cf4aa4ff75a7ca9220c1c56cd8" category="paragraph">ONTAP Select용 릴리즈 노트에서는 새로운 기능, 지원되는 구성, 업그레이드 노트, 알려진 문제, 해결된 문제 및 알려진 제한 사항</block>
   <block id="e1060dc2ca9dac04bf54c9156ff74480" category="admonition">릴리즈 노트에 액세스하려면 NetApp Support 사이트에 로그인할 수 있는 계정이 필요합니다.</block>
   <block id="9c62f110f4b589aa5470f4d43f3a8d6a" category="section-title">ONTAP Select의 현재 버전입니다</block>
-  <block id="42acb5fcb485ea4569bd64087871ab4f" category="inline-link">ONTAP Select 9.10.1 릴리스 정보</block>
-  <block id="f3a9d50ac32498dc8de07aa962e21bc8" category="paragraph">에 액세스할 수 있습니다<block ref="156307e111a81316adb7c6860522bbd8" category="inline-link-rx"></block> 현재 버전의 세부 정보를 봅니다.</block>
   <block id="72c6c134de9cf5ac97e05f3ab4e187b8" category="section-title">이전 버전의 ONTAP Select</block>
   <block id="301cae0dab6f1962deb22d0753769128" category="paragraph">제품의 이전 버전에 대한 릴리즈 노트에 액세스하려면 를 참조하십시오<block ref="39a2274ac9dcd1e1802780008f8c7665" category="inline-link-rx"></block>.</block>
   <block id="f7cbb5649dbc857609b9017aafeee7f1" category="summary">용량 풀과 용량 계층 라이센스 모델 간에는 몇 가지 차이점이 있습니다.</block>
@@ -2559,7 +2540,6 @@
   <block id="c9a9a8f627d1d803e2e94b0b16e265f3" category="section-title">ESXi의 단일 노드 클러스터</block>
   <block id="70771ca4958d1b97175631c548e5b806" category="section-title">vCenter를 사용하는 ESXi의 단일 노드 클러스터</block>
   <block id="fa7d26728677ccb514c43b50b7837b1f" category="section-title">KVM의 단일 노드 클러스터</block>
-  <block id="690bfd7947f7127a8af9c7274fde696c" category="admonition">ONTAP Select 9.10.1 버전부터는 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 아래 샘플은 KVM을 지원하는 이전 릴리스에 적용됩니다.</block>
   <block id="38fe5a7ac0941190856f04300c469ba4" category="summary">VMware vCenter와 관련된 몇 가지 계획 요구 사항을 고려해야 합니다.</block>
   <block id="b003770f1be9db863300b6ede8ab86c2" category="section-title">vCenter Server에 대한 액세스 권한</block>
   <block id="f63cda3afdadfd2ab9a50fe064640f76" category="paragraph">ONTAP Select가 구축된 ESXi 하이퍼바이저 호스트를 관리하는 vCenter Server에 대한 액세스 권한이 있어야 합니다.</block>
@@ -2867,7 +2847,6 @@
   <block id="f2df12ffd4f2520acaaeab11317642da" category="paragraph">ONTAP Select는 다음 하이퍼바이저에 구축할 수 있습니다.</block>
   <block id="cb09cc9a7c5645adef2952e42c8113a4" category="list-text">VMware ESXi 6.5 U2(빌드 8294253 이상)</block>
   <block id="6d49558f2efead8b9c52640d24baa9c6" category="list-text">6.7 U1, U2 및 U3을 포함한 VMware ESXi 6.7 GA(빌드 8169922 이상</block>
-  <block id="fc84e925fad10253070ade41348b5b0a" category="list-text">7.0 U1 및 U2를 포함한 VMware ESXi 7.0 GA(빌드 15843807 이상</block>
   <block id="3522298772b42c1feed00428b1765cfd" category="admonition">VMware가 동일한 버전을 계속 지원하는 한 NetApp은 ESXi의 지정된 버전에서 ONTAP Select를 지원합니다.</block>
   <block id="b4d68fa6f7a2f05a7861fc01bd7d54df" category="section-title">VMware ESXi 6.5 U2 이상으로 업그레이드</block>
   <block id="10e25613e6e661d9225b8b8847992335" category="paragraph">현재 VMware ESXi 6.5 U1에 ONTAP Select를 구축한 경우 가능한 한 빨리 ESXi 6.5 U2 이상으로 업그레이드해야 합니다. ESXi 6.5 U1을 사용하면 알려진 VMware 버그로 인해 가상 시스템 장애가 발생할 수 있습니다.</block>
@@ -3547,7 +3526,6 @@
   <block id="5e1e35787d312440de294099e5a73814" category="list-text">소형, 중형 또는 대형 인스턴스 유형입니다.</block>
   <block id="d72f431c4274d31e60a80915e200ced0" category="list-text">로컬 하드웨어 RAID 컨트롤러 또는 소프트웨어 RAID</block>
   <block id="4f703efee023ff2512f17bb22941efa8" category="admonition">Premium XL 라이센스를 사용하는 대규모 인스턴스 유형은 VMware ESXi에서만 가능합니다.</block>
-  <block id="09bb2fd29a003b5d0aef3f769cb9afba" category="sidebar">ONTAP Select 9.10.1 문서</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">릴리즈 노트</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
   <block id="4b983fff716674f120176e09551dd445" category="sidebar">제품 개요</block>
@@ -3642,4 +3620,30 @@
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ 를 참조하십시오</block>
   <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="sidebar">자세한 정보를 확인하십시오</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">이전 버전</block>
+  <block id="71d4b54f0c3f31371ccbff3189f7515e" category="inline-link-macro">ONTAP Select 9.11.1의 새로운 기능</block>
+  <block id="9c714c0377048955032a0d4ac05768a9" category="list-text"><block ref="9c714c0377048955032a0d4ac05768a9" category="inline-link-macro-rx"></block></block>
+  <block id="eb1d813ea715b64863d0af3529b1d443" category="admonition">ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다. 그런 다음 ONTAP Select 9.11.1 이상을 사용하면 오프라인 및 삭제 기능을 제외한 기존 KVM 클러스터 및 호스트에서 모든 관리 기능을 더 이상 사용할 수 없습니다.</block>
+  <block id="8db26cba39c72c35a0f54f9a465fa3a2" category="paragraph">ONTAP Select 9.11.1은 VMware ESXi에 구축할 수 있습니다. 이 사이트에는 VMware ESXi에서 실행되는 ONTAP Select 9.11.1, 9.10.1, 9.9.1, 9.8 및 9.7에 대한 설명서와 REST API와 같은 하이퍼바이저에 독립적인 문서가 포함되어 있습니다.</block>
+  <block id="33b6370e1de46bd324564163dfaf48a9" category="list-text">7.0 U1, U2 및 U3C를 포함한 VMware ESXi 7.0 GA(빌드 15843807 이상</block>
+  <block id="1ff0d4093fc891e95ebf937fc719f313" category="inline-link-macro">ONTAP Select 9.11.1에 대한 고지 사항</block>
+  <block id="b21133b863e352c7e380ae8974198a75" category="list-text"><block ref="b21133b863e352c7e380ae8974198a75" category="inline-link-macro-rx"></block></block>
+  <block id="d36f4205c301fa0311580c2426a17881" category="list-text">KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(ONTAP Select 9.10.1 이상을 사용하여 새 클러스터를 생성할 때 KVM은 더 이상 지원되지 않음).</block>
+  <block id="91f528f33d4be79010000f66d8e7792c" category="inline-link">ONTAP Select 9.11.1 릴리스 정보</block>
+  <block id="035f3963e6805da6ba00f69f4e5ea8fd" category="paragraph">에 액세스할 수 있습니다<block ref="7ed889202f2b282e8463fa03128c4ef2" category="inline-link-rx"></block> 현재 버전의 세부 정보를 봅니다.</block>
+  <block id="b25679a7bebb3b9795d3926792d8c9a9" category="paragraph">MetroCluster SDS는 ROBO 환경에서 2노드 클러스터를 지원하는 것과 동일한 VMware ESXi 및 KVM 하이퍼바이저에 구축할 수 있습니다. KVM은 ONTAP Select 9.10.1 이상 릴리스에서 더 이상 지원되지 않습니다.</block>
+  <block id="0ec7f2d003cb42f9464107b0ad854843" category="admonition">ONTAP Select 9.10.1 버전부터는 새 ONTAP Select 클러스터를 구축할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
+  <block id="9230331b34c3673c82d4b22760bb266d" category="list-text">하이퍼바이저 배포 버전에 따라 ESXi 또는 KVM에 배포할 수 있습니다. ESXi에 배포할 때 vCenter에서 하이퍼바이저를 관리하거나 독립 실행형 호스트로 사용할 수 있습니다.</block>
+  <block id="aacb1ad8ec74092a13074108a4e20c02" category="section-title">VMware ESXi 지원이 향상되었습니다</block>
+  <block id="aa46a81eb495f6cb92e19c98c6d7383a" category="paragraph">ONTAP Select 9.11.1에는 VMware ESXi 7.0 U3C에 대한 지원이 포함되어 있습니다.</block>
+  <block id="f25b903f1c04994aeb9659893008d29f" category="paragraph">ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다.</block>
+  <block id="2274fb2127a3a8f7f5aa9544b4f66acd" category="paragraph">그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 ONTAP Select 9.11.1에 대한 다음 요구 사항 및 제한 사항에 유의해야 합니다.</block>
+  <block id="cd89fb70ae3399d9a889b581a0f642f8" category="paragraph">KVM 하이퍼바이저는 더 이상 지원되지 않습니다.</block>
+  <block id="ac55843b389d08df5493481d397627ff" category="paragraph">ONTAP Select 9.10.1 이상 릴리스부터는 배포 유틸리티를 사용하여 더 이상 새 KVM 기반 클러스터를 생성하거나 KVM 기반 호스트를 추가할 수 없었습니다. 또한 9.10.1은 기존 KVM 클러스터 및 호스트와 함께 온라인 상태로 전환하는 등의 관리 기능을 지원하는 마지막 릴리즈입니다.</block>
+  <block id="903c9574703487544d2aede2d7c2ccfd" category="paragraph">그런 다음 ONTAP Select 9.11.1 이상 릴리스부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.</block>
+  <block id="4a2f121824a056475165660b79eefb58" category="admonition">ONTAP Select 9.10.1 버전부터는 새 클러스터를 생성할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 아래 샘플은 KVM을 지원하는 이전 릴리스에 적용됩니다.</block>
+  <block id="5f3026f83f6c32eec05d90d578a5e7ea" category="paragraph">을 참조하십시오 <block ref="6dd97e1bd4c3fafba8bd8a1033c5617c" category="inline-link-macro-rx"></block> 클러스터 구축 준비 구축 관리를 설치하고 초기 구성해야 합니다(암호, AutoSupport, vCenter).</block>
+  <block id="e0ee96bc61e04ad9674df96fc5014e12" category="admonition">ONTAP Select 9.10.1 버전부터는 새 클러스터를 생성할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. KVM 관련 질문은 KVM을 지원하는 이전 릴리스에만 해당됩니다.</block>
+  <block id="d0a2c35dd24f48a701484a2c0e0e4e2a" category="list-text">ESX 및 KVM 지원(ONTAP Select 9.10.1 이전)</block>
+  <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1 버전부터는 새 클러스터를 구축할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
+  <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 문서</block>
 </blocks>

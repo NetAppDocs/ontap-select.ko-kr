@@ -23,7 +23,7 @@ NOTE: 릴리즈 노트에 액세스하려면 NetApp Support 사이트에 로그�
 
 ===== ONTAP Select의 현재 버전입니다
 
-에 액세스할 수 있습니다 https://library.netapp.com/ecm/ecm_download_file/ECMLP2879854["ONTAP Select 9.10.1 릴리스 정보"^] 현재 버전의 세부 정보를 봅니다.
+에 액세스할 수 있습니다 https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 9.11.1 릴리스 정보"^] 현재 버전의 세부 정보를 봅니다.
 
 
 
