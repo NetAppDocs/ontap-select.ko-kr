@@ -3629,7 +3629,6 @@
   <block id="b21133b863e352c7e380ae8974198a75" category="list-text"><block ref="b21133b863e352c7e380ae8974198a75" category="inline-link-macro-rx"></block></block>
   <block id="d36f4205c301fa0311580c2426a17881" category="list-text">KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(ONTAP Select 9.10.1 이상을 사용하여 새 클러스터를 생성할 때 KVM은 더 이상 지원되지 않음).</block>
   <block id="91f528f33d4be79010000f66d8e7792c" category="inline-link">ONTAP Select 9.11.1 릴리스 정보</block>
-  <block id="035f3963e6805da6ba00f69f4e5ea8fd" category="paragraph">에 액세스할 수 있습니다<block ref="7ed889202f2b282e8463fa03128c4ef2" category="inline-link-rx"></block> 현재 버전의 세부 정보를 봅니다.</block>
   <block id="b25679a7bebb3b9795d3926792d8c9a9" category="paragraph">MetroCluster SDS는 ROBO 환경에서 2노드 클러스터를 지원하는 것과 동일한 VMware ESXi 및 KVM 하이퍼바이저에 구축할 수 있습니다. KVM은 ONTAP Select 9.10.1 이상 릴리스에서 더 이상 지원되지 않습니다.</block>
   <block id="0ec7f2d003cb42f9464107b0ad854843" category="admonition">ONTAP Select 9.10.1 버전부터는 새 ONTAP Select 클러스터를 구축할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
   <block id="9230331b34c3673c82d4b22760bb266d" category="list-text">하이퍼바이저 배포 버전에 따라 ESXi 또는 KVM에 배포할 수 있습니다. ESXi에 배포할 때 vCenter에서 하이퍼바이저를 관리하거나 독립 실행형 호스트로 사용할 수 있습니다.</block>
@@ -3646,4 +3645,5 @@
   <block id="d0a2c35dd24f48a701484a2c0e0e4e2a" category="list-text">ESX 및 KVM 지원(ONTAP Select 9.10.1 이전)</block>
   <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1 버전부터는 새 클러스터를 구축할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 문서</block>
+  <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">에 액세스할 수 있습니다<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
 </blocks>
