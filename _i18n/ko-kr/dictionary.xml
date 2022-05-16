@@ -1373,7 +1373,6 @@
   <block id="3e7e570e683be353e09e19562e3196f3" category="paragraph">상위 수준에서 이 작업은 세 부분으로 구성됩니다. 구축 인스턴스에서 사용하는 모든 용량 풀 라이센스를 다시 생성하고 설치해야 합니다. 모든 라이센스를 새 배포 인스턴스에 다시 설치한 후 필요한 경우 일련 번호를 재설정할 수 있습니다. 마지막으로, 배포 IP 주소가 변경된 경우 용량 풀 라이센스를 사용하는 모든 ONTAP Select 노드를 업데이트해야 합니다.</block>
   <block id="6d46c419c8dde2ad4ea4d5623e1b4350" category="list-text">NetApp 지원 팀에 문의하여 원래 배포 인스턴스의 모든 용량 풀 라이센스를 바인딩 해제 및 등록되지 않은 상태로 만듭니다.</block>
   <block id="dc94932a20b0a7c73d1e6aa60af35223" category="list-text">각 용량 풀 라이센스에 대한 새 라이센스 파일을 받아서 다운로드합니다.</block>
-  <block id="345c5eb90afb9e2e8ee266e94ccbe0f1" category="paragraph">자세한 내용은 _용량 풀 라이센스 취득_을 참조하십시오.</block>
   <block id="8018479e33974a2b0f774cf42ec399e5" category="list-text">새 구축 인스턴스에 용량 풀 라이센스 설치:</block>
   <block id="99683d4e14f8df30b153000825273e2d" category="list-text">Licenses * 를 클릭한 다음 * Capacity Pool * 을 클릭합니다.</block>
   <block id="095bb96ffb3551a58960c96316107d76" category="list-text">Add * (추가 *)를 클릭한 다음 * Upload License (s) * 를 클릭하여 라이센스를 선택하고 업로드합니다.</block>
@@ -3646,4 +3645,5 @@
   <block id="089ce9e252a6b5d4200f327104cdd7f6" category="admonition">ONTAP Select 9.10.1 버전부터는 새 클러스터를 구축할 때 KVM 하이퍼바이저가 더 이상 지원되지 않습니다. 이전에 지원되는 릴리즈에서도 KVM을 사용할 수 있습니다.</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 문서</block>
   <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">에 액세스할 수 있습니다<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
+  <block id="88d96915de77c1959098b364119959de" category="paragraph">을 참조하십시오 <block ref="20acef5038e91881d90c1f2f38d1998f" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
 </blocks>
