@@ -1064,10 +1064,6 @@
   <block id="f3c1a1c8717be55597746058712a8a41" category="paragraph">단일 노드 클러스터를 구축할 때는 내부 네트워크가 필요하지 않으며 내부 네트워크를 제거해야 합니다.</block>
   <block id="c2f2bd4587b8c71cf8e299f386400e66" category="list-text">노드의 구성을 표시합니다.</block>
   <block id="733447df59e9b9f51345490bc3341e5d" category="paragraph">노드 show-name nodename-cluster-name clusterName-detailed입니다</block>
-  <block id="9a71b3cdddddadb8fe576b697592d9b1" category="section-title">ONTAP Select 노드에 스토리지 연결</block>
-  <block id="d76b42af4750ab47db6807261ff568d9" category="paragraph">ONTAP Select 클러스터의 각 노드에서 사용하는 스토리지를 구성해야 합니다. 각 노드에는 적어도 하나의 스토리지 풀이 할당되어야 합니다.</block>
-  <block id="ae494932199568deba5542920a6c52e0" category="paragraph">VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다.</block>
-  <block id="8cc64aa381816d6fe67efbffa850dced" category="paragraph">이 절차에서는 로컬 하드웨어 RAID 컨트롤러가 사용된다고 가정합니다. ONTAP Select 클러스터의 각 노드에서 스토리지를 구성해야 합니다.</block>
   <block id="d07e64799eaa81c2e7811d55f1faaaf1" category="list-text">호스트에서 사용 가능한 스토리지 풀을 표시합니다.</block>
   <block id="9646f070282208e61d267e28e7ef6bb1" category="paragraph">'host storage pool show-host-name &lt;FQDN|IP&gt;'을 선택합니다</block>
   <block id="3457f038144b809169e1a74a423ab6b6" category="paragraph">VMware vSphere를 통해 사용 가능한 스토리지 풀을 얻을 수도 있습니다.</block>
@@ -1894,10 +1890,6 @@
   <block id="67550f4cdbfd87619a6b9d0a3b78729e" category="paragraph"><block ref="67550f4cdbfd87619a6b9d0a3b78729e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="aa93950c1aed200eaa527c1dac76c135" category="inline-link-macro">2노드 HA와 다중 노드 HA 비교</block>
   <block id="2873f708ad14d01a4941aae540a49300" category="paragraph">자세한 모범 사례 및 기타 요구 사항은 섹션을 참조하십시오 <block ref="b5a87e2c6cb220b53b8486e8e1bc1eac" category="inline-link-macro-rx"></block> 및 <block ref="3a9138e6cecc138f508a809e03f2cd7a" category="inline-link-macro-rx"></block>.</block>
-  <block id="672f48d2ec82ec522a85cf3df49eb607" category="summary">ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 제외하고 대부분의 ONTAP 기능을 완벽하게 지원합니다.</block>
-  <block id="24c73c70fff103725b0dc81f21473d67" category="paragraph">ONTAP Select에서는 클러스터를 구축할 때 각 노드에 대해 몇 가지 기능에 대한 라이센스를 자동으로 부여합니다.</block>
-  <block id="4c174b0c4d6417356173383c959c14a8" category="section-title">포함된 기능</block>
-  <block id="f7cc5fa2aa671dbb06fcdd7df278e0e6" category="paragraph">기본적으로 다음 기능이 포함되어 있고 라이센스가 부여됩니다.</block>
   <block id="c6546b53840ec8245dd4d4d70fcdbc26" category="list-text">CIFS를 선택합니다</block>
   <block id="e4e1c13bb0b14f6cb7608cbecea948ef" category="list-text">iSCSI</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="list-text">SnapMirror를 참조하십시오</block>
@@ -1908,8 +1900,6 @@
   <block id="37f51edec96ed159381e4d3d076a8787" category="list-text">중복제거 및 압축</block>
   <block id="1effda8a28add2fb64ed5a7d4d67deae" category="list-text">ONTAP 멀티 테넌시 기능</block>
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp 볼륨 암호화(제한 없는 국가만 해당)</block>
-  <block id="dee52e4036e8b3203de4ad54ebf51957" category="section-title">별도로 라이센스가 부여된 기능</block>
-  <block id="fe1bc1414ac4d3ff24ab13de6ded84ae" category="paragraph">다음을 포함한 다른 기능에 대해서는 별도의 라이센스를 취득해야 합니다.</block>
   <block id="8fe0c9f8f23d1eb8317ecbfc3412e145" category="list-text">SnapLock 엔터프라이즈</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="cd4d0565c73e994a0df5b7c0a072acc6" category="list-text">데이터 가용성 서비스</block>
@@ -3337,10 +3327,7 @@
   <block id="fb1dff3ec52367cdb90456fabf48600c" category="paragraph">'service-control--start vSphere-client'</block>
   <block id="acd7d62c9b810f0d5861712e738fb732" category="summary">소프트웨어 RAID를 사용하여 드라이브에 오류가 발생하면 ONTAP Select는 예비 드라이브(사용 가능한 경우)를 사용하고 재구축 프로세스를 자동으로 시작합니다. 이는 ONTAP on FAS and AFF 작동 방식과 유사합니다. 그러나 스페어 드라이브를 사용할 수 없는 경우 ONTAP Select 노드에 스페어 드라이브를 추가해야 합니다.</block>
   <block id="aeb7169d045185953deed3c0de3865f8" category="doc">SW RAID를 사용할 때 오류가 발생한 드라이브 교체</block>
-  <block id="22e35b7624c291099f06269e559eb73a" category="admonition">ONTAP 배포를 통해 장애가 발생한 드라이브를 제거하고 새 드라이브(스페어로 표시됨)를 추가해야 합니다. vSphere를 사용하여 ONTAP Select VM에 드라이브를 연결하는 것은 지원되지 않습니다.</block>
   <block id="d790a7cfad60ef9c4cf133fdbf5d8644" category="section-title">결함이 있는 드라이브를 식별합니다</block>
-  <block id="c6451675a58dba4a0d99c6ccf691cb92" category="paragraph">드라이브에 장애가 발생한 경우 deploy utility CLI를 사용하여 장애가 발생한 디스크를 식별합니다.</block>
-  <block id="a9f7dbddb14939c805024201a3e1b090" category="list-text">오류가 발생한 디스크를 식별합니다.</block>
   <block id="307bdb5a979a863911e3c77799901dec" category="section-title">결함이 있는 드라이브를 제거합니다</block>
   <block id="0ab4ad97846d3de95e1f2d091028d9ed" category="paragraph">장애가 발생한 드라이브를 확인한 후 디스크를 분리합니다.</block>
   <block id="eecedba88893e3e14bfd8006f68186d1" category="list-text">관리자 계정을 사용하여 웹 사용자 인터페이스 배포 에 로그인합니다.</block>
@@ -3646,4 +3633,25 @@
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 문서</block>
   <block id="0f4660890a6410bffddf8509d2c29d15" category="paragraph">에 액세스할 수 있습니다<block ref="192e9fbc4335e2d8900d363693ade117" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
   <block id="88d96915de77c1959098b364119959de" category="paragraph">을 참조하십시오 <block ref="20acef5038e91881d90c1f2f38d1998f" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="d0730ff14b2f6fb53d9e49978a76660e" category="summary">ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 구축할 때 각 노드에 대해 자동으로 라이센스가 부여됩니다. 그러나 일부 기능에는 별도의 라이센스가 필요합니다.</block>
+  <block id="0deac5caf37785bb3c3ce0d80f8d8d18" category="admonition">하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ONTAP Select에서 지원되지 않습니다.</block>
+  <block id="8132b1f57834df621ea1aedaa548729e" category="section-title">ONTAP 기능은 기본적으로 자동으로 활성화됩니다</block>
+  <block id="d4370df695508d400d73750728248ebe" category="paragraph">다음 기능은 ONTAP Select에 포함되어 있으며 기본적으로 라이센스가 부여됩니다.</block>
+  <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
+  <block id="a56a12489213d10b531398efee448f95" category="section-title">ONTAP 기능은 별도로 라이센스가 부여됩니다</block>
+  <block id="585f4a038bba40a29999437c007446e9" category="paragraph">다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.</block>
+  <block id="6dec3523c85f378f79fcf83c82e21868" category="paragraph">소프트웨어 RAID를 사용하는 드라이브에 장애가 발생하면 ONTAP Select는 사용 가능한 스페어 드라이브를 할당하고 재구축 프로세스를 자동으로 시작합니다. 이는 ONTAP가 FAS 및 AFF에서 작동하는 방식과 유사합니다. 그러나 스페어 드라이브를 사용할 수 없는 경우에는 ONTAP Select 노드에 스페어 드라이브를 추가해야 합니다.</block>
+  <block id="483b2bdf1e13fa583e93f86544ae9ee4" category="admonition">ONTAP Select 배포를 통해 장애가 발생한 드라이브를 제거하고 새 드라이브(스페어로 표시됨)를 추가해야 합니다. vSphere를 사용하여 ONTAP Select VM에 드라이브를 연결하는 것은 지원되지 않습니다.</block>
+  <block id="04985546e9771cbfe818d7c08949cb4e" category="paragraph">드라이브에 오류가 발생하면 ONTAP CLI를 사용하여 오류가 발생한 디스크를 식별해야 합니다.</block>
+  <block id="76b45a86afe9ddfec423de5caad088a5" category="list-text">관리자 계정을 사용하여 ONTAP CLI에 로그인합니다.</block>
+  <block id="56f32587956bc806f4ffe1823a1a1872" category="list-text">실패한 디스크 드라이브를 식별합니다.</block>
+  <block id="562e70611d61b3bdd5fa02c1473d7fb3" category="section-title">스토리지를 ONTAP Select 노드에 연결합니다</block>
+  <block id="866ece73832a5308b812e48e59ba8a4f" category="paragraph">ONTAP Select 클러스터의 각 노드에서 사용하는 스토리지를 구성해야 합니다. 모든 노드에는 항상 하나 이상의 스토리지 풀이 할당되어야 합니다. 소프트웨어 RAID를 사용하는 경우 각 노드에 하나 이상의 디스크 드라이브도 할당해야 합니다.</block>
+  <block id="f31242a3b10d57ca87f84e612994d57c" category="paragraph">VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다. 소프트웨어 RAID를 사용하는 경우 하나 이상의 사용 가능한 디스크 드라이브도 필요합니다.</block>
+  <block id="2976fb0a07ffd25ea274d2cc9bc187be" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 1-4단계를 수행해야 합니다. 소프트웨어 RAID를 사용하는 경우 1-6단계를 수행해야 합니다.</block>
+  <block id="cc6982c020bc97509cfd68e72db0524e" category="list-text">관리자 계정 자격 증명과 함께 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</block>
+  <block id="1d0fd2b207143cd0cbfe1f1eca67206a" category="list-text">소프트웨어 RAID를 사용하는 경우 사용 가능한 드라이브 또는 드라이브를 연결합니다.</block>
+  <block id="477b4fc07bc021818bf99ca0a2f9a370" category="paragraph">노드 스토리지 디스크 연결 노드 이름 nodename -cluster -name clusterName -disks list_of_drives</block>
+  <block id="10d4b2d6f8c74f79bcce5324cfbda150" category="list-text">소프트웨어 RAID를 사용하는 경우 노드에 연결된 디스크를 표시합니다.</block>
+  <block id="f1efe358bd22df5ef0bdf73fc9e8d10b" category="paragraph">노드 스토리지 디스크 show-node-name nodename-cluster-name clusterName입니다</block>
 </blocks>

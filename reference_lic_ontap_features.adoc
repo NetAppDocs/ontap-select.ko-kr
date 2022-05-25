@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference_lic_ontap_features.html 
 keywords: license, licensing, ontap features, default ontap features 
-summary: ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 제외하고 대부분의 ONTAP 기능을 완벽하게 지원합니다. 
+summary: ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 구축할 때 각 노드에 대해 자동으로 라이센스가 부여됩니다. 그러나 일부 기능에는 별도의 라이센스가 필요합니다. 
 ---
-= ONTAP 기능은 기본적으로 사용하도록 설정되어 있습니다
+= ONTAP 기능
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,16 @@ summary: ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 �
 
 
 [role="lead"]
-ONTAP Select는 하드웨어 관련 종속 항목이 있는 기능을 제외하고 대부분의 ONTAP 기능을 완벽하게 지원합니다.
-
-ONTAP Select에서는 클러스터를 구축할 때 각 노드에 대해 몇 가지 기능에 대한 라이센스를 자동으로 부여합니다.
+ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 구축할 때 각 노드에 대해 자동으로 라이센스가 부여됩니다. 그러나 일부 기능에는 별도의 라이센스가 필요합니다.
 
 
+NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ONTAP Select에서 지원되지 않습니다.
 
-===== 포함된 기능
 
-기본적으로 다음 기능이 포함되어 있고 라이센스가 부여됩니다.
+
+== ONTAP 기능은 기본적으로 자동으로 활성화됩니다
+
+다음 기능은 ONTAP Select에 포함되어 있으며 기본적으로 라이센스가 부여됩니다.
 
 * NFS 를 참조하십시오
 * CIFS를 선택합니다
@@ -34,14 +35,15 @@ ONTAP Select에서는 클러스터를 구축할 때 각 노드에 대해 몇 가
 * NetApp 볼륨 암호화
 * 중복제거 및 압축
 * ONTAP 멀티 테넌시 기능
+* ONTAP S3
 * NetApp 볼륨 암호화(제한 없는 국가만 해당)
 
 
 
 
-===== 별도로 라이센스가 부여된 기능
+=== ONTAP 기능은 별도로 라이센스가 부여됩니다
 
-다음을 포함한 다른 기능에 대해서는 별도의 라이센스를 취득해야 합니다.
+다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.
 
 * SnapLock 엔터프라이즈
 * FabricPool
