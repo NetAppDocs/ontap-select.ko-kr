@@ -1835,7 +1835,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:48:53 +0000">05/03/2022</time>
+    <time datetime="2022-05-25 16:13:39 +0000">05/25/2022</time>
     
   
 
@@ -1855,8 +1855,8 @@
 <div class="paragraph">
 <p>ESXi에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비를 이해해야 합니다.</p>
 </div>
-<div class="sect4">
-<h5 id="ontap-select-노드에-스토리지-연결을-준비하는-중입니다">ONTAP Select 노드에 스토리지 연결을 준비하는 중입니다</h5>
+<div class="sect2">
+<h3 id="ontap-select-노드에-스토리지-연결을-준비하는-중입니다">ONTAP Select 노드에 스토리지 연결을 준비하는 중입니다</h3>
 <div class="paragraph">
 <p>로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 루트 및 데이터 애그리게이트뿐만 아니라 시스템 데이터에 대해 각 노드에 하나 이상의 스토리지 풀을 생성해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀을 연결해야 합니다.</p>
 </div>
@@ -1864,14 +1864,14 @@
 <p>소프트웨어 RAID를 사용하는 경우 시스템 데이터용 스토리지 풀을 생성하고 SSD 드라이브를 루트 및 데이터 애그리게이트에 사용할 수 있는지 확인해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="사용-가능한-ontap-select-버전">사용 가능한 ONTAP Select 버전</h5>
+<div class="sect2">
+<h3 id="사용-가능한-ontap-select-버전">사용 가능한 ONTAP Select 버전</h3>
 <div class="paragraph">
 <p>배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <a href="task_adm_deploy_image_add.html">"배포할 ONTAP Select 이미지 추가"</a> 를 참조하십시오.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="프로덕션-구축을-위한-ontap-select-라이센스-등록">프로덕션 구축을 위한 ONTAP Select 라이센스 등록</h5>
+<div class="sect2">
+<h3 id="프로덕션-구축을-위한-ontap-select-라이센스-등록">프로덕션 구축을 위한 ONTAP Select 라이센스 등록</h3>
 <div class="paragraph">
 <p>운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. capacity 계층_model을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _capacity pool_model을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.</p>
 </div>
@@ -2155,22 +2155,22 @@ exit</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ontap-select-노드에-스토리지-연결">ONTAP Select 노드에 스토리지 연결</h2>
+<h2 id="스토리지를-ontap-select-노드에-연결합니다">스토리지를 ONTAP Select 노드에 연결합니다</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP Select 클러스터의 각 노드에서 사용하는 스토리지를 구성해야 합니다. 각 노드에는 적어도 하나의 스토리지 풀이 할당되어야 합니다.</p>
+<p>ONTAP Select 클러스터의 각 노드에서 사용하는 스토리지를 구성해야 합니다. 모든 노드에는 항상 하나 이상의 스토리지 풀이 할당되어야 합니다. 소프트웨어 RAID를 사용하는 경우 각 노드에 하나 이상의 디스크 드라이브도 할당해야 합니다.</p>
 </div>
 <div class="paragraph">
-<p>VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다.</p>
+<p>VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다. 소프트웨어 RAID를 사용하는 경우 하나 이상의 사용 가능한 디스크 드라이브도 필요합니다.</p>
 </div>
 <div class="paragraph">
-<p>이 절차에서는 로컬 하드웨어 RAID 컨트롤러가 사용된다고 가정합니다. ONTAP Select 클러스터의 각 노드에서 스토리지를 구성해야 합니다.</p>
+<p>로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 1-4단계를 수행해야 합니다. 소프트웨어 RAID를 사용하는 경우 1-6단계를 수행해야 합니다.</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
 <ol class="arabic">
 <li>
-<p>관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</p>
+<p>관리자 계정 자격 증명과 함께 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</p>
 </li>
 <li>
 <p>호스트에서 사용 가능한 스토리지 풀을 표시합니다.</p>
@@ -2218,6 +2218,34 @@ node-name test-cluster-01 -capacity-limit 500GB</pre>
 <div class="listingblock">
 <div class="content">
 <pre>node storage pool show -cluster-name test-cluster -node-name testcluster-01</pre>
+</div>
+</div>
+</li>
+<li>
+<p>소프트웨어 RAID를 사용하는 경우 사용 가능한 드라이브 또는 드라이브를 연결합니다.</p>
+<div class="paragraph">
+<p>노드 스토리지 디스크 연결 노드 이름 nodename -cluster -name clusterName -disks list_of_drives</p>
+</div>
+<div class="paragraph">
+<p>예</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0</pre>
+</div>
+</div>
+</li>
+<li>
+<p>소프트웨어 RAID를 사용하는 경우 노드에 연결된 디스크를 표시합니다.</p>
+<div class="paragraph">
+<p>노드 스토리지 디스크 show-node-name nodename-cluster-name clusterName입니다</p>
+</div>
+<div class="paragraph">
+<p>예</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>node storage disk show -node-name sdot-smicro-009a -cluster-name NVME</pre>
 </div>
 </div>
 </li>
