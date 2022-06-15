@@ -74,22 +74,28 @@ NOTE: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상을 기반으로
 
 노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.
 
-* 프로세서
-+
-** 서버용 인텔 제온 프로세서(참조 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["인텔 제온 프로세서, window=_blank"] 참조)
+지원되는 마이크로프로세서는 다음과 같습니다.
+
+* 서버용 인텔 제온 프로세서(참조 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["인텔 제온 프로세서, window=_blank"] 참조)
 
 
-* 이더넷 네트워크 포트
-+
-** 10GbE 4개(권장)
-** 10GbE 2개
-** 10GbE 1개
-** 1GbE 4개(2노드 ROBO 클러스터에만 해당)
-** 1GbE 2개(단일 노드 클러스터에만 해당)
+클러스터 크기에 따라 지원되는 여러 이더넷 구성이 있습니다.
+
+[cols="30,35,35"]
+|===
 
 
+| 클러스터 크기 | 최소 요구 사항 | 권장 사항 
 
 
+| 단일 노드 클러스터 | 1GbE 2개 | 10GbE 2개 
+
+
+| 2노드 클러스터 또는 MetroCluster SDS | 1GbE 4개 또는 10GbE 1개 | 10GbE 2개 
+
+
+| 4/6/8 노드 클러스터 | 10GbE 2개 | 4 x 10GbE 또는 2 x 25/40GbE 
+|===
 
 
 ==== 인스턴스 유형에 따른 추가 하드웨어 요구 사항
