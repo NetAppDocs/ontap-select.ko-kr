@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:48:53 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 19:42:15 +0000">06/17/2022</time>
     
   
 
@@ -1841,8 +1841,9 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="가상-스위치-옵션">가상 스위치 옵션</h4>
+<div class="sect1">
+<h2 id="가상-스위치-옵션">가상 스위치 옵션</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>각 ONTAP Select 호스트에서 외부 네트워크 및 내부 네트워크를 지원하도록 가상 스위치를 구성해야 합니다(다중 노드 클러스터만 해당). 다중 노드 클러스터를 구축할 때는 내부 클러스터 네트워크에서 네트워크 연결을 테스트해야 합니다.</p>
 </div>
@@ -1859,8 +1860,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="vmxnet3으로-업그레이드">VMXNET3으로 업그레이드</h4>
+</div>
+<div class="sect1">
+<h2 id="vmxnet3으로-업그레이드">VMXNET3으로 업그레이드</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Deploy 2.10을 사용하는 ONTAP Select 9.5부터 VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. 기존 ONTAP Select 노드를 버전 9.5 이상으로 업그레이드하면 드라이버가 자동으로 업그레이드되지 않습니다.</p>
 </div>
@@ -1877,8 +1880,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="클러스터-mtu">클러스터 MTU</h4>
+</div>
+<div class="sect1">
+<h2 id="클러스터-mtu">클러스터 MTU</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>별도의 내부 네트워크를 사용하여 다중 노드 클러스터의 ONTAP Select 노드를 연결합니다. 일반적으로 이 네트워크의 MTU 크기는 9000입니다. 그러나 이 MTU 크기가 ONTAP Select 노드를 연결하는 네트워크에 비해 너무 큰 경우가 있습니다. 더 작은 프레임을 수용하기 위해 내부 네트워크에서 ONTAP Select가 사용하는 MTU 크기는 7500-9000 바이트 범위에 포함될 수 있습니다.</p>
 </div>
@@ -1911,8 +1916,10 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="표준-vswitch가-있는-nic-호스트-2개">표준 vSwitch가 있는 NIC 호스트 2개</h4>
+</div>
+<div class="sect1">
+<h2 id="표준-vswitch가-있는-nic-호스트-2개">표준 vSwitch가 있는 NIC 호스트 2개</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>2개의 NIC 구성에서 ONTAP Select 성능을 향상시키려면 2개의 포트 그룹을 사용하여 내부 및 외부 네트워크 트래픽을 격리해야 합니다. 이 권장 사항은 다음과 같은 특정 구성에 적용됩니다.</p>
 </div>
@@ -1932,13 +1939,8 @@
 <div class="paragraph">
 <p>이 환경에서는 다음과 같이 두 개의 포트 그룹을 사용하여 트래픽을 구성해야 합니다.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">포트 그룹 1</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 1</div>
 <ul>
 <li>
 <p>내부 네트워크(클러스터, RSM, HA-IC 트래픽)</p>
@@ -1951,14 +1953,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">포트 그룹 2</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 2</div>
 <ul>
 <li>
 <p>외부 네트워크(데이터 및 관리 트래픽)</p>
@@ -1971,17 +1967,14 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>두 개의 NIC 배포에 대한 자세한 내용은 _deep_section을 참조하십시오.</p>
+<p>를 참조하십시오 <a href="concept_nw_concepts_chars.html">"딥 다이브 네트워킹"</a> 두 개의 NIC 배포에 대한 자세한 내용은 섹션을 참조하십시오.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="표준-vswitch가-있는-4개의-nic-호스트">표준 vSwitch가 있는 4개의 NIC 호스트</h4>
+</div>
+<div class="sect1">
+<h2 id="표준-vswitch가-있는-4개의-nic-호스트">표준 vSwitch가 있는 4개의 NIC 호스트</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>4개 NIC 구성에서 ONTAP Select 성능을 향상시키려면 4개 포트 그룹을 사용하여 내부 및 외부 네트워크 트래픽을 격리해야 합니다. 이 권장 사항은 다음과 같은 특정 구성에 적용됩니다.</p>
 </div>
@@ -2001,13 +1994,8 @@
 <div class="paragraph">
 <p>이 환경에서는 다음과 같이 4개의 포트 그룹을 사용하여 트래픽을 구성해야 합니다.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">포트 그룹 1</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 1</div>
 <ul>
 <li>
 <p>내부 네트워크(클러스터, RSM 트래픽)</p>
@@ -2020,14 +2008,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">포트 그룹 2</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 2</div>
 <ul>
 <li>
 <p>내부 네트워크(클러스터, HA-IC 트래픽)</p>
@@ -2040,14 +2022,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">포트 그룹 3</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 3</div>
 <ul>
 <li>
 <p>외부 네트워크(데이터 및 관리 트래픽)</p>
@@ -2060,14 +2036,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">포트 그룹 4</dt>
-<dd>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
+<div class="title">포트 그룹 4</div>
 <ul>
 <li>
 <p>외부 네트워크(데이터 트래픽)</p>
@@ -2080,27 +2050,20 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>4-NIC 구축에 대한 자세한 내용은 _deep_section을 참조하십시오.</p>
+<p>를 참조하십시오 <a href="concept_nw_concepts_chars.html">"딥 다이브 네트워킹"</a> 섹션을 참조하십시오.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="네트워크-트래픽-요구-사항">네트워크 트래픽 요구 사항</h4>
+</div>
+<div class="sect1">
+<h2 id="네트워크-트래픽-요구-사항">네트워크 트래픽 요구 사항</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>ONTAP Select 배포 환경의 여러 참가자 간에 네트워크 트래픽이 흐르도록 방화벽이 올바르게 구성되어 있는지 확인해야 합니다.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">참가자</dt>
-<dd>
+<div class="paragraph">
 <p>ONTAP Select 배포의 일부로 네트워크 트래픽을 교환하는 여러 참가자 또는 엔터티가 있습니다. 이러한 정보는 네트워크 트래픽 요구 사항에 대한 요약 설명에서 소개되고 사용됩니다.</p>
-<div class="openblock">
-<div class="content">
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -2123,14 +2086,8 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">네트워크 트래픽 요구 사항 요약</dt>
-<dd>
+<div class="paragraph">
 <p>다음 표에서는 ONTAP Select 배포를 위한 네트워크 트래픽 요구 사항에 대해 설명합니다.</p>
-</dd>
-</dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2188,6 +2145,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 
     </article>
