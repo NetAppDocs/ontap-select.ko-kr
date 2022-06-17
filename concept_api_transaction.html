@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:48:53 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 11:40:14 +0000">06/17/2022</time>
     
   
 
@@ -1847,8 +1847,8 @@
 <div class="paragraph">
 <p>HTTP 요청에 설정된 매개 변수를 통해 API 호출 처리 방법을 제어할 수 있습니다.</p>
 </div>
-<div class="sect4">
-<h5 id="요청-헤더">요청 헤더</h5>
+<div class="sect2">
+<h3 id="요청-헤더">요청 헤더</h3>
 <div class="paragraph">
 <p>HTTP 요청에 다음과 같은 여러 헤더를 포함해야 합니다.</p>
 </div>
@@ -1866,8 +1866,8 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="요청-본문">요청 본문</h5>
+<div class="sect2">
+<h3 id="요청-본문">요청 본문</h3>
 <div class="paragraph">
 <p>요청 본문의 내용은 특정 호출에 따라 달라집니다. HTTP 요청 본문은 다음 중 하나로 구성됩니다.</p>
 </div>
@@ -1882,8 +1882,8 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="오브젝트-필터링">오브젝트 필터링</h5>
+<div class="sect2">
+<h3 id="오브젝트-필터링">오브젝트 필터링</h3>
 <div class="paragraph">
 <p>Get을 사용하는 API 호출을 실행할 때 모든 특성에 따라 반환된 객체를 제한하거나 필터링할 수 있습니다. 예를 들어, 다음과 같이 정확하게 일치하는 값을 지정할 수 있습니다.</p>
 </div>
@@ -1943,8 +1943,8 @@
 <p>또한 쿼리의 일부로 Null 키워드 또는 해당 부정(!null)을 사용하여 특정 필드가 설정되었는지 여부를 기준으로 개체 집합을 반환할 수도 있습니다.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="개체-필드-선택">개체 필드 선택</h5>
+<div class="sect2">
+<h3 id="개체-필드-선택">개체 필드 선택</h3>
 <div class="paragraph">
 <p>기본적으로 Get 을 사용하여 API 호출을 실행하면 개체나 개체를 고유하게 식별하는 특성만 반환됩니다. 이 최소 필드 집합은 각 개체의 키 역할을 하며 개체 유형에 따라 달라집니다. 다음과 같은 방법으로 필드 쿼리 매개 변수를 사용하여 추가 개체 속성을 선택할 수 있습니다.</p>
 </div>
@@ -1974,8 +1974,8 @@
 </table>
 </div>
 </div>
-<div class="sect4">
-<h5 id="출력-집합에서-오브젝트-정렬">출력 집합에서 오브젝트 정렬</h5>
+<div class="sect2">
+<h3 id="출력-집합에서-오브젝트-정렬">출력 집합에서 오브젝트 정렬</h3>
 <div class="paragraph">
 <p>리소스 컬렉션의 레코드는 개체에서 정의한 기본 순서로 반환됩니다. ORDER_BY 쿼리 파라미터와 필드 이름, 정렬 방향을 함께 사용하여 순서를 변경할 수 있습니다: 'ORDER_BY=&lt;필드 이름&gt;ASC|desc'</p>
 </div>
@@ -1986,8 +1986,8 @@
 <p>여러 매개 변수를 포함할 때는 필드를 쉼표로 구분해야 합니다.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="페이지-매김">페이지 매김</h5>
+<div class="sect2">
+<h3 id="페이지-매김">페이지 매김</h3>
 <div class="paragraph">
 <p>Get 을 사용하여 API 호출을 실행하면 동일한 형식의 개체 컬렉션에 액세스할 때 일치하는 모든 개체가 기본적으로 반환됩니다. 필요한 경우 요청과 함께 max_records 쿼리 매개 변수를 사용하여 반환되는 레코드 수를 제한할 수 있습니다. 예를 들어, max_records=20&#8217;입니다</p>
 </div>
@@ -2006,8 +2006,8 @@
 <div class="paragraph">
 <p>각 API 요청은 클라이언트에 대한 응답을 다시 생성합니다. 응답을 검토하여 성공 여부를 확인하고 필요에 따라 추가 데이터를 검색할 수 있습니다.</p>
 </div>
-<div class="sect4">
-<h5 id="http-상태-코드입니다">HTTP 상태 코드입니다</h5>
+<div class="sect2">
+<h3 id="http-상태-코드입니다">HTTP 상태 코드입니다</h3>
 <div class="paragraph">
 <p>Deploy REST API에 사용되는 HTTP 상태 코드는 아래와 같다.</p>
 </div>
@@ -2078,8 +2078,8 @@
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="응답-헤더">응답 헤더</h5>
+<div class="sect2">
+<h3 id="응답-헤더">응답 헤더</h3>
 <div class="paragraph">
 <p>배포 서버에서 생성된 HTTP 응답에는 다음과 같은 여러 헤더가 포함됩니다.</p>
 </div>
@@ -2094,8 +2094,8 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="응답-바디">응답 바디</h5>
+<div class="sect2">
+<h3 id="응답-바디">응답 바디</h3>
 <div class="paragraph">
 <p>API 요청과 관련된 응답 내용은 객체, 처리 유형 및 요청의 성공 또는 실패에 따라 달라집니다. 응답 본문은 JSON으로 렌더링됩니다.</p>
 </div>

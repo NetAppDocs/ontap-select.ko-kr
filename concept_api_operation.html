@@ -1827,7 +1827,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 10:48:53 +0000">05/03/2022</time>
+    <time datetime="2022-06-17 11:40:14 +0000">06/17/2022</time>
     
   
 
@@ -1841,14 +1841,17 @@
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="하이퍼바이저-호스트와-ontap-select-노드-비교">하이퍼바이저 호스트와 ONTAP Select 노드 비교</h5>
+<div class="sect1">
+<h2 id="하이퍼바이저-호스트와-ontap-select-노드-비교">하이퍼바이저 호스트와 ONTAP Select 노드 비교</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>h하이퍼바이저 host_는 ONTAP Select 가상 머신을 호스팅하는 핵심 하드웨어 플랫폼입니다. ONTAP Select 가상 머신을 하이퍼바이저 호스트에 구축하고 활성화하면 가상 머신이 _ONTAP Select node_로 간주됩니다. Deploy REST API의 버전 3에서는 호스트 및 노드 객체가 구분되고 구분됩니다. 따라서 일대다 관계가 허용되며, 이 경우 하나 이상의 ONTAP Select 노드가 동일한 하이퍼바이저 호스트에서 실행될 수 있습니다.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="오브젝트-식별자">오브젝트 식별자</h5>
+</div>
+<div class="sect1">
+<h2 id="오브젝트-식별자">오브젝트 식별자</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>각 리소스 인스턴스 또는 개체는 만들 때 고유한 식별자가 할당됩니다. 이러한 식별자는 ONTAP Select 배포의 특정 인스턴스 내에서 전역적으로 고유합니다. 새 개체 인스턴스를 만드는 API 호출을 실행하면 관련 ID 값이 HTTP 응답의 "위치" 헤더에서 호출자에게 반환됩니다. 식별자를 추출하여 리소스 인스턴스를 참조할 때 후속 호출에 사용할 수 있습니다.</p>
 </div>
@@ -1865,14 +1868,18 @@
 </table>
 </div>
 </div>
-<div class="sect4">
-<h5 id="요청-식별자">요청 식별자</h5>
+</div>
+<div class="sect1">
+<h2 id="요청-식별자">요청 식별자</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>성공한 모든 API 요청에는 고유 식별자가 할당됩니다. ID는 연결된 HTTP 응답의 "quest-id" 헤더에서 반환됩니다. 요청 식별자를 사용하여 단일 특정 API 요청 응답 트랜잭션의 활동을 종합적으로 참조할 수 있습니다. 예를 들어 요청 ID를 기반으로 트랜잭션에 대한 모든 이벤트 메시지를 검색할 수 있습니다</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="동기-및-비동기-호출">동기 및 비동기 호출</h5>
+</div>
+<div class="sect1">
+<h2 id="동기-및-비동기-호출">동기 및 비동기 호출</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>서버에서 클라이언트로부터 받은 HTTP 요청을 수행하는 방법에는 두 가지가 있습니다.</p>
 </div>
@@ -1887,8 +1894,10 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="장기-실행-작업의-완료를-확인하는-중입니다">장기 실행 작업의 완료를 확인하는 중입니다</h5>
+</div>
+<div class="sect1">
+<h2 id="장기-실행-작업의-완료를-확인하는-중입니다">장기 실행 작업의 완료를 확인하는 중입니다</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>일반적으로 완료하는 데 시간이 오래 걸릴 수 있는 작업은 서버의 백그라운드 작업을 사용하여 비동기적으로 처리됩니다. Deploy REST API를 사용하면 모든 백그라운드 작업이 작업을 추적하고 현재 상태와 같은 정보를 제공하는 Job 객체에 의해 고정됩니다. 백그라운드 작업이 생성된 후 고유 식별자를 포함한 작업 객체가 HTTP 응답에 반환됩니다.</p>
 </div>
@@ -1909,8 +1918,10 @@
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="보안">보안</h5>
+</div>
+<div class="sect1">
+<h2 id="보안">보안</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>배포 API는 다음과 같은 보안 기술을 사용합니다.</p>
 </div>
@@ -1923,6 +1934,7 @@
 <p>HTTP 인증 기본 인증은 모든 API 트랜잭션에 사용됩니다. base64 문자열에 사용자 이름과 암호를 포함하는 HTTP 헤더가 모든 요청에 추가됩니다.</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
