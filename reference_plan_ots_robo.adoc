@@ -21,15 +21,7 @@ ROBO 환경에 ONTAP Select를 구축할 때 두 가지 기본 구성을 사용�
 
 NOTE: ONTAP Select를 구축할 때 모든 VMware vSphere 라이센스를 사용할 수 있습니다.
 
-
-
-==== ONTAP HA가 포함된 ONTAP Select 2노드 클러스터
-
 ONTAP Select 2노드 클러스터는 하나의 HA 쌍으로 구성되며 ROBO 구축에 이상적입니다.
-
-
-
-==== VMware가 지원되는 ONTAP Select 단일 노드 클러스터
 
 ROBO 환경에 ONTAP Select 단일 노드 클러스터를 구축할 수 있습니다. 단일 노드에는 기본 HA 기능이 없지만 다음과 같은 방법으로 클러스터를 구축하여 스토리지 보호를 제공할 수 있습니다.
 

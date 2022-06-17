@@ -18,7 +18,7 @@ ONTAP Select vNAS는 ONTAP Select 가상 머신이 실행되는 하이퍼바이�
 
 
 
-==== 기본 요구 사항 및 제한 사항
+== 기본 요구 사항 및 제한 사항
 
 ONTAP Select vNAS 솔루션은 모든 크기의 ONTAP Select 클러스터와 함께 사용할 수 있습니다.
 
@@ -42,7 +42,7 @@ NOTE: 이러한 VMware 기능은 단일 노드 및 다중 노드 ONTAP Select �
 
 
 
-==== 구성 요구 사항
+== 구성 요구 사항
 
 외부 스토리지(iSCSI, Fibre Channel, Fibre Channel over Ethernet)에서 VMFS 데이터 저장소를 사용하려는 경우 스토리지를 사용하도록 ONTAP Select를 구성하기 전에 VMFS 스토리지 풀을 생성해야 합니다. NFS 데이터 저장소를 사용하는 경우 별도의 VMFS 데이터 저장소를 생성할 필요가 없습니다. 모든 vSAN 데이터스토어는 동일한 ESXi 클러스터 내에서 정의되어야 합니다.
 
@@ -51,7 +51,7 @@ CAUTION: 호스트를 구성하거나 스토리지 추가 작업을 수행할 �
 
 
 
-==== 모범 사례
+== 모범 사례
 
 사용 가능한 VMware 설명서를 참조하여 ESXi 호스트에 대해 식별된 적절한 Best Practice를 준수하십시오. 추가 사항:
 

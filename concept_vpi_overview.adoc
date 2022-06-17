@@ -36,7 +36,7 @@ Deploy vCenter 플러그인을 설치하면 * Global Inventory Lists * 창에서
 
 
 
-==== ONTAP Select 클러스터
+=== ONTAP Select 클러스터
 
 ONTAP Select 클러스터 옵션은 기본 배포 웹 사용자 인터페이스의 * 클러스터 * 탭과 거의 동일합니다. 다음 표에 설명된 기능을 제공합니다.
 
@@ -73,7 +73,7 @@ ONTAP Select 클러스터 옵션은 기본 배포 웹 사용자 인터페이스�
 |===
 
 
-==== ONTAP Select 구축
+=== ONTAP Select 구축
 
 ONTAP Select 배포 옵션은 기본 배포 웹 사용자 인터페이스의 * 하이퍼바이저 호스트 * 및 * 관리 * 탭과 거의 동일합니다. 다음 표에 설명된 대로 페이지 맨 위에 있는 세 개의 탭을 통해 기능을 제공합니다.
 
@@ -98,18 +98,18 @@ vSphere를 통해 vCenter 플러그인에서 제공하는 기능은 기본 구�
 
 
 
-==== vCenter 플러그인 관리
+=== vCenter 플러그인 관리
 
 vCenter 플러그인을 사용하여 vCenter 플러그인을 설치, 업데이트, 제거 또는 확인할 수 없습니다. 네이티브 배포 사용자 인터페이스를 통해 이러한 관리 작업을 수행해야 합니다.
 
 
 
-==== vCenter 자격 증명 관리
+=== vCenter 자격 증명 관리
 
 vCenter 플러그인을 설치하기 전에 기본 구축 사용자 인터페이스를 사용하여 구축하는 데 필요한 vCenter 자격 증명을 추가해야 합니다.
 
 
 
-==== ONTAP Select 클러스터는 동일한 vCenter Server에서 제어되어야 합니다
+=== ONTAP Select 클러스터는 동일한 vCenter Server에서 제어되어야 합니다
 
 플러그인이 설치된 단일 vCenter Server에서 관리하는 ONTAP Select 클러스터만 구축하고 지원할 수 있습니다. 플러그인을 사용하여 독립 실행형 ESXi 또는 KVM 호스트에서 실행 중인 다른 vCenter Server 또는 클러스터에서 관리되는 ONTAP Select 클러스터에 액세스할 수 없습니다.
