@@ -687,8 +687,6 @@
   <block id="f249bf8d9e4b8c7b417b66fb9c6c3c90" category="list-text">전용 LUN을 기반으로 하는 LVM 스토리지 풀 또는 데이터 저장소는 코어 덤프, 부팅/NVRAM 및 중재자인 시스템 디스크에 사용해야 합니다.</block>
   <block id="98188cc87f947a659e62ebdc6dab134c" category="paragraph">KVM에 설치할 때는 단일 연결 및 단일 브리지를 사용해야 합니다. 물리적 포트가 2개 또는 4개인 호스트에는 동일한 결합의 모든 포트가 있어야 합니다.</block>
   <block id="56bf9f6724c0961bfe3efdd9a5936afd" category="paragraph">하드웨어 RAID 컨트롤러를 사용할 때 ONTAP Select는 주로 기본 서버 문제를 인식하지 못합니다. 서버가 모범 사례에 따라 구성된 경우 일정 수준의 이중화가 존재해야 합니다. 드라이브 장애 시에도 계속 사용할 수 있도록 RAID 5/6 을 권장합니다. 소프트웨어 RAID 구성의 경우 ONTAP는 디스크 오류에 대한 경고를 발행하고, 스페어 드라이브가 있는 경우 드라이브 재구성을 시작합니다.</block>
-  <block id="908a6644c79f2bc9e82d8777e36f7cd0" category="inline-link-macro">네트워크 구성 모범 사례</block>
-  <block id="a0543dd1ad93ec7f733c7d2af9d3c7fd" category="paragraph">네트워크 계층에서 단일 장애 지점을 방지하려면 최소 2개의 물리적 NIC를 사용해야 합니다. Data, Mgmt 및 내부 포트 그룹에는 NIC 팀 구성 및 팀 또는 본드에서의 2개 이상의 업링크로 구성된 본딩이 권장됩니다. 이러한 구성은 업링크 장애가 있는 경우 가상 스위치가 장애가 발생한 업링크의 트래픽을 NIC 팀의 정상 업링크로 이동하도록 보장합니다. 권장 네트워크 구성에 대한 자세한 내용은 을 참조하십시오 <block ref="839f4923aa784429d01d1b8b212d4b5c" category="inline-link-macro-rx"></block>.</block>
   <block id="a2f6b74c2700adf79d2359dceccee7cf" category="paragraph">다른 모든 오류는 2노드 또는 4노드 클러스터의 경우 ONTAP HA에서 처리됩니다. 하이퍼바이저 서버를 교체해야 하고 ONTAP Select 클러스터를 새 서버로 구성해야 하는 경우 NetApp 기술 지원 부서에 문의하십시오.</block>
   <block id="5328a869dd2ed37e5be32f4f227e54d6" category="paragraph">vSAN을 포함한 모든 구성은 ONTAP Select 노드당 400TB의 스토리지를 지원합니다.</block>
   <block id="4906d0b814c398d1e0b3d033c584f66b" category="paragraph">지원되는 최대 크기보다 큰 데이터 저장소에 설치할 때는 제품 설정 중에 용량 캡을 사용해야 합니다.</block>
@@ -3568,4 +3566,6 @@
   <block id="28abf93f8fe8302ba488797b5f941425" category="paragraph">중재자 트래픽은 iSCSI로, ONTAP Select 노드 관리 IP 주소에서 시작되어 ONTAP Select 배포 IP 주소에서 종료됩니다. 2노드 클러스터를 사용할 때는 ONTAP Select 노드 관리 IP 주소에 IPv6를 사용할 수 없습니다.</block>
   <block id="b39698e69e296e70cec153c53b590841" category="paragraph">예. 각 ONTAP Select 배포 VM은 최대 100개의 2노드 ONTAP Select 클러스터에 대한 공통 중재자 서비스로 사용될 수 있습니다.</block>
   <block id="9fb59ca6cf972183dcb06f8acae8ff15" category="paragraph">예. 다른 ONTAP Select 배포 VM을 사용하여 중재자 서비스를 호스팅할 수 있습니다.</block>
+  <block id="4eccac51b0adbf20af102f091873b54b" category="inline-link-macro">모범 사례 요약: 네트워킹</block>
+  <block id="8a820df1b1697eba16442acc38af08cd" category="paragraph">네트워크 계층에서 단일 장애 지점을 방지하려면 최소 2개의 물리적 NIC를 사용해야 합니다. Data, Mgmt 및 내부 포트 그룹에는 NIC 팀 구성 및 팀 또는 본드에서의 2개 이상의 업링크로 구성된 본딩이 권장됩니다. 이러한 구성은 업링크 장애가 있는 경우 가상 스위치가 장애가 발생한 업링크의 트래픽을 NIC 팀의 정상 업링크로 이동하도록 보장합니다. 권장 네트워크 구성에 대한 자세한 내용은 을 참조하십시오 <block ref="705c0997f8d64d5d2f3905a67e67034f" category="inline-link-macro-rx"></block>.</block>
 </blocks>
