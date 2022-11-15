@@ -2,9 +2,10 @@
 sidebar: sidebar 
 permalink: reference_new_ots.html 
 keywords: new features 
-summary: ONTAP Select의 현재 릴리즈에는 여러 가지 새로운 기능과 변경된 기능이 제공됩니다. 
+// summary: The current release includes several new features and improvements specific to ONTAP Select. 
+summary: 현재 릴리즈에는 ONTAP Select과 관련된 새로운 기능 또는 개선 사항이 포함되어 있지 않습니다. 
 ---
-= ONTAP Select 9.10.1의 새로운 기능
+= 이 릴리스의 새로운 기능
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,31 +15,10 @@ summary: ONTAP Select의 현재 릴리즈에는 여러 가지 새로운 기능�
 
 
 [role="lead"]
-ONTAP Select의 현재 릴리즈에는 여러 가지 새로운 기능과 변경된 기능이 제공됩니다.
+현재 릴리즈에는 ONTAP Select과 관련된 새로운 기능 또는 개선 사항이 포함되어 있지 않습니다.
 
 
 
-== VMware ESXi 지원이 향상되었습니다
+== ONTAP 릴리즈 노트
 
-ONTAP Select 9.11.1에는 VMware ESXi 7.0 U3C에 대한 지원이 포함되어 있습니다.
-
-
-
-== VMware NSX-T 지원
-
-ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다.
-
-그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 ONTAP Select 9.11.1에 대한 다음 요구 사항 및 제한 사항에 유의해야 합니다.
-
-네트워크 연결 검사기:: Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행될 때 실패합니다.
-
-
-
-
-== KVM 하이퍼바이저는 더 이상 지원되지 않습니다
-
-KVM 하이퍼바이저는 더 이상 지원되지 않습니다.
-
-ONTAP Select 9.10.1 이상 릴리스부터는 배포 유틸리티를 사용하여 더 이상 새 KVM 기반 클러스터를 생성하거나 KVM 기반 호스트를 추가할 수 없었습니다. 또한 9.10.1은 기존 KVM 클러스터 및 호스트와 함께 온라인 상태로 전환하는 등의 관리 기능을 지원하는 마지막 릴리즈입니다.
-
-그런 다음 ONTAP Select 9.11.1 이상 릴리스부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.
+ONTAP Select는 핵심 ONTAP 제품의 최신 릴리스에 포함된 대부분의 새로운 개발 기술을 활용할 수 있습니다. 을 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 릴리즈 노트"^] 각 ONTAP 9 릴리스의 새로운 기능 또는 향상된 기능에 대한 자세한 내용은 을 참조하십시오.
