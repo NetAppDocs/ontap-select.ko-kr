@@ -1936,7 +1936,6 @@
   <block id="aca2fd87d8012efa91dbc6e6c912d7e7" category="summary">ONTAP Select는 FAS 및 AFF 어레이에 제공되는 스토리지 효율성 옵션과 유사한 스토리지 효율성 옵션을 제공합니다.</block>
   <block id="6b3850335452abbd46e2f81ea011d686" category="doc">스토리지 효율성 지원</block>
   <block id="1f111941ef490bbd54082392c8d7d5bb" category="paragraph">All-Flash VSAN 또는 일반 플래시 스토리지를 사용하는 vNAS(ONTAP Select Virtual NAS) 구축은 비 SSD DAS 스토리지를 사용하는 ONTAP Select에 대한 Best Practice를 따라야 합니다.</block>
-  <block id="969781b66db59786314019d03efd76a2" category="paragraph">SSD 드라이브와 프리미엄 라이센스가 포함된 DAS 스토리지가 있는 경우, AFF와 같은 퍼스낼리티가 새로운 설치에서 자동으로 활성화됩니다.</block>
   <block id="49932c189a1a728df81d679633c219ad" category="paragraph">AFF와 같은 퍼스낼리티를 사용하면 설치 중에 다음 인라인 SE 기능이 자동으로 활성화됩니다.</block>
   <block id="f50eca1bbe0727a0ae492a37d9a67341" category="list-text">인라인 제로 패턴 감지</block>
   <block id="bdf3d88111488b006ff78f64841f7388" category="list-text">볼륨 인라인 중복제거</block>
@@ -1946,19 +1945,10 @@
   <block id="181a300bfda94fa49239b8a84b279718" category="list-text">애그리게이트 인라인 중복제거</block>
   <block id="88a926c88a9b371d22327f343c745ee5" category="list-text">집계 백그라운드 중복 제거</block>
   <block id="1054ae451e201d93ff68b5fbde92dded" category="paragraph">ONTAP Select이 기본 스토리지 효율성 정책을 모두 사용하도록 설정했는지 확인하려면 새로 생성한 볼륨에서 다음 명령을 실행합니다.</block>
-  <block id="bfd3f6691384baf34cdf17419cb0e78c" category="admonition">9.4에서 ONTAP Select를 업그레이드할 경우 프리미엄 라이센스를 사용하여 DAS SSD 스토리지에 ONTAP Select 9.4를 설치해야 합니다. 또한 ONTAP 배포를 통해 초기 클러스터를 설치하는 동안 * 스토리지 효율성 * 사용 확인란을 선택해야 합니다. 이전 조건이 충족되지 않은 경우 AFF와 같은 퍼스낼리티 사후 ONTAP 업그레이드를 활성화하려면 부팅 인수를 수동으로 생성하고 노드를 재부팅해야 합니다. 자세한 내용은 기술 지원 부서에 문의하십시오.</block>
-  <block id="3bc7377fef3090d09722c97053d94bb8" category="paragraph">다음 표에는 ONTAP Select 버전 및 미디어 유형에 따라 사용 가능한 스토리지 효율성 옵션, 기본적으로 사용 가능 또는 기본적으로 사용 안 함, 권장 사항이 요약되어 있습니다.</block>
-  <block id="3a06677d57bafe5f93316fd203140cec" category="cell">ONTAP Select 기능</block>
-  <block id="4ddd372db4137397986851a36755d62b" category="cell">9.6/9.5 프리미엄 또는 프리미엄 XL^4^(DAS SSD)</block>
-  <block id="99bd414e50c66dbb85a360543a8724df" category="cell">9.4^1^/9.3^2^프리미엄(DAS SSD)</block>
-  <block id="4075cc803e896778b25727ceeb07e4a7" category="cell">9.6/9.5/9.4^1^/9.3^2^모든 라이센스(DAS HDD)</block>
-  <block id="984fe899b528b40d37d811cdfc614800" category="cell">9.6 모든 라이센스(vNAS)</block>
-  <block id="31174df2fdbdd2be052e12c615c7307f" category="cell">9.5/9.4^1^/9.3^2^프리미엄 또는 표준(vNAS)^3^</block>
   <block id="d0a10dc848c7f164cb7f367fc2ea6eca" category="cell">인라인 제로 감지</block>
   <block id="7aae22088072740b827e9f671e64d38c" category="cell">예(기본값)</block>
   <block id="97206f3375e25c7ad628adbd0ede2481" category="cell">예. 볼륨별로 사용자가 사용하도록 설정합니다</block>
   <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">지원되지 않습니다</block>
-  <block id="649f2af3727e1d3e6b8443c426591936" category="cell">예(권장) 볼륨별로 사용자가 사용하도록 설정합니다</block>
   <block id="2d25c72c1b18e562f6654fff8e11711e" category="cell">사용할 수 없습니다</block>
   <block id="8c2a1d946295997fcc7ffd5ff081383e" category="cell">32K 인라인 압축(보조 압축)</block>
   <block id="0ee764ea898e833d7247cd7c2bff2bb6" category="cell">예 볼륨 단위로 사용자가 사용합니다.</block>
@@ -1968,12 +1958,7 @@
   <block id="6535e9c5f49b7cb87395689e840b7921" category="cell">압축 스캐너</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">예</block>
   <block id="c63eff507592c9cb40454ec64c57e654" category="cell">다짐 스캐너</block>
-  <block id="e723e4513197f2aa8ae3faf74f9b455b" category="cell">예(권장) 공간 보장이 없음인 볼륨별로 사용자에 의해 활성화됨</block>
   <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
-  <block id="b155b6b4f561bbefa57bcbe381aa7293" category="cell">예(권장)</block>
-  <block id="f3bd89de8243a3f6af6ddfd8f57c51d2" category="paragraph">[소규모]#^1^ONTAP Select 9.4(DAS SSD)(프리미엄 라이센스 필요)을 사용하면 Aggregate 수준의 배경 교차 볼륨 스캐너를 사용하여 Aggregate의 기존 데이터를 중복 제거할 수 있습니다. 이 일회성 작업은 9.4 이전에 생성된 볼륨에 대해 수동으로 수행됩니다.#[small]#^2^ONTAP DAS SSD에서 9.3 선택(프리미엄 라이센스 필요)은 애그리게이트 레벨의 백그라운드 중복제거를 지원합니다. 그러나 이 기능은 애그리게이트 생성 후 활성화해야 합니다.#[small]#^3^ONTAP Select 9.5 vNAS는 기본적으로 스토리지 효율성 정책을 지원하지 않습니다. SIDL(Single Instance Data Logging)에 대한 자세한 내용은 vNAS 섹션을 참조하십시오.#[Small]#^4^ONTAP Select 9.6은 새 라이센스(Premium XL)와 새 VM 크기(Large)를 지원합니다. 그러나 대규모 VM은 소프트웨어 RAID를 사용하는 DAS 구성에서만 지원됩니다. 현재 릴리즈에서는 대규모 ONTAP Select VM에서 하드웨어 RAID 및 vNAS 구성이 지원되지 않습니다.#</block>
-  <block id="2bb65eec7b863bd298a37f91f01bc93b" category="paragraph">ONTAP Select 9.5 이상으로 업그레이드한 후 'system node upgrade-revert show' 명령을 실행하여 업그레이드가 완료되었음을 나타낼 때까지 기다린 후 기존 볼륨의 스토리지 효율성 값을 확인합니다.</block>
-  <block id="deed1cb925849f0f3e45d21a73322805" category="paragraph">ONTAP Select 9.5 이상으로 업그레이드한 시스템에서 기존 aggregate 또는 새로 생성된 aggregate에 생성된 새 볼륨은 새로운 구축에 생성된 볼륨과 동일한 동작을 가집니다. ONTAP Select 코드 업그레이드를 거친 기존 볼륨은 몇 가지 변동을 통해 새로 생성된 볼륨과 동일한 스토리지 효율성 정책을 대부분 가집니다.</block>
   <block id="29a9d0505777c34dba7f61853452be5d" category="list-text">'속도 보장 = 볼륨'인 볼륨에는 인라인 데이터 컴팩션, 애그리게이트 인라인 중복제거, 애그리게이트 백그라운드 중복제거가 활성화되어 있지 않습니다. 이러한 옵션은 업그레이드 후 활성화할 수 있습니다.</block>
   <block id="35fbb1bb20290d891a137d1fcbd0e239" category="list-text">'속도 보장 = 없음'인 볼륨에는 백그라운드 압축이 활성화되어 있지 않습니다. 이 옵션은 업그레이드 후 활성화할 수 있습니다.</block>
   <block id="1dee9382dee8939942474aa4d9a34277" category="list-text">업그레이드 후 기존 볼륨의 스토리지 효율성 정책이 자동으로 설정됩니다.</block>
@@ -1981,7 +1966,6 @@
   <block id="ef178eb460204113beba1cbd28432807" category="list-text">'속도 보장 = 없음'인 볼륨에는 집계 백그라운드 중복제거가 활성화되어 있습니다.</block>
   <block id="3779f0db6c726f0073ea96bd58344c7c" category="list-text">스토리지 정책을 인라인만 지원하는 볼륨에는 정책이 자동으로 설정되어 있습니다.</block>
   <block id="f32e9c7c29189d660541b511be781cbb" category="list-text">사용자 정의 스토리지 효율성 정책이 적용된 볼륨은 '속도 보장 = 없음'이 있는 볼륨을 제외하고 정책이 변경되지 않습니다. 이러한 볼륨에는 애그리게이트 백그라운드 중복제거가 활성화되어 있습니다.</block>
-  <block id="d0b68a1323470e4c9310c26b4ee1c585" category="paragraph">업그레이드 전에 활성화된 스토리지 효율성 기능은 ONTAP Select 9.5 이상으로 업그레이드한 후에 유지됩니다. 업그레이드 전에 스토리지 효율성을 설정하지 않은 경우 업그레이드 후 스토리지 효율성이 활성화되지 않습니다.</block>
   <block id="827fe6014df4dcd93529a1c8e73f3c37" category="summary">온라인 설명서 배포 페이지를 사용하기 전에 알아 두어야 할 몇 가지 사항이 있습니다.</block>
   <block id="150a67adb932e1a6edc3581e48ffcd17" category="doc">브라우저를 사용하여 API에 액세스하기 전에</block>
   <block id="9fd0cd7fbfcb835011bb94274ec501c7" category="section-title">구축 계획</block>
@@ -3559,4 +3543,17 @@
   <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">이 릴리스의 새로운 기능</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="section-title">ONTAP 릴리즈 노트</block>
   <block id="ee7c32e022645197b08ad79344b7cea5" category="paragraph">ONTAP Select는 핵심 ONTAP 제품의 최신 릴리스에 포함된 대부분의 새로운 개발 기술을 활용할 수 있습니다. 을 참조하십시오<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 각 ONTAP 9 릴리스의 새로운 기능 또는 향상된 기능에 대한 자세한 내용은 을 참조하십시오.</block>
+  <block id="abdc6cb968cabcf935a49935cb3457a8" category="paragraph">All-Flash VSAN 또는 일반 플래시 스토리지를 사용하는 vNAS(ONTAP Select Virtual NAS) 구축은 비 SSD DAS(직접 연결 스토리지)가 포함된 ONTAP Select에 대한 Best Practice를 따라야 합니다.</block>
+  <block id="56d7a71de46feea406be8535cec9562b" category="paragraph">SSD 드라이브와 프리미엄 라이센스가 포함된 DAS 스토리지가 있는 경우, AFF와 같은 퍼스낼리티가 새로운 설치에서 자동으로 활성화됩니다.</block>
+  <block id="c9f8761a361c6711a9ed57ab4856d50e" category="admonition">9.6 이상에서 ONTAP Select를 업그레이드하려면 프리미엄 라이센스가 있는 DAS SSD 스토리지에 ONTAP Select를 설치해야 합니다. 또한 ONTAP 배포를 통해 초기 클러스터 설치 중에 * 스토리지 효율성 * 사용 확인란을 선택해야 합니다. 이전 조건이 충족되지 않은 경우 AFF와 같은 퍼스낼리티 사후 ONTAP 업그레이드를 활성화하려면 부팅 인수를 수동으로 생성하고 노드를 재부팅해야 합니다. 자세한 내용은 기술 지원 부서에 문의하십시오.</block>
+  <block id="351b67a1c9ed30f55beb4efb9008c75e" category="inline-link">TR-4517</block>
+  <block id="57d9bfd04afc415045de434b6511e231" category="paragraph">다음 표에는 미디어 유형 및 소프트웨어 라이센스에 따라 사용 가능한 다양한 스토리지 효율성 옵션이 기본적으로 표시되거나 사용하지 않도록 설정되지만 기본적으로 권장되지는 않습니다. 다음 표의 정보는 ONTAP Select 9.6 이상 버전에 적용됩니다. 이전 릴리스는 의 _ONTAP Select 스토리지 효율성 지원_ 섹션을 참조하십시오<block ref="cb5f99da02919ecb4f37316e8fd1134a" category="inline-link-rx"></block>.</block>
+  <block id="01ff2713f71d1a077e5cd9476bafae04" category="cell">ONTAP Select 기능</block>
+  <block id="1454e3c114972f47f44938bc14cf6784" category="cell">DAS SSD(프리미엄 또는 프리미엄 XL^1^)</block>
+  <block id="8aede28fe0ef40efaea43ec1bbfb9a33" category="cell">DAS HDD(모든 라이센스)</block>
+  <block id="c7f594218b673d842d21f54f543fb19c" category="cell">vNAS(모든 라이센스)</block>
+  <block id="d670b307adcbd20c75b779bb62ae10bc" category="paragraph">[소규모]#^1^ONTAP Select 9.6은 새로운 라이센스(프리미엄 XL)와 새로운 VM 크기(대형)를 지원합니다. 그러나 대규모 VM은 소프트웨어 RAID를 사용하는 DAS 구성에서만 지원됩니다. 9.6 릴리즈의 대형 ONTAP Select VM에서는 하드웨어 RAID 및 vNAS 구성이 지원되지 않습니다.#</block>
+  <block id="2b306d5ec9ffced1b4c962a0d5f78acb" category="paragraph">ONTAP Select 9.6 이상으로 업그레이드한 후 을(를) 기다립니다<block ref="65c6cabf39cf5a036e1dff5fc1483802" prefix=" " category="inline-code"></block> 명령을 사용하여 기존 볼륨의 스토리지 효율성 값을 확인하기 전에 업그레이드가 완료되었음을 표시합니다.</block>
+  <block id="7c36dc7bcc9976cf87d97958fae57918" category="paragraph">ONTAP Select 9.6 이상으로 업그레이드한 시스템에서 기존 aggregate 또는 새로 생성된 애그리게이트에 생성된 새로운 볼륨이 새로운 구축 환경에서 생성된 볼륨과 동일한 동작이 발생합니다. ONTAP Select 코드 업그레이드를 거친 기존 볼륨은 몇 가지 변동을 통해 새로 생성된 볼륨과 동일한 스토리지 효율성 정책을 대부분 가집니다.</block>
+  <block id="7e5c11f3396281e6016d7007a1a0a45c" category="paragraph">업그레이드 전에 활성화된 스토리지 효율성 기능은 ONTAP Select 9.6 이상으로 업그레이드한 후에도 유지됩니다. 업그레이드 전에 스토리지 효율성을 설정하지 않은 경우 업그레이드 후 스토리지 효율성이 활성화되지 않습니다.</block>
 </blocks>
