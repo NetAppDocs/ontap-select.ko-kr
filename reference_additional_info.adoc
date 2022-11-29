@@ -22,7 +22,7 @@ ONTAP Select에 대한 자세한 정보를 확인하고 도움말을 볼 수 있
 
 다음 제품 페이지에는 다양한 ONTAP Select 리소스에 대한 링크가 포함되어 있습니다.
 
-* https://www.netapp.com/data-management/software-defined-storage-ontap-select/documentation["NetApp ONTAP Select 리소스"^]
+* https://www.netapp.com/data-management/ontap-select/documentation["NetApp ONTAP Select 리소스"^]
 * https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx["NetApp ONTAP Select 제품 페이지"^]
 
 
