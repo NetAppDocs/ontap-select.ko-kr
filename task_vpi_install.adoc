@@ -30,6 +30,7 @@ Deploy vCenter 플러그인은 ONTAP Select Deploy 관리 유틸리티와 함께
 
 
 
+.이 작업에 대해
 이 경우 vCenter 관리 서버가 이미 구축 시 추가되었다고 가정합니다. vCenter Server가 추가되지 않은 경우 를 참조하십시오 link:task_adm_security.html["관리 서버 계정을 추가하는 중입니다"] 를 참조하십시오.
 
 .단계

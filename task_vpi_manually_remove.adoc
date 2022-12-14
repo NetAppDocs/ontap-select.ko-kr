@@ -48,6 +48,7 @@ MOB는 VMware vCenter Server에서 객체를 보고 관리할 수 있는 VMware 
 . 확장명의 이름을 입력하고 * InvokeMethod * 를 클릭합니다.
 
 
+.결과
 플러그인이 확장명 목록에서 제거됩니다.
 
 
@@ -56,6 +57,7 @@ MOB는 VMware vCenter Server에서 객체를 보고 관리할 수 있는 VMware 
 
 vCenter Server에서 vSphere UI 디렉토리를 검토하고 구축 플러그인이 있는 경우 제거해야 합니다.
 
+.시작하기 전에
 vCenter Server의 루트 계정에 대한 암호가 있어야 합니다. vSphere MOB를 사용하여 플러그인을 제거해야 합니다.
 
 .단계
@@ -86,6 +88,7 @@ rm-rf com.netapp.selectdeploy-1.0.0`
 
 
 
+.작업을 마친 후
 배포 플러그인을 다시 시작하고 사용할 수 있게 되기까지 몇 분이 걸릴 수 있습니다.
 
 
@@ -94,6 +97,7 @@ rm-rf com.netapp.selectdeploy-1.0.0`
 
 vCenter Server에서 vSphere Client 디렉토리를 검토하고 구축 플러그인이 있는 경우 제거해야 합니다. 배포 플러그인에서 플래시를 사용하지 않지만 플러그인 제거 절차의 일부로 이 디렉토리를 검사하는 것이 좋습니다.
 
+.시작하기 전에
 vCenter Server의 루트 계정에 대한 암호가 있어야 합니다. vSphere MOB를 사용하여 플러그인을 제거하고 vSphere UI 디렉토리에서 플러그인을 제거해야 합니다.
 
 .단계
@@ -124,4 +128,5 @@ rm-rf com.netapp.selectdeploy-1.0.0`
 
 
 
+.작업을 마친 후
 배포 플러그인을 다시 시작하고 사용할 수 있게 되기까지 몇 분이 걸릴 수 있습니다.

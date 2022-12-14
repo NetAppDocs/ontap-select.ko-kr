@@ -43,6 +43,7 @@ ONTAP Select Deploy 웹 사용자 인터페이스를 사용하여 vCenter Server
 . 메시지가 표시되면 vCenter 자격 증명을 입력합니다.
 
 
+.작업을 마친 후
 플러그인을 제거하는 경우 다음 작업 중 하나를 수행하여 vCenter 서버에서 해당 플러그인을 제거해야 합니다.
 
 * vCenter Server를 재부팅합니다

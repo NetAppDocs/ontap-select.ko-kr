@@ -18,6 +18,7 @@ summary: 소프트웨어 RAID와 함께 NVMe 드라이브를 사용하려는 경
 
 NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율성을 극대화합니다. 이 설정은 드라이브를 ONTAP Select 가상 시스템에 노출시켜 ONTAP가 장치에 PCI를 직접 액세스할 수 있도록 합니다.
 
+.시작하기 전에
 배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.
 
 * 관련 배포 관리 유틸리티를 사용하는 ONTAP Select 9.7 이상
@@ -28,6 +29,7 @@ NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율
 
 를 따릅니다 link:reference_chk_host_prep.html["호스트 준비 체크리스트"]를 검토합니다 link:reference_chk_deploy_req_info.html["배포 유틸리티 설치에 필요한 정보"], 및 link:reference_chk_select_req_info.html["ONTAP Select 설치에 필요한 정보입니다"] 항목을 참조하십시오.
 
+.이 작업에 대해
 이 절차는 새 ONTAP Select 클러스터를 생성하기 전에 수행하도록 설계되었습니다. 기존 SW-RAID NVMe 클러스터에 대해 추가 NVMe 드라이브를 구성하는 절차를 수행할 수도 있습니다. 이 경우 드라이브를 구성한 후 추가 SSD 드라이브와 마찬가지로 Deploy를 통해 추가해야 합니다. 주요 차이점은 배포는 NVMe 드라이브를 감지하고 노드를 재부팅한다는 점입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때 재부팅 프로세스에 대해 다음 사항을 확인하십시오.
 
 * Deploy가 재부팅 오케스트레이션을 처리합니다.
@@ -67,6 +69,7 @@ image:nvme_03.png["이 호스트를 재부팅합니다"]
 
 
 
+.작업을 마친 후
 호스트가 준비되면 ONTAP Select 배포 유틸리티를 설치할 수 있습니다. 새로 준비한 호스트에서 ONTAP Select 스토리지 클러스터를 생성하는 방법을 안내합니다. 이 프로세스 중에 배포는 패스스스루(pass-through)로 구성된 NVMe 드라이브가 있는지 감지하고 ONTAP 데이터 디스크로 사용할 NVMe 드라이브를 자동으로 선택합니다. 필요한 경우 기본 선택을 조정할 수 있습니다.
 
 

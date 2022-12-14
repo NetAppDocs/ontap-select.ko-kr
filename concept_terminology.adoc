@@ -102,4 +102,5 @@ NOTE: 배포 인스턴스에 포함된 원래 버전보다 이전 버전의 ONTA
 배포된 ONTAP Select 클러스터 관리:: ONTAP Select 클러스터를 구축한 후 하드웨어 기반 ONTAP 클러스터처럼 클러스터를 구성할 수 있습니다. 예를 들어, System Manager 또는 표준 ONTAP 명령줄 인터페이스를 사용하여 ONTAP Select 클러스터를 구성할 수 있습니다.
 
 
+.관련 정보
 link:task_cli_deploy_image_add.html["배포할 ONTAP Select 이미지 추가"]
