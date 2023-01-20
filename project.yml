@@ -184,15 +184,7 @@ sidebar:
       - title: 기타 고가용성 기능
         url: "/concept_ha_other.html"
     - title: 성능
-      entries:
-      - title: 일반 고려 사항
-        url: "/concept_perf_general.html"
-      - title: 9.4 프리미엄 HA 직접 연결 SSD 스토리지
-        url: "/concept_perf_premium_ha_direct_ssd_94.html"
-      - title: 9.5 프리미엄 HA 직접 연결 SSD 스토리지
-        url: "/concept_perf_premium_ha_direct_ssd_95.html"
-      - title: 9.6 프리미엄 HA 직접 연결 SSD 스토리지
-        url: "/concept_perf_premium_ha_direct_ssd_96.html"
+      url: "/concept_perf_general.html"
   - title: vCenter와 통합
     entries:
     - title: 시작하기
