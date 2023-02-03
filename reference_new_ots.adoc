@@ -15,10 +15,100 @@ summary: 현재 릴리즈에는 ONTAP Select과 관련된 새로운 기능 또�
 
 
 [role="lead"]
-현재 릴리즈에는 ONTAP Select과 관련된 새로운 기능 또는 개선 사항이 포함되어 있지 않습니다.
+NetApp은 새로운 기능과 개선 기능을 제공하기 위해 ONTAP Select을 주기적으로 업데이트합니다.
 
 
 
-== ONTAP 릴리즈 노트
+== ONTAP Select 9.12.1
 
-ONTAP Select는 핵심 ONTAP 제품의 최신 릴리스에 포함된 대부분의 새로운 개발 기술을 활용할 수 있습니다. 을 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 릴리즈 노트"^] 각 ONTAP 9 릴리스의 새로운 기능 또는 향상된 기능에 대한 자세한 내용은 을 참조하십시오.
+ONTAP Select 9.12.1은 핵심 ONTAP 제품의 현재 릴리스에 새로 개발된 기능 중 대부분을 활용할 수 있습니다. ONTAP Select와 관련된 새로운 기능 또는 개선 사항은 포함되어 있지 않습니다.
+
+
+
+== ONTAP Select 9.11.1
+
+ONTAP Select 9.11.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+VMware ESXi 지원이 향상되었습니다:: ONTAP Select 9.11.1에는 VMware ESXi 7.0 U3C에 대한 지원이 포함되어 있습니다.
+VMware NSX-T 지원:: ONTAP Select 9.10.1 이상 릴리즈는 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다. 그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 ONTAP Select 9.11.1에 대한 다음과 같은 제한 사항에 유의해야 합니다.
++
+--
+* 네트워크 연결 검사기
++
+Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행될 때 실패합니다.
+
+
+
+--
+KVM 하이퍼바이저는 더 이상 지원되지 않습니다::
++
+--
+ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다.
+
+ONTAP Select 9.11.1부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.
+
+고객이 ESXi용 ONTAP Select를 포함하여 ONTAP Select for KVM에서 다른 ONTAP 플랫폼으로 전체 데이터 마이그레이션을 계획하고 실행하는 것이 좋습니다. 자세한 내용은 를 참조하십시오 https://mysupport.netapp.com/info/communications/ECMLP2877451.html["EOA 통지"^]
+
+--
+
+
+
+
+== ONTAP Select 9.10.1
+
+ONTAP Select 9.10.1 에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+VMware NSX-T 지원:: ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다. 그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 다음과 같은 요구 사항과 제한 사항에 유의해야 합니다.
++
+--
+* 클러스터 MTU
++
+클러스터를 구축하여 추가 오버헤드를 고려하기 전에 클러스터 MTU 크기를 수동으로 8800으로 조정해야 합니다. VMware 지침은 NSX-T를 사용할 때 200바이트 버퍼를 허용합니다
+
+* 네트워크 4x10Gb 구성
++
+4개의 NIC로 구성된 VMware ESXi 호스트에 ONTAP Select를 구축하는 경우, Deploy 유틸리티를 사용하면 두 개의 서로 다른 포트 그룹 및 외부 트래픽을 서로 다른 두 포트 그룹으로 분할하는 Best Practice를 따르게 됩니다. 그러나 오버레이 네트워크를 사용하는 경우 이 구성이 작동하지 않으므로 권장 사항을 무시해야 합니다. 이 경우 대신 내부 포트 그룹과 외부 포트 그룹을 하나만 사용해야 합니다.
+
+* 네트워크 연결 검사기
++
+Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행될 때 실패합니다.
+
+
+
+--
+KVM 하이퍼바이저는 더 이상 지원되지 않습니다:: ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다. 그러나 이전 릴리즈에서 9.10.1로 클러스터를 업그레이드하는 경우에도 Deploy 유틸리티를 사용하여 클러스터를 관리할 수 있습니다.
+
+
+
+
+== ONTAP Select 9.9.1
+
+ONTAP Select 9.9.1에는 몇 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.
+
+프로세서 제품군 지원:: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상의 CPU 모델만 ONTAP Select에 대해 지원됩니다.
+VMware ESXi 지원이 업데이트되었습니다:: VMware ESXi에 대한 지원은 ONTAP Select 9.9.1로 향상되었습니다. 이제 다음 릴리스가 지원됩니다.
++
+--
+* ESXi 7.0 U2
+* ESXi 7.0 U1
+
+
+--
+
+
+
+
+== ONTAP Select 9.8
+
+ONTAP Select 9.8에는 몇 가지 새로운 기능과 변경된 기능이 포함되어 있습니다.
+
+고속 인터페이스:: 고속 인터페이스 기능은 25G(25GbE) 및 40G(40GbE)에 대한 옵션을 제공하여 네트워크 연결을 향상시킵니다. 이러한 빠른 속도를 사용할 때 최상의 성능을 얻으려면 ONTAP Select 설명서에 설명된 대로 포트 매핑 구성과 관련된 모범 사례를 따라야 합니다.
+VMware ESXi 지원이 업데이트되었습니다:: ONTAP Select 9.8에는 VMware ESXi 지원과 관련하여 두 가지 변경 사항이 있습니다.
++
+--
+* ESXi 7.0 지원(GA 빌드 15843807 이상)
+* ESXi 6.0은 더 이상 지원되지 않습니다
+
+
+--
+

@@ -21,7 +21,15 @@ vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select �
 * ESXi 호스트가 vCenter에서 관리되지 않음(독립 실행형 호스트)
 * 클러스터 내에서 여러 노드 또는 호스트가 사용됩니다
 * 클러스터는 구매한 라이센스가 있는 운영 환경에 구축됩니다
-* KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다(ONTAP Select 9.10.1 이상을 사용하여 새 클러스터를 생성할 때 KVM은 더 이상 지원되지 않음).
+* KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다
++
+[NOTE]
+====
+** ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다.
+** ONTAP Select 9.11.1부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.
+
+
+====
 
 
 
@@ -42,7 +50,7 @@ vCenter Server에서 관리하는 ESXi 호스트에 구축하는 경우 호스�
 
 [source, curl]
 ----
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step01 'https://10.21.191.150/api/security/credentials'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step01 'https://10.21.191.150/api/security/credentials'
 ----
 JSON 입력(1단계)::
 
@@ -85,7 +93,7 @@ ONTAP Select 노드를 포함하는 가상 머신이 실행될 하이퍼바이�
 
 [source, curl]
 ----
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step02 'https://10.21.191.150/api/hosts'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step02 'https://10.21.191.150/api/hosts'
 ----
 JSON 입력(02단계)::
 
@@ -131,7 +139,7 @@ ONTAP Select 클러스터를 생성하면 기본 클러스터 구성이 등록�
 
 [source, curl]
 ----
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step03 'https://10.21.191.150/api/clusters? node_count=1'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step03 'https://10.21.191.150/api/clusters? node_count=1'
 ----
 JSON 입력(단계 03)::
 
@@ -170,7 +178,7 @@ JSON 입력(단계 03)::
 
 [source, curl]
 ----
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step04 'https://10.21.191.150/api/clusters/CLUSTERID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step04 'https://10.21.191.150/api/clusters/CLUSTERID'
 ----
 JSON 입력(4단계)::
 
@@ -211,7 +219,7 @@ Deploy 관리 유틸리티는 클러스터가 생성될 때 노드 식별자 및
 
 [source, curl]
 ----
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/clusters/CLUSTERID/nodes?fields=id,name'
 ----
 처리 유형:: 동기식이다
 출력::
@@ -241,7 +249,7 @@ curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/clusters/CLUSTERID/
 
 [source, curl]
 ----
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
 ----
 JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공해야 합니다.
 
@@ -279,7 +287,7 @@ JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공
 
 [source, curl]
 ----
-curl -iX GET -u admin:admin123 -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
+curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/ clusters/CLUSTERID/nodes/NODEID/networks?fields=id,purpose'
 ----
 처리 유형:: 동기식이다
 출력::
@@ -312,7 +320,7 @@ NOTE: 다음 API 호출은 각 네트워크에 대해 한 번씩 두 번 실행�
 
 [source, curl]
 ----
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
 ----
 JSON 입력(08단계):: 네트워크 이름을 제공해야 합니다.
 
@@ -345,7 +353,7 @@ JSON 입력(08단계):: 네트워크 이름을 제공해야 합니다.
 
 [source, curl]
 ----
-curl -iX PATCH -H 'Content-Type: application/json' -u admin:admin123 -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
+curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step09 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID'
 ----
 JSON 입력(9단계):: 풀 용량은 2TB입니다.
 
@@ -383,7 +391,7 @@ JSON 입력(9단계):: 풀 용량은 2TB입니다.
 
 [source, curl]
 ----
-curl -iX POST -H 'Content-Type: application/json' -u admin:admin123 -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
+curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
 ----
 JSON 입력(10단계):: ONTAP 관리자 계정의 암호를 입력해야 합니다.
 
