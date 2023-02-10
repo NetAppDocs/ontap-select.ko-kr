@@ -13,7 +13,11 @@ sidebar:
   - title: ONTAP Select 문서
     url: "/index.html"
   - title: 릴리즈 노트
-    url: "/reference_release_notes.html"
+    entries:
+    - title: ONTAP Select 릴리즈 노트
+      url: "/reference_release_notes.html"
+    - title: 새로운 소식
+      url: "/reference_new_ots.html"
   - title: 개념
     entries:
     - title: 제품 개요
@@ -294,6 +298,8 @@ sidebar:
       entries:
       - title: ESXi를 6.5 이상으로 업그레이드하는 중입니다
         url: "/task_cli_upgrade_esxi65.html"
+      - title: 호스트 관리 서버를 수정합니다
+        url: "/reference_host_modify_command.html"
     - title: 배포 유틸리티
       entries:
       - title: 배포 인스턴스를 업그레이드합니다

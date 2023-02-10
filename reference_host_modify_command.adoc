@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: reference_host_modify_command.html 
+keywords: host modify, command, syntax, host management server 
+summary: host modify 명령을 사용하여 이 ONTAP Select 배포 인스턴스로 호스트 관리 서버를 수정할 수 있습니다. 
+---
+= 호스트 관리 서버를 수정합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+를 사용할 수 있습니다 `host modify` ONTAP Select Deploy의 이 인스턴스를 사용하여 호스트 관리 서버를 수정하는 명령입니다.
+
+
+
+== 구문
+
+`host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
+
+
+
+== 필수 매개변수
+
+[cols="35,65"]
+|===
+
+
+| 매개 변수 | 설명 
+
+
+ a| 
+`-name _name_`
+ a| 
+수정할 호스트의 IP 주소 또는 FQDN입니다.
+
+
+
+ a| 
+`-mgmt-server _management_server_`
+ a| 
+호스트로 설정할 호스트 관리 서버의 IP 주소 또는 FQDN입니다. 호스트에서 관리 서버 설정을 해제하려면 "-"(하이픈)을 지정합니다. 를 사용하여 이 호스트를 등록하기 전에 이 관리 서버의 자격 증명을 추가해야 합니다  `credential add` 명령.
+
+|===
+
+
+== 선택적 매개 변수입니다
+
+[cols="35,65"]
+|===
+
+
+| 매개 변수 | 설명 
+
+
+ a| 
+`-help`
+ a| 
+도움말 메시지를 표시합니다.
+
+
+
+ a| 
+`-foreground`
+ a| 
+이 매개 변수는 오래 실행되는 명령의 동작을 제어합니다. 이 설정을 사용하면 명령이 포그라운드에서 실행되고 작업과 관련된 이벤트 메시지가 발생할 때 표시됩니다.
+
+
+
+ a| 
+`-username _username_`
+ a| 
+이 호스트에 대한 액세스 권한이 있는 사용자 이름입니다. 관리 서버(즉, vCenter에서 관리하는 ESX 호스트)에서 호스트를 관리하지 않는 경우에만 필요합니다.
+
+|===

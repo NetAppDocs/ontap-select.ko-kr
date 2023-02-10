@@ -104,7 +104,8 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 . 호스트 등록:
 +
 ** vCenter에서 관리하지 않는 독립 실행형 호스트 등록: 'host register-name <FQDN|IP> - hypervisor-type ESX-username esx_username'
-** vCenter에서 관리하는 호스트 등록: 'host register-name <FQDN|IP> - hypervisor-type ESX-mgmt-server <FQDN|IP>'
+** vCenter에서 관리하는 호스트 등록:
+`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
 예
 
