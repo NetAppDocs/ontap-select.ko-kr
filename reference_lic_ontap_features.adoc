@@ -32,7 +32,6 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * SnapVault
 * 플랙스클론
 * SnapRestore
-* NetApp 볼륨 암호화
 * 중복제거 및 압축
 * ONTAP 멀티 테넌시 기능
 * ONTAP S3
