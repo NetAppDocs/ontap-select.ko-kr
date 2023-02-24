@@ -1677,7 +1677,6 @@
   <block id="5bc075cee240a70af54270621d93765c" category="list-text">SnapVault</block>
   <block id="a701f5d044348085ee4f97fef6636845" category="list-text">플랙스클론</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="list-text">SnapRestore</block>
-  <block id="c4b8c29f448328e82ce27062b5fd9c28" category="list-text">NetApp 볼륨 암호화</block>
   <block id="37f51edec96ed159381e4d3d076a8787" category="list-text">중복제거 및 압축</block>
   <block id="1effda8a28add2fb64ed5a7d4d67deae" category="list-text">ONTAP 멀티 테넌시 기능</block>
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp 볼륨 암호화(제한 없는 국가만 해당)</block>
@@ -1891,7 +1890,6 @@
   <block id="eda37297768fb66316ec0c97afd29213" category="paragraph">각 호스트에 2개의 10Gb 포트가 포함된 경우 vSwitch를 다음과 같이 구성해야 합니다.</block>
   <block id="a86f2765e738940e7dd8fdf6da677fd5" category="list-text">vSwitch를 구성하고 두 포트를 vSwitch에 할당합니다. 두 포트를 사용하여 NIC 팀을 생성합니다.</block>
   <block id="bfb9321c8431589faff7f47c47138df7" category="list-text">로드 밸런싱 정책을 "원래 가상 포트 ID를 기준으로 경로 지정"으로 설정합니다.</block>
-  <block id="4392037ca9aa84394b086d1268c59a3b" category="list-text">두 어댑터를 모두 "활성"으로 표시합니다.</block>
   <block id="0cc1ebaa405436d568cee576cc2d2503" category="inline-image-macro">vSwitch 속성)</block>
   <block id="fee017d680804978d6f31a0149d3356f" category="list-text">"페일백" 설정을 "예"로 설정합니다.<block ref="f2456bc45004bdf347023d01536a2379" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0bd1bd6c1c4f8c07bba0ee34ba53b4b3" category="list-text">점보 프레임(9000 MTU)을 사용하도록 vSwitch를 구성합니다.</block>
@@ -3571,4 +3569,5 @@
   <block id="6766f7a2e53a40ab3efd050bec084512" category="paragraph">이 호스트에 대한 액세스 권한이 있는 사용자 이름입니다. 관리 서버(즉, vCenter에서 관리하는 ESX 호스트)에서 호스트를 관리하지 않는 경우에만 필요합니다.</block>
   <block id="7259cd6e0f46eebf9079f25f465a8c63" category="list-text">자율 랜섬웨어 보호(ARP)</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="8042c73ffcc0e5ec0c31ae3e4d7b414e" category="list-text">두 어댑터를 모두 "활성"으로 표시하거나 한 어댑터를 "활성"으로 표시하고 다른 어댑터는 "대기"로 표시합니다.</block>
 </blocks>
