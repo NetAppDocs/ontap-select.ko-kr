@@ -189,7 +189,11 @@ sidebar:
       - title: 기타 고가용성 기능
         url: "/concept_ha_other.html"
     - title: 성능
-      url: "/concept_perf_general.html"
+      entries:
+      - title: 성능 개요
+        url: "/concept_perf_general.html"
+      - title: ONTAP Select 9.6 성능
+        url: "/concept_perf_premium_ha_direct_ssd_96.html"
   - title: vCenter와 통합
     entries:
     - title: 시작하기

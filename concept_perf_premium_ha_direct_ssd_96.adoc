@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: concept_perf_premium_ha_direct_ssd_96.html 
+keywords: ontap select, performance 
+summary: ONTAP Select 9.6 성능 - 프리미엄 HA 직접 연결 SSD 스토리지의 성능 정보 
+---
+= 성능: 프리미엄 HA 직접 연결 SSD 스토리지
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+참조 플랫폼에 대한 성능 정보입니다.
+
+
+
+== 명확히 설명합니다
+
+ONTAP Select(Premium XL) 하드웨어(노드당)
+
+* Fujitsu PRIMERGY RX2540 M4:
++
+** 인텔(R) 제온(R) 골드 6142b CPU(2.6GHz)
+** 물리적 코어 32개(소켓 16개 x 2개), 논리 코어 64개
+** 256GB RAM
+** 호스트당 드라이브: 24 960GB SSD
+** ESX 6.5U1
+
+
+
+
+클라이언트 하드웨어
+
+* NFSv3 IBM 3550m4 클라이언트 5개
+
+
+구성 정보
+
+* SW RAID 1 x 9 + 2 RAID-DP(11개 드라이브)
+* 22 + 1 RAID-5(ONTAP의 RAID-0)/RAID 캐시 NVRAM
+* 사용 중인 스토리지 효율성 기능(압축, 중복제거, 스냅샷 복사본, SnapMirror 등) 없음
+
+
+다음 표에는 소프트웨어 RAID와 하드웨어 RAID를 모두 사용하는 고가용성(HA) ONTAP Select 노드 쌍에서 읽기/쓰기 워크로드를 기준으로 측정된 처리량이 나와 있습니다. 성능 측정은 SIO 로드 생성 도구를 사용하여 실시되었습니다.
+
+
+NOTE: 이러한 성능 수치는 ONTAP Select 9.6을 기준으로 합니다.
+
+* 소프트웨어 RAID 및 하드웨어 RAID * 를 사용하는 DAS(직접 연결 스토리지) SSD의 단일 노드(4노드 미디어 인스턴스의 일부) ONTAP Select 클러스터에 대한 성능 결과
+
+[cols="6*"]
+|===
+| 설명 | 순차적 읽기 64KiB | 순차적 쓰기 64KiB | 랜덤 읽기 8KiB | 랜덤 쓰기 8KiB | 랜덤 WR/RD(50/50) 8KiB 
+
+
+| DAS(SSD) 소프트웨어 RAID를 사용하는 ONTAP Select 대규모 인스턴스 | 2171MiBps | 559MiBps | 954MiBps | 394MiBps | 564MiBps 
+
+
+| DAS(SSD) 소프트웨어 RAID를 사용하는 ONTAP Select 중간 인스턴스입니다 | 2090MiBps | 592MiBps | 677MiBps | 335MiBps | 441 3MiBps 
+
+
+| DAS(SSD) 하드웨어 RAID를 사용하는 ONTAP Select 중간 인스턴스 | 2038MiBps | 520MiBps | 578MiBps | 325MiBps | 393MiBps 
+|===
+
+
+=== 64K 순차 읽기
+
+세부 정보:
+
+* SIO 직접 I/O가 활성화되었습니다
+* 노드 2개
+* 노드당 데이터 NIC 2개
+* 노드당 데이터 애그리게이트 1개(2TB 하드웨어 RAID), (8TB 소프트웨어 RAID)
+* proc당 64sio procs, 스레드 1개
+* 노드당 32개 볼륨
+* proc당 파일 1개, 파일은 각각 12000MB입니다
+
+
+
+
+=== 64K 순차 쓰기
+
+세부 정보:
+
+* SIO 직접 I/O가 활성화되었습니다
+* 노드 2개
+* 노드당 데이터 네트워크 인터페이스 카드(NIC) 2개
+* 노드당 데이터 애그리게이트 1개(2TB 하드웨어 RAID), (4TB 소프트웨어 RAID)
+* 128 sio procs, proc당 스레드 1개
+* 노드당 볼륨: 32(하드웨어 RAID), 16(소프트웨어 RAID)
+* proc당 파일 1개, 파일은 각각 30720MB입니다
+
+
+
+
+=== 8K 랜덤 읽기
+
+세부 정보:
+
+* SIO 직접 I/O가 활성화되었습니다
+* 노드 2개
+* 노드당 데이터 NIC 2개
+* 노드당 데이터 애그리게이트 1개(2TB 하드웨어 RAID), (4TB 소프트웨어 RAID)
+* proc당 64개의 SIO 프로세서, 8개의 스레드
+* 노드당 볼륨: 32
+* proc당 파일 1개, 파일은 각각 12228MB입니다
+
+
+
+
+=== 8K 랜덤 쓰기
+
+세부 정보:
+
+* SIO 직접 I/O가 활성화되었습니다
+* 노드 2개
+* 노드당 데이터 NIC 2개
+* 노드당 데이터 애그리게이트 1개(2TB 하드웨어 RAID), (4TB 소프트웨어 RAID)
+* proc당 64개의 SIO 프로세서, 8개의 스레드
+* 노드당 볼륨: 32
+* proc당 파일 1개, 파일은 각각 8192MB
+
+
+
+
+=== 8K 랜덤 50% 쓰기 50% 읽기
+
+세부 정보:
+
+* SIO 직접 I/O가 활성화되었습니다
+* 노드 2개
+* 노드당 데이터 NIC 2개
+* 노드당 데이터 애그리게이트 1개(2TB 하드웨어 RAID), (4TB 소프트웨어 RAID)
+* proc당 64 SIO pro208 threads
+* 노드당 볼륨: 32
+* proc당 파일 1개, 파일은 각각 12228MB입니다
+
