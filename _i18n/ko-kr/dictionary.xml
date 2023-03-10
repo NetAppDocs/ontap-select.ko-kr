@@ -3639,4 +3639,6 @@
   <block id="5e9d95d213033fcb57aae50adca56cb0" category="list-text">proc당 64 SIO pro208 threads</block>
   <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">성능 개요</block>
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6 성능</block>
+  <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">만료된 용량 풀 라이센스 관리</block>
+  <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">일반적으로 라이센스가 만료되어도 아무런 반응이 없습니다. 그러나 노드가 만료된 라이센스와 연결되어 있으므로 다른 라이센스를 설치할 수 없습니다. 라이센스를 갱신하기 전에는 재부팅 또는 페일오버 작업과 같이 Aggregate를 오프라인 상태로 전환하는 작업을 _수행해서는 안 됩니다. 권장 조치는 라이센스 갱신을 가속화하는 것입니다.</block>
 </blocks>
