@@ -34,7 +34,7 @@ ESXi에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비를 
 
 === 사용 가능한 ONTAP Select 버전
 
-배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 link:task_adm_deploy_image_add.html["배포할 ONTAP Select 이미지 추가"] 를 참조하십시오.
+배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 link:task_cli_deploy_image_add.html["배포할 ONTAP Select 이미지 추가"] 를 참조하십시오.
 
 
 

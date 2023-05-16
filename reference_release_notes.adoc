@@ -20,11 +20,11 @@ ONTAP Select용 릴리즈 노트에서는 새로운 기능, 지원되는 구성,
 NOTE: 릴리즈 노트에 액세스하려면 NetApp Support 사이트에 로그인할 수 있는 계정이 필요합니다.
 
 .ONTAP Select의 현재 버전입니다
-에 액세스할 수 있습니다 https://library.netapp.com/ecm/ecm_download_file/ECMLP2884847["ONTAP Select 9.12.1 릴리스 정보"^] 현재 버전에 대한 세부 정보를 봅니다.
+에 액세스할 수 있습니다 https://["ONTAP Select 9.12.1 릴리스 정보"^] 현재 버전에 대한 세부 정보를 봅니다.
 
 .이전 버전의 ONTAP Select
 제품의 이전 버전에 대한 릴리즈 노트에 액세스하려면 다음을 참조하십시오.
 
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 제품 라이브러리"^]
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293&archive=true["ONTAP Select 제품 라이브러리 아카이브"^]
+* https://["ONTAP Select 제품 라이브러리"^]
+* https://["ONTAP Select 제품 라이브러리 아카이브"^]
 

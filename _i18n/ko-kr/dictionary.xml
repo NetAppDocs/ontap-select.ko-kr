@@ -813,7 +813,6 @@
   <block id="c423fd05ac4075cd52ed8e9ec9961c3f" category="paragraph">소프트웨어 RAID를 사용하는 경우 시스템 데이터용 스토리지 풀을 생성하고 SSD 드라이브를 루트 및 데이터 애그리게이트에 사용할 수 있는지 확인해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="section-title">사용 가능한 ONTAP Select 버전</block>
   <block id="aa66e32480de432747a10957bdaa05fd" category="inline-link-macro">배포할 ONTAP Select 이미지 추가</block>
-  <block id="f04ce539f861b20e999ae9ca7a1a5963" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <block ref="78d33d23ddbc660baa867877fc233dd4" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="700dafd7ca1606f2a30973a096a3f27f" category="section-title">프로덕션 구축을 위한 ONTAP Select 라이센스 등록</block>
   <block id="9526942f4f0cae81c16b2f122cce2a1e" category="paragraph">운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. capacity 계층_model을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _capacity pool_model을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.</block>
   <block id="9b419acef9660c05b08074757cfef581" category="section-title">라이센스 파일 업로드 및 등록</block>
@@ -3641,4 +3640,5 @@
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6 성능</block>
   <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">만료된 용량 풀 라이센스 관리</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">일반적으로 라이센스가 만료되어도 아무런 반응이 없습니다. 그러나 노드가 만료된 라이센스와 연결되어 있으므로 다른 라이센스를 설치할 수 없습니다. 라이센스를 갱신하기 전에는 재부팅 또는 페일오버 작업과 같이 Aggregate를 오프라인 상태로 전환하는 작업을 _수행해서는 안 됩니다. 권장 조치는 라이센스 갱신을 가속화하는 것입니다.</block>
+  <block id="15ab075109f8f2254777d15c63f96650" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <block ref="b1d42ed6470398387d373e3f35d8d69e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
 </blocks>

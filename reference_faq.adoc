@@ -47,7 +47,7 @@ perfstat8 –i N,m -t <sample time in minutes> --verbose --nodes=<filer IP> --di
 http://<Deploy-IP-Address/api/ui
 ----
 
-NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 새 API 가이드는 에서 사용할 수 있습니다 https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694["Field Portal을 참조하십시오"].
+NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 새 API 가이드는 에서 사용할 수 있습니다 https://["Field Portal을 참조하십시오"].
 
 .ONTAP Select VM을 VMware 또는 다른 타사 스냅샷으로 백업할 수 있습니까?
 아니요 ONTAP Select VM은 VMware 기반 스냅샷에서 제외된 독립 영구 드라이브를 사용합니다. ONTAP Select 백업을 지원하는 유일한 방법은 SnapMirror, SnapVault 또는 SVM DR(해당하는 경우)입니다.
