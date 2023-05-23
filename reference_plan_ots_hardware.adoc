@@ -66,7 +66,7 @@ ONTAP Select를 구축하는 물리적 하이퍼바이저 호스트는 몇 가�
 
 NOTE: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상을 기반으로 하는 CPU 모델만 지원됩니다.
 
-을 참조하십시오 https://["NetApp 상호 운용성 매트릭스 툴, window=_blank"] 를 참조하십시오.
+을 참조하십시오 https://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴, window=_blank"] 를 참조하십시오.
 
 
 

@@ -27,17 +27,17 @@ CAUTION: 배포 관리 유틸리티를 사용하여 기존 ONTAP Select 노드�
 
 . NetApp Support 사이트에서 다운로드 페이지로 이동합니다.
 +
-https://["NetApp 지원 다운로드"^]
+https://mysupport.netapp.com/site/downloads["NetApp 지원 다운로드"^]
 
 . ONTAP Select 노드 업그레이드 * 를 클릭합니다.
 . 필요에 따라 모든 프롬프트에 응답하는 적절한 업그레이드 이미지를 선택하여 다운로드합니다.
 . ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오. 제품 라이브러리 페이지에서 사용 중인 ONTAP Select 버전에 대한 릴리즈 노트에 액세스할 수 있습니다.
 +
-https://["ONTAP Select 제품 라이브러리"^]
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 제품 라이브러리"^]
 
 . ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다.
 +
-https://["ONTAP 9 설명서"^]
+https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
 
 
 
