@@ -1265,7 +1265,6 @@
   <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">업그레이드 패키지를 획득한 후에는 해당 파일을 Deploy 가상 머신에 업로드해야 합니다.</block>
   <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">로컬 워크스테이션에서 업그레이드 파일을 사용할 수 있어야 합니다. 관리자 사용자 계정에 대한 암호도 있어야 합니다.</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">이 작업은 배포 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.</block>
-  <block id="fc867a2c06f0b493d05e8508b022600e" category="list-text">로컬 워크스테이션의 명령 셸에서 SFTP 유틸리티를 사용하여 배포 가상 머신에 이미지 파일을 업로드합니다.</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">업그레이드 파일은 admin 사용자의 홈 디렉토리에 저장됩니다.</block>
   <block id="cff2646f28c605bf4435cf5b8260a4e7" category="section-title">업그레이드 패키지를 적용하는 중입니다</block>
   <block id="baa4f96e18f8e9fced4eec3f5a81a23a" category="paragraph">업그레이드 파일을 배포 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.</block>
@@ -3641,4 +3640,6 @@
   <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">만료된 용량 풀 라이센스 관리</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">일반적으로 라이센스가 만료되어도 아무런 반응이 없습니다. 그러나 노드가 만료된 라이센스와 연결되어 있으므로 다른 라이센스를 설치할 수 없습니다. 라이센스를 갱신하기 전에는 재부팅 또는 페일오버 작업과 같이 Aggregate를 오프라인 상태로 전환하는 작업을 _수행해서는 안 됩니다. 권장 조치는 라이센스 갱신을 가속화하는 것입니다.</block>
   <block id="15ab075109f8f2254777d15c63f96650" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <block ref="b1d42ed6470398387d373e3f35d8d69e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="f39da9a3a7ab30031d6c4133fff101c1" category="admonition">ONTAP Select 배포 관리 유틸리티의 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드하는 것이 좋습니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 <block ref="4c9e70831def8fb341e5d69652f04dcf" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="92cbe224b663d28b8dd457992abcd653" category="list-text">로컬 워크스테이션의 명령 셸에서 SCP 유틸리티를 사용하여 배포 가상 시스템에 이미지 파일을 업로드합니다.</block>
 </blocks>

@@ -23,6 +23,9 @@ summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 �
 업그레이드 중에 다른 작업을 수행하는 데 배포를 사용하지 않는지 확인합니다. 배포 유틸리티 업그레이드에 대한 정보 및 제한 사항은 현재 릴리스 노트를 참조하십시오.
 
 
+NOTE: ONTAP Select 배포 관리 유틸리티의 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드하는 것이 좋습니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드 업그레이드"^] 를 참조하십시오.
+
+
 
 == 업그레이드 패키지를 다운로드하는 중입니다
 
@@ -54,15 +57,13 @@ link:https://mysupport.netapp.com["NetApp 지원"^]
 이 작업은 배포 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.
 
 .단계
-. 로컬 워크스테이션의 명령 셸에서 SFTP 유틸리티를 사용하여 배포 가상 머신에 이미지 파일을 업로드합니다.
+. 로컬 워크스테이션의 명령 셸에서 SCP 유틸리티를 사용하여 배포 가상 시스템에 이미지 파일을 업로드합니다.
 +
 예
 
 +
 ....
-sftp admin@10.234.81.101 (provide password when prompted)
-put ONTAPdeploy2.12_upgrade.tar.gz
-exit
+scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
 ....
 
 
@@ -89,8 +90,7 @@ Deploy 유틸리티 가상 머신에 업그레이드 파일이 있는 디렉토�
 
 +
 ....
-deploy upgrade -package-path /home/admin/
-ONTAPdeploy2.12_upgrade.tar.gz
+deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 ....
 
 
