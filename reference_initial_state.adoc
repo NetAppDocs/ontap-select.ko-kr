@@ -18,6 +18,9 @@ summary: 구축된 클러스터의 초기 상태를 인식하고 필요에 따�
 
 ONTAP Select 클러스터는 생성 후 몇 가지 특성을 갖습니다.
 
+
+NOTE: ONTAP 관리자 계정에 대한 역할 및 권한을 제한하면 ONTAP Select 배포에서 클러스터를 관리하는 기능이 제한될 수 있습니다. 자세한 내용은 KB 문서를 참조하십시오 link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/OTS_Deploy_cluster_refresh_fails_with_error%3A_ONTAPSelectSysCLIVersionFailed_zapi_returned_bad_status_0%3A_None["OTS 배치 클러스터 새로 고침이 오류와 함께 실패합니다"^].
+
 .LIF
 고객 지정 LIF에는 두 가지 유형이 할당됩니다.
 

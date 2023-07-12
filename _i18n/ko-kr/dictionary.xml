@@ -2508,7 +2508,6 @@
   <block id="3d76d8ade4be6a0fa76347dff9a10a88" category="paragraph">deeploy backup restore-path/home/admin-filename deploy_backup_20180601162151.tar.gz</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">ONTAP Select 클러스터를 구축한 후 배포 관리 유틸리티를 사용하여 노드의 하이퍼바이저 인스턴스 유형을 업그레이드할 수 있습니다.</block>
   <block id="a81401e9911e6ba18e35f42e304aeafc" category="doc">ONTAP Select 클러스터 노드 크기 조정</block>
-  <block id="da8c60eda9de027a78518654141ef28e" category="admonition">용량 계층 라이센스 모델을 사용하는 경우에만 클러스터 노드 크기 조정 작업을 수행할 수 있습니다. 용량 풀 라이센스가 있는 ONTAP Select 노드는 크기를 조정할 수 없습니다.</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">클러스터가 온라인 상태여야 합니다.</block>
   <block id="090def24fea0489fb8d3e01bab4bd447" category="paragraph">이 작업에서는 웹 배포 사용자 인터페이스를 사용하는 방법을 설명합니다. 또한 Deploy CLI를 사용하여 인스턴스 크기 조정을 수행할 수도 있습니다. 사용하는 인터페이스에 관계없이 크기 조정 작업에 필요한 시간은 여러 가지 요인에 따라 크게 달라질 수 있으며 완료하는 데 시간이 오래 걸릴 수 있습니다. 노드 크기는 더 크기만 조정할 수 있습니다.</block>
   <block id="0a34214ca44126aa0cdfec7af4a58c66" category="list-text">페이지 상단의 * Cluster * 탭을 클릭하고 목록에서 원하는 클러스터를 선택합니다.</block>
@@ -3646,4 +3645,7 @@
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">스냅샷 복사본을 무단 복제했습니다</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 마이그레이션</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
+  <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">용량 계층 라이센스 모델 및 용량 풀 라이센스 모델을 사용하는 경우 클러스터 노드 크기 조정 작업을 수행할 수 있습니다.</block>
+  <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS 배치 클러스터 새로 고침이 오류와 함께 실패합니다</block>
+  <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP 관리자 계정에 대한 역할 및 권한을 제한하면 ONTAP Select 배포에서 클러스터를 관리하는 기능이 제한될 수 있습니다. 자세한 내용은 KB 문서를 참조하십시오 <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
 </blocks>
