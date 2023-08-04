@@ -2298,7 +2298,6 @@
   <block id="c79b5e481b72a791067309bf6341357a" category="section-title">백업 구축</block>
   <block id="f30bc4e85b9bb354d7f8cfeba876a8ba" category="paragraph">클러스터 생성 후를 포함하여 배포 구성 데이터를 정기적으로 백업하는 것이 좋습니다. 중재 구성 데이터가 백업에 포함되기 때문에 2노드 클러스터에서는 이 점이 특히 중요합니다.</block>
   <block id="af57810cccc926c446851c6408c6667b" category="paragraph">클러스터를 생성하거나 구축한 후에는 ONTAP Select 구축 구성 데이터를 백업해야 합니다.</block>
-  <block id="f28ccc9cc7fa1367f54e4ae8e3176c31" category="paragraph">기본 애그리게이트의 RPO 0(최신) 복사본을 제공하기 위해 미러링된 애그리게이트는 존재하지만, 기본 애그리게이트에 대해 여유 공간이 부족하지 않도록 주의해야 합니다. 기본 애그리게이트의 공간이 부족할 경우 ONTAP는 스토리지 기브백의 기준으로 사용되는 공통 NetApp Snapshot ™ 복사본을 삭제할 수 있습니다. 이는 클라이언트 쓰기를 수용하도록 설계된 대로 작동합니다. 하지만 페일백에서 공통 스냅샷 복사본이 없기 때문에 ONTAP Select 노드가 미러링된 애그리게이트의 전체 기본을 수행해야 합니다. 이 작업은 비공유 환경에서 상당한 시간이 걸릴 수 있습니다. 애그리게이트 공간 활용률을 모니터링하는 데 적합한 기준은 최대 85%입니다.</block>
   <block id="9dc41c2a99c45941a7b6c4298a4ba9a5" category="section-title">NIC 집계, 팀 구성 및 페일오버</block>
   <block id="27294906efe978d2e7d613739082d7c5" category="paragraph">ONTAP Select는 2노드 클러스터를 위한 단일 10Gb 링크를 지원하지만 ONTAP Select 클러스터의 내부 및 외부 네트워크에서 NIC 애그리게이션 또는 NIC 티밍을 통해 하드웨어 이중화를 제공하는 것이 NetApp의 모범 사례입니다.</block>
   <block id="d29b03a7fc61c6e1f42a47018afc8bcb" category="paragraph">NIC에 ASIC(Application-Specific Integrated Circuit)가 여러 개 있는 경우 내부 및 외부 네트워크를 위한 NIC 팀을 통해 네트워크 구조를 구축할 때 각 ASIC에서 네트워크 포트를 하나 선택합니다.</block>
@@ -2659,7 +2658,6 @@
   <block id="568e700bfd84bf09ea449e03f0b63ec2" category="paragraph">서로 다른 거리에 2노드 액티브/액티브 HA 클러스터를 배치하고 각 노드를 서로 다른 데이터 센터에 배치할 수 있습니다. 2노드 클러스터와 2노드 확장 클러스터(MetroCluster SDS라고도 함)의 유일한 차이점은 노드 간의 네트워크 연결 거리입니다.</block>
   <block id="576271d358b861b1da59de8d0b9547e8" category="paragraph">2노드 클러스터는 300m 거리 내에 두 노드가 같은 데이터 센터에 위치한 클러스터로 정의됩니다. 일반적으로 두 노드는 동일한 네트워크 스위치 또는 ISL(Interswitch Link) 네트워크 스위치 세트에 대한 업링크를 가지고 있습니다.</block>
   <block id="4e83e8addeafe73c3acbe68952183177" category="paragraph">2노드 MetroCluster SDS는 노드가 물리적으로 300m 이상 분리된 클러스터(다양한 객실, 서로 다른 건물 및 데이터 센터)로 정의됩니다. 또한 각 노드의 업링크 연결은 별도의 네트워크 스위치에 연결됩니다. MetroCluster SDS에는 전용 하드웨어가 필요하지 않습니다. 그러나 환경은 지연(RTT의 경우 최대 5ms, 지터의 경우 5ms) 및 물리적 거리(최대 10ms)에 대한 요구 사항을 준수해야 합니다.</block>
-  <block id="04392e82fbee6fd91224b767c3bcd4ae" category="paragraph">MetroCluster SDS는 프리미엄 기능이며 프리미엄 라이센스가 필요합니다. Premium 라이센스는 소규모 및 중간 규모 VM과 HDD 및 SSD 미디어 생성을 모두 지원합니다.</block>
   <block id="526a514c4ab4ec984314911904c226e7" category="admonition">MetroCluster SDS는 로컬 연결 스토리지(DAS)와 공유 스토리지(vNAS) 모두에서 지원됩니다. vNAS 구성은 일반적으로 ONTAP Select VM과 공유 스토리지 간의 네트워크 때문에 지연 시간이 더 길어집니다. MetroCluster SDS 구성은 공유 스토리지 지연 시간을 포함하여 노드 간에 최대 10ms의 지연 시간을 제공해야 합니다. 즉, 공유 스토리지 지연 시간은 이러한 구성에서 무시할 수 없기 때문에 Select VM 간의 지연 시간만을 측정하는 것은 적절하지 않습니다.</block>
   <block id="d1bf7b4cf1d6b51999a759865fb8c66b" category="summary">ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리하는 데 사용되는 관리 유틸리티입니다.</block>
   <block id="b6943de2133c238e306c67b38531d08a" category="paragraph">ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리하는 데 사용되는 관리 유틸리티입니다. 배포는 ONTAP Select 클러스터를 생성하기 전에 설치해야 하는 Linux 가상 시스템으로 패키징됩니다.</block>
@@ -3648,4 +3646,7 @@
   <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">용량 계층 라이센스 모델 및 용량 풀 라이센스 모델을 사용하는 경우 클러스터 노드 크기 조정 작업을 수행할 수 있습니다.</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS 배치 클러스터 새로 고침이 오류와 함께 실패합니다</block>
   <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP 관리자 계정에 대한 역할 및 권한을 제한하면 ONTAP Select 배포에서 클러스터를 관리하는 기능이 제한될 수 있습니다. 자세한 내용은 KB 문서를 참조하십시오 <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
+  <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">기본 애그리게이트의 RPO 0(최신) 복사본을 제공하기 위해 미러링된 애그리게이트는 존재하지만, 기본 애그리게이트에 대해 여유 공간이 부족하지 않도록 주의해야 합니다. 운영 애그리게이트에서 공간 부족 조건은 ONTAP이 스토리지 기브백의 기준선으로 사용되는 일반 스냅샷 복사본을 삭제할 수 있습니다. 이는 클라이언트 쓰기를 수용하도록 설계된 대로 작동합니다. 하지만 페일백에서 공통 스냅샷 복사본이 없기 때문에 ONTAP Select 노드가 미러링된 애그리게이트의 전체 기본을 수행해야 합니다. 이 작업은 비공유 환경에서 상당한 시간이 걸릴 수 있습니다.</block>
+  <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">최적의 스토리지 성능과 가용성을 위해 미러링된 애그리게이트에 대해 최소 20%의 여유 공간을 유지하는 것이 좋습니다. 미러링되지 않은 애그리게이트의 권장사항은 10%이지만, 파일 시스템이 증분 변경을 흡수하기 위해 추가 10%의 공간을 사용할 수 있습니다. 증분식으로 변경하면 ONTAP의 COW Snapshot 기반 아키텍처로 인해 미러링된 애그리게이트의 공간 활용률이 증가합니다. 이러한 모범 사례를 준수하지 않을 경우 성능에 부정적인 영향을 미칠 수 있습니다.</block>
+  <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDS는 프리미엄 기능이며 프리미엄 라이센스 또는 프리미엄 XL 라이센스가 필요합니다. Premium 라이센스는 소규모 및 중간 규모 VM과 HDD 및 SSD 미디어 생성을 모두 지원합니다. Premium XL 라이센스도 NVMe 드라이브 생성을 지원합니다.</block>
 </blocks>
