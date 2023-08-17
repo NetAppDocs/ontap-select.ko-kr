@@ -1037,7 +1037,6 @@
   <block id="4f1b3cd9fba2e292ff3f1a184f8331f0" category="paragraph">용량 풀 라이센스 모델에 대한 자세한 내용은 _Capacity 풀 라이센스 모델_을 참조하십시오.</block>
   <block id="ef063895a1ede73693b222ec3a2f0a63" category="summary">최적의 하드웨어를 선택하고 네트워크를 구성하여 성능과 복원력을 최적화할 수 있습니다.</block>
   <block id="2e9a99934aaba2c5ae48b142fa347861" category="doc">지원되는 네트워크 구성</block>
-  <block id="3ad46bc4202506ae104cdd08943bdf18" category="paragraph">서버 공급업체는 고객의 요구 사항과 선택 사항이 다르다는 점을 잘 알고 있습니다. 따라서 물리적 서버를 구입할 때 네트워크 연결 결정을 내릴 때 다양한 옵션을 사용할 수 있습니다. 대부분의 상용 시스템에는 속도 및 처리량 변이가 다양한 단일 포트 및 다중 포트 옵션을 제공하는 다양한 NIC 옵션이 제공됩니다. ONTAP Select 9.8, 25GB/s 및 40Gb/s NIC 어댑터는 VMware ESX에서 지원됩니다.</block>
   <block id="1ff04d941ae1b8262465779276105e05" category="paragraph">ONTAP Select VM의 성능은 기본 하드웨어의 특성에 직접 연결되어 있기 때문에 고속 NIC를 선택하여 VM에 대한 처리량을 증가시키면 성능이 더 높은 클러스터와 전반적인 사용자 환경이 향상됩니다. 고성능 네트워크 레이아웃을 위해 10Gb NIC 4개 또는 고속 NIC 2개(25/40Gb/s)를 사용할 수 있습니다. 또한 여러 가지 다른 구성도 지원됩니다. 2노드 클러스터의 경우 1Gb 포트 4개 또는 10Gb 포트 1개가 지원됩니다. 단일 노드 클러스터의 경우 1Gb 포트 2개가 지원됩니다.</block>
   <block id="68a547a08a3ebb293924c580b641ce65" category="paragraph">* 네트워크 최소 및 권장 구성 *</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
@@ -2138,7 +2137,6 @@
   <block id="6aade83f8151a6756008a80c389bef65" category="cell">1시간에서 7일 동안 적용되지 않습니다</block>
   <block id="a051cb6fe36d0d57186040136f51ded4" category="cell">노드 일련 번호입니다</block>
   <block id="0f4f157087aaf0bd28aa76133fd9d2c3" category="summary">NIC 2개 및 NIC 4개 구성에 대한 ONTAP Select vSwitch 구성 및 로드 밸런싱 정책</block>
-  <block id="492e974e8b190853245906ac4824304e" category="doc">VMware vSphere vSwitch 구성</block>
   <block id="96600f2ed0fb970e508d5209faa2adc5" category="paragraph">ONTAP Select는 표준 및 분산형 vSwitch 구성을 모두 사용할 수 있도록 지원합니다. 분산형 vSwitch는 LACP(Link Aggregation 구문을 지원)를 지원합니다. Link Aggregation은 여러 물리적 어댑터에 걸쳐 대역폭을 집계하는 데 사용되는 공통 네트워크 구성입니다. LACP는 공급업체 중립적인 표준이며 물리적 네트워크 포트 그룹을 단일 논리 채널로 묶는 네트워크 엔드포인트에 대해 개방형 프로토콜을 제공합니다. ONTAP Select는 LAG(Link Aggregation Group)로 구성된 포트 그룹과 함께 사용할 수 있습니다. 그러나 LAG 구성을 방지하려면 개별 물리적 포트를 단순 업링크(트렁크) 포트로 사용하는 것이 좋습니다. 이러한 경우 표준 및 분산 vSwitch에 대한 Best Practice가 동일합니다.</block>
   <block id="10e7ad3863cdd2b48f9a7524784cedee" category="paragraph">이 섹션에서는 2개의 NIC 및 4개의 NIC 구성에서 모두 사용해야 하는 vSwitch 구성 및 로드 밸런싱 정책에 대해 설명합니다.</block>
   <block id="da05a02ceee0169095d6250face3e1a6" category="paragraph">ONTAP Select에서 사용할 포트 그룹을 구성할 때는 다음 Best Practice를 따라야 합니다. 포트 그룹 수준의 로드 밸런싱 정책은 원래 가상 포트 ID를 기준으로 하는 라우트입니다. ESXi 호스트에 연결된 스위치 포트에서 STP를 portfast로 설정하는 것이 좋습니다.</block>
@@ -3230,7 +3228,6 @@
   <block id="029512cdc2b1f0fa16e4fc28ea554124" category="sidebar">단일 및 다중 노드 구성</block>
   <block id="bab8e5962588e40db65a36db5d916d05" category="sidebar">내부 및 외부 네트워크</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">지원되는 구성</block>
-  <block id="5bb5c0519a3ead3dfe6030831305e46c" category="sidebar">VMware vSphere vSwitch 구성</block>
   <block id="52b9048ce13dbc3e7feb51e89c16b2e3" category="sidebar">데이터 및 관리 분리</block>
   <block id="fb3d59ef8abb86b2989e3e7dcc13a94e" category="sidebar">고가용성 아키텍처</block>
   <block id="2ae32cce8d9e1bdcb0478c5f14d4be9c" category="sidebar">HA 구성</block>
@@ -3649,4 +3646,7 @@
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">기본 애그리게이트의 RPO 0(최신) 복사본을 제공하기 위해 미러링된 애그리게이트는 존재하지만, 기본 애그리게이트에 대해 여유 공간이 부족하지 않도록 주의해야 합니다. 운영 애그리게이트에서 공간 부족 조건은 ONTAP이 스토리지 기브백의 기준선으로 사용되는 일반 스냅샷 복사본을 삭제할 수 있습니다. 이는 클라이언트 쓰기를 수용하도록 설계된 대로 작동합니다. 하지만 페일백에서 공통 스냅샷 복사본이 없기 때문에 ONTAP Select 노드가 미러링된 애그리게이트의 전체 기본을 수행해야 합니다. 이 작업은 비공유 환경에서 상당한 시간이 걸릴 수 있습니다.</block>
   <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">최적의 스토리지 성능과 가용성을 위해 미러링된 애그리게이트에 대해 최소 20%의 여유 공간을 유지하는 것이 좋습니다. 미러링되지 않은 애그리게이트의 권장사항은 10%이지만, 파일 시스템이 증분 변경을 흡수하기 위해 추가 10%의 공간을 사용할 수 있습니다. 증분식으로 변경하면 ONTAP의 COW Snapshot 기반 아키텍처로 인해 미러링된 애그리게이트의 공간 활용률이 증가합니다. 이러한 모범 사례를 준수하지 않을 경우 성능에 부정적인 영향을 미칠 수 있습니다.</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDS는 프리미엄 기능이며 프리미엄 라이센스 또는 프리미엄 XL 라이센스가 필요합니다. Premium 라이센스는 소규모 및 중간 규모 VM과 HDD 및 SSD 미디어 생성을 모두 지원합니다. Premium XL 라이센스도 NVMe 드라이브 생성을 지원합니다.</block>
+  <block id="95e5f2861efdf3db12f1838f4cf18a88" category="doc">VMware vSphere vSwitch 구성</block>
+  <block id="ced1d13b7a0a78acdbaf6a002e0e0063" category="paragraph">서버 공급업체는 고객의 요구 사항과 선택 사항이 다르다는 점을 잘 알고 있습니다. 따라서 물리적 서버를 구입할 때 네트워크 연결 결정을 내릴 때 다양한 옵션을 사용할 수 있습니다. 대부분의 상용 시스템에는 속도 및 처리량 변이가 다양한 단일 포트 및 다중 포트 옵션을 제공하는 다양한 NIC 옵션이 제공됩니다. ONTAP Select 9.8부터 25GB/s 및 40Gb/s NIC 어댑터가 VMware ESX에서 지원됩니다.</block>
+  <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">VMware vSphere vSwitch 구성</block>
 </blocks>
