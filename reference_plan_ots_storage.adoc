@@ -17,6 +17,9 @@ summary: ONTAP Select 호스트 스토리지와 관련하여 고려해야 할 �
 ONTAP Select 호스트 스토리지와 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다.
 
 
+NOTE: 외부 스토리지 지원 정보는 에 설명되어 있습니다 link:reference_plan_ots_vnas.html["ONTAP Select vNAS 요구 사항"].
+
+
 
 == 하드웨어 RAID 컨트롤러 요구 사항
 
@@ -60,12 +63,7 @@ VMware ESXi 하이퍼바이저에 ONTAP Select 클러스터를 구축할 때 로
 
 VMware ESXi에서 소프트웨어 RAID 구축을 위한 환경은 다음과 같은 핵심 요구 사항을 충족해야 합니다.
 
-* VMware ESXi 버전:
-+
-** ESXi 6.5 U2(빌드 8294253) 이상
-** ESXi 6.7 GA(빌드 8169922) 이상
-
-
+* VMware ESXi 7.0 GA(빌드 15843807) 이상
 * ONTAP Select 9.5 이상
 * ONTAP Select 배포 2.10 이상
 * 새로운 ONTAP Select 클러스터만 해당
