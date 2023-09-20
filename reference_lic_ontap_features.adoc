@@ -25,6 +25,7 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 다음 기능은 ONTAP Select에 포함되어 있으며 기본적으로 라이센스가 부여됩니다.
 
+* NVMe over TCP
 * NFS 를 참조하십시오
 * CIFS를 선택합니다
 * iSCSI

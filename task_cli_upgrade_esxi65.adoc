@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_cli_upgrade_esxi65.html 
 keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
-summary: VMware ESXi에서 ONTAP Select를 실행하는 경우 ESXi 소프트웨어를 이전 지원 버전에서 ESXi 6.5 또는 6.7로 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다. 
+summary: VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전에서 ESXi 7.0 이상으로 ESXi 소프트웨어를 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다. 
 ---
-= VMware ESXi를 버전 6.5 이상으로 업그레이드
+= VMware ESXi를 버전 7.0 이상으로 업그레이드
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: VMware ESXi에서 ONTAP Select를 실행하는 경우 ESXi 소프트웨
 
 
 [role="lead"]
-VMware ESXi에서 ONTAP Select를 실행하는 경우 ESXi 소프트웨어를 이전 지원 버전에서 ESXi 6.5 또는 6.7로 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다.
+VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전에서 ESXi 7.0 이상으로 ESXi 소프트웨어를 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다.
 
 
 
@@ -44,7 +44,7 @@ ESXi 소프트웨어 업그레이드는 VMware에서 설명하고 지원하는 �
 
 TIP: 배포 관리 유틸리티를 사용하는 업그레이드 절차를 선택해야 합니다.
 
-Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 보다 일반적이고 탄력적인 옵션입니다. 그러나 배포를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어, 이전 버전의 ONTAP Select 및 배포 관리 유틸리티에서는 ESXi 6.5로의 업그레이드가 지원되지 않습니다.
+Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 보다 일반적이고 탄력적인 옵션입니다. 그러나 배포를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.
 
 이러한 이전 버전을 사용하고 업그레이드를 시도하면 ONTAP Select 가상 시스템을 부팅할 수 없는 상태로 둘 수 있습니다. 이 경우 Deploy를 사용하지 않는 업그레이드 절차를 선택해야 합니다. 자세한 내용은 * 1172198 * 을 참조하십시오.
 
@@ -75,7 +75,7 @@ Deploy 유틸리티를 사용하는 업그레이드 절차를 선택할 경우, 
 +
 예: node stop--cluster-name <clusterName>--node-name <nodename>
 
-. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 6.5 또는 6.7로 업그레이드합니다.
+. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 +
 자세한 내용은 를 시작하기 전에 _ 을(를) 참조하십시오.
 
@@ -117,7 +117,7 @@ sdot-d200-011d true true
 +
 예: node stop--cluster-name <clusterName>--node-name <nodename>
 
-. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 6.5 또는 6.7로 업그레이드합니다.
+. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 +
 자세한 내용은 VMware ESXi 업그레이드 준비 를 참조하십시오.
 
@@ -159,7 +159,7 @@ Deploy 관리 유틸리티를 사용하지 않고 ONTAP Select 단일 노드 클
 .단계
 . ONTAP 명령줄 인터페이스에 로그인하고 노드를 중지합니다.
 . VMware vSphere를 사용하여 ONTAP Select 가상 머신의 전원이 꺼져 있는지 확인합니다.
-. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 6.5 또는 6.7로 업그레이드합니다.
+. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 +
 자세한 내용은 VMware ESXi 업그레이드 준비 를 참조하십시오.
 
@@ -197,7 +197,7 @@ Deploy 관리 유틸리티를 사용하지 않고 ONTAP Select 다중 노드 클
 .단계
 . ONTAP 명령줄 인터페이스에 로그인하고 노드를 중지합니다.
 . VMware vSphere를 사용하여 ONTAP Select 가상 머신의 전원이 꺼져 있는지 확인합니다.
-. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 6.5 또는 6.7로 업그레이드합니다.
+. VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 +
 자세한 내용은 를 시작하기 전에 _ 을(를) 참조하십시오.
 

@@ -33,7 +33,7 @@ NetApp ONTAP Select는 VMware ESXi 하이퍼바이저를 실행하는 다양한 
 
 == 제품 설명서를 탐색합니다
 
-ONTAP Select 9.12.1은 VMware ESXi에 구축할 수 있습니다. 이 사이트에는 VMware ESXi에서 실행되는 ONTAP Select 9.12.1, 9.11.1, 9.10.1, 9.9.1, 9.8 및 9.7에 대한 설명서와 REST API와 같은 하이퍼바이저 독립적인 문서가 포함되어 있습니다.
+ONTAP Select 9.13.1은 VMware ESXi에 구축할 수 있습니다. 이 사이트에는 ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1, 9.9.1, VMware ESXi에서 실행되는 9.8 및 9.7 및 하이퍼바이저와 독립적인 설명서(예: REST API)
 
 의 이전 릴리스에서 지원되는 KVM 버전의 제품에 대한 설명서뿐만 아니라 릴리스 노트를 찾을 수 있습니다 https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 제품 라이브러리"^].
 

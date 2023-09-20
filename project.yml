@@ -195,6 +195,8 @@ sidebar:
         url: "/concept_perf_general.html"
       - title: ONTAP Select 9.6 성능
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
+    - title: 클러스터를 확장합니다
+      url: "/concept_cluster_expansion.html"
   - title: vCenter와 통합
     entries:
     - title: 시작하기
