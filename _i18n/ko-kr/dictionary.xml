@@ -3800,4 +3800,5 @@
   <block id="094a1a8c17c096d2758f951380aa7b77" category="list-text">관리자 계정을 사용하여 Deploy CLI에 로그인합니다.</block>
   <block id="ec2c1e6f88e6b7ce28d7e80767289832" category="list-text">를 실행합니다<block ref="2348285222a19e68a4a4aa4df3c90622" prefix=" " category="inline-code"></block> 명령.</block>
   <block id="4963c2f56ac00df8be35eec047756e7b" category="list-text">관리자는 다음을 사용하여 공개 키를 삭제할 수 있습니다.<block ref="6edcef67fdbd494b424b5b6fe6ff3c33" prefix=" " category="inline-code"></block></block>
+  <block id="306a97cf9f5c4fb1198deb28baf7cf94" category="list-text">스토리지 VM 재해 복구(SVM DR)</block>
 </blocks>

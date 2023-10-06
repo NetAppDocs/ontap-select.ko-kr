@@ -98,6 +98,7 @@ ONTAP Select에서는 여러 ONTAP 기능이 지원되지 않습니다. 대부�
 * 스냅샷 복사본을 무단 복제했습니다
 * SVM 마이그레이션
 * VMware HCX
+* 스토리지 VM 재해 복구(SVM DR)
 
 
 .관련 정보
