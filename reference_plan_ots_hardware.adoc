@@ -50,7 +50,7 @@ NOTE: ESXi 6.5 GA 및 ESXi 6.7 GA는 공급 중지 상태에 도달합니다. �
 
 
 
-=== VMware ESXi 6.5 U2 이상으로 업그레이드
+=== VMware ESXi 6.5 U2 이상으로 업그레이드하십시오
 
 현재 VMware ESXi 6.5 U1에 ONTAP Select를 구축한 경우 가능한 한 빨리 ESXi 6.5 U2 이상으로 업그레이드해야 합니다. ESXi 6.5 U1을 사용하면 알려진 VMware 버그로 인해 가상 시스템 장애가 발생할 수 있습니다.
 
@@ -90,7 +90,7 @@ NOTE: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상을 기반으로
 |===
 
 
-| 클러스터 크기 | 최소 요구 사항 | 권장 사항 
+| 클러스터 크기 | 최소 요구 사항 | 권장 요구 사항 
 
 
 | 단일 노드 클러스터 | 1GbE 2개 | 10GbE 2개 
@@ -107,7 +107,7 @@ NOTE: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상을 기반으로
 
 노드 인스턴스 유형에 따라 몇 가지 추가 하드웨어 요구 사항이 있습니다.
 
-을 참조하십시오 link:concept_lic_platforms.html["플랫폼 라이센스 제공 이해"] 를 참조하십시오.
+을 참조하십시오 link:concept_lic_platforms.html["플랫폼 라이센스 제공 사항을 이해합니다"] 를 참조하십시오.
 
 .작은 크기
 * CPU 코어 6개 이상의 물리적 코어, ONTAP Select용으로 예약된 4개 코어.

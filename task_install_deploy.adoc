@@ -4,7 +4,7 @@ permalink: task_install_deploy.html
 keywords: install, installing, ontap select deploy, deploy administration utility, deploy utility 
 summary: ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다. 
 ---
-= ONTAP Select 배포 설치 중
+= ONTAP Select Deploy를 설치합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -65,7 +65,7 @@ ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표�
 | `csc-prod-ONTAP-Select-Deploy.pem` | 키를 생성하는 데 사용되는 인증서입니다. 
 
 
-| `ONTAPdeploy.ova` | ONTAP Select 9.13.1의 제품 설치 실행 파일입니다. 
+| `ONTAPdeploy.ova` | ONTAP Select용 제품 설치 실행 파일 
 
 
 | `ONTAPdeploy.ova.sig` | SHA-256 알고리즘이 해시된 후 를 사용하여 RSA(Remote Support Agent)에 의해 서명됩니다 `csc-prod` 설치 프로그램의 키 및 서명 
@@ -159,4 +159,4 @@ DHCP를 사용하여 네트워킹 정보를 설정하시겠습니까? [n]:
 
 
 .관련 정보
-link:task_cli_signing_in.html["SSH를 사용하여 배포하려면 로그인합니다"]
+link:task_cli_signing_in.html["SSH를 사용하여 배포하려면 로그인하십시오"]

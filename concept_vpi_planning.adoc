@@ -4,7 +4,7 @@ permalink: concept_vpi_planning.html
 keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, planning 
 summary: Deploy vCenter 플러그인을 설치 및 사용하기 전에 성공을 보장할 준비를 해야 합니다. 
 ---
-= Deploy vCenter 플러그인을 사용할 계획입니다
+= Deploy vCenter Plug-in 사용 계획
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

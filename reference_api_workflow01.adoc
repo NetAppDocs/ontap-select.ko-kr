@@ -4,7 +4,7 @@ permalink: reference_api_workflow01.html
 keywords: rest api, deploy rest api, rest, workflow, create cluster, curl, json 
 summary: vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select 클러스터를 구축할 수 있습니다. 클러스터는 평가판 라이센스로 생성됩니다. 
 ---
-= 워크플로우 1: ESXi에서 단일 노드 평가 클러스터 생성
+= 워크플로우 1: ESXi에서 단일 노드 평가 클러스터를 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

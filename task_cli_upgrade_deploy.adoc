@@ -4,7 +4,7 @@ permalink: task_cli_upgrade_deploy.html
 keywords: administer, administering, cli, deploy, upgrade deploy 
 summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 가상 시스템을 업그레이드할 수 있습니다. 
 ---
-= 배포 인스턴스 업그레이드
+= 배포 인스턴스를 업그레이드합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,11 +23,11 @@ summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 �
 업그레이드 중에 다른 작업을 수행하는 데 배포를 사용하지 않는지 확인합니다. 배포 유틸리티 업그레이드에 대한 정보 및 제한 사항은 현재 릴리스 노트를 참조하십시오.
 
 
-NOTE: ONTAP Select 배포 관리 유틸리티의 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드하는 것이 좋습니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드 업그레이드"^] 를 참조하십시오.
+NOTE: ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드해야 합니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드를 업그레이드합니다"^] 를 참조하십시오.
 
 
 
-== 업그레이드 패키지를 다운로드하는 중입니다
+== 업그레이드 패키지를 다운로드합니다
 
 업그레이드 프로세스를 시작하려면 NetApp Support 사이트에서 적절한 Deploy 가상 머신 업그레이드 파일을 다운로드해야 합니다. 업그레이드 패키지는 단일 압축 파일로 포맷됩니다.
 
@@ -46,7 +46,7 @@ link:https://mysupport.netapp.com["NetApp 지원"^]
 
 
 
-== 배포 가상 머신에 패키지 업로드
+== 패키지를 배포 가상 머신에 업로드합니다
 
 업그레이드 패키지를 획득한 후에는 해당 파일을 Deploy 가상 머신에 업로드해야 합니다.
 
@@ -72,7 +72,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
-== 업그레이드 패키지를 적용하는 중입니다
+== 업그레이드 패키지를 적용합니다
 
 업그레이드 파일을 배포 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.
 

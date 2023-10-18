@@ -4,7 +4,7 @@ permalink: task_adm_replace_drives_swraid.html
 keywords: administer, administering, web, software raid, replace drive 
 summary: '소프트웨어 RAID를 사용하여 드라이브에 오류가 발생하면 ONTAP Select는 예비 드라이브(사용 가능한 경우)를 사용하고 재구축 프로세스를 자동으로 시작합니다. 이는 ONTAP on FAS and AFF 작동 방식과 유사합니다. 그러나 스페어 드라이브를 사용할 수 없는 경우 ONTAP Select 노드에 스페어 드라이브를 추가해야 합니다.' 
 ---
-= SW RAID를 사용할 때 오류가 발생한 드라이브 교체
+= SW RAID를 사용할 때 장애가 발생한 드라이브를 교체합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

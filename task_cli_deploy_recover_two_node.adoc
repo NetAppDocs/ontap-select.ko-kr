@@ -4,7 +4,7 @@ permalink: task_cli_deploy_recover_two_node.html
 keywords: administer, administering, cli, two node cluster, recover, recovering 
 summary: ONTAP Select Deploy 유틸리티가 실패하거나 어떤 이유로 사용할 수 없는 경우 ONTAP Select 노드와 클러스터를 관리할 수 없습니다. 또한 배포에 포함된 중재자 서비스를 사용할 수 없기 때문에 모든 2노드 클러스터에서 HA 기능이 손실됩니다. 복구할 수 없는 장애가 발생하면 deploy 유틸리티 인스턴스를 복구하여 관리 및 HA 기능을 복원해야 합니다. 
 ---
-= 2노드 클러스터의 배포 유틸리티 복구
+= 2노드 클러스터에 대한 Deploy 유틸리티를 복구합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -51,14 +51,14 @@ ONTAP Select 배포 유틸리티의 인스턴스를 복구할 때 사용할 절�
 | 2노드 클러스터를 포함하는 구축 백업이 있습니까? | 사용할 복구 절차입니다 
 
 
-| 예 | 구성 백업을 사용하여 배포 유틸리티 인스턴스 복원 
+| 예 | 구성 백업을 사용하여 배포 유틸리티 인스턴스를 복원합니다 
 
 
-| 아니요 | 배포 유틸리티 인스턴스 재구성 및 복구 
+| 아니요 | 배포 유틸리티 인스턴스를 재구성하고 복구합니다 
 |===
 
 
-== 구성 백업을 사용하여 배포 유틸리티 인스턴스 복원
+== 구성 백업을 사용하여 배포 유틸리티 인스턴스를 복원합니다
 
 2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스 백업이 있는 경우 구성 데이터를 새 배포 가상 시스템 인스턴스로 복원할 수 있습니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.
 
@@ -119,7 +119,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 
-== 배포 유틸리티 인스턴스 재구성 및 복구
+== 배포 유틸리티 인스턴스를 재구성하고 복구합니다
 
 2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스의 백업이 없는 경우 새 배포 가상 시스템에서 중재자 iSCSI 대상 및 사서함을 구성해야 합니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.
 
@@ -210,7 +210,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 용량 풀 라이센스를 사용하는 경우 각 용량 풀 라이센스를 다시 설치해야 합니다. 자세한 내용은 용량 풀 라이센스 재설치 를 참조하십시오.
 
 .관련 정보
-* link:task_install_deploy.html["ONTAP Select 배포 설치 중"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["새 가상 머신에 구축 구성 데이터 복구"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["용량 풀 라이센스 재설치"]
+* link:task_install_deploy.html["ONTAP Select Deploy를 설치합니다"]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["구축 구성 데이터를 새 가상 머신에 복구합니다"]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["용량 풀 라이센스를 다시 설치합니다"]
 

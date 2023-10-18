@@ -30,7 +30,7 @@ vCenter 서버에서 배포 플러그인을 수동으로 제거할 수 있습니
 
 
 
-== VMware MOB를 사용하여 플러그인을 제거합니다
+== VMware mob을 사용하여 플러그인을 제거합니다
 
 MOB는 VMware vCenter Server에서 객체를 보고 관리할 수 있는 VMware 애플리케이션입니다. MOB를 사용하여 Deploy vCenter 플러그인을 제거할 수 있습니다.
 
@@ -53,7 +53,7 @@ MOB는 VMware vCenter Server에서 객체를 보고 관리할 수 있는 VMware 
 
 
 
-== vSphere UI 폴더에서 플러그인 제거
+== vSphere UI 폴더에서 플러그인을 제거합니다
 
 vCenter Server에서 vSphere UI 디렉토리를 검토하고 구축 플러그인이 있는 경우 제거해야 합니다.
 

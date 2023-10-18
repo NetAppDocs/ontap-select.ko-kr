@@ -4,7 +4,7 @@ permalink: concept_adm_upgrading_nodes.html
 keywords: administer, administering, web, upgrading nodes 
 summary: ONTAP Select 클러스터를 구축한 후 표준 ONTAP 소프트웨어 업그레이드 절차를 사용하여 필요에 따라 각 노드의 ONTAP 이미지를 업그레이드할 수 있습니다. 
 ---
-= ONTAP Select 노드 업그레이드
+= ONTAP Select 노드를 업그레이드합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,13 +31,12 @@ https://mysupport.netapp.com/site/downloads["NetApp 지원 다운로드"^]
 
 . ONTAP Select 노드 업그레이드 * 를 클릭합니다.
 . 필요에 따라 모든 프롬프트에 응답하는 적절한 업그레이드 이미지를 선택하여 다운로드합니다.
-. ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오. 제품 라이브러리 페이지에서 사용 중인 ONTAP Select 버전에 대한 릴리즈 노트에 액세스할 수 있습니다.
 +
-https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["ONTAP Select 제품 라이브러리"^]
+ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오.
 
 . ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다.
 +
-https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
+link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAP 업그레이드 개요"^]
 
 
 
@@ -45,14 +44,14 @@ https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
 
 == ONTAP Select 노드를 되돌립니다
 
-ONTAP Select 노드를 원래 설치된 버전 이전의 버전으로 되돌릴 수 없습니다. 예를 들면 다음과 같습니다.
+ONTAP Select 노드를 원래 설치된 이전 버전으로 되돌릴 수 없습니다. 예를 들면 다음과 같습니다.
 
-ONTAP Select 9.4가 초기 설치되어 있습니다:: 노드를 버전 9.5로 업그레이드한 다음 필요한 경우 버전 9.4로 되돌릴 수 있습니다.
-ONTAP Select 9.5가 초기 설치되어 있습니다:: 이 버전이 원래 설치된 버전보다 이전이므로 버전 9.4로 되돌릴 수 없습니다.
-
-
+ONTAP Select 9.7이 처음 설치됩니다:: 노드를 버전 9.8로 업그레이드한 다음 필요한 경우 버전 9.7로 되돌릴 수 있습니다.
+처음에 ONTAP Select 9.8이 설치되어 있습니다:: 이 버전은 원래 설치된 버전 이전의 버전이므로 버전 9.7로 되돌릴 수 없습니다.
 
 
-== VMXNET3 네트워크 드라이버 사용
 
-Deploy 2.10을 사용하는 ONTAP Select 9.5부터 VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. 기존 ONTAP Select 노드를 버전 9.5로 업그레이드하면 네트워크 드라이버가 자동으로 업그레이드되지 않습니다. VMXNET3으로 수동으로 업그레이드해야 합니다. 업그레이드에 대한 지원은 NetApp 지원에 문의하십시오.
+
+== VMXNET3 네트워크 드라이버를 사용합니다
+
+VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. ONTAP Select 9.4 이하 버전을 실행하는 기존 ONTAP Select 노드를 업그레이드하는 경우 네트워크 드라이버가 자동으로 업그레이드되지 않습니다. VMXNET3으로 수동으로 업그레이드해야 합니다. 업그레이드에 대한 지원은 NetApp 지원에 문의하십시오.

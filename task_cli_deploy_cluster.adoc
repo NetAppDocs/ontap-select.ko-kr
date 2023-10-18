@@ -4,7 +4,7 @@ permalink: task_cli_deploy_cluster.html
 keywords: administer, administering, cli, create cluster, deploy cluster 
 summary: ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 생성할 수 있습니다. 
 ---
-= CLI를 사용하여 ONTAP Select 클러스터 구축
+= CLI를 사용하여 ONTAP Select 클러스터를 구축합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ ESXi에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비를 
 
 
 
-=== ONTAP Select 노드에 스토리지 연결을 준비하는 중입니다
+=== 스토리지를 ONTAP Select 노드에 연결할 준비를 합니다
 
 로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 루트 및 데이터 애그리게이트뿐만 아니라 시스템 데이터에 대해 각 노드에 하나 이상의 스토리지 풀을 생성해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀을 연결해야 합니다.
 
@@ -34,17 +34,17 @@ ESXi에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비를 
 
 === 사용 가능한 ONTAP Select 버전
 
-배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 link:task_cli_deploy_image_add.html["배포할 ONTAP Select 이미지 추가"] 를 참조하십시오.
+배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 link:task_cli_deploy_image_add.html["배포할 ONTAP Select 이미지를 추가합니다"] 를 참조하십시오.
 
 
 
-=== 프로덕션 구축을 위한 ONTAP Select 라이센스 등록
+=== 운영 구축을 위한 ONTAP Select 라이센스 등록
 
 운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. capacity 계층_model을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _capacity pool_model을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.
 
 
 
-== 라이센스 파일 업로드 및 등록
+== 라이센스 파일을 업로드하고 등록합니다
 
 저장소 용량이 있는 라이센스 파일을 획득한 후에는 라이센스가 포함된 파일을 배포 가상 머신에 업로드하고 등록해야 합니다.
 
@@ -81,7 +81,7 @@ exit
 
 
 
-== ESXi 하이퍼바이저 호스트 추가
+== ESXi 하이퍼바이저 호스트를 추가합니다
 
 ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해야 합니다. 이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.
 
@@ -173,7 +173,7 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 
 
 
-== ONTAP Select 노드 구성
+== ONTAP Select 노드를 구성합니다
 
 ONTAP Select 클러스터의 각 노드를 구성해야 합니다.
 

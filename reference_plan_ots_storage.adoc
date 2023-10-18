@@ -64,14 +64,6 @@ VMware ESXi 하이퍼바이저에 ONTAP Select 클러스터를 구축할 때 로
 VMware ESXi에서 소프트웨어 RAID 구축을 위한 환경은 다음과 같은 핵심 요구 사항을 충족해야 합니다.
 
 * VMware ESXi 7.0 GA(빌드 15843807) 이상
-* ONTAP Select 9.5 이상
-* ONTAP Select 배포 2.10 이상
-* 새로운 ONTAP Select 클러스터만 해당
-
-
-
-NOTE: 배포 관리 유틸리티를 사용하여 ONTAP Select 9.5 이상의 새 클러스터를 배포해야 합니다. 이전 버전에서 ONTAP Select 9.5로 업그레이드된 기존 노드는 소프트웨어 RAID를 사용할 수 없습니다.
-
 * ONTAP Select 프리미엄 라이센스 이상
 * 로컬 SSD 드라이브만 지원합니다
 * 루트 및 데이터 애그리게이트에서 시스템 디스크 분리
@@ -82,6 +74,7 @@ NOTE: 배포 관리 유틸리티를 사용하여 ONTAP Select 9.5 이상의 새 
 NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 를 참조하십시오 link:concept_stor_concepts_chars.html["심층 분석 스토리지"] 섹션을 참조하십시오.
 
 * VMware VMotion, HA 및 DRS는 지원되지 않습니다
+* ONTAP Select 9.4 이하 버전에서 업그레이드된 노드에서는 소프트웨어 RAID를 사용할 수 없습니다. 이 경우 소프트웨어 RAID 배포를 위한 새 노드를 만들어야 합니다.
 
 
 
@@ -100,14 +93,14 @@ NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 를 참조하십시오 lin
 
 ONTAP Select 배포를 계획할 때 스토리지 할당 및 사용과 관련된 제한 사항을 숙지해야 합니다.
 
-가장 중요한 스토리지 제한은 아래에 나와 있습니다. 자세한 내용은 _NetApp 상호 운용성 매트릭스 툴 _ 을 참조하십시오.
+가장 중요한 스토리지 제한은 아래에 나와 있습니다. 또한 를 검토해야 합니다 link:https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^] 를 참조하십시오.
 
 
-TIP: ONTAP Select는 스토리지 할당 및 사용과 관련된 몇 가지 제한 사항을 적용합니다. ONTAP Select 클러스터를 구축하거나 라이센스를 구입하기 전에 먼저 이러한 제한 사항을 숙지해야 합니다. 자세한 내용은 _License_절을 참조하십시오.
+TIP: ONTAP Select는 스토리지 할당 및 사용과 관련된 몇 가지 제한 사항을 적용합니다. ONTAP Select 클러스터를 구축하거나 라이센스를 구입하기 전에 먼저 이러한 제한 사항을 숙지해야 합니다. 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["라이센스"] 섹션을 참조하십시오.
 
 
 
-=== 물리적 스토리지 용량을 계산하는 중입니다
+=== 물리적 스토리지 용량을 계산합니다
 
 ONTAP Select 스토리지 용량은 ONTAP Select 가상 머신에 연결된 가상 데이터 및 루트 디스크의 총 허용 크기에 해당합니다. 용량을 할당할 때는 이 점을 고려해야 합니다.
 
@@ -163,7 +156,7 @@ VMware vSAN을 사용할 경우 데이터 저장소가 64TB보다 클 수 있습
 
 하이퍼바이저 코어 하드웨어와 관련하여 다음 권장 사항을 고려해야 합니다.
 
-* 단일 ONTAP Select 애그리게이트의 모든 드라이브가 동일한 유형이어야 합니다. 예를 들어, HDD와 SSD 드라이브를 동일한 Aggregate에서 혼합하면 안 됩니다.
+* 단일 ONTAP Select 애그리게이트의 모든 드라이브는 유형이 같아야 합니다. 예를 들어, HDD와 SSD 드라이브를 동일한 Aggregate에서 혼합하면 안 됩니다.
 
 
 
@@ -199,10 +192,10 @@ NOTE: 로컬 DAS 드라이브를 사용하는 소프트웨어 RAID는 프리미�
 
 소프트웨어 RAID에서 NVMe SSD 드라이브를 사용하도록 구성할 수 있습니다. 환경은 다음 요구 사항을 충족해야 합니다.
 
-* 관련 배포 관리 유틸리티를 사용하는 ONTAP Select 9.7 이상
+* 지원되는 배포 관리 유틸리티가 있는 ONTAP Select 9.7 이상
 * Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
 * VMware ESXi 버전 6.7 이상
 * 사양 1.0 이상을 준수하는 NVMe 장치
 
 
-NVMe 드라이브를 사용하기 전에 수동으로 구성해야 합니다. 을 참조하십시오 link:task_chk_nvme_configure.html["NVMe 드라이브를 사용하도록 호스트 구성"] 를 참조하십시오.
+NVMe 드라이브를 사용하기 전에 수동으로 구성해야 합니다. 을 참조하십시오 link:task_chk_nvme_configure.html["호스트에서 NVMe 드라이브를 사용하도록 구성합니다"] 를 참조하십시오.

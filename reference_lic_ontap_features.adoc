@@ -45,7 +45,7 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.
 
-* SnapLock 엔터프라이즈
+* SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
 * FabricPool
 * 데이터 가용성 서비스
 * FlexCache(무료)

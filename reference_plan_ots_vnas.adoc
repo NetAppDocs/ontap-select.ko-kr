@@ -22,7 +22,8 @@ ONTAP Select vNAS는 ONTAP Select 가상 머신이 실행되는 하이퍼바이�
 
 ONTAP Select vNAS 솔루션은 모든 크기의 ONTAP Select 클러스터와 함께 사용할 수 있습니다.
 
-하드웨어, 소프트웨어 및 기능 요구 사항을 비롯한 모든 관련 스토리지 구성 요소는 에 설명된 요구 사항을 준수해야 합니다link:https://mysupport.netapp.com/matrix/["VMware 호환성 가이드 를 참조하십시오"]. 또한 ONTAP Select는 iSCSI, NAS(NFSv3), Fibre Channel 및 Fibre Channel over Ethernet을 비롯하여 _VMware 스토리지/SAN 호환성 가이드_에 설명된 모든 외부 스토리지 시스템을 지원합니다. 외부 스토리지 지원은 ONTAP Select에서 지원하는 ESXi 버전에 의해 제한됩니다. 자세한 내용은 _NetApp 상호 운용성 매트릭스 툴 _ 을 참조하십시오.
+하드웨어, 소프트웨어 및 기능 요구 사항을 비롯한 모든 관련 스토리지 구성 요소는 에 설명된 요구 사항을 준수해야 합니다
+link:https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^]. 또한 ONTAP Select는 iSCSI, NAS(NFSv3), 파이버 채널 및 FCoE(Fibre Channel over Ethernet)를 비롯하여 VMware 스토리지/SAN 호환성 설명서에 설명된 모든 외부 스토리지 어레이를 지원합니다. 외부 스토리지 지원은 ONTAP Select에서 지원하는 ESXi 버전에 의해 제한됩니다.
 
 ONTAP Select vNAS를 사용하여 클러스터를 구축할 때 지원되는 VMware 기능은 다음과 같습니다.
 

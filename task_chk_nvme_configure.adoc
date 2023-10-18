@@ -21,7 +21,7 @@ NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율
 .시작하기 전에
 배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.
 
-* 관련 배포 관리 유틸리티를 사용하는 ONTAP Select 9.7 이상
+* 지원되는 배포 관리 유틸리티가 있는 ONTAP Select 9.7 이상
 * Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
 * VMware ESXi 버전 6.7 이상
 * 사양 1.0 이상을 준수하는 NVMe 장치

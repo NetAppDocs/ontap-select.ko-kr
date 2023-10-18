@@ -11,7 +11,7 @@ settings:
   langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: ONTAP Select 문서
+  - title: ONTAP Select 설명서
     url: "/index.html"
   - title: 릴리즈 노트
     entries:
@@ -141,11 +141,11 @@ sidebar:
       entries:
       - title: VM 비디오 콘솔
         url: "/task_adm_video_console.html"
-      - title: 클러스터 노드 크기 조정
+      - title: 클러스터 노드의 크기를 조정합니다
         url: "/task_adm_resize.html"
-      - title: 오류가 발생한 SW RAID 드라이브를 교체합니다
+      - title: 장애가 발생한 SW RAID 드라이브를 교체합니다
         url: "/task_adm_replace_drives_swraid.html"
-      - title: VMFS6으로 업그레이드 중입니다
+      - title: VMFS6으로 업그레이드합니다
         url: "/task_adm_upgrade_vmfs6.html"
     - title: 추가 수익 실적을
       url: "/task_adm_licenses.html"
@@ -197,13 +197,13 @@ sidebar:
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
   - title: vCenter와 통합
     entries:
-    - title: 시작하기
+    - title: 시작하십시오
       entries:
       - title: 개요
         url: "/concept_vpi_overview.html"
       - title: 있습니다
         url: "/concept_vpi_architecture.html"
-      - title: 계획 수립
+      - title: 계획
         url: "/concept_vpi_planning.html"
     - title: 플러그인을 관리합니다
       entries:
@@ -261,13 +261,13 @@ sidebar:
       entries:
       - title: 시작하기 전에
         url: "/concept_api_before_workflows.html"
-      - title: 워크플로우 1 클러스터 생성
+      - title: 워크플로우 1 클러스터를 생성합니다
         url: "/reference_api_workflow01.html"
     - title: Python으로 액세스하십시오
       entries:
       - title: 시작하기 전에
         url: "/concept_api_before_python.html"
-      - title: 스크립트 이해
+      - title: 스크립트를 이해합니다
         url: "/concept_api_understanding_scripts.html"
     - title: Python 코드 샘플
       entries:
@@ -287,8 +287,6 @@ sidebar:
     url: "/concept_automate_ansible.html"
   - title: CLI를 사용합니다
     entries:
-    - title: 시작하기 전에
-      url: "/concept_cli_before.html"
     - title: SSH를 사용하여 로그인합니다
       url: "/task_cli_signing_in.html"
     - title: 클러스터 구축
@@ -319,9 +317,5 @@ sidebar:
         url: "/task_cli_deploy_recover_two_node.html"
   - title: FAQ 를 참조하십시오
     url: "/reference_faq.html"
-  - title: 자세한 정보를 확인하십시오
-    url: "/reference_additional_info.html"
-  - title: 이전 버전
-    url: "/reference_earlier_versions.html"
   - title: 법적 고지
     url: "/reference_legal_notices.html"

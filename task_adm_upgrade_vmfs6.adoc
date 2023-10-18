@@ -4,7 +4,7 @@ permalink: task_adm_upgrade_vmfs6.html
 keywords: administer, administering, web, storage vmotion, upgrade vmfs6 
 summary: VMware는 VMFS 5에서 VMFS 6으로의 데이터 이동 없는 업그레이드를 지원하지 않습니다. Storage vMotion을 사용하여 기존 ONTAP Select 노드의 VMFS 5 데이터 저장소에서 VMFS 6 데이터 저장소로 전환할 수 있습니다. 
 ---
-= Storage vMotion을 사용하여 VMFS6으로 업그레이드
+= Storage vMotion을 사용하여 VMFS6으로 업그레이드합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

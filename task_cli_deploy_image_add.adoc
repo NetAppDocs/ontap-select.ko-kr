@@ -4,7 +4,7 @@ permalink: task_cli_deploy_image_add.html
 keywords: administer, administering, cli, deploy, ontap select image, add 
 summary: 배포 관리 유틸리티의 인스턴스에 ONTAP Select 이미지를 추가할 수 있습니다. 이미지를 설치한 후 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다. 
 ---
-= 배포할 ONTAP Select 이미지 추가
+= 배포할 ONTAP Select 이미지를 추가합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ NOTE: 배포 유틸리티의 인스턴스에 포함된 원래 버전보다 이�
 
 
 
-== 설치 이미지를 다운로드하는 중입니다
+== 설치 이미지를 다운로드합니다
 
 Deploy 유틸리티의 인스턴스에 ONTAP Select 이미지를 추가하는 프로세스를 시작하려면 NetApp Support 사이트에서 설치 이미지를 다운로드해야 합니다. ONTAP Select 설치 이미지는 압축된 단일 파일로 포맷됩니다.
 
@@ -52,7 +52,7 @@ Deploy 유틸리티의 인스턴스에 ONTAP Select 이미지를 추가하는 �
 
 
 
-== 배포할 설치 이미지를 업로드하는 중입니다
+== 배포할 설치 이미지를 업로드합니다
 
 ONTAP Select 설치 이미지를 획득한 후 해당 파일을 배포 가상 머신에 업로드해야 합니다.
 
@@ -87,7 +87,7 @@ exit
 
 
 
-== 설치 이미지 추가
+== 설치 이미지를 추가합니다
 
 새 클러스터를 구축할 때 사용할 수 있도록 ONTAP Select 설치 이미지를 Deploy images 디렉토리에 추가할 수 있습니다.
 

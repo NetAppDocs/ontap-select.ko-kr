@@ -4,7 +4,7 @@ permalink: task_api_understanding_call.html
 keywords: rest api, deploy rest api, rest, understanding, executing 
 summary: 모든 API 호출의 세부 사항은 ONTAP Select 배포 온라인 설명서 웹 페이지에서 공통 형식을 사용하여 문서화되고 표시됩니다. 단일 API 호출을 이해하면 모든 API 호출에 대한 세부 정보를 액세스하고 해석할 수 있습니다. 
 ---
-= API 호출 이해 및 실행
+= API 호출을 이해하고 실행합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

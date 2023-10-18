@@ -60,7 +60,7 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 ----
 
 
-== vNAS를 사용할 때 ONTAP Select 노드를 배치합니다
+== vNAS를 사용할 때 ONTAP Select 노드를 찾습니다
 
 ONTAP Select는 공유 스토리지에서 다중 노드 ONTAP Select 클러스터를 지원합니다. ONTAP Deploy를 사용하면 동일한 클러스터에 속한 노드가 아닌 한 동일한 ESX 호스트에서 여러 ONTAP Select 노드를 구성할 수 있습니다. 이 구성은 VNAS 환경(공유 데이터 저장소)에만 유효합니다. DAS 스토리지를 사용할 경우 이러한 인스턴스가 동일한 하드웨어 RAID 컨트롤러에서 경쟁하기 때문에 호스트당 여러 ONTAP Select 인스턴스가 지원되지 않습니다.
 
