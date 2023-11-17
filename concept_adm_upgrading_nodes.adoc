@@ -34,10 +34,7 @@ https://mysupport.netapp.com/site/downloads["NetApp 지원 다운로드"^]
 +
 ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오.
 
-. ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다.
-+
-link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAP 업그레이드 개요"^]
-
+. ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAP 업그레이드 개요"^] 자세한 업그레이드 절차를 참조하십시오.
 
 
 
