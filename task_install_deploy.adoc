@@ -23,7 +23,7 @@ ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용�
 NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.
 
 .이 작업에 대해
-ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 가상 머신으로 패키징됩니다. 압축된 파일 하나에는 난자(ova)라는 접미사가 붙어 있습니다.
+ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 VM(가상 머신)으로 패키징됩니다. 단일 압축 파일에는 접미사가 있습니다 `ova`.
 
 .단계
 . 웹 브라우저를 사용하여 NetApp 지원 사이트에 액세스하고 * 빠른 링크 * 를 클릭합니다.
@@ -83,18 +83,18 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 == 가상 머신을 구축합니다
 
-OVF 가상 머신 이미지를 사용하여 ONTAP Select Deploy 가상 머신을 설치하고 시작해야 합니다. 설치 프로세스의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성해야 합니다.
+OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작해야 합니다. 설치 프로세스의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
 
 .시작하기 전에
-ONTAP Select Deploy 가상 머신을 구축할 준비를 해야 합니다.
+ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM:
 
 * VMware Client Integration Plugin을 설치하거나 필요에 따라 유사한 구성을 수행하여 브라우저에서 OVF 기능을 설정합니다
-* 구축 가상 머신에 IP 주소를 동적으로 할당할 경우 VMware 환경에서 DHCP를 활성화했습니다
+* 배포 VM에 IP 주소를 동적으로 할당하려는 경우 VMware 환경에서 DHCP를 사용하도록 설정합니다
 
 
-가상 머신 이름, 외부 네트워크 및 호스트 이름을 포함하여 가상 머신을 생성할 때 사용할 구성 정보가 있어야 합니다. 정적 네트워크 구성을 정의할 때 다음과 같은 추가 정보가 필요합니다.
+ESXi 및 KVM 하이퍼바이저의 경우 VM 이름, 외부 네트워크, 호스트 이름 등 VM을 생성할 때 사용할 구성 정보가 있어야 합니다. 정적 네트워크 구성을 정의할 때 다음과 같은 추가 정보가 필요합니다.
 
-* 구축 가상 머신의 IP 주소입니다
+* 배포 VM의 IP 주소입니다
 * 넷마스크
 * 게이트웨이(라우터)의 IP 주소
 * Primary DNS 서버의 IP 주소입니다
@@ -103,17 +103,23 @@ ONTAP Select Deploy 가상 머신을 구축할 준비를 해야 합니다.
 
 
 .이 작업에 대해
-vSphere를 사용하는 경우 Deploy OVF template Wizard에는 네트워크 구성을 포함한 모든 구축 구성 정보를 제공하는 양식이 포함되어 있습니다. 그러나 이 양식을 사용하지 않도록 선택한 경우 가상 시스템 배포 콘솔을 사용하여 네트워크를 구성할 수 있습니다.
+vSphere를 사용하는 경우 Deploy OVF template Wizard에는 네트워크 구성을 포함한 모든 구축 구성 정보를 제공하는 양식이 포함되어 있습니다. 그러나 이 양식을 사용하지 않도록 선택한 경우에는 배포 VM의 콘솔을 사용하여 네트워크를 구성할 수 있습니다.
 
 .단계
+수행할 단계는 ESXi 하이퍼바이저를 사용하는지 KVM 하이퍼바이저를 사용하는지에 따라 다릅니다.
+
+[role="tabbed-block"]
+====
+.ESXi
+--
 . vSphere Client에 액세스하고 로그인합니다.
 . 계층에서 적절한 위치로 이동하고 * Deploy OVF Template * 을 선택합니다.
 . OVA 파일을 선택하고 환경에 적합한 옵션을 선택하여 OVF 템플릿 배포 마법사를 완료합니다.
 +
 관리자 계정의 암호를 정의해야 합니다. 배포 유틸리티에 로그인할 때 이 암호를 제공해야 합니다.
 
-. 가상 머신이 구축된 후 새 가상 머신을 선택하고 구축 마법사에 입력한 내용에 따라 아직 전원이 켜져 있지 않은 경우 전원을 켭니다.
-. 필요한 경우 가상 머신 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.
+. VM이 배포된 후 새 VM을 선택하고 구축 마법사에 입력한 내용에 따라 VM의 전원이 켜져 있지 않으면 전원을 켭니다.
+. 필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.
 +
 .. Console * 탭을 클릭하여 ESXi 호스트 설정 셸에 액세스하고 전원 켜기 프로세스를 모니터링합니다.
 .. 다음 메시지가 표시될 때까지 기다립니다.
@@ -130,12 +136,65 @@ admin 사용자의 암호를 입력합니다.
 +
 DHCP를 사용하여 네트워킹 정보를 설정하시겠습니까? [n]:
 
-.. 정적 IP 구성을 정의하려면 * n * 을 입력하고 DHCP를 사용하려면 y 를 입력한 다음 * Enter * 를 누릅니다.
+.. 정적 IP 구성을 정의하려면 * n * 을 입력하고, DHCP를 사용하려면 * y * 를 입력하고 * Enter * 를 선택합니다.
 .. 정적 구성을 선택하는 경우 필요에 따라 모든 네트워크 구성 정보를 제공합니다.
 
 
 
 
+--
+.KVM
+--
+. Linux 서버에서 CLI에 로그인합니다.
++
+[listing]
+----
+ssh root@<ip_address>
+----
+. 새 디렉토리를 생성하고 원시 VM 이미지를 추출합니다.
++
+[listing]
+----
+mkdir /home/select_deploy25
+cd /home/select_deploy25
+mv /root/<file_name> .
+tar -xzvf <file_name>
+----
+. 배포 관리 유틸리티를 실행하는 KVM VM을 생성하고 시작합니다.
++
+[listing]
+----
+virt-install --name=select-deploy --vcpus=2 --ram=4096 --os-variant=debian10 --controller=scsi,model=virtio-scsi --disk path=/home/deploy/ONTAPdeploy.raw,device=disk,bus=scsi,format=raw --network "type=bridge,source=ontap-br,model=virtio,virtualport_type=openvswitch" --console=pty --import --noautoconsole
+----
+. 필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.
++
+.. VM 콘솔에 연결합니다.
++
+[listing]
+----
+virsh console <vm_name>
+----
+.. 다음 메시지가 표시될 때까지 기다립니다.
++
+[listing]
+----
+Host name :
+----
+.. 호스트 이름을 입력하고 * Enter * 를 선택합니다.
+.. 다음 메시지가 표시될 때까지 기다립니다.
++
+[listing]
+----
+Use DHCP to set networking information? [n]:
+----
+.. 정적 IP 구성을 정의하려면 * n * 을 입력하고, DHCP를 사용하려면 * y * 를 입력하고 * Enter * 를 선택합니다.
+.. 정적 구성을 선택하는 경우 필요에 따라 모든 네트워크 구성 정보를 제공합니다.
+
+
+
+
+--
+====
 
 
 == 배포 웹 인터페이스에 로그인합니다

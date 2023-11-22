@@ -4,7 +4,7 @@ permalink: concept_nw_vsphere_vswitch_config.html
 keywords: ontap select, standard and distributed vSwitch configurations, vSwitch configuration and load-balancing policies 
 summary: NIC 2개 및 NIC 4개 구성에 대한 ONTAP Select vSwitch 구성 및 로드 밸런싱 정책 
 ---
-= VMware vSphere vSwitch 구성
+= ESXi에서 VMware vSphere vSwitch 구성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

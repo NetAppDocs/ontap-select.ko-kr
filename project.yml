@@ -49,8 +49,12 @@ sidebar:
         url: "/reference_plan_ots_hardware.html"
       - title: 스토리지 및 RAID
         url: "/reference_plan_ots_storage.html"
-      - title: ONTAP Select vNAS를 선택합니다
-        url: "/reference_plan_ots_vnas.html"
+      - title: 외부 스토리지 요구 사항
+        entries:
+        - title: VMware ESXi
+          url: "/reference_plan_ots_vnas.html"
+        - title: KVM
+          url: "/reference_plan_ots_kvm.html"
       - title: 네트워킹
         url: "/reference_plan_ots_networking.html"
       - title: 2노드 클러스터
@@ -59,10 +63,8 @@ sidebar:
         url: "/reference_plan_ots_robo.html"
       - title: MetroCluster SDS
         url: "/reference_plan_ots_mcc_sds.html"
-      - title: VMware vCenter를 참조하십시오
+      - title: ESXi의 VMware vCenter
         url: "/reference_plan_ots_vcenter.html"
-      - title: VMware vCenter 플러그인
-        url: "/reference_plan_ots_plugin.html"
     - title: ONTAP Select 구축
       entries:
       - title: 일반 요구 사항
@@ -195,44 +197,6 @@ sidebar:
         url: "/concept_perf_general.html"
       - title: ONTAP Select 9.6 성능
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
-  - title: vCenter와 통합
-    entries:
-    - title: 시작하십시오
-      entries:
-      - title: 개요
-        url: "/concept_vpi_overview.html"
-      - title: 있습니다
-        url: "/concept_vpi_architecture.html"
-      - title: 계획
-        url: "/concept_vpi_planning.html"
-    - title: 플러그인을 관리합니다
-      entries:
-      - title: 시작하기 전에
-        url: "/concept_vpi_manage_before.html"
-      - title: 설치합니다
-        url: "/task_vpi_install.html"
-      - title: 액세스
-        url: "/task_vpi_access.html"
-      - title: 업그레이드 및 제거
-        url: "/task_vpi_upgrade.html"
-    - title: 플러그인을 수동으로 제거합니다
-      url: "/task_vpi_manually_remove.html"
-    - title: 클러스터 구축
-      url: "/task_vpi_deploy_cluster.html"
-    - title: vCenter 통합
-      url: "/concept_vpi_vcenter_integration.html"
-    - title: 관리
-      entries:
-      - title: 진단 및 지원
-        url: "/task_vpi_adm_support.html"
-      - title: 네트워킹
-        url: "/task_vpi_adm_network.html"
-      - title: 클러스터
-        url: "/task_vpi_adm_clusters.html"
-      - title: 추가 수익 실적을
-        url: "/task_vpi_adm_licenses.html"
-    - title: 문제 해결
-      url: "/reference_vpi_troubleshooting.html"
   - title: REST를 사용하여 자동화
     entries:
     - title: 개념

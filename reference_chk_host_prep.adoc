@@ -25,6 +25,266 @@ NOTE: ONTAP Select 배포 관리 유틸리티는 하이퍼바이저 호스트의
 
 하이퍼바이저 호스트를 준비해야 합니다.
 
+
+
+== KVM 하이퍼바이저
+
+.Linux 서버를 준비합니다
+ONTAP Select 노드가 구축되는 각 Linux KVM 서버를 준비해야 합니다. 또한 ONTAP Select 배포 관리 유틸리티가 배포되는 서버를 준비해야 합니다.
+
+.Red Hat Enterprise Linux를 설치합니다
+ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.
+
+* 보안 정책으로 기본값 을 선택합니다
+* 가상화된 호스트 소프트웨어 선택 항목을 선택합니다
+* 대상은 ONTAP Select에서 사용하는 RAID LUN이 아니라 로컬 부팅 디스크여야 합니다
+* 시스템을 부팅한 후 호스트 관리 인터페이스가 작동하는지 확인합니다
+
+
+
+NOTE: /etc/sysconfig/network-scripts 아래에서 올바른 네트워크 구성 파일을 편집한 다음 를 사용하여 인터페이스를 불러올 수 있습니다 `ifup` 명령.
+
+.ONTAP Select에 필요한 추가 패키지를 설치합니다
+ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니다. 정확한 패키지 목록은 사용 중인 Linux 버전에 따라 다릅니다. 첫 번째 단계로 yum 리포지토리를 서버에서 사용할 수 있는지 확인합니다. 사용할 수 없는 경우 를 사용하여 검색할 수 있습니다 `wget your_repository_location` 명령:
+
+
+NOTE: Linux 서버 설치 중에 소프트웨어 선택을 위해 가상화된 호스트를 선택한 경우 필요한 패키지 중 일부가 이미 설치되어 있을 수 있습니다. 에 설명된 대로 소스 코드에서 openvswitch 패키지를 설치해야 할 수 있습니다 link:https://docs.openvswitch.org/en/latest/intro/install/general/["vSwitch 문서를 엽니다"^].
+
+ For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
+.RHEL 7.7에 추가 패키지가 필요합니다
+RHEL 7.6에 필요한 동일한 패키지 세트를 설치합니다.
+
+.RHEL 7.6에 추가 패키지가 필요합니다
+RHEL 7.6 또는 CentOS 7.6을 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.
+
+* QEMU-KVM(1.5.3-160)
++
+
+NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
+
+* libvirt(4.5.0-10)
+* openvswitch(2.7.3)
+* virt-install(1.5.0-1)
+* lshw(B.02.18-12)
+* lsscsi(0.27-6)
+* 엘소프(4.87-6)
+
+
+KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
+
+* Fence-agent-all (4.2.1-11)
+* LVM2 - 클러스터(2.02.180-8)
+* 심장박동기(1.1.19-8)
+* PC(0.9.165-6)
+
+
+.RHEL 7.5에 추가 패키지가 필요합니다
+RHEL 7.5 또는 CentOS 7.5를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.
+
+* QEMU-KVM(1.5.3-141)
++
+
+NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
+
+* libvirt(3.9.0)
+* openvswitch(2.7.3)
+* virt-install(1.4.1-7)
+* lshw(B.02.18-12)
+* lsscsi(0.27-6)
+* 엘소프(4.87-5)
+
+
+KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
+
+* Fence-agent-all (4.0.11-86)
+* LVM2 - 클러스터(2.02.177-4)
+* 심장박동기(1.1.18-11)
+* PC(0.9.16205)
+
+
+.RHEL 7.4에 추가 패키지가 필요합니다
+RHEL 7.4 또는 CentOS 7.4를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함됩니다.
+
+* QEMU-KVM(1.5.3-141)
++
+
+NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
+
+* libvirt(3.2.0-14)
+* openvswitch(2.7.3)
+* virt-install(1.4.1-7)
+* lshw(B.02.18-7)
+* lsscsi(0.27-6)
+* 엘소프(4.87-4)
+
+
+KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
+
+* Fence-agent-all (4.0.11-66)
+* LVM2 - 클러스터(2.02.171-8)
+* 심장박동기(1.1.16-12)
+* PC(0.9.158-6)
+
+
+.스토리지 풀 구성
+ONTAP Select 스토리지 풀은 기본 물리적 스토리지를 추상화하는 논리적 데이터 컨테이너입니다. ONTAP Select가 구축된 KVM 호스트에서 스토리지 풀을 관리해야 합니다.
+
+
+
+=== 스토리지 풀을 생성합니다
+
+각 ONTAP Select 노드에 하나 이상의 스토리지 풀을 생성해야 합니다. 로컬 하드웨어 RAID 대신 소프트웨어 RAID를 사용하는 경우, 스토리지 디스크가 루트 및 데이터 애그리게이트의 노드에 연결됩니다. 이 경우에도 시스템 데이터에 대한 스토리지 풀을 생성해야 합니다.
+
+.시작하기 전에
+ONTAP Select가 구축된 호스트에서 Linux CLI에 로그인할 수 있는지 확인합니다.
+
+.이 작업에 대해
+ONTAP Select Deploy 관리 유틸리티는 스토리지 풀의 타겟 위치를 /dev/<pool_name>로 지정해야 합니다. 여기서 <pool_name>는 호스트의 고유한 풀 이름입니다.
+
+
+NOTE: 스토리지 풀이 생성될 때 LUN의 전체 용량이 할당됩니다.
+
+.단계
+. Linux 호스트에서 로컬 디바이스를 표시하고 스토리지 풀을 포함할 LUN을 선택합니다.
++
+[listing]
+----
+lsblk
+----
++
+적절한 LUN은 스토리지 용량이 가장 큰 디바이스일 가능성이 높습니다.
+
+. 디바이스의 스토리지 풀을 정의합니다.
++
+[listing]
+----
+virsh pool-define-as <pool_name> logical --source-dev <device_name> --target=/dev/<pool_name>
+----
++
+예를 들면 다음과 같습니다.
+
++
+[listing]
+----
+virsh pool-define-as select_pool logical --source-dev /dev/sdb --target=/dev/select_pool
+----
+. 스토리지 풀 구축:
++
+[listing]
+----
+virsh pool-build <pool_name>
+----
+. 스토리지 풀을 시작합니다.
++
+[listing]
+----
+virsh pool-start <pool_name>
+----
+. 시스템 부팅 시 자동으로 시작되도록 스토리지 풀을 구성합니다.
++
+[listing]
+----
+virsh pool-autostart <pool_name>
+----
+. 스토리지 풀이 생성되었는지 확인합니다.
++
+[listing]
+----
+virsh pool-list
+----
+
+
+
+
+=== 스토리지 풀을 삭제합니다
+
+더 이상 필요하지 않은 스토리지 풀은 삭제할 수 있습니다.
+
+.시작하기 전에
+ONTAP Select가 배포된 Linux CLI에 로그인할 수 있는지 확인합니다.
+
+.이 작업에 대해
+ONTAP Select Deploy 관리 유틸리티는 스토리지 풀의 타겟 위치를 로 지정해야 합니다 `/dev/<pool_name>`, 위치 `<pool_name>` 는 호스트의 고유한 풀 이름입니다.
+
+.단계
+. 스토리지 풀이 정의되어 있는지 확인합니다.
++
+[listing]
+----
+virsh pool-list
+----
+. 스토리지 풀 제거:
++
+[listing]
+----
+virsh pool-destroy <pool_name>
+----
+. 비활성 스토리지 풀에 대한 구성 정의 해제:
++
+[listing]
+----
+virsh pool-undefine <pool_nanme>
+----
+. 스토리지 풀이 호스트에서 제거되었는지 확인합니다.
++
+[listing]
+----
+virsh pool-list
+----
+. 스토리지 풀 볼륨 그룹의 모든 논리적 볼륨이 삭제되었는지 확인합니다.
++
+.. 논리 볼륨을 표시합니다.
++
+[listing]
+----
+lvs
+----
+.. 풀에 대한 논리적 볼륨이 있는 경우 삭제합니다.
++
+[listing]
+----
+lvremove <logical_volume_name>
+----
+
+
+. 볼륨 그룹이 삭제되었는지 확인합니다.
++
+.. 볼륨 그룹을 표시합니다.
++
+[listing]
+----
+vgs
+----
+.. 풀에 대한 볼륨 그룹이 있는 경우 삭제합니다.
++
+[listing]
+----
+vgremove <volume_group_name>
+----
+
+
+. 물리적 볼륨이 삭제되었는지 확인합니다.
++
+.. 물리적 볼륨을 표시합니다.
++
+[listing]
+----
+pvs
+----
+.. 풀에 대한 물리적 볼륨이 있는 경우 삭제합니다.
++
+[listing]
+----
+pvremove <physical_volume_name>
+----
+
+
+
+
+
+
+== ESXi 하이퍼바이저
+
 각 호스트는 다음과 같이 구성해야 합니다.
 
 * 사전 설치 및 지원되는 하이퍼바이저
@@ -83,6 +343,95 @@ image:CHK_02.jpg["2개의 네트워크를 보여 주는 4노드 클러스터"]
 다음 그림에서는 4노드 클러스터 내의 단일 ONTAP Select 가상 머신에 대한 일반적인 네트워크 구성을 보여 줍니다. ONTAP-내부 및 ONTAP-외부라는 2개의 별도 네트워크가 있습니다.
 
 image:CHK_03.jpg["4노드 클러스터 내의 단일 노드"]
+
+
+
+== KVM 호스트
+
+
+
+=== KVM 호스트에서 Open vSwitch를 구성합니다
+
+Open vSwitch를 사용하여 각 ONTAP Select 노드에서 소프트웨어 정의 스위치를 구성해야 합니다.
+
+.시작하기 전에
+네트워크 관리자가 비활성화되어 있고 기본 Linux 네트워크 서비스가 활성화되어 있는지 확인합니다.
+
+.이 작업에 대해
+ONTAP Select에는 2개의 개별 네트워크가 필요하며, 둘 다 포트 본딩을 활용하여 네트워크에 HA 기능을 제공합니다.
+
+.단계
+. Open vSwitch가 호스트에서 활성 상태인지 확인합니다.
++
+.. Open vSwitch가 실행 중인지 확인합니다.
++
+[listing]
+----
+systemctl status openvswitch
+----
+.. Open vSwitch가 실행되고 있지 않으면 다음을 시작합니다.
++
+[listing]
+----
+systemctl start openvswitch
+----
+
+
+. Open vSwitch 구성을 표시합니다.
++
+[listing]
+----
+ovs-vsctl show
+----
++
+Open vSwitch가 호스트에 아직 구성되지 않은 경우 구성은 비어 있는 상태로 표시됩니다.
+
+. 새 vSwitch 인스턴스 추가:
++
+[listing]
+----
+ovs-vsctl add-br <bridge_name>
+----
++
+예를 들면 다음과 같습니다.
+
++
+[listing]
+----
+ovs-vsctl add-br ontap-br
+----
+. 네트워크 인터페이스를 중단합니다.
++
+[listing]
+----
+ifdown <interface_1>
+ifdown <interface_2>
+----
+. LACP를 사용하여 링크 결합:
++
+[listing]
+----
+ovs-vsctl add-bond <internal_network> bond-br <interface_1> <interface_2> bond_mode=balance-slb lacp=active other_config:lacp-time=fast
+For example:
+ovs-vsctl add-bond ontap-internal bond-br enp18s0 enp19s0 bond_mode=balance-slb lacp=active other_config:lacp-time=fast
+----
+
+
+
+NOTE: 인터페이스가 두 개 이상인 경우에만 연결을 구성하면 됩니다.
+
+. 네트워크 인터페이스 실행:
++
+[listing]
+----
+ifup <interface_1>
+ifup <interface_2>
+----
+
+
+
+
+== ESXi 호스트
 
 
 

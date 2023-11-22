@@ -17,6 +17,7 @@ summary: ONTAP Select를 탐색하고 배포를 계획할 때 먼저 용어와 �
 ONTAP Select를 탐색하고 배포를 계획할 때 먼저 용어와 주요 개념을 숙지하는 것이 좋습니다.
 
 ONTAP Select 구축:: ONTAP Select 배포는 ONTAP Select 클러스터를 배포하는 데 사용하는 관리 유틸리티입니다. 배포 유틸리티는 전용 Linux 가상 시스템에서 실행됩니다. 웹 사용자 인터페이스, CLI 관리 셸 및 REST API를 통해 배포 유틸리티에 액세스할 수 있습니다.
+커널 기반 가상 머신:: KVM(커널 기반 가상 머신)은 Linux 커널의 가상화 기능으로, 이를 통해 하이퍼바이저 플랫폼으로 작동할 수 있습니다. 다양한 게스트 운영 체제가 지원됩니다.
 하이퍼바이저 호스트와 ONTAP Select 노드 비교:: h하이퍼바이저 host_는 ONTAP Select 가상 머신을 호스팅하는 핵심 하드웨어 플랫폼입니다. ONTAP Select 가상 머신이 하이퍼바이저 호스트에 구축되어 활성화되면 _ONTAP Select node_로 간주됩니다.
 ONTAP Select 클러스터:: 1개, 2개, 4개, 6개 또는 8개의 노드로 구성된 _ONTAP Select cluster_를 생성할 수 있습니다. 다중 노드 클러스터에는 항상 하나 이상의 HA 쌍이 포함됩니다. 예를 들어, 4노드 클러스터는 2개의 HA 쌍으로 구성됩니다. 단일 노드 클러스터는 HA 기능을 제공하지 않습니다.
 하이퍼바이저 호스트 환경 준비:: Deploy 관리 유틸리티를 사용하여 ONTAP Select 클러스터를 구축하기 전에 스토리지 및 네트워킹 환경을 포함하여 ONTAP Select가 실행될 하이퍼바이저 호스트를 준비해야 합니다. 이 호스트 사전 구성은 현재 요구 사항 및 제한 사항에 따라 ONTAP Select 제품 외부에서 수행됩니다.
@@ -59,7 +60,7 @@ ONTAP Select vNAS를 선택합니다:: ONTAP Select vNAS 솔루션을 사용하�
 
 두 경우 모두 ONTAP Select 클러스터를 생성하거나 기존 노드의 스토리지 용량을 확장하기 전에 외부 스토리지를 구성해야 합니다.
 
-노드 재호스팅:: ONTAP Select vNAS 솔루션(VMware vSAN 또는 일반 외부 스토리지 어레이)을 통해 사용 가능한 외부 스토리지를 사용하는 클러스터를 구축하는 경우 ONTAP Select 노드를 호스팅하는 ESXi 가상 시스템은 다음 VMware 기능을 활용하여 작업을 통해 이동할 수 있습니다.
+ESXi VM에서 노드 재호스팅:: ONTAP Select vNAS 솔루션(VMware vSAN 또는 일반 외부 스토리지 어레이)을 통해 사용 가능한 외부 스토리지를 사용하는 클러스터를 구축하는 경우 ONTAP Select 노드를 호스팅하는 ESXi 가상 시스템은 다음 VMware 기능을 활용하여 작업을 통해 이동할 수 있습니다.
 +
 --
 * 마이그레이션
@@ -77,6 +78,7 @@ ONTAP Select Deploy 유틸리티는 클러스터에서 작업을 실행하는 �
 
 
 --
+KVM용 vSwitch를 엽니다:: OVS(Open vSwitch)는 여러 네트워킹 프로토콜을 지원하는 가상 스위치의 소프트웨어 구현입니다. OVS는 오픈 소스이며 Apache License 2.0에 따라 사용할 수 있습니다.
 중재자 서비스:: ONTAP Select Deploy 유틸리티에는 활성 2노드 클러스터의 노드에 연결되는 중재자 서비스가 포함되어 있습니다. 이 서비스는 각 HA 쌍을 모니터링하고 장애 관리를 지원합니다.
 
 

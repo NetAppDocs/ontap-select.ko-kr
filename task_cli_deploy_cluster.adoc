@@ -20,7 +20,7 @@ ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터�
 
 == 시작하기 전에
 
-ESXi에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비를 이해해야 합니다.
+하이퍼바이저에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비 작업을 이해해야 합니다.
 
 
 
@@ -57,7 +57,7 @@ admin 사용자 계정의 암호가 있어야 합니다.
 .단계
 . 로컬 워크스테이션의 명령 셸에서 SFTP 유틸리티를 사용하여 배포 가상 머신에 라이센스 파일을 업로드합니다.
 +
-예
+예제 출력
 
 +
 ....
@@ -81,9 +81,58 @@ exit
 
 
 
-== ESXi 하이퍼바이저 호스트를 추가합니다
+== 하이퍼바이저 호스트를 추가합니다
 
-ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해야 합니다. 이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.
+ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해야 합니다.
+
+[role="tabbed-block"]
+====
+.KVM
+--
+ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 등록해야 합니다. 이에 따라 Deploy 관리 유틸리티는 KVM 호스트에 대해 인증합니다.
+
+.이 작업에 대해
+둘 이상의 하이퍼바이저 호스트가 필요한 경우 다음 절차를 사용하여 각 호스트를 추가해야 합니다.
+
+.단계
+. 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
+. 호스트 등록:
++
+[source, asciidoc]
+----
+`host register -name <FQDN|IP> -hypervisor-type KVM -username KVM_USERNAME`
+----
++
+예제 출력
+
++
+[listing]
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+메시지가 나타나면 호스트 계정에 대한 암호를 입력합니다.
+
+. 호스트의 상태를 표시하고 인증되었는지 확인합니다.
++
+[source, asciidoc]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+예제 출력
+
++
+[listing]
+----
+host show -name 10.234.81.14 -detailed
+----
+
+
+--
+.ESXi
+--
+이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.
 
 .이 작업에 대해
 vCenter에서 관리하는 호스트를 등록하기 전에 vCenter Server에 대한 관리 서버 계정을 추가해야 합니다. 호스트가 vCenter에서 관리되지 않는 경우 호스트 등록 과정에서 호스트 자격 증명을 제공할 수 있습니다. 이 절차를 사용하여 각 호스트를 추가해야 합니다.
@@ -95,7 +144,7 @@ vCenter에서 관리하는 호스트를 등록하기 전에 vCenter Server에 �
 'Credential add-hostname <FQDN|IP> - type vcenter-username vcenter_username'
 
 +
-예
+예제 출력
 
 +
 ....
@@ -107,7 +156,7 @@ credential add -hostname vc.select.company-demo.com -type vcenter -username admi
 ** vCenter에서 관리하는 호스트 등록:
 `host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
 +
-예
+예제 출력
 
 +
 ....
@@ -120,7 +169,7 @@ host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.com
 'host show-name <FQDN|IP> - Detailed'(호스트 표시 이름 <FQDN|IP> - 세부 정보)를 선택합니다
 
 +
-예
+예제 출력
 
 +
 ....
@@ -128,6 +177,8 @@ host show -name 10.234.81.14 -detailed
 ....
 
 
+--
+====
 
 
 == ONTAP Select 클러스터 생성 및 구성
@@ -147,7 +198,7 @@ ONTAP Select 클러스터를 생성하면 deploy 유틸리티에서 제공하는
 cluster create-name clusterName-node-count node입니다
 
 +
-예
+예제 출력
 
 +
 ....
@@ -158,7 +209,7 @@ cluster create -name test-cluster -node-count 1
 'cluster modify -name clusterName -mgmt -ip_address -netmask -gateway ip_address -dns-servers <FQDN|IP>_list -dns-domain domain_list'
 
 +
-예
+예제 출력
 
 +
 ....
@@ -191,7 +242,7 @@ ONTAP Select 클러스터의 각 노드를 구성해야 합니다.
 
 . 노드를 선택하고 기본 구성을 수행합니다. 'node modify -name nodename -cluster -name clusterName -host -name <FQDN | IP> -license-serial-number-instance-type type-passthrough-disks FALSE'
 +
-예
+예제 출력
 
 +
 ....
@@ -209,7 +260,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.8
 'host network show-host-name <FQDN|IP> - detailed
 
 +
-예
+예제 출력
 
 +
 ....
@@ -223,7 +274,7 @@ host network show -host-name 10.234.81.14 -detailed
 단일 노드 클러스터를 구축할 때는 내부 네트워크가 필요하지 않으며 내부 네트워크를 제거해야 합니다.
 
 +
-예
+예제 출력
 
 +
 ....
@@ -235,7 +286,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.
 노드 show-name nodename-cluster-name clusterName-detailed입니다
 
 +
-예
+예제 출력
 
 +
 ....
@@ -262,7 +313,7 @@ VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다. 소�
 'host storage pool show-host-name <FQDN|IP>'을 선택합니다
 
 +
-예
+예제 출력
 
 +
 [listing]
@@ -280,7 +331,7 @@ VMware vSphere를 통해 사용 가능한 스토리지 풀을 얻을 수도 있�
 capacity-limit 매개 변수를 포함하는 경우 값을 GB 또는 TB로 지정합니다.
 
 +
-예
+예제 출력
 
 +
 [listing]
@@ -293,7 +344,7 @@ node-name test-cluster-01 -capacity-limit 500GB
 노드 스토리지 풀 show-cluster-name clusterName-node-name nodename
 
 +
-예
+예제 출력
 
 +
 [listing]
@@ -305,7 +356,7 @@ node storage pool show -cluster-name test-cluster -node-name testcluster-01
 노드 스토리지 디스크 연결 노드 이름 nodename -cluster -name clusterName -disks list_of_drives
 
 +
-예
+예제 출력
 
 +
 [listing]
@@ -317,7 +368,7 @@ node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000
 노드 스토리지 디스크 show-node-name nodename-cluster-name clusterName입니다
 
 +
-예
+예제 출력
 
 +
 [listing]
@@ -342,7 +393,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 클러스터 Deploy-name clusterName입니다
 
 +
-예
+예제 출력
 
 +
 [listing]

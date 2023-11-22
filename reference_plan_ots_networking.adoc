@@ -27,7 +27,7 @@ NOTE: 하이퍼바이저 호스트에서 vSwitch를 구성하는 방법과 고�
 
 
 
-== VMXNET3으로 업그레이드하십시오
+== VMXNET3으로 업그레이드(ESXi만 해당)
 
 Deploy 2.10을 사용하는 ONTAP Select 9.5부터 VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. 이전 ONTAP Select 노드를 버전 9.5 이상으로 업그레이드하는 경우 드라이버가 자동으로 업그레이드되지 않습니다.
 
@@ -49,7 +49,7 @@ NOTE: 필요한 경우 네트워크 설계에 따라 클러스터 MTU 값을 수
 
 
 
-== 표준 vSwitch가 있는 NIC 호스트 2개
+== 표준 vSwitch가 있는 2-NIC 호스트(ESXi만 해당)
 
 2개의 NIC 구성에서 ONTAP Select 성능을 향상시키려면 2개의 포트 그룹을 사용하여 내부 및 외부 네트워크 트래픽을 격리해야 합니다. 이 권장 사항은 다음과 같은 특정 구성에 적용됩니다.
 
@@ -76,7 +76,7 @@ NOTE: 필요한 경우 네트워크 설계에 따라 클러스터 MTU 값을 수
 
 
 
-== 표준 vSwitch가 있는 4개의 NIC 호스트
+== 표준 vSwitch가 있는 4-NIC 호스트(ESXi만 해당)
 
 4개 NIC 구성에서 ONTAP Select 성능을 향상시키려면 4개 포트 그룹을 사용하여 내부 및 외부 네트워크 트래픽을 격리해야 합니다. 이 권장 사항은 다음과 같은 특정 구성에 적용됩니다.
 
@@ -123,8 +123,10 @@ ONTAP Select 배포 환경의 여러 참가자 간에 네트워크 트래픽이 
 ONTAP Select 배포의 일부로 네트워크 트래픽을 교환하는 여러 참가자 또는 엔터티가 있습니다. 이러한 정보는 네트워크 트래픽 요구 사항에 대한 요약 설명에서 소개되고 사용됩니다.
 
 * ONTAP Select 배포 관리 유틸리티를 배포합니다
-* vSphere/ESXi 클러스터 구축에서 호스트를 관리하는 방법에 따라 vSphere 서버 또는 ESXi 호스트 중 하나입니다
-* 하이퍼바이저 서버 ESXi 하이퍼바이저 호스트
+* vSphere(ESXi만 해당)
+클러스터 구축 환경에서 호스트가 관리되는 방법에 따라 vSphere 서버 또는 ESXi 호스트
+* 하이퍼바이저 서버
+ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트
 * OTS 노드 ONTAP Select 노드
 * OTS 클러스터 ONTAP Select 클러스터
 * Admin WS 로컬 관리 워크스테이션
@@ -133,31 +135,34 @@ ONTAP Select 배포의 일부로 네트워크 트래픽을 교환하는 여러 �
 .네트워크 트래픽 요구 사항 요약
 다음 표에서는 ONTAP Select 배포를 위한 네트워크 트래픽 요구 사항에 대해 설명합니다.
 
-[cols="20,45,35"]
+[cols="20,20,35,25"]
 |===
-| 프로토콜/포트 | 방향 | 설명 
+| 프로토콜/포트 | ESXi/KVM을 참조하십시오 | 방향 | 설명 
 
 
-| TLS(443) | vCenter Server(관리되는) 또는 ESXi(관리되지 않는)에 구축 | VMware VIX API입니다 
+| TLS(443) | ESXi | vCenter Server(관리됨) 또는 ESXi(관리됨 또는 관리되지 않음)에 구축 | VMware VIX API입니다 
 
 
-| 902 | vCenter Server(관리되는) 또는 ESXi(관리되지 않는)에 구축 | VMware VIX API입니다 
+| 902 | ESXi | vCenter Server(관리되는) 또는 ESXi(관리되지 않는)에 구축 | VMware VIX API입니다 
 
 
-| ICMP | 하이퍼바이저 서버에 구축 | Ping을 클릭합니다 
+| ICMP | ESXi 또는 KVM | 하이퍼바이저 서버에 구축 | Ping을 클릭합니다 
 
 
-| ICMP | 각 OTS 노드에 배포합니다 | Ping을 클릭합니다 
+| ICMP | ESXi 또는 KVM | 각 OTS 노드에 배포합니다 | Ping을 클릭합니다 
 
 
-| SSH(22) | 각 OTS 노드에 대한 관리 WS | 관리 
+| SSH(22) | ESXi 또는 KVM | 각 OTS 노드에 대한 관리 WS | 관리 
 
 
-| TLS(443) | OTS 노드 및 클러스터에 배포합니다 | ONTAP에 액세스합니다 
+| SSH(22) | KVM | 하이퍼바이저 서버 노드에 구축 | 하이퍼바이저 서버에 액세스합니다 
 
 
-| TLS(443) | 배포할 각 OTS 노드 | 배포 액세스 
+| TLS(443) | ESXi 또는 KVM | OTS 노드 및 클러스터에 배포합니다 | ONTAP에 액세스합니다 
 
 
-| iSCSI(3260) | 배포할 각 OTS 노드 | 중재자/메일박스 디스크 
+| TLS(443) | ESXi 또는 KVM | 배포할 각 OTS 노드 | 액세스 배포(용량 풀 라이센스) 
+
+
+| iSCSI(3260) | ESXi 또는 KVM | 배포할 각 OTS 노드 | 중재자/메일박스 디스크 
 |===

@@ -48,8 +48,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 == 오픈 소스
 
-통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.
+공지 파일에는 NetApp 소프트웨어에 사용된 타사 저작권 및 라이센스에 대한 정보가 포함되어 있습니다.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2885796["ONTAP Select 9.13.1 참고 사항"^]
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2884813["ONTAP Select 9.12.1에 대한 고지 사항"^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886734["ONTAP Select 9.14.1에 대한 고지 사항"^]
 

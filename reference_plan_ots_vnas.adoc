@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_plan_ots_vnas.html 
-keywords: plan, planning, vnas 
-summary: ONTAP Select vNAS 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
+keywords: plan, planning, vnas, vmware esxi, 
+summary: VMware ESXi 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
 ---
-= ONTAP Select vNAS 요구 사항
+= VMware ESXi 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: ONTAP Select vNAS 사용과 관련하여 고려해야 할 몇 가지 �
 
 
 [role="lead"]
-ONTAP Select vNAS는 ONTAP Select 가상 머신이 실행되는 하이퍼바이저 호스트 외부에 ONTAP Select 데이터 저장소를 제공할 수 있는 솔루션입니다. 이러한 원격 데이터 저장소는 VMware vSAN 또는 일반 외부 스토리지 시스템을 통해 액세스할 수 있습니다.
+ONTAP Select vNAS는 ONTAP Select 데이터 저장소를 ONTAP Select 가상 머신이 실행되는 ESXi 하이퍼바이저 호스트의 외부에 둘 수 있는 솔루션입니다. 이러한 원격 데이터 저장소는 VMware vSAN 또는 일반 외부 스토리지 어레이를 통해 액세스할 수 있습니다.
 
 
 

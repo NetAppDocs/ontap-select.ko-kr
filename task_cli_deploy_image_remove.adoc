@@ -39,12 +39,23 @@ CAUTION: 클러스터에서 사용 중인 ONTAP Select 이미지를 제거해서
 +
 'ls - LH/opt/NetApp/images'(ls - LH/OPT/NetApp/이미지)
 
-. 선택적으로 ESXi 이미지를 제거합니다.
+. 필요에 따라 하이퍼바이저 호스트에서 ONTAP Select 이미지를 제거합니다.
 +
-예: rm-r/opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
-
-. ONTAP Select 9.10.1 이전 릴리스를 사용할 경우 KVM 이미지를 선택적으로 제거합니다.
-+
-예: rm-r/opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
-
+[role="tabbed-block"]
+====
+.ESXi 예
+--
+[source, asciidoc]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
+----
+--
+.KVM 예
+--
+[source, asciidoc]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
+----
+--
+====
 
