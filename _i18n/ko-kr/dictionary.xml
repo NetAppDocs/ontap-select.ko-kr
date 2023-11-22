@@ -3614,4 +3614,5 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="a00a440e4e7508545fb84f9e32bb861b" category="paragraph-title">ONTAP Select를 ONTAP 하드웨어 기반 클러스터와 통합합니다</block>
   <block id="e289810d4028b10554ae6b447fa581ee" category="sidebar">외부 스토리지 요구 사항</block>
   <block id="a9e831fb19f71068ebfd5cb9b303ea66" category="sidebar">ESXi의 VMware vCenter</block>
+  <block id="314c09ddbe5ce5a2ebc071a5ba939ef6" category="sidebar">ONTAP Select 9.14.1 문서</block>
 </blocks>
