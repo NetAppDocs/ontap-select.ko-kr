@@ -31,6 +31,7 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * iSCSI
 * SnapMirror를 참조하십시오
 * SnapVault
+* FlexCache
 * 플랙스클론
 * SnapRestore
 * 중복제거 및 압축
