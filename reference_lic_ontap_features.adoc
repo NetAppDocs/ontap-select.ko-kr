@@ -25,19 +25,20 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 다음 기능은 ONTAP Select에 포함되어 있으며 기본적으로 라이센스가 부여됩니다.
 
-* NVMe over TCP
-* NFS 를 참조하십시오
 * CIFS를 선택합니다
-* iSCSI
-* SnapMirror를 참조하십시오
-* SnapVault
+* 중복제거 및 압축
 * FlexCache
 * 플랙스클론
-* SnapRestore
-* 중복제거 및 압축
+* iSCSI
+* NDMP
+* NetApp 볼륨 암호화(제한 없는 국가만 해당)
+* NFS 를 참조하십시오
+* NVMe over TCP
 * ONTAP 멀티 테넌시 기능
 * ONTAP S3
-* NetApp 볼륨 암호화(제한 없는 국가만 해당)
+* SnapMirror를 참조하십시오
+* SnapRestore
+* SnapVault
 
 
 
@@ -46,12 +47,12 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.
 
-* SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
-* FabricPool
 * 데이터 가용성 서비스
+* FabricPool
 * FlexCache(무료)
-* SyncMirror(무료)
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
+* SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
+* SyncMirror(무료)
 
 
 
