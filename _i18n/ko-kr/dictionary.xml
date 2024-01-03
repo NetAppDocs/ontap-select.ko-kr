@@ -916,7 +916,6 @@
   <block id="8466d9c8baffa8020cd2061f9cb4929e" category="list-text">페이지 상단의 * 관리 * 탭을 클릭합니다.</block>
   <block id="27de07fc9b7f932f0181131e79ec3569" category="list-text">Licenses * 를 클릭하고 * Capacity Tier * 를 클릭합니다.</block>
   <block id="c1a597c101487100214a5f749a6f3e48" category="list-text">필요한 경우 * Filter * 를 클릭하고 표시되는 라이센스를 제한합니다.</block>
-  <block id="394aecca280e07533a3d7792d8e0bed1" category="list-text">필요에 따라 라이센스를 선택하고 을 클릭합니다 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> 기존 라이센스를 관리합니다</block>
   <block id="6ee0553d617caf0c18d95b731d38d14f" category="list-text">새 라이센스를 추가하려면 페이지 상단의 * Add * (추가 *)를 클릭한 다음 * Upload License (s) * 를 클릭하고 로컬 워크스테이션에서 라이센스 파일을 선택합니다.</block>
   <block id="2a1af40a05dbd3e59e7040a6aba474e2" category="paragraph">필요에 따라 ONTAP Select 용량 풀 라이센스를 추가, 편집 및 삭제할 수 있습니다.</block>
   <block id="7be3eed19afb6e3f04dc4fe18d053f2c" category="list-text">Licenses * 를 클릭하고 * Capacity Pools * 를 클릭합니다.</block>
@@ -2585,8 +2584,6 @@
   <block id="d598b7c596887c12a7901f81a1798bd3" category="list-text">하드 디스크 드라이브(HDD) 또는 솔리드 스테이트 드라이브(SSD)</block>
   <block id="242993ddd5be1ee9c2b34ac3d6e16525" category="list-text">로컬 하드웨어 RAID 컨트롤러 또는 소프트웨어 RAID</block>
   <block id="3df6de2a26f1404ca45737431d2a4afb" category="paragraph">Premium XL 오퍼링은 다음과 같은 기능을 제공합니다.</block>
-  <block id="5e1e35787d312440de294099e5a73814" category="list-text">소형, 중형 또는 대형 인스턴스 유형입니다.</block>
-  <block id="d72f431c4274d31e60a80915e200ced0" category="list-text">로컬 하드웨어 RAID 컨트롤러 또는 소프트웨어 RAID</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">릴리즈 노트</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
   <block id="4b983fff716674f120176e09551dd445" category="sidebar">제품 개요</block>
@@ -3291,7 +3288,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="27867a85560994e09ee616b37ec585de" category="cell">하이퍼바이저 서버 노드에 구축</block>
   <block id="2d81002b634550a1e266341254a2d597" category="cell">하이퍼바이저 서버에 액세스합니다</block>
   <block id="0c0158fd50f7612ddfb9136e3de8e2be" category="cell">액세스 배포(용량 풀 라이센스)</block>
-  <block id="577362db3aa99018c35d90bc2a1f3fff" category="admonition">모든 구성에 대형 인스턴스 유형(프리미엄 XL 라이센스 사용)을 사용할 수 있지만 성능 문제로 인해 KVM에서 지원되지 않습니다.</block>
   <block id="0777708201aec678f0082eec3aa98c10" category="list-text">커널 기반 가상 머신</block>
   <block id="067c35f1ba98a705741486402c1dac18" category="list-text">KVM(커널 기반 가상 머신)은 Linux 커널의 가상화 기능으로, 이를 통해 하이퍼바이저 플랫폼으로 작동할 수 있습니다. 다양한 게스트 운영 체제가 지원됩니다.</block>
   <block id="f72371502203ff57c484242dbc67867e" category="list-text">ESXi VM에서 노드 재호스팅</block>
@@ -3636,4 +3632,9 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
+  <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">소형, 중형 또는 대형 인스턴스 유형입니다</block>
+  <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD, SSD 또는 NVMe 드라이브를 사용할 수 있습니다</block>
+  <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">SW-RAID 구성에서 대규모 인스턴스 유형 또는 NVMe 드라이브를 사용하는 것은 KVM에서 지원되지 않습니다.</block>
+  <block id="4c1cad05d7febe049143598de4b3847d" category="list-text">기존 라이센스를 교체하려면 라이센스를 선택하고 을 클릭합니다 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>를 클릭하고 * 업데이트 * 를 선택합니다.</block>
+  <block id="22296b7841252645a75ccd1c4032738e" category="list-text">필요에 따라 라이센스를 선택하고 을 클릭합니다 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> 기존 라이센스를 관리합니다.</block>
 </blocks>
