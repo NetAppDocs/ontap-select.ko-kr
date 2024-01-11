@@ -3637,4 +3637,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">SW-RAID 구성에서 대규모 인스턴스 유형 또는 NVMe 드라이브를 사용하는 것은 KVM에서 지원되지 않습니다.</block>
   <block id="4c1cad05d7febe049143598de4b3847d" category="list-text">기존 라이센스를 교체하려면 라이센스를 선택하고 을 클릭합니다 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>를 클릭하고 * 업데이트 * 를 선택합니다.</block>
   <block id="22296b7841252645a75ccd1c4032738e" category="list-text">필요에 따라 라이센스를 선택하고 을 클릭합니다 <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> 기존 라이센스를 관리합니다.</block>
+  <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">추가 기능 라이선스 관리</block>
+  <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">라이센스 관리 개요(클러스터 관리자만 해당)</block>
+  <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">라이센스 키를 추가하여 새 기능을 활성화합니다</block>
+  <block id="9737e258b60b8a3df4f9108391ab5366" category="paragraph">ONTAP Select 제품의 경우 애드온 라이센스는 ONTAP 내에서 직접 적용되며 ONTAP Select Deploy를 통해 관리되지 않습니다. 을 참조하십시오 <block ref="ce1ae1f692dcc386afa95c6f51ac8788" category="inline-link-macro-rx"></block> 및 <block ref="63870a99c743eac4250d67a3b291ca39" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
 </blocks>
