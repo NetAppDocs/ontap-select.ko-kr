@@ -3641,4 +3641,5 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">라이센스 관리 개요(클러스터 관리자만 해당)</block>
   <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">라이센스 키를 추가하여 새 기능을 활성화합니다</block>
   <block id="9737e258b60b8a3df4f9108391ab5366" category="paragraph">ONTAP Select 제품의 경우 애드온 라이센스는 ONTAP 내에서 직접 적용되며 ONTAP Select Deploy를 통해 관리되지 않습니다. 을 참조하십시오 <block ref="ce1ae1f692dcc386afa95c6f51ac8788" category="inline-link-macro-rx"></block> 및 <block ref="63870a99c743eac4250d67a3b291ca39" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="b5150f2681f3eb5a5b6aab4cbdadad34" category="paragraph">가상 NAS(vNAS) 구축은 VSAN(가상 SAN)에서 ONTAP Select 클러스터, 일부 HCI 제품 및 외부 어레이 유형의 데이터 저장소를 지원합니다. 이러한 구성의 기본 인프라는 데이터 저장소 복원력을 제공합니다.</block>
 </blocks>
