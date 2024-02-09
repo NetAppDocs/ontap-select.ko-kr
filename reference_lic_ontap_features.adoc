@@ -49,9 +49,12 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 * 데이터 가용성 서비스
 * FabricPool
-* FlexCache(무료)
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
 * SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
++
+** 스냅샷 복사본을 무단 복제했습니다
+
+
 * SyncMirror(무료)
 
 
