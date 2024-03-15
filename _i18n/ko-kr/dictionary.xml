@@ -2718,7 +2718,6 @@
   <block id="aae4f232f5ffb9e9721fd019ba8b1efe" category="listing-title">ONTAP Select 배포를 위한 Swagger API 페이지에 액세스하려면 어떻게 해야 합니까?</block>
   <block id="40a60db1cb196f556dfa7fc31b0fc0de" category="paragraph">예. ONTAP Select Deploy 유틸리티는 ONTAP Select 클러스터와 별도로 업그레이드할 수 있습니다. 마찬가지로, ONTAP Select 배포 유틸리티와 별도로 Select 클러스터를 업그레이드할 수 있습니다.</block>
   <block id="59515ed968b51f31e5dba26d6fd648ce" category="paragraph">다음 ONTAP Select 클러스터 속성의 변경 사항은 ONTAP Select 배포에서 GUI, CLI 또는 REST API를 통해 사용 가능한 클러스터 업데이트 작업을 사용하여 인식합니다.</block>
-  <block id="0505613d75e769b75ece38e7cd9acbeb" category="admonition">ONTAP Select 배포 VM의 IP 주소 변경은 지원되지 않습니다.</block>
   <block id="1c1b6371821b57c0181e5ac9c60110dd" category="paragraph">ONTAP Select 배포 2.6으로 업그레이드하면 이미 배포되었지만 원래 구성에서 변경되지 않은 ONTAP Select 클러스터에 대한 이러한 변경 사항을 지원할 수 있습니다. 다시 말해, 위에서 언급한 ONTAP Select 클러스터 속성이 System Manager 또는 vCenter를 사용하여 변경된 경우 ONTAP Select Deploy 2.6으로 업그레이드해도 이러한 불일치가 해결되지 않습니다. 각 ONTAP Select VM에 고유한 메타데이터를 추가하려면 ONTAP Select 배포를 위해 ONTAP Select 속성 변경 사항을 먼저 롤백해야 합니다.</block>
   <block id="19e3b046872155951a88cbd2e790b7e6" category="paragraph">예. ONTAP Select 배포는 KVM 또는 ESX에 설치할 수 있으며 두 설치 모두 하이퍼바이저 중 하나에 ONTAP Select 클러스터를 생성할 수 있습니다.</block>
   <block id="5a1db0789444e54a1e8a26c422380d57" category="paragraph">ESX 호스트에 라이센스가 올바르게 부여되면 vCenter Server에서 ESX 호스트를 관리할 필요가 없습니다. 하지만 vCenter Server에서 호스트를 관리하는 경우 해당 vCenter Server를 사용하도록 ONTAP Select 구축을 구성해야 합니다. 즉, ESX 호스트가 vCenter Server에서 능동적으로 관리되는 경우 ONTAP Select 배포에서 ESX 호스트를 독립 실행형으로 구성할 수 없습니다. ONTAP Select Deploy VM은 vCenter를 통해 vMotion 또는 VMware HA 이벤트로 인해 ESXi 호스트 간의 모든 ONTAP Select VM 마이그레이션을 추적합니다.</block>
@@ -2794,7 +2793,6 @@
   <block id="ab7351a7aeb835a8c5a54bc22957dc89" category="paragraph-title">FAS 클러스터와 동일한 절차를 사용하여 ONTAP Select를 업그레이드할 수 있습니까?</block>
   <block id="a16c0a0ef72a1eb743acb4bc099a7f63" category="paragraph-title">FAS 클러스터와 동일한 절차를 사용하여 ONTAP Select을 되돌릴 수 있습니까?</block>
   <block id="6c934076f6916c570e1e192badaff0f6" category="paragraph-title">ONTAP MetroCluster SDS에는 최소 프리미엄 라이센스가 필요합니까?</block>
-  <block id="d2ff884cc30a8e5431e7b9a592afafd4" category="paragraph-title">설치 후 ONTAP Select Deploy 및 ONTAP Select cluster, 노드 관리의 IP 주소를 변경할 수 있습니까?</block>
   <block id="635eb068c84d97fe678e1459fc684023" category="paragraph-title">단일 ONTAP Select 배포 인스턴스에서 ESX와 KVM 모두에 클러스터를 생성할 수 있습니까?</block>
   <block id="e5f0aa18f251bcf3fa0e3a7d649aefb9" category="paragraph-title">ESX에서 ONTAP Select에 vCenter가 필요합니까?</block>
   <block id="3690bfca39d229721656be52d6e38df1" category="paragraph-title">소프트웨어 RAID란 무엇입니까?</block>
@@ -3656,4 +3654,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="79416550309ddcac023464218d55a23d" category="paragraph">용량 계층 지원 계약의 종료 날짜가 경과한 경우 노드는 계속 실행될 수 있지만 ONTAP 업데이트를 다운로드 및 설치할 수는 없으며 지원 계약을 최신 상태로 설정하지 않으면 NetApp 기술 지원에 연락하여 지원을 받을 수도 없습니다.</block>
   <block id="9b9568babf180c232b393ba5f95ff4c3" category="paragraph">용량 풀 구독이 만료된 경우 시스템은 먼저 경고를 표시하지만 30일 후에 시스템을 종료하면 배포 서버에 업데이트된 구독이 설치될 때까지 재부팅되지 않습니다.</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Select 및 라이센스 갱신에 대한 자세한 내용은 의 라이센스, 설치, 업그레이드 및 되돌리기 섹션을 참조하십시오 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>.</block>
+  <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">설치 후 ONTAP Select 클러스터의 네트워크 구성을 변경할 수 있습니까?</block>
+  <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">설치 후 ONTAP Select 배포 네트워크 구성을 변경할 수 있습니까?</block>
+  <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정</block>
+  <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
 </blocks>
