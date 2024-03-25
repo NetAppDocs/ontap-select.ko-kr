@@ -3658,4 +3658,5 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">설치 후 ONTAP Select 배포 네트워크 구성을 변경할 수 있습니까?</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
+  <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1 이상에서는 이제 SVM DR을 최대 16개의 관계로 소스로 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 9.12.1~9.14.1과 같은 버전 + 2로 사용하도록 제한됩니다.</block>
 </blocks>

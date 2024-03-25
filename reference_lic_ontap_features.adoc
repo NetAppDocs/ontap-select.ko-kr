@@ -39,6 +39,11 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * SnapMirror를 참조하십시오
 * SnapRestore
 * SnapVault
+* 스토리지 VM 재해 복구(SVM DR)
++
+
+NOTE: ONTAP Select 9.12.1 이상에서는 이제 SVM DR을 최대 16개의 관계로 소스로 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 9.12.1~9.14.1과 같은 버전 + 2로 사용하도록 제한됩니다.
+
 
 
 
