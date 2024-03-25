@@ -1,0 +1,3127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html" />
+	<meta property="og:description" content="" />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap-select/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
+  <link rel="icon" href="/ko-kr/ontap-select/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/ontap-select/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/ontap-select/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/ontap-select/reference_earlier_versions.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/ontap-select/reference_earlier_versions.html" />
+  <!-- Top level site integrations --><script>
+    pageRedirect("https://docs.netapp.com/ko-kr/ontap-select/index.html");
+    function pageRedirect(url) { location.href = url; }
+  </script>
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/ontap-select/js/na-search.js'></script><script src='/ko-kr/ontap-select/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ko-kr/ontap-select/js/custom-dropdown.js'></script>
+  <script src='/ko-kr/ontap-select/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/ontap-select/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/ontap-select/js/jszip.min.js'></script><script src='/ko-kr/ontap-select/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ko-kr/ontap-select/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/kr">
+                <image id="ie-header-logo" src="/ko-kr/ontap-select/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">문서</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ko-kr/ontap-select/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">한국어</span>
+                    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/ontap-select/reference_earlier_versions.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ko-kr/ontap-select/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">모든 NetApp</span>
+                    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">지원</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">기술 자료</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/ko/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">교육</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ko-kr/ontap-select/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ko-kr/ontap-select/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">모든 문서</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ko-kr/ontap-select/">-->
+      ONTAP Select
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 9.14.1">
+    <label>버전</label>
+    <span translate="no" class="notranslate">9.14.1</span>
+    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.14.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/ontap-select-9131/reference_earlier_versions.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/ontap-select-9121/reference_earlier_versions.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/ontap-select-9111/reference_earlier_versions.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ko-kr/ontap-select-9101/reference_earlier_versions.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.1</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ko-kr/ontap-select/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ko-kr/ontap-select/search.html" 
+        data-type="widget"
+        data-placeholder="설명서 검색"
+        data-no-results-found="{query}에 대한 결과를 찾을 수 없습니다"
+        data-did-you-mean="{suggestion}을(를) 검색하십시오."
+        data-no-results-found-did-you-mean="{query}에 대한 결과가 없습니다. {suggestion}을(를) 찾고 계시는 건가요?"
+        data-results-found="{hitCount}개의 결과를 찾았습니다"
+        data-error-message="오류가 발생했습니다. 다시 시도해 주십시오."
+        data-error-reset="검색 재설정"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 9.14.1 문서"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/ontap-select/index.html">
+        ONTAP Select 9.14.1 문서
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="릴리즈 노트"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 릴리즈 노트</div>-->
+         릴리즈 노트
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 릴리즈 노트"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_release_notes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/reference_release_notes.html">
+        ONTAP Select 릴리즈 노트
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="새로운 소식"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_new_ots.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/reference_new_ots.html">
+        새로운 소식
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="개념"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 개념</div>-->
+         개념
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="제품 개요"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_ots_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_ots_overview.html">
+        제품 개요
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 구축"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_ots_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_ots_deploy.html">
+        ONTAP Select 구축
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="비즈니스 사용 사례"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 비즈니스 사용 사례</div>-->
+         비즈니스 사용 사례
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="비즈니스 요구 및 사용 시나리오"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_usecase_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_usecase_overview.html">
+        비즈니스 요구 및 사용 시나리오
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="원격 사무소 및 지점 사무소"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_usecase_robo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_usecase_robo.html">
+        원격 사무소 및 지점 사무소
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="프라이빗 클라우드 및 데이터 센터"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_usecase_private_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_usecase_private_cloud.html">
+        프라이빗 클라우드 및 데이터 센터
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MetroCluster SDS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_usecase_mc_sds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="용어"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_terminology.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_terminology.html">
+        용어
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="계획"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 계획</div>-->
+         계획
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="구축 워크플로우"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_workflow_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_workflow_deploy.html">
+        구축 워크플로우
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP Select</div>-->
+         ONTAP Select
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="일반 요구 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_general.html">
+        일반 요구 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="하이퍼바이저 및 하드웨어"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_hardware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_hardware.html">
+        하이퍼바이저 및 하드웨어
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 및 RAID"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_storage.html">
+        스토리지 및 RAID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="외부 스토리지 요구 사항"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 외부 스토리지 요구 사항</div>-->
+         외부 스토리지 요구 사항
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware ESXi"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_vnas.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/ontap-select/reference_plan_ots_vnas.html">
+        VMware ESXi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="KVM"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_kvm.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/ontap-select/reference_plan_ots_kvm.html">
+        KVM
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워킹"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_networking.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_networking.html">
+        네트워킹
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="2노드 클러스터"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_two_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_two_node.html">
+        2노드 클러스터
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="원격 사무소 및 지점 사무소"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_robo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_robo.html">
+        원격 사무소 및 지점 사무소
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MetroCluster SDS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_mcc_sds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi의 VMware vCenter"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_ots_vcenter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_ots_vcenter.html">
+        ESXi의 VMware vCenter
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 구축"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP Select 구축</div>-->
+         ONTAP Select 구축
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="일반 요구 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_dep_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_dep_general.html">
+        일반 요구 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="구축하는 것입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_dep_vmware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_plan_dep_vmware.html">
+        구축하는 것입니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="모범 사례"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_plan_best_practices.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/reference_plan_best_practices.html">
+        모범 사례
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="라이센스"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 라이센스</div>-->
+         라이센스
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="옵션"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 옵션</div>-->
+         옵션
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="평가판 라이센스"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_evaluation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_evaluation.html">
+        평가판 라이센스
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="운영 라이센스"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_production.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_production.html">
+        운영 라이센스
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="플랫폼 라이센스 제공"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_platforms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_platforms.html">
+        플랫폼 라이센스 제공
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="용량 풀 라이센스 모델"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 용량 풀 라이센스 모델</div>-->
+         용량 풀 라이센스 모델
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="운영 세부 정보"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_cp_operation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_cp_operation.html">
+        운영 세부 정보
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="노드 일련 번호입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_cp_serial_number.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_cp_serial_number.html">
+        노드 일련 번호입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="제한 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_cp_restrictions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_cp_restrictions.html">
+        제한 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="용량 풀 및 용량 계층 비교"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_cp_compare_ct.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_cp_compare_ct.html">
+        용량 풀 및 용량 계층 비교
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="이점 요약"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_cp_benefits.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_cp_benefits.html">
+        이점 요약
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="구매"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 구매</div>-->
+         구매
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="라이선스 워크플로"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_lic_workflow.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_lic_workflow.html">
+        라이선스 워크플로
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="용량 계층"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_lic_acquire_ct.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_lic_acquire_ct.html">
+        용량 계층
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="용량 풀"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_lic_acquire_cp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_lic_acquire_cp.html">
+        용량 풀
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP 기능"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_lic_ontap_features.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/reference_lic_ontap_features.html">
+        ONTAP 기능
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="설치합니다"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 설치합니다</div>-->
+         설치합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="설치 전 체크리스트"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 설치 전 체크리스트</div>-->
+         설치 전 체크리스트
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="호스트 준비 체크리스트"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_chk_host_prep.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_chk_host_prep.html">
+        호스트 준비 체크리스트
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="유틸리티 필수 정보를 배포합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_chk_deploy_req_info.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_chk_deploy_req_info.html">
+        유틸리티 필수 정보를 배포합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 필수 정보입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_chk_select_req_info.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_chk_select_req_info.html">
+        ONTAP Select 필수 정보입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NVMe 호스트 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_chk_nvme_configure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_chk_nvme_configure.html">
+        NVMe 호스트 구성
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select Deploy를 설치합니다"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_install_deploy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_install_deploy.html">
+        ONTAP Select Deploy를 설치합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 구축"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_deploy_cluster.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_deploy_cluster.html">
+        클러스터 구축
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="초기 클러스터 상태입니다"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_initial_state.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/reference_initial_state.html">
+        초기 클러스터 상태입니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="관리"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 관리</div>-->
+         관리
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="시작하기 전에"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_adm_before.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_adm_before.html">
+        시작하기 전에
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="노드 업그레이드"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_adm_upgrading_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/concept_adm_upgrading_nodes.html">
+        노드 업그레이드
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="진단 및 지원"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_support.html">
+        진단 및 지원
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보안"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_security.html">
+        보안
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워크 연결"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_connectivity.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_connectivity.html">
+        네트워크 연결
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="중개자"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_mediators.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_mediators.html">
+        중개자
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_clusters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_clusters.html">
+        클러스터
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="노드 및 호스트"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 노드 및 호스트</div>-->
+         노드 및 호스트
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VM 비디오 콘솔"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_video_console.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_adm_video_console.html">
+        VM 비디오 콘솔
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 노드의 크기를 조정합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_resize.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_adm_resize.html">
+        클러스터 노드의 크기를 조정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="장애가 발생한 SW RAID 드라이브를 교체합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_replace_drives_swraid.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_adm_replace_drives_swraid.html">
+        장애가 발생한 SW RAID 드라이브를 교체합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMFS6으로 업그레이드합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_upgrade_vmfs6.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_adm_upgrade_vmfs6.html">
+        VMFS6으로 업그레이드합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="추가 수익 실적을"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_adm_licenses.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_adm_licenses.html">
+        추가 수익 실적을
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="딥 다이브"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 딥 다이브</div>-->
+         딥 다이브
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 스토리지</div>-->
+         스토리지
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="일반 개념 및 특성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_concepts_chars.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_concepts_chars.html">
+        일반 개념 및 특성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_hwraid_local.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_hwraid_local.html">
+        로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_swraid_local.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_swraid_local.html">
+        로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vSAN 및 외부 스토리지 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_vsan_external.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_vsan_external.html">
+        vSAN 및 외부 스토리지 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량 증가"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_capacity_inc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_capacity_inc.html">
+        스토리지 용량 증가
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 효율성 지원"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_stor_eff_support.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_stor_eff_support.html">
+        스토리지 효율성 지원
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워킹"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 네트워킹</div>-->
+         네트워킹
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="일반 개념 및 특성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_concepts_chars.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_concepts_chars.html">
+        일반 개념 및 특성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="단일 및 다중 노드 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_single_multi_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_single_multi_node.html">
+        단일 및 다중 노드 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="내부 및 외부 네트워크"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_internal_external.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_internal_external.html">
+        내부 및 외부 네트워크
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="지원되는 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_supported_configs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_supported_configs.html">
+        지원되는 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere vSwitch 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_vsphere_vswitch_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_vsphere_vswitch_config.html">
+        VMware vSphere vSwitch 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="물리적 스위치 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_physical_switch_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_physical_switch_config.html">
+        물리적 스위치 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 및 관리 분리"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_nw_data_mgmt_separation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_nw_data_mgmt_separation.html">
+        데이터 및 관리 분리
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="고가용성 아키텍처"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 고가용성 아키텍처</div>-->
+         고가용성 아키텍처
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_ha_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_ha_config.html">
+        HA 구성
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="동기식 복제 및 미러링된 애그리게이트"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_ha_mirroring.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_ha_mirroring.html">
+        동기식 복제 및 미러링된 애그리게이트
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기타 고가용성 기능"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_ha_other.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_ha_other.html">
+        기타 고가용성 기능
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="성능"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 성능</div>-->
+         성능
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="성능 개요"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_perf_general.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_perf_general.html">
+        성능 개요
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 9.6 성능"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_perf_premium_ha_direct_ssd_96.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_perf_premium_ha_direct_ssd_96.html">
+        ONTAP Select 9.6 성능
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST를 사용하여 자동화"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> REST를 사용하여 자동화</div>-->
+         REST를 사용하여 자동화
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="개념"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 개념</div>-->
+         개념
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST 웹 서비스"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_rest.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_rest.html">
+        REST 웹 서비스
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 API에 액세스합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_how_access.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_how_access.html">
+        배포 API에 액세스합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API 버전 관리 배포"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_versions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_versions.html">
+        API 버전 관리 배포
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기본 작동"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_operation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_operation.html">
+        기본 작동
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="요청 및 응답 트랜잭션"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_transaction.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_transaction.html">
+        요청 및 응답 트랜잭션
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="비동기 처리"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_async_proc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_async_proc.html">
+        비동기 처리
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="브라우저를 사용하여 에 액세스합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 브라우저를 사용하여 에 액세스합니다</div>-->
+         브라우저를 사용하여 에 액세스합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="시작하기 전에"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_before_browser.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_before_browser.html">
+        시작하기 전에
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="문서 페이지에 액세스합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_api_access_doc_page.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_api_access_doc_page.html">
+        문서 페이지에 액세스합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API 호출 이해"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_api_understanding_call.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_api_understanding_call.html">
+        API 호출 이해
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="워크플로 프로세스"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 워크플로 프로세스</div>-->
+         워크플로 프로세스
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="시작하기 전에"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_before_workflows.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_before_workflows.html">
+        시작하기 전에
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="워크플로우 1 클러스터를 생성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_workflow01.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_workflow01.html">
+        워크플로우 1 클러스터를 생성합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Python으로 액세스하십시오"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Python으로 액세스하십시오</div>-->
+         Python으로 액세스하십시오
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="시작하기 전에"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_before_python.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_before_python.html">
+        시작하기 전에
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스크립트를 이해합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_api_understanding_scripts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/concept_api_understanding_scripts.html">
+        스크립트를 이해합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Python 코드 샘플"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Python 코드 샘플</div>-->
+         Python 코드 샘플
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터를 생성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_script_cc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_script_cc.html">
+        클러스터를 생성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="JSON으로 클러스터를 생성하십시오"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_json_cc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_json_cc.html">
+        JSON으로 클러스터를 생성하십시오
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="노드 라이센스를 추가합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_script_anl.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_script_anl.html">
+        노드 라이센스를 추가합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터를 삭제합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_script_dc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_script_dc.html">
+        클러스터를 삭제합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="공통 지원 모듈"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_script_common.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_script_common.html">
+        공통 지원 모듈
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 노드 크기 조정"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_api_script_resize.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_api_script_resize.html">
+        클러스터 노드 크기 조정
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ansible을 통한 자동화"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/concept_automate_ansible.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/ontap-select/concept_automate_ansible.html">
+        Ansible을 통한 자동화
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CLI를 사용합니다"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> CLI를 사용합니다</div>-->
+         CLI를 사용합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH를 사용하여 로그인합니다"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_signing_in.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_cli_signing_in.html">
+        SSH를 사용하여 로그인합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터 구축"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_deploy_cluster.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_cli_deploy_cluster.html">
+        클러스터 구축
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보안"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_cli_security.html">
+        보안
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워크 연결"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_connectivity.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_cli_connectivity.html">
+        네트워크 연결
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="클러스터"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_clusters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/ontap-select/task_cli_clusters.html">
+        클러스터
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="노드 및 호스트"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 노드 및 호스트</div>-->
+         노드 및 호스트
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi를 6.5 이상으로 업그레이드하는 중입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_upgrade_esxi65.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_upgrade_esxi65.html">
+        ESXi를 6.5 이상으로 업그레이드하는 중입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="호스트 관리 서버를 수정합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_host_modify_command.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/reference_host_modify_command.html">
+        호스트 관리 서버를 수정합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 유틸리티"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/ontap-select/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/ontap-select/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 배포 유틸리티</div>-->
+         배포 유틸리티
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 인스턴스를 업그레이드합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_upgrade_deploy.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_upgrade_deploy.html">
+        배포 인스턴스를 업그레이드합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 인스턴스 마이그레이션"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_migrate_deploy.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_migrate_deploy.html">
+        배포 인스턴스 마이그레이션
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 이미지를 추가합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_deploy_image_add.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_deploy_image_add.html">
+        ONTAP Select 이미지를 추가합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Select 이미지를 제거합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_deploy_image_remove.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_deploy_image_remove.html">
+        ONTAP Select 이미지를 제거합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="2노드 클러스터에 대한 구축 복구"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/task_cli_deploy_recover_two_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/ontap-select/task_cli_deploy_recover_two_node.html">
+        2노드 클러스터에 대한 구축 복구
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ 를 참조하십시오"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/reference_faq.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/ontap-select/reference_faq.html">
+        FAQ 를 참조하십시오
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="법적 고지"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference_earlier_versions.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/ontap-select/legal-notices.html">
+        법적 고지
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ko-kr/ontap-select"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ko-kr/ontap-select"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ko-kr/ontap-select/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading"></h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-10-18 17:50:19 +0000">10/18/2023</time>
+        
+    
+    
+        <span>기여자
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ko-kr/ontap-select/images/discuss-sm.svg" alt="" class="github-icon" />변경 제안</span>
+        <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-select.ko-kr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ko-kr/ontap-select/reference_earlier_versions.html&page-title=" class="page-nav-contribute-link" role="button">문서 변경사항 요청</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/main/redirect/reference_earlier_versions.adoc" class="page-nav-contribute-link" role="button">이 페이지 편집</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >기여하는 방법 알아보기</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ko-kr/ontap-select/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ko-kr/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_설명서.pdf" >
+                    <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/릴리즈_노트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            릴리즈 노트
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/개념.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            개념
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/비즈니스_사용_사례.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            비즈니스 사용 사례
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/계획.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            계획
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/ONTAP_Select.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP Select
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/외부_스토리지_요구_사항.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            외부 스토리지 요구 사항
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/ONTAP_Select_구축.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP Select 구축
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/라이센스.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            라이센스
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/옵션.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            옵션
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/용량_풀_라이센스_모델.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            용량 풀 라이센스 모델
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/구매.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            구매
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/설치합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            설치합니다
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/설치_전_체크리스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            설치 전 체크리스트
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/관리.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            관리
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/노드_및_호스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            노드 및 호스트
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/딥_다이브.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            딥 다이브
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/스토리지.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            스토리지
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/네트워킹.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            네트워킹
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/고가용성_아키텍처.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            고가용성 아키텍처
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/성능.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            성능
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/REST를_사용하여_자동화.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            REST를 사용하여 자동화
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/개념.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            개념
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/브라우저를_사용하여_에_액세스합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            브라우저를 사용하여 에 액세스합니다
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/워크플로_프로세스.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            워크플로 프로세스
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/Python으로_액세스하십시오.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Python으로 액세스하십시오
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/Python_코드_샘플.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Python 코드 샘플
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/CLI를_사용합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            CLI를 사용합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/노드_및_호스트.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            노드 및 호스트
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/ontap-select/pdfs/sidebar/배포_유틸리티.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap-select/images/pdf-icon.png" alt="" width="16" height="16"/>
+            배포 유틸리티
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ko-kr/ontap-select/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph">
+<p>=
+:allow-uri-read:</p>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ko-kr/ontap-select/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ko-kr/ontap-select/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">이 페이지에서</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">이용 약관</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">개인 정보 보호 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">쿠키 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">쿠키 설정</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">이 페이지에 대한 피드백 보내기</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/ontap-select/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/ontap-select/js/ie-tabbed-blocks.js'></script>
+    <script src='/ko-kr/ontap-select/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
