@@ -755,8 +755,6 @@
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">배포 관리 유틸리티에 정적 IP 주소를 할당해야 합니다. 이 요구사항은 하나 이상의 ONTAP Select 2노드 클러스터를 관리하는 모든 배포 인스턴스에 적용됩니다.</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.</block>
   <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.</block>
-  <block id="97cb0dfea21cc934eab612152be86e44" category="list-text">웹 브라우저를 사용하여 NetApp 지원 사이트에 액세스하고 * 빠른 링크 * 를 클릭합니다.</block>
-  <block id="966c758e5fd0e52652aa5afbd8f22a24" category="list-text">상위 작업 * 에서 * 소프트웨어 다운로드 * 를 클릭하고 로그인합니다.</block>
   <block id="d687fa799cb928d61ab8f8c42c50439d" category="list-text">제품 찾기 * 를 클릭합니다.</block>
   <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">아래로 스크롤하여 * ONTAP Select * 를 클릭합니다.</block>
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">원하는 패키지 릴리스를 선택합니다.</block>
@@ -784,7 +782,6 @@
   <block id="32be4d152f2326423c990dde583d8768" category="list-text">IP 주소 또는 도메인 이름을 사용하여 브라우저에서 배포 유틸리티를 가리킵니다.</block>
   <block id="cc0e719d3ebda123b94502d26d56a7eb" category="paragraph">'\https://&lt;ip_address&gt;/`</block>
   <block id="533f8108cde4f7f1af2f1fb435cc4710" category="list-text">관리자(admin) 계정 이름 및 암호를 제공하고 로그인합니다.</block>
-  <block id="001ba89c3853493a35f9ab59f150b2d6" category="list-text">ONTAP Select * 시작 * 팝업 창이 표시되면 필수 구성 요소를 검토하고 계속하려면 * 확인 * 을 클릭합니다.</block>
   <block id="1d2215b67b18c63fb1146b841d364f01" category="list-text">처음 로그인하는 경우 vCenter에서 사용할 수 있는 마법사를 사용하여 배포를 설치하지 않은 경우 메시지가 표시되면 다음 구성 정보를 제공합니다.</block>
   <block id="f6c0536935d8c4b9da68277e49781b74" category="list-text">관리자 계정의 새 암호(필수)</block>
   <block id="0dd298d83de1b2c4259299d711cefb70" category="list-text">AutoSupport(선택 사항)</block>
@@ -3263,7 +3260,6 @@
   <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">아래로 스크롤하여 * ONTAP Select Deploy Upgrade * 를 선택합니다.</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">최종 사용자 사용권 계약(EULA)을 검토하고 * Accept &amp; Continue * 를 선택합니다.</block>
   <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">업그레이드 절차가 완료되기 전에 가상 머신 구축 구성의 백업을 생성하라는 메시지가 표시됩니다. 또한 새로 만든 배포 페이지를 볼 수 있도록 브라우저 캐시를 지워야 합니다.</block>
-  <block id="cb09c1543f3641ccb98ebd45cc63490d" category="list-text">ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 을 참조하십시오 <block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block> 자세한 업그레이드 절차를 참조하십시오.</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">ONTAP Select가 실행 중인 하이퍼바이저 가상 시스템의 비디오 콘솔에 액세스할 수 있습니다.</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">필요에 따라 하이퍼바이저 호스트에서 ONTAP Select 이미지를 제거합니다.</block>
   <block id="7460f05e2350b8a56240561f0787e129" category="open-title">ESXi 예</block>
@@ -3475,7 +3471,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="d337df11b3ebf63c5a2171392491798f" category="cell">Deploy 유틸리티가 설치된 VMware ESXi 또는 KVM 하이퍼바이저 호스트의 식별자입니다.</block>
   <block id="e827723eb84c3ca87c21fd4dbca2ccda" category="cell">데이터 저장소의 이름입니다</block>
   <block id="d8ca36c2c2dd21202d873bdf26e7ec79" category="cell">가상 머신 파일이 저장된 하이퍼바이저 데이터 저장소의 식별자입니다(약 40GB가 필요함).</block>
-  <block id="27c85ffe05d0705505febd16e11d1146" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 VM(가상 머신)으로 패키징됩니다. 단일 압축 파일에는 접미사가 있습니다<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>.</block>
   <block id="1eadabe4e39cf3ae5ce71caf6ddc8447" category="paragraph">OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작해야 합니다. 설치 프로세스의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM:</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">배포 VM에 IP 주소를 동적으로 할당하려는 경우 VMware 환경에서 DHCP를 사용하도록 설정합니다</block>
@@ -3659,4 +3654,13 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
   <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1 이상에서는 이제 SVM DR을 최대 16개의 관계로 소스로 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 9.12.1~9.14.1과 같은 버전 + 2로 사용하도록 제한됩니다.</block>
+  <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 VM(가상 머신)으로 패키징됩니다. 단일 압축 파일에는 접미사가 있습니다<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>. VM은 ONTAP Select 노드의 배포 서버 및 설치 이미지를 제공합니다.</block>
+  <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">에 액세스합니다 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 로그인합니다.</block>
+  <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">메뉴에서 * 다운로드 * 를 선택한 다음 드롭다운 메뉴에서 * 다운로드 * 를 선택합니다.</block>
+  <block id="ab0ffe542101d39137dce2c19869d545" category="list-text">다운로드 페이지의 모든 제품 A-Z에서 문자 * O * 를 선택합니다.</block>
+  <block id="a896447aac9deddba0f8b7bc142c079f" category="list-text">아래로 스크롤하여 * ONTAP Select * 를 선택합니다.</block>
+  <block id="b41a57a870dbb2988a82d37df74541fa" category="list-text">Welcome to*(ONTAP Select* 시작) 팝업 창이 표시되면 필수 구성 요소를 검토하고 *OK*를 선택하여 계속합니다.</block>
+  <block id="044e8c7d609a0b31483ad9c6588ccd58" category="admonition">대용량 인스턴스 유형으로 크기 조정하는 것은 ESXi에서만 지원됩니다.</block>
+  <block id="afc299163ecc817c9d73bc5033f67218" category="admonition">각 토폴로지에 필요한 서로 다른 NIC 팀 구성 간에 변환해야 하므로 실행 중인 클러스터에서 단일 링크와 여러 링크 토폴로지 간의 변환이 지원되지 않습니다.</block>
+  <block id="8d3f7bf7a16e08794393171ba82658c1" category="list-text">ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로 등의 정보를 포함하여 ONTAP 업그레이드 절차에 대한 자세한 내용은 를 참조하십시오 <block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block>.</block>
 </blocks>
