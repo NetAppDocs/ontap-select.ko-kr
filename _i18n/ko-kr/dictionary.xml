@@ -3662,5 +3662,7 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="b41a57a870dbb2988a82d37df74541fa" category="list-text">Welcome to*(ONTAP Select* 시작) 팝업 창이 표시되면 필수 구성 요소를 검토하고 *OK*를 선택하여 계속합니다.</block>
   <block id="044e8c7d609a0b31483ad9c6588ccd58" category="admonition">대용량 인스턴스 유형으로 크기 조정하는 것은 ESXi에서만 지원됩니다.</block>
   <block id="afc299163ecc817c9d73bc5033f67218" category="admonition">각 토폴로지에 필요한 서로 다른 NIC 팀 구성 간에 변환해야 하므로 실행 중인 클러스터에서 단일 링크와 여러 링크 토폴로지 간의 변환이 지원되지 않습니다.</block>
-  <block id="8d3f7bf7a16e08794393171ba82658c1" category="list-text">ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로 등의 정보를 포함하여 ONTAP 업그레이드 절차에 대한 자세한 내용은 를 참조하십시오 <block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block>.</block>
+  <block id="4d63a206f9a467135d39dc9c9512fc9e" category="inline-link-macro">지원되는 ONTAP 업그레이드 경로</block>
+  <block id="8c3e5d2f8a26562237025f868ae58fd6" category="list-text">ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로에 대한 자세한 내용은 을 참조하십시오 <block ref="641712e0b7bbcdbd0a030cb6eba15629" category="inline-link-macro-rx"></block>.</block>
+  <block id="c6747590f95713e2f203d616751eb4ea" category="list-text"><block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block></block>
 </blocks>

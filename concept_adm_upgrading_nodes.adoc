@@ -34,7 +34,7 @@ https://mysupport.netapp.com/site/downloads["NetApp 지원 다운로드"^]
 +
 ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오.
 
-. ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로 등의 정보를 포함하여 ONTAP 업그레이드 절차에 대한 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAP 업그레이드 개요"^].
+. ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html["지원되는 ONTAP 업그레이드 경로"^].
 
 
 
@@ -52,3 +52,7 @@ ONTAP Select 9.7이 처음 설치됩니다:: 노드를 버전 9.8로 업그레�
 == VMXNET3 네트워크 드라이버를 사용합니다
 
 VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. ONTAP Select 9.4 이하 버전을 실행하는 기존 ONTAP Select 노드를 업그레이드하는 경우 네트워크 드라이버가 자동으로 업그레이드되지 않습니다. VMXNET3으로 수동으로 업그레이드해야 합니다. 업그레이드에 대한 지원은 NetApp 지원에 문의하십시오.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAP 업그레이드 개요"^]
+
