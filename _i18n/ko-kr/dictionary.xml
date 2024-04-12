@@ -3665,4 +3665,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="4d63a206f9a467135d39dc9c9512fc9e" category="inline-link-macro">지원되는 ONTAP 업그레이드 경로</block>
   <block id="8c3e5d2f8a26562237025f868ae58fd6" category="list-text">ONTAP Select 업그레이드 파일과 함께 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드합니다. 지원되는 업그레이드 경로에 대한 자세한 내용은 을 참조하십시오 <block ref="641712e0b7bbcdbd0a030cb6eba15629" category="inline-link-macro-rx"></block>.</block>
   <block id="c6747590f95713e2f203d616751eb4ea" category="list-text"><block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block></block>
+  <block id="5c4629755c5a0a5545bb649c6d58d899" category="list-text">ONTAP Select 배포 지원이 업데이트되었습니다</block>
+  <block id="2dbcb54e47dfd070743afb26077cdc91" category="list-text">9.14.1P2보다 낮은 버전의 ONTAP Select Deploy 9.14.1을 실행 중인 경우 가능한 한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>.</block>
+  <block id="2183c79114d56889f4a8854299f703a5" category="list-text">2024년 4월부터 ONTAP Select Deploy 9.13.1 은 NetApp Support 사이트에서 더 이상 제공되지 않습니다. ONTAP Select 배포 9.13.1을 실행 중인 경우 가능한 한 빨리 ONTAP Select 배포 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>.</block>
+  <block id="6e1144fb904fc4097d1a90d7908b66cc" category="paragraph">2024년 4월부터 NetApp Support 사이트에서 ONTAP Select Deploy 9.12.1을 더 이상 사용할 수 없습니다. ONTAP Select Deploy 9.12.1을 실행 중인 경우 가능한 한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>.</block>
 </blocks>
