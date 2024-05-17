@@ -9,20 +9,20 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: 9.14.1
+  - version-number: 9.15.1
     url: "/ontap-select"
+  - version-number: 9.14.1
+    url: "/ontap-select-9141"
   - version-number: 9.13.1
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
   - version-number: 9.11.1
     url: "/ontap-select-9111"
-  - version-number: 9.10.1
-    url: "/ontap-select-9101"
   langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: ONTAP Select 9.14.1 문서
+  - title: ONTAP Select 9.15.1 문서
     url: "/index.html"
   - title: 릴리즈 노트
     entries:
@@ -149,7 +149,11 @@ sidebar:
     - title: 중개자
       url: "/task_adm_mediators.html"
     - title: 클러스터
-      url: "/task_adm_clusters.html"
+      entries:
+      - title: ONTAP Select 클러스터
+        url: "/task_adm_clusters.html"
+      - title: 클러스터를 확장하거나 축소합니다
+        url: "/task_cluster_expansion_contraction.html"
     - title: 노드 및 호스트
       entries:
       - title: VM 비디오 콘솔
