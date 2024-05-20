@@ -3664,10 +3664,67 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="2183c79114d56889f4a8854299f703a5" category="list-text">2024년 4월부터 ONTAP Select Deploy 9.13.1 은 NetApp Support 사이트에서 더 이상 제공되지 않습니다. ONTAP Select 배포 9.13.1을 실행 중인 경우 가능한 한 빨리 ONTAP Select 배포 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>.</block>
   <block id="6e1144fb904fc4097d1a90d7908b66cc" category="paragraph">2024년 4월부터 NetApp Support 사이트에서 ONTAP Select Deploy 9.12.1을 더 이상 사용할 수 없습니다. ONTAP Select Deploy 9.12.1을 실행 중인 경우 가능한 한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 를 참조하십시오 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>.</block>
   <block id="0eac7bd25176d9e38db43b4181062abe" category="list-text">멀티 테넌트 키 관리자(MTKM)</block>
-  <block id="f8304478cfdeb2db287b6dcf0b36f3a8" category="summary">NetApp ONTAP Select는 VMware ESXi 또는 KVM(커널 기반 가상 시스템) 하이퍼바이저를 실행하는 다양한 일반 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.14.1에 대한 문서가 포함되어 있습니다.</block>
-  <block id="88757d212ba8ba228f561f0c84ea9ce0" category="inline-link-macro">ONTAP Select 9.14.1에 대한 고지 사항</block>
-  <block id="4de89e4b29dede514156a29be985557a" category="list-text"><block ref="4de89e4b29dede514156a29be985557a" category="inline-link-macro-rx"></block></block>
-  <block id="81884c993fa720d5bc8ac8f0f7c6dbda" category="summary">현재 릴리즈에는 ONTAP Select과 관련된 새로운 기능 또는 개선 사항이 포함되어 있지 않습니다.</block>
-  <block id="a19e9631749680eaf31525fdfd4b3709" category="paragraph">에 액세스할 수 있습니다<block ref="5cd4635ecbaa8e4a8308312c4e05dac2" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
-  <block id="314c09ddbe5ce5a2ebc071a5ba939ef6" category="sidebar">ONTAP Select 9.14.1 문서</block>
+  <block id="efacb1c7bc46252da0083e1f56cf260c" category="summary">NetApp ONTAP Select는 VMware ESXi 또는 KVM(커널 기반 가상 시스템) 하이퍼바이저를 실행하는 다양한 일반 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.15.1에 대한 문서가 포함되어 있습니다.</block>
+  <block id="5dd0f07d9d4788b8a915f8ef9a65981c" category="inline-link-macro">ONTAP Select 9.15.1에 대한 고지 사항</block>
+  <block id="4518f9d648d5f38c3a8b2bb401d25c94" category="list-text"><block ref="4518f9d648d5f38c3a8b2bb401d25c94" category="inline-link-macro-rx"></block></block>
+  <block id="3c5bdd4a077d520c4b4870fb15f37d1b" category="summary">현재 릴리즈에는 ONTAP Select에 대한 몇 가지 새로운 기능 또는 개선 사항이 포함되어 있습니다.</block>
+  <block id="f80570d561d36d2a6f83d903ac92764d" category="section-title">ONTAP Select 9.15.1</block>
+  <block id="dd543e83687ed3c39447157a0f0e1822" category="paragraph">ONTAP Select 9.15.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
+  <block id="ff49a1a2875b63e18d60b0284fd713bf" category="list-text">클러스터 확장 및 축소 지원</block>
+  <block id="e84b565f766d2b63406ea62dbdd12c66" category="list-text">ONTAP Select 9.15.1부터 클러스터 확장 및 수축이 지원됩니다.</block>
+  <block id="d535a23dc4caf42819a2764f917df8d4" category="list-text">6노드에서 8노드 클러스터로 클러스터 확장</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">자세한 정보</block>
+  <block id="46784c9ba69d72d62e5ff719f2e75e3f" category="paragraph">클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>.</block>
+  <block id="5638b273dc7505c1415d93d081293984" category="list-text">클러스터 축소 8노드-6노드 클러스터</block>
+  <block id="3fa352640216b35ee8eded7e2c07ca96" category="paragraph">클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.</block>
+  <block id="e967860b1a40b9dcdb66b252a950a240" category="inline-link">ONTAP Select 9.15.1 릴리스 정보</block>
+  <block id="5eb820f5a922021204972230d9d4d93d" category="paragraph">에 액세스할 수 있습니다<block ref="a879f440894cff34b3d87053560dcd34" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
+  <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다.</block>
+  <block id="c5f80e69da9019e045ae59cca1c9ae22" category="doc">클러스터를 확장하거나 축소합니다</block>
+  <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다. 다른 클러스터 확장 또는 축소 시나리오는 지원되지 않습니다.</block>
+  <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">이 절차는 CLI, API 또는 웹 인터페이스를 사용하여 ONTAP Select Deploy에서 시작합니다.</block>
+  <block id="412c286ae37ff7a40b56dd84c3bf196c" category="section-title">하드웨어 및 스토리지 요구 사항</block>
+  <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">클러스터 확장 및 수축 기능은 다음과 같은 방식으로 제한됩니다.</block>
+  <block id="03a645906298706d76817495f4d8708a" category="list-text">지원은 ESX 하이퍼바이저 호스트에서 생성된 클러스터로 제한됩니다. 다음 ESX 버전은 ONTAP Select 9.15.1과 호환됩니다.</block>
+  <block id="ec65581eeb2dfa95316cf6a00d2ff593" category="list-text">ESXi 8.0U2</block>
+  <block id="43629b681eab8f23e6624067ec8d1fde" category="list-text">ESXi 8.0U1</block>
+  <block id="200d1894c9fd6ae53ee1224b58c879d1" category="list-text">ESXi 8.0GA</block>
+  <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
+  <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
+  <block id="2b2045e987020e440e1d72497530fdf6" category="list-text">6노드 클러스터에서 8노드 클러스터로만 확장할 수 있습니다.</block>
+  <block id="39503511d67e0af8ddd6049c24f164f7" category="list-text">수축은 8노드 클러스터에서 6노드 클러스터로만 가능합니다.</block>
+  <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">클러스터를 확장합니다</block>
+  <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">클러스터 확장 기능을 사용하여 6노드에서 8노드 클러스터로 기존 클러스터의 크기를 늘릴 수 있습니다.</block>
+  <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">클러스터 확장 절차를 준비하기 위해 새 ESX 호스트가 인벤토리에 추가되고 새 노드의 세부 정보가 할당됩니다. 클러스터 확장 프로세스를 시작하기 전에 네트워크 사전 점검에서 선택한 내부 네트워크를 확인합니다.</block>
+  <block id="7c96df80e019ac7201d76d07cb2c8c3b" category="inline-link-macro">네트워크 연결 검사기</block>
+  <block id="4ae4de42a8fcf95f1eb770acae4690f2" category="list-text">다중 노드 클러스터를 구축할 때는 에 익숙해야 합니다 <block ref="db3262d1c88b720b4d17a260091e6a75" category="inline-link-macro-rx"></block>.</block>
+  <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">새 노드에 대한 라이센스 세부 정보가 있는지 확인합니다.</block>
+  <block id="70be200347cc17e3939c72792fe71b15" category="list-text">페이지 상단의 * Cluster * 탭을 선택하고 목록에서 원하는 클러스터를 선택합니다.</block>
+  <block id="83d473b2e8f1c324b60e13d720cac51a" category="list-text">클러스터 세부 정보 페이지에서 페이지 오른쪽에 있는 기어 아이콘을 선택하고 * 클러스터 확장 * 을 선택합니다.</block>
+  <block id="a2679fd7f07d0e73429d2f594d234f4c" category="list-text">HA 쌍 4 * 섹션으로 이동합니다.</block>
+  <block id="a178d91d9200ff6349b3f22118c06cb0" category="list-text">다음을 포함하여 4번째 HA 쌍의 고가용성(HA) 쌍 구성 세부 정보를 선택합니다.</block>
+  <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="list-text">인스턴스 유형</block>
+  <block id="a6e676c0f85b36df0562598d228a5630" category="list-text">노드 이름</block>
+  <block id="c9a8d463f626f4f28398b6c8c018fae3" category="list-text">연결된 하이퍼바이저 호스트</block>
+  <block id="60593325d9120c3997c8f9627df1070c" category="list-text">노드 IP 주소</block>
+  <block id="2e52445fb8b7773f56a2d476ede7614d" category="list-text">네트워킹 구성</block>
+  <block id="3efe5ea2c836d42be34a86ff14766d09" category="list-text">스토리지 구성(RAID 유형 및 스토리지 풀)</block>
+  <block id="b0ef8babe86043b130158076a23be483" category="list-text">Save HA Pair * 를 선택하여 구성 세부 정보를 저장합니다.</block>
+  <block id="0feca9c8f9ca7540a5f57c1669c20751" category="list-text">ONTAP 자격 증명을 입력한 다음 * 확장 클러스터 * 를 선택합니다.</block>
+  <block id="740ba937a1a632ef3c9794b633eb57cb" category="list-text">다음 * 을 선택하고 * 실행 * 을 선택하여 네트워크 사전 확인을 실행합니다.</block>
+  <block id="9f3d040cc965516d902623e208c24eb4" category="paragraph">네트워크 사전 점검은 ONTAP 클러스터 트래픽에 대해 선택한 내부 네트워크가 제대로 작동하는지 확인합니다.</block>
+  <block id="9e517b46e538766946d13c3518579521" category="list-text">클러스터 확장 프로세스를 시작하려면 * 클러스터 확장 * 을 선택하고 대화 상자에서 * 확인 * 을 선택합니다.</block>
+  <block id="04f49a59719188dc7613a53014ff9739" category="paragraph">클러스터를 확장하는 데 최대 45분이 걸릴 수 있습니다.</block>
+  <block id="50462e303bd71a5adbc649dc1f1778a5" category="list-text">여러 단계로 구성된 클러스터 확장 프로세스를 모니터링하여 클러스터가 성공적으로 확장되었는지 확인합니다.</block>
+  <block id="4f98a584f43949379b32f8cd6c99f91d" category="list-text">작업 진행 상황에 대한 정기 업데이트는 * Events * 탭을 참조하십시오. 페이지는 정기적으로 자동으로 새로 고쳐집니다.</block>
+  <block id="e6df350174b5d12142460122061720b4" category="paragraph">클러스터를 확장한 후에는 ONTAP Select 배포 구성 데이터를 백업해야 합니다.</block>
+  <block id="5a9eb2ea7b273c031f127ee246370399" category="section-title">클러스터 계약을 체결합니다</block>
+  <block id="c724f8ae06aec94fe391a5c014d22227" category="paragraph">클러스터 축소 기능을 사용하여 기존 클러스터의 크기를 8노드에서 6노드 클러스터로 줄일 수 있습니다.</block>
+  <block id="a1350246f96d12c2861aa0111c1d5369" category="paragraph">절차 중 클러스터 축소를 준비하기 위해 클러스터에서 원하는 HA 쌍의 노드가 선택됩니다.</block>
+  <block id="e1f3084dd5c5d44b681a43aa203f948d" category="list-text">클러스터 세부 정보 페이지에서 페이지 오른쪽에 있는 기어 아이콘을 선택한 다음 * Contract Cluster * 를 선택합니다.</block>
+  <block id="ea8ea8523f4b42addd79a435f0b6ff5c" category="list-text">제거하려는 모든 HA 쌍에 대한 HA 쌍 구성 세부 정보를 선택하고 ONTAP 자격 증명을 입력한 다음 * 계약 클러스터 * 를 선택합니다.</block>
+  <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">클러스터에 계약되는 데 최대 30분이 소요될 수 있습니다.</block>
+  <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">다중 단계 클러스터 수축 프로세스를 모니터링하여 클러스터가 성공적으로 수축되었는지 확인합니다.</block>
+  <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1 문서</block>
 </blocks>
