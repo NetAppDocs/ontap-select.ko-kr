@@ -3647,7 +3647,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">설치 후 ONTAP Select 배포 네트워크 구성을 변경할 수 있습니까?</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
-  <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1 이상에서는 이제 SVM DR을 최대 16개의 관계로 소스로 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 9.12.1~9.14.1과 같은 버전 + 2로 사용하도록 제한됩니다.</block>
   <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 VM(가상 머신)으로 패키징됩니다. 단일 압축 파일에는 접미사가 있습니다<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>. VM은 ONTAP Select 노드의 배포 서버 및 설치 이미지를 제공합니다.</block>
   <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">에 액세스합니다 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 로그인합니다.</block>
   <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">메뉴에서 * 다운로드 * 를 선택한 다음 드롭다운 메뉴에서 * 다운로드 * 를 선택합니다.</block>
@@ -3727,4 +3726,5 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">클러스터에 계약되는 데 최대 30분이 소요될 수 있습니다.</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">다중 단계 클러스터 수축 프로세스를 모니터링하여 클러스터가 성공적으로 수축되었는지 확인합니다.</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">ONTAP Select 9.15.1 문서</block>
+  <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1 이상에서는 이제 최대 16개의 관계로 SVM DR을 소스와 대상에서 모두 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 사용하는 버전 + 2로 제한됩니다. 예를 들어 ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.</block>
 </blocks>
