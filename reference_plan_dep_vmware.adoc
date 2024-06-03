@@ -103,6 +103,3 @@ ONTAP Select 배포는 IP 버전 4(IPv4)만 지원합니다. IP 버전 6(IPv6)�
 * 가상 시스템 배포 의 관리 LIF에 IPv4 주소를 할당해야 합니다.
 * ONTAP LIF에서 IPv6을 사용하도록 구성된 ONTAP Select 노드를 구축할 수 없습니다.
 
-
-.VMware vCenter 언어 제한
-ONTAP Select Deploy를 사용하여 Windows 서버의 vCenter에서 ESXi에서 실행되는 클러스터를 생성하는 경우 영어 버전을 사용해야 합니다. ONTAP Select 배포는 영어 이외의 버전의 Windows에서 vCenter를 지원하지 않습니다.
