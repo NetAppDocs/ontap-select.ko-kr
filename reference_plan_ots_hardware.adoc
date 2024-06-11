@@ -48,13 +48,7 @@ ONTAP Select는 다음 하이퍼바이저에 구축할 수 있습니다.
 NOTE: VMware가 동일한 버전을 계속 지원하는 한 NetApp은 ESXi의 지정된 버전에서 ONTAP Select를 지원합니다.
 
 
-NOTE: ESXi 6.5 GA 및 ESXi 6.7 GA는 공급 중지 상태에 도달합니다. 이러한 버전이 포함된 ONTAP Select 클러스터가 있는 경우 에 따라 지원되는 버전으로 업그레이드해야 합니다 https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^].
-
-
-
-=== VMware ESXi 6.5 U2 이상으로 업그레이드하십시오
-
-현재 VMware ESXi 6.5 U1에 ONTAP Select를 구축한 경우 가능한 한 빨리 ESXi 6.5 U2 이상으로 업그레이드해야 합니다. ESXi 6.5 U1을 사용하면 알려진 VMware 버그로 인해 가상 시스템 장애가 발생할 수 있습니다.
+NOTE: ESXi 6.5 GA 및 ESXi 6.7 GA가 공급 중지 상태에 도달했습니다. 이러한 버전이 포함된 ONTAP Select 클러스터가 있는 경우 에 따라 지원되는 버전으로 업그레이드해야 합니다 https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^].
 
 
 
