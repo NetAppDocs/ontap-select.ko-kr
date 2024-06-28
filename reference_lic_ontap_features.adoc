@@ -35,7 +35,6 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * NFS 를 참조하십시오
 * NVMe over TCP
 * ONTAP 멀티 테넌시 기능
-* ONTAP S3
 * SnapMirror를 참조하십시오
 * SnapRestore
 * SnapVault
@@ -55,6 +54,7 @@ NOTE: ONTAP Select 9.12.1 이상에서는 이제 최대 16개의 관계로 SVM D
 * 데이터 가용성 서비스
 * FabricPool
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
+* ONTAP S3(무료)
 * SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
 +
 ** 스냅샷 복사본을 무단 복제했습니다
@@ -68,4 +68,5 @@ NOTE: StorageGRID Webscale을 사용할 경우 FabricPool 라이센스가 필요
 
 .관련 정보
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
+* link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이센스 키"^]
 
