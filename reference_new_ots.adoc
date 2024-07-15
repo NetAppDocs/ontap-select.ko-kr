@@ -23,6 +23,7 @@ NetApp은 새로운 기능과 개선 기능을 제공하기 위해 ONTAP Select�
 
 ONTAP Select 9.15.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
 
+KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.15.1부터 RHEL(Red Hat Enterprise Linux) 9.4 및 Rocky Linux 9.4에서 KVM(커널 기반 가상 머신) 하이퍼바이저가 지원됩니다.
 클러스터 확장 및 축소 지원:: ONTAP Select 9.15.1부터 클러스터 확장 및 수축이 지원됩니다.
 +
 --
