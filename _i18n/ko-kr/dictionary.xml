@@ -3008,7 +3008,6 @@
   <block id="cdbcb12eafeb6cc1f6a058e9c52a7f8d" category="paragraph">ONTAP Select 9.13.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="58c277c116ff23ffb9879debb95b4968" category="list-text">NVMe over TCP 지원</block>
   <block id="db5f5d6e1e5a3e29724ce78258556ff1" category="list-text">ONTAP Select 9.13.1로 업그레이드할 때 TCP를 통해 NVMe를 지원할 수 있는 새 라이센스가 있어야 합니다. 이 라이선스는 버전 9.13.1에서 처음으로 ONTAP Select를 배포할 때 자동으로 포함됩니다.</block>
-  <block id="4d8daf3f51ebf7fefb4dfcf900e9b79d" category="list-text">ONTAP 9.13.1부터 VMware ESXi 8.0 GA(빌드 20513097)는 하드웨어 버전 4 이상에서 지원됩니다.</block>
   <block id="da691cb71c1f879ed7bf93a9a845601a" category="section-title">가상 머신 이미지를 다운로드합니다</block>
   <block id="8435c401e57e043b0c57edfb0a00c774" category="section-title">ONTAP Select 배포 OVA 서명을 확인합니다</block>
   <block id="ab07c13a31893a6c9ee2547e7b9df643" category="paragraph">설치 패키지를 설치하기 전에 ONTAP Select OVA(Open Virtualization Appliance) 서명을 확인해야 합니다.</block>
@@ -3728,4 +3727,7 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="bb64c7ceeafd189f9c0a2a7f1c32a914" category="list-text">ONTAP Select 9.15.1부터 RHEL(Red Hat Enterprise Linux) 9.4 및 Rocky Linux 9.4에서 KVM(커널 기반 가상 머신) 하이퍼바이저가 지원됩니다.</block>
   <block id="8719161a4dfa5d820c98457ce5ca446a" category="list-text">Red Hat Enterprise Linux 8.6, 8.7, 8.8, 9.0, 9.1의 KVM 9.2 및 9.4</block>
   <block id="50ebec14d8a39fd9e4b4813019110499" category="list-text">Rocky Linux 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3 및 9.4</block>
+  <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
+  <block id="78fb396e8c541b492002e6b94963fe83" category="list-text">ONTAP Select 9.14.1에는 VMware ESXi 8.0.2에 대한 지원이 포함되어 있습니다.</block>
+  <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">ONTAP 9.13.1부터 VMware ESXi 8.0.1 GA(빌드 20513097)는 하드웨어 버전 4 이상에서 지원됩니다.</block>
 </blocks>
