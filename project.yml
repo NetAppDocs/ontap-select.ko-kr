@@ -19,7 +19,7 @@ settings:
     url: "/ontap-select-9121"
   - version-number: 9.11.1
     url: "/ontap-select-9111"
-  langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
+  langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
   - title: ONTAP Select 9.15.1 문서
