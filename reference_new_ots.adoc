@@ -29,11 +29,11 @@ KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.15
 --
 * 6노드에서 8노드 클러스터로 클러스터 확장
 +
-클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. link:task_cluster_expansion_contraction.html#expand-the-cluster["자세한 정보"].
+클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. 1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 클러스터를 확장하는 기능은 현재 지원되지 않습니다. link:task_cluster_expansion_contraction.html#expand-the-cluster["자세한 정보"]..
 
 * 클러스터 축소 8노드-6노드 클러스터
 +
-클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. link:task_cluster_expansion_contraction.html#contract-the-cluster["자세한 정보"].
+클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. 6노드 또는 8노드 클러스터에서 1노드, 2노드 또는 4노드 클러스터로의 클러스터 수축은 현재 지원되지 않습니다. link:task_cluster_expansion_contraction.html#contract-the-cluster["자세한 정보"]..
 
 
 

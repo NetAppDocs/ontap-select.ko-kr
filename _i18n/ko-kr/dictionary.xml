@@ -3627,9 +3627,7 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="e84b565f766d2b63406ea62dbdd12c66" category="list-text">ONTAP Select 9.15.1부터 클러스터 확장 및 수축이 지원됩니다.</block>
   <block id="d535a23dc4caf42819a2764f917df8d4" category="list-text">6노드에서 8노드 클러스터로 클러스터 확장</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">자세한 정보</block>
-  <block id="46784c9ba69d72d62e5ff719f2e75e3f" category="paragraph">클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>.</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">클러스터 축소 8노드-6노드 클러스터</block>
-  <block id="3fa352640216b35ee8eded7e2c07ca96" category="paragraph">클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>.</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.</block>
   <block id="e967860b1a40b9dcdb66b252a950a240" category="inline-link">ONTAP Select 9.15.1 릴리스 정보</block>
   <block id="5eb820f5a922021204972230d9d4d93d" category="paragraph">에 액세스할 수 있습니다<block ref="a879f440894cff34b3d87053560dcd34" category="inline-link-rx"></block> 현재 버전에 대한 세부 정보를 봅니다.</block>
@@ -3637,7 +3635,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="c5f80e69da9019e045ae59cca1c9ae22" category="doc">클러스터를 확장하거나 축소합니다</block>
   <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다. 다른 클러스터 확장 또는 축소 시나리오는 지원되지 않습니다.</block>
   <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">이 절차는 CLI, API 또는 웹 인터페이스를 사용하여 ONTAP Select Deploy에서 시작합니다.</block>
-  <block id="412c286ae37ff7a40b56dd84c3bf196c" category="section-title">하드웨어 및 스토리지 요구 사항</block>
   <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">클러스터 확장 및 수축 기능은 다음과 같은 방식으로 제한됩니다.</block>
   <block id="03a645906298706d76817495f4d8708a" category="list-text">지원은 ESX 하이퍼바이저 호스트에서 생성된 클러스터로 제한됩니다. 다음 ESX 버전은 ONTAP Select 9.15.1과 호환됩니다.</block>
   <block id="ec65581eeb2dfa95316cf6a00d2ff593" category="list-text">ESXi 8.0U2</block>
@@ -3645,8 +3642,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="200d1894c9fd6ae53ee1224b58c879d1" category="list-text">ESXi 8.0GA</block>
   <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
-  <block id="2b2045e987020e440e1d72497530fdf6" category="list-text">6노드 클러스터에서 8노드 클러스터로만 확장할 수 있습니다.</block>
-  <block id="39503511d67e0af8ddd6049c24f164f7" category="list-text">수축은 8노드 클러스터에서 6노드 클러스터로만 가능합니다.</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">클러스터를 확장합니다</block>
   <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">클러스터 확장 기능을 사용하여 6노드에서 8노드 클러스터로 기존 클러스터의 크기를 늘릴 수 있습니다.</block>
   <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">클러스터 확장 절차를 준비하기 위해 새 ESX 호스트가 인벤토리에 추가되고 새 노드의 세부 정보가 할당됩니다. 클러스터 확장 프로세스를 시작하기 전에 네트워크 사전 점검에서 선택한 내부 네트워크를 확인합니다.</block>
@@ -3698,4 +3693,10 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">하이퍼바이저에 대한 소프트웨어 호환성 정보</block>
   <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 지원되는 RHEL 버전의 목록은 를 <block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>참조하십시오. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.</block>
   <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">필요한 패키지 및 기타 구성 요구 사항에 대한 자세한 내용은 를 참조하십시오<block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>.</block>
+  <block id="d62b4235cf2a29152b9bcb3eb1df59d8" category="paragraph">클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. 1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 클러스터를 확장하는 기능은 현재 지원되지 않습니다. <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>..</block>
+  <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. 6노드 또는 8노드 클러스터에서 1노드, 2노드 또는 4노드 클러스터로의 클러스터 수축은 현재 지원되지 않습니다. <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>..</block>
+  <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">하드웨어 및 스토리지 고려 사항</block>
+  <block id="04b2d3e0b04793e1eab99a7ce4905944" category="paragraph">다음 클러스터 확장 및 수축은 현재 지원되지 않습니다.</block>
+  <block id="246664f02679d184f0608a4d7824502b" category="list-text">1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 확장</block>
+  <block id="226d8636aca6bd1bdcac58203b8ddcd2" category="list-text">6노드 또는 8노드 클러스터를 1노드, 2노드 또는 4노드 클러스터로 축소</block>
 </blocks>
