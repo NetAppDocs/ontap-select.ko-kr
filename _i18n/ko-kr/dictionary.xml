@@ -3353,7 +3353,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="b2e7abe45d5aa586a8f3507497cdd9f9" category="paragraph-title">Linux 서버를 준비합니다</block>
   <block id="b09f29f89d723a464604296e2e5e07ac" category="paragraph">ONTAP Select 노드가 구축되는 각 Linux KVM 서버를 준비해야 합니다. 또한 ONTAP Select 배포 관리 유틸리티가 배포되는 서버를 준비해야 합니다.</block>
   <block id="fc8913280cdc00a30c367fb6cad82a5a" category="paragraph-title">Red Hat Enterprise Linux를 설치합니다</block>
-  <block id="68a91f25005786321a1f8d6a1ee48471" category="paragraph">ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.</block>
   <block id="4adf8d273405d567b3c04578e7587fcc" category="list-text">보안 정책으로 기본값 을 선택합니다</block>
   <block id="b7ed0ef33f8535f13a2a8c61b522db5c" category="list-text">가상화된 호스트 소프트웨어 선택 항목을 선택합니다</block>
   <block id="beb8bb5c30618e7ed13d13dae4f958bd" category="list-text">대상은 ONTAP Select에서 사용하는 RAID LUN이 아니라 로컬 부팅 디스크여야 합니다</block>
@@ -3363,42 +3362,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3738f55ea208199f5c75954580847670" category="paragraph">ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니다. 정확한 패키지 목록은 사용 중인 Linux 버전에 따라 다릅니다. 첫 번째 단계로 yum 리포지토리를 서버에서 사용할 수 있는지 확인합니다. 사용할 수 없는 경우 를 사용하여 검색할 수 있습니다<block ref="a52a983e58d14432379ef732f02ff1ab" prefix=" " category="inline-code"></block> 명령:</block>
   <block id="99965beffa3302f13c927db3818d3722" category="inline-link-macro">vSwitch 문서를 엽니다</block>
   <block id="ef81ea587a9f08c529a68f4615638a9f" category="admonition">Linux 서버 설치 중에 소프트웨어 선택을 위해 가상화된 호스트를 선택한 경우 필요한 패키지 중 일부가 이미 설치되어 있을 수 있습니다. 에 설명된 대로 소스 코드에서 openvswitch 패키지를 설치해야 할 수 있습니다 <block ref="7514235d0c1cb4fbed4568e20a4d9277" category="inline-link-macro-rx"></block>.</block>
-  <block id="e8d8655fb6a53b117137b3c4c8b513d6" category="paragraph-title">RHEL 7.7에 추가 패키지가 필요합니다</block>
-  <block id="38b05d80cfdb17c384b49b78c5779d34" category="paragraph">RHEL 7.6에 필요한 동일한 패키지 세트를 설치합니다.</block>
-  <block id="4504762947692447bf5d6197d7415a2b" category="paragraph-title">RHEL 7.6에 추가 패키지가 필요합니다</block>
-  <block id="c5ddd03bd8afc1a01dfb929571f7984c" category="paragraph">RHEL 7.6 또는 CentOS 7.6을 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.</block>
-  <block id="b3768f3042522f2ebefd687b011ef35b" category="list-text">QEMU-KVM(1.5.3-160)</block>
-  <block id="73c94f60276006addfcc246cf5694dea" category="admonition">소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.</block>
-  <block id="e7b6819ebab33d41294f76cb2ef12d89" category="list-text">libvirt(4.5.0-10)</block>
-  <block id="63d4dd1094ecc476b13197bf5bcf9d74" category="list-text">openvswitch(2.7.3)</block>
-  <block id="81bacf976bcfb2e05b1bab56d153fd53" category="list-text">virt-install(1.5.0-1)</block>
-  <block id="0af0fc62f7cd9d3b202c4fe9d734ac15" category="list-text">lshw(B.02.18-12)</block>
-  <block id="ce2f31b80fee4a220bf108c0c1c7b4c0" category="list-text">lsscsi(0.27-6)</block>
-  <block id="a72b667fcf6c87b1d9261d7fbfda5c21" category="list-text">엘소프(4.87-6)</block>
-  <block id="f2836af2ae094b6178aa55d38db1db83" category="paragraph">KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.</block>
-  <block id="e161209405816766b464900b7eaf4594" category="list-text">Fence-agent-all (4.2.1-11)</block>
-  <block id="b4bc73e8ba342f5dd4c958e1597646c9" category="list-text">LVM2 - 클러스터(2.02.180-8)</block>
-  <block id="af9008e8791f6754f7139995dffa092d" category="list-text">심장박동기(1.1.19-8)</block>
-  <block id="1d3d8cff8b4d8c56161a24798b46d75e" category="list-text">PC(0.9.165-6)</block>
-  <block id="47bf2901e81b84a3461fe6f88dc0822b" category="paragraph-title">RHEL 7.5에 추가 패키지가 필요합니다</block>
-  <block id="5e35a367894ad4778ad935a913f20591" category="paragraph">RHEL 7.5 또는 CentOS 7.5를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.</block>
-  <block id="962b918f7188b59dd7dda40036ccb244" category="list-text">QEMU-KVM(1.5.3-141)</block>
-  <block id="0829cbb8c3f5e3775b8b9b6ff12edba2" category="list-text">libvirt(3.9.0)</block>
-  <block id="828fda93ae5609ae900a74b74a329a1f" category="list-text">virt-install(1.4.1-7)</block>
-  <block id="9a85f336951f60862065a2c99a506331" category="list-text">엘소프(4.87-5)</block>
-  <block id="22520cb839fcc2ea175d9468908457de" category="list-text">Fence-agent-all (4.0.11-86)</block>
-  <block id="eaaf2c3924b5ae9f38e2888c82fffeca" category="list-text">LVM2 - 클러스터(2.02.177-4)</block>
-  <block id="63a608b8dcb6a5cbb6bc554603885f0f" category="list-text">심장박동기(1.1.18-11)</block>
-  <block id="94d2030906db727ace138dc978ae4250" category="list-text">PC(0.9.16205)</block>
-  <block id="a81ff201ea5e179ccb62ed746bf9bd3a" category="paragraph-title">RHEL 7.4에 추가 패키지가 필요합니다</block>
-  <block id="953b5a8d418e7a7571a24efdaaeffd73" category="paragraph">RHEL 7.4 또는 CentOS 7.4를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함됩니다.</block>
-  <block id="83d959bc76f3b861a116f9eea1c7a2a7" category="list-text">libvirt(3.2.0-14)</block>
-  <block id="fac13a6d19ac85eceeda764e5abcb6f8" category="list-text">lshw(B.02.18-7)</block>
-  <block id="847db2741d4d60a1941f2a32402e6128" category="list-text">엘소프(4.87-4)</block>
-  <block id="6eefc4ad705acae02bbc63fb026239ff" category="list-text">Fence-agent-all (4.0.11-66)</block>
-  <block id="e8cf539445d5c650ec492b96a3986d22" category="list-text">LVM2 - 클러스터(2.02.171-8)</block>
-  <block id="808a7f32a60e4e781435682f980ff36a" category="list-text">심장박동기(1.1.16-12)</block>
-  <block id="cb2885fb02858a21c6adb63dcfb19659" category="list-text">PC(0.9.158-6)</block>
   <block id="3fec9570e277fe5ca33bf5e5dc7cf266" category="paragraph-title">스토리지 풀 구성</block>
   <block id="4a1a2ddde34541bd47c25ab818424838" category="paragraph">ONTAP Select 스토리지 풀은 기본 물리적 스토리지를 추상화하는 논리적 데이터 컨테이너입니다. ONTAP Select가 구축된 KVM 호스트에서 스토리지 풀을 관리해야 합니다.</block>
   <block id="694bb5d3641d16eb91812f8515d06f39" category="section-title">스토리지 풀을 생성합니다</block>
@@ -3732,4 +3695,7 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">ONTAP 9.13.1부터 VMware ESXi 8.0.1 GA(빌드 20513097)는 하드웨어 버전 4 이상에서 지원됩니다.</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">원래 Deploy 가상 머신 이미지를 저장합니다.</block>
   <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">구축 구성 데이터를 원래 가상 머신으로 복구할 때는 이 절차의 뒷부분에서 원래 가상 머신 구축 이미지가 필요합니다.</block>
+  <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">하이퍼바이저에 대한 소프트웨어 호환성 정보</block>
+  <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 지원되는 RHEL 버전의 목록은 를 <block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>참조하십시오. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.</block>
+  <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">필요한 패키지 및 기타 구성 요구 사항에 대한 자세한 내용은 를 참조하십시오<block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>.</block>
 </blocks>

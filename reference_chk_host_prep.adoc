@@ -33,7 +33,7 @@ NOTE: ONTAP Select 배포 관리 유틸리티는 하이퍼바이저 호스트의
 ONTAP Select 노드가 구축되는 각 Linux KVM 서버를 준비해야 합니다. 또한 ONTAP Select 배포 관리 유틸리티가 배포되는 서버를 준비해야 합니다.
 
 .Red Hat Enterprise Linux를 설치합니다
-ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.
+ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 지원되는 RHEL 버전의 목록은 를 link:reference_plan_ots_hardware.html#software-compatibility["하이퍼바이저에 대한 소프트웨어 호환성 정보"]참조하십시오. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.
 
 * 보안 정책으로 기본값 을 선택합니다
 * 가상화된 호스트 소프트웨어 선택 항목을 선택합니다
@@ -50,81 +50,7 @@ ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니�
 
 NOTE: Linux 서버 설치 중에 소프트웨어 선택을 위해 가상화된 호스트를 선택한 경우 필요한 패키지 중 일부가 이미 설치되어 있을 수 있습니다. 에 설명된 대로 소스 코드에서 openvswitch 패키지를 설치해야 할 수 있습니다 link:https://docs.openvswitch.org/en/latest/intro/install/general/["vSwitch 문서를 엽니다"^].
 
- For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
-.RHEL 7.7에 추가 패키지가 필요합니다
-RHEL 7.6에 필요한 동일한 패키지 세트를 설치합니다.
-
-.RHEL 7.6에 추가 패키지가 필요합니다
-RHEL 7.6 또는 CentOS 7.6을 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.
-
-* QEMU-KVM(1.5.3-160)
-+
-
-NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
-
-* libvirt(4.5.0-10)
-* openvswitch(2.7.3)
-* virt-install(1.5.0-1)
-* lshw(B.02.18-12)
-* lsscsi(0.27-6)
-* 엘소프(4.87-6)
-
-
-KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
-
-* Fence-agent-all (4.2.1-11)
-* LVM2 - 클러스터(2.02.180-8)
-* 심장박동기(1.1.19-8)
-* PC(0.9.165-6)
-
-
-.RHEL 7.5에 추가 패키지가 필요합니다
-RHEL 7.5 또는 CentOS 7.5를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함되어 있습니다.
-
-* QEMU-KVM(1.5.3-141)
-+
-
-NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
-
-* libvirt(3.9.0)
-* openvswitch(2.7.3)
-* virt-install(1.4.1-7)
-* lshw(B.02.18-12)
-* lsscsi(0.27-6)
-* 엘소프(4.87-5)
-
-
-KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
-
-* Fence-agent-all (4.0.11-86)
-* LVM2 - 클러스터(2.02.177-4)
-* 심장박동기(1.1.18-11)
-* PC(0.9.16205)
-
-
-.RHEL 7.4에 추가 패키지가 필요합니다
-RHEL 7.4 또는 CentOS 7.4를 사용할 때 다음 패키지와 종속성이 설치되어 있는지 확인합니다. 각 경우에 패키지 이름 및 버전이 포함됩니다.
-
-* QEMU-KVM(1.5.3-141)
-+
-
-NOTE: 소프트웨어 RAID를 사용할 때는 버전 2.0.0을 대신 사용해야 합니다.
-
-* libvirt(3.2.0-14)
-* openvswitch(2.7.3)
-* virt-install(1.4.1-7)
-* lshw(B.02.18-7)
-* lsscsi(0.27-6)
-* 엘소프(4.87-4)
-
-
-KVM(외부 스토리지)에서 vNAS를 사용하고 있고 한 호스트에서 다른 호스트로 가상 시스템을 마이그레이션하려는 경우 다음과 같은 추가 패키지 및 종속 항목을 설치해야 합니다.
-
-* Fence-agent-all (4.0.11-66)
-* LVM2 - 클러스터(2.02.171-8)
-* 심장박동기(1.1.16-12)
-* PC(0.9.158-6)
-
+필요한 패키지 및 기타 구성 요구 사항에 대한 자세한 내용은 를 참조하십시오link:https://imt.netapp.com/matrix/#welcome["NetApp 상호 운용성 매트릭스 툴"^].
 
 .스토리지 풀 구성
 ONTAP Select 스토리지 풀은 기본 물리적 스토리지를 추상화하는 논리적 데이터 컨테이너입니다. ONTAP Select가 구축된 KVM 호스트에서 스토리지 풀을 관리해야 합니다.
