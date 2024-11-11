@@ -4,7 +4,7 @@ permalink: concept_lic_cp_operation.html
 keywords: license, licensing, capacity pools, operation details 
 summary: 용량 풀 라이센스 모델은 용량 계층 모델과 다릅니다. 각 개별 노드에 전용 스토리지 용량을 할당하는 대신 스토리지 용량을 풀에 할당하여 여러 노드 간에 공유합니다. 용량 풀 모델을 지원하기 위해 추가 구성 요소 및 프로세스가 생성되었습니다. 
 ---
-= 운영 세부 정보
+= ONTAP Select 용량 풀 라이센스 모델에 대한 운영 세부 정보
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept_perf_premium_ha_direct_ssd_96.html
 keywords: ontap select, performance 
 summary: ONTAP Select 9.6 성능 - 프리미엄 HA 직접 연결 SSD 스토리지의 성능 정보 
 ---
-= 성능: 프리미엄 HA 직접 연결 SSD 스토리지
+= ONTAP Select 9.6 성능: 프리미엄 HA 직접 연결 SSD 스토리지
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

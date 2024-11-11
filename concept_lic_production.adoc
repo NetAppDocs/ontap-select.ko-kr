@@ -4,7 +4,7 @@ permalink: concept_lic_production.html
 keywords: license, licensing, production, purchased, standard, premium, premium xl 
 summary: ONTAP Select가 귀사에 적합한지 확인한 후 프로덕션 배포를 지원하는 데 필요한 라이센스를 구입할 수 있습니다. 용량 계층 또는 용량 풀 라이센스 모델과 각 구축에 필요한 스토리지 용량을 선택해야 합니다. 
 ---
-= 운영 구축을 위해 라이센스를 구입했습니다
+= ONTAP Select은 운영 구축을 위해 라이센스를 구입했습니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

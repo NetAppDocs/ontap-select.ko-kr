@@ -4,7 +4,7 @@ permalink: reference_chk_deploy_req_info.html
 keywords: ontap select, deploy, pre-installation, vmware 
 summary: VMware 환경에 배포 관리 유틸리티를 설치하기 전에 기본 요구 사항을 검토하고 성공적인 배포를 준비합니다. 
 ---
-= 배포 유틸리티 설치에 필요한 정보
+= ONTAP Select 배포 유틸리티 설치에 필요한 정보입니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

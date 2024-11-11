@@ -4,7 +4,7 @@ permalink: concept_nw_single_multi_node.html
 keywords: ontap select, single node network configuration, multinode network configuration 
 summary: ONTAP Select는 단일 노드 및 다중 노드 네트워크 구성을 모두 지원합니다. 
 ---
-= 단일 노드 및 다중 노드 네트워크 구성
+= ONTAP Select 단일 및 다중 노드 네트워크 구성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

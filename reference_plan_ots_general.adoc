@@ -4,7 +4,7 @@ permalink: reference_plan_ots_general.html
 keywords: plan, planning, general requirements 
 summary: ONTAP Select 배포를 계획할 때 고려해야 할 몇 가지 일반적인 요구 사항이 있습니다. 
 ---
-= 일반 요구 사항 및 계획 고려 사항
+= ONTAP Select 요구사항 및 계획 수립 고려사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

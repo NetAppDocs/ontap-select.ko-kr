@@ -4,7 +4,7 @@ permalink: concept_api_transaction.html
 keywords: rest api, deploy rest api, rest, transaction, request, response, headers, input, output 
 summary: 모든 배포 API 호출은 클라이언트에 대한 관련 응답을 생성하는 배포 가상 시스템에 대한 HTTP 요청으로 수행됩니다. 이 요청/응답 쌍은 API 트랜잭션으로 간주됩니다. Deploy API를 사용하기 전에 요청을 제어하는 데 사용할 수 있는 입력 변수와 응답 출력의 내용을 숙지해야 합니다. 
 ---
-= 요청 및 응답 API 트랜잭션
+= ONTAP Select에 대한 API 트랜잭션 요청 및 응답
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

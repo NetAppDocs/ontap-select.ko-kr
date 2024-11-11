@@ -4,7 +4,7 @@ permalink: concept_lic_cp_compare_ct.html
 keywords: license, licensing, capacity pools, capacity tiers, comparing 
 summary: 용량 풀과 용량 계층 라이센스 모델 간에는 몇 가지 차이점이 있습니다. 
 ---
-= 용량 풀 및 용량 계층 라이센스 비교
+= ONTAP Select 용량 풀과 용량 계층 라이센스를 비교합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

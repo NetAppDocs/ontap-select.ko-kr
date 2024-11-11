@@ -4,7 +4,7 @@ permalink: reference_plan_best_practices.html
 keywords: plan, planning, best practices, recommendations 
 summary: ONTAP Select 배포 계획의 일부로 고려해야 하는 모범 사례가 있습니다. 
 ---
-= 모범 사례 요약
+= ONTAP Select 배포를 위한 모범 사례 요약
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

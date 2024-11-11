@@ -85,18 +85,37 @@ ONTAP Select 클러스터의 각 노드는 여러 ONTAP 기능을 사용하도�
 
 ONTAP Select에서는 여러 ONTAP 기능이 지원되지 않습니다. 대부분의 경우 이러한 기능에는 가상화된 ONTAP Select 환경에서 사용할 수 없는 특수 하드웨어가 필요합니다.
 
-* 자율 랜섬웨어 보호(ARP)
+* 자율적 랜섬웨어 방어(ARP)를 위한 자동 업데이트
++
+
+NOTE: ONTAP Select 9.16.1부터 ARP에 대한 수동 업데이트가 지원되며 NetApp 라이센스 파일(NLF)에 ARP 기능 라이센스가 포함되어 있습니다.
+
 * 클러스터 IPspace
++
 포트, 가상 LAN(VLAN) 또는 링크 집선 그룹을 추가 또는 제거하는 등 클러스터 IPspace에 대한 모든 수정 사항은 지원되지 않습니다.
-* ESXi 8.0 U3
-* Fibre Channel Fibre Channel 및 Fibre Channel over Ethernet은 지원되지 않습니다.
-* 상태 모니터링 하드웨어 기반 ONTAP 구축과 함께 사용되는 기존 상태 모니터링은 기본 하드웨어 구성 요소에 따라 다릅니다. ONTAP Select와 함께 사용되는 가상화된 환경으로 인해 상태 모니터가 활성 상태가 아닙니다.
+
+* 파이버 채널
++
+Fibre Channel 및 Fibre Channel over Ethernet은 지원되지 않습니다.
+
+* 상태 모니터링
++
+하드웨어 기반 ONTAP 구축에 사용되는 기존의 상태 모니터링은 기본 하드웨어 구성 요소에 따라 달라집니다. ONTAP Select와 함께 사용되는 가상화된 환경으로 인해 상태 모니터가 활성 상태가 아닙니다.
+
 * 인터페이스 그룹
++
 인터페이스 그룹은 지원되지 않습니다.
+
 * 멀티 테넌트 키 관리자(MTKM)
-* NIC 오프로드 지원 ONTAP Select와 함께 사용되는 가상화 환경으로 인해 NIC 오프로드 기능은 지원되지 않습니다.
+* NIC 오프로드 지원
++
+ONTAP Select와 함께 사용되는 가상화 환경으로 인해 NIC 오프로드 기능은 지원되지 않습니다.
+
 * NetApp 스토리지 암호화 드라이브
-* ONTAP 포트 속성 속도, 이중 모드 및 흐름 제어를 포함하여 ONTAP 포트의 속성을 수정하는 것은 지원되지 않습니다.
+* ONTAP 포트 속성입니다
++
+속도, 이중 및 흐름 제어를 포함한 ONTAP 포트의 속성은 수정할 수 없습니다.
+
 * 서비스 프로세서
 * SVM 마이그레이션
 * SnapLock 규정 준수
@@ -104,5 +123,4 @@ ONTAP Select에서는 여러 ONTAP 기능이 지원되지 않습니다. 대부�
 
 
 .관련 정보
-* link:reference_lic_ontap_features.html["ONTAP 기능은 기본적으로 사용하도록 설정되어 있습니다"]
-
+link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["ONTAP 기능은 기본적으로 사용하도록 설정되어 있습니다"]

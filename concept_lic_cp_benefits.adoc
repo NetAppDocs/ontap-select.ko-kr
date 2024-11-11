@@ -4,7 +4,7 @@ permalink: concept_lic_cp_benefits.html
 keywords: license, licensing, capacity pools, benefits 
 summary: 용량 계층 라이센스 모델 대신 용량 풀 라이센스 모델을 사용하면 여러 가지 이점이 있습니다. 
 ---
-= 이점 요약
+= ONTAP Select 용량 풀 라이센스 이점 요약
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference_plan_ots_mcc_sds.html 
 keywords: plan, planning, metrocluster, metrocluster sds 
-summary: MetroCluster 구축 계획의 일부로 고려해야 하는 몇 가지 ONTAP Select SDS 요구 사항이 있습니다. 
+summary: ONTAP Select 구현을 계획할 때 MetroCluster SDS에 대한 몇 가지 요구사항을 고려해야 합니다. 
 ---
-= MetroCluster SDS 구축을 위한 준비
+= ONTAP Select MetroCluster SDS 배포를 준비합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

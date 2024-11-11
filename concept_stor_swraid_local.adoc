@@ -4,7 +4,7 @@ permalink: concept_stor_swraid_local.html
 keywords: ontap select, software raid, local attached storage, protection 
 summary: 소프트웨어 RAID는 ONTAP 소프트웨어 스택 내에 구현된 RAID 추상화 계층입니다. FAS와 같은 기존 ONTAP 플랫폼 내에서 RAID 계층과 동일한 기능을 제공합니다. RAID 계층은 드라이브 패리티 계산을 수행하고 ONTAP Select 노드 내의 개별 드라이브 장애에 대한 보호를 제공합니다. 
 ---
-= 로컬 연결 스토리지를 위한 소프트웨어 RAID 서비스입니다
+= 로컬 연결 스토리지를 위한 ONTAP Select 소프트웨어 RAID 구성 서비스
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

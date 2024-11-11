@@ -4,7 +4,7 @@ permalink: reference_plan_ots_vcenter.html
 keywords: plan, planning, vmware vcenter, vcenter server, vcenter 
 summary: VMware vCenter와 관련된 몇 가지 계획 요구 사항을 고려해야 합니다. 
 ---
-= ESXi의 VMware vCenter 서버
+= ESXi의 ONTAP Select VMware vCenter Server입니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

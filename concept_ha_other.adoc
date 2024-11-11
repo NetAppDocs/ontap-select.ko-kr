@@ -4,7 +4,7 @@ permalink: concept_ha_other.html
 keywords: ontap select, ha, high availability, disk heartbeating, heartbeating, mailbox, failover, giveback 
 summary: HA 디스크 하트비팅, HA 메일박스, HA 하트비팅, HA 페일오버 및 기브백은 데이터 보호를 강화합니다. 
 ---
-= HA 추가 정보
+= ONTAP Select HA는 데이터 보호를 향상시킵니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: HA 디스크 하트비팅, HA 메일박스, HA 하트비팅, HA 페일�
 
 
 [role="lead"]
-HA 디스크 하트비팅, HA 메일박스, HA 하트비팅, HA 페일오버 및 기브백은 데이터 보호를 강화합니다.
+고가용성(HA) 디스크 하트비팅, HA 메일박스, HA 하트비팅, HA 페일오버 및 기브백 작업으로 데이터 보호 강화
 
 
 

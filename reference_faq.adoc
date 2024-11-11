@@ -4,7 +4,7 @@ permalink: reference_faq.html
 keywords: faq, frequently asked questions 
 summary: ONTAP Select에 대한 일반적인 질문에 대한 답변을 찾아보십시오. 
 ---
-= 자주 묻는 질문
+= ONTAP Select에 대해 자주 묻는 질문
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

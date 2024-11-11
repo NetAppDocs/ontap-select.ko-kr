@@ -4,7 +4,7 @@ permalink: reference_lic_ontap_features.html
 keywords: license, licensing, ontap features, default ontap features 
 summary: ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 구축할 때 각 노드에 대해 자동으로 라이센스가 부여됩니다. 그러나 일부 기능에는 별도의 라이센스가 필요합니다. 
 ---
-= ONTAP 기능
+= ONTAP 기능에 대한 ONTAP Select 지원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,8 +23,9 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 == ONTAP 기능은 기본적으로 자동으로 활성화됩니다
 
-다음 기능은 ONTAP Select에 포함되어 있으며 기본적으로 라이센스가 부여됩니다.
+다음 ONTAP 기능은 ONTAP Select에서 지원되며 기본적으로 라이센스가 부여됩니다.
 
+* ARP(자율 랜섬웨어 방어)(수동 업데이트)
 * CIFS를 선택합니다
 * 중복제거 및 압축
 * FlexCache
@@ -35,13 +36,15 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * NFS 를 참조하십시오
 * NVMe over TCP
 * ONTAP 멀티 테넌시 기능
+* ONTAP S3 를 참조하십시오
 * SnapMirror를 참조하십시오
+* S3 SnapMirror
 * SnapRestore
 * SnapVault
 * 스토리지 VM 재해 복구(SVM DR)
 +
 
-NOTE: ONTAP Select 9.12.1 이상에서는 이제 최대 16개의 관계로 SVM DR을 소스와 대상에서 모두 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 사용하는 버전 + 2로 제한됩니다. 예를 들어 ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.
+NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두를 SVM DR을 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 사용하는 버전 + 2로 제한됩니다. 예를 들어 ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.
 
 
 
@@ -51,20 +54,17 @@ NOTE: ONTAP Select 9.12.1 이상에서는 이제 최대 16개의 관계로 SVM D
 
 다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.
 
-* 데이터 가용성 서비스
 * FabricPool
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
-* ONTAP S3(무료)
 * SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
 +
 ** 스냅샷 복사본을 무단 복제했습니다
 
 
-* SyncMirror(무료)
 
 
 
-NOTE: StorageGRID Webscale을 사용할 경우 FabricPool 라이센스가 필요하지 않습니다.
+NOTE: StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
 
 .관련 정보
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]

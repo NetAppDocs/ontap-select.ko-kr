@@ -4,7 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection 
 summary: 하드웨어 RAID 컨트롤러를 사용할 수 있는 경우, ONTAP Select는 RAID 서비스를 하드웨어 컨트롤러로 이동하여 쓰기 성능 향상 및 물리적 드라이브 장애에 대한 보호를 모두 제공할 수 있습니다. 따라서 ONTAP Select 클러스터 내의 모든 노드에 대한 RAID 보호는 ONTAP 소프트웨어 RAID가 아니라 로컬로 연결된 RAID 컨트롤러에 의해 제공됩니다. 
 ---
-= 로컬 연결 스토리지를 위한 하드웨어 RAID 서비스입니다
+= ONTAP Select 로컬 연결 스토리지를 위한 하드웨어 RAID 서비스
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,6 +24,9 @@ NOTE: 물리적 RAID 컨트롤러가 기본 드라이브에 RAID 스트라이핑
 == 로컬 연결 스토리지를 위한 RAID 컨트롤러 구성
 
 ONTAP Select에 백업 스토리지를 제공하는 로컬로 연결된 모든 디스크는 RAID 컨트롤러 뒤에 있어야 합니다. 대부분의 일반 서버는 다양한 수준의 기능을 갖춘 여러 가격대에 여러 개의 RAID 컨트롤러 옵션을 제공합니다. 이 옵션의 목적은 컨트롤러에 있는 특정 최소 요구사항을 충족하는 경우에 가능한 많은 옵션을 지원하는 것입니다.
+
+
+NOTE: 하드웨어 RAID 구성을 사용하는 ONTAP Select VM에서 가상 디스크를 분리할 수 없습니다. 디스크 분리는 소프트웨어 RAID 구성을 사용하는 ONTAP Select VM에 대해서만 지원됩니다. 자세한 내용은 을 link:task_adm_replace_drives_swraid.html["ONTAP Select 소프트웨어 RAID 구성에서 장애가 발생한 드라이브를 교체합니다"] 참조하십시오.
 
 ONTAP Select 디스크를 관리하는 RAID 컨트롤러는 다음 요구 사항을 충족해야 합니다.
 

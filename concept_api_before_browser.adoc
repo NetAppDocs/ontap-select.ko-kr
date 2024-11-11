@@ -4,7 +4,7 @@ permalink: concept_api_before_browser.html
 keywords: rest api, deploy rest api, rest, access browser, before you begin 
 summary: 온라인 설명서 배포 페이지를 사용하기 전에 알아 두어야 할 몇 가지 사항이 있습니다. 
 ---
-= 브라우저를 사용하여 API에 액세스하기 전에
+= 브라우저를 사용하여 ONTAP Select 배포 API에 액세스하기 전에
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

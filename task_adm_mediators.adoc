@@ -4,7 +4,7 @@ permalink: task_adm_mediators.html
 keywords: administer, administering, web, mediators 
 summary: 각 ONTAP Select 2노드 클러스터는 노드 공유 HA 기능을 관리하는 데 도움이 되는 중재자 서비스에 의해 모니터링됩니다. 
 ---
-= 배포 중재자 서비스 관리
+= ONTAP Select Deploy Mediator 서비스를 관리합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept_stor_eff_support.html
 keywords: ontap select, storage efficiency support 
 summary: ONTAP Select는 FAS 및 AFF 어레이에 제공되는 스토리지 효율성 옵션과 유사한 스토리지 효율성 옵션을 제공합니다. 
 ---
-= 스토리지 효율성 지원
+= ONTAP Select 스토리지 효율성 지원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

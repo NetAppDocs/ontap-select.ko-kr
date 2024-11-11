@@ -4,7 +4,7 @@ permalink: concept_lic_cp_restrictions.html
 keywords: license, licensing, capacity pools, restrictions 
 summary: 용량 풀 라이센스 모델을 사용할 때 적용되는 제한 사항은 다음과 같습니다. 
 ---
-= 용량 풀 라이센스에 대한 구축 제한
+= ONTAP Select 용량 풀 라이센스에 대한 구축 제한
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

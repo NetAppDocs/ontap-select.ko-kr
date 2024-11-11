@@ -4,7 +4,7 @@ permalink: concept_usecase_private_cloud.html
 keywords: ontap select, private cloud 
 summary: ONTAP Select은 조직 내에서 하나 이상의 프라이빗 클라우드를 지원하는 데 이상적입니다. 일반적인 사용 사례는 일반 서버를 기반으로 구축된 프라이빗 클라우드에 스토리지 서비스를 제공하는 것입니다. 
 ---
-= 프라이빗 클라우드 및 데이터 센터
+= ONTAP Select는 프라이빗 클라우드 및 데이터 센터를 지원합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

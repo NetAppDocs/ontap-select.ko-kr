@@ -4,7 +4,7 @@ permalink: reference_plan_ots_networking.html
 keywords: plan, planning, networking, network, drivers, vmxnet3, cluster mtu, firewall 
 summary: ONTAP Select를 구축하기 전에 하이퍼바이저 네트워크를 올바르게 구성해야 합니다. 
 ---
-= 네트워킹 고려 사항
+= ONTAP Select 네트워킹 고려 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

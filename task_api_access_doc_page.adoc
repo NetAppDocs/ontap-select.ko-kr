@@ -4,7 +4,7 @@ permalink: task_api_access_doc_page.html
 keywords: rest api, deploy rest api, rest, deploy documentation, access, accessing 
 summary: API 문서를 표시하고 API 호출을 수동으로 발급하려면 ONTAP Select 배포 온라인 설명서 페이지에 액세스해야 합니다. 
 ---
-= 설명서 배포 페이지에 액세스합니다
+= ONTAP Select 배포 설명서 페이지에 액세스합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

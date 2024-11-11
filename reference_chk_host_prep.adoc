@@ -4,7 +4,7 @@ permalink: reference_chk_host_prep.html
 keywords: ontap select, pre-installation checklist, host preparation 
 summary: ONTAP Select 노드가 구축된 각 하이퍼바이저 호스트를 준비합니다. 호스트를 준비하는 과정에서 구축 환경을 주의 깊게 평가하여 호스트가 올바르게 구성되어 있고 ONTAP Select 클러스터 구축을 지원할 준비가 되었는지 확인합니다. 
 ---
-= 호스트 구성 및 준비 체크리스트
+= ONTAP Select 호스트 구성 및 준비 체크리스트
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

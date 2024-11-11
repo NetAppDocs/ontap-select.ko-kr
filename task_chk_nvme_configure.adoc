@@ -4,7 +4,7 @@ permalink: task_chk_nvme_configure.html
 keywords: ontap select, nvme storage, host preparation 
 summary: 소프트웨어 RAID와 함께 NVMe 드라이브를 사용하려는 경우 드라이브를 인식하도록 호스트를 구성해야 합니다. 
 ---
-= NVMe 드라이브를 사용하도록 호스트 구성
+= ONTAP Select 호스트가 NVMe 드라이브를 사용하도록 구성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

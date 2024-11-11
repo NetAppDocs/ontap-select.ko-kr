@@ -4,7 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm 
 summary: KVM 하이퍼바이저의 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
 ---
-= KVM 요구 사항
+= ONTAP Select KVM 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

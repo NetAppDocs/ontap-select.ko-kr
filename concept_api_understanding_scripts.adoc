@@ -4,7 +4,7 @@ permalink: concept_api_understanding_scripts.html
 keywords: rest api, deploy rest api, rest, python, python scripts, understanding 
 summary: 샘플 Python 스크립트를 사용하여 여러 가지 작업을 수행할 수 있습니다. 라이브 배포 인스턴스에서 스크립트를 사용하기 전에 스크립트를 이해해야 합니다. 
 ---
-= Python 스크립트를 이해합니다
+= ONTAP Select 구축을 위한 Python 스크립트를 이해합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference_plan_ots_hardware.html
 keywords: plan, planning, vmware, hardware, hardware requirements 
 summary: VMware 환경과 관련하여 고려해야 할 몇 가지 하드웨어 요구 사항 및 계획 문제가 있습니다. 
 ---
-= VMware 하이퍼바이저 및 하드웨어 고려 사항
+= ONTAP Select VMware 하이퍼바이저 및 하드웨어 고려 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -42,6 +42,8 @@ ONTAP Select는 다음 하이퍼바이저에 구축할 수 있습니다.
 * 7.0 U1, U2 및 U3C를 포함한 VMware ESXi 7.0 GA(빌드 15843807 이상
 * VMware ESXi 8.0 GA(빌드 20513097)
 * VMware ESXi 8.0 U1(빌드 21495797)
+* VMware ESXi 8.0 U2
+* VMware ESXi 8.0 U3
 
 
 

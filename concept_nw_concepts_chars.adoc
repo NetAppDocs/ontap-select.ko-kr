@@ -4,7 +4,7 @@ permalink: concept_nw_concepts_chars.html
 keywords: ontap select, networking concepts, cluster characteristics 
 summary: 먼저 ONTAP Select 환경에 적용되는 일반적인 네트워킹 개념을 숙지하십시오. 그런 다음 단일 노드 및 다중 노드 클러스터에서 사용할 수 있는 특정 특성 및 옵션을 살펴봅니다. 
 ---
-= 네트워킹: 일반 개념 및 특성
+= ONTAP Select 네트워킹 개념 및 특성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

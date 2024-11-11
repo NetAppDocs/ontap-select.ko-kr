@@ -4,7 +4,7 @@ permalink: concept_nw_physical_switch_config.html
 keywords: ontap select, upstream physical switch configuration 
 summary: 단일 스위치 및 다중 스위치 환경을 기반으로 하는 업스트림 물리적 스위치 구성 세부 정보 
 ---
-= 물리적 스위치 구성
+= ONTAP Select 물리적 스위치 구성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

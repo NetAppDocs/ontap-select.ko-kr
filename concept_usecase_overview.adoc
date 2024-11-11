@@ -4,7 +4,7 @@ permalink: concept_usecase_overview.html
 keywords: ontap select, business use case overview, deployment, storage, development and testing 
 summary: ONTAP Select는 하이퍼바이저 가상화를 통해 제공되는 고유의 유연성을 기반으로 여러 가지 유형의 애플리케이션에 적합합니다. 
 ---
-= 비즈니스 요구 및 사용 시나리오
+= ONTAP Select 비즈니스 요구사항 및 사용 시나리오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

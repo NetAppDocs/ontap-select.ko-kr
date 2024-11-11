@@ -4,7 +4,7 @@ permalink: task_cli_upgrade_deploy.html
 keywords: administer, administering, cli, deploy, upgrade deploy 
 summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 가상 시스템을 업그레이드할 수 있습니다. 
 ---
-= 배포 인스턴스를 업그레이드합니다
+= ONTAP Select 배포 인스턴스를 업그레이드합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

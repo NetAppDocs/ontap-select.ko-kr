@@ -4,7 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate 
 summary: 명령줄 인터페이스를 사용하여 배포 관리 유틸리티의 기존 인스턴스를 새 가상 시스템으로 마이그레이션할 수 있습니다. 
 ---
-= 배포 인스턴스를 새 가상 머신으로 마이그레이션합니다
+= ONTAP Select 배포 인스턴스를 새 가상 머신으로 마이그레이션합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

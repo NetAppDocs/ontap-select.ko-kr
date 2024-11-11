@@ -4,7 +4,7 @@ permalink: concept_api_async_proc.html
 keywords: rest api, deploy rest api, rest, asynchronous processing, job object 
 summary: 일부 배포 API 호출, 특히 리소스를 생성하거나 수정하는 호출은 다른 호출보다 완료하는 데 시간이 오래 걸릴 수 있습니다. ONTAP Select 배포는 오래 실행되는 이러한 요청을 비동기적으로 처리합니다. 
 ---
-= 작업 개체를 사용한 비동기 처리
+= ONTAP Select에 대한 작업 개체를 사용한 비동기 처리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

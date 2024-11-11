@@ -4,7 +4,7 @@ permalink: reference_api_script_common.html
 keywords: rest api, deploy rest api, rest, python script, common module 
 summary: 모든 Python 스크립트는 단일 모듈에서 공통 Python 클래스를 사용합니다. 
 ---
-= 공통 지원 모듈
+= 일반 지원 ONTAP Select Python 모듈
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

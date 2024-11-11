@@ -4,7 +4,7 @@ permalink: reference_initial_state.html
 keywords: install, installing, initial state, cluster initial state 
 summary: 구축된 클러스터의 초기 상태를 인식하고 필요에 따라 클러스터를 구성해야 합니다. 
 ---
-= 구축 후 클러스터의 초기 상태입니다
+= 구축 후 ONTAP Select 클러스터의 초기 상태입니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

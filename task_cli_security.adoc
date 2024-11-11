@@ -4,7 +4,7 @@ permalink: task_cli_security.html
 keywords: administer, administering, cli, security 
 summary: ONTAP Select 배포 보안의 일부로 수행할 수 있는 몇 가지 관련 작업이 있습니다. 
 ---
-= 보안
+= ONTAP Select 구축을 보호합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

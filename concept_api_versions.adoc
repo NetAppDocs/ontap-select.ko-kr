@@ -4,7 +4,7 @@ permalink: concept_api_versions.html
 keywords: rest api, deploy rest api, rest, version, versioning 
 summary: ONTAP Select 배포에 포함된 REST API에는 버전 번호가 할당됩니다. API 버전 번호는 배포 릴리스 번호와 무관합니다. 배포 릴리스에 포함된 API 버전과 이 버전이 API 사용에 어떤 영향을 줄 수 있는지 알고 있어야 합니다. 
 ---
-= API 버전 관리 배포
+= ONTAP Select 배포 API 버전 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
