@@ -26,10 +26,11 @@ ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노�
 
 * 지원은 ESX 하이퍼바이저 호스트에서 생성된 클러스터로 제한됩니다. 다음 ESX 버전은 ONTAP Select 9.15.1 이상과 호환됩니다.
 +
-** ESXi 8.0U2
-** ESXi 8.0U1
+** ESXi 8.0 U3
+** ESXi 8.0 U2
+** ESXi 8.0 U1
 ** ESXi 8.0GA
-** ESXi 7.0U3
+** ESXi 7.0 U3
 ** ESXi 7.0
 
 
