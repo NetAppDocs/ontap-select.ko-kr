@@ -2010,7 +2010,6 @@
   <block id="667aa4140034cc454b837db2fc24ce3d" category="inline-link">NetApp 상호 운용성 매트릭스 툴, window=_blank</block>
   <block id="e974ba73413c61605294fbea7a63f880" category="paragraph">을 참조하십시오<block ref="6989237bb21ab12eea7660d1d2c0793b" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">기본 하드웨어 요구 사항</block>
-  <block id="6e789a662664596fd2f867b83af8955a" category="paragraph">노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">인텔 제온 프로세서, window=_blank</block>
   <block id="fc86323f8bb43524824dfedf72c12f20" category="list-text">서버용 인텔 제온 프로세서(참조 <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 참조)</block>
   <block id="7538c6fd2c1f96ec16f31ff621c5090f" category="list-text">10GbE 2개</block>
@@ -3167,7 +3166,6 @@
   <block id="250f6d868aabeaced76663cb583769da" category="sidebar">클러스터 관리</block>
   <block id="6a66d4f800a8576eee650d6dd676dd9d" category="sidebar">REST API 사용</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">더 많은 리소스</block>
-  <block id="2cf665df8bcce3d8608ac2923c3934b2" category="sidebar">ONTAP Select 리소스 페이지 를 참조하십시오</block>
   <block id="5c7750df890d8a1ae46102a5c56d163d" category="sidebar">ONTAP Select 블로그</block>
   <block id="bafb5d4f7ed06fcf88f3e77fadecc81b" category="sidebar">ONTAP Select 커뮤니티</block>
   <block id="dd3d71b5f68ad8da8831a0b5ea514e35" category="sidebar">상호 운용성 매트릭스</block>
@@ -3754,4 +3752,41 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
   <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7.0 U3</block>
+  <block id="2541fca0ad59c8199b8bb08b5020de58" category="inline-link-macro">OVF 템플릿 구축을 위한 ONTAP Select 빠른 시작</block>
+  <block id="eccbbc66ee95decf0d7c0595d219c92b" category="paragraph"><block ref="eccbbc66ee95decf0d7c0595d219c92b" category="inline-link-macro-rx"></block></block>
+  <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.</block>
+  <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">AMD(Advanced Micro Devices) 프로세서는 ONTAP Select에서 지원되지 않습니다.</block>
+  <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가 인스턴스를 신속하게 구축할 수 있습니다.</block>
+  <block id="08aeb5678ae03a8db1f16233a4a16070" category="paragraph">OVF(Open Virtualization Format) 템플릿 배포를 위한 빠른 시작 기능을 사용하면 VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가 인스턴스를 신속하게 배포할 수 있습니다.</block>
+  <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetApp에서 일련 번호 또는 스토리지 용량 라이센스를 취득할 필요가 없습니다.</block>
+  <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">사용자 데이터에 대해 구입한 라이센스와 동일한 양의 스토리지를 할당할 수 있습니다.</block>
+  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">평가 라이센스에서 구입한 라이센스로 노드를 업그레이드할 수 없습니다.</block>
+  <block id="de68e769353f85803d50af3ad5192201" category="list-text">vCenter 계정만 사용하여 OVF 템플릿을 구축할 수 있습니다. ESXi 호스트에 직접 설치하는 것은 현재 지원되지 않습니다.</block>
+  <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">vSphere 독립형 클라이언트 또는 vSphere 웹 클라이언트(ESXi 6.5 이상에서는 유일한 옵션)를 사용하여 OVF 템플릿(ova 파일에 포함됨)을 설치해야 합니다. ONTAP Select 배포 관리 유틸리티를 사용하지 않습니다.</block>
+  <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">ONTAP Select 클러스터 호스트를 준비합니다</block>
+  <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">다음 요구 사항을 사용하여 ONTAP Select 클러스터가 구축되는 ESXi 호스트를 준비합니다. 플랫폼 설명은 VMFS-5 또는 VMFS-6 파일 시스템을 사용하여 포맷된 로컬 DAS(Direct-Attached Storage)를 사용하는 표준 또는 소형 인스턴스 유형 구성을 기반으로 합니다.</block>
+  <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXi 호스트를 준비하기 위한 요구 사항</block>
+  <block id="40500d60ce10678b5afdd4398f493978" category="paragraph"><block ref="40500d60ce10678b5afdd4398f493978" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9d35c0cb060ab36e25ffd3d93795556" category="inline-link-macro">ONTAP Select 설치 설명서</block>
+  <block id="295c8d07537fb1be04c147371b26ece5" category="paragraph">호스트 구성 옵션에 대한 자세한 내용은 를 <block ref="cd27c348e940a3727b6807628855d8fd" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="246320dc101bf0e3be5986b0320159e6" category="section-title">OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터를 구축합니다</block>
+  <block id="a50cac13360eacf7961596b190047155" category="paragraph">지원되는 64비트 ESXi 호스트 서버에서 다음 단계를 완료합니다.</block>
+  <block id="e7c78d04f4c3c4a7d36c59b9d2c2b9f7" category="list-text">NetApp 평가판 제품 프로그램 페이지로 이동하여 * ONTAP Select * 를 선택하여 ONTAP Select OVF 템플릿을 로컬 워크스테이션에 다운로드합니다.</block>
+  <block id="04b1e5dd71a31edd4beba2e075fb1a5e" category="list-text">관리 Privileges가 있는 계정을 사용하여 VMware vSphere 웹 클라이언트에 로그인합니다.</block>
+  <block id="b8d4fc60e9ceb80bf2fc078ddfdc693c" category="list-text">다음 옵션 중 하나를 사용하여 호스트를 선택합니다.</block>
+  <block id="a636f64e8e0f0ff7c201bcbe4197a1a8" category="list-text">File * &gt; * Deploy OVF Template * 을 선택합니다.</block>
+  <block id="96a3af93a31aa2d6987b7e0083ab462b" category="list-text">Datacenter * 를 선택합니다. 그런 다음 마우스 오른쪽 버튼을 클릭하고 * Deploy OVF Template * 을 선택합니다.</block>
+  <block id="e0ccc728234a1a6f0227f25e6efde9d4" category="list-text">로컬 워크스테이션에서 ONTAP Select 원본 OVA 파일을 선택한 후 * 다음 * 을 선택합니다.</block>
+  <block id="ea9ba5785c2b1398a34baf7fc0a68c67" category="list-text">OVF 템플릿 세부 정보를 검토하고 * Next * 를 선택합니다.</block>
+  <block id="9caf4332c798060a1cebc6b53f315bb7" category="list-text">EULA 세부 정보를 검토하고 * 동의 * 를 선택합니다. 그런 다음 * 다음 * 을 선택합니다.</block>
+  <block id="be18e91c73f7a7d7a9ae5462079f0ac7" category="list-text">새 가상 머신의 이름을 입력하고 * Next * 를 선택합니다.</block>
+  <block id="87d6a5bfde901ee6044d4f9ec142b4d6" category="list-text">두 개 이상의 데이터 저장소를 사용할 수 있는 경우 데이터 저장소를 선택하고 * Next * 를 선택합니다.</block>
+  <block id="44260bcf8bb9526a48d3725d7dccac06" category="list-text">Thick Provision Lazy Zeroed * 를 선택한 후 * Next * 를 선택합니다.</block>
+  <block id="d4de99256df06c0619573e5d37a5352d" category="list-text">데이터 및 관리 네트워크를 선택한 후 * Next * 를 선택합니다.</block>
+  <block id="34fcbce1c7afc6b294a2a56ad5419543" category="list-text">속성 * 페이지에서 필요한 모든 값을 입력하고 * 다음 * 을 선택합니다.</block>
+  <block id="dfe2716b8d1ea246f6e1aa9804752d1e" category="list-text">배포 세부 정보를 검토하고 * 배포 후 전원 켜기 * 를 선택합니다.</block>
+  <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">Finish * 를 선택하여 배포 프로세스를 시작합니다.</block>
+  <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">ONTAP Select 클러스터가 배포된 후에는 System Manager 또는 CLI 인터페이스를 사용하여 클러스터를 구성할 수 있습니다. 표준 ONTAP * 디스크 할당 * 작업을 사용하여 디스크를 할당해야 합니다.</block>
+  <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
+  <block id="fa0d249cd337d58b40ea3c7cc54de247" category="sidebar">OVF 템플릿 배포를 위한 빠른 시작</block>
 </blocks>

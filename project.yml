@@ -19,7 +19,7 @@ settings:
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
-  langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
+  langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
   - title: ONTAP Select 9.16.1 문서
@@ -294,6 +294,8 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: 2노드 클러스터에 대한 구축 복구
         url: "/task_cli_deploy_recover_two_node.html"
+  - title: OVF 템플릿 배포를 위한 빠른 시작
+    url: "/task_quick_start_for_ovf_template_deployments.html"
   - title: FAQ 를 참조하십시오
     url: "/reference_faq.html"
   - title: 법적 고지

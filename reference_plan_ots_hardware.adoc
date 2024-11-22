@@ -81,6 +81,9 @@ NOTE: ONTAP Select 9.9.1부터 인텔 제온 Sandy Bridge 이상을 기반으로
 * 서버용 인텔 제온 프로세서(참조 link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["인텔 제온 프로세서, window=_blank"] 참조)
 
 
+
+NOTE: AMD(Advanced Micro Devices) 프로세서는 ONTAP Select에서 지원되지 않습니다.
+
 .이더넷 구성
 클러스터 크기에 따라 지원되는 여러 이더넷 구성이 있습니다.
 

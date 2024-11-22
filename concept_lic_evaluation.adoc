@@ -54,3 +54,6 @@ ONTAP Select 평가판 클러스터를 업그레이드하여 운영 라이센스
 
 
 을 참조하십시오 link:task_adm_licenses.html["평가판 라이센스를 운영 라이센스로 변환합니다"] 를 참조하십시오.
+
+.관련 정보
+link:task_quick_start_for_ovf_template_deployments.html["OVF 템플릿 구축을 위한 ONTAP Select 빠른 시작"]

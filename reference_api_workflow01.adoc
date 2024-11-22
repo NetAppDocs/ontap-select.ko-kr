@@ -22,14 +22,6 @@ vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select �
 * 클러스터 내에서 여러 노드 또는 호스트가 사용됩니다
 * 클러스터는 구매한 라이센스가 있는 운영 환경에 구축됩니다
 * KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다
-+
-[NOTE]
-====
-** ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다.
-** ONTAP Select 9.11.1부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.
-
-
-====
 
 
 
@@ -413,3 +405,6 @@ JSON 입력(10단계):: ONTAP 관리자 계정의 암호를 입력해야 합니�
 
 --
 
+
+.관련 정보
+link:task_quick_start_for_ovf_template_deployments.html["OVF 템플릿 구축을 위한 ONTAP Select 빠른 시작"]
