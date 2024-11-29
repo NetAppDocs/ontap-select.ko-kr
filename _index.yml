@@ -26,8 +26,8 @@ indexpage:
       url: "/concept_adm_before.html"
     - title: REST API 사용
       url: "/concept_api_how_access.html"
-    - title: OVF 템플릿 배포를 위한 빠른 시작
-      url: "/task_quick_start_for_ovf_template_deployments.html"
+    - title: 클러스터의 90일 평가 인스턴스 구축
+      url: "/deploy-evaluation-ontap-select-ovf-template.html"
   - title: 더 많은 리소스
     links:
     - title: ONTAP Select 제품 라이브러리

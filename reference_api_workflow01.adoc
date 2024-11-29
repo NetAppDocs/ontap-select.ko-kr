@@ -407,4 +407,4 @@ JSON 입력(10단계):: ONTAP 관리자 계정의 암호를 입력해야 합니�
 
 
 .관련 정보
-link:task_quick_start_for_ovf_template_deployments.html["OVF 템플릿 구축을 위한 ONTAP Select 빠른 시작"]
+link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Select 클러스터의 90일 평가 인스턴스를 구축합니다"]
