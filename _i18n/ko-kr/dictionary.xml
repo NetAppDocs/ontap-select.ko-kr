@@ -1034,11 +1034,7 @@
   <block id="7df2592d21ee2d7b12cfa029e519d7b9" category="list-text">ONTAP Select 버전입니다</block>
   <block id="07c910df832eed07eccb9da18112e34b" category="list-text">호스트 준비</block>
   <block id="37d0d8277e2cec2cf18d723f103fbca0" category="list-text">ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 준비하고 라이센스 모델에 따라 필요한 스토리지 라이센스 파일을 가지고 있어야 합니다. 준비 요구 사항을 보려면</block>
-  <block id="c93ac09febb4264dc3b4e28bc4aa22ba" category="list-text">배포 웹 사용자 인터페이스에 로그인합니다.</block>
   <block id="9c3a59d6f34c8cd48494cf65ab055e67" category="inline-image-macro">물음표</block>
-  <block id="34d1b92a9bea981532796b3947d5c933" category="list-text">을 클릭합니다 <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block> 페이지의 맨 위에 있습니다.</block>
-  <block id="557b212863af34dee6642f1dd8feef4c" category="list-text">필수 구성 요소 * 를 클릭합니다.</block>
-  <block id="a08bb19599dcb78fd73e7aa3b405980f" category="list-text">아래로 스크롤하여 요구 사항을 검토하고 * OK * 를 클릭합니다.</block>
   <block id="d5b05ba2463ff6cca0078e72e50f28e7" category="list-text">사용권 파일</block>
   <block id="85341d624e9b0303539956bd22bfd4d4" category="list-text">운영 환경에 클러스터를 구축할 계획이라면 라이센스 모델을 기반으로 스토리지 라이센스 파일을 얻어야 합니다.</block>
   <block id="f0d5638b299d1abdeea7e3509c4a29b5" category="list-text">설치 및 계정 자격 증명 배포</block>
@@ -1049,31 +1045,18 @@
   <block id="f1783cedf199ea90c1cf0ff538262716" category="list-text">클러스터를 생성합니다</block>
   <block id="7b8833fb04a6b84fadcfe679b52ce68b" category="list-text">네트워크 사전 점검</block>
   <block id="caed535f5a1e318fff54ea6d8139100c" category="list-text">클러스터를 구축합니다</block>
-  <block id="4a27c1e90fe3acd696c1f0934ce7e3b5" category="admonition">페이지 맨 위에 있는 탭(클러스터, 하이퍼바이저 호스트, 관리)을 클릭하여 동일한 단계를 독립적으로 수행할 수 있습니다.</block>
   <block id="9dae84e581f54bbd3529b1a828393655" category="list-text">네트워크 검사기</block>
   <block id="18889d3b7d7412c773430265b3f7a703" category="list-text">다중 노드 클러스터를 구축할 경우 네트워크 검사기에 익숙해야 합니다.</block>
   <block id="4680945aec88d9bcced06d39ec485a67" category="list-text">클러스터를 구축한 후</block>
   <block id="55e9b658bcd6b4ca65de5ed9557f68db" category="list-text">관리자 계정(admin)을 사용하여 웹 인터페이스를 통해 배포 유틸리티에 로그인합니다.</block>
-  <block id="f419e9f320490f02ec41e0cead19dc2a" category="list-text">ONTAP Select * 시작 * 팝업 창이 표시되면 구성 사전 요구 사항이 충족되었는지 확인하고 * 확인 * 을 클릭합니다.</block>
-  <block id="ba7cc5d6bb74cdd0aaa5fe5a9bc4b4d3" category="list-text">* 시작하기 * 클러스터 시작 페이지가 표시되지 않으면 를 클릭합니다 <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block> 페이지 상단에서 * 시작하기 * 를 클릭합니다.</block>
-  <block id="5d0652261e3e13ff5041f1c875d60d9c" category="list-text">* 시작하기 * 페이지에서 * 업로드 * 를 클릭하고 로컬 워크스테이션에서 라이센스를 선택한 다음 * 열기 * 를 클릭하여 라이센스를 업로드합니다.</block>
-  <block id="3f4187941dcc4a52259a3955f138c314" category="list-text">새로 고침 * 을 클릭하고 라이센스가 추가되었는지 확인합니다.</block>
-  <block id="f11dc7320c4209cdff4f85de946666bf" category="list-text">다음 * 을 클릭하여 하이퍼바이저 호스트를 추가한 다음 * 추가 * 를 클릭합니다.</block>
-  <block id="180a2ecafc5641b9bb33d5a6fe6ba41d" category="list-text">Refresh * 를 클릭하고 호스트의 * Type * 값이 * ESX * 인지 확인합니다.</block>
   <block id="4693647f83597e4a631ffdc39034b06d" category="paragraph">제공한 계정 자격 증명이 배포 자격 증명 데이터베이스에 추가됩니다.</block>
-  <block id="b46a9a6d9c38c08d97979def3d4a6e23" category="list-text">Next * 를 클릭하여 클러스터 생성 프로세스를 시작합니다.</block>
-  <block id="a291fbe570213bb24c1d06ffc86d2dc0" category="list-text">클러스터 세부 정보 * 섹션에서 클러스터를 설명하는 데 필요한 모든 정보를 제공하고 * 완료 * 를 클릭합니다.</block>
   <block id="0f602d7fe375d87b4dfff619bb7a3b50" category="list-text">노드 설정 * 에서 노드 관리 IP 주소를 제공하고 노드에 대한 라이센스를 선택합니다. 필요한 경우 새 라이센스를 업로드할 수 있습니다. 필요한 경우 노드 이름을 변경할 수도 있습니다.</block>
   <block id="a57c05031d6102136a8bfe300ea61093" category="list-text">하이퍼바이저 * 및 * 네트워크 * 구성 제공</block>
   <block id="f1928401d0f38929a4645cc2dbff7269" category="paragraph">가상 머신 크기와 사용 가능한 기능 세트를 정의하는 3개의 노드 구성이 있습니다. 이러한 인스턴스 유형은 구매한 라이센스의 표준, 프리미엄 및 프리미엄 XL 제품에서 각각 지원됩니다. 노드에 대해 선택한 라이센스가 인스턴스 유형과 일치하거나 초과해야 합니다.</block>
   <block id="77bd5556fc873a5f14bb16bd6159b24f" category="paragraph">관리 및 데이터 네트워크와 하이퍼바이저 호스트를 선택합니다.</block>
-  <block id="3118e59890d54fc6e861b3ed19f01dd1" category="list-text">스토리지 * 구성을 제공하고 * 완료 * 를 클릭합니다.</block>
   <block id="1a61adfd179794f0468e7cc27a3731c5" category="paragraph">플랫폼 라이센스 수준 및 호스트 구성에 따라 드라이브를 선택할 수 있습니다.</block>
   <block id="83b2958f895c780b1ce04a69f29fa14f" category="list-text">클러스터의 구성을 검토하고 확인합니다.</block>
   <block id="7dce122004969d56ae2e0245cb754d35" category="inline-image-macro">편집</block>
-  <block id="fc27442e8051c88f8a185d91ced22a20" category="paragraph">를 클릭하여 구성을 변경할 수 있습니다 <block ref="cd4fada87571e8da586532fce60b382a" category="inline-image-macro-rx" type="image"></block> 를 참조하십시오.</block>
-  <block id="674ac8fe871dc102602a9bf96882a339" category="list-text">다음 * 을 클릭하고 ONTAP 관리자 암호를 입력합니다.</block>
-  <block id="6e4ee895001e74a8e30d8d23a8ef73a4" category="list-text">클러스터 생성 프로세스를 시작하려면 * 클러스터 생성 * 을 클릭하고 팝업 창에서 * 확인 * 을 클릭합니다.</block>
   <block id="aa28e7538205e834e26c77f5630f8893" category="list-text">여러 단계의 클러스터 생성 프로세스를 모니터링하여 클러스터가 성공적으로 생성되었는지 확인합니다.</block>
   <block id="037cb8cf634438a48c4a376dd2eaecea" category="paragraph">페이지는 정기적으로 자동으로 새로 고쳐집니다.</block>
   <block id="bd5ae2e61e1784e8eadc165e6029ecf8" category="summary">ONTAP Select 배포 보안의 일부로 수행할 수 있는 몇 가지 관련 작업이 있습니다.</block>
@@ -2082,7 +2065,6 @@
   <block id="620e81c66c131f0b1e414614fed0e418" category="list-text">네트워킹 구성 생성</block>
   <block id="cea548261425f3d897f63b97e936d640" category="list-text">집계 레이아웃</block>
   <block id="c644c0897d8dc8d07dc010b0a5d1b341" category="paragraph">ONTAP Select 클러스터 구축의 일부로 스토리지 용량이 있는 라이센스 파일을 설치하지 않기로 결정한 경우, 구매한 라이센스로 실행 중인 클러스터의 유예 기간이 만료되기 전에 라이센스 파일을 구입하여 설치해야 합니다.</block>
-  <block id="92d7efa0a9c4eca7052897e58341d0b6" category="paragraph">Deploy 관리 유틸리티에서 생성된 데이터 스페어 디스크가 사용 가능한 데이터 저장소 공간(예: pool0 및 Pool1)의 각 ONTAP Select 노드에 있습니다. 다중 노드 클러스터에서 데이터에 대한 고가용성을 구현하려면 이러한 스페어를 사용하여 미러링된 애그리게이트를 만들어야 합니다.</block>
   <block id="167b2e8c89f5ceb184efcaf133c27779" category="paragraph">명령줄 인터페이스를 사용하여 필요에 따라 가상 시스템 배포 관리자 계정의 암호를 변경할 수 있습니다.</block>
   <block id="6946015929ad4f656738c88a1535f3e0" category="list-text">관리자 계정을 사용하여 배포 유틸리티 CLI에 로그인합니다.</block>
   <block id="79f41a0e0ccd4b8ecf18041e9a81199d" category="list-text">비밀번호 변경: 비밀번호 수정</block>
@@ -2914,24 +2896,16 @@
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS 배치 클러스터 새로 고침이 오류와 함께 실패합니다</block>
   <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP 관리자 계정에 대한 역할 및 권한을 제한하면 ONTAP Select 배포에서 클러스터를 관리하는 기능이 제한될 수 있습니다. 자세한 내용은 KB 문서를 참조하십시오 <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">기본 애그리게이트의 RPO 0(최신) 복사본을 제공하기 위해 미러링된 애그리게이트는 존재하지만, 기본 애그리게이트에 대해 여유 공간이 부족하지 않도록 주의해야 합니다. 운영 애그리게이트에서 공간 부족 조건은 ONTAP이 스토리지 기브백의 기준선으로 사용되는 일반 스냅샷 복사본을 삭제할 수 있습니다. 이는 클라이언트 쓰기를 수용하도록 설계된 대로 작동합니다. 하지만 페일백에서 공통 스냅샷 복사본이 없기 때문에 ONTAP Select 노드가 미러링된 애그리게이트의 전체 기본을 수행해야 합니다. 이 작업은 비공유 환경에서 상당한 시간이 걸릴 수 있습니다.</block>
-  <block id="2d27e76da02804de2afe9d209e5cbb1c" category="admonition">최적의 스토리지 성능과 가용성을 위해 미러링된 애그리게이트에 대해 최소 20%의 여유 공간을 유지하는 것이 좋습니다. 미러링되지 않은 애그리게이트의 권장사항은 10%이지만, 파일 시스템이 증분 변경을 흡수하기 위해 추가 10%의 공간을 사용할 수 있습니다. 증분식으로 변경하면 ONTAP의 COW Snapshot 기반 아키텍처로 인해 미러링된 애그리게이트의 공간 활용률이 증가합니다. 이러한 모범 사례를 준수하지 않을 경우 성능에 부정적인 영향을 미칠 수 있습니다.</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">MetroCluster SDS는 프리미엄 기능이며 프리미엄 라이센스 또는 프리미엄 XL 라이센스가 필요합니다. Premium 라이센스는 소규모 및 중간 규모 VM과 HDD 및 SSD 미디어 생성을 모두 지원합니다. Premium XL 라이센스도 NVMe 드라이브 생성을 지원합니다.</block>
   <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">VMware vSphere vSwitch 구성</block>
   <block id="8562cdbdbba76b21c630f16efd9cf0cd" category="list-text">인벤토리에 호스트를 추가합니다</block>
   <block id="dd2d1f8e815a8070f320c0a14ed24f71" category="paragraph">ONTAP Select 배포 웹 사용자 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 배포할 수 있습니다.</block>
   <block id="5287736167b026a88e404d8ebf5a4615" category="paragraph">을 참조하십시오 <block ref="6dd97e1bd4c3fafba8bd8a1033c5617c" category="inline-link-macro-rx"></block> 클러스터 구축 준비 배포 관리를 설치하고 초기에 구성해야 합니다(암호, AutoSupport 및 vCenter).</block>
   <block id="3c67dfd58666f1caf15b0490aaa8b0fc" category="paragraph">운영 구축을 위해 하나 이상의 노드가 있는 ONTAP Select 클러스터가 생성됩니다.</block>
-  <block id="688b22352a3e9f8c2d13a096f7e721fb" category="paragraph">다음 단계는 단일 노드 클러스터를 생성할지 아니면 다중 노드 클러스터를 생성할지에 따라 다릅니다.</block>
   <block id="c29c0fa60d66b44a13904899d8712c68" category="open-title">다중 노드 클러스터</block>
-  <block id="1c9615c8466b4b5438d388b4200a58b4" category="list-text">Welcome to ONTAP Select* 팝업 창이 표시되면 구성 필수 구성 요소가 충족되었는지 확인하고 * OK * 를 클릭합니다.</block>
-  <block id="736cb4ef7019568859d8e044e044c906" category="list-text">* 시작하기 * 페이지에서 * 업로드 * 를 클릭하고 로컬 워크스테이션에서 라이센스를 선택한 다음 * 열기 * 를 클릭하여 라이센스를 업로드합니다. 두 번째 라이센스를 추가하려면 이 과정을 반복합니다.</block>
-  <block id="663e3ab8cb2a9c950e625cc8e58cc007" category="list-text">새로 고침 * 을 클릭하고 라이센스가 추가되었는지 확인합니다.</block>
-  <block id="390100b77c52acdfcd83e4a92be2c51f" category="list-text">다음 * 을 클릭하여 두 개의 하이퍼바이저 호스트를 추가한 다음 * 추가 * 를 클릭합니다.</block>
-  <block id="6c5e52865ab96c25cdda81fff9412d0f" category="list-text">클러스터 세부 정보 * 섹션에서 * 클러스터 크기 * 로 * 2 노드 클러스터 * 를 선택하고 클러스터를 설명하는 데 필요한 모든 정보를 제공한 다음 * 완료 * 를 클릭합니다.</block>
   <block id="87f7f104547967da3e1d18965e33ecbe" category="list-text">노드 설정 * 에서 노드 관리 IP 주소를 제공하고 각 노드에 대한 라이센스를 선택합니다. 필요한 경우 새 라이센스를 업로드할 수 있습니다. 필요한 경우 노드 이름을 변경할 수도 있습니다.</block>
   <block id="c2ec94d47c341f2cb886dfa96e0ac4bb" category="paragraph">가상 머신 크기와 사용 가능한 기능 세트를 정의하는 3개의 노드 구성이 있습니다. 이러한 인스턴스 유형은 구매한 라이센스의 표준, 프리미엄 및 프리미엄 XL 제품에서 각각 지원됩니다. 노드에 대해 선택한 라이센스는 인스턴스 유형과 일치하거나 초과해야 합니다.</block>
   <block id="5bcde1d421c75145a52950096b7fb58f" category="paragraph">하이퍼바이저 호스트와 관리, 데이터 및 내부 네트워크를 선택합니다.</block>
-  <block id="48c8bfc451162cecf207d3586032c355" category="list-text">다음 * 을 클릭하고 * 실행 * 을 클릭하여 네트워크 사전 검사를 실행합니다. 이는 ONTAP 클러스터 트래픽용으로 선택된 내부 네트워크가 올바르게 작동하는지 검증합니다.</block>
   <block id="5ca1e08722935cc52d1e20fcea7b5428" category="paragraph">클러스터를 생성하는 데 최대 45분이 걸릴 수 있습니다.</block>
   <block id="8e8ec233d7d8b1670dc404b61b73a0b1" category="list-text">여러 단계로 구성된 클러스터 생성 프로세스를 모니터링하여 클러스터가 성공적으로 생성되었는지 확인합니다.</block>
   <block id="d92261c550ee327019eb3a3ca7a78e30" category="paragraph">ONTAP Select AutoSupport 기능이 구성되어 있는지 확인한 다음 ONTAP Select 배포 구성 데이터를 백업해야 합니다.</block>
@@ -3788,4 +3762,32 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8ca84893979a849d9d51eac372cc15a9" category="inline-link-macro">ONTAP Select 클러스터의 90일 평가 인스턴스를 구축합니다</block>
   <block id="cb5e9657db1221bb8eb7f5be5287d604" category="paragraph"><block ref="cb5e9657db1221bb8eb7f5be5287d604" category="inline-link-macro-rx"></block></block>
   <block id="ac951fbceb082ef32560a291949a4015" category="sidebar">클러스터의 90일 평가 인스턴스 구축</block>
+  <block id="ad152885aafb9bc53df5849eb7ca2f93" category="paragraph">Deploy 관리 유틸리티는 사용 가능한 데이터 저장소 공간(예: pool0 및 Pool1)에서 각 ONTAP Select 노드에 데이터 스페어 디스크를 생성합니다. 다중 노드 클러스터에서 데이터에 대한 고가용성을 구현하려면 이러한 스페어를 사용하여 미러링된 애그리게이트를 만들어야 합니다.</block>
+  <block id="8e5126a524085c2d504ecc6a9ee619cb" category="admonition">고가용성 테이크오버는 데이터 애그리게이트를 미러링된 애그리게이트로 구성한 경우에만 지원됩니다.</block>
+  <block id="5da001c2cdc95a4311e28cf37673f6ba" category="admonition">스토리지 성능과 가용성을 최적화하기 위해 미러링된 애그리게이트를 20% 이상 사용할 수 있는 공간을 NetApp은 유지하는 것이 좋습니다. 미러링되지 않은 애그리게이트의 권장사항은 10%이지만 파일 시스템이 증분 변경 사항을 흡수하기 위해 공간의 추가 10%를 사용할 수 있습니다. 증분식으로 변경하면 ONTAP의 COW Snapshot 기반 아키텍처로 인해 미러링된 애그리게이트의 공간 활용률이 증가합니다. 이러한 모범 사례를 준수하지 않을 경우 성능에 부정적인 영향을 미칠 수 있습니다. 고가용성 테이크오버는 데이터 애그리게이트를 미러링된 애그리게이트로 구성한 경우에만 지원됩니다.</block>
+  <block id="40164cee4e237bb78398a5485589b913" category="list-text">배포 웹 UI에 로그인합니다.</block>
+  <block id="a46f1a6ef7f27e34e2b1ade44c188257" category="list-text">페이지 위쪽에서 을 선택합니다<block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="fe8dec8b217b332b88e66ecdf5472b01" category="list-text">필수 조건 * 을 선택합니다.</block>
+  <block id="3929bbc1e55fa3a638006eb8e6566b4d" category="list-text">아래로 스크롤하여 요구 사항을 검토하고 * OK * 를 선택합니다.</block>
+  <block id="1339b9f22cb64ff9975ba4df2d3c543b" category="admonition">페이지 맨 위에 있는 탭(클러스터, 하이퍼바이저 호스트, 관리)을 선택하여 동일한 단계를 독립적으로 수행할 수 있습니다.</block>
+  <block id="f79319ec1d7b82161a58de3096cafdd0" category="paragraph">다음 단계는 단일 노드 클러스터를 생성할지 아니면 다중 노드 클러스터를 생성할지에 따라 다릅니다. 다중 노드 클러스터에는 2, 4, 6 또는 8개의 노드가 있을 수 있습니다.</block>
+  <block id="555e1ae22bd894e4a9fe23fc5bb1ca5e" category="list-text">Welcome to ONTAP Select* 팝업 창이 표시되면 구성 필수 구성 요소가 충족되었는지 확인하고 * OK * 를 선택합니다.</block>
+  <block id="1ade53760ce0b2b9ced3db48b79b4e51" category="list-text">Getting Started * cluster launch 페이지가 표시되지 않으면 페이지 맨 위에서 을 선택하고 <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block>* Getting Started * 를 선택합니다.</block>
+  <block id="820d1873bef6998cbee232163b828a57" category="list-text">시작하기 * 페이지에서 * 업로드 * 를 선택한 다음 로컬 워크스테이션에서 라이센스를 선택하고 * 열기 * 를 선택하여 라이센스를 업로드합니다.</block>
+  <block id="68488b2b0b0bac78cf8e946ef52da267" category="list-text">새로 고침 * 을 선택하고 라이센스가 추가되었는지 확인합니다.</block>
+  <block id="3d549ad86001c792e0804733ec4c2957" category="list-text">하이퍼바이저 호스트를 추가하려면 * 다음 * 을 선택하고 * 추가 * 를 선택합니다.</block>
+  <block id="d44b6331867f2132b1d71fa39b6807b4" category="list-text">새로 고침 * 을 선택하고 호스트에 대한 * 유형 * 값이 * ESX * 인지 확인합니다.</block>
+  <block id="c62cb76848266877f290be96b3ff294e" category="list-text">Next * 를 선택하여 클러스터 생성 프로세스를 시작합니다.</block>
+  <block id="6c7b66882eb92b081bda7b0b837ecadc" category="list-text">클러스터 세부 정보 * 섹션에서 클러스터를 설명하는 데 필요한 모든 정보를 제공하고 * 완료 * 를 선택합니다.</block>
+  <block id="e1c524d61c650626841b4dcb765c3916" category="list-text">스토리지 * 구성을 제공하고 * 완료 * 를 선택합니다.</block>
+  <block id="aaa33d34d1d725c0a59b5dc1da1a9741" category="paragraph">해당 섹션에서 을 선택하여 구성을 변경할 수 <block ref="cd4fada87571e8da586532fce60b382a" category="inline-image-macro-rx" type="image"></block>있습니다.</block>
+  <block id="83cce49c4543a6bd5a93689ecad56e5e" category="list-text">다음 * 을 선택하고 ONTAP 관리자 암호를 입력합니다.</block>
+  <block id="d66205342799ff313cc08b6f66303456" category="list-text">클러스터 생성 프로세스를 시작하려면 * 클러스터 생성 * 을 선택하고 팝업 창에서 * 확인 * 을 선택합니다.</block>
+  <block id="9108f18e4fb1ca838b140d2c60144a07" category="list-text">Welcome to ONTAP Select* 팝업 창이 표시되면 구성 필수 구성 요소가 충족되었는지 확인하고 * OK * 를 선택합니다.</block>
+  <block id="875185b48917f696df4ff8fa2783728c" category="list-text">시작하기 * 페이지에서 * 업로드 * 를 선택하고 로컬 워크스테이션에서 라이센스를 선택한 다음 * 열기 * 를 선택하여 라이센스를 업로드합니다. 를 반복하여 라이센스를 추가합니다.</block>
+  <block id="7b22f8bd9968f64a1c7b9264a85c020c" category="list-text">새로 고침 * 을 선택하고 라이센스가 추가되었는지 확인합니다.</block>
+  <block id="7c5fd8d9b8b6482272535e13665a25a8" category="list-text">모든 하이퍼바이저 호스트를 추가하려면 * Next * 를 선택하고 * Add * 를 선택합니다.</block>
+  <block id="944a1b1080e2860bd56c15282a8e476e" category="list-text">클러스터 세부 정보 * 섹션에서 원하는 * 클러스터 크기 * 를 선택하고 클러스터를 설명하는 데 필요한 모든 정보를 제공한 다음 * 완료 * 를 선택합니다.</block>
+  <block id="8b5ceafca01d3a14f09a0d742cbb2cfb" category="list-text">다음 * 을 선택하고 * 실행 * 을 선택하여 네트워크 사전 점검을 실행합니다. 이는 ONTAP 클러스터 트래픽용으로 선택된 내부 네트워크가 올바르게 작동하는지 검증합니다.</block>
+  <block id="2735f745a89477a2abc1f435e606bde3" category="list-text">클러스터 생성 프로세스를 시작하려면 * 클러스터 생성 * 을 선택하고 팝업 창에서 * 확인 * 을 선택합니다.</block>
 </blocks>
