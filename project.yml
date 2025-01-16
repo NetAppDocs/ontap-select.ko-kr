@@ -262,8 +262,6 @@ sidebar:
         url: "/reference_api_script_common.html"
       - title: 클러스터 노드 크기 조정
         url: "/reference_api_script_resize.html"
-  - title: Ansible을 통한 자동화
-    url: "/concept_automate_ansible.html"
   - title: CLI를 사용합니다
     entries:
     - title: SSH를 사용하여 로그인합니다
