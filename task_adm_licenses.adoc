@@ -4,7 +4,7 @@ permalink: task_adm_licenses.html
 keywords: administer, administering, web, licenses 
 summary: ONTAP Select 라이센스 관리의 일부로 수행할 수 있는 몇 가지 관련 작업이 있습니다. 
 ---
-= ONTAP Select 라이센스
+= ONTAP Select 라이센스 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

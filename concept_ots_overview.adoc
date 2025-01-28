@@ -51,7 +51,7 @@ NOTE: 배포 관리 유틸리티에 별도의 버전 번호가 할당되지 않�
 
 == 일반적인 구축 예
 
-다음 그림에서는 4노드 ONTAP Select 클러스터를 구축하고 지원하는 데 사용되는 ONTAP Select 배포 관리 유틸리티를 보여 줍니다. Deploy 유틸리티 및 ONTAP Select 노드는 전용 하이퍼바이저 호스트에서 별도의 가상 머신으로 실행됩니다.
+다음 그림에서는 4노드 ONTAP Select 클러스터를 구축하고 지원하는 데 사용되는 NetApp ONTAP Select Deploy 관리 유틸리티를 보여 줍니다. Deploy 유틸리티 및 ONTAP Select 노드는 전용 하이퍼바이저 호스트에서 별도의 가상 머신으로 실행됩니다.
 
 image:ots_architecture.png["에서는 Deploy 관리 유틸리티를 사용하여 생성된 ONTAP Select 4노드 클러스터를 보여 줍니다."]
 

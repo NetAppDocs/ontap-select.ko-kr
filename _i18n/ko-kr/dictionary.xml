@@ -134,7 +134,6 @@
   <block id="04ad7df80604af0ba0f4b5923ab1f2ae" category="list-text">운영 환경에 구축된 각 ONTAP Select 클러스터에 대해 용량 계층 또는 용량 풀 라이센스 모델을 선택해야 합니다. 자세한 내용은 _License_ 섹션을 참조하십시오.</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">관련 정보</block>
   <block id="680e9e82137091017ba19fdaa5193e04" category="list-text"><block ref="680e9e82137091017ba19fdaa5193e04" category="inline-link-macro-rx"></block></block>
-  <block id="8b60e6d501896a426a20e22fc6479aec" category="summary">성능은 하드웨어 구성에 따라 다릅니다.</block>
   <block id="5def88536d2a69b4424953a923e823a2" category="list-text">* 코어 주파수 *. 일반적으로 더 높은 주파수가 권장됩니다.</block>
   <block id="1f4e4fadae7f6d95c4d2c58cfac9416f" category="list-text">* 단일 소켓과 멀티소켓 * 비교. ONTAP Select는 멀티소켓 기능을 사용하지 않지만 멀티소켓 구성을 지원하기 위한 하이퍼바이저 오버헤드는 전체 성능의 어느 정도 편차를 차지합니다.</block>
   <block id="3e6023e5f07c1e79e542af89201e0b4a" category="list-text">* RAID 카드 구성 및 관련 하이퍼바이저 드라이버 *. 하이퍼바이저에서 제공하는 기본 드라이버를 하드웨어 공급업체 드라이버로 교체해야 할 수 있습니다.</block>
@@ -1428,14 +1427,11 @@
   <block id="8b3398557c7fb55b263bf52bece82b68" category="doc">평가판 라이센스</block>
   <block id="e009f07bc1785009a3ceb83036990929" category="section-title">라이센스 특성</block>
   <block id="11731b987dc6227f75478145446eec49" category="paragraph">ONTAP Select 평가판 라이센스의 특징은 다음과 같습니다.</block>
-  <block id="1a722f6211174d2c13dea99241228cdd" category="list-text">스토리지 용량이 있는 운영 라이센스는 필요하지 않습니다</block>
   <block id="da43be3a437b4b11176af278d2bf65e4" category="list-text">노드 일련 번호는 20자리이며 ONTAP Select 배포에서 자동으로 생성됩니다</block>
-  <block id="d81334460101f9ea4e0446684836ab2c" category="paragraph">(NetApp에서 직접 획득하지 않음)</block>
   <block id="b8c2c21a1451d44d469c74b3bc603f96" category="list-text">라이선스에서 제공하는 평가 기간은 최대 90일입니다</block>
   <block id="ad49b216aa656d515b04dd8c523873dd" category="list-text">각 노드에 할당된 최대 스토리지는 운영 라이센스와 동일합니다</block>
   <block id="238908176e0b205e68cd2d9e0c4972e5" category="paragraph">ONTAP Select 평가판 클러스터를 업그레이드하여 운영 라이센스를 사용할 수 있습니다. 다음과 같은 제한 사항을 숙지해야 합니다.</block>
   <block id="60c8e16d600bd89fdcfca7dd31b63260" category="list-text">라이센스 업그레이드를 수행하려면 배포 관리 유틸리티를 사용해야 합니다</block>
-  <block id="1e2f74556f8f29bf17e0d81fdf7f56ab" category="list-text">용량 계층 라이센스를 사용할 수 있지만 용량 풀 라이센스는 지원되지 않습니다</block>
   <block id="040571bf34446f7204162544612cd237" category="list-text">각 노드에는 클러스터 크기에 따라 운영 라이센스에 필요한 최소 용량을 지원할 수 있는 충분한 스토리지가 할당되어 있어야 합니다</block>
   <block id="b00fa0d79083a8d6eae4f833835c1cda" category="doc">ONTAP Select vNAS 요구 사항</block>
   <block id="aa5960e278cc090ee09a54daeb69b04f" category="section-title">기본 요구 사항 및 제한 사항</block>
@@ -1989,7 +1985,6 @@
   <block id="440776946e3349ff3266a8cf25bef605" category="section-title">ONTAP Select 배포 관리 유틸리티</block>
   <block id="deeb67d546017625d12dfbcf3d817a5c" category="paragraph">배포 관리 유틸리티는 별도의 Linux 가상 시스템으로 패키지되어 설치됩니다. 이 유틸리티를 사용하여 운영 환경에 ONTAP Select 클러스터를 구축해야 합니다. 현재 버전의 ONTAP Select 노드 이미지는 Deploy 유틸리티와 함께 번들로 제공됩니다.</block>
   <block id="d69f8aaae124c9269620ba7ca5678c34" category="section-title">일반적인 구축 예</block>
-  <block id="60d804a6b011555fd729bcd0c5e206da" category="paragraph">다음 그림에서는 4노드 ONTAP Select 클러스터를 구축하고 지원하는 데 사용되는 ONTAP Select 배포 관리 유틸리티를 보여 줍니다. Deploy 유틸리티 및 ONTAP Select 노드는 전용 하이퍼바이저 호스트에서 별도의 가상 머신으로 실행됩니다.</block>
   <block id="3163bfc32e34eb9c2f84e4c7a1535111" category="inline-image-macro">에서는 Deploy 관리 유틸리티를 사용하여 생성된 ONTAP Select 4노드 클러스터를 보여 줍니다.</block>
   <block id="3e69161d02590dc69114626444a3d815" category="paragraph"><block ref="3e69161d02590dc69114626444a3d815" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f6d0a856320802e878fb73629ca6582d" category="paragraph">하드웨어 기반 ONTAP와 ONTAP Select는 모두 엔터프라이즈급 스토리지 솔루션을 제공합니다. 그러나 서로 다른 방식으로 설계 및 구현되므로 각각 다른 비즈니스 요구 사항과 사용 시나리오를 처리할 수 있습니다. ONTAP Select 배포를 계획하기 전에 플랫폼 간의 주요 차이점을 숙지해야 합니다.</block>
@@ -3290,7 +3285,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">배포 VM의 IP 주소입니다</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">vSphere를 사용하는 경우 Deploy OVF template Wizard에는 네트워크 구성을 포함한 모든 구축 구성 정보를 제공하는 양식이 포함되어 있습니다. 그러나 이 양식을 사용하지 않도록 선택한 경우에는 배포 VM의 콘솔을 사용하여 네트워크를 구성할 수 있습니다.</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">수행할 단계는 ESXi 하이퍼바이저를 사용하는지 KVM 하이퍼바이저를 사용하는지에 따라 다릅니다.</block>
-  <block id="41c929e54fb793fb7a784130ebd7c7b1" category="list-text">VM이 배포된 후 새 VM을 선택하고 구축 마법사에 입력한 내용에 따라 VM의 전원이 켜져 있지 않으면 전원을 켭니다.</block>
   <block id="1c2f49da17d54e224e8288edcb35fd8b" category="list-text">필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.</block>
   <block id="e24d94772b7fb552cdad8786d3972fe1" category="list-text">정적 IP 구성을 정의하려면 * n * 을 입력하고, DHCP를 사용하려면 * y * 를 입력하고 * Enter * 를 선택합니다.</block>
   <block id="64c8e1a4f8f739423fd7163b603a4b32" category="list-text">Linux 서버에서 CLI에 로그인합니다.</block>
@@ -3561,7 +3555,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="38a6a854a485660aa1ba2f3d554e2bfe" category="paragraph">평가 클러스터를 구축하고 지원할 때는 다음과 같은 몇 가지 사항을 고려해야 합니다.</block>
   <block id="9ccdbbc209e0eddfaf9f0b5a4154a78d" category="list-text">평가 목적으로만 클러스터를 사용할 수 있습니다. 운영 환경에서 평가 라이센스가 있는 클러스터를 사용하면 안 됩니다.</block>
   <block id="b559f8a2bbcf90e70f60847fb3cce85f" category="list-text">각 호스트를 구성할 때는 다음과 같이 ONTAP Select Deploy 관리 유틸리티를 사용해야 합니다.</block>
-  <block id="1b2bebf50d8caf7cae03b0a936752188" category="list-text">일련 번호를 제공하지 마십시오</block>
   <block id="f5010a0b3197d474a3b4618b60c0fd03" category="list-text">평가판 라이센스를 사용하도록 구성합니다</block>
   <block id="21f27b191f1f034aa81e5f786bf9829c" category="doc">ONTAP Select에 대한 플랫폼 라이센스 오퍼링 이해</block>
   <block id="1b1ede8baae6a15d3ba60611103509a4" category="doc">ONTAP Select은 운영 구축을 위해 라이센스를 구입했습니다</block>
@@ -3609,7 +3602,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">ONTAP Select 클러스터를 생성하기 위한 스크립트에 대한 JSON</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">ONTAP Select 노드 라이센스를 추가하기 위한 스크립트입니다</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">ONTAP Select 클러스터를 생성하기 위한 스크립트</block>
-  <block id="41cfd9e48a1b6c66998391efe14f06f2" category="doc">일반 지원 ONTAP Select Python 모듈</block>
   <block id="d066221405020e2f85c198e0b44e228b" category="doc">ONTAP Select 클러스터를 삭제하기 위한 스크립트입니다</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">ONTAP Select 클러스터 노드의 크기를 조정하는 스크립트</block>
   <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">워크플로우 1: ESXi에서 ONTAP Select 단일 노드 평가 클러스터를 생성합니다</block>
@@ -3761,4 +3753,22 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="e0d52f0658828de62020550252885d55" category="admonition">ONTAP Select 클러스터 구축의 일부로 데이터 SVM이 생성되지 않습니다. 배포 후에는 클러스터 관리자가 생성해야 합니다. 자세한 내용은 을<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">클러스터에 포함된 SVM 유형</block>
   <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
+  <block id="c19cab121a967e7d4e145437fee16c02" category="doc">ONTAP Select 구축에 대한 평가판 라이센스</block>
+  <block id="3ad47d20affd564b7db18fcaa67fb9ca" category="paragraph">ONTAP Select 배포 관리 유틸리티를 다운로드하려면 다음이 필요합니다.</block>
+  <block id="f2fd759d6c3aedc384b758263e96be4b" category="inline-link">사용자 등록</block>
+  <block id="ee071d378f5b3ec57e4eda0d66300334" category="list-text">등록된 NetApp 지원 사이트 계정 계정이 없는 경우 을 참조하십시오<block ref="b0f5d39de7f85d20bb3da6a76b3c4368" category="inline-link-rx"></block>.</block>
+  <block id="4c38e9c9635f62bc0c98a4fc0dbf6f04" category="inline-link">최종 사용자 사용권 계약에 동의합니다</block>
+  <block id="bcb0a8f0933f79963f8da791712307a2" category="list-text"><block ref="b36a96015925128ab0074fda8004c795" category="inline-link-rx"></block>평가판 라이센스가 있는 ONTAP Select 배포를 위해.</block>
+  <block id="76be33f6608866426ecccffc5acd6be8" category="list-text">일련 번호를 제공하지 마십시오</block>
+  <block id="2fcd5d5ae3d245e3d2870429d2c9381d" category="list-text">스토리지 용량의 운영 라이센스가 필요하지 않습니다</block>
+  <block id="695af2710450ef107be1555e59f22b01" category="paragraph">(NetApp에서 직접 구입하지 않음)</block>
+  <block id="0fa0a315c1605e80221e4ae40cfaac60" category="list-text">용량 계층 라이센스를 사용할 수 있지만 용량 풀 라이센스는 지원되지 않습니다</block>
+  <block id="d480e694d74a85a8bf679cab5063c9f1" category="paragraph">다음 그림에서는 4노드 ONTAP Select 클러스터를 구축하고 지원하는 데 사용되는 NetApp ONTAP Select Deploy 관리 유틸리티를 보여 줍니다. Deploy 유틸리티 및 ONTAP Select 노드는 전용 하이퍼바이저 호스트에서 별도의 가상 머신으로 실행됩니다.</block>
+  <block id="54d1b8efd5a74820db5617b48f538671" category="summary">ONTAP Select 클러스터의 성능은 하드웨어 구성에 따라 달라질 수 있습니다.</block>
+  <block id="123521c98d5a32b10ae4a2d5e59ed719" category="doc">ONTAP Select용 Python 모듈을 지원합니다</block>
+  <block id="b7a30ea4f45797fa98b43f64e7be11b9" category="doc">ONTAP Select 라이센스 관리</block>
+  <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">등록된 NetApp 지원 사이트 계정이 있습니다</block>
+  <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>..</block>
+  <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">VM이 배포되면 새 VM을 선택합니다. 배포 마법사에 입력한 내용에 따라 전원이 켜져 있지 않으면 수동으로 전원을 켭니다.</block>
+  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">처음 로그인하는 경우 vCenter에서 사용할 수 있는 마법사를 사용하여 Deploy를 설치하지 않은 경우 메시지가 표시되면 다음 구성 정보를 제공합니다.</block>
 </blocks>
