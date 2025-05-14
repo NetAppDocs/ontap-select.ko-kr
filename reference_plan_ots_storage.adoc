@@ -134,7 +134,7 @@ ONTAP Select 가상 머신을 호스팅하는 데 사용되는 시스템 데이�
 
 ONTAP Select 배포를 계획할 때 스토리지 할당 및 사용과 관련된 제한 사항을 숙지해야 합니다.
 
-가장 중요한 스토리지 제한은 아래에 나와 있습니다. 또한 를 검토해야 합니다 link:https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^] 를 참조하십시오.
+가장 중요한 스토리지 제한은 아래에 나와 있습니다. 또한 보다 자세한 내용은 를 검토해야 link:https://mysupport.netapp.com/matrix/["상호 운용성 매트릭스 툴"^]합니다.
 
 
 TIP: ONTAP Select는 스토리지 할당 및 사용과 관련된 몇 가지 제한 사항을 적용합니다. ONTAP Select 클러스터를 구축하거나 라이센스를 구입하기 전에 먼저 이러한 제한 사항을 숙지해야 합니다. 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["라이센스"] 섹션을 참조하십시오.

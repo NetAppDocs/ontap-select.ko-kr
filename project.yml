@@ -32,7 +32,7 @@ sidebar:
       url: "/reference_new_ots.html"
   - title: 개념
     entries:
-    - title: ONTAP Select 개요
+    - title: ONTAP Select에 대해 자세히 알아보십시오
       url: "/concept_ots_overview.html"
     - title: ONTAP Select 구축
       url: "/concept_ots_deploy.html"
@@ -44,8 +44,8 @@ sidebar:
         url: "/concept_usecase_robo.html"
       - title: 프라이빗 클라우드 및 데이터 센터
         url: "/concept_usecase_private_cloud.html"
-      - title: MetroCluster SDS
-        url: "/concept_usecase_mc_sds.html"
+      - title: 데이터 보호 및 효율성
+        url: "/concept-data-protection-and-efficiency.html"
     - title: 용어
       url: "/concept_terminology.html"
   - title: 계획
@@ -102,7 +102,7 @@ sidebar:
         url: "/concept_lic_cp_serial_number.html"
       - title: 제한 사항
         url: "/concept_lic_cp_restrictions.html"
-      - title: 용량 풀 및 용량 계층 비교
+      - title: 용량 풀 대 용량 계층
         url: "/concept_lic_cp_compare_ct.html"
       - title: 이점 요약
         url: "/concept_lic_cp_benefits.html"
@@ -112,7 +112,7 @@ sidebar:
         url: "/concept_lic_workflow.html"
       - title: 용량 계층
         url: "/task_lic_acquire_ct.html"
-      - title: 용량 풀
+      - title: 용량을 제공합니다
         url: "/task_lic_acquire_cp.html"
     - title: ONTAP 기능
       url: "/reference_lic_ontap_features.html"

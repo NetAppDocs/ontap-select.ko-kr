@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_lic_acquire_ct.html 
-keywords: license, licensing, acquire, capacity tiers 
-summary: 용량 계층 라이센스를 사용하는 경우 각 ONTAP Select 노드에 대해 라이센스 파일을 얻어야 합니다. 라이센스 파일은 노드의 스토리지 용량을 정의하며 NetApp에서 할당한 고유한 9자리 일련 번호를 통해 노드에 잠깁니다. 
+keywords: license, licensing, acquire, Capacity Tiers 
+summary: 용량 계층 라이센스를 사용할 때는 각 ONTAP Select 노드에 대한 라이센스 파일을 얻어야 합니다. 라이센스 파일은 노드의 스토리지 용량을 정의하며 NetApp에서 할당한 고유한 9자리 일련 번호를 통해 노드에 잠깁니다. 
 ---
-= ONTAP Select 용량 계층 라이센스를 획득합니다
+= ONTAP Select 용량 계층 라이센스를 취득합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 용량 계층 라이센스를 사용하는 경우 각 ONTAP Select 노�
 
 
 [role="lead"]
-용량 계층 라이센스를 사용하는 경우 각 ONTAP Select 노드에 대해 라이센스 파일을 얻어야 합니다. 라이센스 파일은 노드의 스토리지 용량을 정의하며 NetApp에서 할당한 고유한 9자리 일련 번호를 통해 노드에 잠깁니다.
+용량 계층 라이센스를 사용할 때는 각 ONTAP Select 노드에 대한 라이센스 파일을 얻어야 합니다. 라이센스 파일은 노드의 스토리지 용량을 정의하며 NetApp에서 할당한 고유한 9자리 일련 번호를 통해 노드에 잠깁니다.
 
 .시작하기 전에
 NetApp에서 노드에 할당한 9자리 라이센스 일련 번호가 있어야 합니다. 라이센스 파일을 취득하기 전에 구매 주문 배송 날짜로부터 최소 24시간 후에 기다려야 합니다.

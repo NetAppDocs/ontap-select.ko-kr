@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_lic_platforms.html 
 keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl 
-summary: ONTAP Select 용량 계층 또는 용량 풀 라이센스를 3가지 플랫폼 용량 수준 중 하나로 구입할 수 있습니다. 이러한 라이센스 오퍼링은 ONTAP Select를 구축하는 호스트의 기능을 결정합니다. 
+summary: ONTAP Select 용량 계층 또는 용량 풀 라이센스는 세 가지 플랫폼 용량 수준 중 하나로 구입할 수 있습니다. 이러한 라이센스 오퍼링은 ONTAP Select를 구축하는 호스트의 기능을 결정합니다. 
 ---
-= ONTAP Select에 대한 플랫폼 라이센스 오퍼링 이해
+= ONTAP Select용 플랫폼 라이센스 오퍼링에 대해 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: ONTAP Select 용량 계층 또는 용량 풀 라이센스를 3가지 �
 
 
 [role="lead"]
-ONTAP Select 용량 계층 또는 용량 풀 라이센스를 3가지 플랫폼 용량 수준 중 하나로 구입할 수 있습니다. 이러한 라이센스 오퍼링은 ONTAP Select를 구축하는 호스트의 기능을 결정합니다.
+표준, 프리미엄 또는 프리미엄 XL 레벨로 ONTAP Select 용량 계층 또는 용량 풀 라이센스를 구매할 수 있습니다. 이러한 라이센스 오퍼링은 ONTAP Select를 구축하는 호스트의 기능을 결정합니다.
 
 
 
 == 플랫폼 라이센스 제공 내용
 
-특정 라이센스 오퍼링은 다음 두 가지 영역에서 하이퍼바이저 호스트의 기능을 정의하고 제한합니다.
+특정 라이선스 오퍼링은 다음 두 영역에서 하이퍼바이저 호스트의 기능을 정의하고 제한합니다.
 
 * 인스턴스 유형(CPU, 메모리)
 * 추가 기능
@@ -73,4 +73,112 @@ Premium XL 오퍼링은 다음과 같은 기능을 제공합니다.
 
 
 
-NOTE: SW-RAID 구성에서 대규모 인스턴스 유형 또는 NVMe 드라이브를 사용하는 것은 KVM에서 지원되지 않습니다.
+NOTE: KVM(커널 기반 가상 머신)에서는 SW-RAID 구성에서 대형 인스턴스 유형 또는 NVMe 드라이브를 사용할 수 없습니다.
+
+
+
+== 플랫폼 라이센스 제품에 대한 하드웨어 지원을 비교합니다
+
+표준, 프리미엄 및 프리미엄 XL 라이센스 제품은 광범위한 하드웨어 및 소프트웨어를 지원합니다. 하드웨어 및 소프트웨어 버전에 대한 최신 정보는 를 참조하십시오link:https://mysupport.netapp.com/matrix/["상호 운용성 매트릭스 툴"^].
+
+[role="tabbed-block"]
+====
+.핵심 항목
+--
+[cols="5"30"]
+|===
+
+
+2+| 핵심 항목 유형 3+| 설명 
+
+
+2+| 호스트 프로토콜 3+| NFS, SMB/CIFS, iSCSI 및 NVMe over TCP 
+
+
+2+| 구축 옵션 3+| 단일 노드 2노드 클러스터(HA 쌍) 4노드, 6노드 또는 8노드 클러스터 
+
+
+2+| 지원되는 용량(노드당) 3+| 최대 400TB의 원시 데이터(ESXi 및 KVM) 
+|===
+--
+.하드웨어
+--
+[cols="5"30"]
+|===
+
+
+2+| 하드웨어 유형입니다 3+| 설명 
+
+
+2+| 인스턴스 크기 | 작은 크기 | 중간 | 대형 
+
+
+2+| CPU 제품군 | Intel Xeon E5-26xx v3(Haswell) 이상 | Intel Xeon E5-26xx v3(Haswell) 이상 | Intel Xeon E5-26xx v3(Haswell) 이상 
+
+
+2+| ONTAP Select CPU/메모리 | vCPU(가상 CPU) 4개/16GB RAM | vCPU 8개/64GB RAM | 16개의 vCPU/128GB RAM 
+
+
+2+| 호스트 CPU/메모리 최소 요구 사항 | 6코어/24GB RAM | 10코어/72GB RAM | 18코어/136GB RAM 
+
+
+2+| 네트워크(노드당) 3+| 단일 노드 클러스터용 1GbE 포트 최소 2개 2노드 클러스터용 1GbE 포트 4개(HA 쌍) 4노드, 6노드 또는 8노드 클러스터용 10GbE 포트 최소 2개 
+|===
+1은 하이퍼바이저용으로 2개의 코어와 8Gb RAM을 가정합니다.
+
+--
+.스토리지 유형입니다
+--
+다음 표에는 지정된 스토리지에 필요한 최소 라이센스 유형이 나와 있습니다. 
+
+[cols="5"30"]
+|===
+
+
+2+| 스토리지 유형입니다 3+| 설명 
+
+
+2+| 사용권 유형 | 표준 | 프리미엄 | 페미움 XL 
+
+
+2+| 인스턴스 크기 | 작은 크기 | 소형 및 중형 | 소형, 중형, 대형 
+
+
+2+| 하드웨어 RAID 컨트롤러가 있는 로컬 DAS | 8-60개 드라이브 | 8-60개 드라이브 | 8-60개 드라이브 
+
+
+2+| HDD(SAS, NL-SAS, SATA) | 해당 없음 | 4-60개의 드라이브 | 4-60개의 드라이브 
+
+
+2+| SSD(SAS) | 해당 없음 | 4~60개 드라이브(SSD만) | 4~60개 드라이브(SSD만) 
+
+
+2+| 소프트웨어 RAID가 있는 로컬 DAS | 해당 없음 | 해당 없음 | 4-14개 드라이브(NVMe만 해당) 
+
+
+2+| 외부 배열 1 3+| 외부 어레이에서 호스팅되는 데이터 저장소는 FC, FCoE, iSCSI 및 NFS를 통해 연결됩니다(NFS는 KVM에서 지원되지 않음). 이러한 데이터 저장소는 높은 가용성과 복원력을 제공합니다. 
+|===
+외부 스토리지 프로토콜 지원은 네트워크 스토리지 연결을 반영합니다.
+
+--
+.소프트웨어
+--
+[cols="5"30"]
+|===
+
+
+2+| 소프트웨어 유형입니다 3+| 설명 
+
+
+2+| 하이퍼바이저 지원(VMware) 3+| VMware vSphere 7.0GA 및 업데이트 1 - 3C VMware vSphere 8.0GA 및 업데이트 1 - 3 
+
+
+2+| 하이퍼바이저 지원(KVM) 3+| Redhat Enterprise Linux 64비트(KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6 Rocky Linux(KVM) 9 및 8 
+
+
+2+| 관리 소프트웨어 3+| NetApp Active IQ Unified Manager 관리 제품군 ONTAP Select Deploy Utility SnapCenter(선택 사항) 
+|===
+--
+====
+.관련 정보
+link:concept_lic_production.html["용량 계층 및 용량 풀 라이센스 유형에 대해 알아봅니다"]..

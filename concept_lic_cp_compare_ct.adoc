@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_lic_cp_compare_ct.html 
-keywords: license, licensing, capacity pools, capacity tiers, comparing 
-summary: 용량 풀과 용량 계층 라이센스 모델 간에는 몇 가지 차이점이 있습니다. 
+keywords: license, licensing, Capacity Pools, Capacity Tiers, comparing 
+summary: Capacity Pools와 Capacity Tier 라이센스 모델 간에는 여러 가지 차이점이 있습니다. 
 ---
-= ONTAP Select 용량 풀과 용량 계층 라이센스를 비교합니다
+= ONTAP Select 용량 풀 라이센스와 용량 계층 라이센스를 비교합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ summary: 용량 풀과 용량 계층 라이센스 모델 간에는 몇 가지 �
 
 [cols="20,40,40"]
 |===
-|  | 용량 계층 | 용량 풀 
+|  | 용량 계층 | 용량을 제공합니다 
 
 
 | 라이센스 일련 번호입니다 | NetApp에서 생성하여 노드에 할당된 9자리 숫자 | NetApp에서 생성하여 용량 풀에 할당된 9자리 숫자입니다 

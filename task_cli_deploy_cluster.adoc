@@ -40,7 +40,7 @@ ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터�
 
 === 운영 구축을 위한 ONTAP Select 라이센스 등록
 
-운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. capacity 계층_model을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _capacity pool_model을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.
+운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. Capacity Tiers_model 을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _Capacity Pools_model 을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.
 
 
 
@@ -229,10 +229,10 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 ONTAP Select 클러스터의 각 노드를 구성해야 합니다.
 
 .시작하기 전에
-노드에 대한 구성 정보가 있어야 합니다. 용량 계층 라이센스 파일은 배포 유틸리티에 업로드 및 설치해야 합니다.
+노드에 대한 구성 정보가 있어야 합니다. Capacity Tier 라이센스 파일은 Deploy 유틸리티에 업로드하고 설치해야 합니다.
 
 .이 작업에 대해
-이 절차를 사용하여 각 노드를 구성해야 합니다. 이 예에서는 용량 계층 라이센스가 노드에 적용됩니다.
+이 절차를 사용하여 각 노드를 구성해야 합니다. 이 예에서는 Capacity Tier 라이센스가 노드에 적용됩니다.
 
 .단계
 . 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
@@ -253,7 +253,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.8
 노드의 RAID 구성은 _passthrough-disks_parameter로 표시됩니다. 로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 이 값은 false여야 합니다. 소프트웨어 RAID를 사용하는 경우 이 값은 참이어야 합니다.
 
 +
-용량 계층 라이센스는 ONTAP Select 노드에 사용됩니다.
+ONTAP Select 노드에는 용량 계층 라이센스가 사용됩니다.
 
 . 호스트에서 사용할 수 있는 네트워크 구성을 표시합니다.
 +

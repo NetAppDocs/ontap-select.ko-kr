@@ -63,4 +63,4 @@ image:prepare_ESXi_host_requirements.png["ESXi 호스트를 준비하기 위한 
 
 
 .관련 정보
-link:http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^]
+link:http://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴"^]

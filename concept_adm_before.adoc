@@ -53,7 +53,7 @@ ONTAP Select 클러스터를 구축한 후에는 하드웨어 기반 ONTAP 시�
 * VMware vSphere용 Virtual Storage Console을 참조하십시오
 
 
-지원되는 클라이언트 소프트웨어 버전을 확인하려면 을 참조하십시오 link:https://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^]. 클라이언트 소프트웨어가 ONTAP 9를 지원하는 경우 ONTAP Select에서도 동일한 버전이 지원됩니다.
+지원되는 클라이언트 소프트웨어 버전을 확인하려면 을 link:https://mysupport.netapp.com/matrix/["상호 운용성 매트릭스 툴"^]참조하십시오. 클라이언트 소프트웨어가 ONTAP 9를 지원하는 경우 ONTAP Select에서도 동일한 버전이 지원됩니다.
 
 
 NOTE: SnapCenter와 해당 플러그인을 사용하려면 서버 기반 라이센스가 필요합니다. SnapCenter 플러그인의 스토리지 시스템 라이센스는 현재 ONTAP Select에서 지원되지 않습니다.

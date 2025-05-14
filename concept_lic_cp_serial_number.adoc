@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_lic_cp_serial_number.html 
-keywords: license, licensing, capacity pools, node serial numbers 
-summary: 용량 계층 라이센스 모델에서는 9자리 노드 일련 번호가 노드에 할당된 라이센스 일련 번호와 동일합니다. 그러나 용량 풀 라이센스 모델을 사용하는 노드에 할당된 일련 번호의 형식은 다릅니다. 
+keywords: license, licensing, Capacity Pools, node serial numbers 
+summary: Capacity Tiers 라이센스 모델에서 9자리 노드 일련 번호는 노드에 할당된 라이센스 일련 번호와 동일합니다. 그러나 Capacity Pools 라이센스 모델을 사용하여 노드에 할당된 일련 번호의 형식은 다릅니다. 
 ---
-= ONTAP Select 용량 풀 라이센스 모델의 노드 일련 번호입니다
+= ONTAP Select Capacity Pools 라이센스 모델의 노드 일련 번호입니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 용량 계층 라이센스 모델에서는 9자리 노드 일련 번호
 
 
 [role="lead"]
-용량 계층 라이센스 모델에서는 9자리 노드 일련 번호가 노드에 할당된 라이센스 일련 번호와 동일합니다. 그러나 용량 풀 라이센스 모델을 사용하는 노드에 할당된 일련 번호의 형식은 다릅니다.
+Capacity Tiers 라이센스 모델에서 9자리 노드 일련 번호는 노드에 할당된 라이센스 일련 번호와 동일합니다. 그러나 Capacity Pools 라이센스 모델을 사용하여 노드에 할당된 일련 번호의 형식은 다릅니다.
 
-용량 풀 라이센스를 사용하는 노드의 일련 번호 형식은 다음과 같습니다.
+Capacity Pools 라이센스를 사용하는 노드의 일련 번호는 다음과 같은 형식으로 지정됩니다.
 
 999pppppp nnnnnnnn
 
@@ -33,10 +33,10 @@ NOTE: 명확성을 위해 공백이 추가되었지만 실제 일련 번호의 �
 | '999' | NetApp에서 계속 예약한 3자리 숫자 값 
 
 
-| ppppppp | NetApp에서 용량 풀에 할당한 9자리 숫자의 가변 라이센스 일련 번호입니다 
+| ppppppp | NetApp에서 용량 풀에 할당된 가변 9자리 라이센스 일련 번호입니다 
 
 
-| nnnnnnnn | 용량 풀을 사용하는 각 노드에 대해 License Manager가 생성하는 8자리 변수 값입니다 
+| nnnnnnnn | Capacity Pool을 사용하여 각 노드에 대해 License Manager가 생성한 8자리 변수 값입니다 
 |===
 
-NOTE: 주의: 용량 풀 라이센스를 사용하는 노드와 관련하여 NetApp 지원 케이스를 생성할 때 전체 20자리 노드 일련 번호를 제공할 수 없습니다. 대신 9자리 용량 풀 라이센스 일련 번호를 제공해야 합니다. 위에서 설명한 대로 노드 일련 번호에서 라이센스 일련 번호를 확인할 수 있습니다. 노드 일련 번호('999')의 처음 세 자리를 건너뛰고 다음 9자리 숫자(pppppp)를 추출합니다.
+NOTE: 주의: Capacity Pool 라이센스를 사용하는 노드가 포함된 NetApp 지원 케이스를 열 때는 20자리 전체 노드 일련 번호를 제공할 수 없습니다. 대신 9자리 Capacity Pool 라이센스 일련 번호를 제공해야 합니다. 위에서 설명한 대로 노드 일련 번호에서 라이센스 일련 번호를 확인할 수 있습니다. 노드 일련 번호('999')의 처음 세 자리를 건너뛰고 다음 9자리 숫자(pppppp)를 추출합니다.

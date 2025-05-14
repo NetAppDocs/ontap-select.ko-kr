@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept_usecase_mc_sds.html 
+permalink: concept-data-protection-and-efficiency.html 
 keywords: ontap select, metrocluster software defined storage, mc sds storage 
 summary: ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다. 
 ---
-= ONTAP Select MetroCluster 소프트웨어 정의 스토리지
+= ONTAP Select의 데이터 보호 및 효율성에 대해 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,19 @@ summary: ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효�
 
 
 [role="lead"]
-ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다.
+ONTAP Select는 ONTAP 스토리지 소프트웨어를 기반으로 구축되어, 가용성이 높은 무공유 스케일아웃 아키텍처를 통해 엔터프라이즈 스토리지 서비스를 효율적으로 제공합니다. 노드당 최대 400TB의 물리적 용량을 갖춘 1, 2, 4, 6 또는 8노드 솔루션을 배포할 수 있습니다. 기본 중복제거 및 압축을 활용하여 실제 용량을 늘림으로써 스토리지 비용을 절감할 수 있습니다. 스케일아웃 아키텍처는 로드 밸런싱 또는 서비스 하드웨어에 대한 고가용성 및 무중단 데이터 이동성을 지원합니다.
+
+
+
+== 스냅샷 데이터 보호
+
+ONTAP Select에는 스냅샷 및 SnapMirror 소프트웨어를 포함한 데이터 보호 기능이 포함되어 있습니다. 온프레미스, 원격 사이트 또는 클라우드 내 다른 ONTAP 스토리지로 데이터를 빠르게 복제할 수 있습니다. 데이터를 빠르게 복구해야 하는 경우, SnapRestore 소프트웨어에서 로컬 스냅샷을 사용하여 용량이나 파일 개수에 상관없이 몇 초 만에 전체 파일 시스템이나 데이터 볼륨을 복구할 수 있습니다.
+
+
+
+== MetroCluster 소프트웨어 정의 스토리지
+
+ONTAP Select MetroCluster SDS(소프트웨어 정의 스토리지)는 향상된 보호 기능과 비용 효율적인 구현 기능을 제공합니다.
 
 특정 최소 요구사항을 충족할 경우 2노드 클러스터를 2개 위치 간에 확장 가능 이 아키텍처는 하드웨어 기반 MetroCluster와 단일 데이터 센터 클러스터(하드웨어 정의 또는 소프트웨어 정의) 사이에 적합합니다. ONTAP Select MetroCluster SDS 요구사항을 충족하려면 소프트웨어 정의 스토리지 솔루션의 일반적인 유연성과 IT와 하드웨어 기반 MetroCluster SDS 간의 차이점을 강조합니다. 전용 하드웨어가 필요하지 않습니다.
 
@@ -22,11 +34,9 @@ MetroCluster와 달리 ONTAP Select는 기존 네트워크 인프라를 사용�
 
 2노드 HA 구성의 일부로, 중재자가 페일오버 중에 액티브 노드를 제대로 식별하고 네트워크 파티션 중에 두 노드가 독립적으로 활성 상태로 유지되는 브레인 분할 시나리오를 피해야 합니다. 이 작업은 이전에 사용할 수 있었던 일반 2노드 HA 구성과 동일합니다. 사이트 장애 시 적절한 보호와 페일오버를 위해 중재자는 2개의 HA 노드와 다른 사이트에 있어야 합니다. 중재자와 각 ONTAP Select 노드 사이의 최대 지연 시간은 125ms를 초과할 수 없습니다.
 
-이 솔루션을 사용하는 엔터프라이즈 고객은 일반 하드웨어에서 소프트웨어 정의 스토리지 솔루션의 유연성을 안심하고 활용할 수 있습니다. 엔터프라이즈급 0 RPO 솔루션으로 데이터가 보호되므로 안심하고 구축할 수 있습니다.
-
 ONTAP Select MetroCluster SDS는 다음과 같은 이점을 제공합니다.
 
-* MetroCluster SDS는 ONTAP Select에 대한 또 다른 차원의 보호 기능(데이터 센터와 데이터 센터 간)을 제공합니다. 이제 고객은 소프트웨어 정의 스토리지 및 ONTAP의 모든 이점을 활용할 뿐만 아니라 이러한 추가 보호 수준을 활용할 수 있습니다.
+* MetroCluster SDS는 ONTAP Select에 대한 또 다른 차원의 보호 기능(데이터 센터와 데이터 센터 간)을 제공합니다. 이제 소프트웨어 정의 스토리지 및 ONTAP의 모든 이점을 활용하는 것 외에도 이러한 추가적인 보호 수준을 활용할 수 있습니다.
 * MetroCluster SDS는 0 RPO 및 자동 페일오버로 비즈니스 크리티컬 데이터 보호를 제공합니다. 데이터 스토리지와 애플리케이션 액세스 지점 모두 별도의 작업 없이 정상적인 데이터 센터 또는 노드로 자동 전환됩니다.
 * MetroCluster SDS는 비용 효율적입니다. 기존 네트워킹 인프라를 활용하여 HA 쌍 간에 확장 복원력을 제공하며 추가 하드웨어가 필요하지 않습니다. 또한 동일한 클러스터에서 액티브/액티브 데이터 액세스 및 데이터 센터 이중화를 제공합니다.
 
@@ -36,3 +46,6 @@ ONTAP Select MetroCluster SDS는 다음과 같은 이점을 제공합니다.
 image:MCSDS_01.jpg["DAS를 기반으로 하는 프라이빗 클라우드"]
 
 자세한 모범 사례 및 기타 요구 사항은 섹션을 참조하십시오 link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["2노드 HA와 다중 노드 HA 비교"] 및 link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["2노드 확장 HA(MetroCluster SDS) 모범 사례"].
+
+.관련 정보
+link:reference_lic_ontap_features.html["ONTAP 기능에 대한 ONTAP Select 지원"]

@@ -41,7 +41,7 @@ ONTAP Select 2노드 클러스터가 포함된 실패한 배포 유틸리티 인
 실패한 원래 배포 유틸리티 가상 시스템의 IP 주소를 알고 있어야 합니다.
 
 .스토리지 용량 라이센스
-용량 풀 또는 용량 계층 라이센스를 사용할지 결정해야 합니다. 용량 풀 라이센스를 사용하는 경우 배포 인스턴스를 복구 또는 복원한 후 각 용량 풀 라이센스를 다시 설치해야 합니다.
+용량 풀 또는 용량 계층 라이센스가 사용되는지 여부를 확인해야 합니다. Capacity Pools 라이센스를 사용하는 경우 배포 인스턴스를 복구하거나 복원한 후에 각 Capacity Pool 라이센스를 다시 설치해야 합니다.
 
 .사용할 복구 절차를 결정합니다
 ONTAP Select 배포 유틸리티의 인스턴스를 복구할 때 사용할 절차를 결정해야 합니다. 이 결정은 ONTAP Select 2노드 클러스터가 포함된 원래의 실패한 배포 유틸리티에서 구성 데이터를 백업했는지 여부에 따라 결정됩니다.
@@ -115,7 +115,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 .작업을 마친 후
-용량 풀 라이센스를 사용하는 경우 각 용량 풀 라이센스를 다시 설치해야 합니다. 자세한 내용은 _용량 풀 라이센스 재설치_를 참조하십시오.
+Capacity Pools 라이센스를 사용하는 경우 각 Capacity Pool 라이센스를 재설치해야 합니다. 자세한 내용은 _ Capacity Pool 라이센스 재설치 _ 를 참조하십시오.
 
 
 
@@ -207,10 +207,10 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 .작업을 마친 후
-용량 풀 라이센스를 사용하는 경우 각 용량 풀 라이센스를 다시 설치해야 합니다. 자세한 내용은 용량 풀 라이센스 재설치 를 참조하십시오.
+Capacity Pools 라이센스를 사용하는 경우 각 Capacity Pool 라이센스를 재설치해야 합니다. 자세한 내용은 Capacity Pool 라이센스 다시 설치 를 참조하십시오.
 
 .관련 정보
 * link:task_install_deploy.html["ONTAP Select Deploy를 설치합니다"]
 * link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["구축 구성 데이터를 새 가상 머신에 복구합니다"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["용량 풀 라이센스를 다시 설치합니다"]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["Capacity Pool 라이센스를 다시 설치합니다"]
 

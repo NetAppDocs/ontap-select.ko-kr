@@ -50,7 +50,7 @@ ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니�
 
 NOTE: Linux 서버 설치 중에 소프트웨어 선택을 위해 가상화된 호스트를 선택한 경우 필요한 패키지 중 일부가 이미 설치되어 있을 수 있습니다. 에 설명된 대로 소스 코드에서 openvswitch 패키지를 설치해야 할 수 있습니다 link:https://docs.openvswitch.org/en/latest/intro/install/general/["vSwitch 문서를 엽니다"^].
 
-필요한 패키지 및 기타 구성 요구 사항에 대한 자세한 내용은 를 참조하십시오link:https://imt.netapp.com/matrix/#welcome["NetApp 상호 운용성 매트릭스 툴"^].
+필요한 패키지 및 기타 구성 요구 사항에 대한 자세한 내용은 를 참조하십시오link:https://imt.netapp.com/matrix/#welcome["상호 운용성 매트릭스 툴"^].
 
 .스토리지 풀 구성
 ONTAP Select 스토리지 풀은 기본 물리적 스토리지를 추상화하는 논리적 데이터 컨테이너입니다. ONTAP Select가 구축된 KVM 호스트에서 스토리지 풀을 관리해야 합니다.
