@@ -44,7 +44,6 @@
   <block id="a811207ba17996dc78a58667cd177a13" category="inline-link-macro">호스트 준비 체크리스트</block>
   <block id="8e0cad5fe5b287e29619e8a65612c78e" category="inline-link-macro">배포 유틸리티 설치에 필요한 정보</block>
   <block id="34ff1dcc504899915d2e35990a309b3a" category="inline-link-macro">ONTAP Select 설치에 필요한 정보입니다</block>
-  <block id="71dd62058e9b3b3ce83dc30fe496352e" category="paragraph">를 따릅니다 <block ref="440b18c7eb072bb28a31c8035fcc65ca" category="inline-link-macro-rx"></block>를 검토합니다 <block ref="9cd091a25bce78cdf0c1ef780ca4d19c" category="inline-link-macro-rx"></block>, 및 <block ref="fb856bc56f17c64169f73fa6665ecd51" category="inline-link-macro-rx"></block> 항목을 참조하십시오.</block>
   <block id="712a3f9a4e93375653a979ba058c3eb7" category="paragraph">이 절차는 새 ONTAP Select 클러스터를 생성하기 전에 수행하도록 설계되었습니다. 기존 SW-RAID NVMe 클러스터에 대해 추가 NVMe 드라이브를 구성하는 절차를 수행할 수도 있습니다. 이 경우 드라이브를 구성한 후 추가 SSD 드라이브와 마찬가지로 Deploy를 통해 추가해야 합니다. 주요 차이점은 배포는 NVMe 드라이브를 감지하고 노드를 재부팅한다는 점입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때 재부팅 프로세스에 대해 다음 사항을 확인하십시오.</block>
   <block id="fd5c5757c7f7041a2e15ed74c2c32432" category="list-text">Deploy가 재부팅 오케스트레이션을 처리합니다.</block>
   <block id="668ad5825e6f031e6f06ed116fda245d" category="list-text">HA 테이크오버 및 반환은 질서정연하게 수행되지만 애그리게이트를 재동기화하는 데 시간이 걸릴 수 있습니다.</block>
@@ -473,7 +472,6 @@
   <block id="85b8b2674420975b303ca7af2cceb0b1" category="inline-link-macro">VMware vCenter Server를 참조하십시오</block>
   <block id="a7e7272f62fd6ddeec2a8fce21757dbf" category="paragraph">필요한 vCenter 권한 목록은 여기 에서 확인할 수 있습니다. <block ref="b5bc3984b5dc3be4e25e9aa47658f334" category="inline-link-macro-rx"></block>.</block>
   <block id="8aeec027b27415f6c0c3d1335de4508f" category="section-title">HA 및 클러스터</block>
-  <block id="a6bd8e6869506e1e1f9d1c161d200e90" category="paragraph">MetroCluster SDS는 NetApp의 MetroCluster 비즈니스 연속성 솔루션 범주에 해당하는 저렴한 동기식 복제 옵션입니다. 이 기능은 FAS 하이브리드 플래시, AFF, 클라우드용 NetApp 프라이빗 스토리지 및 NetApp FlexArray ® 기술에서 제공되는 NetApp MetroCluster와 달리 ONTAP Select에서만 사용할 수 있습니다.</block>
   <block id="f782a001664af23a9a479ac7f8af14db" category="paragraph">MetroCluster SDS는 동기식 복제 솔루션을 제공하고 NetApp MetroCluster 솔루션에 속합니다. 그러나 주요 차이점은 지원되는 거리(~10km vs 300km)와 연결 유형(FC 및 IP 대신 IP 네트워크만 지원됨)입니다.</block>
   <block id="e390fc325e0e3f48a60a9e0c68c6a1b2" category="paragraph">2노드 클러스터는 상호 300m 이내의 동일한 데이터 센터에 있는 클러스터로 정의됩니다. 일반적으로 두 노드는 동일한 네트워크 스위치에 대한 업링크나 스위치 간 링크에 의해 연결된 네트워크 스위치 세트에 대한 업링크를 가지고 있습니다.</block>
   <block id="e3000fa150dd97eaa370fd81237fc013" category="paragraph">2노드 MetroCluster SDS는 물리적으로 분리된 노드(서로 다른 방, 다른 건물 또는 다른 데이터 센터)와 각 노드의 업링크 연결이 별도의 네트워크 스위치에 연결된 클러스터로 정의됩니다. MetroCluster SDS에는 전용 하드웨어가 필요하지 않지만, 지연 시간(최대 총 10ms 동안 5ms RTT 및 5ms 지터)과 물리적 거리(10Km)를 기준으로 최소 요구 사항 집합을 지원해야 합니다.</block>
@@ -622,8 +620,6 @@
   <block id="5b7407231012a40dd88287373070ae98" category="inline-image-macro">ONTAP 배포 로그</block>
   <block id="35f218ae1f484b62612317226b29e4b3" category="paragraph"><block ref="35f218ae1f484b62612317226b29e4b3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6a8522b0cf05272f59ef17c0af3731d6" category="summary">ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 생성할 수 있습니다.</block>
-  <block id="618aade87a4c0dc9b9fe7ea456efd7ad" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 루트 및 데이터 애그리게이트뿐만 아니라 시스템 데이터에 대해 각 노드에 하나 이상의 스토리지 풀을 생성해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀을 연결해야 합니다.</block>
-  <block id="c423fd05ac4075cd52ed8e9ec9961c3f" category="paragraph">소프트웨어 RAID를 사용하는 경우 시스템 데이터용 스토리지 풀을 생성하고 SSD 드라이브를 루트 및 데이터 애그리게이트에 사용할 수 있는지 확인해야 합니다. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="section-title">사용 가능한 ONTAP Select 버전</block>
   <block id="973a0d9d3fbac9204b63c3c4b4ef0e8e" category="paragraph">저장소 용량이 있는 라이센스 파일을 획득한 후에는 라이센스가 포함된 파일을 배포 가상 머신에 업로드하고 등록해야 합니다.</block>
   <block id="2fec03a9efc770f765197fa8c7911b8b" category="admonition">평가 전용으로 클러스터를 배포하는 경우 이 단계를 건너뛸 수 있습니다.</block>
@@ -632,55 +628,30 @@
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph">예</block>
   <block id="d3da597cbedb34e76303c54f2958f024" category="list-text">SSH를 사용하여 관리자 계정으로 배포 유틸리티 CLI에 로그인합니다.</block>
   <block id="fce170f0d7ad55c661366ec716bc61e0" category="list-text">라이센스 등록:</block>
-  <block id="20ab7302be55d4dc1a0ba5575d411e18" category="paragraph">'license add-file-name filename'</block>
   <block id="433e51a365a7b38eca70ff3fb9842f4f" category="paragraph">메시지가 나타나면 관리자 계정 암호를 입력합니다.</block>
   <block id="8321447cfcedfbf85f936b6d5ffebfe0" category="list-text">라이센스가 올바르게 추가되었는지 확인하기 위해 시스템에 라이센스를 표시합니다.</block>
-  <block id="8822a9cc146d06e4ec77936054fb11ca" category="paragraph">'라이선스 쇼'</block>
   <block id="dd18331505610da0aa987b27dd5c8b25" category="paragraph">vCenter에서 관리하는 호스트를 등록하기 전에 vCenter Server에 대한 관리 서버 계정을 추가해야 합니다. 호스트가 vCenter에서 관리되지 않는 경우 호스트 등록 과정에서 호스트 자격 증명을 제공할 수 있습니다. 이 절차를 사용하여 각 호스트를 추가해야 합니다.</block>
   <block id="c1f1fdaeb1fc7d288d9969efdd963bcc" category="list-text">관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</block>
   <block id="783f31ff95f455c1c7bb62214f87fdd1" category="list-text">호스트가 vCenter Server에서 관리되는 경우 vCenter 계정 자격 증명을 추가합니다.</block>
-  <block id="12c193f5dcc3f99c7a295445ebc9b455" category="paragraph">'Credential add-hostname &lt;FQDN|IP&gt; - type vcenter-username vcenter_username'</block>
   <block id="c61720431284d81fa9e02425c5f95ab6" category="list-text">호스트 등록:</block>
-  <block id="05a199c9e0f61506eaad93a8dc60682f" category="list-text">vCenter에서 관리하지 않는 독립 실행형 호스트 등록: 'host register-name &lt;FQDN|IP&gt; - hypervisor-type ESX-username esx_username'</block>
-  <block id="72d7c672225aae34bedacaaa9e067e1b" category="list-text">호스트의 상태를 표시하고 호스트가 인증되었는지 확인합니다.</block>
-  <block id="86cc5166af9ee54f72113259fac2f069" category="paragraph">'host show-name &lt;FQDN|IP&gt; - Detailed'(호스트 표시 이름 &lt;FQDN|IP&gt; - 세부 정보)를 선택합니다</block>
-  <block id="9654fb56bf1aee9815d9cad239ed20e6" category="section-title">ONTAP Select 클러스터 생성 및 구성</block>
   <block id="b53d497702708c1435cf9d82b4dd011d" category="paragraph">ONTAP Select 클러스터를 생성하고 구성해야 합니다. 클러스터를 구성한 후에는 개별 노드를 구성할 수 있습니다.</block>
-  <block id="6a24e211b3a07c627c36842a7b023db3" category="paragraph">클러스터에 포함된 노드 수와 관련 구성 정보를 결정해야 합니다.</block>
   <block id="438a70bbcab0041f9a67a5699ee42b1d" category="paragraph">ONTAP Select 클러스터를 생성하면 deploy 유틸리티에서 제공하는 클러스터 이름과 노드 수를 기준으로 노드 이름을 자동으로 생성합니다. 배포는 고유한 노드 식별자도 생성합니다.</block>
   <block id="11398628eae69f15ea89db484fceb50e" category="list-text">클러스터를 생성합니다.</block>
-  <block id="62f2cd8373d9724c99d2f13d42ee8c6c" category="paragraph">cluster create-name clusterName-node-count node입니다</block>
   <block id="b1ac594c1239eacf78f84af51768bd15" category="list-text">클러스터 구성:</block>
-  <block id="fb9cd8b192d5d7274652934a6f7c4f32" category="paragraph">'cluster modify -name clusterName -mgmt -ip_address -netmask -gateway ip_address -dns-servers &lt;FQDN|IP&gt;_list -dns-domain domain_list'</block>
   <block id="5f503a75cbd22c8269b0eb1377d09880" category="list-text">클러스터의 구성 및 상태를 표시합니다.</block>
-  <block id="fbba132f8bfb4917ab068c504260e91d" category="paragraph">클러스터 show-name clusterName-detailed입니다</block>
   <block id="fb395229c68cbade5ef8a29846dadf96" category="paragraph">ONTAP Select 클러스터의 각 노드를 구성해야 합니다.</block>
   <block id="ca43b0b07b80357b6b79621504c12e57" category="list-text">클러스터 노드에 할당된 이름을 확인합니다.</block>
-  <block id="f9b851f69cae3703f91dd7f46ee96be9" category="paragraph">노드 show-cluster-name clusterName입니다</block>
-  <block id="8b5cb1e38684b903416c8da0166076b5" category="list-text">노드를 선택하고 기본 구성을 수행합니다. 'node modify -name nodename -cluster -name clusterName -host -name &lt;FQDN | IP&gt; -license-serial-number-instance-type type-passthrough-disks FALSE'</block>
-  <block id="6dd204eccb05c441b87e6a643950694d" category="paragraph">노드의 RAID 구성은 _passthrough-disks_parameter로 표시됩니다. 로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 이 값은 false여야 합니다. 소프트웨어 RAID를 사용하는 경우 이 값은 참이어야 합니다.</block>
   <block id="2b24bc0f21d6bbbaef36e09ddfa027a0" category="list-text">호스트에서 사용할 수 있는 네트워크 구성을 표시합니다.</block>
-  <block id="e5cc61140754d924e9497ca93ae33daf" category="paragraph">'host network show-host-name &lt;FQDN|IP&gt; - detailed</block>
   <block id="bb7ea5508da973d7f3f3a022afe1dd6b" category="list-text">노드의 네트워크 구성을 수행합니다.</block>
-  <block id="441178de1ea2785382b8f6b0fe383636" category="paragraph">'node modify -name nodename -cluster -name clusterName -mgmt -ip -management -networks network_name -data-networks network network_name -internal-network network_name'</block>
-  <block id="f3c1a1c8717be55597746058712a8a41" category="paragraph">단일 노드 클러스터를 구축할 때는 내부 네트워크가 필요하지 않으며 내부 네트워크를 제거해야 합니다.</block>
   <block id="c2f2bd4587b8c71cf8e299f386400e66" category="list-text">노드의 구성을 표시합니다.</block>
-  <block id="733447df59e9b9f51345490bc3341e5d" category="paragraph">노드 show-name nodename-cluster-name clusterName-detailed입니다</block>
   <block id="d07e64799eaa81c2e7811d55f1faaaf1" category="list-text">호스트에서 사용 가능한 스토리지 풀을 표시합니다.</block>
-  <block id="9646f070282208e61d267e28e7ef6bb1" category="paragraph">'host storage pool show-host-name &lt;FQDN|IP&gt;'을 선택합니다</block>
   <block id="3457f038144b809169e1a74a423ab6b6" category="paragraph">VMware vSphere를 통해 사용 가능한 스토리지 풀을 얻을 수도 있습니다.</block>
   <block id="07f1307518e7117c7c488ec13d22f13b" category="list-text">사용 가능한 스토리지 풀을 ONTAP Select 노드에 연결합니다.</block>
-  <block id="6b72087e7adfa45d3c96a64dbb0e0943" category="paragraph">노드 스토리지 풀 연결-이름 poolName-cluster-name clusterName-node-name nodename-capacity-limit</block>
-  <block id="4f1ade48acd4f9017fb7aba3b36c6398" category="paragraph">capacity-limit 매개 변수를 포함하는 경우 값을 GB 또는 TB로 지정합니다.</block>
   <block id="9283f6c409a12ec191b624c73670243a" category="list-text">노드에 연결된 스토리지 풀을 표시합니다.</block>
-  <block id="16ae8f69d20416e19ed384c85392ce7f" category="paragraph">노드 스토리지 풀 show-cluster-name clusterName-node-name nodename</block>
   <block id="4b1e89748ee273a82d72c64ef89f9a39" category="paragraph">클러스터 및 노드를 구성한 후에는 클러스터를 구축할 수 있습니다.</block>
-  <block id="68051fa26ab75827c550ca4c3606cba1" category="paragraph">다중 노드 클러스터를 구축하기 전에 네트워크 연결 검사기를 실행하여 내부 네트워크의 클러스터 노드 간 연결을 확인해야 합니다.</block>
   <block id="29bcfb9b8c7f3dd5f5123092080684d8" category="list-text">ONTAP Select 클러스터 구축:</block>
-  <block id="121916d45fa0b5e9fcf763bc06702c33" category="paragraph">클러스터 Deploy-name clusterName입니다</block>
   <block id="3170be01fdc45e3e10fbe83b1d2be644" category="paragraph">메시지가 나타나면 ONTAP 관리자 계정에 사용할 암호를 입력합니다.</block>
   <block id="1d8edcb67cffc7ed8d5c5ba0f36578b7" category="list-text">클러스터의 상태를 표시하여 성공적으로 배포된 시기를 확인합니다.</block>
-  <block id="e8cda75e7e5da3e0963e9bf30c7fe4c4" category="paragraph">클러스터 show-name clusterName입니다</block>
   <block id="a1b2fc65ee3382a95ecb29d66110e2ad" category="paragraph">ONTAP Select 배포 구성 데이터를 백업해야 합니다.</block>
   <block id="f32f31f3f65cf8fd06f0af930a71a5a1" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 선택할 수 있는 구성 옵션입니다. ROBO(Remote Office/Branch Office) 구축과 비슷하지만 두 노드 간의 거리는 최대 10km입니다 향상된 2노드 배포로 추가 사용 사례 시나리오를 제공합니다. MetroCluster SDS 구축을 위한 준비의 일부로 요구사항 및 제한 사항을 숙지해야 합니다.</block>
   <block id="b06ea299e97a88792e784ae5e265bc85" category="paragraph">각 노드에는 프리미엄 이상의 ONTAP Select 라이센스가 있어야 합니다.</block>
@@ -942,30 +913,19 @@
   <block id="a070d5cad46a2ff939c511d82e8fa8a6" category="list-text">사용 가능한 관리 셸 명령 목록을 표시하려면 *? * 를 입력하고 * Enter * 를 누릅니다.</block>
   <block id="a24ca07ebedf77f4a6bb2763a6a344d9" category="summary">ONTAP Select 배포 관리 유틸리티와 함께 제공되는 웹 사용자 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 배포할 수 있습니다.</block>
   <block id="4bdcc660d7ba4c9d9cca694831038425" category="paragraph">배포 유틸리티 웹 인터페이스를 사용하여 ONTAP Select 클러스터를 생성하면 특정 단계의 순서를 안내합니다. 정확한 프로세스는 단일 노드 클러스터 또는 다중 노드 클러스터 배포 여부에 따라 달라집니다.</block>
-  <block id="efad7811273daca9266e086dc55571c9" category="paragraph">배포를 성공적으로 수행할 수 있도록 준비해야 합니다.</block>
-  <block id="411e79ebb4981efce9ce6a2b1f40a34f" category="list-text">초기 계획</block>
-  <block id="f5a6377fa98426b942cb6b4550d297da" category="list-text">문서의 _Plan_and_License_섹션을 검토합니다. 이를 기반으로 다음을 비롯하여 클러스터에 대한 결정을 내릴 수 있습니다.</block>
   <block id="1b21b0d71706897b69f108572c444d40" category="list-text">하이퍼바이저</block>
   <block id="0ce159ef649591974fe60d01c47f9f48" category="list-text">노드 수</block>
   <block id="82060d81b7ce43c57280e879899f9a2c" category="list-text">사용권 유형</block>
   <block id="da194a96f5d968cb44a162849f8db7ea" category="list-text">플랫폼 크기(인스턴스 유형)</block>
   <block id="7df2592d21ee2d7b12cfa029e519d7b9" category="list-text">ONTAP Select 버전입니다</block>
-  <block id="07c910df832eed07eccb9da18112e34b" category="list-text">호스트 준비</block>
   <block id="37d0d8277e2cec2cf18d723f103fbca0" category="list-text">ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 준비하고 라이센스 모델에 따라 필요한 스토리지 라이센스 파일을 가지고 있어야 합니다. 준비 요구 사항을 보려면</block>
   <block id="9c3a59d6f34c8cd48494cf65ab055e67" category="inline-image-macro">물음표</block>
-  <block id="d5b05ba2463ff6cca0078e72e50f28e7" category="list-text">사용권 파일</block>
   <block id="85341d624e9b0303539956bd22bfd4d4" category="list-text">운영 환경에 클러스터를 구축할 계획이라면 라이센스 모델을 기반으로 스토리지 라이센스 파일을 얻어야 합니다.</block>
-  <block id="f0d5638b299d1abdeea7e3509c4a29b5" category="list-text">설치 및 계정 자격 증명 배포</block>
-  <block id="aed014e58fdd7a5646368dcc7246b28f" category="list-text">이전 ONTAP Select 노드 이미지 설치</block>
-  <block id="b87008505cc6fe630b46cc1e948e36f1" category="list-text">시작 페이지 시작 중</block>
   <block id="8a8160f2e850747bb7fabd6819906b08" category="list-text">초기 페이지 * ONTAP Select 배포 시작하기 * 는 클러스터를 생성하는 다단계 프로세스를 안내합니다. 다음과 같은 5가지 주요 단계가 있습니다.</block>
   <block id="fb98e8390277794afc419e842f4bccd9" category="list-text">라이센스를 추가합니다</block>
   <block id="f1783cedf199ea90c1cf0ff538262716" category="list-text">클러스터를 생성합니다</block>
   <block id="7b8833fb04a6b84fadcfe679b52ce68b" category="list-text">네트워크 사전 점검</block>
   <block id="caed535f5a1e318fff54ea6d8139100c" category="list-text">클러스터를 구축합니다</block>
-  <block id="9dae84e581f54bbd3529b1a828393655" category="list-text">네트워크 검사기</block>
-  <block id="18889d3b7d7412c773430265b3f7a703" category="list-text">다중 노드 클러스터를 구축할 경우 네트워크 검사기에 익숙해야 합니다.</block>
-  <block id="4680945aec88d9bcced06d39ec485a67" category="list-text">클러스터를 구축한 후</block>
   <block id="55e9b658bcd6b4ca65de5ed9557f68db" category="list-text">관리자 계정(admin)을 사용하여 웹 인터페이스를 통해 배포 유틸리티에 로그인합니다.</block>
   <block id="4693647f83597e4a631ffdc39034b06d" category="paragraph">제공한 계정 자격 증명이 배포 자격 증명 데이터베이스에 추가됩니다.</block>
   <block id="0f602d7fe375d87b4dfff619bb7a3b50" category="list-text">노드 설정 * 에서 노드 관리 IP 주소를 제공하고 노드에 대한 라이센스를 선택합니다. 필요한 경우 새 라이센스를 업로드할 수 있습니다. 필요한 경우 노드 이름을 변경할 수도 있습니다.</block>
@@ -1311,42 +1271,23 @@
   <block id="94c8db1e39e106761ed9c4db655dd019" category="cell">NetApp에서 계속 예약한 3자리 숫자 값</block>
   <block id="0c59088c12981c5178183df5dc1d06ec" category="cell">ppppppp</block>
   <block id="6eff2276c4f875c14c569fbc11e4c2a0" category="cell">nnnnnnnn</block>
-  <block id="86b544aab279dcb98c0ac9a8a2cfce27" category="summary">ONTAP Select 노드가 구축된 각 하이퍼바이저 호스트를 준비합니다. 호스트를 준비하는 과정에서 구축 환경을 주의 깊게 평가하여 호스트가 올바르게 구성되어 있고 ONTAP Select 클러스터 구축을 지원할 준비가 되었는지 확인합니다.</block>
-  <block id="2185b12253fdb08ce9e5bab96ce67841" category="admonition">ONTAP Select 배포 관리 유틸리티는 하이퍼바이저 호스트의 필수 네트워크 및 스토리지 구성을 수행하지 않습니다. ONTAP Select 클러스터를 구축하기 전에 각 호스트를 수동으로 준비해야 합니다.</block>
-  <block id="a623b323ce5bde34ceed491f235e772c" category="section-title">일반 하이퍼바이저 준비</block>
-  <block id="4f70f438bc71ffe3cc266bbdbd64dd4c" category="paragraph">하이퍼바이저 호스트를 준비해야 합니다.</block>
-  <block id="157082075cf8ebd954c056e836434d09" category="paragraph">각 호스트는 다음과 같이 구성해야 합니다.</block>
   <block id="24204c997b3d030f4d9ce5fcea7002fe" category="list-text">사전 설치 및 지원되는 하이퍼바이저</block>
   <block id="411cd9469768abc767a0d3bac2cdf6a7" category="list-text">VMware vSphere 라이센스</block>
-  <block id="eeb652490d57d0a6e0d8c4df44d30196" category="paragraph">또한 동일한 vCenter Server가 클러스터 내에 ONTAP Select 노드가 구축된 모든 호스트를 관리할 수 있어야 합니다.</block>
-  <block id="be7ba1cc5d733e1a1147dfcb706ba07e" category="paragraph">또한 vSphere에 대한 액세스를 허용하도록 방화벽 포트가 구성되어 있는지 확인해야 합니다. 이러한 포트는 ONTAP Select 가상 머신에 대한 직렬 포트 연결을 지원하려면 열려 있어야 합니다.</block>
   <block id="64e9bd801fb1d92798105981e35f9849" category="paragraph">기본적으로 VMware에서는 다음 포트에 대한 액세스를 허용합니다.</block>
   <block id="338fd1d1b83d5d0138568986650d8dc2" category="list-text">포트 22 및 포트 1024 ~ 65535(인바운드 트래픽)</block>
   <block id="ad85e3d4f8993ecc55cfc896cea6dc3a" category="list-text">포트 0 - 65535(아웃바운드 트래픽)</block>
-  <block id="a9461ad4bdcaf1c7202fdc5b685ae53b" category="paragraph">vSphere에 대한 액세스를 허용하려면 다음 방화벽 포트를 여는 것이 좋습니다.</block>
   <block id="752d7150e9a84bfe1a31fbe987989ac9" category="list-text">포트 7200 – 7400(인바운드 및 아웃바운드 트래픽 모두)</block>
-  <block id="f392a4c2089f47d56aaf2604d51a0212" category="paragraph">필요한 vCenter 권한도 숙지해야 합니다. 을 참조하십시오 <block ref="b5bc3984b5dc3be4e25e9aa47658f334" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="0fb894a7b1c4fc2e3053e0d8e16e28bb" category="section-title">ONTAP Select 클러스터 네트워크 준비</block>
-  <block id="c543be005c793f5c1453419ee22fdb86" category="paragraph">ONTAP Select를 다중 노드 클러스터 또는 단일 노드 클러스터로 구축할 수 있습니다. 많은 경우 스토리지 용량과 HA 기능이 추가되므로 멀티 노드 클러스터가 더 낫습니다.</block>
-  <block id="d50c9bc4edee53c577b0f49de0372b74" category="section-title">ONTAP Select 네트워크 및 노드 그림</block>
-  <block id="bdeb743cae55db0d19ef5bb601af8d02" category="paragraph">아래 그림은 단일 노드 클러스터 및 4노드 클러스터와 함께 사용되는 네트워크를 보여 줍니다.</block>
   <block id="b8bacb4f33d1e9dea63f9ab11ce19732" category="section-title">단일 노드 클러스터에 네트워크 1개 표시</block>
   <block id="58198336ded054ee055d62950ea47a49" category="paragraph">다음 그림에서는 단일 노드 클러스터를 보여 줍니다. 외부 네트워크에는 클라이언트, 관리 및 클러스터 간 복제 트래픽(SnapMirror/SnapVault)이 포함됩니다.</block>
   <block id="e4de6945234664828cf04b9124c5dad3" category="paragraph"><block ref="e4de6945234664828cf04b9124c5dad3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5f738af515e6134e45621304b009e7c5" category="section-title">2개의 네트워크를 보여 주는 4노드 클러스터</block>
-  <block id="d0c98acebd4a01ddf3e6391db82cf8cc" category="paragraph">다음 그림에서는 4노드 클러스터를 보여 줍니다. 내부 네트워크는 ONTAP 클러스터 네트워크 서비스를 지원하는 노드 간의 통신을 가능하게 합니다. 외부 네트워크에는 클라이언트, 관리 및 클러스터 간 복제 트래픽(SnapMirror/SnapVault)이 포함됩니다.</block>
   <block id="d903217e89ca4f8dc5faaecd0d175f0c" category="paragraph"><block ref="d903217e89ca4f8dc5faaecd0d175f0c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6ead2b5cc2e9a07c3c837cd527eae680" category="section-title">4노드 클러스터 내의 단일 노드</block>
   <block id="0e17d1b8e444a58b17e21b8d633cf3c9" category="paragraph">다음 그림에서는 4노드 클러스터 내의 단일 ONTAP Select 가상 머신에 대한 일반적인 네트워크 구성을 보여 줍니다. ONTAP-내부 및 ONTAP-외부라는 2개의 별도 네트워크가 있습니다.</block>
   <block id="ab818ab7a96525155b780ef59003cf8c" category="paragraph"><block ref="ab818ab7a96525155b780ef59003cf8c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="56e2b9daec1637993e5182fd117827a3" category="section-title">하이퍼바이저 호스트의 vSwitch 구성</block>
   <block id="c44b5d59bfc3b0196028c522c56aa989" category="paragraph">vSwitch는 내부 및 외부 네트워크의 연결을 지원하는 데 사용되는 핵심 하이퍼바이저 구성 요소입니다. 각 하이퍼바이저 vSwitch를 구성하는 과정에서 고려해야 할 몇 가지 사항이 있습니다.</block>
-  <block id="5850fac42ee19999fd3b74ae172f1a3d" category="section-title">2개의 물리적 포트가 있는 호스트의 vSwitch 구성(2x10Gb)</block>
-  <block id="eda37297768fb66316ec0c97afd29213" category="paragraph">각 호스트에 2개의 10Gb 포트가 포함된 경우 vSwitch를 다음과 같이 구성해야 합니다.</block>
-  <block id="a86f2765e738940e7dd8fdf6da677fd5" category="list-text">vSwitch를 구성하고 두 포트를 vSwitch에 할당합니다. 두 포트를 사용하여 NIC 팀을 생성합니다.</block>
   <block id="bfb9321c8431589faff7f47c47138df7" category="list-text">로드 밸런싱 정책을 "원래 가상 포트 ID를 기준으로 경로 지정"으로 설정합니다.</block>
   <block id="0cc1ebaa405436d568cee576cc2d2503" category="inline-image-macro">vSwitch 속성)</block>
-  <block id="fee017d680804978d6f31a0149d3356f" category="list-text">"페일백" 설정을 "예"로 설정합니다.<block ref="f2456bc45004bdf347023d01536a2379" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0bd1bd6c1c4f8c07bba0ee34ba53b4b3" category="list-text">점보 프레임(9000 MTU)을 사용하도록 vSwitch를 구성합니다.</block>
   <block id="e954024be7362eabbc9a349d62fdd4d4" category="list-text">내부 트래픽을 위해 vSwitch에서 포트 그룹 구성(ONTAP - 내부):</block>
   <block id="a75b88570c3f7c89c4fc7aa2f4ab0862" category="list-text">포트 그룹은 클러스터, HA 인터커넥트 및 미러링 트래픽에 사용되는 ONTAP Select 가상 네트워크 어댑터 e0c-e0g에 할당됩니다.</block>
@@ -1354,9 +1295,6 @@
   <block id="1d73953b34ca84fbbf679a9071108259" category="list-text">포트 그룹의 로드 밸런싱, 페일백 및 페일오버 순서 설정은 vSwitch와 동일해야 합니다.</block>
   <block id="b7760ca7d6bf308d66b54dafb201dee0" category="list-text">외부 트래픽을 위해 vSwitch에서 포트 그룹 구성(ONTAP-외부):</block>
   <block id="cc60c471b3f7c93bb39710ddf02f3de5" category="list-text">포트 그룹은 데이터 및 관리 트래픽에 사용되는 ONTAP Select 가상 네트워크 어댑터 e0a-e0c에 할당됩니다.</block>
-  <block id="be1192e22ed4b2278c16d618bdfb26db" category="list-text">포트 그룹은 라우팅 가능한 VLAN에 있을 수 있습니다. 또한 네트워크 환경에 따라 적절한 VLAN 태그를 추가하거나 VLAN 트렁킹을 위해 포트 그룹을 구성해야 합니다.</block>
-  <block id="aeb674f30505441361603daaf231026f" category="list-text">포트 그룹의 로드 밸런싱, 페일백 및 페일오버 순서 설정은 vSwitch와 같아야 합니다.</block>
-  <block id="6b59ceccf3ee7910ade2c094fe636bb7" category="paragraph">위의 vSwitch 구성은 일반적인 네트워크 환경에서 10Gb 포트 2개가 있는 호스트에 사용됩니다.</block>
   <block id="f5b241fc250b3d06edf589b105596935" category="summary">모든 API 호출의 세부 사항은 ONTAP Select 배포 온라인 설명서 웹 페이지에서 공통 형식을 사용하여 문서화되고 표시됩니다. 단일 API 호출을 이해하면 모든 API 호출에 대한 세부 정보를 액세스하고 해석할 수 있습니다.</block>
   <block id="f88210d2eab3d233e5af40136f634e78" category="paragraph">ONTAP Select 배포 온라인 설명서 웹 페이지에 로그인해야 합니다. 클러스터를 생성할 때 ONTAP Select 클러스터에 할당된 고유한 식별자가 있어야 합니다.</block>
   <block id="a1f5081f3dbf077035f1e845de86d7f2" category="paragraph">ONTAP Select 클러스터의 고유 식별자를 사용하여 해당 클러스터를 설명하는 구성 정보를 검색할 수 있습니다. 이 예제에서는 Inexpensive로 분류된 모든 필드가 반환됩니다. 그러나 가장 좋은 방법은 필요한 특정 필드만 요청하는 것입니다.</block>
@@ -2445,14 +2383,10 @@
   <block id="04985546e9771cbfe818d7c08949cb4e" category="paragraph">드라이브에 오류가 발생하면 ONTAP CLI를 사용하여 오류가 발생한 디스크를 식별해야 합니다.</block>
   <block id="76b45a86afe9ddfec423de5caad088a5" category="list-text">관리자 계정을 사용하여 ONTAP CLI에 로그인합니다.</block>
   <block id="56f32587956bc806f4ffe1823a1a1872" category="list-text">실패한 디스크 드라이브를 식별합니다.</block>
-  <block id="866ece73832a5308b812e48e59ba8a4f" category="paragraph">ONTAP Select 클러스터의 각 노드에서 사용하는 스토리지를 구성해야 합니다. 모든 노드에는 항상 하나 이상의 스토리지 풀이 할당되어야 합니다. 소프트웨어 RAID를 사용하는 경우 각 노드에 하나 이상의 디스크 드라이브도 할당해야 합니다.</block>
-  <block id="f31242a3b10d57ca87f84e612994d57c" category="paragraph">VMware vSphere를 사용하여 스토리지 풀을 생성해야 합니다. 소프트웨어 RAID를 사용하는 경우 하나 이상의 사용 가능한 디스크 드라이브도 필요합니다.</block>
   <block id="2976fb0a07ffd25ea274d2cc9bc187be" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 1-4단계를 수행해야 합니다. 소프트웨어 RAID를 사용하는 경우 1-6단계를 수행해야 합니다.</block>
   <block id="cc6982c020bc97509cfd68e72db0524e" category="list-text">관리자 계정 자격 증명과 함께 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</block>
   <block id="1d0fd2b207143cd0cbfe1f1eca67206a" category="list-text">소프트웨어 RAID를 사용하는 경우 사용 가능한 드라이브 또는 드라이브를 연결합니다.</block>
-  <block id="477b4fc07bc021818bf99ca0a2f9a370" category="paragraph">노드 스토리지 디스크 연결 노드 이름 nodename -cluster -name clusterName -disks list_of_drives</block>
   <block id="10d4b2d6f8c74f79bcce5324cfbda150" category="list-text">소프트웨어 RAID를 사용하는 경우 노드에 연결된 디스크를 표시합니다.</block>
-  <block id="f1efe358bd22df5ef0bdf73fc9e8d10b" category="paragraph">노드 스토리지 디스크 show-node-name nodename-cluster-name clusterName입니다</block>
   <block id="1a4f0dd8a8bf6109c981c282ef6e87c9" category="paragraph">지원되는 마이크로프로세서는 다음과 같습니다.</block>
   <block id="9adc1cc3490cf88dcf6538833825d06d" category="paragraph">클러스터 크기에 따라 지원되는 여러 이더넷 구성이 있습니다.</block>
   <block id="28f29271814291e43be7deaba751046b" category="cell">클러스터 크기</block>
@@ -2653,7 +2587,6 @@
   <block id="75907379a71ad8ffa5e06073ace36e0d" category="list-text">ESXi 6.0은 더 이상 지원되지 않습니다</block>
   <block id="34e4360ab412f7aa9e3c95f9f9415b6f" category="list-text">KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다</block>
   <block id="cb8338f0bc7e868c1dca9f89ef69705a" category="paragraph">MetroCluster SDS는 ROBO 환경에서 2노드 클러스터를 지원하는 것과 동일한 VMware ESXi 및 KVM 하이퍼바이저에 구축할 수 있습니다.</block>
-  <block id="7e2fe14c99e2697025b2031aedd0ec68" category="list-text">vCenter에서 관리하는 호스트 등록:<block ref="06cf66b5547f9422d5a9c37b6cfb3aca" prefix=" " category="inline-code"></block></block>
   <block id="18d733133eb14f6d577f2d278fac37a1" category="summary">host modify 명령을 사용하여 이 ONTAP Select 배포 인스턴스로 호스트 관리 서버를 수정할 수 있습니다.</block>
   <block id="35f41fa38694b23a0654a4a8c0dd359b" category="doc">호스트 관리 서버를 수정합니다</block>
   <block id="88f06314571793a45376bea0a67c1684" category="paragraph">를 사용할 수 있습니다<block ref="efefae9f89e157498d052edf2886fd00" prefix=" " category="inline-code"></block> ONTAP Select Deploy의 이 인스턴스를 사용하여 호스트 관리 서버를 수정하는 명령입니다.</block>
@@ -2753,7 +2686,6 @@
   <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">VMware vSphere vSwitch 구성</block>
   <block id="8562cdbdbba76b21c630f16efd9cf0cd" category="list-text">인벤토리에 호스트를 추가합니다</block>
   <block id="dd2d1f8e815a8070f320c0a14ed24f71" category="paragraph">ONTAP Select 배포 웹 사용자 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 배포할 수 있습니다.</block>
-  <block id="5287736167b026a88e404d8ebf5a4615" category="paragraph">을 참조하십시오 <block ref="6dd97e1bd4c3fafba8bd8a1033c5617c" category="inline-link-macro-rx"></block> 클러스터 구축 준비 배포 관리를 설치하고 초기에 구성해야 합니다(암호, AutoSupport 및 vCenter).</block>
   <block id="3c67dfd58666f1caf15b0490aaa8b0fc" category="paragraph">운영 구축을 위해 하나 이상의 노드가 있는 ONTAP Select 클러스터가 생성됩니다.</block>
   <block id="c29c0fa60d66b44a13904899d8712c68" category="open-title">다중 노드 클러스터</block>
   <block id="87f7f104547967da3e1d18965e33ecbe" category="list-text">노드 설정 * 에서 노드 관리 IP 주소를 제공하고 각 노드에 대한 라이센스를 선택합니다. 필요한 경우 새 라이센스를 업로드할 수 있습니다. 필요한 경우 노드 이름을 변경할 수도 있습니다.</block>
@@ -2859,10 +2791,7 @@
   <block id="fdd1d325ffe2bc60f1cb8023f18ff770" category="paragraph">을 참조하십시오 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> 자세한 내용은 를 참조하십시오.</block>
   <block id="03d76d78faf307e9a28053a9961e39b9" category="inline-link-macro">Deploy Utility CLI를 사용하여 ONTAP Select 클러스터를 구축합니다</block>
   <block id="a86b0aeeb47174a94a9b648d015c71d1" category="admonition">또한 가능합니다 <block ref="ea53b27a388cf53d44c3f702619eab0e" category="inline-link-macro-rx"></block>.</block>
-  <block id="e0cc9223324ac532a641decf83c6e9b5" category="list-text">배포 관리 유틸리티를 설치하고 초기 구성을 수행해야 합니다. 을 참조하십시오 <block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block> 를 참조하십시오. 설치 프로세스의 일부로 구성된 배포 관리자 계정의 암호가 있어야 합니다.</block>
   <block id="cf86e8b21059cea7afe42d59893ab1bb" category="inline-link-macro">배포할 ONTAP Select 이미지를 추가합니다</block>
-  <block id="8cc0af6f6e47d25f8709bf9afbd00f15" category="list-text">기본적으로 배포 관리 유틸리티는 릴리스 시점에 최신 버전의 ONTAP Select를 포함합니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="d62734538fb96b5ef45355daf822cb1a" category="section-title">단일 노드 또는 다중 노드 클러스터를 생성합니다</block>
   <block id="f300769ad7ade3ee1597c88f58750b97" category="doc">ONTAP Select 노드를 업그레이드합니다</block>
   <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 릴리즈 노트를 참조하십시오.</block>
   <block id="2a883d1fe3d932e9f2fc25c99deaa4b9" category="inline-link-macro">ONTAP 업그레이드 개요</block>
@@ -2938,11 +2867,7 @@
   <block id="18249feda4b97af2b71cdf46188e1e4c" category="section-title">배포 관리자 암호를 변경합니다</block>
   <block id="39c422f1ba6768584ce2b5ea65c4f569" category="doc">CLI를 사용하여 ONTAP Select 클러스터를 구축합니다</block>
   <block id="6f78f7cef2637ad960245873ccb009cc" category="section-title">스토리지를 ONTAP Select 노드에 연결할 준비를 합니다</block>
-  <block id="ad34b3ead133ac2946581ad99de776f1" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select를 사용하여 클러스터를 배포하려면 먼저 배포 인스턴스에 ONTAP Select 이미지를 추가해야 합니다. 을 참조하십시오 <block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="1b1ef1407797edfb0f8a19eb7e5bfcf0" category="section-title">운영 구축을 위한 ONTAP Select 라이센스 등록</block>
-  <block id="37ff470528fb108e5783094291a4fa39" category="section-title">라이센스 파일을 업로드하고 등록합니다</block>
-  <block id="6a1aef20627259c0bc151f0c191b9cb8" category="section-title">ONTAP Select 노드를 구성합니다</block>
-  <block id="feabcebe39f17dad32257d11d0077c91" category="section-title">스토리지를 ONTAP Select 노드에 연결합니다</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">최소 요구 사항</block>
   <block id="145a82122e23908d50818a5950c27509" category="cell">권장 요구 사항</block>
   <block id="a5ce4a1eb8334399b5ae78ecb675d015" category="paragraph">을 참조하십시오 <block ref="cc66674a6eca098ccdd0161214bd6b9f" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
@@ -3088,25 +3013,11 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="ac6f6351adbefa5e8dddb3979a00a210" category="section-title">KVM용 가상 스위치 옵션</block>
   <block id="14958037abd0c9d4d81d8f56f5e5e6dd" category="inline-link-macro">ONTAP Select on KVM 제품 아키텍처 및 모범 사례</block>
   <block id="4f3a24de1cd0e2c9a65d69f3cb150ca6" category="paragraph">하이퍼바이저 호스트에서 Open vSwitch를 구성하는 방법에 대한 자세한 내용은 를 참조하십시오 <block ref="2b1f7dd3493f53e1ee03e8fab05e0af0" category="inline-link-macro-rx"></block> 기술 보고서:</block>
-  <block id="de797f6783630aa8fc2138dde8e9120c" category="section-title">KVM 하이퍼바이저</block>
-  <block id="b2e7abe45d5aa586a8f3507497cdd9f9" category="paragraph-title">Linux 서버를 준비합니다</block>
-  <block id="b09f29f89d723a464604296e2e5e07ac" category="paragraph">ONTAP Select 노드가 구축되는 각 Linux KVM 서버를 준비해야 합니다. 또한 ONTAP Select 배포 관리 유틸리티가 배포되는 서버를 준비해야 합니다.</block>
-  <block id="fc8913280cdc00a30c367fb6cad82a5a" category="paragraph-title">Red Hat Enterprise Linux를 설치합니다</block>
-  <block id="4adf8d273405d567b3c04578e7587fcc" category="list-text">보안 정책으로 기본값 을 선택합니다</block>
-  <block id="b7ed0ef33f8535f13a2a8c61b522db5c" category="list-text">가상화된 호스트 소프트웨어 선택 항목을 선택합니다</block>
-  <block id="beb8bb5c30618e7ed13d13dae4f958bd" category="list-text">대상은 ONTAP Select에서 사용하는 RAID LUN이 아니라 로컬 부팅 디스크여야 합니다</block>
-  <block id="10c868a17c5e398c81dd9b50639763c4" category="list-text">시스템을 부팅한 후 호스트 관리 인터페이스가 작동하는지 확인합니다</block>
   <block id="aaac1d103d5aeeb7d73b6d5e1bdc1994" category="admonition">/etc/sysconfig/network-scripts 아래에서 올바른 네트워크 구성 파일을 편집한 다음 를 사용하여 인터페이스를 불러올 수 있습니다<block ref="6ba111013553581c1c2e4d92b952a427" prefix=" " category="inline-code"></block> 명령.</block>
-  <block id="ab254b430433275f124379adb4311d9e" category="paragraph-title">ONTAP Select에 필요한 추가 패키지를 설치합니다</block>
-  <block id="3738f55ea208199f5c75954580847670" category="paragraph">ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니다. 정확한 패키지 목록은 사용 중인 Linux 버전에 따라 다릅니다. 첫 번째 단계로 yum 리포지토리를 서버에서 사용할 수 있는지 확인합니다. 사용할 수 없는 경우 를 사용하여 검색할 수 있습니다<block ref="a52a983e58d14432379ef732f02ff1ab" prefix=" " category="inline-code"></block> 명령:</block>
   <block id="99965beffa3302f13c927db3818d3722" category="inline-link-macro">vSwitch 문서를 엽니다</block>
   <block id="ef81ea587a9f08c529a68f4615638a9f" category="admonition">Linux 서버 설치 중에 소프트웨어 선택을 위해 가상화된 호스트를 선택한 경우 필요한 패키지 중 일부가 이미 설치되어 있을 수 있습니다. 에 설명된 대로 소스 코드에서 openvswitch 패키지를 설치해야 할 수 있습니다 <block ref="7514235d0c1cb4fbed4568e20a4d9277" category="inline-link-macro-rx"></block>.</block>
-  <block id="3fec9570e277fe5ca33bf5e5dc7cf266" category="paragraph-title">스토리지 풀 구성</block>
   <block id="4a1a2ddde34541bd47c25ab818424838" category="paragraph">ONTAP Select 스토리지 풀은 기본 물리적 스토리지를 추상화하는 논리적 데이터 컨테이너입니다. ONTAP Select가 구축된 KVM 호스트에서 스토리지 풀을 관리해야 합니다.</block>
-  <block id="694bb5d3641d16eb91812f8515d06f39" category="section-title">스토리지 풀을 생성합니다</block>
-  <block id="58e5c137a00faec1de944bacb75ca632" category="paragraph">각 ONTAP Select 노드에 하나 이상의 스토리지 풀을 생성해야 합니다. 로컬 하드웨어 RAID 대신 소프트웨어 RAID를 사용하는 경우, 스토리지 디스크가 루트 및 데이터 애그리게이트의 노드에 연결됩니다. 이 경우에도 시스템 데이터에 대한 스토리지 풀을 생성해야 합니다.</block>
   <block id="d06dd7938588e509ae84facb39c806cd" category="paragraph">ONTAP Select가 구축된 호스트에서 Linux CLI에 로그인할 수 있는지 확인합니다.</block>
-  <block id="16b00c8abcc647df1731f70f3b3aee4f" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 스토리지 풀의 타겟 위치를 /dev/&lt;pool_name&gt;로 지정해야 합니다. 여기서 &lt;pool_name&gt;는 호스트의 고유한 풀 이름입니다.</block>
   <block id="6f92c22ea4481dc877af6451c00b7600" category="admonition">스토리지 풀이 생성될 때 LUN의 전체 용량이 할당됩니다.</block>
   <block id="91e1bea618239574736ff58d1555ee78" category="list-text">Linux 호스트에서 로컬 디바이스를 표시하고 스토리지 풀을 포함할 LUN을 선택합니다.</block>
   <block id="1c26a9b8b6ff9130f9fe3d768a2bb1b1" category="paragraph">적절한 LUN은 스토리지 용량이 가장 큰 디바이스일 가능성이 높습니다.</block>
@@ -3116,8 +3027,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="415a28ab034c4b366ebca0e1fa301877" category="list-text">스토리지 풀을 시작합니다.</block>
   <block id="d3df2906140890200ea275d3126da11e" category="list-text">시스템 부팅 시 자동으로 시작되도록 스토리지 풀을 구성합니다.</block>
   <block id="524cde9f98f335dbb104964e066dfce1" category="list-text">스토리지 풀이 생성되었는지 확인합니다.</block>
-  <block id="69e1bc44aa452878b78f550b1157f17f" category="section-title">스토리지 풀을 삭제합니다</block>
-  <block id="14afacaaf46b8168da545a92865b948b" category="paragraph">더 이상 필요하지 않은 스토리지 풀은 삭제할 수 있습니다.</block>
   <block id="a14f2866686fa22df758f2e2b00f0b70" category="paragraph">ONTAP Select가 배포된 Linux CLI에 로그인할 수 있는지 확인합니다.</block>
   <block id="dd35639e9fd740146b934fb640bccf13" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 스토리지 풀의 타겟 위치를 로 지정해야 합니다<block ref="319a1c81657d8dc3b673f17368a886b7" prefix=" " category="inline-code"></block>, 위치<block ref="f07904d2382b0c9f106ac0aed199bfa5" prefix=" " category="inline-code"></block> 는 호스트의 고유한 풀 이름입니다.</block>
   <block id="6d8662996e69f1e3c536b02d02d5787d" category="list-text">스토리지 풀이 정의되어 있는지 확인합니다.</block>
@@ -3133,10 +3042,7 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="18be2ae62eb484adbc3df06931ebe10e" category="list-text">물리적 볼륨이 삭제되었는지 확인합니다.</block>
   <block id="f8e80305c6a752fa480425736440f0ae" category="list-text">물리적 볼륨을 표시합니다.</block>
   <block id="683ecb73afda15fde88ea1f13553db88" category="list-text">풀에 대한 물리적 볼륨이 있는 경우 삭제합니다.</block>
-  <block id="03249d27c310c32513a2cb9a94f2392e" category="section-title">ESXi 하이퍼바이저</block>
   <block id="648b7564cebb88ef62230c6f20be68e5" category="section-title">KVM 호스트</block>
-  <block id="fad67eca4bbb6c614ba95a7621feb115" category="section-title">KVM 호스트에서 Open vSwitch를 구성합니다</block>
-  <block id="499b1345f49647b53688c5793ad6fd16" category="paragraph">Open vSwitch를 사용하여 각 ONTAP Select 노드에서 소프트웨어 정의 스위치를 구성해야 합니다.</block>
   <block id="50d78cdae1dbe643fde69294232f2373" category="paragraph">네트워크 관리자가 비활성화되어 있고 기본 Linux 네트워크 서비스가 활성화되어 있는지 확인합니다.</block>
   <block id="61265c1e27724fae1f9a2cd60d857810" category="paragraph">ONTAP Select에는 2개의 개별 네트워크가 필요하며, 둘 다 포트 본딩을 활용하여 네트워크에 HA 기능을 제공합니다.</block>
   <block id="b4a77e012bdccdd189f5aef0dce990f6" category="list-text">Open vSwitch가 호스트에서 활성 상태인지 확인합니다.</block>
@@ -3146,7 +3052,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="a1c899987e93a415b9a1b29b831d64a5" category="paragraph">Open vSwitch가 호스트에 아직 구성되지 않은 경우 구성은 비어 있는 상태로 표시됩니다.</block>
   <block id="40779d988534a99007cdc886bc32993e" category="list-text">새 vSwitch 인스턴스 추가:</block>
   <block id="e72eb41a052109bb91a2314fa0d6e4fc" category="list-text">네트워크 인터페이스를 중단합니다.</block>
-  <block id="5acc57693e4f9cd8ef816c9879f58020" category="list-text">LACP를 사용하여 링크 결합:</block>
   <block id="ccaee579ce14596b2dda7bc7da054d94" category="admonition">인터페이스가 두 개 이상인 경우에만 연결을 구성하면 됩니다.</block>
   <block id="646f02137c96603aa789a9457d4d0957" category="list-text">네트워크 인터페이스 실행:</block>
   <block id="52a1e1faba85313e38b02d33db3e72fa" category="section-title">ESXi 호스트</block>
@@ -3234,8 +3139,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="1bc4b1f653eec748e8950fe95542c6c7" category="paragraph">소프트웨어 RAID 배포 환경은 다음과 같은 핵심 요구 사항을 충족해야 합니다.</block>
   <block id="359d6740356700577c670323f7cbac37" category="section-title">ESXi 관련 요구 사항</block>
   <block id="2224687ecf21b1675a7abec3ca811ea2" category="section-title">KVM 관련 요구 사항</block>
-  <block id="53ff7224e49cc038362b652ed53367b7" category="inline-link-macro">Linux 서버 준비</block>
-  <block id="0f075a8bba820354a296c7a6914f8394" category="paragraph">또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 을 참조하십시오 <block ref="3f2bac8bad540a9c2f37d4f37d1b8355" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="c2d9e9c4506ed8ccbe8db249dce9164a" category="list-text">KVM에 대한 미디어 기대치</block>
   <block id="aa006251ff33a6971a452339afffc2c3" category="list-text">사용되는 SSD 플래시 저장 장치는 다음과 같은 추가 요구 사항을 충족해야 합니다.</block>
   <block id="00bd07af9fad9ff431eee2c2198976da" category="list-text">SSD 장치는 다음 방법을 통해 Linux 호스트에 정확하고 지속적으로 보고해야 합니다.</block>
@@ -3257,10 +3160,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="07631781f5db0609861ec2caaf896f03" category="list-text">구성에서 씬 프로비저닝된 스토리지를 인식하지 못합니다.</block>
   <block id="10c8d042ce17abdbd1b2872cc10224fd" category="admonition">지정하는 스토리지 용량은 외부 스토리지의 허용된 스토리지 제한 범위 내에 있어야 합니다. 디스크 생성 작업 중에 용량 제한을 제공하지 않거나 외부 스토리지의 공간이 부족하면 오류가 발생합니다.</block>
   <block id="d6a8d8a553fafc77be3bbc3532a06ef8" category="paragraph">하이퍼바이저에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비 작업을 이해해야 합니다.</block>
-  <block id="e14fdf26f8c6aa9539b5cd6e06f4e6a0" category="section-title">하이퍼바이저 호스트를 추가합니다</block>
   <block id="54b9e9bd1204847d62dd385e0a878825" category="paragraph">ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해야 합니다.</block>
   <block id="821f64723dcb51116d658f57a357ea8d" category="paragraph">ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 등록해야 합니다. 이에 따라 Deploy 관리 유틸리티는 KVM 호스트에 대해 인증합니다.</block>
-  <block id="02d016ce2e517695f7acf4b6eec3505d" category="paragraph">둘 이상의 하이퍼바이저 호스트가 필요한 경우 다음 절차를 사용하여 각 호스트를 추가해야 합니다.</block>
   <block id="b35deab8fe517b712dd5772aba668caa" category="paragraph">메시지가 나타나면 호스트 계정에 대한 암호를 입력합니다.</block>
   <block id="746634143c62da1653effd6247a8bc0c" category="list-text">호스트의 상태를 표시하고 인증되었는지 확인합니다.</block>
   <block id="3cea28153feb7166a8a64b4330b70220" category="paragraph">이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.</block>
@@ -3351,15 +3252,11 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">클러스터 축소 8노드-6노드 클러스터</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.</block>
   <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다.</block>
-  <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다. 다른 클러스터 확장 또는 축소 시나리오는 지원되지 않습니다.</block>
-  <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">이 절차는 CLI, API 또는 웹 인터페이스를 사용하여 ONTAP Select Deploy에서 시작합니다.</block>
   <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">클러스터 확장 및 수축 기능은 다음과 같은 방식으로 제한됩니다.</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">클러스터를 확장합니다</block>
   <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">클러스터 확장 기능을 사용하여 6노드에서 8노드 클러스터로 기존 클러스터의 크기를 늘릴 수 있습니다.</block>
   <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">클러스터 확장 절차를 준비하기 위해 새 ESX 호스트가 인벤토리에 추가되고 새 노드의 세부 정보가 할당됩니다. 클러스터 확장 프로세스를 시작하기 전에 네트워크 사전 점검에서 선택한 내부 네트워크를 확인합니다.</block>
-  <block id="7c96df80e019ac7201d76d07cb2c8c3b" category="inline-link-macro">네트워크 연결 검사기</block>
-  <block id="4ae4de42a8fcf95f1eb770acae4690f2" category="list-text">다중 노드 클러스터를 구축할 때는 에 익숙해야 합니다 <block ref="db3262d1c88b720b4d17a260091e6a75" category="inline-link-macro-rx"></block>.</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">새 노드에 대한 라이센스 세부 정보가 있는지 확인합니다.</block>
   <block id="70be200347cc17e3939c72792fe71b15" category="list-text">페이지 상단의 * Cluster * 탭을 선택하고 목록에서 원하는 클러스터를 선택합니다.</block>
   <block id="83d473b2e8f1c324b60e13d720cac51a" category="list-text">클러스터 세부 정보 페이지에서 페이지 오른쪽에 있는 기어 아이콘을 선택하고 * 클러스터 확장 * 을 선택합니다.</block>
@@ -3395,12 +3292,9 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">원래 Deploy 가상 머신 이미지를 저장합니다.</block>
   <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">구축 구성 데이터를 원래 가상 머신으로 복구할 때는 이 절차의 뒷부분에서 원래 가상 머신 구축 이미지가 필요합니다.</block>
   <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">하이퍼바이저에 대한 소프트웨어 호환성 정보</block>
-  <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">ISO 이미지를 사용하여 RHEL(Red Hat Enterprise Linux) 운영 체제를 설치해야 합니다. 지원되는 RHEL 버전의 목록은 를 <block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>참조하십시오. 설치 중에는 다음과 같이 시스템을 구성해야 합니다.</block>
   <block id="d62b4235cf2a29152b9bcb3eb1df59d8" category="paragraph">클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. 1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 클러스터를 확장하는 기능은 현재 지원되지 않습니다. <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>..</block>
   <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. 6노드 또는 8노드 클러스터에서 1노드, 2노드 또는 4노드 클러스터로의 클러스터 수축은 현재 지원되지 않습니다. <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>..</block>
   <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">하드웨어 및 스토리지 고려 사항</block>
-  <block id="04b2d3e0b04793e1eab99a7ce4905944" category="paragraph">다음 클러스터 확장 및 수축은 현재 지원되지 않습니다.</block>
-  <block id="246664f02679d184f0608a4d7824502b" category="list-text">1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 확장</block>
   <block id="226d8636aca6bd1bdcac58203b8ddcd2" category="list-text">6노드 또는 8노드 클러스터를 1노드, 2노드 또는 4노드 클러스터로 축소</block>
   <block id="054e946fb0b83b6a666a6ad91e898f0a" category="doc">ONTAP Select에 대한 작업 개체를 사용한 비동기 처리</block>
   <block id="1203a64f6c4121eab9dbc97f2336a51b" category="doc">브라우저를 사용하여 ONTAP Select 배포 API에 액세스하기 전에</block>
@@ -3468,7 +3362,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">ONTAP Select 클러스터 노드의 크기를 조정하는 스크립트</block>
   <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">워크플로우 1: ESXi에서 ONTAP Select 단일 노드 평가 클러스터를 생성합니다</block>
   <block id="169dafc7979793a9e61147f233aa45c3" category="doc">ONTAP Select 배포 유틸리티 설치에 필요한 정보입니다</block>
-  <block id="952cea38c1f18dae7e337ec5342feda3" category="doc">ONTAP Select 호스트 구성 및 준비 체크리스트</block>
   <block id="d94db1fe93dcae57541a64d1d1664af0" category="doc">ONTAP Select에 대해 자주 묻는 질문</block>
   <block id="cddb93cf729be75720f6155855c70d38" category="doc">ONTAP Select 배포를 위한 호스트 관리 서버를 수정합니다</block>
   <block id="7ccffa1050dd38b57df1fa0990bb72a7" category="doc">구축 후 ONTAP Select 클러스터의 초기 상태입니다</block>
@@ -3550,7 +3443,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXi 호스트를 준비하기 위한 요구 사항</block>
   <block id="40500d60ce10678b5afdd4398f493978" category="paragraph"><block ref="40500d60ce10678b5afdd4398f493978" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a9d35c0cb060ab36e25ffd3d93795556" category="inline-link-macro">ONTAP Select 설치 설명서</block>
-  <block id="295c8d07537fb1be04c147371b26ece5" category="paragraph">호스트 구성 옵션에 대한 자세한 내용은 를 <block ref="cd27c348e940a3727b6807628855d8fd" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="246320dc101bf0e3be5986b0320159e6" category="section-title">OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터를 구축합니다</block>
   <block id="a50cac13360eacf7961596b190047155" category="paragraph">지원되는 64비트 ESXi 호스트 서버에서 다음 단계를 완료합니다.</block>
   <block id="e7c78d04f4c3c4a7d36c59b9d2c2b9f7" category="list-text">NetApp 평가판 제품 프로그램 페이지로 이동하여 * ONTAP Select * 를 선택하여 ONTAP Select OVF 템플릿을 로컬 워크스테이션에 다운로드합니다.</block>
@@ -3586,7 +3478,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="820d1873bef6998cbee232163b828a57" category="list-text">시작하기 * 페이지에서 * 업로드 * 를 선택한 다음 로컬 워크스테이션에서 라이센스를 선택하고 * 열기 * 를 선택하여 라이센스를 업로드합니다.</block>
   <block id="68488b2b0b0bac78cf8e946ef52da267" category="list-text">새로 고침 * 을 선택하고 라이센스가 추가되었는지 확인합니다.</block>
   <block id="3d549ad86001c792e0804733ec4c2957" category="list-text">하이퍼바이저 호스트를 추가하려면 * 다음 * 을 선택하고 * 추가 * 를 선택합니다.</block>
-  <block id="d44b6331867f2132b1d71fa39b6807b4" category="list-text">새로 고침 * 을 선택하고 호스트에 대한 * 유형 * 값이 * ESX * 인지 확인합니다.</block>
   <block id="c62cb76848266877f290be96b3ff294e" category="list-text">Next * 를 선택하여 클러스터 생성 프로세스를 시작합니다.</block>
   <block id="6c7b66882eb92b081bda7b0b837ecadc" category="list-text">클러스터 세부 정보 * 섹션에서 클러스터를 설명하는 데 필요한 모든 정보를 제공하고 * 완료 * 를 선택합니다.</block>
   <block id="e1c524d61c650626841b4dcb765c3916" category="list-text">스토리지 * 구성을 제공하고 * 완료 * 를 선택합니다.</block>
@@ -3825,8 +3716,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="9ea928d7a888b1b6dd05218df42c1863" category="list-text">평가 클러스터의 각 노드에 대해 용량 계층 라이센스가 있어야 합니다.</block>
   <block id="6bc11a9dac55ab4bd5f801441e32be3e" category="section-title">만료된 Capacity Pool 라이센스를 관리합니다</block>
   <block id="235d833d1553c6ac3ef4b59a69b7709d" category="admonition">용량 계층 라이센스 모델 및 용량 풀 라이센스 모델을 사용할 때 클러스터 노드 크기 조정 작업을 수행할 수 있습니다.</block>
-  <block id="799f1b966e3a6731dcf1bdc532fd6e05" category="paragraph">운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. Capacity Tiers_model 을 사용하여 각 노드에서 스토리지 라이센스를 부여하거나 _Capacity Pools_model 을 사용하여 공유 풀에 라이센스를 부여할 수 있습니다.</block>
-  <block id="4f48353f20e29f22472de3805fec8341" category="paragraph">노드에 대한 구성 정보가 있어야 합니다. Capacity Tier 라이센스 파일은 Deploy 유틸리티에 업로드하고 설치해야 합니다.</block>
   <block id="751e45429506270501500591ecf71f63" category="paragraph">이 절차를 사용하여 각 노드를 구성해야 합니다. 이 예에서는 Capacity Tier 라이센스가 노드에 적용됩니다.</block>
   <block id="f5eacefd45f87cad9eca589aeba17364" category="paragraph">ONTAP Select 노드에는 용량 계층 라이센스가 사용됩니다.</block>
   <block id="70c6ed94827afcf20125ed21cfa0d45d" category="paragraph">용량 풀 또는 용량 계층 라이센스가 사용되는지 여부를 확인해야 합니다. Capacity Pools 라이센스를 사용하는 경우 배포 인스턴스를 복구하거나 복원한 후에 각 Capacity Pool 라이센스를 다시 설치해야 합니다.</block>
@@ -3844,4 +3733,124 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="6a83549be60e71831bbfcda50973a52e" category="paragraph">용량 계층 라이센스가 필요한 각 ONTAP Select 노드에 대해 이 작업을 수행해야 합니다.</block>
   <block id="9e2e9cf9504e665219344b4d7647d396" category="sidebar">데이터 보호 및 효율성</block>
   <block id="7b1e0be7876419647c8d2d4cd1e3444e" category="sidebar">용량 풀 대 용량 계층</block>
+  <block id="82f452184fa717ab2fcdbde25eea3a2b" category="inline-link-macro">프로덕션 배포를 위한 라이선스에 대해 알아보세요</block>
+  <block id="74d4caeb059278dbd1c813ff422126a8" category="list-text"><block ref="74d4caeb059278dbd1c813ff422126a8" category="inline-link-macro-rx"></block></block>
+  <block id="8c091dbfff8264fef2b6558a0443daa3" category="paragraph">호스트 구성 옵션에 대한 자세한 내용은 를 <block ref="d26ab879e3e1e4419b35eeaaf3d601a9" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="ac40d7358d4d4fc23aa16496ea43e162" category="summary">ONTAP Select 노드가 배포된 각 ESXi 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다.</block>
+  <block id="48a140923c82edfd6e65489c46f2fd26" category="doc">ONTAP Select 위한 ESXi 호스트 구성 및 준비 체크리스트</block>
+  <block id="cd4dd6c5342dd2939f0e0bdd97cfa640" category="paragraph">ONTAP Select 노드가 배포된 각 ESXi 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다.</block>
+  <block id="6943ac53dc25f522d2ecc61d1df4d254" category="admonition">ONTAP Select Deploy 관리 유틸리티는 하이퍼바이저 호스트의 필수 네트워크 및 스토리지 구성을 수행하지 않습니다. ONTAP Select 클러스터를 배포하기 전에 각 호스트를 수동으로 준비해야 합니다.</block>
+  <block id="423f466fab8357286c6cf217990032a9" category="section-title">1단계: ESXi 하이퍼바이저 호스트 준비</block>
+  <block id="ffcbf41bb4fefee8d2ebaec73aee544e" category="paragraph">ESXi 호스트와 방화벽 포트에 대한 구성을 확인하세요.</block>
+  <block id="4bfbb417b8a4bf09330cd603a8d2149d" category="list-text">각 ESXi가 다음으로 구성되었는지 확인하세요.</block>
+  <block id="7f7b0cd7587096f8738b62b3bb89f75d" category="list-text">동일한 vCenter 서버가 클러스터 내에서 ONTAP Select 노드가 배포된 모든 호스트를 관리할 수 있는지 확인합니다.</block>
+  <block id="8e965c6efff0ec42edb4d98c4b4f267c" category="list-text">방화벽 포트가 vSphere에 대한 액세스를 허용하도록 구성되었는지 확인하세요. 이러한 포트는 ONTAP Select 가상 머신에 대한 직렬 포트 연결을 지원하려면 열려 있어야 합니다.</block>
+  <block id="654866693fd91ce8e9764a218f569918" category="open-title">권장</block>
+  <block id="48b57a8b558957dd3e7441bb0f96fc17" category="paragraph">NetApp vSphere에 대한 액세스를 허용하기 위해 다음 방화벽 포트를 열 것을 권장합니다.</block>
+  <block id="7a1920d61156abc05a60135aefe8bc67" category="open-title">기본값</block>
+  <block id="12462521a7bfaae88612e67a6cc7b1d6" category="inline-link-macro">Broadcom VMware vSphere 설명서</block>
+  <block id="d85d91c3c7391a8cc1abbaa4bf03a69f" category="paragraph">자세한 내용은 를 <block ref="f57712c95026a899c2b4a681c2f5806d" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="060278236e2a36f8b466d6ba28cd0b0a" category="list-text">필요한 vCenter 권한을 숙지하세요. 자세한 내용은 을 <block ref="b5bc3984b5dc3be4e25e9aa47658f334" category="inline-link-macro-rx"></block> 참조하십시오.</block>
+  <block id="476adabeb93cd47e40f395777bcd9096" category="section-title">2단계: ONTAP Select 클러스터 구성 검토</block>
+  <block id="00fd1befd47f1352fb810d1098ccd34c" category="paragraph">ONTAP Select를 다중 노드 클러스터 또는 단일 노드 클러스터로 구축할 수 있습니다. 많은 경우, 추가 저장 용량과 고가용성(HA) 기능 때문에 다중 노드 클러스터가 더 선호됩니다.</block>
+  <block id="1abfe64fc729ead26726164b794bcc72" category="paragraph">다음 그림은 단일 노드 클러스터와 4노드 클러스터에 사용되는 ONTAP Select 네트워크를 보여줍니다.</block>
+  <block id="2e5a1a6424ee2d0aa549b427d2f571d2" category="open-title">4노드 클러스터</block>
+  <block id="e6a67192413f528c465842e03f8443e0" category="paragraph">다음 그림은 두 개의 네트워크를 보여주는 4노드 클러스터를 보여줍니다. 내부 네트워크는 ONTAP 클러스터 네트워크 서비스를 지원하는 노드 간의 통신을 가능하게 합니다. 외부 네트워크에는 클라이언트, 관리 및 클러스터 간 복제 트래픽(SnapMirror/SnapVault)이 포함됩니다.</block>
+  <block id="c3a20bbad365631eadc5b2dca8f640b3" category="section-title">3단계: Open vSwitch 구성</block>
+  <block id="d1beebffe274c5b13d29f2fbfaa10b06" category="paragraph">다음 단계는 일반적인 네트워크 환경에서 두 개의 물리적 포트(2x10Gb)가 있는 ESXi 호스트에 대한 vSwitch 구성을 위한 것입니다.</block>
+  <block id="720708f411d277d77845e1db4cee83de" category="inline-link-macro">vSwitch를 구성하고 두 포트를 vSwitch에 할당합니다.</block>
+  <block id="f07356480e3047e35b4cb99dbcc748e2" category="list-text"><block ref="2076eeb99e46600240fb1d963411bb31" category="inline-link-macro-rx"></block>..</block>
+  <block id="bf87bb05f214f1b9f8546e218338fb13" category="inline-link-macro">두 개의 포트를 사용하여 NIC 팀을 만듭니다.</block>
+  <block id="32d6da19d2584fe97eb75d6418af8ca3" category="list-text"><block ref="4d5b30272096305aaf5c4ffdca2a1db5" category="inline-link-macro-rx"></block>..</block>
+  <block id="5a9f02bdaab74c00379f1d1e19fe6c57" category="list-text">"페일백" 설정을 "예"로 설정합니다.</block>
+  <block id="f2456bc45004bdf347023d01536a2379" category="paragraph"><block ref="f2456bc45004bdf347023d01536a2379" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c0cdffd9a10aa81c87d6972a4d9f884" category="list-text">포트 그룹은 라우팅 가능한 VLAN에 있을 수 있습니다. 네트워크 환경에 따라 적절한 VLAN 태그를 추가하거나 VLAN 트렁킹을 위한 포트 그룹을 구성해야 합니다.</block>
+  <block id="fae4bee7c370d0d0391b8ef189079d46" category="list-text">포트 그룹의 부하 분산, 장애 복구 및 장애 조치 순서 설정은 vSwitch와 동일해야 합니다.</block>
+  <block id="9450ade0fc753dddabd4ea63d8bb1187" category="summary">ONTAP Select 노드가 배포된 각 KVM 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다.</block>
+  <block id="6ca9942b969b8c587ad10afd9e0ef119" category="doc">ONTAP Select 위한 KVM 호스트 구성 및 준비 체크리스트</block>
+  <block id="75b870251dc6cf53eee7c05860c964ad" category="paragraph">ONTAP Select 노드가 배포된 각 KVM 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다.</block>
+  <block id="70927fa219016e15d1c052484c1bd8b6" category="section-title">1단계: KVM 하이퍼바이저 호스트 준비</block>
+  <block id="f815b88c3f2e295185a91f57bfa50353" category="paragraph">ONTAP Select 노드가 배포된 각 Linux KVM 서버를 준비해야 합니다. 또한 ONTAP Select 배포 관리 유틸리티가 배포되는 서버를 준비해야 합니다.</block>
+  <block id="c241fe11e545bc063ad09b24a98effc6" category="list-text">Red Hat Enterprise Linux(RHEL)을 설치합니다.</block>
+  <block id="2ff736caf3983658e4ec79ee3819c922" category="paragraph">ISO 이미지를 사용하여 RHEL 운영 체제를 설치하세요. 지원되는 RHEL 버전의 목록은 를 <block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>참조하십시오. 설치 중에 다음과 같이 시스템을 구성하세요.</block>
+  <block id="1dba0423db6561f7f586bce7bb6464ed" category="list-text">보안 정책으로 기본값을 선택합니다.</block>
+  <block id="1229bc8d8ed41fbcf405e751fcd267c9" category="list-text">가상화 호스트 소프트웨어를 선택하세요.</block>
+  <block id="0a9285d59d241ef6e2a097eb12348745" category="list-text">대상이 ONTAP Select 에서 사용하는 RAID LUN이 아닌 로컬 부팅 디스크인지 확인하세요.</block>
+  <block id="6063f8b6c26d320baa62a530f64fca5f" category="list-text">시스템을 부팅한 후 호스트 관리 인터페이스가 작동 중인지 확인하세요.</block>
+  <block id="44f034e8bddc7f54effe05cffba765e2" category="list-text">ONTAP Select 에 필요한 추가 패키지를 설치합니다.</block>
+  <block id="a9c724e8713ef58dc2c356a27af21d10" category="paragraph">ONTAP Select에는 몇 가지 추가 소프트웨어 패키지가 필요합니다. 정확한 패키지 목록은 사용 중인 Linux 버전에 따라 다릅니다. 첫 번째 단계로 yum 리포지토리를 서버에서 사용할 수 있는지 확인합니다. 사용할 수 없는 경우 다음을 사용하여 검색할 수 있습니다. <block ref="a52a983e58d14432379ef732f02ff1ab" prefix=" " category="inline-code"></block> 명령.</block>
+  <block id="3b91df101d076e959178a9e5b582bbd0" category="list-text">스토리지 풀을 구성합니다.</block>
+  <block id="f1fd06fa3cd1b6e284695b5e85530723" category="section-title">2단계: 스토리지 풀 만들기</block>
+  <block id="50b1e4b274ff41d84812d72ec4d0366f" category="paragraph">각 ONTAP Select 노드에 최소한 하나의 스토리지 풀을 만듭니다. 로컬 하드웨어 RAID 대신 소프트웨어 RAID를 사용하는 경우, 스토리지 디스크가 루트 및 데이터 애그리게이트의 노드에 연결됩니다. 이 경우에도 시스템 데이터에 대한 스토리지 풀을 생성해야 합니다.</block>
+  <block id="5a8a791a5a894dce740a8fd22318e379" category="section-title">3단계: 선택적으로 스토리지 풀을 삭제합니다.</block>
+  <block id="415879a334c93c7ef8d6b030a1907b1c" category="paragraph">더 이상 필요하지 않은 스토리지 풀을 삭제할 수 있습니다.</block>
+  <block id="e42020f303d4086997fbf896eaa7ce6f" category="section-title">4단계: ONTAP Select 클러스터 구성 검토</block>
+  <block id="9cd673848f022f2072dcf928ef5baa6f" category="paragraph">다음 그림은 ESXi 호스트의 단일 노드 클러스터 및 4노드 클러스터에 사용되는 ONTAP Select 네트워크를 보여줍니다.</block>
+  <block id="4796e2b2317eb3e84c57c714137b49ea" category="section-title">5단계: Open vSwitch 구성</block>
+  <block id="ef3573d3acc7d720d6f59357fc39c64b" category="paragraph">Open vSwitch를 사용하여 각 KVM 호스트 노드에서 소프트웨어 정의 스위치를 구성합니다.</block>
+  <block id="bb3bd4b178c4e41ee14b531882270811" category="list-text">LACP(Link Aggregation Control Protocol)를 사용하여 링크를 결합합니다.</block>
+  <block id="d099d0357fc4b6bd5f674bf948ccd8ef" category="paragraph">MetroCluster SDS는 NetApp의 MetroCluster 비즈니스 연속성 솔루션 범주에 해당하는 저렴한 동기식 복제 옵션입니다. NetApp MetroCluster FAS Hybrid Flash, AFF 및 NetApp Private Storage for Cloud에서 사용 가능한 것과 달리 ONTAP Select 에서만 사용할 수 있습니다.</block>
+  <block id="49282a1612672f029a74fc4fccd6b9b8" category="inline-link-macro">리눅스 서버 준비</block>
+  <block id="be3ccaa1ff931b5bcff2fef8fbd77e26" category="paragraph">또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 를 참조하십시오 <block ref="8d0fd2fb7c740b9cefef72702e4861cc" category="inline-link-macro-rx"></block> 자세한 내용은 다음 단계를 참조하세요.</block>
+  <block id="e8b072936a8e7fac47ec8283f096be17" category="doc">ONTAP Select 클러스터 관리</block>
+  <block id="af858b3b9bb1921933e293e43cd28e6b" category="paragraph"><block ref="aa150fc2553a8a0c846847314bde8f61" category="inline-link-macro-rx"></block>자세한 내용은 를 따라<block ref="9cd091a25bce78cdf0c1ef780ca4d19c" category="inline-link-macro-rx"></block>, 및 <block ref="fb856bc56f17c64169f73fa6665ecd51" category="inline-link-macro-rx"></block>항목을 검토하십시오.</block>
+  <block id="b43dccc6180e02d25b94d717af59c5d5" category="section-title">1단계: 배포 준비</block>
+  <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">하드웨어 RAID</block>
+  <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">스토리지 풀(KVM)</block>
+  <block id="e6590b92b825641d452dbbfa0d4cf1d1" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다. <block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block> 각 노드에는 시스템 데이터와 루트 및 데이터 집계가 있습니다. ONTAP Select 노드 구성의 일부로 스토리지 풀을 연결해야 합니다.</block>
+  <block id="19d8e46deea8d239f3274a92f88038ab" category="paragraph">소프트웨어 RAID를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다. <block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block> 시스템 데이터의 경우 SSD 드라이브를 루트 및 데이터 집계에 사용할 수 있는지 확인하세요. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</block>
+  <block id="908272d4cd58c61b9a3bc042f376ee86" category="inline-link-macro">ONTAP Select 이미지 추가</block>
+  <block id="e037f6aae5e648de44fa07863c350701" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select 사용하여 클러스터를 배포하려면 먼저 다음을 수행해야 합니다. <block ref="6403b9b63d70488e119e79bd63bd10d8" category="inline-link-macro-rx"></block> Deploy 인스턴스에.</block>
+  <block id="2d9d6efa5bb5baaf1e0bfc7ac2970b34" category="inline-link-macro">각 노드에서 저장소에 대한 라이선스를 부여합니다.</block>
+  <block id="0e2d788174d92e5c522bb94eb4614635" category="paragraph">운영 환경에 ONTAP Select 클러스터를 구축하기 전에 스토리지 용량 라이센스를 구입하고 관련 라이센스 파일을 다운로드해야 합니다. 당신은 할 수 있습니다 <block ref="5d215f99cd493426ea4f2be40c5f97db" category="inline-link-macro-rx"></block> _Capacity Tiers_ 모델을 사용하거나 _Capacity Pools_ 모델을 사용하여 공유 풀에 라이선스를 부여합니다.</block>
+  <block id="3eb5f6fbb37c205e7b0f3c2e27e5cc78" category="section-title">2단계: 라이선스 파일 업로드 및 등록</block>
+  <block id="325678dcce8d3c398635db2108eb241f" category="section-title">3단계: 하이퍼바이저 호스트 추가</block>
+  <block id="b42660378fe63209a930909cf4a8b897" category="paragraph">두 개 이상의 하이퍼바이저 호스트가 필요한 경우 이 절차를 사용하여 각 호스트를 추가합니다.</block>
+  <block id="dbcc7264f72f882e166f34c140babcf6" category="list-text">vCenter에서 관리하지 않는 독립 실행형 호스트 등록:</block>
+  <block id="ee0a7d9166d8172b15b42ad8e568a954" category="list-text">vCenter에서 관리하는 호스트 등록:</block>
+  <block id="472f0e9090fb7d93c5e0a1a06b6b4cc5" category="list-text">호스트의 상태를 표시하고 인증되었는지 확인합니다.</block>
+  <block id="02c20e0ad493146563361a596ed3b6aa" category="section-title">4단계: ONTAP Select 클러스터 생성 및 구성</block>
+  <block id="86f6a7060970787f82c24fe758f4ae4d" category="paragraph">클러스터에 포함된 노드 수와 관련 구성 정보를 결정합니다.</block>
+  <block id="af834676057429af957436aead793160" category="section-title">5단계: ONTAP Select 노드 구성</block>
+  <block id="db05eae1b9f552b5242689958b3185f8" category="list-text">노드에 대한 구성 정보가 있는지 확인하세요.</block>
+  <block id="775730986921b238cf92eae155f0529b" category="list-text">배포 유틸리티에서 용량 계층 또는 용량 풀 라이선스 파일이 업로드되고 설치되었는지 확인하세요.</block>
+  <block id="7f5998d97e997d06b38dd40acb4989ae" category="list-text">노드를 선택하고 기본 구성을 수행합니다.</block>
+  <block id="c3794766c1eefd3c0199789cfde830f8" category="paragraph">노드의 RAID 구성은 _passthrough-disks_parameter로 표시됩니다. 로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 이 값은 "false"여야 합니다. 소프트웨어 RAID를 사용하는 경우 이 값은 "true"여야 합니다.</block>
+  <block id="dc5b4c51869a4ecbfbe5cff29deb8bf9" category="paragraph">단일 노드 클러스터를 배포할 때는 내부 네트워크가 필요하지 않으므로 "-internal-network"를 제거해야 합니다.</block>
+  <block id="59fe213da926a8376160783d1f58f451" category="section-title">6단계: ONTAP Select 노드에 스토리지 연결</block>
+  <block id="7744678a51ad75d0a7914c6be524b07f" category="paragraph">ONTAP Select 클러스터의 각 노드에서 사용되는 스토리지를 구성합니다. 모든 노드에는 항상 하나 이상의 스토리지 풀이 할당되어야 합니다. 소프트웨어 RAID를 사용하는 경우 각 노드에 하나 이상의 디스크 드라이브도 할당해야 합니다.</block>
+  <block id="35ce7f1e4644c12a41871d3574e5f4c3" category="paragraph">VMware vSphere를 사용하여 스토리지 풀을 생성합니다. 소프트웨어 RAID를 사용하는 경우 하나 이상의 사용 가능한 디스크 드라이브도 필요합니다.</block>
+  <block id="3125556cd0faed6822a27c4dd74e7f66" category="paragraph">"-capacity-limit" 매개변수를 포함하는 경우 값을 GB 또는 TB로 지정합니다.</block>
+  <block id="9422500ba9ca059a6142954aaf694ce3" category="section-title">7단계: ONTAP Select 클러스터 배포</block>
+  <block id="deb20e04b6a7cd797c67d023a7919cc9" category="inline-link-macro">웹 UI</block>
+  <block id="91af5705f16502125e8b2187e64202c0" category="inline-link-macro">CLI를 참조하십시오</block>
+  <block id="9b7a3cef1d3f98a8d89d5d50af86ae90" category="paragraph">네트워크 연결 검사기를 실행하세요. <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block> 또는 <block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> 내부 네트워크의 클러스터 노드 간 연결을 확인합니다.</block>
+  <block id="3e7c1c2f4ff8e34c82dbce131bf96f39" category="paragraph">다음 클러스터 확장 및 축소는 지원되지 않습니다.</block>
+  <block id="399ac94f70d77c6189cd7c4808326bdd" category="list-text">1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 확장</block>
+  <block id="f7dcf9444b81db6d7f05c66ad816c0fe" category="paragraph">클러스터 확장이나 축소에서 지원하지 않는 크기로 클러스터의 노드 수를 변경하려면 다음 작업을 수행해야 합니다.</block>
+  <block id="f878a51040555cefe376b9b5a963ff25" category="list-text">다음을 사용하여 새 다중 노드 클러스터를 배포합니다. <block ref="e244d19d71425b6ce1016edcf4f160e2" category="inline-link-macro-rx"></block> 또는 <block ref="e7b95b44ed2cf30f5122b04d3c4d28be" category="inline-link-macro-rx"></block> ONTAP Select Deploy 관리 유틸리티와 함께 제공됩니다.</block>
+  <block id="a1f41e52e9ddbd9f87ecd032c237b1c0" category="inline-link-macro">SnapMirror 복제</block>
+  <block id="f2a5934dd0746752f0c18f9c7345174c" category="list-text">해당되는 경우 다음을 사용하여 데이터를 새 클러스터로 마이그레이션합니다. <block ref="968561cde231c01bbf82ff0390d26f84" category="inline-link-macro-rx"></block> .</block>
+  <block id="c630ce0380a19f100f797f38c49d39bd" category="paragraph">CLI, API 또는 웹 인터페이스를 사용하여 ONTAP Select Deploy에서 클러스터 확장 및 축소 절차를 시작합니다.</block>
+  <block id="6f32bc87686311f97a78df38edf22268" category="list-text">다중 노드 클러스터를 배포할 때는 네트워크 연결 검사기를 잘 알고 있어야 합니다. 네트워크 연결 검사기는 다음을 사용하여 실행할 수 있습니다. <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block> 또는 <block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> .</block>
+  <block id="2da03f325cfe181d05a9428d38580d4f" category="paragraph">배포가 성공적으로 이루어지도록 준비하세요.</block>
+  <block id="4e70bfd1f0f16decda9550994494f29f" category="list-text">초기 계획.</block>
+  <block id="7ea1f49dd9c8e949497eb26df1cc7b38" category="paragraph">검토하다 <block ref="38f89fcd934fcec61c15c58ea26b8003" category="inline-link-macro-rx"></block> 그리고 <block ref="9575ba7bfcdc84cc585701a17575801c" category="inline-link-macro-rx"></block> 섹션. 이 검토를 바탕으로 다음을 포함한 클러스터에 대한 결정을 내릴 수 있습니다.</block>
+  <block id="d02fabb7acb756736edf4931e98fb1b6" category="list-text">호스트를 준비하세요.</block>
+  <block id="937a4d8444a9ed859034883a297e6862" category="list-text">라이센스 파일을 획득합니다.</block>
+  <block id="c5f7e068810e1d69c250eb1f7292c87e" category="list-text">설치 및 계정 자격 증명을 배포합니다.</block>
+  <block id="13102e9d5268a6698cd488661246dd90" category="inline-link-macro">Deploy 관리 유틸리티를 설치하고 초기 구성을 수행합니다.</block>
+  <block id="c97b7d7b540f48af39821239acbda954" category="paragraph"><block ref="6c4df47b04608996684fabe341a23010" category="inline-link-macro-rx"></block>.. 설치 프로세스의 일부로 구성된 배포 관리자 계정의 암호가 있어야 합니다.</block>
+  <block id="6c624cba781d51a1e3fb8fb6029e586f" category="list-text">선택적으로 이전 ONTAP Select 노드 이미지를 설치합니다.</block>
+  <block id="b40890461bb2fade4789e27c5bcf9ee6" category="inline-link-macro">Deploy 인스턴스에 ONTAP Select 이미지를 추가합니다.</block>
+  <block id="251c843d8b2ea0a6806a6d476abdd4cf" category="paragraph">기본적으로 배포 관리 유틸리티는 릴리스 시점에 최신 버전의 ONTAP Select를 포함합니다. 이전 버전의 ONTAP Select 사용하여 클러스터를 배포하려면 다음이 필요합니다. <block ref="94d476619ebf306b7b8c214ba77969ca" category="inline-link-macro-rx"></block> .</block>
+  <block id="a4e7cd108396bfe0867075802e330c8c" category="list-text">"시작하기" 시작 페이지에 대해 알아보세요.</block>
+  <block id="7381db70b0f9d2f885ee4cba8ede7b98" category="list-text">네트워크 검사기를 검토하세요.</block>
+  <block id="c65f7e7d46833afe91ee028aca918c05" category="paragraph">다중 노드 클러스터를 배포하는 경우 네트워크 검사기를 잘 알고 있어야 합니다. <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block> 또는 <block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> .</block>
+  <block id="6351bd39d411592c7341e6df24bca63e" category="section-title">2단계: 단일 노드 또는 다중 노드 클러스터 만들기</block>
+  <block id="76bd80cda7eacafb97f61a8cac5c273c" category="paragraph">Deploy 관리를 설치하고 초기 구성(암호, AutoSupport 및 vCenter)을 완료했는지 확인하세요.</block>
+  <block id="3ce3947b444d6f91f7a8b85b972fe58a" category="list-text">*새로 고침*을 선택하고 호스트의 *유형* 값이 *ESX* 또는 *KVM*인지 확인합니다.</block>
+  <block id="1b5226a9b144cf3cfc703d8ec6db57ef" category="section-title">3단계: 완료 후</block>
+  <block id="f3a5d576716c34a4548a66aa3126c77d" category="sidebar">KVM 호스트 체크리스트</block>
+  <block id="935f419c21e41ca992af1333488fd110" category="sidebar">ESXi 호스트 체크리스트</block>
 </blocks>

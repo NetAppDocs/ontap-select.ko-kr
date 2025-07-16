@@ -27,7 +27,7 @@ NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율
 * 사양 1.0 이상을 준수하는 NVMe 장치
 
 
-를 따릅니다 link:reference_chk_host_prep.html["호스트 준비 체크리스트"]를 검토합니다 link:reference_chk_deploy_req_info.html["배포 유틸리티 설치에 필요한 정보"], 및 link:reference_chk_select_req_info.html["ONTAP Select 설치에 필요한 정보입니다"] 항목을 참조하십시오.
+link:kvm-host-configuration-and-preparation-checklist.html["호스트 준비 체크리스트"]자세한 내용은 를 따라link:reference_chk_deploy_req_info.html["배포 유틸리티 설치에 필요한 정보"], 및 link:reference_chk_select_req_info.html["ONTAP Select 설치에 필요한 정보입니다"]항목을 검토하십시오.
 
 .이 작업에 대해
 이 절차는 새 ONTAP Select 클러스터를 생성하기 전에 수행하도록 설계되었습니다. 기존 SW-RAID NVMe 클러스터에 대해 추가 NVMe 드라이브를 구성하는 절차를 수행할 수도 있습니다. 이 경우 드라이브를 구성한 후 추가 SSD 드라이브와 마찬가지로 Deploy를 통해 추가해야 합니다. 주요 차이점은 배포는 NVMe 드라이브를 감지하고 노드를 재부팅한다는 점입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때 재부팅 프로세스에 대해 다음 사항을 확인하십시오.

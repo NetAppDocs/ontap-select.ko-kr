@@ -86,7 +86,7 @@ NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 를 참조하십시오 lin
 
 === KVM 관련 요구 사항
 
-또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/reference_chk_host_prep.html#kvm-hypervisor["Linux 서버 준비"] 를 참조하십시오.
+또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["리눅스 서버 준비"] 자세한 내용은 다음 단계를 참조하세요.
 
 KVM에 대한 미디어 기대치:: 사용되는 SSD 플래시 저장 장치는 다음과 같은 추가 요구 사항을 충족해야 합니다.
 +
