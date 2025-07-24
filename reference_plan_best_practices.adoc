@@ -74,7 +74,7 @@ ONTAP Select는 RAID 그룹 내에서 LUN 수를 늘려서 성능 이점을 제�
 시스템 디스크를 호스팅하는 데이터 저장소에는 ESX 6.5 U2 이상 및 NVMe 디스크를 사용하는 것이 좋습니다. 이 구성은 NVRAM 파티션에 최고의 성능을 제공합니다.
 
 
-NOTE: ESX 6.5 U2 이상에 설치할 때 ONTAP Select는 시스템 디스크가 SSD에 있는지 또는 NVMe 디스크에 있는지 여부와 관계없이 vNVME 드라이버를 사용합니다. 이렇게 하면 VM 하드웨어 수준이 13으로 설정되며 ESX 6.5 이상과 호환됩니다.
+NOTE: ESX 6.5 U2 이상에 설치할 경우 ONTAP Select 시스템 디스크가 SSD에 있든 NVMe 디스크에 있든 관계없이 vNVMEe 드라이버를 사용합니다. 이렇게 하면 VM 하드웨어 수준이 ESX 6.5 이상과 호환되는 13으로 설정됩니다.
 
 ONTAP Select 네트워크 및 외부 스토리지에 대한 전용 네트워크 포트, 대역폭 및 vSwitch 구성을 정의합니다(iSCSI 또는 NFS를 사용할 경우 VMware vSAN 및 일반 스토리지 어레이 트래픽).
 

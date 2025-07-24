@@ -19,6 +19,47 @@ summary: 현재 릴리즈에는 ONTAP Select에 대한 몇 가지 새로운 기�
 
 
 
+== ONTAP Select 9.17.1
+
+ONTAP Select 9.17.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+KVM 호스트의 로컬 연결 NVMe 디스크에 대한 소프트웨어 RAID 지원:: ONTAP Select 9.17.1은 커널 기반 가상 머신(KVM) 하이퍼바이저 호스트에서 로컬 ONTAP Select 연결된 NVMe 디스크에 대한 소프트웨어 RAID 지원을 도입합니다.
++
+--
+로컬로 연결된 NVMe 디스크에 소프트웨어 RAID를 사용하려면 다음이 필요합니다. link:kvm-host-configuration-and-preparation-checklist.html["PCI 패스스루(DirectPath IO) 구성"] KVM 호스트를 준비할 때. 이렇게 하면 KVM 호스트가 로컬로 연결된 NVMe 디스크에 직접 액세스할 수 있으며, 이는 다음 작업에 필요합니다.
+
+* NVMe 드라이브를 사용하도록 KVM 호스트 구성
+* 클러스터 배포 후 소프트웨어 RAID 사용
+
+
+link:concept_stor_swraid_local.html["로컬 연결 스토리지를 위한 소프트웨어 RAID 구성 서비스에 대해 알아보세요"] .
+
+--
+KVM 호스트에서 클러스터 확장 및 축소 지원:: ONTAP Select 9.17.1부터 클러스터 확장 및 축소 기능이 커널 기반 가상 머신(KVM)과 ESXi 하이퍼바이저 호스트 모두에서 지원됩니다. ONTAP Select 9.16.1 및 9.15.1의 경우, 클러스터 확장 및 축소 기능은 ESXi 하이퍼바이저 호스트에서만 지원됩니다.
++
+--
+기존 ONTAP Select 클러스터에서 클러스터 확장 및 축소 기능을 사용하여 6노드에서 8노드 클러스터로 크기를 늘리거나 8노드에서 6노드 클러스터로 크기를 줄일 수 있습니다.
+
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
+
+--
+SnapMirror 클라우드 지원:: ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.
++
+--
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 통해 개체 스토리지에 대해 알아보세요"^] .
+
+--
+업데이트된 NDA 드라이버 지원:: ONTAP Select 9.17.1부터 FreeBSD NDA(NVMe Direct Access) 장치 드라이버가 NVD(NVMe Express Disk Driver)를 대체합니다. FreeBSD 드라이버는 NVMe 명령 프로토콜을 구현하여 직접 액세스 장치를 지원합니다. ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드하면 NVMe 장치를 구성할 때 FreeBSD 드라이버가 기본적으로 시작됩니다.
++
+--
+ONTAP Select 9.16.1 및 이전 버전의 경우 NVD는 ONTAP Select 배포에서 NVMe 장치에 대한 지원을 계속 제공합니다.
+
+--
+KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.17.1부터 KVM 하이퍼바이저가 Red Hat Enterprise Linux(RHEL) 9.6 및 Rocky Linux 9.6에서 지원됩니다.
+
+
+
+
 == ONTAP Select 9.16.1 을 참조하십시오
 
 ONTAP Select 9.16.1에는 몇 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.
@@ -31,7 +72,7 @@ NetApp 라이센스 파일 지원이 업데이트되었습니다:: ONTAP Select 
 --
 자율적 랜섬웨어 방어 지원:: ONTAP Select 9.16.1은 자율적 랜섬웨어 방어(ARP)를 지원합니다. ONTAP Select 9.16.1은 ARP에 대한 수동 업데이트만 지원하며 자동 업데이트는 지원되지 않습니다. ARP 기능 라이센스는 ONTAP Select 9.16.1용 NLF에 포함되어 있습니다. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["자세한 정보"]..
 VMware ESXi 지원이 향상되었습니다:: ONTAP Select 9.16.1에는 VMware ESXi 8.0 U3에 대한 지원이 포함되어 있습니다.
-KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.16.1부터 RHEL(Red Hat Enterprise Linux) 9.5 및 Rocky Linux 9.5에서 KVM(커널 기반 가상 머신) 하이퍼바이저가 지원됩니다.
+KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.16.1부터 KVM 하이퍼바이저가 RHEL 9.5 및 Rocky Linux 9.5에서 지원됩니다.
 
 
 

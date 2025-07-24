@@ -37,8 +37,9 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * NVMe over TCP
 * ONTAP 멀티 테넌시 기능
 * ONTAP S3 를 참조하십시오
-* SnapMirror를 참조하십시오
 * S3 SnapMirror
+* SnapMirror를 참조하십시오
+* SnapMirror 클라우드
 * SnapRestore
 * SnapVault
 * 스토리지 VM 재해 복구(SVM DR)
