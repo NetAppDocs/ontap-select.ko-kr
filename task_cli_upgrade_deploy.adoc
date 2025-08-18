@@ -14,22 +14,23 @@ summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 �
 
 
 [role="lead"]
-명령줄 인터페이스를 사용하여 기존 배포 유틸리티 가상 시스템을 업그레이드할 수 있습니다.
+ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.
+
+.시작하기 전에
+업그레이드하는 동안 ONTAP Select Deploy를 사용하여 다른 작업을 수행하지 않도록 하세요.  ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보와 제한 사항은 최신 릴리스 노트를 참조하세요.
+
+[NOTE]
+====
+ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드해야 합니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드를 업그레이드합니다"^] 를 참조하십시오.
+
+ONTAP Select Deploy 9.16.1 또는 9.15.1에서 ONTAP Select Deploy 9.17.1을 업그레이드할 수 있습니다.  ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.
+
+====
 
 
+== 1단계: 패키지 다운로드
 
-== 시작하기 전에
-
-업그레이드 중에 다른 작업을 수행하는 데 배포를 사용하지 않는지 확인합니다. 배포 유틸리티 업그레이드에 대한 정보 및 제한 사항은 현재 릴리스 노트를 참조하십시오.
-
-
-NOTE: ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드해야 합니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드를 업그레이드합니다"^] 를 참조하십시오.
-
-
-
-== 업그레이드 패키지를 다운로드합니다
-
-업그레이드 프로세스를 시작하려면 NetApp Support 사이트에서 적절한 Deploy 가상 머신 업그레이드 파일을 다운로드해야 합니다. 업그레이드 패키지는 단일 압축 파일로 포맷됩니다.
+업그레이드 프로세스를 시작하려면 해당 ONTAP Select Deploy 가상 머신 업그레이드 파일을 다운로드하십시오.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] . 업그레이드 패키지는 단일 압축 파일로 포맷되어 있습니다.
 
 .단계
 . 에 액세스합니다 link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] 웹 브라우저를 사용하여 다운로드 메뉴에서 * 다운로드 * 를 선택합니다.
@@ -41,21 +42,20 @@ NOTE: ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치�
 
 
 
-== 패키지를 배포 가상 머신에 업로드합니다
+== 2단계: ONTAP Select
 
-업그레이드 패키지를 획득한 후에는 해당 파일을 Deploy 가상 머신에 업로드해야 합니다.
+패키지를 다운로드한 후 ONTAP Select Deploy 가상 머신에 파일을 업로드해야 합니다.
+
+.이 작업에 대해
+이 작업에서는 ONTAP Select Deploy 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다.  귀하의 환경에 더 적합한 다른 옵션이 있을 수도 있습니다.
 
 .시작하기 전에
-로컬 워크스테이션에서 업그레이드 파일을 사용할 수 있어야 합니다. 관리자 사용자 계정에 대한 암호도 있어야 합니다.
+* 업그레이드 파일이 로컬 워크스테이션에 있는지 확인하세요.
+* 관리자 사용자 계정에 대한 비밀번호가 있는지 확인하세요.
 
-.이 작업 정보
-이 작업은 배포 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.
 
 .단계
-. 로컬 워크스테이션의 명령 셸에서 SCP 유틸리티를 사용하여 배포 가상 시스템에 이미지 파일을 업로드합니다.
-+
-예
-
+. 로컬 워크스테이션의 명령 셸에서 다음을 사용하세요. `scp` (Secure Copy Protocol) 유틸리티를 사용하여 이미지 파일을 ONTAP Select .
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -67,21 +67,20 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
-== 업그레이드 패키지를 적용합니다
+== 3단계: 업그레이드 패키지 적용
 
-업그레이드 파일을 배포 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.
+업그레이드 파일을 ONTAP Select Deploy 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.
 
 .시작하기 전에
-Deploy 유틸리티 가상 머신에 업그레이드 파일이 있는 디렉토리를 알고 있어야 합니다. 또한 업그레이드를 수행하는 동안 다른 작업을 수행하는 데 배포를 사용하지 않아야 합니다.
+* ONTAP Select Deploy 유틸리티 가상 머신에서 업그레이드 파일이 어떤 디렉토리에 있는지 확인합니다.
+* 업그레이드가 진행되는 동안 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하세요.
+
 
 .단계
-. 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
+. 관리자 계정으로 SSH를 사용하여 ONTAP Select Deploy 유틸리티 CLI에 Sign in .
 . 적절한 디렉토리 경로 및 파일 이름을 사용하여 업그레이드를 수행합니다.
 +
 업그레이드-패키지-경로 파일 배포
-
-+
-예
 
 +
 ....
@@ -90,4 +89,4 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 
 .작업을 마친 후
-업그레이드 절차가 완료되기 전에 가상 머신 구축 구성의 백업을 생성하라는 메시지가 표시됩니다. 또한 새로 만든 배포 페이지를 볼 수 있도록 브라우저 캐시를 지워야 합니다.
+업그레이드 절차가 완료되기 전에 ONTAP Select Deploy 가상 머신 구성의 백업을 만들라는 메시지가 표시됩니다.  또한 새로 생성된 ONTAP Select Deploy 페이지를 보려면 브라우저 캐시를 지워야 합니다.

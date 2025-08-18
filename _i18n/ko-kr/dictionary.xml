@@ -882,17 +882,11 @@
   <block id="2c3df213abea0ad1cb494572704542f9" category="inline-image-macro">에서는 ONTAP Select 클러스터를 구축하는 데 필요한 전체 워크플로우를 설명합니다.</block>
   <block id="bc0723c49208cb7ede4ce6ea0a477957" category="paragraph"><block ref="bc0723c49208cb7ede4ce6ea0a477957" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">명령줄 인터페이스를 사용하여 기존 배포 유틸리티 가상 시스템을 업그레이드할 수 있습니다.</block>
-  <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">업그레이드 중에 다른 작업을 수행하는 데 배포를 사용하지 않는지 확인합니다. 배포 유틸리티 업그레이드에 대한 정보 및 제한 사항은 현재 릴리스 노트를 참조하십시오.</block>
-  <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">업그레이드 프로세스를 시작하려면 NetApp Support 사이트에서 적절한 Deploy 가상 머신 업그레이드 파일을 다운로드해야 합니다. 업그레이드 패키지는 단일 압축 파일로 포맷됩니다.</block>
   <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">웹 브라우저를 사용하여 NetApp Support 사이트에 액세스하여 * Support Quick Links * 를 클릭합니다.</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">원하는 업그레이드 패키지 릴리스를 선택합니다.</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">해당 패키지를 선택하여 다운로드하고 사용자 환경에 필요한 모든 프롬프트에 응답합니다.</block>
-  <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">업그레이드 패키지를 획득한 후에는 해당 파일을 Deploy 가상 머신에 업로드해야 합니다.</block>
-  <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">로컬 워크스테이션에서 업그레이드 파일을 사용할 수 있어야 합니다. 관리자 사용자 계정에 대한 암호도 있어야 합니다.</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">이 작업은 배포 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">업그레이드 파일은 admin 사용자의 홈 디렉토리에 저장됩니다.</block>
-  <block id="baa4f96e18f8e9fced4eec3f5a81a23a" category="paragraph">업그레이드 파일을 배포 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.</block>
-  <block id="dbb14ca7f13323519486701e4b502763" category="paragraph">Deploy 유틸리티 가상 머신에 업그레이드 파일이 있는 디렉토리를 알고 있어야 합니다. 또한 업그레이드를 수행하는 동안 다른 작업을 수행하는 데 배포를 사용하지 않아야 합니다.</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">적절한 디렉토리 경로 및 파일 이름을 사용하여 업그레이드를 수행합니다.</block>
   <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph">업그레이드-패키지-경로 파일 배포</block>
   <block id="e5338fa1dff19c951b23cd8d57a1bb1d" category="summary">SSH를 사용하여 배포 관리 셸에 로그인해야 합니다. 로그인한 후 CLI 명령을 실행하여 ONTAP Select 클러스터를 생성하고 관련 관리 절차를 수행할 수 있습니다.</block>
@@ -2509,7 +2503,6 @@
   <block id="58af1c2597d085d648724676529071f9" category="paragraph-title">하이퍼바이저 플랫폼</block>
   <block id="ef85c9b02f4296b633e43a4931df8c2f" category="paragraph-title">노드 간 지연 시간</block>
   <block id="9c62f110f4b589aa5470f4d43f3a8d6a" category="paragraph-title">ONTAP Select의 현재 버전입니다</block>
-  <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">이 작업 정보</block>
   <block id="d6f9f41f5e5cb8dcf5b3ce01b74d17e5" category="paragraph">ONTAP Select 클러스터의 성능은 기본 하드웨어 및 구성의 특성으로 인해 크게 달라질 수 있습니다. 특정 하드웨어 구성은 특정 ONTAP Select 인스턴스의 성능에서 가장 큰 요인입니다. 다음은 특정 ONTAP Select 인스턴스의 성능에 영향을 주는 몇 가지 요소입니다.</block>
   <block id="507f8233cb2eb908786a8439f415fee2" category="list-text">ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다.</block>
   <block id="93ffd34ce676a00f4a126c465fc48130" category="list-text">ONTAP Select 9.11.1부터는 오프라인 및 삭제 기능을 제외한 모든 관리 기능을 기존 KVM 클러스터와 호스트에서 사용할 수 없습니다.</block>
@@ -2638,7 +2631,6 @@
   <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">성능 개요</block>
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">ONTAP Select 9.6 성능</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">일반적으로 라이센스가 만료되어도 아무런 반응이 없습니다. 그러나 노드가 만료된 라이센스와 연결되어 있으므로 다른 라이센스를 설치할 수 없습니다. 라이센스를 갱신하기 전에는 재부팅 또는 페일오버 작업과 같이 Aggregate를 오프라인 상태로 전환하는 작업을 _수행해서는 안 됩니다. 권장 조치는 라이센스 갱신을 가속화하는 것입니다.</block>
-  <block id="92cbe224b663d28b8dd457992abcd653" category="list-text">로컬 워크스테이션의 명령 셸에서 SCP 유틸리티를 사용하여 배포 가상 시스템에 이미지 파일을 업로드합니다.</block>
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">스냅샷 복사본을 무단 복제했습니다</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 마이그레이션</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
@@ -2816,9 +2808,6 @@
   <block id="a576bfb8d18800b15b695bc702167ec1" category="admonition">배포 인스턴스에 포함된 원래 버전보다 이전 버전의 ONTAP Select 이미지만 추가해야 합니다. 배포를 업데이트하지 않고 최신 버전의 ONTAP Select를 추가하는 것은 지원되지 않습니다.</block>
   <block id="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="paragraph"><block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block></block>
   <block id="298707edb3b539391aec5a5a89670001" category="admonition">ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드해야 합니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 <block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="dded0118bab7e4547129d9826a3a53bf" category="section-title">업그레이드 패키지를 다운로드합니다</block>
-  <block id="295a9acceaedaed57f5a69a9e9479d14" category="section-title">패키지를 배포 가상 머신에 업로드합니다</block>
-  <block id="89a9fa7a63f2114c1852ebceaf021995" category="section-title">업그레이드 패키지를 적용합니다</block>
   <block id="4d0baad02721160fc108f9d6af73fec0" category="doc">ONTAP Select 비디오 콘솔에 액세스합니다</block>
   <block id="ae8d825236a3f7c43af8b7a2dcd40918" category="doc">ONTAP Select 노드 간의 네트워크 연결을 확인합니다</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">초기 클러스터 생성을 사용하여 ONTAP Select 클러스터를 생성할 수 있습니다. 이 클러스터에는 초기 데이터 저장소의 일부 또는 전체 공간이 사용됩니다. 두 번째 단계는 원하는 총 용량에 도달할 때까지 추가 데이터 저장소를 사용하여 하나 이상의 용량 추가 작업을 수행하는 것입니다. 이 기능에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>.</block>
@@ -2878,7 +2867,6 @@
   <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">에 액세스합니다 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 다운로드 메뉴에서 * 다운로드 * 를 선택합니다.</block>
   <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">아래로 스크롤하여 * ONTAP Select Deploy Upgrade * 를 선택합니다.</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">최종 사용자 사용권 계약(EULA)을 검토하고 * Accept &amp; Continue * 를 선택합니다.</block>
-  <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">업그레이드 절차가 완료되기 전에 가상 머신 구축 구성의 백업을 생성하라는 메시지가 표시됩니다. 또한 새로 만든 배포 페이지를 볼 수 있도록 브라우저 캐시를 지워야 합니다.</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">ONTAP Select가 실행 중인 하이퍼바이저 가상 시스템의 비디오 콘솔에 액세스할 수 있습니다.</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">필요에 따라 하이퍼바이저 호스트에서 ONTAP Select 이미지를 제거합니다.</block>
   <block id="7460f05e2350b8a56240561f0787e129" category="open-title">ESXi 예</block>
@@ -3906,4 +3894,21 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="e6ed9ac65d6ce64c42573257cebe103e" category="paragraph">클러스터 축소 기능을 사용하여 기존 클러스터의 크기를 8개 노드에서 6개 노드로 줄입니다.</block>
   <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">ONTAP Select 9.17.1 문서</block>
   <block id="968414ab46d3b1a79f89163fe1c9a955" category="admonition">커널 기반 가상 머신(KVM)에서는 대형 인스턴스 유형을 사용할 수 없습니다.</block>
+  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.</block>
+  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">업그레이드하는 동안 ONTAP Select Deploy를 사용하여 다른 작업을 수행하지 않도록 하세요.  ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보와 제한 사항은 최신 릴리스 노트를 참조하세요.</block>
+  <block id="a59e9f814fd25c07ec74e51d966be96f" category="paragraph">ONTAP Select Deploy 9.16.1 또는 9.15.1에서 ONTAP Select Deploy 9.17.1을 업그레이드할 수 있습니다.  ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
+  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">1단계: 패키지 다운로드</block>
+  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">업그레이드 프로세스를 시작하려면 해당 ONTAP Select Deploy 가상 머신 업그레이드 파일을 다운로드하십시오.<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> . 업그레이드 패키지는 단일 압축 파일로 포맷되어 있습니다.</block>
+  <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">2단계: ONTAP Select</block>
+  <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">패키지를 다운로드한 후 ONTAP Select Deploy 가상 머신에 파일을 업로드해야 합니다.</block>
+  <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">이 작업에서는 ONTAP Select Deploy 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다.  귀하의 환경에 더 적합한 다른 옵션이 있을 수도 있습니다.</block>
+  <block id="c99ab6326cfb96cafe5cf69a39bf5e79" category="list-text">업그레이드 파일이 로컬 워크스테이션에 있는지 확인하세요.</block>
+  <block id="e2a672c847bad2863e57f277c323553c" category="list-text">관리자 사용자 계정에 대한 비밀번호가 있는지 확인하세요.</block>
+  <block id="e60c1aa35e0fea0a6ef96ddaa4b018f8" category="list-text">로컬 워크스테이션의 명령 셸에서 다음을 사용하세요.<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) 유틸리티를 사용하여 이미지 파일을 ONTAP Select .</block>
+  <block id="fc979b5c6d5eef1f824052719f508095" category="section-title">3단계: 업그레이드 패키지 적용</block>
+  <block id="8b24796d99b30623379a77021195b47e" category="paragraph">업그레이드 파일을 ONTAP Select Deploy 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.</block>
+  <block id="91aa908b0f2003054a80626907b7d18a" category="list-text">ONTAP Select Deploy 유틸리티 가상 머신에서 업그레이드 파일이 어떤 디렉토리에 있는지 확인합니다.</block>
+  <block id="b2fb3f45f259e44e136bed021ae55392" category="list-text">업그레이드가 진행되는 동안 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하세요.</block>
+  <block id="abb9205c97b7f267bd63f25baa86e729" category="list-text">관리자 계정으로 SSH를 사용하여 ONTAP Select Deploy 유틸리티 CLI에 Sign in .</block>
+  <block id="87a5212e058c62281b89455df9a32603" category="paragraph">업그레이드 절차가 완료되기 전에 ONTAP Select Deploy 가상 머신 구성의 백업을 만들라는 메시지가 표시됩니다.  또한 새로 생성된 ONTAP Select Deploy 페이지를 보려면 브라우저 캐시를 지워야 합니다.</block>
 </blocks>
