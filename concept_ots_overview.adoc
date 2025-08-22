@@ -127,6 +127,7 @@ ONTAP Select와 함께 사용되는 가상화 환경으로 인해 NIC 오프로�
 * 서비스 프로세서
 * SVM 마이그레이션
 * SnapLock 규정 준수
+* SnapMirror 액티브 싱크
 * VMware HCX
 
 
