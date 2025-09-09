@@ -2812,7 +2812,6 @@
   <block id="ae8d825236a3f7c43af8b7a2dcd40918" category="doc">ONTAP Select 노드 간의 네트워크 연결을 확인합니다</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">초기 클러스터 생성을 사용하여 ONTAP Select 클러스터를 생성할 수 있습니다. 이 클러스터에는 초기 데이터 저장소의 일부 또는 전체 공간이 사용됩니다. 두 번째 단계는 원하는 총 용량에 도달할 때까지 추가 데이터 저장소를 사용하여 하나 이상의 용량 추가 작업을 수행하는 것입니다. 이 기능에 대한 자세한 내용은 섹션을 참조하십시오 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>.</block>
   <block id="6f79f88c3d3696fcca3ac6e4f78fd71f" category="admonition">ONTAP Select VM에 용량을 추가하면 다양한 크기의 VMDK가 될 수 있습니다. 자세한 내용은 섹션을 참조하십시오 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>. FAS 시스템과 달리 크기가 다른 VMDK가 동일한 애그리게이트에 존재할 수 있습니다. ONTAP Select는 이러한 VMDK에서 RAID 0 스트라이프를 사용하므로 크기에 관계없이 각 VMDK의 모든 공간을 완전히 사용할 수 있습니다.</block>
-  <block id="5498e86ddbc371087e391d7f3cae5701" category="list-text">SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)</block>
   <block id="18249feda4b97af2b71cdf46188e1e4c" category="section-title">배포 관리자 암호를 변경합니다</block>
   <block id="39c422f1ba6768584ce2b5ea65c4f569" category="doc">CLI를 사용하여 ONTAP Select 클러스터를 구축합니다</block>
   <block id="6f78f7cef2637ad960245873ccb009cc" category="section-title">스토리지를 ONTAP Select 노드에 연결할 준비를 합니다</block>
@@ -3352,7 +3351,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="43e827b042cf746a0442b15558031d99" category="doc">ONTAP Select Deploy Using SSH에 로그인합니다</block>
   <block id="6a72bf96d9b994589542338ffd146590" category="doc">ONTAP Select 배포 인스턴스를 업그레이드합니다</block>
   <block id="c71000b965f24ab9f5c3995026415d28" category="doc">ONTAP Select VMware ESXi를 버전 7.0 이상으로 업그레이드합니다</block>
-  <block id="bd633f5da3bfc77af90d4c908e9bf8ac" category="doc">ONTAP Select 클러스터를 확장 또는 축소합니다</block>
   <block id="10094bc8718a18a18fcc32e3cd50df4c" category="sidebar">보안 ONTAP Select</block>
   <block id="70ea48dd9234010492aec1d6e7a0d297" category="sidebar">네트워크 연결을 확인합니다</block>
   <block id="4ce7782445b66c31b4b4d786806ae7a1" category="sidebar">중재자 서비스를 관리합니다</block>
@@ -3753,7 +3751,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="deb20e04b6a7cd797c67d023a7919cc9" category="inline-link-macro">웹 UI</block>
   <block id="91af5705f16502125e8b2187e64202c0" category="inline-link-macro">CLI를 참조하십시오</block>
   <block id="9b7a3cef1d3f98a8d89d5d50af86ae90" category="paragraph">네트워크 연결 검사기를 실행하세요. <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block> 또는 <block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> 내부 네트워크의 클러스터 노드 간 연결을 확인합니다.</block>
-  <block id="3e7c1c2f4ff8e34c82dbce131bf96f39" category="paragraph">다음 클러스터 확장 및 축소는 지원되지 않습니다.</block>
   <block id="399ac94f70d77c6189cd7c4808326bdd" category="list-text">1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 확장</block>
   <block id="f7dcf9444b81db6d7f05c66ad816c0fe" category="paragraph">클러스터 확장이나 축소에서 지원하지 않는 크기로 클러스터의 노드 수를 변경하려면 다음 작업을 수행해야 합니다.</block>
   <block id="f878a51040555cefe376b9b5a963ff25" category="list-text">다음을 사용하여 새 다중 노드 클러스터를 배포합니다. <block ref="e244d19d71425b6ce1016edcf4f160e2" category="inline-link-macro-rx"></block> 또는 <block ref="e7b95b44ed2cf30f5122b04d3c4d28be" category="inline-link-macro-rx"></block> ONTAP Select Deploy 관리 유틸리티와 함께 제공됩니다.</block>
@@ -3828,7 +3825,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="0a0cc9b2212847ba1af46f41c160bb46" category="paragraph">기존 ONTAP Select 클러스터에서 클러스터 확장 및 축소 기능을 사용하여 6노드에서 8노드 클러스터로 크기를 늘리거나 8노드에서 6노드 클러스터로 크기를 줄일 수 있습니다.</block>
   <block id="22cb6accb0a27ceffd521fb74834c16a" category="inline-link-macro">클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요.</block>
   <block id="3c14c9e8cb33411708f168ddc9b0d40c" category="paragraph"><block ref="f426c2cadf7fc519436e151211954c8a" category="inline-link-macro-rx"></block> .</block>
-  <block id="8c4c7ec85ddc20b785383c7e3b83aaf3" category="list-text">SnapMirror 클라우드 지원</block>
   <block id="8e6364cfe908f51088b3ba968ff3a1ef" category="list-text">ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.</block>
   <block id="138c7cd45c4194bbbdcc248c8d717a95" category="inline-link">SnapMirror 클라우드 백업을 통해 개체 스토리지에 대해 알아보세요</block>
   <block id="a674f1954e78adeee48a68d3b46f7329" category="paragraph"><block ref="e78089da9b0e2900996a3bebc3fd1588" category="inline-link-rx"></block> .</block>
@@ -3880,18 +3876,14 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="a19233fed380d5b231b023ea93dbe258" category="list-text">*이 호스트 재부팅*을 선택하세요.</block>
   <block id="26fe0a3b24674c6c3152ba4fb0ee4ed3" category="paragraph">다음 예제 출력은 ESXi 호스트에 대한 것입니다.</block>
   <block id="1055142d0c7647a07a5e1422110286e5" category="paragraph">호스트가 준비되면 ONTAP Select Deploy 유틸리티를 설치할 수 있습니다. Deploy는 새로 준비된 호스트에 ONTAP Select 스토리지 클러스터를 생성하는 과정을 안내합니다. 이 과정에서 Deploy는 패스스루로 구성된 NVMe 드라이브를 감지하고 ONTAP 데이터 디스크로 사용할 드라이브를 자동으로 선택합니다. 필요한 경우 기본 선택을 조정할 수 있습니다.</block>
-  <block id="d36012a6f1af06ad2e32fd0380ecd688" category="paragraph">기존 ONTAP Select 클러스터의 클러스터 크기를 6노드에서 8노드 클러스터로 늘릴 수 있으며, 8노드에서 6노드 클러스터로 크기를 줄일 수 있습니다.</block>
-  <block id="1337ed24c95634be31bc604f5d1e6297" category="paragraph">클러스터 확장 및 축소 기능은 KVM 및 ESXi 하이퍼바이저 호스트에서 지원됩니다.</block>
   <block id="9c33111b54c52c9fcb0abaf82c9004f8" category="paragraph">ONTAP Select 9.17.1부터 KVM 하이퍼바이저 호스트에서 클러스터 확장 및 축소가 지원됩니다.</block>
   <block id="342972daa4f7bc941a67318ae7af313b" category="paragraph">클러스터 확장 및 축소는 다음 KVM 하이퍼바이저 버전에서 지원됩니다.</block>
   <block id="e05b0c53b1a0c5711591f986de5de129" category="list-text">Red Hat Enterprise Linux 64비트 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="a60b141bdd70b40e77bf0e83f56ade8d" category="paragraph">ONTAP Select 9.15.1부터 ESXi 하이퍼바이저 호스트에서 클러스터 확장 및 축소가 지원됩니다.</block>
   <block id="1062164d3bf1751bfb605324bcaf3e29" category="paragraph">클러스터 확장 및 축소는 다음 ESXi 하이퍼바이저 버전에서 지원됩니다.</block>
-  <block id="e86abbb4089bb949221427ad94aa636a" category="paragraph">클러스터 확장 기능을 사용하여 기존 클러스터의 크기를 6개 노드에서 8개 노드로 늘립니다.</block>
   <block id="305009997eb17ffe0901beb32fdc2040" category="paragraph">클러스터 확장을 준비하기 위해 새로운 ESXi 및 KVM 호스트가 인벤토리에 추가되고 새 노드의 세부 정보가 할당됩니다. 클러스터 확장 프로세스를 시작하기 전에 네트워크 사전 검사를 통해 선택된 내부 네트워크를 확인합니다.</block>
   <block id="1c53d6d4916415921dddecf6128580f3" category="list-text">네 번째 HA 쌍에 대해 다음 고가용성(HA) 쌍 구성 세부 정보를 선택하세요.</block>
   <block id="1baec4831214642ebba2ccfdd8a785df" category="list-text">ONTAP 자격 증명을 제공하고 *클러스터 확장*을 선택합니다.</block>
-  <block id="e6ed9ac65d6ce64c42573257cebe103e" category="paragraph">클러스터 축소 기능을 사용하여 기존 클러스터의 크기를 8개 노드에서 6개 노드로 줄입니다.</block>
   <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">ONTAP Select 9.17.1 문서</block>
   <block id="968414ab46d3b1a79f89163fe1c9a955" category="admonition">커널 기반 가상 머신(KVM)에서는 대형 인스턴스 유형을 사용할 수 없습니다.</block>
   <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.</block>
@@ -3912,4 +3904,49 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="abb9205c97b7f267bd63f25baa86e729" category="list-text">관리자 계정으로 SSH를 사용하여 ONTAP Select Deploy 유틸리티 CLI에 Sign in .</block>
   <block id="87a5212e058c62281b89455df9a32603" category="paragraph">업그레이드 절차가 완료되기 전에 ONTAP Select Deploy 가상 머신 구성의 백업을 만들라는 메시지가 표시됩니다.  또한 새로 생성된 ONTAP Select Deploy 페이지를 보려면 브라우저 캐시를 지워야 합니다.</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror 액티브 싱크</block>
+  <block id="4d9c10203def873e1c71f3e63344c26f" category="list-text">ONTAP Select 9.16.1 및 이전 버전용 SnapLock Enterprise (다음에서 사용 가능)<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> )</block>
+  <block id="2f6bbdcc3a16c2d18a29e52e65bcab80" category="admonition">ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.</block>
+  <block id="047fc3d7b951880ca6749f6433cfe2bf" category="list-text">SnapLock 선택</block>
+  <block id="eb35a2f875dfa96447c622fdb66d279e" category="list-text">ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원</block>
+  <block id="2654d7a70d79a555a3d2a067d08ca074" category="list-text">ONTAP Select 9.17.1부터 ESXi 호스트의 6노드 및 12노드 클러스터 간 클러스터 확장 및 축소가 지원됩니다.</block>
+  <block id="983f8945aaf0213b99984eb7d1654484" category="paragraph">기존 ESXi 클러스터의 클러스터 크기를 다음과 같이 늘릴 수 있습니다.</block>
+  <block id="1ba5d5a69c22e4227b754eb7f598a6fc" category="list-text">6개 노드에서 8개, 10개 또는 12개 노드로</block>
+  <block id="32f41e079924563332d58835bc015a2a" category="list-text">8개 노드에서 10개 또는 12개 노드까지</block>
+  <block id="10edaf0aa7c8fb32db8c46287cc0d719" category="list-text">10개에서 12개 노드까지</block>
+  <block id="e2853d368ec6d993d5cfe565327e81ea" category="paragraph">다음과 같은 단위로 기존 ESXi 클러스터의 클러스터 크기를 줄일 수 있습니다.</block>
+  <block id="be51a9b186841f2d88f0b97954d5bb75" category="list-text">12개 노드에서 10개, 8개 또는 6개 노드로</block>
+  <block id="9b08665180caa1c2f681ecd893474c76" category="list-text">10개 노드에서 8개 또는 6개 노드로</block>
+  <block id="fb6ec34800c58ebc5bb6517ce0db74b8" category="list-text">8개에서 6개 노드로</block>
+  <block id="1cee57b3ea5529f5b9a7c47c1ca78952" category="list-text">ONTAP 기능 지원</block>
+  <block id="61016eff3249741d1200f508768ca397" category="list-text">ONTAP Select 9.17.1부터 ONTAP Select 에서는 다음과 같은 라이선스가 있는 ONTAP 기능이 지원됩니다.</block>
+  <block id="cf17614f3329e90d510d18602d4ce8db" category="paragraph">ONTAP Select 9.17.1부터 새로운 배포에는 SnapLock Select 라이선스가 자동으로 부여됩니다.  ONTAP Select 9.16.1 및 이전 버전에서 업그레이드하려면 SnapLock Select 라이선스를 다운로드해야 합니다.<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 그리고 수동으로 적용하세요.</block>
+  <block id="e9d1284d8df9151f9bec7a163cd5c363" category="list-text">다중 노드 클러스터에서 vSAN ESA 지원</block>
+  <block id="4ba59a7efee785c52f70cdae7fca55c3" category="list-text">ONTAP Select 9.17.1부터 vSAN Express Storage Architecture(ESA)에 대한 지원이 확장되어 다중 노드 클러스터를 배포할 수 있게 되었습니다.  이 향상된 기능을 사용하면 vSAN ESA 구성을 배포할 수 있습니다.</block>
+  <block id="e9c8709140b0de62f90e930862c6b06a" category="paragraph">vSAN ESA는 ESX 전용 구성이며 vSphere 8에 도입된 VMware vSAN용 새로운 아키텍처입니다. vSAN ESA는 특히 NVMe 기반 TLC 플래시 장치를 사용할 때 향상된 효율성, 확장성 및 성능을 제공하도록 설계되었습니다.</block>
+  <block id="ea6c62adffdf9ab5a61acdbc4608592e" category="paragraph">ONTAP Select Deploy 및 ONTAP Select for ESX는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하여 ONTAP Select 단일 노드 및 다중 노드 클러스터를 구성할 수 있도록 지원합니다.</block>
+  <block id="9f2987dffbb8cc07dc722392ca553e1e" category="paragraph">콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 액세스해야 합니다.  제한된 역할로 작업하는 경우 vSAN ESA 배포에 필요합니다.</block>
+  <block id="6146fd29f571a044684d201d9c796583" category="inline-link-macro">콘텐츠 라이브러리 작업에 대한 권한 수준 액세스에 대해 알아보세요.</block>
+  <block id="23add99dd3b98f3716a4830bf3524c6e" category="paragraph"><block ref="0338668b24eba8707cba4da17831f4b6" category="inline-link-macro-rx"></block> .</block>
+  <block id="2e4143d0df24451229cbcf21d106b6c5" category="section-title">ONTAP Select Deploy VMware vCenter 서버 고려 사항</block>
+  <block id="0cdb970631a712b516a9779c1d127d32" category="section-title">ESA에 대한 VMware vSphere 권한</block>
+  <block id="fe2a57ed0ddb8d9b57b737aff59f340b" category="paragraph">다음은 vCenter에서 vSAN Express Storage Architecture(ESA)를 생성하고 관리하는 데 필요한 vSphere 콘텐츠 라이브러리에 대한 특정 권한 목록입니다.</block>
+  <block id="7fda80facd4b5302f2a2c887c2ecb595" category="list-text">라이브러리 항목 추가</block>
+  <block id="5ac2b813625b685d2cd86e5bbd2e2259" category="list-text">지역 도서관 만들기</block>
+  <block id="036e7b8c4bda5955184609f09f458e15" category="list-text">라이브러리 항목 삭제</block>
+  <block id="7ae429c7f415cbd07d1b30147ee76846" category="list-text">로컬 라이브러리 삭제</block>
+  <block id="bf0d559fc72e2b15ec4b32db14be07ad" category="list-text">읽기 저장소</block>
+  <block id="693401b7881f3c546e1c1e7ac9f6c7e7" category="list-text">파일 업데이트</block>
+  <block id="cbec5c675188a8b88f95c1615c33fb39" category="list-text">라이브러리 업데이트</block>
+  <block id="cbbbf9758b7ac41123821f7ea427538f" category="list-text">라이브러리 항목 업데이트</block>
+  <block id="845b12256749d66531d9afd69bc3a33c" category="list-text">지역 도서관 업데이트</block>
+  <block id="26f7069f09ce96914fa8e8c3a68a4191" category="doc">ONTAP Select ESXi 또는 KVM 클러스터 확장 또는 축소</block>
+  <block id="b6901598f11464666113bfe479efe49f" category="paragraph">ESXi 및 KVM 하이퍼바이저 호스트에 대한 기존 ONTAP Select 클러스터의 클러스터 크기를 늘릴 수 있습니다.  KVM 호스트의 경우 클러스터 크기를 6개에서 8개 노드로 늘릴 수 있고, 8개에서 6개 노드로 줄일 수 있습니다.  ESXi 호스트의 경우 6개에서 12개 노드 사이로 클러스터 크기를 늘리거나 줄일 수 있습니다.</block>
+  <block id="936ee35c221853e402fecb3657e726ba" category="paragraph">다음 클러스터 확장 및 축소는 ESXi 및 KVM 호스트에서 지원되지 않습니다.</block>
+  <block id="ca069be0eeb72c96905b0cdbf504214d" category="paragraph">클러스터 확장 및 축소 기능은 다음 KVM 및 ESXi 하이퍼바이저 호스트에서 지원됩니다.</block>
+  <block id="e408638ff8e3e34af8feb723461e1722" category="paragraph">클러스터 확장 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 늘립니다.</block>
+  <block id="3678d282a88e095e0e76381ffa83ff7c" category="paragraph">기존 ESXi 클러스터의 크기를 다음과 같이 늘릴 수 있습니다.</block>
+  <block id="ba14db9083442c41643b3455693e3ee2" category="paragraph">기존 KVM 클러스터의 크기를 6개에서 8개 노드로 늘릴 수 있습니다.</block>
+  <block id="dbdf8658126f3cab82aa007ed31794d3" category="paragraph">클러스터 축소 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 줄입니다.</block>
+  <block id="419d991bb53188641539fa8dfe55b258" category="paragraph">다음과 같은 단위로 기존 ESXi 클러스터의 크기를 줄일 수 있습니다.</block>
+  <block id="50261774776b49c62695c35def3230b0" category="paragraph">기존 클러스터의 크기를 8개 노드에서 6개 노드로 줄일 수 있습니다.</block>
 </blocks>

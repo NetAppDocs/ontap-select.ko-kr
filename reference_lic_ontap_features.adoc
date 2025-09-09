@@ -57,11 +57,16 @@ NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두�
 
 * FabricPool
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
-* SnapLock Enterprise(ONTAP Select에 대해서는 SnapLock 규정 준수가 지원되지 않음)
+* ONTAP Select 9.16.1 및 이전 버전용 SnapLock Enterprise (다음에서 사용 가능)link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] )
++
+
+NOTE: ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
+
 +
 ** 스냅샷 복사본을 무단 복제했습니다
 
 
+* SnapLock 선택
 
 
 
