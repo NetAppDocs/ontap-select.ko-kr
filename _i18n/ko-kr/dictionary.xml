@@ -3153,7 +3153,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
-  <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">소형, 중형 또는 대형 인스턴스 유형입니다</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD, SSD 또는 NVMe 드라이브를 사용할 수 있습니다</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">추가 기능 라이선스 관리</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">라이센스 관리 개요(클러스터 관리자만 해당)</block>
@@ -3545,10 +3544,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="e73d640a676c83c4510d0212e506bb38" category="cell">18코어/136GB RAM</block>
   <block id="522c4ec4d9d59e1a992d989c8d770589" category="cell">네트워크(노드당)</block>
   <block id="d5fda742cbaf307ce4ca202b12335858" category="cell">단일 노드 클러스터용 1GbE 포트 최소 2개 2노드 클러스터용 1GbE 포트 4개(HA 쌍) 4노드, 6노드 또는 8노드 클러스터용 10GbE 포트 최소 2개</block>
-  <block id="c65eee5a4810d852ee01a79b87c993f3" category="paragraph">1은 하이퍼바이저용으로 2개의 코어와 8Gb RAM을 가정합니다.</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="open-title">스토리지 유형입니다</block>
   <block id="5939197c86f855d26c9639db3b9a29d6" category="paragraph">다음 표에는 지정된 스토리지에 필요한 최소 라이센스 유형이 나와 있습니다. </block>
-  <block id="1138bbb83d6525f914cbce8dccc4a874" category="cell">페미움 XL</block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">소형 및 중형</block>
   <block id="a09a88160dc1591cac42ba911581e599" category="cell">소형, 중형, 대형</block>
   <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">하드웨어 RAID 컨트롤러가 있는 로컬 DAS</block>
@@ -3569,7 +3566,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">관리 소프트웨어</block>
   <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">NetApp Active IQ Unified Manager 관리 제품군 ONTAP Select Deploy Utility SnapCenter(선택 사항)</block>
   <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">용량 계층 및 용량 풀 라이센스 유형에 대해 알아봅니다</block>
-  <block id="10aa5d1416b41ba5cd05d276a6c13328" category="paragraph"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block>..</block>
   <block id="91d83e84a03b1a016f22b6743fa4a929" category="summary">ONTAP Select가 귀사에 적합한지 확인한 후 프로덕션 배포를 지원하는 데 필요한 라이센스를 구입할 수 있습니다. 용량 계층 또는 용량 풀 라이센스 모델과 각 구축의 스토리지 용량을 선택해야 합니다.</block>
   <block id="580ede122197eca33afea87d209746f9" category="paragraph">Capacity Tiers_and_Capacity Pools_licensing 모델은 여러 측면에서 매우 다릅니다. 그러나 두 가지 라이센스 모델은 다음과 같은 몇 가지 일반적인 특성을 공유합니다.</block>
   <block id="8e8e728e920aef8a8e61276592f8f07a" category="section-title">용량 계층 라이센스 모델</block>
@@ -3949,4 +3945,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="dbdf8658126f3cab82aa007ed31794d3" category="paragraph">클러스터 축소 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 줄입니다.</block>
   <block id="419d991bb53188641539fa8dfe55b258" category="paragraph">다음과 같은 단위로 기존 ESXi 클러스터의 크기를 줄일 수 있습니다.</block>
   <block id="50261774776b49c62695c35def3230b0" category="paragraph">기존 클러스터의 크기를 8개 노드에서 6개 노드로 줄일 수 있습니다.</block>
+  <block id="64f27557c7c3169a5053aaf03c554939" category="list-text">소형, 중형 또는 대형 인스턴스 유형</block>
+  <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ 하이퍼바이저에 대해 두 개의 코어와 8GB의 RAM을 가정합니다.</block>
+  <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">해당되는</block>
+  <block id="6799f681592f9a0a7cf264c2b7bcd3d7" category="list-text"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block></block>
 </blocks>
