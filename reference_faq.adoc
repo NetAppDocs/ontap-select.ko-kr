@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference_faq.html 
 keywords: faq, frequently asked questions 
-summary: ONTAP Select에 대한 일반적인 질문에 대한 답변을 찾아보십시오. 
+summary: ONTAP Select 에 대한 일반적인 질문에 대한 답변을 찾아보세요. 
 ---
-= ONTAP Select에 대해 자주 묻는 질문
+= ONTAP Select 에 대한 FAQ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -70,14 +70,14 @@ NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 에
 
 * ONTAP Select의 업그레이드된 인스턴스만 되돌릴 수 있으며 원래 설치 버전까지만 되돌릴 수 있습니다. 일반적으로 ONTAP Select가 이전 릴리스를 지원하더라도 새 설치를 이전 코드 릴리즈로 되돌릴 수 없습니다.
 * 소프트웨어 RAID를 사용하는 KVM(ONTAP Select) 및 ESX(ONTAP Select)의 경우 소프트웨어 RAID를 지원하지 않는 이전 버전으로 되돌릴 수 없습니다. 또한 ESX에 ONTAP Select 9.5 이상을 새로 설치하면 VMXNET3 네트워크 드라이버와 가능한 경우 vNMVE 드라이버가 사용됩니다. 이러한 새 설치는 이전 버전의 ONTAP Select로 되돌릴 수 없습니다.
-* ONTAP Select VM도 대규모 인스턴스(Premium XL 라이센스 사용)로 업그레이드한 경우, 이전 버전에서는 대규모 인스턴스 기능을 사용할 수 없으므로 9.6 이전의 이전 버전으로 되돌리는 것이 지원되지 않습니다.
+* ONTAP Select VM도 대형 인스턴스(Premium XL 라이선스 사용)로 업그레이드된 경우, 9.6 이전 버전으로 되돌리는 것은 지원되지 않습니다. 대형 인스턴스 기능이 이전 버전에서는 제공되지 않기 때문입니다.
 
 
 .ONTAP MetroCluster SDS에는 최소 프리미엄 라이센스가 필요합니까?
 예.
 
 .설치 후 ONTAP Select 클러스터의 네트워크 구성을 변경할 수 있습니까?
-다음 ONTAP Select 클러스터 속성의 변경 사항은 ONTAP Select 배포에서 GUI, CLI 또는 REST API를 통해 사용 가능한 클러스터 업데이트 작업을 사용하여 인식합니다.
+다음 ONTAP Select 클러스터 속성의 변경 사항은 UI, CLI 또는 REST API를 통해 사용 가능한 클러스터 새로 고침 작업을 사용하여 ONTAP Select Deploy에서 인식됩니다.
 
 * 네트워크 구성(IP 주소, DNS, NTP, 넷마스크 및 게이트웨이)
 * ONTAP Select 클러스터, 노드 이름 및 버전
@@ -92,7 +92,7 @@ NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 에
 ONTAP Select 배포 2.6으로 업그레이드하면 이미 배포되었지만 원래 구성에서 변경되지 않은 ONTAP Select 클러스터에 대한 이러한 변경 사항을 지원할 수 있습니다. 다시 말해, 위에서 언급한 ONTAP Select 클러스터 속성이 System Manager 또는 vCenter를 사용하여 변경된 경우 ONTAP Select Deploy 2.6으로 업그레이드해도 이러한 불일치가 해결되지 않습니다. 각 ONTAP Select VM에 고유한 메타데이터를 추가하려면 ONTAP Select 배포를 위해 ONTAP Select 속성 변경 사항을 먼저 롤백해야 합니다.
 
 .설치 후 ONTAP Select 배포 네트워크 구성을 변경할 수 있습니까?
-환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정"^].
+Deploy 인스턴스가 특정 환경에서 실행된 후에는 해당 인스턴스의 네트워킹 세부 정보를 수정할 수 없습니다. 자세한 내용은 기술 자료 문서를 참조하십시오. link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["ONTAP Deploy 인스턴스의 DNS 구성 수정"^] .
 
 .Deploy는 ONTAP Select 라이센스가 갱신되었음을 어떻게 감지합니까?
 자세한 내용은 용량 계층인지 용량 풀 라이센스인지에 따라 달라지기는 하지만 모든 라이센스에 대한 방법은 동일합니다.
@@ -166,7 +166,10 @@ KVM에 설치할 때는 단일 연결 및 단일 브리지를 사용해야 합�
 
 네트워크 계층에서 단일 장애 지점을 방지하려면 최소 2개의 물리적 NIC를 사용해야 합니다. Data, Mgmt 및 내부 포트 그룹에는 NIC 팀 구성 및 팀 또는 본드에서의 2개 이상의 업링크로 구성된 본딩이 권장됩니다. 이러한 구성은 업링크 장애가 있는 경우 가상 스위치가 장애가 발생한 업링크의 트래픽을 NIC 팀의 정상 업링크로 이동하도록 보장합니다. 권장 네트워크 구성에 대한 자세한 내용은 을 참조하십시오 link:reference_plan_best_practices.html#networking["모범 사례 요약: 네트워킹"].
 
-다른 모든 오류는 2노드 또는 4노드 클러스터의 경우 ONTAP HA에서 처리됩니다. 하이퍼바이저 서버를 교체해야 하고 ONTAP Select 클러스터를 새 서버로 구성해야 하는 경우 NetApp 기술 지원 부서에 문의하십시오.
+2노드 또는 4노드 클러스터의 경우 다른 모든 오류는 ONTAP HA에서 처리합니다. 하이퍼바이저 서버를 교체해야 하고 ONTAP Select 클러스터를 새 서버로 재구성해야 하는 경우 ONTAP Select 노드를 복구할 수 있나요?_를 참조하세요.
+
+.ONTAP Select 노드를 복구할 수 있나요?
+예를 들어 ONTAP Select VM이나 호스트가 완전히 손실되거나 단일 노드 클러스터가 실수로 삭제된 경우 ONTAP Select 노드를 복구해야 하는 경우 NetApp 기술 지원팀에 문의하세요. 자세한 내용은 기술 자료 문서를 참조하십시오. link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster["재해 발생 시 ONTAP Select 노드 VM 복구"^] .
 
 .ONTAP Select에서 지원하는 최대 데이터 저장소 크기는 얼마입니까?
 vSAN을 포함한 모든 구성은 ONTAP Select 노드당 400TB의 스토리지를 지원합니다.
@@ -188,7 +191,7 @@ ONTAP Select Deploy and ONTAP Select for KVM은 외부 어레이에서 공유 �
 .ONTAP Select는 일부 HCI 스택을 포함하여 vSAN 또는 기타 공유 외부 스토리지에서 다중 노드 클러스터를 지원합니까?
 ESX와 KVM에서 외부 스토리지(다중 노드 vNAS)를 사용하는 다중 노드 클러스터가 지원됩니다. 동일한 클러스터에서 하이퍼바이저를 혼합할 수 없습니다. 공유 스토리지의 HA 아키텍처는 여전히 HA 쌍의 각 노드에 파트너 데이터의 미러 복사본이 있음을 나타냅니다. 하지만 다중 노드 클러스터는 VMware HA 또는 KVM Live Motion을 사용하는 단일 노드 클러스터와는 달리 ONTAP 무중단 운영의 이점을 제공합니다.
 
-ONTAP Select Deploy는 동일한 호스트에서 여러 ONTAP Select VM에 대한 지원을 추가하지만, 클러스터 생성 중에 이러한 인스턴스가 동일한 ONTAP Select 클러스터에 속하지 않도록 합니다. ESX 환경의 경우 VMware HA가 동일한 ONTAP Select 클러스터에서 단일 ESX 호스트로 여러 ONTAP Select VM을 마이그레이션하지 않도록 VM 반유사성 규칙을 생성하는 것이 좋습니다. 또한 ONTAP Select 구축 시 사용자가 시작한 ONTAP Select VM의 관리 vMotion 또는 라이브 마이그레이션을 통해 동일한 물리적 호스트에 끝나는 두 개의 ONTAP Select 노드와 같은 Best Practice를 위반한 것으로 감지되면 ONTAP Select 배포는 배포 GUI 및 로그에 경고를 게시합니다. ONTAP Select 구축 시 ONTAP Select VM 위치를 인식하는 유일한 방법은 클러스터 새로 고침 작업의 결과로 ONTAP Select 구축 관리자가 수동으로 시작해야 하는 것입니다. ONTAP Select 배포에는 사전 모니터링을 활성화하는 기능이 없으며, 이 경고는 배포 GUI 또는 로그를 통해서만 볼 수 있습니다. 즉, 이 알림은 중앙 집중식 모니터링 인프라로 전달할 수 없습니다.
+ONTAP Select Deploy는 동일한 호스트에 여러 ONTAP Select VM을 지원하지만 클러스터 생성 중에는 해당 인스턴스가 동일한 ONTAP Select 클러스터에 속할 수 없습니다.ESX 환경의 경우 NetApp VMware HA가 동일한 ONTAP ONTAP Select 클러스터에서 단일 ESX 호스트로 여러 ONTAP Select VM을 마이그레이션하지 않도록 VM 반선호도 규칙을 생성할 것을 권장합니다. 또한 ONTAP Select Deploy에서 ONTAP Select VM의 관리(사용자 시작) vMotion 또는 라이브 마이그레이션으로 인해 두 개의 ONTAP Select 노드가 동일한 물리적 호스트에 위치하는 등 모범 사례를 위반한 것을 감지하면 ONTAP Select Deploy는 Deploy UI 및 로그에 알림을 게시합니다.ONTAP ONTAP Select Deploy가 ONTAP Select VM 위치를 인식하는 유일한 방법은 클러스터 새로 고침 작업을 통해서인데, 이는 ONTAP Select Deploy 관리자가 시작해야 하는 수동 작업입니다. ONTAP Select Deploy에는 사전 모니터링을 활성화하는 기능이 없으며, 알림은 Deploy UI 또는 로그를 통해서만 확인할 수 있습니다. 즉, 이 알림은 중앙 모니터링 인프라로 전달될 수 없습니다.
 
 .ONTAP Select는 VMware의 NSX VXLAN을 지원합니까?
 NSX-V VXLAN 포트 그룹이 지원됩니다. ONTAP MetroCluster SDS를 비롯한 다중 노드 HA의 경우 VXLAN 오버헤드를 수용하기 위해 내부 네트워크 MTU를 7500에서 8900(9000이 아닌) 사이로 구성해야 합니다. 클러스터를 구축하는 동안 ONTAP Select Deploy를 사용하여 내부 네트워크 MTU를 구성할 수 있습니다.
@@ -218,7 +221,7 @@ vNAS 구성에 대해서만 동일한 호스트에서 여러 ONTAP Select 노드
 VMware vCenter와 관련하여 몇 가지 질문과 답변이 있습니다.
 
 .ONTAP Select 배포는 vCenter와 어떻게 통신하며 어떤 방화벽 포트를 열어야 합니까?
-ONTAP Select Deploy는 VMware VIX API를 사용하여 vCenter 및/또는 ESX 호스트와 통신합니다. VMware 설명서에 따르면 vCenter Server 또는 ESX 호스트에 대한 초기 접속은 TCP 포트 443에서 HTTPS/SOAP를 사용하여 수행됩니다. TLS/SSL을 통한 보안 HTTP에 대한 포트입니다. 둘째, ESX 호스트에 대한 연결이 TCP 포트 902의 소켓에서 열립니다. 이 연결을 통해 전송되는 데이터는 SSL로 암호화됩니다. 또한 ONTAP Select deploy는 사용자가 지정한 IP 주소에 응답하는 ESX 호스트가 있는지 확인하기 위해 "ping" 명령을 실행합니다.
+ONTAP Select Deploy는 VMware VIX API를 사용하여 vCenter, ESX 호스트 또는 둘 다와 통신합니다. VMware 설명서에 따르면 vCenter Server 또는 ESX 호스트에 대한 초기 연결은 TCP 포트 443에서 HTTPS/SOAP를 사용하여 이루어집니다. 이 포트는 TLS/SSL을 통한 보안 HTTP를 위한 포트입니다. 두 번째로, ESX 호스트에 대한 연결은 TCP 포트 902의 소켓에서 열립니다. 이 연결을 통해 전송되는 데이터는 SSL로 암호화됩니다. 또한, ONTAP Select Deploy는  `PING` 지정한 IP 주소에서 응답하는 ESX 호스트가 있는지 확인하는 명령입니다.
 
 ONTAP Select 배포는 또한 다음과 같이 ONTAP Select 노드 및 클러스터 관리 IP 주소와 통신할 수 있어야 합니다.
 

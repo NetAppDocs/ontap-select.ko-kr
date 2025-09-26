@@ -250,7 +250,6 @@
   <block id="5bacdabaf1613776c4f9741328ea9f7d" category="list-text">VM 마이그레이션 후</block>
   <block id="6e2af1337e1be3ce5edcac22759c574e" category="list-text">ONTAP Select를 실행하는 가상 머신을 마이그레이션한 후에는 클러스터를 새로 고치기 전에 Deploy 유틸리티를 사용하여 새 호스트를 생성해야 합니다.</block>
   <block id="dba47ba2e33ef05bb98b2d3b91625fcd" category="paragraph">클러스터 새로 고침을 수행하여 웹 사용자 인터페이스를 사용하여 배포 구성 데이터베이스를 업데이트할 수 있습니다.</block>
-  <block id="79fd23ce1c6c0f9489c886caa7c1e04d" category="admonition">Deploy GUI를 사용하는 대신 Deploy CLI 셸의 cluster refresh 명령을 사용하여 클러스터를 새로 고칠 수 있습니다.</block>
   <block id="a45d2ebc1ef2c66397f13a2639ce7a9d" category="list-text">클러스터 및 가상 머신 구성</block>
   <block id="3c751052c474b8a3e161f069e8cb9522" category="list-text">배포 데이터베이스가 동기화되지 않게 하고 변경할 수 있는 구성 값 중 일부는 다음과 같습니다.</block>
   <block id="817e7580f8422be93706a715f2f662c6" category="list-text">클러스터 및 노드 이름</block>
@@ -416,7 +415,6 @@
   <block id="dbb69dfed0d5d67f6ab5857dd72da676" category="list-text">관리 절차는 _Security_ 및 _Clusters_ 같은 다양한 범주로 구성됩니다.</block>
   <block id="471f5c9978ed52845e14e134805c65ca" category="list-text">배포 유틸리티에 대한 절차를 수행합니다</block>
   <block id="e597139c74e6edb603d769f2441e9aec" category="list-text">배포에는 관리자 암호 변경과 같은 몇 가지 절차가 있습니다.</block>
-  <block id="44c3d61a6cd78f834dce18458a846592" category="summary">ONTAP Select에 대한 일반적인 질문에 대한 답변을 찾아보십시오.</block>
   <block id="0db377921f4ce762c62526131097968f" category="section-title">일반</block>
   <block id="4bb58627c56be70a8962dc013fdfb0ff" category="paragraph">FAS의 ONTAP와 마찬가지로 성능 데이터도 perfstat 유틸리티를 사용하여 수집해야 합니다. 다음은 명령의 예입니다.</block>
   <block id="1b3537665f74d77bd14a7f35ea69a8f6" category="inline-link">Field Portal을 참조하십시오</block>
@@ -426,7 +424,6 @@
   <block id="aa51945d1870dd55304c887631cab7dc" category="paragraph">예. ONTAP Select 클러스터의 복원 절차는 FAS 클러스터의 복원 절차와 거의 동일합니다. 그러나 몇 가지 차이점이 있습니다.</block>
   <block id="d7a59cd36e2f7dfae40f95771a024421" category="list-text">ONTAP Select의 업그레이드된 인스턴스만 되돌릴 수 있으며 원래 설치 버전까지만 되돌릴 수 있습니다. 일반적으로 ONTAP Select가 이전 릴리스를 지원하더라도 새 설치를 이전 코드 릴리즈로 되돌릴 수 없습니다.</block>
   <block id="85e233caf564642a5e155bc4aac7d67a" category="list-text">소프트웨어 RAID를 사용하는 KVM(ONTAP Select) 및 ESX(ONTAP Select)의 경우 소프트웨어 RAID를 지원하지 않는 이전 버전으로 되돌릴 수 없습니다. 또한 ESX에 ONTAP Select 9.5 이상을 새로 설치하면 VMXNET3 네트워크 드라이버와 가능한 경우 vNMVE 드라이버가 사용됩니다. 이러한 새 설치는 이전 버전의 ONTAP Select로 되돌릴 수 없습니다.</block>
-  <block id="52ecd883835a7af5f8d256d58d2abe6e" category="list-text">ONTAP Select VM도 대규모 인스턴스(Premium XL 라이센스 사용)로 업그레이드한 경우, 이전 버전에서는 대규모 인스턴스 기능을 사용할 수 없으므로 9.6 이전의 이전 버전으로 되돌리는 것이 지원되지 않습니다.</block>
   <block id="b127099c71415d532da3a26ed73eb041" category="paragraph">예.</block>
   <block id="bbb35a1e775c0757714d8b256538794e" category="list-text">네트워크 구성(IP 주소, DNS, NTP, 넷마스크 및 게이트웨이)</block>
   <block id="568db67896a68d00d01c4318b9923a4f" category="list-text">ONTAP Select 클러스터, 노드 이름 및 버전</block>
@@ -443,7 +440,6 @@
   <block id="f249bf8d9e4b8c7b417b66fb9c6c3c90" category="list-text">전용 LUN을 기반으로 하는 LVM 스토리지 풀 또는 데이터 저장소는 코어 덤프, 부팅/NVRAM 및 중재자인 시스템 디스크에 사용해야 합니다.</block>
   <block id="98188cc87f947a659e62ebdc6dab134c" category="paragraph">KVM에 설치할 때는 단일 연결 및 단일 브리지를 사용해야 합니다. 물리적 포트가 2개 또는 4개인 호스트에는 동일한 결합의 모든 포트가 있어야 합니다.</block>
   <block id="56bf9f6724c0961bfe3efdd9a5936afd" category="paragraph">하드웨어 RAID 컨트롤러를 사용할 때 ONTAP Select는 주로 기본 서버 문제를 인식하지 못합니다. 서버가 모범 사례에 따라 구성된 경우 일정 수준의 이중화가 존재해야 합니다. 드라이브 장애 시에도 계속 사용할 수 있도록 RAID 5/6 을 권장합니다. 소프트웨어 RAID 구성의 경우 ONTAP는 디스크 오류에 대한 경고를 발행하고, 스페어 드라이브가 있는 경우 드라이브 재구성을 시작합니다.</block>
-  <block id="a2f6b74c2700adf79d2359dceccee7cf" category="paragraph">다른 모든 오류는 2노드 또는 4노드 클러스터의 경우 ONTAP HA에서 처리됩니다. 하이퍼바이저 서버를 교체해야 하고 ONTAP Select 클러스터를 새 서버로 구성해야 하는 경우 NetApp 기술 지원 부서에 문의하십시오.</block>
   <block id="5328a869dd2ed37e5be32f4f227e54d6" category="paragraph">vSAN을 포함한 모든 구성은 ONTAP Select 노드당 400TB의 스토리지를 지원합니다.</block>
   <block id="4906d0b814c398d1e0b3d033c584f66b" category="paragraph">지원되는 최대 크기보다 큰 데이터 저장소에 설치할 때는 제품 설정 중에 용량 캡을 사용해야 합니다.</block>
   <block id="867e236daae335162d347f2d0854e90c" category="paragraph">스토리지 추가는 소프트웨어 RAID도 지원합니다. 그러나 소프트웨어 RAID의 경우 추가 물리적 드라이브를 ONTAP Select VM에 추가해야 합니다. 이 경우 스토리지 추가는 FAS 또는 AFF 스토리지 관리와 유사합니다. 소프트웨어 RAID를 사용하여 ONTAP Select 노드에 스토리지를 추가할 때 RAID 그룹 크기 및 드라이브 크기를 고려해야 합니다.</block>
@@ -1469,7 +1465,6 @@
   <block id="0ef10a28f40d6a98fb3983f2dd0bcc57" category="cell">대기 1</block>
   <block id="d94fa2a78079f5abd87da24f3276a7a8" category="cell">대기 2</block>
   <block id="8db50c64fe82f7e3ba39400bf0e2448c" category="cell">대기 3</block>
-  <block id="7d4cb3a2bac5403801df724f6bba7fef" category="paragraph">다음 그림은 vCenter GUI(ONTAP-외부 및 ONTAP-External2)의 외부 네트워크 포트 그룹 구성을 보여줍니다. 활성 어댑터는 다른 네트워크 카드의 어댑터입니다. 이 설정에서 vmnic 4와 vmnic 5는 동일한 물리적 NIC의 이중 포트이고, vmnic 6과 vminc 7은 서로 다른 NIC의 유사한 이중 포트입니다(이 예에서는 vnmics 0부터 3까지 사용되지 않음). 대기 어댑터의 순서는 내부 네트워크의 포트가 마지막에 있는 계층적 장애 조치를 제공합니다. 대기 목록에 있는 내부 포트의 순서는 두 외부 포트 그룹 간에 비슷하게 바뀝니다.</block>
   <block id="67c5191756ff6641299dfa3f89e3cadb" category="paragraph">* 파트 1: ONTAP Select 외부 포트 그룹 구성 *</block>
   <block id="1e2d44143ade39d315b6ab568463b4a6" category="inline-image-macro">1부: ONTAP Select 외부 포트 그룹 구성</block>
   <block id="726b632058175e9fcb3cc4b6316928f5" category="paragraph"><block ref="726b632058175e9fcb3cc4b6316928f5" category="inline-image-macro-rx" type="image"></block></block>
@@ -1875,7 +1870,6 @@
   <block id="db150684ad3c26748ca005606a37bc64" category="section-title">배포 유틸리티에 액세스할 수 있는 방법</block>
   <block id="818ee2a50b0efd3b0d795b284a96048e" category="paragraph">배포 관리 유틸리티에 액세스할 때 사용할 수 있는 몇 가지 옵션이 있습니다. 모든 외부 인터페이스는 기능적으로 동일합니다. 특정 배포 목표와 요구 사항에 가장 적합한 액세스 옵션을 선택해야 합니다. 모든 경우 유효한 암호를 사용하여 관리자 계정을 사용하여 로그인해야 합니다.</block>
   <block id="a678448725863a8de1badedbf9fd3c20" category="section-title">웹 그래픽 사용자 인터페이스</block>
-  <block id="b16b6a8c321bf7f5df5434c2ec306d4f" category="paragraph">최신 웹 브라우저를 통해 배포 유틸리티에 액세스할 수 있습니다. 웹 GUI는 직관적이고 사용하기 쉬운 인터페이스를 제공하며, 대부분의 경우 유틸리티를 사용할 때 기본 인터페이스가 됩니다.</block>
   <block id="31581907c3d44270d8d9879f8e2de965" category="section-title">명령줄 인터페이스입니다</block>
   <block id="572bdb8b69501a98995ebfe23c114b9c" category="paragraph">텍스트 기반 명령줄 인터페이스는 관리 셸을 통해 사용할 수 있습니다. 다음과 같은 방법으로 CLI 관리 셸에 액세스할 수 있습니다.</block>
   <block id="fe3e97a91ec45eebec3962d20c2fe29b" category="list-text">보안 셸(SSH)</block>
@@ -2204,7 +2198,6 @@
   <block id="a3de182062915588646145ace36c3e22" category="paragraph">다중 노드 클러스터의 내부 네트워크는 네트워크 연결 검사기 기능을 사용하여 검증할 수 있습니다. Network connectivity -check start 명령을 실행하는 Deploy CLI에서 이 기능을 호출할 수 있다.</block>
   <block id="48d34abcc024a4f782dd82b39ba8903e" category="paragraph">다음 명령을 실행하여 테스트 출력을 확인합니다.</block>
   <block id="20d413e9a1ee99efe0d4db895abdbc51" category="paragraph">이 도구는 다중 노드 선택 클러스터의 내부 네트워크 문제를 해결하는 경우에만 유용합니다. 이 툴을 사용하여 단일 노드 클러스터(vNAS 구성 포함), ONTAP Deploy to ONTAP Select 접속 구성 또는 클라이언트측 연결 문제를 해결해서는 안 됩니다.</block>
-  <block id="723585e97ef1695bd9e2ba9e636d1970" category="paragraph">클러스터 생성 마법사(ONTAP 배포 GUI의 일부)에는 다중 노드 클러스터를 생성하는 동안 사용할 수 있는 선택적 단계로 내부 네트워크 검사기가 포함되어 있습니다. 다중 노드 클러스터에서 내부 네트워크가 수행하는 중요한 역할을 고려할 때 이 단계를 클러스터 생성 워크플로우의 일부로 사용하면 클러스터 생성 작업의 성공률이 향상됩니다.</block>
   <block id="16992ee8f8caed0bb049b0e9dd94317f" category="paragraph">ONTAP Deploy 2.10부터 내부 네트워크에서 사용되는 MTU 크기를 7,500에서 9,000으로 설정할 수 있습니다. 네트워크 연결 검사기는 MTU 크기를 7,500에서 9,000까지 테스트하는 데도 사용할 수 있습니다. 기본 MTU 값은 가상 네트워크 스위치의 값으로 설정됩니다. 환경에 VXLAN과 같은 네트워크 오버레이가 있는 경우 이 기본값은 더 작은 값으로 대체되어야 합니다.</block>
   <block id="31de76b28cce5b959eace72203221efb" category="section-title">ONTAP Select 외부 네트워크</block>
   <block id="ec44df3839cd96996dd8f5244ea696eb" category="paragraph">ONTAP Select 외부 네트워크는 클러스터의 모든 아웃바운드 통신을 담당하므로 단일 노드 및 다중 노드 구성 모두에 존재합니다. 이 네트워크에는 내부 네트워크의 엄격한 처리량 요구 사항이 없지만 성능 문제가 ONTAP Select 문제로 잘못 규정될 수 있으므로 관리자는 클라이언트와 ONTAP VM 사이에 네트워크 병목 현상이 발생하지 않도록 주의해야 합니다.</block>
@@ -2384,16 +2377,13 @@
   <block id="44e02585603e7fcc790e0ab829ef1024" category="paragraph">ONTAP Select Deploy는 ONTAP Select 이미지가 포함된 가상 머신입니다. 클러스터 설치 중에 ONTAP Select Deploy는 ONTAP Select 최소 요구 사항이 충족되는지 확인하기 위해 몇 가지 검사를 수행합니다. ONTAP Select 배포 VM 및 선택 클러스터는 별도로 업그레이드할 수 있습니다.</block>
   <block id="aae4f232f5ffb9e9721fd019ba8b1efe" category="listing-title">ONTAP Select 배포를 위한 Swagger API 페이지에 액세스하려면 어떻게 해야 합니까?</block>
   <block id="40a60db1cb196f556dfa7fc31b0fc0de" category="paragraph">예. ONTAP Select Deploy 유틸리티는 ONTAP Select 클러스터와 별도로 업그레이드할 수 있습니다. 마찬가지로, ONTAP Select 배포 유틸리티와 별도로 Select 클러스터를 업그레이드할 수 있습니다.</block>
-  <block id="59515ed968b51f31e5dba26d6fd648ce" category="paragraph">다음 ONTAP Select 클러스터 속성의 변경 사항은 ONTAP Select 배포에서 GUI, CLI 또는 REST API를 통해 사용 가능한 클러스터 업데이트 작업을 사용하여 인식합니다.</block>
   <block id="1c1b6371821b57c0181e5ac9c60110dd" category="paragraph">ONTAP Select 배포 2.6으로 업그레이드하면 이미 배포되었지만 원래 구성에서 변경되지 않은 ONTAP Select 클러스터에 대한 이러한 변경 사항을 지원할 수 있습니다. 다시 말해, 위에서 언급한 ONTAP Select 클러스터 속성이 System Manager 또는 vCenter를 사용하여 변경된 경우 ONTAP Select Deploy 2.6으로 업그레이드해도 이러한 불일치가 해결되지 않습니다. 각 ONTAP Select VM에 고유한 메타데이터를 추가하려면 ONTAP Select 배포를 위해 ONTAP Select 속성 변경 사항을 먼저 롤백해야 합니다.</block>
   <block id="19e3b046872155951a88cbd2e790b7e6" category="paragraph">예. ONTAP Select 배포는 KVM 또는 ESX에 설치할 수 있으며 두 설치 모두 하이퍼바이저 중 하나에 ONTAP Select 클러스터를 생성할 수 있습니다.</block>
   <block id="5a1db0789444e54a1e8a26c422380d57" category="paragraph">ESX 호스트에 라이센스가 올바르게 부여되면 vCenter Server에서 ESX 호스트를 관리할 필요가 없습니다. 하지만 vCenter Server에서 호스트를 관리하는 경우 해당 vCenter Server를 사용하도록 ONTAP Select 구축을 구성해야 합니다. 즉, ESX 호스트가 vCenter Server에서 능동적으로 관리되는 경우 ONTAP Select 배포에서 ESX 호스트를 독립 실행형으로 구성할 수 없습니다. ONTAP Select Deploy VM은 vCenter를 통해 vMotion 또는 VMware HA 이벤트로 인해 ESXi 호스트 간의 모든 ONTAP Select VM 마이그레이션을 추적합니다.</block>
   <block id="c18d02964afefd62e8842192dcbd79b4" category="paragraph">ONTAP Select Deploy에는 ONTAP Select 노드의 용량 확장 작업을 지원하는 스토리지 추가 워크플로우가 포함되어 있습니다. 동일한 데이터 저장소의 공간을 사용하거나(사용 가능한 공간이 있는 경우) 별도의 데이터 저장소에서 공간을 추가하여 관리 중인 스토리지를 확장할 수 있습니다. 로컬 데이터 저장소와 원격 데이터 저장소를 동일한 Aggregate에서 혼합하는 것은 지원되지 않습니다.</block>
   <block id="007a3aa807452417b6230146b6781e19" category="paragraph">ONTAP Select Deploy 및 ONTAP Select for ESX는 스토리지 풀에 대한 vSAN 또는 외부 스토리지 유형의 데이터 저장소를 사용하는 ONTAP Select 단일 노드 클러스터의 구성을 지원합니다.</block>
   <block id="6ec35a9fea619f9056b56a9cceaecd8a" category="paragraph">ONTAP Select Deploy and ONTAP Select for KVM은 외부 어레이에서 공유 논리적 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터의 구성을 지원합니다. 스토리지 풀은 iSCSI 또는 FC/FCoE를 기반으로 할 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.</block>
-  <block id="7941c39c5fa9506f9466dead024a9800" category="paragraph">ONTAP Select Deploy는 동일한 호스트에서 여러 ONTAP Select VM에 대한 지원을 추가하지만, 클러스터 생성 중에 이러한 인스턴스가 동일한 ONTAP Select 클러스터에 속하지 않도록 합니다. ESX 환경의 경우 VMware HA가 동일한 ONTAP Select 클러스터에서 단일 ESX 호스트로 여러 ONTAP Select VM을 마이그레이션하지 않도록 VM 반유사성 규칙을 생성하는 것이 좋습니다. 또한 ONTAP Select 구축 시 사용자가 시작한 ONTAP Select VM의 관리 vMotion 또는 라이브 마이그레이션을 통해 동일한 물리적 호스트에 끝나는 두 개의 ONTAP Select 노드와 같은 Best Practice를 위반한 것으로 감지되면 ONTAP Select 배포는 배포 GUI 및 로그에 경고를 게시합니다. ONTAP Select 구축 시 ONTAP Select VM 위치를 인식하는 유일한 방법은 클러스터 새로 고침 작업의 결과로 ONTAP Select 구축 관리자가 수동으로 시작해야 하는 것입니다. ONTAP Select 배포에는 사전 모니터링을 활성화하는 기능이 없으며, 이 경고는 배포 GUI 또는 로그를 통해서만 볼 수 있습니다. 즉, 이 알림은 중앙 집중식 모니터링 인프라로 전달할 수 없습니다.</block>
   <block id="efc2e6333a58c7723007fa20d72bb37d" category="paragraph">NSX-V VXLAN 포트 그룹이 지원됩니다. ONTAP MetroCluster SDS를 비롯한 다중 노드 HA의 경우 VXLAN 오버헤드를 수용하기 위해 내부 네트워크 MTU를 7500에서 8900(9000이 아닌) 사이로 구성해야 합니다. 클러스터를 구축하는 동안 ONTAP Select Deploy를 사용하여 내부 네트워크 MTU를 구성할 수 있습니다.</block>
-  <block id="f6d275cbcd3f49d01c3fb09afa8f2a58" category="paragraph">ONTAP Select Deploy는 VMware VIX API를 사용하여 vCenter 및/또는 ESX 호스트와 통신합니다. VMware 설명서에 따르면 vCenter Server 또는 ESX 호스트에 대한 초기 접속은 TCP 포트 443에서 HTTPS/SOAP를 사용하여 수행됩니다. TLS/SSL을 통한 보안 HTTP에 대한 포트입니다. 둘째, ESX 호스트에 대한 연결이 TCP 포트 902의 소켓에서 열립니다. 이 연결을 통해 전송되는 데이터는 SSL로 암호화됩니다. 또한 ONTAP Select deploy는 사용자가 지정한 IP 주소에 응답하는 ESX 호스트가 있는지 확인하기 위해 "ping" 명령을 실행합니다.</block>
   <block id="38f6621fec19ff801692cfd74b3d8e9a" category="paragraph">ONTAP Select 배포는 또한 다음과 같이 ONTAP Select 노드 및 클러스터 관리 IP 주소와 통신할 수 있어야 합니다.</block>
   <block id="fc46f3e8b95ad7a4187367a3d699fabf" category="paragraph">2노드 클러스터의 경우 ONTAP Select는 클러스터 사서함을 호스팅합니다. 각 ONTAP Select 노드는 iSCSI(포트 3260)를 통해 ONTAP Select 배포에 도달할 수 있어야 합니다.</block>
   <block id="81cd6c8ef1512058861a9e8233376fb2" category="paragraph">ONTAP Select 배포 VM이 주로 클러스터를 생성하는 데 사용되는 4노드, 6노드 및 8노드 클러스터와 달리 2노드 클러스터는 ONTAP Select 배포 VM에 지속적으로 의존하여 HA 쿼럼을 수행합니다. ONTAP Select 배포 VM을 사용할 수 없는 경우 장애 조치 서비스가 비활성화됩니다.</block>
@@ -3170,8 +3160,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">ONTAP Select 및 라이센스 갱신에 대한 자세한 내용은 의 라이센스, 설치, 업그레이드 및 되돌리기 섹션을 참조하십시오 <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>.</block>
   <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">설치 후 ONTAP Select 클러스터의 네트워크 구성을 변경할 수 있습니까?</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">설치 후 ONTAP Select 배포 네트워크 구성을 변경할 수 있습니까?</block>
-  <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">기술 자료 문서 - ONTAP 배포 인스턴스의 DNS 구성 수정</block>
-  <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">환경에서 실행 중인 배포 인스턴스의 네트워킹 세부 정보는 수정할 수 없습니다. 자세한 내용은 를 참조하십시오 <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
   <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 VM(가상 머신)으로 패키징됩니다. 단일 압축 파일에는 접미사가 있습니다<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>. VM은 ONTAP Select 노드의 배포 서버 및 설치 이미지를 제공합니다.</block>
   <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">에 액세스합니다 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 로그인합니다.</block>
   <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">메뉴에서 * 다운로드 * 를 선택한 다음 드롭다운 메뉴에서 * 다운로드 * 를 선택합니다.</block>
@@ -3301,7 +3289,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">ONTAP Select 클러스터 노드의 크기를 조정하는 스크립트</block>
   <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">워크플로우 1: ESXi에서 ONTAP Select 단일 노드 평가 클러스터를 생성합니다</block>
   <block id="169dafc7979793a9e61147f233aa45c3" category="doc">ONTAP Select 배포 유틸리티 설치에 필요한 정보입니다</block>
-  <block id="d94db1fe93dcae57541a64d1d1664af0" category="doc">ONTAP Select에 대해 자주 묻는 질문</block>
   <block id="cddb93cf729be75720f6155855c70d38" category="doc">ONTAP Select 배포를 위한 호스트 관리 서버를 수정합니다</block>
   <block id="7ccffa1050dd38b57df1fa0990bb72a7" category="doc">구축 후 ONTAP Select 클러스터의 초기 상태입니다</block>
   <block id="c05931b717a76d4cc74840146d98c8ce" category="doc">ONTAP 기능에 대한 ONTAP Select 지원</block>
@@ -3949,4 +3936,20 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ 하이퍼바이저에 대해 두 개의 코어와 8GB의 RAM을 가정합니다.</block>
   <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">해당되는</block>
   <block id="6799f681592f9a0a7cf264c2b7bcd3d7" category="list-text"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block></block>
+  <block id="b40b101fdcaae7891ab38512cf2966e0" category="paragraph">클러스터 생성 마법사( ONTAP Deploy UI의 일부)에는 다중 노드 클러스터 생성 중 사용 가능한 선택적 단계인 내부 네트워크 검사기가 포함되어 있습니다. 다중 노드 클러스터 에서 내부 네트워크가 중요한 역할을 한다는 점을 고려할 때, 이 단계를 클러스터 생성 워크플로에 포함시키면 클러스터 생성 작업의 성공률이 향상됩니다.</block>
+  <block id="533eb39cd8f514c69a3b793cb415846c" category="paragraph">다음 그림은 vCenter UI(ONTAP-External 및 ONTAP-External2)에서 외부 네트워크 포트 그룹의 구성을 보여줍니다. 활성 어댑터는 서로 다른 네트워크 카드에 속합니다. 이 설정에서 vmnic 4와 vmnic 5는 동일한 물리적 NIC에 연결된 이중 포트이고, vmnic 6과 vminc 7은 별도의 NIC에 연결된 이중 포트입니다(이 예에서는 vnmics 0~3은 사용하지 않음). 대기 어댑터의 순서는 내부 네트워크의 포트가 마지막이 되도록 계층적 장애 조치를 제공합니다. 대기 목록에 있는 내부 포트의 순서도 마찬가지로 두 외부 포트 그룹 간에 바뀝니다.</block>
+  <block id="ab4f5bbd14a1da16094b721d652002c0" category="paragraph">최신 웹 브라우저를 통해 Deploy 유틸리티에 접속할 수 있습니다. 웹 UI는 직관적이고 사용하기 쉬운 인터페이스를 제공하며, 대부분의 경우 유틸리티 사용 시 기본 인터페이스로 사용됩니다.</block>
+  <block id="3aac2efb8a7255b5ac9f1b084d845577" category="summary">ONTAP Select 에 대한 일반적인 질문에 대한 답변을 찾아보세요.</block>
+  <block id="de33ed291c3df683a85142390232f631" category="doc">ONTAP Select 에 대한 FAQ</block>
+  <block id="54875964c87087366969064b5992b17a" category="list-text">ONTAP Select VM도 대형 인스턴스(Premium XL 라이선스 사용)로 업그레이드된 경우, 9.6 이전 버전으로 되돌리는 것은 지원되지 않습니다. 대형 인스턴스 기능이 이전 버전에서는 제공되지 않기 때문입니다.</block>
+  <block id="f95228c1447fbfbcc268c9e29a47e566" category="paragraph">다음 ONTAP Select 클러스터 속성의 변경 사항은 UI, CLI 또는 REST API를 통해 사용 가능한 클러스터 새로 고침 작업을 사용하여 ONTAP Select Deploy에서 인식됩니다.</block>
+  <block id="e4287add8bf98d32cb33a6381f785aae" category="inline-link-macro">ONTAP Deploy 인스턴스의 DNS 구성 수정</block>
+  <block id="e939e2321491f9e204c37a21f46a514a" category="paragraph">Deploy 인스턴스가 특정 환경에서 실행된 후에는 해당 인스턴스의 네트워킹 세부 정보를 수정할 수 없습니다. 자세한 내용은 기술 자료 문서를 참조하십시오. <block ref="1f47723f3d53f678e4270c8826127324" category="inline-link-macro-rx"></block> .</block>
+  <block id="276276f87bc6c736a139268c25777a8c" category="paragraph">2노드 또는 4노드 클러스터의 경우 다른 모든 오류는 ONTAP HA에서 처리합니다. 하이퍼바이저 서버를 교체해야 하고 ONTAP Select 클러스터를 새 서버로 재구성해야 하는 경우 ONTAP Select 노드를 복구할 수 있나요?_를 참조하세요.</block>
+  <block id="74e61dc59e4ef482524693f1cc388972" category="paragraph-title">ONTAP Select 노드를 복구할 수 있나요?</block>
+  <block id="98d3f47bc017ab1008ec094c1314320c" category="inline-link-macro">재해 발생 시 ONTAP Select 노드 VM 복구</block>
+  <block id="34ecd35e89cf3e691f83516b09dba3d5" category="paragraph">예를 들어 ONTAP Select VM이나 호스트가 완전히 손실되거나 단일 노드 클러스터가 실수로 삭제된 경우 ONTAP Select 노드를 복구해야 하는 경우 NetApp 기술 지원팀에 문의하세요. 자세한 내용은 기술 자료 문서를 참조하십시오. <block ref="6bcd08825607343c167fd40133e564c3" category="inline-link-macro-rx"></block> .</block>
+  <block id="b8b596ec3027adcedd866d3ab958f258" category="paragraph">ONTAP Select Deploy는 동일한 호스트에 여러 ONTAP Select VM을 지원하지만 클러스터 생성 중에는 해당 인스턴스가 동일한 ONTAP Select 클러스터에 속할 수 없습니다.ESX 환경의 경우 NetApp VMware HA가 동일한 ONTAP ONTAP Select 클러스터에서 단일 ESX 호스트로 여러 ONTAP Select VM을 마이그레이션하지 않도록 VM 반선호도 규칙을 생성할 것을 권장합니다. 또한 ONTAP Select Deploy에서 ONTAP Select VM의 관리(사용자 시작) vMotion 또는 라이브 마이그레이션으로 인해 두 개의 ONTAP Select 노드가 동일한 물리적 호스트에 위치하는 등 모범 사례를 위반한 것을 감지하면 ONTAP Select Deploy는 Deploy UI 및 로그에 알림을 게시합니다.ONTAP ONTAP Select Deploy가 ONTAP Select VM 위치를 인식하는 유일한 방법은 클러스터 새로 고침 작업을 통해서인데, 이는 ONTAP Select Deploy 관리자가 시작해야 하는 수동 작업입니다. ONTAP Select Deploy에는 사전 모니터링을 활성화하는 기능이 없으며, 알림은 Deploy UI 또는 로그를 통해서만 확인할 수 있습니다. 즉, 이 알림은 중앙 모니터링 인프라로 전달될 수 없습니다.</block>
+  <block id="603c5c21076887dcf2e1370932da42a4" category="paragraph">ONTAP Select Deploy는 VMware VIX API를 사용하여 vCenter, ESX 호스트 또는 둘 다와 통신합니다. VMware 설명서에 따르면 vCenter Server 또는 ESX 호스트에 대한 초기 연결은 TCP 포트 443에서 HTTPS/SOAP를 사용하여 이루어집니다. 이 포트는 TLS/SSL을 통한 보안 HTTP를 위한 포트입니다. 두 번째로, ESX 호스트에 대한 연결은 TCP 포트 902의 소켓에서 열립니다. 이 연결을 통해 전송되는 데이터는 SSL로 암호화됩니다. 또한, ONTAP Select Deploy는 <block ref="e07ff41a486c27c095a15898dcca34d1" prefix=" " category="inline-code"></block> 지정한 IP 주소에서 응답하는 ESX 호스트가 있는지 확인하는 명령입니다.</block>
+  <block id="23277c434dc865d64e91bd2232622f8e" category="admonition">Deploy UI를 사용하는 대신 Deploy CLI 셸에서 cluster refresh 명령을 사용하여 클러스터를 새로 고칠 수 있습니다.</block>
 </blocks>
