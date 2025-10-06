@@ -65,23 +65,13 @@ ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원::
 link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
 
 --
-ONTAP 기능 지원:: ONTAP Select 9.17.1부터 ONTAP Select 에서는 다음과 같은 라이선스가 있는 ONTAP 기능이 지원됩니다.
+SnapMirror 클라우드 지원:: ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.
 +
 --
-* SnapLock 선택
-+
-ONTAP Select 9.17.1부터 새로운 배포에는 SnapLock Select 라이선스가 자동으로 부여됩니다.  ONTAP Select 9.16.1 및 이전 버전에서 업그레이드하려면 SnapLock Select 라이선스를 다운로드해야 합니다.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] 그리고 수동으로 적용하세요.
-
-* SnapMirror 클라우드
-+
-ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.
-
-+
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 통해 개체 스토리지에 대해 알아보세요"^] .
 
-
-
 --
+SnapLock Select Enterprise 지원:: ONTAP Select 9.17.1부터 새로운 배포에는 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)가 자동으로 라이선스됩니다.  ONTAP Select 9.16.1 및 이전 버전에서 업그레이드하려면 SnapLock Select 라이선스를 다운로드해야 합니다.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] 그리고 수동으로 적용하세요.
 다중 노드 클러스터에서 vSAN ESA 지원:: ONTAP Select 9.17.1부터 vSAN Express Storage Architecture(ESA)에 대한 지원이 확장되어 다중 노드 클러스터를 배포할 수 있게 되었습니다.  이 향상된 기능을 사용하면 vSAN ESA 구성을 배포할 수 있습니다.
 +
 --

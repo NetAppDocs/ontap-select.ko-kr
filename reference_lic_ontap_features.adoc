@@ -14,7 +14,7 @@ summary: ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니�
 
 
 [role="lead"]
-ONTAP Select은 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 구축할 때 각 노드에 대해 자동으로 라이센스가 부여됩니다. 그러나 일부 기능에는 별도의 라이센스가 필요합니다.
+ONTAP Select 대부분의 ONTAP 기능을 지원합니다. 대부분의 ONTAP 기능은 클러스터를 배포할 때 각 노드에 자동으로 라이선스가 부여됩니다. 하지만 일부 기능에는 별도의 라이선스가 필요합니다.
 
 
 NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ONTAP Select에서 지원되지 않습니다.
@@ -53,25 +53,20 @@ NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두�
 
 == ONTAP 기능은 별도로 라이센스가 부여됩니다
 
-다음을 포함하여 기본적으로 활성화되지 않은 모든 ONTAP 기능에 대해 별도의 라이센스를 취득해야 합니다.
+다음을 포함하여 기본적으로 활성화되지 않은 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다.
 
 * FabricPool
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
-* ONTAP Select 9.16.1 및 이전 버전용 SnapLock Enterprise (다음에서 사용 가능)link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] )
-+
-
-NOTE: ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
-
-+
-** 스냅샷 복사본을 무단 복제했습니다
 
 
-* SnapLock 선택
+[NOTE]
+====
+* ONTAP Select 9.16.1 및 이전 버전의 경우 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)를 다음에서 사용할 수 있습니다.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] .
+* ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
+* StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
 
 
-
-NOTE: StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
-
+====
 .관련 정보
 * link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이센스 키"^]

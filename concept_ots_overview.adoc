@@ -132,4 +132,6 @@ ONTAP Select와 함께 사용되는 가상화 환경으로 인해 NIC 오프로�
 
 
 .관련 정보
-link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["기본적으로 사용되는 ONTAP 기능에 대해 알아봅니다"] link:concept_lic_evaluation.html["ONTAP Select 라이센스 옵션에 대해 알아봅니다"]
+* link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["기본적으로 사용되는 ONTAP 기능에 대해 알아봅니다"]
+* link:concept_lic_evaluation.html["ONTAP Select 라이센스 옵션에 대해 알아봅니다"]
+
