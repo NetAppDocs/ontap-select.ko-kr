@@ -480,5 +480,5 @@ cluster show -name <cluster_name>
 ----
 
 
-.작업을 마친 후
-ONTAP Select 배포 구성 데이터를 백업해야 합니다.
+.다음은 무엇인가요?
+link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"].

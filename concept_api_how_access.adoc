@@ -17,6 +17,9 @@ summary: REST 웹 서비스의 고유한 유연성 때문에 ONTAP Select Deploy
 REST 웹 서비스의 고유한 유연성 때문에 ONTAP Select Deploy API는 여러 가지 방법으로 액세스할 수 있습니다.
 
 
+NOTE: ONTAP Select Deploy에 포함된 REST API에는 버전 번호가 지정되어 있습니다. API 버전 번호는 Deploy 릴리스 번호와 무관합니다. ONTAP Select 9.17.1 Deploy 관리 유틸리티에는 REST API 버전 3이 포함되어 있습니다.
+
+
 
 == 유틸리티 네이티브 사용자 인터페이스를 구축합니다
 

@@ -47,6 +47,7 @@ ONTAP Select 9.15.1부터 ESXi 하이퍼바이저 호스트에서 클러스터 �
 
 클러스터 확장 및 축소는 다음 ESXi 하이퍼바이저 버전에서 지원됩니다.
 
+* ESXi 9.0
 * ESXi 8.0 U3
 * ESXi 8.0 U2
 * ESXi 8.0 U1
@@ -131,7 +132,7 @@ ONTAP Select 9.17.1부터 KVM 하이퍼바이저 호스트에서 클러스터 �
 
 
 .작업을 마친 후
-클러스터를 확장한 후에는 ONTAP Select 배포 구성 데이터를 백업해야 합니다.
+link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"].
 
 
 

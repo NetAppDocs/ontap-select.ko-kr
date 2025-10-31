@@ -224,8 +224,6 @@ sidebar:
         url: "/concept_api_rest.html"
       - title: 배포 API에 액세스합니다
         url: "/concept_api_how_access.html"
-      - title: API 버전 관리 배포
-        url: "/concept_api_versions.html"
       - title: 기본 작동
         url: "/concept_api_operation.html"
       - title: 요청 및 응답 트랜잭션

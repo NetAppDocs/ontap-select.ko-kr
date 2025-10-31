@@ -18,10 +18,16 @@ NVMe 드라이브를 소프트웨어 RAID와 함께 사용하려면 ESXi 또는 
 
 NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율성을 극대화합니다. 이 설정은 드라이브를 ONTAP Select 가상 시스템에 노출시켜 ONTAP가 장치에 PCI를 직접 액세스할 수 있도록 합니다.
 
+
+
+== 1단계: 호스트 구성
+
+ESXi 또는 KVM 호스트가 드라이브를 인식하도록 구성합니다.
+
 .시작하기 전에
 배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.
 
-* ESX 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.7 이상
+* ESX 호스트의 경우 지원되는 배포 관리 유틸리티가 있는 ONTAP Select
 * KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1
 * Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
 * ESXi 또는 KVM 호스트가 지원되는 하이퍼바이저 버전을 실행 중입니다.
@@ -32,6 +38,7 @@ NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율
 --
 ESXi는 다음 하이퍼바이저 버전에서 지원됩니다.
 
+** VMware ESXi 9.0
 ** VMware ESXi 8.0 U3
 ** VMware ESXi 8.0 U2
 ** VMware ESXi 8.0 U1(빌드 21495797)
@@ -101,7 +108,10 @@ image:nvme_03.png["이 호스트를 재부팅합니다"]
 
 
 
-.작업을 마친 후
+
+
+== 2단계: ONTAP Select Deploy 유틸리티 설치
+
 호스트가 준비되면 ONTAP Select Deploy 유틸리티를 설치할 수 있습니다. Deploy는 새로 준비된 호스트에 ONTAP Select 스토리지 클러스터를 생성하는 과정을 안내합니다. 이 과정에서 Deploy는 패스스루로 구성된 NVMe 드라이브를 감지하고 ONTAP 데이터 디스크로 사용할 드라이브를 자동으로 선택합니다. 필요한 경우 기본 선택을 조정할 수 있습니다.
 
 
@@ -111,7 +121,7 @@ NOTE: 각 ONTAP Select 노드마다 최대 14개의 NVMe 장치가 지원됩니�
 
 image:nvme_04.png["ONTAP Select 클러스터 구축"]
 
-클러스터를 성공적으로 구축한 후 ONTAP System Manager를 사용하면 모범 사례에 따라 스토리지를 프로비저닝할 수 있습니다. ONTAP는 NVMe 스토리지를 최대한 활용하는 플래시 최적화 스토리지 효율성 기능을 자동으로 지원합니다.
+클러스터가 성공적으로 배포되면 ONTAP System Manager를 통해 모범 사례에 따라 스토리지를 프로비저닝할 수 있습니다. ONTAP NVMe 스토리지를 최대한 활용할 수 있는 플래시 최적화된 스토리지 효율성 기능을 자동으로 활성화합니다.
 
 image:nvme_05.png["로컬 스토리지 준비 중"]
 

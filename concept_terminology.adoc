@@ -98,7 +98,7 @@ vNAS 기본 구성에서는 SIDL(단일 인스턴스 데이터 로깅)이라고 
 
 
 [[ontap-select-image-install]]
-ONTAP Select 이미지 설치:: ONTAP Select 배포 2.8부터는 배포 관리 유틸리티에 단일 버전의 ONTAP Select만 포함됩니다. 포함된 버전은 릴리스 시점에 가장 최신 버전입니다. ONTAP Select 이미지 설치 기능을 사용하면 이전 버전의 ONTAP Select를 배포 유틸리티의 인스턴스에 추가할 수 있습니다. 그러면 ONTAP Select 클러스터를 배포할 때 이 기능을 사용할 수 있습니다. 을 참조하십시오 link:task_cli_deploy_image_add.html["ONTAP Select 이미지 추가 를 참조하십시오"].
+ONTAP Select 이미지 설치:: Deploy 관리 유틸리티에는 ONTAP Select 의 단일 버전만 포함되어 있습니다. 포함된 버전은 출시 시점을 기준으로 사용 가능한 최신 버전입니다. ONTAP Select 이미지 설치 기능을 사용하면 Deploy 유틸리티 인스턴스에 이전 버전의 ONTAP Select 추가하여 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다. 보다link:task_cli_deploy_image_add.html["ONTAP Select 이미지 추가 를 참조하십시오"] .
 
 
 

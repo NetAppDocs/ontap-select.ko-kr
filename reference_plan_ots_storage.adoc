@@ -239,7 +239,7 @@ NOTE: 로컬 DAS 드라이브를 사용하는 소프트웨어 RAID는 프리미�
 
 소프트웨어 RAID에서 NVMe SSD 드라이브를 사용하도록 구성할 수 있습니다. 환경은 다음 요구 사항을 충족해야 합니다.
 
-* 지원되는 배포 관리 유틸리티가 있는 ONTAP Select 9.7 이상
+* 지원되는 Deploy 관리 유틸리티를 사용한 ONTAP Select
 * Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
 * VMware ESXi 버전 6.7 이상
 * 사양 1.0 이상을 준수하는 NVMe 장치
