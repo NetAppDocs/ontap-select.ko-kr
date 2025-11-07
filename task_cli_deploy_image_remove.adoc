@@ -26,19 +26,25 @@ CAUTION: 클러스터에서 사용 중인 ONTAP Select 이미지를 제거해서
 . admin (admin) 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
 . 배포로 관리되는 클러스터를 표시하고 사용 중인 ONTAP 이미지를 기록합니다.
 +
-'클러스터 쇼'
-
+[source, cli]
+----
+cluster show
+----
 +
 각 경우에 버전 번호와 하이퍼바이저 플랫폼을 기록해 두십시오.
 
 . Bash 쉘을 시작합니다.
 +
-'지옥배시'
-
+[source, cli]
+----
+shell bash
+----
 . 사용 가능한 모든 ONTAP Select 영상을 표시합니다.
 +
-'ls - LH/opt/NetApp/images'(ls - LH/OPT/NetApp/이미지)
-
+[source, cli]
+----
+ls -lh /opt/netapp/images
+----
 . 필요에 따라 하이퍼바이저 호스트에서 ONTAP Select 이미지를 제거합니다.
 +
 [role="tabbed-block"]

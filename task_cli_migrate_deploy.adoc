@@ -40,16 +40,20 @@ CAUTION: 구축 구성 데이터를 원래 가상 머신으로 복구할 때는 
 . 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
 . 배포 서버의 내부 디렉토리에 저장되는 배포 구성 데이터의 백업을 생성합니다.
 +
-백업 생성 배포
-
+[source, cli]
+----
+deploy backup create
+----
 . 메시지가 표시되면 백업 암호를 입력합니다.
 +
 백업 파일은 암호를 기반으로 암호화됩니다.
 
 . 시스템에서 사용 가능한 백업을 표시합니다.
 +
-백업 전개 - 세부 정보
-
+[source, cli]
+----
+deploy backup show -detailed
+----
 . Created * 필드의 날짜를 기준으로 백업 파일을 선택하고 * Download URL * 값을 기록합니다.
 +
 URL을 통해 백업 파일에 액세스할 수 있습니다.
@@ -92,10 +96,7 @@ link:task_install_deploy.html["ONTAP Select Deploy를 설치합니다"]
 이전 백업의 구성 데이터가 있어야 합니다. 데이터는 단일 파일에 포함되어 있으며 로컬 워크스테이션에서 사용할 수 있어야 합니다.
 
 .단계
-. 로컬 워크스테이션의 명령 셸에서 SFTP 유틸리티를 사용하여 배포 가상 머신에 백업 파일을 업로드합니다.
-+
-예
-
+. 로컬 워크스테이션의 명령 셸에서 sftp 유틸리티를 사용하여 백업 파일을 다음 예와 같이 Deploy 가상 머신에 업로드합니다.
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -105,10 +106,12 @@ exit
 . 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
 . 구성 데이터를 복원합니다.
 +
-백업 복원 경로 경로 경로 이름 파일 이름 "을(를) 배포합니다
-
+[source, cli]
+----
+deploy backup restore -path <path_name> -filename <file_name>
+----
 +
-예
+예제 명령
 
 +
 deeploy backup restore-path/home/admin-filename deploy_backup_20180601162151.tar.gz

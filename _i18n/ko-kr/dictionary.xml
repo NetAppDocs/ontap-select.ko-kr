@@ -646,8 +646,6 @@
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">배포 관리 유틸리티에 정적 IP 주소를 할당해야 합니다. 이 요구사항은 하나 이상의 ONTAP Select 2노드 클러스터를 관리하는 모든 배포 인스턴스에 적용됩니다.</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.</block>
   <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.</block>
-  <block id="d687fa799cb928d61ab8f8c42c50439d" category="list-text">제품 찾기 * 를 클릭합니다.</block>
-  <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">아래로 스크롤하여 * ONTAP Select * 를 클릭합니다.</block>
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">원하는 패키지 릴리스를 선택합니다.</block>
   <block id="9bf3ac5f4cb6341117598df735958bdf" category="list-text">최종 사용자 사용권 계약(EULA)을 검토하고 * 동의 및 계속 * 을 클릭합니다.</block>
   <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">적절한 패키지를 선택하여 다운로드하고 필요에 따라 모든 프롬프트에 응답합니다.</block>
@@ -869,13 +867,11 @@
   <block id="2c3df213abea0ad1cb494572704542f9" category="inline-image-macro">에서는 ONTAP Select 클러스터를 구축하는 데 필요한 전체 워크플로우를 설명합니다.</block>
   <block id="bc0723c49208cb7ede4ce6ea0a477957" category="paragraph"><block ref="bc0723c49208cb7ede4ce6ea0a477957" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">명령줄 인터페이스를 사용하여 기존 배포 유틸리티 가상 시스템을 업그레이드할 수 있습니다.</block>
-  <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">웹 브라우저를 사용하여 NetApp Support 사이트에 액세스하여 * Support Quick Links * 를 클릭합니다.</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">원하는 업그레이드 패키지 릴리스를 선택합니다.</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">해당 패키지를 선택하여 다운로드하고 사용자 환경에 필요한 모든 프롬프트에 응답합니다.</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">이 작업은 배포 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">업그레이드 파일은 admin 사용자의 홈 디렉토리에 저장됩니다.</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">적절한 디렉토리 경로 및 파일 이름을 사용하여 업그레이드를 수행합니다.</block>
-  <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph">업그레이드-패키지-경로 파일 배포</block>
   <block id="e5338fa1dff19c951b23cd8d57a1bb1d" category="summary">SSH를 사용하여 배포 관리 셸에 로그인해야 합니다. 로그인한 후 CLI 명령을 실행하여 ONTAP Select 클러스터를 생성하고 관련 관리 절차를 수행할 수 있습니다.</block>
   <block id="1e1c82929b36e8b866f932a031b19c58" category="paragraph">배포 관리자(admin) 계정의 현재 암호가 있어야 합니다. 처음 로그인하는 경우 vCenter를 사용하여 가상 머신 구축을 설치하는 경우 설치 중에 설정된 암호를 사용해야 합니다.</block>
   <block id="ccb606fde10157eafe6d1e665b68829a" category="list-text">배포 가상 컴퓨터의 관리자 계정 및 관리 IP 주소를 사용하여 로그인합니다. 예를 들면 다음과 같습니다.</block>
@@ -1017,12 +1013,9 @@
   <block id="bdcc30baa721ccd0a5acff90c91be1eb" category="paragraph">현재 클러스터에서 사용하지 않거나 향후 클러스터 배포에 사용하도록 계획되어 있지 않은 이전 ONTAP Select 이미지를 제거할 수 있습니다.</block>
   <block id="782ecd049df8bffe850b977d8d9ef2dd" category="list-text">admin (admin) 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.</block>
   <block id="fa1108d6713a8e964a0091afacde76b4" category="list-text">배포로 관리되는 클러스터를 표시하고 사용 중인 ONTAP 이미지를 기록합니다.</block>
-  <block id="494cb4f7976c64f111b74e9089d5bbd5" category="paragraph">'클러스터 쇼'</block>
   <block id="bc51625a3fe6a0e7ccf7a1059630b41c" category="paragraph">각 경우에 버전 번호와 하이퍼바이저 플랫폼을 기록해 두십시오.</block>
   <block id="8b7bd3ee934f35f730dee72837b5aee2" category="list-text">Bash 쉘을 시작합니다.</block>
-  <block id="34eaf92501247fea4a9be97412cef6df" category="paragraph">'지옥배시'</block>
   <block id="75c67769109540e212db27715ac58ee9" category="list-text">사용 가능한 모든 ONTAP Select 영상을 표시합니다.</block>
-  <block id="bac8e85676787adaae3dcc2dd52d64fa" category="paragraph">'ls - LH/opt/NetApp/images'(ls - LH/OPT/NetApp/이미지)</block>
   <block id="cf3870a4ea8df9ca19bca44e9ddb94ff" category="summary">ONTAP Select 배포 관리 유틸리티 설치 계획의 일부로 고려해야 하는 몇 가지 일반적인 요구 사항이 있습니다.</block>
   <block id="dbc858bba588a84f31510f7236fc9029" category="doc">ONTAP Select은 일반 요구 사항 및 계획을 배포합니다</block>
   <block id="69bed9e4fad549efbae3d288b2a4e6ac" category="section-title">배포 유틸리티를 ONTAP Select 클러스터와 페어링합니다</block>
@@ -1103,7 +1096,6 @@
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="eab10597f9ef50e8058170729878869e" category="list-text">MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)</block>
   <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="inline-link-macro">ONTAP Select와 ONTAP 비교 9</block>
-  <block id="77aaedb7dde5f69b11a5683a958edbfc" category="list-text"><block ref="77aaedb7dde5f69b11a5683a958edbfc" category="inline-link-macro-rx"></block></block>
   <block id="5cd0ad520dbcfbdeee9d38a1ad945c17" category="summary">ONTAP Select 클러스터를 구축한 후 표준 ONTAP 소프트웨어 업그레이드 절차를 사용하여 필요에 따라 각 노드의 ONTAP 이미지를 업그레이드할 수 있습니다.</block>
   <block id="047bc25615b74f5ee9ad03d531e71221" category="paragraph">ONTAP Select 클러스터를 구축한 후 필요에 따라 클러스터의 각 노드에서 ONTAP 이미지를 업그레이드할 수 있습니다.</block>
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">배포 관리 유틸리티를 사용하여 기존 ONTAP Select 노드의 업그레이드를 수행할 수 없습니다. Deploy 유틸리티는 새 ONTAP Select 클러스터를 생성하는 데만 사용할 수 있습니다.</block>
@@ -1588,80 +1580,45 @@
   <block id="ca91eb0ffb4e943653e46e9be3d1522e" category="summary">모든 Python 스크립트는 단일 모듈에서 공통 Python 클래스를 사용합니다.</block>
   <block id="66cebfc655fc14a70cafa6f4ef31ce39" category="doc">공통 지원 모듈</block>
   <block id="6738f098cd2bba79a1109b07a6b3a4e3" category="summary">배포 관리 유틸리티의 인스턴스에 ONTAP Select 이미지를 추가할 수 있습니다. 이미지를 설치한 후 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다.</block>
-  <block id="7f7382cd875100edcc778a758c7b1209" category="paragraph">상위 수준에서는 배포 인스턴스에 ONTAP Select 이미지를 추가하는 데 사용되는 프로세스는 다음 4단계로 구성됩니다.</block>
-  <block id="4270b6b39fbe76ef4939c93514f88e51" category="list-text">설치 이미지를 다운로드하는 중입니다</block>
-  <block id="0142950d64779e553d9f91719bd60ead" category="list-text">구축 가상 머신에 설치 이미지를 업로드합니다</block>
-  <block id="a1383adc5e3ac160ba2699050ca39978" category="list-text">설치 이미지 추가</block>
-  <block id="aa8c9595fedf9966773a268dbec612aa" category="list-text">사용 가능한 설치 이미지를 표시합니다</block>
   <block id="ff2a9bd49048e73baaf69d5e3097f161" category="paragraph">배포할 새 ONTAP Select 이미지를 추가하기 전에 먼저 불필요한 이미지를 제거해야 합니다.</block>
   <block id="7e0a8cfbb81693d645b2e510efe248df" category="admonition">배포 유틸리티의 인스턴스에 포함된 원래 버전보다 이전 버전의 ONTAP Select 이미지만 추가해야 합니다. ONTAP Select의 이후 버전을 NetApp에서 사용할 수 있게 되면서 추가하는 것은 지원되는 구성이 아닙니다.</block>
   <block id="807ad9e65833a6b39b8d8286e8b783f8" category="paragraph">Deploy 유틸리티의 인스턴스에 ONTAP Select 이미지를 추가하는 프로세스를 시작하려면 NetApp Support 사이트에서 설치 이미지를 다운로드해야 합니다. ONTAP Select 설치 이미지는 압축된 단일 파일로 포맷됩니다.</block>
-  <block id="3778083b3c866c64222ea90c43b33055" category="list-text">상위 작업 * 에서 * 소프트웨어 다운로드 * 를 클릭하고 사이트에 로그인합니다.</block>
-  <block id="5f76f77f8f2d50493666c4d9eb015d66" category="list-text">Other Available Select Software * 에서 * Deploy Upgrade, Node Upgrade, Image Install * 을 클릭합니다.</block>
   <block id="219698a1df9fbd3c16f4a498102fbc3e" category="paragraph">ONTAP Select 설치 이미지를 획득한 후 해당 파일을 배포 가상 머신에 업로드해야 합니다.</block>
   <block id="2a5d9f3f5564baf37e1d1a8cf1a3b68c" category="paragraph">로컬 워크스테이션에서 설치 이미지 파일을 사용할 수 있어야 합니다. 배포 관리자 사용자 계정에 대한 암호도 있어야 합니다.</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">단계</block>
-  <block id="63b64c746e35843656c2e5ab351a6058" category="list-text">로컬 워크스테이션의 명령 셸에서 이미지 파일을 Deploy virtual machine에 업로드합니다.</block>
   <block id="1c654c4358e2d4003c74f40926274452" category="paragraph">노드 설치 파일은 admin 사용자의 홈 디렉토리에 저장됩니다.</block>
-  <block id="16fc31448477212537b6e77370eb37c1" category="paragraph">새 클러스터를 구축할 때 사용할 수 있도록 ONTAP Select 설치 이미지를 Deploy images 디렉토리에 추가할 수 있습니다.</block>
   <block id="1c6a034b63f5d95f8ce563a77103fb05" category="paragraph">설치 이미지 파일이 배포 유틸리티 가상 머신에 있는 디렉토리를 알아야 합니다. 파일이 관리자의 홈 디렉토리에 있는 것으로 가정합니다.</block>
-  <block id="418076c036187fc2b385bdd1281ce8bc" category="list-text">이미지 디렉토리에 설치 이미지 파일을 배치합니다.</block>
-  <block id="c0549956556109e315a844c123220537" category="paragraph">예: tar-XF image_v_93_install_ESX.tgz-C/opt/NetApp/images/</block>
-  <block id="9ef896581aaec3297fd8373103d43cef" category="paragraph">새 클러스터를 구축할 때 사용 가능한 ONTAP Select 이미지를 표시할 수 있습니다.</block>
   <block id="723658df342d95ccbf42a5f9c876dfee" category="list-text">deploy utility virtual machine에서 온라인 설명서 웹 페이지에 액세스하고 administrator(admin) 계정을 사용하여 로그인합니다.</block>
   <block id="dc43755d370f894f2f9d7a9da08ce7e2" category="paragraph">'\http://&lt;FQDN|IP_ADDRESS&gt;/api/ui`</block>
   <block id="cc95115e3088d1f2d90bf48fa98be3d5" category="paragraph">배포 가상 머신의 도메인 이름 또는 IP 주소를 사용합니다.</block>
-  <block id="a80b761ab06a4ff6731297d4de180b0b" category="list-text">페이지 하단으로 이동하여 * deploy * 를 클릭한 다음 * get/images * 를 클릭합니다.</block>
-  <block id="d7053ec6f3f2e9697233f406d33a87fb" category="list-text">사용 가능한 ONTAP Select 이미지를 표시하려면 * 시험 사용! * 을 클릭합니다.</block>
   <block id="c5db03c3f05f8d27a033a2f8f7fbf211" category="list-text">원하는 영상을 사용할 수 있는지 확인합니다.</block>
   <block id="4497c744476a3b6774a7e4659e36bb37" category="summary">ONTAP Select Deploy 유틸리티가 실패하거나 어떤 이유로 사용할 수 없는 경우 ONTAP Select 노드와 클러스터를 관리할 수 없습니다. 또한 배포에 포함된 중재자 서비스를 사용할 수 없기 때문에 모든 2노드 클러스터에서 HA 기능이 손실됩니다. 복구할 수 없는 장애가 발생하면 deploy 유틸리티 인스턴스를 복구하여 관리 및 HA 기능을 복원해야 합니다.</block>
-  <block id="732fff5218e24bea555b4f8de50d2d22" category="paragraph">Deploy 유틸리티의 인스턴스를 복구하려고 하기 전에 준비해야 성공할 수 있습니다.</block>
-  <block id="4e5bd66d05ea6e0425032aae26d54f07" category="paragraph">여러 관리 절차를 숙지하고 필요한 정보를 가지고 있어야 합니다.</block>
-  <block id="e9b71fd1c3e60cd227138ff80d4b34dd" category="paragraph">하이퍼바이저 환경에 ONTAP Select 배포 유틸리티의 새 인스턴스를 설치할 수 있어야 합니다.</block>
-  <block id="d9b585388e199d807960be00480d9c37" category="paragraph">ONTAP Select 클러스터의 ONTAP CLI에 로그인하여 셸 인터페이스를 사용할 수 있어야 합니다.</block>
-  <block id="92a71e755753127bb017bb1fe9bad028" category="paragraph">ONTAP Select 2노드 클러스터가 포함된 실패한 배포 유틸리티 인스턴스에서 구성 데이터 백업이 있는지 확인해야 합니다. 클러스터가 포함되지 않은 백업도 있을 수 있습니다.</block>
-  <block id="618988b1c7baef58636565874807619a" category="paragraph">사용된 복구 절차에 따라 배포 구성 데이터의 백업을 복원할 수 있어야 합니다.</block>
-  <block id="88178796123172aa042c2352197e09e0" category="paragraph">실패한 원래 배포 유틸리티 가상 시스템의 IP 주소를 알고 있어야 합니다.</block>
-  <block id="378cdb3591ae498a782312834334c853" category="paragraph">ONTAP Select 배포 유틸리티의 인스턴스를 복구할 때 사용할 절차를 결정해야 합니다. 이 결정은 ONTAP Select 2노드 클러스터가 포함된 원래의 실패한 배포 유틸리티에서 구성 데이터를 백업했는지 여부에 따라 결정됩니다.</block>
   <block id="11530c57a897d905bc943331e58f56b0" category="cell">2노드 클러스터를 포함하는 구축 백업이 있습니까?</block>
-  <block id="b42236ddc43aefb700714337ec5fe465" category="cell">사용할 복구 절차입니다</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">아니요</block>
   <block id="4780c03db443ef1fccbe9971eeda0df0" category="paragraph">2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스 백업이 있는 경우 구성 데이터를 새 배포 가상 시스템 인스턴스로 복원할 수 있습니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.</block>
-  <block id="50f2c67c1d54b1604865c0785336a1bf" category="paragraph">2노드 클러스터를 포함하는, 장애가 발생한 원래 가상 시스템의 구성 데이터 백업이 있어야 합니다. 2노드 클러스터의 ONTAP CLI에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.</block>
   <block id="04707b3ca56ea70a35e5f72497444b18" category="paragraph">복원하는 구성 백업에는 2노드 클러스터가 포함되어 있으므로 중재자인 iSCSI 타겟과 사서함이 새 배포 유틸리티 가상 시스템에서 다시 생성됩니다.</block>
   <block id="10d3454e4067c478fcd215352578896c" category="list-text">ONTAP Select 배포 유틸리티의 새 인스턴스를 준비합니다.</block>
   <block id="392ad4630b9353f5418297f40a2e9465" category="list-text">새 배포 유틸리티 가상 시스템을 설치합니다.</block>
   <block id="a5817a7120ba5c7f40fbeec33918b40c" category="list-text">이전 백업에서 새 가상 머신으로 구축 구성을 복구합니다.</block>
   <block id="2a0f6c83e2e8656a3009a7768b3bac83" category="paragraph">설치 및 복원 절차에 대한 자세한 내용은 관련 작업을 참조하십시오.</block>
   <block id="3edf4cb19512d4630e64407fdbfacf0f" category="list-text">ONTAP Select 2노드 클러스터의 ONTAP 명령줄 인터페이스에 로그인합니다.</block>
-  <block id="232499f93d4af76d76aa851010a3d601" category="list-text">새 배포 가상 시스템의 IP 주소가 원본 배포 가상 시스템과 다른 경우 이전 중재자 iSCSI 대상을 제거하고 새 대상을 추가해야 합니다.</block>
   <block id="59375550d620fe069d214b870c7e2f34" category="paragraph">"&lt;ip_address&gt;" 매개변수는 새 배포 가상 시스템의 IP 주소입니다.</block>
   <block id="2cc23b20b088fcaa02f28b1f9267a13e" category="paragraph">이러한 명령을 사용하면 ONTAP Select 노드에서 새 Deploy 유틸리티 가상 머신의 메일박스 디스크를 검색할 수 있습니다.</block>
   <block id="3718a86363802a2f1f5a36285c76206a" category="list-text">중재 디스크의 이름을 확인합니다.</block>
-  <block id="bd0690415958671ed80cf4e26c22e637" category="paragraph">'디스크 쇼 컨테이너 형식의 중재자'</block>
   <block id="1146fee0eb880f0892a23e726ca0a4d2" category="list-text">메일박스 디스크를 두 노드에 할당합니다.</block>
   <block id="9d070d121ee26abdb5d314d6fff4c15c" category="list-text">스토리지 페일오버가 설정되었는지 확인합니다.</block>
-  <block id="751035e5db88d172e881299c202d9b13" category="paragraph">'스토리지 페일오버 쇼'</block>
-  <block id="569f883a1fcdb29c5aa5e29f182e9dd9" category="paragraph">2노드 클러스터를 포함하는 실패한 배포 유틸리티 인스턴스의 백업이 없는 경우 새 배포 가상 시스템에서 중재자 iSCSI 대상 및 사서함을 구성해야 합니다. 그런 다음 ONTAP Select 클러스터에서 두 노드의 추가 구성을 수행하여 복구를 완료해야 합니다.</block>
-  <block id="1b8f191261c89384d2a9550aaac5eac0" category="paragraph">새 배포 유틸리티 인스턴스의 중재 대상 이름이 있어야 합니다. 2노드 클러스터의 ONTAP CLI에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.</block>
   <block id="b641370bc8479ac609268e5b798181a7" category="paragraph">2노드 클러스터가 포함되어 있지 않더라도 필요에 따라 구성 백업을 새 구축 가상 머신에 복구할 수 있습니다. 2노드 클러스터는 복구를 통해 다시 생성되지 않으므로 배포에 있는 ONTAP Select 온라인 설명서 웹 페이지를 통해 중재 iSCSI 대상과 사서함을 새 배포 유틸리티 인스턴스에 수동으로 추가해야 합니다. 2노드 클러스터에 로그인하여 2노드 클러스터의 ONTAP 이름을 알아야 합니다.</block>
   <block id="a4e19764a9b0a95876226c599e6aab9a" category="admonition">복구 절차의 목표는 정상 HA 테이크오버 및 반환 작업을 수행할 수 있는 정상 상태로 2노드 클러스터를 복원하는 것입니다.</block>
   <block id="f5eb374c041ad769f9b37edbfcfdc016" category="list-text">필요에 따라 이전 백업에서 새 가상 머신으로 구축 구성을 복구합니다.</block>
   <block id="1a811df4dc00792e0b4812c49edd60bc" category="paragraph">이전 백업을 복원하면 새 배포 인스턴스에 2노드 클러스터가 포함되지 않습니다. 설치 및 복원 절차에 대한 자세한 내용은 관련 정보 섹션을 참조하십시오.</block>
   <block id="ccade42401bf54d1ace0721ed8894959" category="list-text">고급 특별 권한 모드 시작:</block>
   <block id="cffcfc00e24ed8ca2b18bf4a888e0070" category="list-text">중재자 iSCSI 대상 이름 가져오기:</block>
-  <block id="0b8eead8cff957b1221c528cc5815b22" category="paragraph">'스토리지 iSCSI-initiator show-target-type mailbox'</block>
   <block id="6beda81a8ccb785c3706cadbcacf79db" category="list-text">새 배포 유틸리티 가상 컴퓨터에서 온라인 설명서 웹 페이지에 액세스하고 관리자 계정을 사용하여 로그인합니다.</block>
   <block id="5bdffc33624cf554ff99229cfbc8bc1c" category="paragraph">'\http://&lt;ip_address&gt;/api/ui`</block>
   <block id="9cf0c17a75f430132839d17e4cdf2734" category="paragraph">구축 가상 머신의 IP 주소를 사용해야 합니다.</block>
-  <block id="c30d588450ec2670c8abb4c5bdfcf92a" category="list-text">중재자 * 를 클릭한 다음 * GET/mediators * 를 클릭합니다.</block>
-  <block id="896a10bc0a8946569552955f1a8b3e4c" category="list-text">배포에서 유지 관리하는 중개자 목록을 표시하려면 * 시험 사용! * 을 클릭합니다.</block>
   <block id="7e1f9afbb0146bf2210d834ead709d47" category="paragraph">원하는 중재자 인스턴스의 ID를 확인합니다.</block>
-  <block id="deaae3056bff3505c8cf3c3e5f9394f4" category="list-text">중재자 * 를 클릭한 다음 * POST * 를 클릭합니다.</block>
   <block id="040012e13bef5621713bec788252ef98" category="list-text">중재자_ID의 값을 제공하십시오</block>
-  <block id="f256ba989ef4bd8aa23530c93ff59b5e" category="list-text">ISCSI_TARGET 옆의 * Model * 을 클릭하고 이름 값을 입력합니다.</block>
   <block id="e11663ca33d9f0461cabf12f56a8c381" category="paragraph">iqn_name 매개 변수의 대상 이름을 사용합니다.</block>
-  <block id="109c8e36bc942c26365dbf0801f87f3d" category="list-text">중재자 iSCSI 대상을 만들려면 * 시험 사용! * 을 클릭합니다.</block>
   <block id="3d85b7e0ce2983da3c1d066243516254" category="paragraph">요청이 성공하면 HTTP 상태 코드 200을 받게 됩니다.</block>
   <block id="4da2af2783b38d64f7ad51f0188043f0" category="list-text">새 배포 가상 시스템의 IP 주소가 원본 배포 가상 시스템과 다른 경우 ONTAP CLI를 사용하여 이전의 중재 iSCSI 대상을 제거하고 새 대상을 추가해야 합니다.</block>
   <block id="f003eee578389a046f25dba6e783a672" category="summary">ONTAP Select은 조직 내에서 하나 이상의 프라이빗 클라우드를 지원하는 데 이상적입니다. 일반적인 사용 사례는 일반 서버를 기반으로 구축된 프라이빗 클라우드에 스토리지 서비스를 제공하는 것입니다.</block>
@@ -1671,19 +1628,11 @@
   <block id="413237c8cac3c7cf3437693d9962b1fb" category="paragraph">이는 서비스 중심의 프라이빗 클라우드 모델입니다. ONTAP Select의 HA 버전을 사용하면 비용이 높은 FAS 어레이에서도 기대할 수 있는 것과 동일한 ONTAP 경험을 만들 수 있습니다. 스토리지 서버 리소스는 ONTAP Select VM에서 단독으로 소비되며, 애플리케이션 VM은 별도의 물리적 인프라에서 호스팅됩니다.</block>
   <block id="fb6f9f37085215c30bff064542d11394" category="paragraph">* DAS를 기반으로 구축된 프라이빗 클라우드 *</block>
   <block id="df4928efb348e7abebffb938d05f9853" category="paragraph"><block ref="df4928efb348e7abebffb938d05f9853" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ce78f638c1329fc432323298fd5ab053" category="paragraph">ONTAP Select 클러스터를 호스팅하는 하이퍼바이저에서 ESXi 소프트웨어를 업그레이드하기 전에 환경에 적합한 업그레이드 절차를 준비하고 선택해야 합니다.</block>
-  <block id="a74a74cc9eac206cd17b389aebee1edf" category="admonition">VMware ESXi 6.5로 업그레이드하려는 경우 ESXi U2(빌드 8294253) 이상으로 업그레이드해야 합니다. ESXi 6.5 U1을 사용하면 알려진 VMware 버그로 인해 가상 시스템 장애가 발생할 수 있습니다.</block>
   <block id="a06d958d7c1e780db3a597737559b331" category="paragraph">몇 가지 업그레이드 절차를 사용할 수 있습니다. 다음 기준에 따라 해당 절차를 선택해야 합니다.</block>
   <block id="d98bf1b619a94ca49b2cf4e249269541" category="list-text">ONTAP Select 클러스터 크기 단일 노드 클러스터와 다중 노드 클러스터가 모두 지원됩니다.</block>
-  <block id="c9a714bea6de08f5989eee603a121dae" category="list-text">배포 유틸리티를 사용하거나 사용하지 않고 ONTAP Select 배포 업그레이드를 사용할 수 있습니다.</block>
   <block id="649ae0572dea5b8bc6208820d18b8e73" category="admonition">배포 관리 유틸리티를 사용하는 업그레이드 절차를 선택해야 합니다.</block>
-  <block id="0fca1939c8c0500fa2f3ed6bfce03d40" category="section-title">업데이트 절차가 완료된 후</block>
   <block id="3020c5e4f7e244ad0af7d9b1e1c3f9cc" category="paragraph">Deploy 유틸리티를 사용하는 업그레이드 절차를 선택할 경우, 모든 노드를 업그레이드한 후 Deploy를 사용하여 클러스터 업데이트 작업을 수행해야 합니다. 자세한 내용은 클러스터 구성 새로 고침 을 참조하십시오.</block>
   <block id="2b02207ef454c2c6aeeedf7644fa1821" category="paragraph">구축 관리 유틸리티를 절차의 일부로 사용하여 ONTAP Select 단일 노드 클러스터를 호스팅하는 VMware ESXi 하이퍼바이저를 업그레이드할 수 있습니다.</block>
-  <block id="681dd84e331133125fc528e3066ea4b7" category="list-text">노드를 오프라인 상태로 이동합니다.</block>
-  <block id="3a5d7f86dd219466ffbcb0e2f8ffd034" category="paragraph">예: node stop--cluster-name &lt;clusterName&gt;--node-name &lt;nodename&gt;</block>
-  <block id="d1c1e91e03c71fa9882b17583973d0c4" category="list-text">노드를 온라인 상태로 이동합니다.</block>
-  <block id="fb373c881fd0931abd6943e8bcf86440" category="paragraph">예: node start--cluster-name &lt;clusterName&gt;--node-name &lt;nodename&gt;</block>
   <block id="2bcdcfed9ba53c3c8ca4e481e1451e94" category="list-text">노드가 발생한 후 클러스터가 정상 상태인지 확인합니다.</block>
   <block id="bba96a171c35e11e4bf7eb548e322d78" category="paragraph">배포 관리 유틸리티를 사용하여 클러스터 새로 고침 작업을 수행해야 합니다.</block>
   <block id="c924506282a3ae2065b516094cff9672" category="paragraph">구축 관리 유틸리티를 절차의 일부로 사용하여 ONTAP Select 다중 노드 클러스터를 호스팅하는 VMware ESXi 하이퍼바이저를 업그레이드할 수 있습니다.</block>
@@ -1714,11 +1663,9 @@
   <block id="a2223560f3daace4da811f50f2f76708" category="paragraph">구축이 백업 작업 중에 다른 작업을 수행하지 않는지 확인합니다.</block>
   <block id="28026b3bb14f3c97b11f481645caf565" category="paragraph">생성한 백업 파일은 가상 머신의 모든 구성 데이터를 캡처합니다. 이 데이터는 ONTAP Select 클러스터를 포함한 구축 환경의 여러 측면을 설명합니다.</block>
   <block id="c4e676380560c2d76ac3009addaa66eb" category="list-text">배포 서버의 내부 디렉토리에 저장되는 배포 구성 데이터의 백업을 생성합니다.</block>
-  <block id="d52ea963a3560a70eafe6249384cad0e" category="paragraph">백업 생성 배포</block>
   <block id="5a6f96ad4278c1232327847e0020aeca" category="list-text">메시지가 표시되면 백업 암호를 입력합니다.</block>
   <block id="57049f039b8ba3ed7da7870227bf63cf" category="paragraph">백업 파일은 암호를 기반으로 암호화됩니다.</block>
   <block id="5a9fe4be7a45fa497ce5ed098b3a3aff" category="list-text">시스템에서 사용 가능한 백업을 표시합니다.</block>
-  <block id="08df971d378fcae2bcfc934ca648d17c" category="paragraph">백업 전개 - 세부 정보</block>
   <block id="1a5cb9ce2867d3b5aa027c79d38b9b4c" category="list-text">Created * 필드의 날짜를 기준으로 백업 파일을 선택하고 * Download URL * 값을 기록합니다.</block>
   <block id="cf3583e0957dd7c033dd10fc82650d20" category="paragraph">URL을 통해 백업 파일에 액세스할 수 있습니다.</block>
   <block id="aeb4d606f61c7fabca15a3d3661cc539" category="list-text">Curl과 같은 웹 브라우저나 유틸리티를 사용하여 URL을 사용하여 로컬 워크스테이션에 백업 파일을 다운로드합니다.</block>
@@ -1731,9 +1678,6 @@
   <block id="bc53d5b8393b0e7bd459582f7c4fe869" category="list-text">SSH를 사용하여 배포 유틸리티에 액세스합니다.</block>
   <block id="0354884312c6d9734c8ccd7979edbee9" category="paragraph">원래 배포 유틸리티 가상 머신에서 새 가상 머신으로 구성 데이터를 복구해야 합니다. 데이터가 로컬 워크스테이션에서 업로드해야 하는 단일 파일에 있습니다.</block>
   <block id="1b364349b93e82578cfe461dabadd928" category="paragraph">이전 백업의 구성 데이터가 있어야 합니다. 데이터는 단일 파일에 포함되어 있으며 로컬 워크스테이션에서 사용할 수 있어야 합니다.</block>
-  <block id="f81fbf9d5f689fab977e68417016783a" category="list-text">로컬 워크스테이션의 명령 셸에서 SFTP 유틸리티를 사용하여 배포 가상 머신에 백업 파일을 업로드합니다.</block>
-  <block id="61606c32a4feee098448dfcafda7350b" category="list-text">구성 데이터를 복원합니다.</block>
-  <block id="b69a9048a49045497e1363c3dd4d30a0" category="paragraph">백업 복원 경로 경로 경로 이름 파일 이름 "을(를) 배포합니다</block>
   <block id="3d76d8ade4be6a0fa76347dff9a10a88" category="paragraph">deeploy backup restore-path/home/admin-filename deploy_backup_20180601162151.tar.gz</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">ONTAP Select 클러스터를 구축한 후 배포 관리 유틸리티를 사용하여 노드의 하이퍼바이저 인스턴스 유형을 업그레이드할 수 있습니다.</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">클러스터가 온라인 상태여야 합니다.</block>
@@ -2367,14 +2311,6 @@
   <block id="d670b307adcbd20c75b779bb62ae10bc" category="paragraph">[소규모]#^1^ONTAP Select 9.6은 새로운 라이센스(프리미엄 XL)와 새로운 VM 크기(대형)를 지원합니다. 그러나 대규모 VM은 소프트웨어 RAID를 사용하는 DAS 구성에서만 지원됩니다. 9.6 릴리즈의 대형 ONTAP Select VM에서는 하드웨어 RAID 및 vNAS 구성이 지원되지 않습니다.#</block>
   <block id="2b306d5ec9ffced1b4c962a0d5f78acb" category="paragraph">ONTAP Select 9.6 이상으로 업그레이드한 후 을(를) 기다립니다<block ref="65c6cabf39cf5a036e1dff5fc1483802" prefix=" " category="inline-code"></block> 명령을 사용하여 기존 볼륨의 스토리지 효율성 값을 확인하기 전에 업그레이드가 완료되었음을 표시합니다.</block>
   <block id="7c36dc7bcc9976cf87d97958fae57918" category="paragraph">ONTAP Select 9.6 이상으로 업그레이드한 시스템에서 기존 aggregate 또는 새로 생성된 애그리게이트에 생성된 새로운 볼륨이 새로운 구축 환경에서 생성된 볼륨과 동일한 동작이 발생합니다. ONTAP Select 코드 업그레이드를 거친 기존 볼륨은 몇 가지 변동을 통해 새로 생성된 볼륨과 동일한 스토리지 효율성 정책을 대부분 가집니다.</block>
-  <block id="201d6cf1ba171c49bcdcb0766d20f3f9" category="paragraph-title">필요한 기술 및 정보</block>
-  <block id="7322a68bf06479e293387c20bf0f3e8e" category="paragraph-title">구축 가상 머신 설치</block>
-  <block id="816d0d92458bc1f7a68303a845228dde" category="paragraph-title">ONTAP 명령줄 인터페이스입니다</block>
-  <block id="fe8a09bfef8f50e4e72bec1b0f9c18db" category="paragraph-title">배포 유틸리티 구성 백업의 가용성</block>
-  <block id="8fbcf0a0690f2df2d9b37ca23e0733f5" category="paragraph-title">배포 구성의 백업 복원</block>
-  <block id="d929d228dc7d6e05fe2b30f1a5826c49" category="paragraph-title">원래 구축 가상 머신의 IP 주소입니다</block>
-  <block id="b957b13a65ee2e9c4a639a76b0b7cce7" category="paragraph-title">스토리지 용량 라이센스</block>
-  <block id="ed67f205040bfaf568fb57e318f22a15" category="paragraph-title">사용할 복구 절차를 결정합니다</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
   <block id="801333bc71ada3c7b40aa384a24d7978" category="paragraph-title">네트워크 최소 및 권장 구성</block>
@@ -2603,7 +2539,6 @@
   <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8.0 U1(빌드 21495797)</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">상호 운용성 매트릭스 툴(IMT)</block>
   <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전에서 ESXi 7.0 이상으로 ESXi 소프트웨어를 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다.</block>
-  <block id="817a2297c74a908c3261968059682b32" category="paragraph">Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 보다 일반적이고 탄력적인 옵션입니다. 그러나 배포를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.</block>
   <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.</block>
   <block id="1e2be71e8b4858c0b3e832cba35731d1" category="section-title">ONTAP Select 9.13.1 을 참조하십시오</block>
   <block id="cdbcb12eafeb6cc1f6a058e9c52a7f8d" category="paragraph">ONTAP Select 9.13.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
@@ -2721,8 +2656,6 @@
   <block id="acac68a1e439a88d2d2599418fc3ace8" category="cell">구성 백업을 사용하여 배포 유틸리티 인스턴스를 복원합니다</block>
   <block id="e46ac92a715b42bd2cfc9c8c53a2230c" category="cell">배포 유틸리티 인스턴스를 재구성하고 복구합니다</block>
   <block id="06a53967f62b6ebf8a1fba55cabdfecf" category="list-text"><block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block></block>
-  <block id="89ac05efab2228e74e12191efccdf85c" category="inline-link-macro">구축 구성 데이터를 새 가상 머신에 복구합니다</block>
-  <block id="9731a2aaf926f5fd46b5a7343839efb4" category="list-text"><block ref="9731a2aaf926f5fd46b5a7343839efb4" category="inline-link-macro-rx"></block></block>
   <block id="47546bf1e2847e2d81e73bde93926649" category="section-title">ONTAP Select 클러스터를 오프라인 및 온라인 상태로 이동</block>
   <block id="60458f1485d61e13b322742ae9f0113a" category="section-title">배포 클러스터 구성을 새로 고칩니다</block>
   <block id="24c77c4c999a67b38b8910008fcbf84a" category="paragraph">License Manager는 배포 관리 유틸리티의 각 인스턴스 내에서 별도의 프로세스로 실행됩니다. LM에서 제공하는 기능 중 일부는 다음과 같습니다.</block>
@@ -2762,21 +2695,13 @@
   <block id="7616bc7ca1d0f5d08301e0593d0e18ca" category="section-title">ONTAP Select와 ONTAP 9를 비교해 보십시오</block>
   <block id="811d71286df166f702ec9b42c249d145" category="section-title">워크플로에 사용되는 API 호출을 이해합니다</block>
   <block id="494bbba02a6f83c76ae18eeba756eafc" category="section-title">REST API에 직접 액세스할 URL을 구성합니다</block>
-  <block id="84bee6f12ed24b78dc6e3d711f489517" category="section-title">VMware ESXi 업그레이드 방법을 익히십시오</block>
   <block id="879d008da9e1adcaebd71393252b5f05" category="paragraph">ESXi 소프트웨어 업그레이드는 VMware에서 설명하고 지원하는 프로세스입니다. 하이퍼바이저 업그레이드 프로세스는 ONTAP Select를 사용할 때 더 큰 업그레이드 절차의 일부입니다. 자세한 내용은 VMware 설명서를 참조하십시오.</block>
-  <block id="9fb992cde692e6edf5e0ff97d5e5f2f8" category="section-title">업그레이드 절차를 선택합니다</block>
   <block id="7040c3ccc544e203d76cb7ffe82f6911" category="inline-link-macro">1172198을 참조하십시오</block>
   <block id="2e6761a6be39f375b42a759a4e5b2ce9" category="paragraph">이러한 이전 버전을 사용하고 업그레이드를 시도하면 ONTAP Select 가상 시스템을 부팅할 수 없는 상태로 둘 수 있습니다. 이 경우 Deploy를 사용하지 않는 업그레이드 절차를 선택해야 합니다. 을 참조하십시오 <block ref="45788d744a81e57f6ed35cd7105ed791" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="eb09ec92cf869be7597c08b1ed36d886" category="section-title">배포 관리 유틸리티를 업그레이드합니다</block>
-  <block id="684106fd704b339617fbc6743afe92b6" category="paragraph">배포 유틸리티를 사용하여 업그레이드 절차를 수행하기 전에 배포 인스턴스를 업그레이드해야 할 수 있습니다. 일반적으로 가장 최신 버전의 배포로 업그레이드해야 합니다. 배포 유틸리티는 사용 중인 ONTAP Select 버전을 지원해야 합니다. 자세한 내용은 ONTAP Select 릴리즈 노트를 참조하십시오.</block>
   <block id="5b8325e442ddd32629c86630fde418de" category="section-title">Deploy를 사용하여 단일 노드 클러스터 업그레이드</block>
   <block id="2863feac8b058188a45f49deaf504ce8" category="section-title">Deploy를 사용하여 다중 노드 클러스터를 업그레이드합니다</block>
   <block id="77313127f25a198a72521f0ce3437025" category="section-title">구축 없이 단일 노드 클러스터 업그레이드</block>
   <block id="4724841b242993261d4bc5bf0b22e4da" category="section-title">배포 없이 다중 노드 클러스터 업그레이드</block>
-  <block id="e4384ef53374e50c408aa4f320771fc7" category="section-title">설치 이미지를 다운로드합니다</block>
-  <block id="ae5dce558cc0a937c60691c0f0837ca5" category="section-title">배포할 설치 이미지를 업로드합니다</block>
-  <block id="df16cb9f82c152af98cbdb57cc06f0d9" category="section-title">설치 이미지를 추가합니다</block>
-  <block id="5b9b5bb226a6c70daff9ed71955c175e" category="section-title">사용 가능한 설치 이미지를 표시합니다</block>
   <block id="f47ad6e4bc9bad323a7e49da78e990bc" category="doc">ONTAP Select 클러스터 노드의 크기를 조정합니다</block>
   <block id="afe2fb2999af41d32655dc1f20500f66" category="list-text">ONTAP Select 9.9.1부터 Intel Xeon Sandy Bridge 이상의 CPU 모델만 ONTAP Select에 대해 지원됩니다.</block>
   <block id="0fa9a0b98f503373d1e8310c7c58315c" category="cell">ONTAP Select용 제품 설치 실행 파일</block>
@@ -3132,7 +3057,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">자세한 정보</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">클러스터 축소 8노드-6노드 클러스터</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.</block>
-  <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 6개에서 8개 노드로 늘리고 클러스터 크기를 8개에서 6개 노드로 줄일 수 있습니다.</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">클러스터를 확장합니다</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">새 노드에 대한 라이센스 세부 정보가 있는지 확인합니다.</block>
@@ -3286,7 +3210,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="697112fb0ffb252e40d60a5a007943a2" category="sidebar">클러스터를 확장하거나 축소합니다</block>
   <block id="9cc3c3055efc6fc5a45cfce6ac3eda87" category="sidebar">VM 비디오 콘솔에 액세스합니다</block>
   <block id="5a3a053ae34a79fb35028f001babbf25" category="sidebar">장애가 발생한 소프트웨어 RAID 드라이브를 교체합니다</block>
-  <block id="e2e19484d2146649c758acb6e826707f" category="sidebar">ESXi를 6.5 이상으로 업그레이드합니다</block>
   <block id="b374e4bbc5d3bd65f35605cc784ed685" category="list-text">ONTAP Select 9.14.1에는 VMware ESXi 8.0 U2에 대한 지원이 포함되어 있습니다.</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
   <block id="3a13e6fcb6840db51e3e181c41dff37b" category="list-text">ESXi 8.0 U2</block>
@@ -3568,10 +3491,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="235d833d1553c6ac3ef4b59a69b7709d" category="admonition">용량 계층 라이센스 모델 및 용량 풀 라이센스 모델을 사용할 때 클러스터 노드 크기 조정 작업을 수행할 수 있습니다.</block>
   <block id="751e45429506270501500591ecf71f63" category="paragraph">이 절차를 사용하여 각 노드를 구성해야 합니다. 이 예에서는 Capacity Tier 라이센스가 노드에 적용됩니다.</block>
   <block id="f5eacefd45f87cad9eca589aeba17364" category="paragraph">ONTAP Select 노드에는 용량 계층 라이센스가 사용됩니다.</block>
-  <block id="70c6ed94827afcf20125ed21cfa0d45d" category="paragraph">용량 풀 또는 용량 계층 라이센스가 사용되는지 여부를 확인해야 합니다. Capacity Pools 라이센스를 사용하는 경우 배포 인스턴스를 복구하거나 복원한 후에 각 Capacity Pool 라이센스를 다시 설치해야 합니다.</block>
-  <block id="29f5b284a6c121e6b86e23d26c5492d7" category="paragraph">Capacity Pools 라이센스를 사용하는 경우 각 Capacity Pool 라이센스를 재설치해야 합니다. 자세한 내용은 _ Capacity Pool 라이센스 재설치 _ 를 참조하십시오.</block>
-  <block id="ad8df021d39702efa54a5c4a58d4c408" category="paragraph">Capacity Pools 라이센스를 사용하는 경우 각 Capacity Pool 라이센스를 재설치해야 합니다. 자세한 내용은 Capacity Pool 라이센스 다시 설치 를 참조하십시오.</block>
-  <block id="907984c60dd3b3b1d06b28812739f3a3" category="list-text"><block ref="907984c60dd3b3b1d06b28812739f3a3" category="inline-link-macro-rx"></block></block>
   <block id="b28ceb45f344ed12e54e3531ae0bac88" category="summary">ONTAP Select 노드에서 사용하는 각 Capacity Pool에 대한 라이센스 파일을 얻어야 합니다. 라이센스 파일은 풀에 대한 스토리지 용량과 만료일을 정의합니다. NetApp에서 할당한 고유 라이센스 일련 번호와 배포 인스턴스와 연결된 라이센스 잠금 ID를 조합하여 License Manager에 잠깁니다.</block>
   <block id="b06635debd20e5d8f23e5fd54016e095" category="doc">ONTAP Select 용량 풀 라이센스를 취득합니다</block>
   <block id="332320e6473eb55e261b81cf0938cfbc" category="paragraph">NetApp에서 용량 풀에 할당한 9자리 라이센스 일련 번호가 있어야 합니다. 라이센스 파일을 취득하기 전에 구매 주문 배송 날짜로부터 최소 24시간 후에 기다려야 합니다.</block>
@@ -3646,8 +3565,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="b43dccc6180e02d25b94d717af59c5d5" category="section-title">1단계: 배포 준비</block>
   <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">하드웨어 RAID</block>
   <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">스토리지 풀(KVM)</block>
-  <block id="e6590b92b825641d452dbbfa0d4cf1d1" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다. <block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block> 각 노드에는 시스템 데이터와 루트 및 데이터 집계가 있습니다. ONTAP Select 노드 구성의 일부로 스토리지 풀을 연결해야 합니다.</block>
-  <block id="19d8e46deea8d239f3274a92f88038ab" category="paragraph">소프트웨어 RAID를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다. <block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block> 시스템 데이터의 경우 SSD 드라이브를 루트 및 데이터 집계에 사용할 수 있는지 확인하세요. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</block>
   <block id="908272d4cd58c61b9a3bc042f376ee86" category="inline-link-macro">ONTAP Select 이미지 추가</block>
   <block id="e037f6aae5e648de44fa07863c350701" category="paragraph">배포 관리 유틸리티에는 단일 버전의 ONTAP Select가 포함되어 있습니다. 이전 버전의 ONTAP Select 사용하여 클러스터를 배포하려면 먼저 다음을 수행해야 합니다. <block ref="6403b9b63d70488e119e79bd63bd10d8" category="inline-link-macro-rx"></block> Deploy 인스턴스에.</block>
   <block id="2d9d6efa5bb5baaf1e0bfc7ac2970b34" category="inline-link-macro">각 노드에서 저장소에 대한 라이선스를 부여합니다.</block>
@@ -3814,7 +3731,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">이 작업에서는 ONTAP Select Deploy 가상 머신에 파일을 업로드하는 한 가지 방법을 설명합니다.  귀하의 환경에 더 적합한 다른 옵션이 있을 수도 있습니다.</block>
   <block id="c99ab6326cfb96cafe5cf69a39bf5e79" category="list-text">업그레이드 파일이 로컬 워크스테이션에 있는지 확인하세요.</block>
   <block id="e2a672c847bad2863e57f277c323553c" category="list-text">관리자 사용자 계정에 대한 비밀번호가 있는지 확인하세요.</block>
-  <block id="e60c1aa35e0fea0a6ef96ddaa4b018f8" category="list-text">로컬 워크스테이션의 명령 셸에서 다음을 사용하세요.<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) 유틸리티를 사용하여 이미지 파일을 ONTAP Select .</block>
   <block id="fc979b5c6d5eef1f824052719f508095" category="section-title">3단계: 업그레이드 패키지 적용</block>
   <block id="8b24796d99b30623379a77021195b47e" category="paragraph">업그레이드 파일을 ONTAP Select Deploy 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.</block>
   <block id="91aa908b0f2003054a80626907b7d18a" category="list-text">ONTAP Select Deploy 유틸리티 가상 머신에서 업그레이드 파일이 어떤 디렉토리에 있는지 확인합니다.</block>
@@ -3852,7 +3768,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="cbec5c675188a8b88f95c1615c33fb39" category="list-text">라이브러리 업데이트</block>
   <block id="cbbbf9758b7ac41123821f7ea427538f" category="list-text">라이브러리 항목 업데이트</block>
   <block id="845b12256749d66531d9afd69bc3a33c" category="list-text">지역 도서관 업데이트</block>
-  <block id="26f7069f09ce96914fa8e8c3a68a4191" category="doc">ONTAP Select ESXi 또는 KVM 클러스터 확장 또는 축소</block>
   <block id="b6901598f11464666113bfe479efe49f" category="paragraph">ESXi 및 KVM 하이퍼바이저 호스트에 대한 기존 ONTAP Select 클러스터의 클러스터 크기를 늘릴 수 있습니다.  KVM 호스트의 경우 클러스터 크기를 6개에서 8개 노드로 늘릴 수 있고, 8개에서 6개 노드로 줄일 수 있습니다.  ESXi 호스트의 경우 6개에서 12개 노드 사이로 클러스터 크기를 늘리거나 줄일 수 있습니다.</block>
   <block id="936ee35c221853e402fecb3657e726ba" category="paragraph">다음 클러스터 확장 및 축소는 ESXi 및 KVM 호스트에서 지원되지 않습니다.</block>
   <block id="ca069be0eeb72c96905b0cdbf504214d" category="paragraph">클러스터 확장 및 축소 기능은 다음 KVM 및 ESXi 하이퍼바이저 호스트에서 지원됩니다.</block>
@@ -3913,7 +3828,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="a72643a79ec8e9d1d5c61ff835cabbeb" category="list-text">ONTAP Select 9.16.1이 처음 설치되었습니다.</block>
   <block id="588a4431a3d49dda029dcc4161fc2be3" category="list-text">필요한 경우 노드를 버전 9.17.1로 업그레이드한 다음 버전 9.16.1로 되돌릴 수 있습니다.</block>
   <block id="c762418e7ca866adad88c4350fc20ef0" category="list-text">ONTAP Select 9.17.1이 처음 설치되었습니다.</block>
-  <block id="02214bce8cef8e578251dc5cdd19f814" category="list-text">이전에 설치된 버전이 없으므로 되돌릴 수 없습니다.</block>
   <block id="0bb5222a5975edbdfb5210abc7bbc0d5" category="admonition">ONTAP Select Deploy에 포함된 REST API에는 버전 번호가 지정되어 있습니다. API 버전 번호는 Deploy 릴리스 번호와 무관합니다. ONTAP Select 9.17.1 Deploy 관리 유틸리티에는 REST API 버전 3이 포함되어 있습니다.</block>
   <block id="7b5019dce3bb835acb62c31388f47aef" category="cell">VMware vSphere 9.0 VMware vSphere 8.0GA 및 업데이트 1~3 VMware vSphere 7.0GA 및 업데이트 1~3C</block>
   <block id="98a200153c1be0c16d526cf021fc6c2c" category="cell">4, 6 또는 8노드 클러스터</block>
@@ -3928,7 +3842,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="aea2ef463d548798da986814b7163a65" category="list-text">지원되는 Deploy 관리 유틸리티를 사용한 ONTAP Select</block>
   <block id="26a1590332f300c4ec3aa0f686d62125" category="admonition">활성 2노드 클러스터가 하나 이상 있는 경우, 클러스터를 관리하는 ONTAP Select Deploy 가상 머신이 항상 실행 중이어야 합니다. ONTAP Select Deploy 가상 머신이 중지되거나 실패하면 중재자 서비스를 사용할 수 없으며 2노드 클러스터의 HA 기능이 손실됩니다.</block>
   <block id="0657a1213e1f6d89d22c78ddc4608384" category="paragraph">2노드 클러스터는 일반적으로 원격 사무실이나 지점 사무실에 배포되므로 기업 데이터 센터와 멀리 떨어져 있을 수 있으며 ONTAP Select Deploy 유틸리티에서 관리 지원을 제공할 수 있습니다.  이 구성을 사용하면 ONTAP Select Deploy 유틸리티와 클러스터 간의 관리 트래픽이 WAN을 통해 흐릅니다. 제한 사항에 대한 자세한 내용은 릴리스 노트를 참조하십시오.</block>
-  <block id="b83e9ae7e9a3ccc11cef740f2d5aa5f2" category="list-text">ONTAP Select Deploy에 할당된 정적 IP 주소</block>
   <block id="ed89295e41e84f73a1840cf9d0bc49c6" category="paragraph">ONTAP Select Deploy 관리 유틸리티에 정적 IP 주소를 할당해야 합니다.  이 요구 사항은 하나 이상의 ONTAP Select 2노드 클러스터를 관리하는 모든 ONTAP Select Deploy 인스턴스에 적용됩니다.</block>
   <block id="ee1aadb3a9fa619eb12db5d1e58032b4" category="inline-link-macro">vCenter에서 vSAN ESA에 대한 VMware vSphere 권한에 대해 알아보세요.</block>
   <block id="653a421852b6e9fc7e8da536351d6d57" category="paragraph"><block ref="653a421852b6e9fc7e8da536351d6d57" category="inline-link-macro-rx"></block></block>
@@ -3952,8 +3865,79 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="2dd89f547668d42e92b18453b0fc2db7" category="section-title">2단계: 배포 가상 머신의 새 인스턴스 설치</block>
   <block id="20db79ddbcecf961179a8654cf93bdfa" category="section-title">3단계: 배포 구성 데이터를 새 가상 머신으로 복원합니다.</block>
   <block id="35767fb08a64b94abf91d7c25ea1b1d5" category="paragraph">ONTAP ONTAP Select ONTAP Select Deploy 9.17.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
-  <block id="f8828e764d46e46d1990e6a2dec9744f" category="doc">ONTAP Select 위해 VMware ESXi를 버전 7.0 이상으로 업그레이드하세요.</block>
   <block id="4c2a7675fb89ee6113fb93327fabd5f6" category="list-text">ESXi 9.0</block>
   <block id="90facdbe61c2fda7ac079c021778069e" category="section-title">3단계: 배포 완료</block>
-  <block id="0ccf5aad6da0b37b9ee3f6128be956c7" category="paragraph">클러스터를 배포한 후 ONTAP Select AutoSupport 기능이 구성되었는지 확인한 다음<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> .</block>
+  <block id="7a0165449b5773328368f60f5c262ddd" category="doc">ONTAP Select 위해 VMware ESXi 7.0 이상으로 업그레이드하세요.</block>
+  <block id="dd1789a087eda271d0e3deee49558019" category="section-title">VMware ESXi 업그레이드 준비</block>
+  <block id="82c36f45db475277ee2310dec3c1e939" category="paragraph">ONTAP Select 클러스터를 호스팅하는 하이퍼바이저에서 ESXi 소프트웨어를 업그레이드하기 전에 사용자 환경에 적합한 업그레이드 절차를 준비하고 선택하세요.</block>
+  <block id="0926feade48ead905fb59c610b0ac7fd" category="list-text">*VMware ESXi 업그레이드 방법을 알아보세요*</block>
+  <block id="1ca1aaf5b842ffb10893e476d56ee6d7" category="list-text">*업그레이드 절차를 선택하세요*</block>
+  <block id="8378d8bf20941add9c4df91829cd0827" category="list-text">ONTAP Select Deploy 사용</block>
+  <block id="4057b7ca0c19f851f63420c9ec32a889" category="paragraph">Deploy 유틸리티를 사용하거나 사용하지 않고도 업그레이드가 가능합니다.</block>
+  <block id="017c62abcb9c0a7a31f008ff45eca54a" category="paragraph">Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 더 일반적이고 복원력이 뛰어난 옵션입니다. 하지만 Deploy를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어, 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.</block>
+  <block id="2e0e9d07ffda2d85422b14435c592a64" category="list-text">*Deploy 관리 유틸리티 업그레이드*</block>
+  <block id="c3a59d3a6472b3e407374a73000fa2d0" category="inline-link-macro">ONTAP Select 릴리스 노트</block>
+  <block id="f5d84950dbef357c088050b223201054" category="paragraph">Deploy 유틸리티를 사용하여 업그레이드 절차를 수행하기 전에 Deploy 인스턴스를 업그레이드해야 할 수도 있습니다. 일반적으로 최신 버전의 Deploy로 업그레이드해야 합니다. Deploy 유틸리티는 사용 중인 ONTAP Select 버전을 지원해야 합니다.  를 참조하세요<block ref="d849cafcad7044085f0bad0e874b53aa" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
+  <block id="652257fc3daae6b4fad2e2bd425ff0e3" category="list-text">*업데이트 절차가 완료된 후*</block>
+  <block id="20f9850b56f2eecea40a57c75ab5c890" category="list-text">노드를 오프라인 상태로 이동합니다.</block>
+  <block id="13cc9f6fa9c854f457ba342b6ca56703" category="list-text">노드를 온라인 상태로 이동합니다.</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">예:</block>
+  <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">예를 보여주세요</block>
+  <block id="fc0aa017cb8518a7c70f2a39ae6553c1" category="list-text">이전에 설치된 버전이 없기 때문에 되돌릴 수 없습니다.</block>
+  <block id="6e1243914ebc1fc5867ce44540c39b39" category="list-text"><block ref="6e1243914ebc1fc5867ce44540c39b39" category="inline-link-macro-rx"></block></block>
+  <block id="7df4c22f834073378cbc7bda2a69e5d8" category="paragraph-title">배포 구성 데이터 백업</block>
+  <block id="92a0bc38a55c8986f72a9e2f38fb2581" category="paragraph">가장 좋은 방법은 다음과 같습니다.<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> 클러스터를 만든 후에도 정기적으로. 2노드 클러스터의 경우, 백업에 중재자 구성 데이터가 포함되므로 이 작업이 더욱 중요합니다.</block>
+  <block id="12702c2f8c71548bcc7c156da7d7e810" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다.<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block> 각 노드에서 시스템 데이터와 루트 및 데이터 집계를 관리합니다. ONTAP Select 노드를 구성하는 과정에서 스토리지 풀을 연결해야 합니다.</block>
+  <block id="d79e665d74455e96fa5fff08009d57ce" category="paragraph">소프트웨어 RAID를 사용하는 경우 최소한 하나의 데이터 저장소(ESX) 또는 하나를 생성해야 합니다.<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block> 시스템 데이터의 경우 SSD 드라이브를 루트 및 데이터 집계에 사용할 수 있는지 확인하세요. ONTAP Select 노드 구성의 일부로 스토리지 풀과 디스크를 연결해야 합니다.</block>
+  <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">1단계: 설치 이미지 다운로드</block>
+  <block id="42cd2a8efe7c9aac811d923637a0f193" category="list-text">웹 브라우저를 사용하여 NetApp 지원 사이트에 접속하고 *지원 빠른 링크*를 선택하세요.</block>
+  <block id="6168f6eb3f1b81ec759f515fdd7bab98" category="list-text">*주요 작업*에서 *소프트웨어 다운로드*를 선택하고 사이트에 로그인하세요.</block>
+  <block id="84791eb50904d5d426f95112ce50d397" category="list-text">*제품 찾기*를 선택하세요.</block>
+  <block id="676522edf33055c4e8da85feed945dc5" category="list-text">*다른 사용 가능한 소프트웨어 선택*에서 *배포 업그레이드, 노드 업그레이드, 이미지 설치*를 선택합니다.</block>
+  <block id="4ec4ff4105057abcf44071cf2a8f84b6" category="section-title">2단계: Deploy에 설치 이미지 업로드</block>
+  <block id="3ad5852905f7d86a4b551630b78bec6f" category="list-text">로컬 워크스테이션의 명령 셸에서 다음 예시와 같이 이미지 파일을 가상 머신 배포에 업로드합니다.</block>
+  <block id="9c0d19167b1e62192d344c74670ab607" category="section-title">3단계: 설치 이미지 추가</block>
+  <block id="b9f4869d7f31d53b61f29fe4bedd37d1" category="paragraph">새 클러스터를 배포할 때 사용할 수 있도록 ONTAP Select 설치 이미지를 배포 이미지 디렉토리에 추가합니다.</block>
+  <block id="461e33e15d96d32a3253838cc3faf280" category="list-text">다음 예와 같이 설치 이미지 파일을 이미지 디렉토리에 넣습니다.</block>
+  <block id="152d8684d752984c61ac93dd6e93ca75" category="paragraph"><block ref="a424c72865fc5e3d7ef425ffe24358a0" prefix="" category="inline-code"></block></block>
+  <block id="55a1dda936b17c10bd6fe08210028b1d" category="section-title">4단계: 사용 가능한 설치 이미지 표시</block>
+  <block id="bd721bab2f4844ced6ea0eeba243f8d3" category="paragraph">새 클러스터를 배포할 때 사용할 수 있는 ONTAP Select 이미지를 표시합니다.</block>
+  <block id="0130d1c399b188129dee9e6cb685faf8" category="list-text">페이지 하단으로 이동하여 *배포*를 선택한 다음 *GET /images*를 선택합니다.</block>
+  <block id="9e4d41c6ecc4cf9937f573e802d657c6" category="list-text">*시도해 보세요!*를 선택하면 사용 가능한 ONTAP Select 이미지가 표시됩니다.</block>
+  <block id="7237d8c12d94e5a5d31950f37ac0bf7a" category="section-title">Deploy 유틸리티 복구 준비</block>
+  <block id="d0d9ebbdf3a513d091f96cf877073d3f" category="paragraph">Deploy 유틸리티 인스턴스를 복구하려면 먼저 준비를 해야 합니다. 이렇게 하면 복구가 성공합니다.  여러 행정 절차에 익숙해야 하며, 필요한 정보를 가지고 있어야 합니다.</block>
+  <block id="97987a90b942fca343d336e1e3407ce1" category="list-text">하이퍼바이저 환경에서 ONTAP Select Deploy 유틸리티의 새 인스턴스를 설치할 수 있는지 확인하세요.</block>
+  <block id="de7a4f435396962b2c5793b09e623040" category="inline-link-macro">ONTAP Select Deploy 유틸리티 설치에 대해 알아보세요</block>
+  <block id="931c4bc1734c8552932d13706ff5d778" category="paragraph"><block ref="931c4bc1734c8552932d13706ff5d778" category="inline-link-macro-rx"></block></block>
+  <block id="a7e32b3c69ec3a084438d9fdb77bc17c" category="list-text">ONTAP Select 클러스터에 로그인하여 ONTAP 클러스터 셸(CLI)에 액세스할 수 있는지 확인하세요.</block>
+  <block id="18a7df977db43c60a4c6a47400953591" category="list-text">ONTAP Select 2노드 클러스터가 포함된 실패한 배포 유틸리티 인스턴스의 구성 데이터 백업이 있는지 확인하세요. 클러스터가 포함되지 않은 백업이 있을 수도 있습니다.</block>
+  <block id="01db345147b0b1e4da305d7ddea3f030" category="list-text">사용된 복구 절차에 따라 배포 구성 데이터의 백업을 복원할 수 있는지 확인하세요.</block>
+  <block id="783e545e51986edbc17afe85eea0faa9" category="inline-link-macro">새 가상 머신에 배포 구성 데이터를 복원하는 방법에 대해 알아보세요.</block>
+  <block id="eec0b20b3b13caf4c707ba03e2af8e20" category="paragraph"><block ref="eec0b20b3b13caf4c707ba03e2af8e20" category="inline-link-macro-rx"></block></block>
+  <block id="aafccebf49ebd86d0297ed3c4cb4bcf8" category="list-text">실패한 원래 Deploy 유틸리티 가상 머신의 IP 주소가 있습니다.</block>
+  <block id="b5d76ca91cc6a4bfaa8e7bf5e92bb436" category="list-text">용량 풀 또는 용량 계층 라이선싱이 사용되는지 확인합니다. 용량 풀 라이선싱을 사용하는 경우, 배포 인스턴스를 복구하거나 복원한 후 각 용량 풀 라이선스를 다시 설치해야 합니다.</block>
+  <block id="256f2b5a82e33e1addfa3baf312579ad" category="list-text">ONTAP Select Deploy 유틸리티 인스턴스를 복구할 때 사용할 절차를 결정합니다. 이 결정은 ONTAP Select 2노드 클러스터가 포함된 원래 실패한 Deploy 유틸리티의 구성 데이터 백업본이 있는지 여부에 따라 달라집니다.</block>
+  <block id="231f652ef60095cb1f5635c5883bc6be" category="cell">복구 절차를 사용하세요...</block>
+  <block id="da5f86a9d9885a0a4f3fae17be5714c1" category="cell"><block ref="a667be25a78a5bb37fad6661b93342ca" category="inline-xref-macro-rx"></block></block>
+  <block id="254bdc26db86eb9026bb2f2a17bdfb96" category="cell"><block ref="05da0447e48edcc2947b385468da9d92" category="inline-xref-macro-rx"></block></block>
+  <block id="fa044af206f38606c388f360f301e4ae" category="paragraph">2노드 클러스터가 포함된 원래 배포 실패 가상 머신에서 구성 데이터를 백업합니다. 2노드 클러스터의 ONTAP CLI에 로그인하고 두 노드의 ONTAP 이름을 알고 있어야 합니다.</block>
+  <block id="e8a314dd4d9f7c33b9bbed1a31bce762" category="list-text">새로운 Deploy 가상 머신의 IP 주소가 원래 Deploy 가상 머신과 다른 경우, 이전 중재자 iSCSI 대상을 제거하고 새 대상을 추가합니다.</block>
+  <block id="6b23d5e89df595635ec3a54090e64fa9" category="paragraph">용량 풀 라이선스를 사용하는 경우 각 용량 풀 라이선스를 다시 설치하세요.  보다<block ref="241b4315fc3c4e6905896340939f6270" category="inline-link-macro-rx"></block> 자세한 내용은 다음을 참조하세요.</block>
+  <block id="9b5fe6a20fe2a058892201f5f80f1856" category="paragraph">2노드 클러스터가 포함된 실패한 Deploy 유틸리티 인스턴스의 백업이 없는 경우 새 Deploy 가상 머신에서 중재자 iSCSI 대상과 사서함을 구성합니다.  그런 다음 ONTAP Select 클러스터의 두 노드에 대한 추가 구성을 수행하여 복구를 완료합니다.</block>
+  <block id="f1c1b76c2a435830bd391c2c408efc67" category="paragraph">새로운 Deploy 유틸리티 인스턴스에 대한 중재자 대상의 이름이 있는지 확인하세요. 2노드 클러스터의 ONTAP CLI에 로그인하고 두 노드의 ONTAP 이름을 알고 있어야 합니다.</block>
+  <block id="87ccb73575035c302ba7c38920d907ae" category="list-text">*중재자*를 선택한 다음 *GET /중재자*를 선택하세요.</block>
+  <block id="eb39326ecb8194aed00f77063e484a57" category="list-text">*사용해 보세요!*를 선택하면 Deploy에서 관리하는 중재자 목록이 표시됩니다.</block>
+  <block id="a78d26c86f8e1bc3f99deea85ab123e3" category="list-text">*중재자*를 선택한 다음 *게시*를 선택합니다.</block>
+  <block id="5c9d811abf74644dc7a5840670a2323a" category="list-text">*모델*을 선택하세요<block ref="afd1be8124115a780c2ac5cb3db1f36d" prefix=" " category="inline-code"></block> 그리고 이름 값을 완성하세요.</block>
+  <block id="69c2330b72fdbb0f24306b5344fc83ca" category="list-text">*시험해 보세요!*를 선택하여 중재자 iSCSI 대상을 만듭니다.</block>
+  <block id="e2cd7ceedce46e4ea3fd8396ef4baa97" category="list-text">로컬 워크스테이션의 명령 셸에서 sftp 유틸리티를 사용하여 백업 파일을 다음 예와 같이 Deploy 가상 머신에 업로드합니다.</block>
+  <block id="5c7a95e189e375455d7a7bdc02ec54ba" category="list-text">구성 데이터를 복원합니다.</block>
+  <block id="662385e6e7c81bc5868ecc810d1b4419" category="paragraph">예제 명령</block>
+  <block id="86069ab716d4c2ffd77a81bd3827427f" category="list-text">로컬 워크스테이션의 명령 셸에서 다음을 사용하세요.<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) 유틸리티를 사용하여 이미지 파일을 ONTAP Select .</block>
+  <block id="52396dafee59debc72b8fccab2acb4c5" category="paragraph">예제 명령:</block>
+  <block id="3817e5dd56e94cb6952f7eb0ab2a6acd" category="summary">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 늘리거나 줄일 수 있습니다.</block>
+  <block id="b4ec4e16d52cf8a4ab8bd5925fba2631" category="doc">ESXi 또는 KVM 호스트에서 ONTAP Select 클러스터 확장 또는 축소</block>
+  <block id="7e6bf0ef053af206603d7df47832fbd5" category="inline-link-macro">ONTAP Select AutoSupport 기능이 구성되었는지 확인하세요.</block>
+  <block id="785cc01cf7efbfd5a1fd1d4863d9b83a" category="paragraph">클러스터를 배포한 후,<block ref="af0babf33c9640eb381afcb6484c80f3" category="inline-link-macro-rx"></block> 그런 다음<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> .</block>
+  <block id="b7f5f41e99a6f8c3c3a0c1843b24c17b" category="sidebar">ESXi 업그레이드</block>
 </blocks>

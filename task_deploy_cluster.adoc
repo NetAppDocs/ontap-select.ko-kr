@@ -198,7 +198,7 @@ Deploy 관리를 설치하고 초기 구성(암호, AutoSupport 및 vCenter)을 
 
 == 3단계: 배포 완료
 
-클러스터를 배포한 후 ONTAP Select AutoSupport 기능이 구성되었는지 확인한 다음link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"] .
+클러스터를 배포한 후,link:https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["ONTAP Select AutoSupport 기능이 구성되었는지 확인하세요."^] 그런 다음link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"] .
 
 [TIP]
 ====

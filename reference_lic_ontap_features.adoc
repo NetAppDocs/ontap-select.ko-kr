@@ -68,6 +68,6 @@ NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두�
 
 ====
 .관련 정보
-* link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
+* link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이센스 키"^]
 

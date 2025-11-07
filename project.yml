@@ -278,8 +278,8 @@ sidebar:
       url: "/task_cli_clusters.html"
     - title: 노드 및 호스트
       entries:
-      - title: ESXi를 6.5 이상으로 업그레이드합니다
-        url: "/task_cli_upgrade_esxi65.html"
+      - title: ESXi 업그레이드
+        url: "/cli-upgrade-esxi.html"
       - title: 호스트 관리 서버를 수정합니다
         url: "/reference_host_modify_command.html"
     - title: 배포 유틸리티

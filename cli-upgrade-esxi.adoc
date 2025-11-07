@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_cli_upgrade_esxi65.html 
-keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
+permalink: cli-upgrade-esxi.html 
+keywords: administer, administering, cli, esxi, upgrade, esxi 7.0 
 summary: VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전에서 ESXi 7.0 이상으로 ESXi 소프트웨어를 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다. 
 ---
-= ONTAP Select 위해 VMware ESXi를 버전 7.0 이상으로 업그레이드하세요.
+= ONTAP Select 위해 VMware ESXi 7.0 이상으로 업그레이드하세요.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,47 +18,46 @@ VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전
 
 
 
-== 시작하기 전에
+== VMware ESXi 업그레이드 준비
 
-ONTAP Select 클러스터를 호스팅하는 하이퍼바이저에서 ESXi 소프트웨어를 업그레이드하기 전에 환경에 적합한 업그레이드 절차를 준비하고 선택해야 합니다.
+ONTAP Select 클러스터를 호스팅하는 하이퍼바이저에서 ESXi 소프트웨어를 업그레이드하기 전에 사용자 환경에 적합한 업그레이드 절차를 준비하고 선택하세요.
 
-
-CAUTION: VMware ESXi 6.5로 업그레이드하려는 경우 ESXi U2(빌드 8294253) 이상으로 업그레이드해야 합니다. ESXi 6.5 U1을 사용하면 알려진 VMware 버그로 인해 가상 시스템 장애가 발생할 수 있습니다.
-
-
-
-=== VMware ESXi 업그레이드 방법을 익히십시오
-
+.단계
+. *VMware ESXi 업그레이드 방법을 알아보세요*
++
 ESXi 소프트웨어 업그레이드는 VMware에서 설명하고 지원하는 프로세스입니다. 하이퍼바이저 업그레이드 프로세스는 ONTAP Select를 사용할 때 더 큰 업그레이드 절차의 일부입니다. 자세한 내용은 VMware 설명서를 참조하십시오.
 
-
-
-=== 업그레이드 절차를 선택합니다
-
+. *업그레이드 절차를 선택하세요*
++
 몇 가지 업그레이드 절차를 사용할 수 있습니다. 다음 기준에 따라 해당 절차를 선택해야 합니다.
 
-* ONTAP Select 클러스터 크기 단일 노드 클러스터와 다중 노드 클러스터가 모두 지원됩니다.
-* 배포 유틸리티를 사용하거나 사용하지 않고 ONTAP Select 배포 업그레이드를 사용할 수 있습니다.
++
+** ONTAP Select 클러스터 크기 단일 노드 클러스터와 다중 노드 클러스터가 모두 지원됩니다.
+** ONTAP Select Deploy 사용
++
+Deploy 유틸리티를 사용하거나 사용하지 않고도 업그레이드가 가능합니다.
 
-
++
 
 TIP: 배포 관리 유틸리티를 사용하는 업그레이드 절차를 선택해야 합니다.
 
-Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 보다 일반적이고 탄력적인 옵션입니다. 그러나 배포를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.
++
+Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 더 일반적이고 복원력이 뛰어난 옵션입니다. 하지만 Deploy를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어, 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.
 
++
 이러한 이전 버전을 사용하고 업그레이드를 시도하면 ONTAP Select 가상 시스템을 부팅할 수 없는 상태로 둘 수 있습니다. 이 경우 Deploy를 사용하지 않는 업그레이드 절차를 선택해야 합니다. 을 참조하십시오 link:https://mysupport.netapp.com/site/bugs-online/product/ONTAPSELECT/BURT/1172198["1172198을 참조하십시오"^] 를 참조하십시오.
 
 
 
-=== 배포 관리 유틸리티를 업그레이드합니다
+. *Deploy 관리 유틸리티 업그레이드*
++
+Deploy 유틸리티를 사용하여 업그레이드 절차를 수행하기 전에 Deploy 인스턴스를 업그레이드해야 할 수도 있습니다. 일반적으로 최신 버전의 Deploy로 업그레이드해야 합니다. Deploy 유틸리티는 사용 중인 ONTAP Select 버전을 지원해야 합니다.  를 참조하세요link:reference_release_notes.html["ONTAP Select 릴리스 노트"] 자세한 내용은.
 
-배포 유틸리티를 사용하여 업그레이드 절차를 수행하기 전에 배포 인스턴스를 업그레이드해야 할 수 있습니다. 일반적으로 가장 최신 버전의 배포로 업그레이드해야 합니다. 배포 유틸리티는 사용 중인 ONTAP Select 버전을 지원해야 합니다. 자세한 내용은 ONTAP Select 릴리즈 노트를 참조하십시오.
-
-
-
-=== 업데이트 절차가 완료된 후
-
+. *업데이트 절차가 완료된 후*
++
 Deploy 유틸리티를 사용하는 업그레이드 절차를 선택할 경우, 모든 노드를 업그레이드한 후 Deploy를 사용하여 클러스터 업데이트 작업을 수행해야 합니다. 자세한 내용은 클러스터 구성 새로 고침 을 참조하십시오.
+
+
 
 
 
@@ -70,23 +69,27 @@ Deploy 유틸리티를 사용하는 업그레이드 절차를 선택할 경우, 
 . 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
 . 노드를 오프라인 상태로 이동합니다.
 +
-예: node stop--cluster-name <clusterName>--node-name <nodename>
-
+[source, cli]
+----
+node stop --cluster-name <cluster_name> --node-name <node_name>
+----
 . VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 . 노드를 온라인 상태로 이동합니다.
 +
-예: node start--cluster-name <clusterName>--node-name <nodename>
-
+[source, cli]
+----
+node start --cluster-name <cluster_name> --node-name <node_name>
+----
 . 노드가 발생한 후 클러스터가 정상 상태인지 확인합니다.
 +
-예
+예:
 
 +
 ....
 ESX-1N::> cluster show
-Node Health Eligibility
---------------------- ------- ------------
-sdot-d200-011d true true
+Node           Health  Eligibility
+-------------- ------- ------------
+sdot-d200-011d true    true
 ....
 
 
@@ -106,22 +109,27 @@ sdot-d200-011d true true
 . 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
 . 노드를 오프라인 상태로 이동합니다.
 +
-예: node stop--cluster-name <clusterName>--node-name <nodename>
-
+[source, cli]
+----
+node stop --cluster-name <cluster_name> --node-name <node_name>
+----
 . VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.
 +
 자세한 내용은 VMware ESXi 업그레이드 준비 를 참조하십시오.
 
 . 노드를 온라인 상태로 이동합니다.
 +
-예: node start--cluster-name <clusterName>--node-name <nodename>
-
+[source, cli]
+----
+node start --cluster-name <cluster_name> --node-name <node_name>
+----
 . 노드가 되면 스토리지 페일오버가 설정되어 있고 클러스터가 정상 상태인지 확인합니다.
 +
-예
-
-+
-....
+.예를 보여주세요
+[%collapsible]
+====
+[listing]
+----
 ESX-2N_I2_N11N12::> storage failover show
 Takeover
 Node Partner Possible State Description
@@ -135,7 +143,8 @@ Node Health Eligibility
 sdot-d200-011d true true
 sdot-d200-012d true true
 2 entries were displayed.
-....
+----
+====
 
 
 .작업을 마친 후
@@ -163,16 +172,17 @@ Deploy 관리 유틸리티를 사용하지 않고 ONTAP Select 단일 노드 클
 
 . 노드가 발생한 후 클러스터가 정상 상태인지 확인합니다.
 +
-예
+예:
 
-
-
++
 ....
 ESX-1N::> cluster show
-Node Health Eligibility
---------------------- ------- ------------
-sdot-d200-011d true true
+Node           Health  Eligibility
+-------------- ------- ------------
+sdot-d200-011d true    true
 ....
+
+
 .작업을 마친 후
 배포 관리 유틸리티를 사용하여 클러스터 새로 고침 작업을 수행해야 합니다.
 
@@ -198,10 +208,11 @@ Deploy 관리 유틸리티를 사용하지 않고 ONTAP Select 다중 노드 클
 
 . 노드가 되면 스토리지 페일오버가 설정되어 있고 클러스터가 정상 상태인지 확인합니다.
 +
-예
-
-+
-....
+.예를 보여주세요
+[%collapsible]
+====
+[listing]
+----
 ESX-2N_I2_N11N12::> storage failover show
 Takeover
 Node Partner Possible State Description
@@ -215,7 +226,8 @@ Node Health Eligibility
 sdot-d200-011d true true
 sdot-d200-012d true true
 2 entries were displayed.
-....
+----
+====
 
 
 .작업을 마친 후
