@@ -160,7 +160,7 @@ NetApp FAS 시스템은 일반적으로 비휘발성 플래시 메모리가 포�
 
 일반 시스템에는 일반적으로 이러한 유형의 장비가 장착되지 않습니다. 따라서 이 NVRAM 카드의 기능은 가상화되어 ONTAP Select 시스템 부팅 디스크의 파티션에 배치됩니다. 따라서 인스턴스의 시스템 가상 디스크를 배치하는 것이 매우 중요합니다. 이 때문에 로컬 연결 스토리지 구성을 위해 복원력이 뛰어난 캐시를 갖춘 물리적 RAID 컨트롤러가 필요합니다.
 
-NVRAM은 자체 VMDK에 배치됩니다. NVRAM을 자체 VMDK로 분할하면 ONTAP Select VM이 vNVMe 드라이버를 사용하여 NVRAM VMDK와 통신할 수 있습니다. 또한 ONTAP Select VM은 ESX 6.5 이상과 호환되는 하드웨어 버전 13을 사용해야 합니다.
+NVRAM 자체 VMDK에 배치됩니다. NVRAM 자체 VMDK에 분할하면 ONTAP Select VM이 vNVMe 드라이버를 사용하여 NVRAM VMDK와 통신할 수 있습니다. 또한 ONTAP Select VM은 ESX 8.0 이상과 호환되는 하드웨어 버전 13을 사용해야 합니다.
 
 
 
@@ -184,4 +184,4 @@ NOTE: NVRAM VMDK에서 변경된 블록이 로컬 RAID 컨트롤러 캐시에 �
 image:ST_13.jpg["ONTAP Select VM에 대한 쓰기가 수신되었습니다"]
 
 
-NOTE: NVRAM 파티션은 자체 VMDK에서 분리됩니다. 이 VMDK는 ESX 버전 6.5 이상에서 사용할 수 있는 vdme 드라이버를 사용하여 연결됩니다. 이 변경 사항은 RAID 컨트롤러 캐시의 이점을 얻지 않는 소프트웨어 RAID를 사용하는 ONTAP Select 설치에 가장 중요합니다.
+NOTE: NVRAM 파티션은 자체 VMDK로 분리됩니다. 이 VMDK는 ESX 8.0 이상 버전에서 제공되는 vNVME 드라이버를 사용하여 연결됩니다. 이러한 변경 사항은 RAID 컨트롤러 캐시의 이점을 누리지 못하는 소프트웨어 RAID를 사용하는 ONTAP Select 설치에서 가장 중요합니다.

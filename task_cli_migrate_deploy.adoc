@@ -111,7 +111,7 @@ exit
 deploy backup restore -path <path_name> -filename <file_name>
 ----
 +
-예제 명령
+예제 명령:
 
 +
 deeploy backup restore-path/home/admin-filename deploy_backup_20180601162151.tar.gz

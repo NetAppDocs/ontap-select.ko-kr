@@ -27,8 +27,8 @@ ESXi 또는 KVM 호스트가 드라이브를 인식하도록 구성합니다.
 .시작하기 전에
 배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.
 
-* ESX 호스트의 경우 지원되는 배포 관리 유틸리티가 있는 ONTAP Select
-* KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1
+* ESX 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.7 이상
+* KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1 이상
 * Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스
 * ESXi 또는 KVM 호스트가 지원되는 하이퍼바이저 버전을 실행 중입니다.
 +
@@ -43,7 +43,6 @@ ESXi는 다음 하이퍼바이저 버전에서 지원됩니다.
 ** VMware ESXi 8.0 U2
 ** VMware ESXi 8.0 U1(빌드 21495797)
 ** VMware ESXi 8.0 GA(빌드 20513097)
-** VMware ESXi 7.0 GA(빌드 15843807 이상), 7.0 U1, U2 및 U3C 포함
 
 
 --

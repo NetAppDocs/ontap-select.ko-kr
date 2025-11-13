@@ -23,7 +23,7 @@ ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 
 ====
 ONTAP Select 배포 관리 유틸리티의 이전 인스턴스가 설치되어 있는 경우 현재 릴리스로 업그레이드해야 합니다. ONTAP Select 노드 및 ONTAP Select 구축 구성요소는 독립적으로 업그레이드됩니다. 을 참조하십시오 link:concept_adm_upgrading_nodes.html["ONTAP Select 노드를 업그레이드합니다"^] 를 참조하십시오.
 
-ONTAP ONTAP Select ONTAP Select Deploy 9.17.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.
+ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.15.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.
 
 ====
 

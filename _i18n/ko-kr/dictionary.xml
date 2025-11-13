@@ -39,7 +39,6 @@
   <block id="d713613f7887118583b019301c1d2427" category="paragraph">NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율성을 극대화합니다. 이 설정은 드라이브를 ONTAP Select 가상 시스템에 노출시켜 ONTAP가 장치에 PCI를 직접 액세스할 수 있도록 합니다.</block>
   <block id="29ddeaafb3734d2cd4a59921d590cdfa" category="paragraph">배포 환경이 다음 최소 요구 사항을 충족하는지 확인합니다.</block>
   <block id="dcf27857f687902ea701004a7410264f" category="list-text">Premium XL 플랫폼 라이센스 제공 또는 90일 평가판 라이센스</block>
-  <block id="dd95946e5f91bc0eefaa0662bef76947" category="list-text">VMware ESXi 버전 6.7 이상</block>
   <block id="67217e5ba4d416b3ec157550a03becb2" category="list-text">사양 1.0 이상을 준수하는 NVMe 장치</block>
   <block id="a811207ba17996dc78a58667cd177a13" category="inline-link-macro">호스트 준비 체크리스트</block>
   <block id="fd5c5757c7f7041a2e15ed74c2c32432" category="list-text">Deploy가 재부팅 오케스트레이션을 처리합니다.</block>
@@ -76,7 +75,6 @@
   <block id="4682505b28ef1baba1c84e29e768fa89" category="section-title">클러스터 크기 및 관련 고려 사항</block>
   <block id="449ea47c3ea62a2d3b303b4ef006b170" category="paragraph">고려해야 할 클러스터 크기와 관련된 몇 가지 계획 문제가 있습니다.</block>
   <block id="54c5e966df9913966f5efaa8645540d7" category="list-text">클러스터의 노드 수입니다</block>
-  <block id="1ffcd0aa7083c89d25f318cedc05eba1" category="list-text">ONTAP Select 클러스터는 1노드, 2노드, 4노드, 6노드 또는 8노드로 구성됩니다. 애플리케이션 요구사항에 따라 클러스터의 크기를 결정해야 합니다. 예를 들어, 엔터프라이즈 구축에 HA 기능이 필요한 경우 다중 노드 클러스터를 사용해야 합니다.</block>
   <block id="9c05d1783e3b3ca48efdac5091f94a6e" category="list-text">전용 대 코로케이션</block>
   <block id="a1243e7975c2ed7f07b0d3228b2e496e" category="list-text">애플리케이션 유형에 따라 구축이 전용 또는 코로케이션 모델을 따르는지 확인해야 합니다. 워크로드 다양성과 보다 긴밀한 통합으로 Collocated 모델이 더 복잡해질 수 있습니다.</block>
   <block id="9820c1446b39a881e3e340990358c27b" category="paragraph">하이퍼바이저 호스트와 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다.</block>
@@ -189,7 +187,6 @@
   <block id="fe99eb72c703db69bd59615fd7424477" category="section-title">NVRAM을 가상화했습니다</block>
   <block id="27bc9c6bd3ac9bb967e654fb3c84a1fc" category="paragraph">NetApp FAS 시스템은 일반적으로 비휘발성 플래시 메모리가 포함된 고성능 카드인 물리적 NVRAM PCI 카드를 장착합니다. 이 카드는 들어오는 쓰기를 클라이언트에 즉시 확인할 수 있는 기능을 ONTAP에 부여하여 쓰기 성능을 크게 향상시킵니다. 또한 디스테이징이라고 하는 프로세스에서 수정된 데이터 블록을 느린 스토리지 미디어로 다시 이동하도록 예약할 수도 있습니다.</block>
   <block id="c7a1b527f2affc268470a4d29cbe6ef4" category="paragraph">일반 시스템에는 일반적으로 이러한 유형의 장비가 장착되지 않습니다. 따라서 이 NVRAM 카드의 기능은 가상화되어 ONTAP Select 시스템 부팅 디스크의 파티션에 배치됩니다. 따라서 인스턴스의 시스템 가상 디스크를 배치하는 것이 매우 중요합니다. 이 때문에 로컬 연결 스토리지 구성을 위해 복원력이 뛰어난 캐시를 갖춘 물리적 RAID 컨트롤러가 필요합니다.</block>
-  <block id="454a296bfdd606102c9381c7ff04eb44" category="paragraph">NVRAM은 자체 VMDK에 배치됩니다. NVRAM을 자체 VMDK로 분할하면 ONTAP Select VM이 vNVMe 드라이버를 사용하여 NVRAM VMDK와 통신할 수 있습니다. 또한 ONTAP Select VM은 ESX 6.5 이상과 호환되는 하드웨어 버전 13을 사용해야 합니다.</block>
   <block id="5731426ad5932cbe2f0dc1563b3eeda2" category="section-title">데이터 경로 설명: NVRAM 및 RAID 컨트롤러</block>
   <block id="235a3c28a55ff3027b14ea0be4651791" category="paragraph">시스템에 유입될 때 쓰기 요청이 취하는 데이터 경로를 따라 가면 가상화된 NVRAM 시스템 파티션과 RAID 컨트롤러 간의 상호 작용이 가장 잘 강조 표시될 수 있습니다.</block>
   <block id="fd6a67fa31f26828eb7267405a8e9da5" category="paragraph">ONTAP Select VM에 대한 들어오는 쓰기 요청은 VM의 NVRAM 파티션을 대상으로 합니다. 가상화 계층에서 이 파티션은 ONTAP Select 시스템 디스크 내에 있으며, VMDK는 ONTAP Select VM에 연결됩니다. 물리적 계층에서는 이러한 요청이 로컬 RAID 컨트롤러에 캐싱됩니다. 기본 스핀들을 타겟으로 하는 모든 블록 변경도 이와 유사합니다. 여기에서 쓰기가 호스트에 다시 인식됩니다.</block>
@@ -200,7 +197,6 @@
   <block id="dffb2b0c240d924b2e202dc3c0800a1a" category="paragraph">* ONTAP Select VM에 대한 들어오는 쓰기 *</block>
   <block id="dbca2124e685af6158dfb16fa4b1f333" category="inline-image-macro">ONTAP Select VM에 대한 쓰기가 수신되었습니다</block>
   <block id="bb4535bc16c1e303453a76a7d6669910" category="paragraph"><block ref="bb4535bc16c1e303453a76a7d6669910" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="83aee6fb82bd87d789e0851835b555f8" category="admonition">NVRAM 파티션은 자체 VMDK에서 분리됩니다. 이 VMDK는 ESX 버전 6.5 이상에서 사용할 수 있는 vdme 드라이버를 사용하여 연결됩니다. 이 변경 사항은 RAID 컨트롤러 캐시의 이점을 얻지 않는 소프트웨어 RAID를 사용하는 ONTAP Select 설치에 가장 중요합니다.</block>
   <block id="dae4a538d4ca7b6c0789932062fe718d" category="list-text">호스트 이름입니다</block>
   <block id="dc647eb65e6711e155375218212b3964" category="list-text">암호</block>
   <block id="8a5227cc82d14862956938caffc1acf2" category="list-text">데이터 저장소</block>
@@ -533,7 +529,6 @@
   <block id="9a120d7276c6a36d543c5a161642b99e" category="inline-link-macro">2노드 확장 HA(MetroCluster SDS) 모범 사례</block>
   <block id="9d0822dcb8819654d0299cf79b2aaf37" category="paragraph">중재자가 있는 2노드 클러스터는 두 데이터 센터에 걸쳐 있을 수 있습니다. 자세한 내용은 섹션을 참조하십시오 <block ref="3a9138e6cecc138f508a809e03f2cd7a" category="inline-link-macro-rx"></block>.</block>
   <block id="a273e800cc2132ad1d962e51194e96e5" category="section-title">미러링된 애그리게이트</block>
-  <block id="2ae182fb72e38e2c9be66cfbebaa28d7" category="paragraph">ONTAP Select 클러스터는 2~8개의 노드로 구성됩니다. 각 HA 쌍에는 사용자 데이터의 복사본 2개가 포함되어 있으며 IP 네트워크를 통해 노드 간에 동기식으로 미러링됩니다. 이 미러링은 사용자에게 투명하며, 데이터 애그리게이트 생성 프로세스 중에 자동으로 구성되는 데이터 애그리게이트의 속성입니다.</block>
   <block id="7a188dd8dd5110cd2332e9e506fba4f2" category="paragraph">ONTAP Select 클러스터의 모든 애그리게이트는 노드 페일오버 시 데이터 가용성을 위해 미러링되어야 하고 하드웨어 장애 발생 시 SPOF를 피해야 합니다. ONTAP Select 클러스터의 Aggregate는 HA 쌍의 각 노드에서 제공하는 가상 디스크를 기반으로 하며 다음 디스크를 사용합니다.</block>
   <block id="046eb77c326ce59ce04867fab6f58a61" category="list-text">로컬 디스크 세트(현재 ONTAP Select 노드에서 제공)</block>
   <block id="dfd8a61eb56b3cafcfb17614bf437df2" category="list-text">미러링된 디스크 세트(현재 노드의 HA 파트너가 제공)</block>
@@ -647,7 +642,6 @@
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.</block>
   <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.</block>
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">원하는 패키지 릴리스를 선택합니다.</block>
-  <block id="9bf3ac5f4cb6341117598df735958bdf" category="list-text">최종 사용자 사용권 계약(EULA)을 검토하고 * 동의 및 계속 * 을 클릭합니다.</block>
   <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">적절한 패키지를 선택하여 다운로드하고 필요에 따라 모든 프롬프트에 응답합니다.</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">VMware Client Integration Plugin을 설치하거나 필요에 따라 유사한 구성을 수행하여 브라우저에서 OVF 기능을 설정합니다</block>
   <block id="a361c1b4cc67946dba724c8e11e34b6c" category="list-text">구축 가상 머신의 IP 주소입니다</block>
@@ -1275,7 +1269,6 @@
   <block id="eba94fc119b6edab65f52db7f8979bcc" category="list-text">용량 옵션을 구성하여 스토리지 사용률을 제한합니다(ONTAP Select는 외부 vNAS 데이터 저장소의 전체 용량을 사용할 수 없음).</block>
   <block id="3a667d8f4f3502af8cd1055a07e547aa" category="list-text">가능한 경우 모든 일반 외부 스토리지 어레이가 사용 가능한 이중화 및 HA 기능을 사용하도록 합니다</block>
   <block id="0d746fcebf15f4b3e76f455166f550b9" category="summary">샘플 Python 스크립트를 실행하기 전에 환경을 준비해야 합니다.</block>
-  <block id="2440e78fcfb85444e37a4004b5713575" category="paragraph">Python 스크립트를 실행하기 전에 환경이 제대로 구성되어 있는지 확인해야 합니다.</block>
   <block id="1d8aeb8f4f16d51236639b4b9eab626b" category="list-text">해당하는 최신 버전의 Python2를 설치해야 합니다. 샘플 코드는 Python2를 사용하여 테스트되었습니다. 또한 Python3으로 이식할 수 있지만 호환성 테스트를 거치지 않았습니다.</block>
   <block id="f29e16eb01776ebacbbe7f1daa96109f" category="list-text">요청 및 urllllib3 라이브러리가 설치되어 있어야 합니다. PIP 또는 다른 Python 관리 도구를 환경에 맞게 사용할 수 있습니다.</block>
   <block id="2a9daccbc0444242913ee7d6c42e3eb4" category="list-text">스크립트가 실행되는 클라이언트 워크스테이션에는 ONTAP Select 배포 가상 시스템에 대한 네트워크 액세스 권한이 있어야 합니다.</block>
@@ -1552,7 +1545,6 @@
   <block id="ceb3438393c3ac39fcf4c30b526b7fae" category="paragraph">스페어 디스크는 선택 사항이지만 사용하는 것이 좋습니다. 또한 RAID 그룹당 하나의 스페어를 사용하는 것이 좋습니다. 하지만 모든 RAID 그룹에 대한 글로벌 스페어를 사용할 수 있습니다. 예를 들어 3개의 RAID 그룹당 2개의 스페어를 사용할 수 있습니다. 각 RAID 그룹은 8~12개의 드라이브로 구성됩니다.</block>
   <block id="5ca7ce8323f7b11744e86ef1f4f9606f" category="paragraph">ONTAP Select는 RAID 그룹 내에서 LUN 수를 늘려서 성능 이점을 제공하지 않습니다. SATA/NL-SAS 구성의 모범 사례를 따르거나 하이퍼바이저 파일 시스템 제한을 우회하기 위해서만 여러 LUN을 사용해야 합니다.</block>
   <block id="1089735339643620b5910924c5320981" category="section-title">VMware ESXi 호스트</block>
-  <block id="2dfed98838decebcc7246099986d6886" category="paragraph">시스템 디스크를 호스팅하는 데이터 저장소에는 ESX 6.5 U2 이상 및 NVMe 디스크를 사용하는 것이 좋습니다. 이 구성은 NVRAM 파티션에 최고의 성능을 제공합니다.</block>
   <block id="883debc749a79a13f46992bc1c04b69a" category="paragraph">ONTAP Select 네트워크 및 외부 스토리지에 대한 전용 네트워크 포트, 대역폭 및 vSwitch 구성을 정의합니다(iSCSI 또는 NFS를 사용할 경우 VMware vSAN 및 일반 스토리지 어레이 트래픽).</block>
   <block id="7858be6b65b0176805cc934c2f21d6dd" category="paragraph">용량 옵션을 구성하여 스토리지 사용률을 제한합니다(ONTAP Select는 외부 vNAS 데이터 저장소의 전체 용량을 사용할 수 없음).</block>
   <block id="8a7d1abfb409902e561b13c9ab0a53b7" category="paragraph">가능한 경우 모든 일반 외부 스토리지 어레이가 사용 가능한 이중화 및 HA 기능을 사용하도록 합니다.</block>
@@ -1629,7 +1621,6 @@
   <block id="fb6f9f37085215c30bff064542d11394" category="paragraph">* DAS를 기반으로 구축된 프라이빗 클라우드 *</block>
   <block id="df4928efb348e7abebffb938d05f9853" category="paragraph"><block ref="df4928efb348e7abebffb938d05f9853" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a06d958d7c1e780db3a597737559b331" category="paragraph">몇 가지 업그레이드 절차를 사용할 수 있습니다. 다음 기준에 따라 해당 절차를 선택해야 합니다.</block>
-  <block id="d98bf1b619a94ca49b2cf4e249269541" category="list-text">ONTAP Select 클러스터 크기 단일 노드 클러스터와 다중 노드 클러스터가 모두 지원됩니다.</block>
   <block id="649ae0572dea5b8bc6208820d18b8e73" category="admonition">배포 관리 유틸리티를 사용하는 업그레이드 절차를 선택해야 합니다.</block>
   <block id="3020c5e4f7e244ad0af7d9b1e1c3f9cc" category="paragraph">Deploy 유틸리티를 사용하는 업그레이드 절차를 선택할 경우, 모든 노드를 업그레이드한 후 Deploy를 사용하여 클러스터 업데이트 작업을 수행해야 합니다. 자세한 내용은 클러스터 구성 새로 고침 을 참조하십시오.</block>
   <block id="2b02207ef454c2c6aeeedf7644fa1821" category="paragraph">구축 관리 유틸리티를 절차의 일부로 사용하여 ONTAP Select 단일 노드 클러스터를 호스팅하는 VMware ESXi 하이퍼바이저를 업그레이드할 수 있습니다.</block>
@@ -1714,7 +1705,6 @@
   <block id="5e75bdbfd3f02cf9f655d512b767dc1f" category="section-title">두 가지 소프트웨어 구성 요소</block>
   <block id="1524f7469af0e3274a12cb0f88c7e172" category="paragraph">ONTAP Select는 다음과 같은 두 가지 주요 소프트웨어 구성 요소로 구성됩니다.</block>
   <block id="109a0fa65c0a46ffacf7a4a44e3904a2" category="section-title">ONTAP Select 노드</block>
-  <block id="30469533a5982c250fa502f71f9f958c" category="paragraph">ONTAP Select 클러스터는 1노드, 2노드, 4노드, 6노드 또는 8노드로 구성됩니다. 각 클러스터 노드는 별도의 가상 머신으로 구축되며 특별히 설계된 ONTAP 9 소프트웨어 버전을 실행합니다.</block>
   <block id="440776946e3349ff3266a8cf25bef605" category="section-title">ONTAP Select 배포 관리 유틸리티</block>
   <block id="deeb67d546017625d12dfbcf3d817a5c" category="paragraph">배포 관리 유틸리티는 별도의 Linux 가상 시스템으로 패키지되어 설치됩니다. 이 유틸리티를 사용하여 운영 환경에 ONTAP Select 클러스터를 구축해야 합니다. 현재 버전의 ONTAP Select 노드 이미지는 Deploy 유틸리티와 함께 번들로 제공됩니다.</block>
   <block id="d69f8aaae124c9269620ba7ca5678c34" category="section-title">일반적인 구축 예</block>
@@ -1763,7 +1753,6 @@
   <block id="80ca7f43f3e672c21243bfefe6098be3" category="paragraph">고객이 엔터프라이즈급 스토리지 어플라이언스에서 일반 하드웨어에서 실행되는 소프트웨어 기반 솔루션으로 애플리케이션 워크로드를 이동하기 시작했지만 복원력과 내결함성 관련된 기대치와 요구사항은 달라지지 않았습니다. 제로 복구 시점 목표(RPO)를 제공하는 HA 솔루션은 인프라 스택의 어떤 구성 요소로부터의 장애로 인한 데이터 손실로부터 고객을 보호합니다.</block>
   <block id="0ef73cf573ab623e48c8765c1452e768" category="paragraph">SDS 시장의 상당 부분은 비공유 스토리지의 개념을 기반으로 하며, 소프트웨어 복제를 통해 서로 다른 스토리지 사일로에 여러 사용자 데이터 복사본을 저장하여 데이터 복원력을 제공합니다. ONTAP Select는 ONTAP에서 제공하는 동기식 복제 기능(RAID SyncMirror)을 사용하여 클러스터 내에 사용자 데이터의 추가 복사본을 저장함으로써 이 사내에 구축됩니다. 이 오류는 HA 쌍의 컨텍스트 내에서 발생합니다. 모든 HA 쌍에서는 사용자 데이터의 복사본 2개를 저장합니다. 하나는 로컬 노드가 제공하는 스토리지에, 다른 하나는 HA 파트너가 제공하는 스토리지에 저장합니다. ONTAP Select 클러스터 내에서는 HA와 동기식 복제가 서로 연관되어 있으며 이 둘을 독립적으로 분리 또는 사용할 수 없습니다. 따라서 동기식 복제 기능은 다중 노드 오퍼링에서만 사용할 수 있습니다.</block>
   <block id="a8b7bdf88cbd08284f532780de97bdc9" category="admonition">ONTAP Select 클러스터에서 동기식 복제 기능은 비동기식 SnapMirror 또는 SnapVault 복제 엔진을 대체하는 것이 아니라 HA 구현의 기능입니다. 동기식 복제는 HA와 독립적으로 사용할 수 없습니다.</block>
-  <block id="09d3fcf3c714254bae4dd086fa373525" category="paragraph">ONTAP Select HA 구축 모델에는 다중 노드 클러스터(4노드, 6노드 또는 8노드)와 2노드 클러스터가 있습니다. 2노드 ONTAP Select 클러스터의 가장 중요한 기능은 브레인 분할 시나리오를 해결하기 위해 외부 중재자 서비스를 사용하는 것입니다. ONTAP Deploy VM은 구성하는 모든 2노드 HA 쌍의 기본 중재자 역할을 합니다.</block>
   <block id="804ffdef469129703e5227d67e21dd9c" category="paragraph">두 가지 아키텍처는 다음 그림에 나와 있습니다.</block>
   <block id="5d3c6cd71a8566de0c4154a7f8ca5e5f" category="paragraph">* 원격 중재자와 로컬 연결 스토리지를 사용하는 2노드 ONTAP Select 클러스터 *</block>
   <block id="2940b0a833a0524f0732f30e82611b6b" category="inline-image-macro">원격 중재자와 로컬 연결 스토리지를 사용하는 2노드 ONTAP Select 클러스터</block>
@@ -1771,7 +1760,6 @@
   <block id="d4e9645ad2fb7265e31744685cca3125" category="admonition">2노드 ONTAP Select 클러스터는 하나의 HA 쌍과 중재자로 구성됩니다. HA 쌍 내에서는 각 클러스터 노드의 데이터 애그리게이트가 동기식으로 미러링되며, 페일오버 시 데이터가 손실되지 않습니다.</block>
   <block id="95fab51ff3ed2ff90df7a55762547bbd" category="inline-image-macro">로컬 연결 스토리지를 사용하는 4노드 ONTAP Select 클러스터</block>
   <block id="ffb05b328379c1dffa641c1ba93aca3d" category="paragraph">로컬 연결 스토리지를 사용하는 * 4노드 ONTAP Select 클러스터<block ref="c354f89f34c66a854f2da4e182a40617" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2831575438836cee124b33df55390d64" category="list-text">4노드 ONTAP Select 클러스터는 2개의 HA 쌍으로 구성됩니다. 6노드 클러스터와 8노드 클러스터는 각각 3개와 4개의 HA 쌍으로 구성됩니다. 각 HA 쌍 내에서는 각 클러스터 노드의 데이터 애그리게이트가 동기식으로 미러링되며, 페일오버 시 데이터가 손실되지 않습니다.</block>
   <block id="225cc277f791638702a4dff29a2879c4" category="list-text">DAS 스토리지를 사용하는 경우 물리적 서버에 하나의 ONTAP Select 인스턴스만 존재할 수 있습니다. ONTAP Select를 사용하려면 시스템의 로컬 RAID 컨트롤러에 대한 비공유 액세스가 필요하며, 스토리지에 물리적으로 접속하지 않으면 불가능한 로컬로 연결된 디스크를 관리하도록 설계되었습니다.</block>
   <block id="ad2564443c4e9f2c60b5bb1417738d90" category="paragraph">FAS 어레이와 달리 HA 쌍의 ONTAP Select 노드는 IP 네트워크를 통해서만 통신합니다. 즉, IP 네트워크는 단일 장애 지점(SPOF)이며 네트워크 파티션 및 분할 뇌 시나리오로부터 보호하는 것은 설계의 중요한 측면이 됩니다. 다중 노드 클러스터는 3개 이상의 정상 노드에 클러스터 쿼럼을 설정할 수 있으므로 단일 노드 장애를 유지할 수 있습니다. 2노드 클러스터는 동일한 결과를 얻기 위해 ONTAP Deploy VM에서 호스팅하는 중재자 서비스에 의존합니다.</block>
   <block id="a3784525e4d792db17e41bb29af4c46a" category="paragraph">ONTAP Select 노드와 ONTAP 배포 중재자 서비스 간의 하트비트 네트워크 트래픽은 최소화되고 복원되므로 ONTAP 배포 VM이 ONTAP Select 2노드 클러스터가 아닌 다른 데이터 센터에서 호스팅될 수 있습니다.</block>
@@ -1822,7 +1810,6 @@
   <block id="391a56271aac0c7272e3e9bc2a840da1" category="list-text">ONTAP Select 배포는 ONTAP Select 클러스터를 배포하는 데 사용하는 관리 유틸리티입니다. 배포 유틸리티는 전용 Linux 가상 시스템에서 실행됩니다. 웹 사용자 인터페이스, CLI 관리 셸 및 REST API를 통해 배포 유틸리티에 액세스할 수 있습니다.</block>
   <block id="153e118152db4eb4b3aaf5802efa8cfa" category="list-text">h하이퍼바이저 host_는 ONTAP Select 가상 머신을 호스팅하는 핵심 하드웨어 플랫폼입니다. ONTAP Select 가상 머신이 하이퍼바이저 호스트에 구축되어 활성화되면 _ONTAP Select node_로 간주됩니다.</block>
   <block id="016402ba882e183fec09aa422afcb53e" category="list-text">ONTAP Select 클러스터</block>
-  <block id="91881c8fd4a4fec4ec8625e86028b1b0" category="list-text">1개, 2개, 4개, 6개 또는 8개의 노드로 구성된 _ONTAP Select cluster_를 생성할 수 있습니다. 다중 노드 클러스터에는 항상 하나 이상의 HA 쌍이 포함됩니다. 예를 들어, 4노드 클러스터는 2개의 HA 쌍으로 구성됩니다. 단일 노드 클러스터는 HA 기능을 제공하지 않습니다.</block>
   <block id="85b0e2165794c108ba013b7cf182db29" category="list-text">하이퍼바이저 호스트 환경 준비</block>
   <block id="6fad2c05f92dba415c7e46f30eb18bfb" category="list-text">Deploy 관리 유틸리티를 사용하여 ONTAP Select 클러스터를 구축하기 전에 스토리지 및 네트워킹 환경을 포함하여 ONTAP Select가 실행될 하이퍼바이저 호스트를 준비해야 합니다. 이 호스트 사전 구성은 현재 요구 사항 및 제한 사항에 따라 ONTAP Select 제품 외부에서 수행됩니다.</block>
   <block id="a4a70d8adb3d58d565cfe32be8f1006c" category="list-text">평가 및 운영 구축 비교</block>
@@ -1983,7 +1970,6 @@
   <block id="36e8927cc94b5812c317966274770785" category="section-title">다중 노드 네트워크 구성</block>
   <block id="1ee591758cd33f1794a210d72aa96988" category="paragraph">다중 노드 ONTAP Select 네트워크 구성은 두 개의 네트워크로 구성됩니다.</block>
   <block id="d2529d252133c09f1894e648b4ad0b06" category="paragraph">클러스터 및 내부 복제 서비스를 제공하는 내부 네트워크와 데이터 액세스 및 관리 서비스를 제공하는 외부 네트워크를 담당합니다. 이러한 두 네트워크 내에서 흐르는 트래픽의 엔드 투 엔드 격리는 클러스터 복원성에 적합한 환경을 구축하는 데 매우 중요합니다.</block>
-  <block id="7cb10733239aafdf1dec4b6fe3551ff7" category="paragraph">이러한 네트워크는 다음 그림에 나와 있으며, 이 그림에서는 VMware vSphere 플랫폼에서 실행되는 4노드 ONTAP Select 클러스터를 보여 줍니다. 6노드 및 8노드 클러스터는 유사한 네트워크 레이아웃을 갖습니다.</block>
   <block id="a26bb398479258470974859a18564418" category="admonition">각 ONTAP Select 인스턴스는 별도의 물리적 서버에 상주합니다. 내부 및 외부 트래픽은 각 가상 네트워크 인터페이스에 할당되고 클러스터 노드가 동일한 물리적 스위치 인프라를 공유할 수 있는 별도의 네트워크 포트 그룹을 사용하여 격리됩니다.</block>
   <block id="a12d8dfe451f0b8f185a6eeda853cd32" category="paragraph">* ONTAP Select 다중 노드 클러스터 네트워크 구성 개요 *</block>
   <block id="e527595cf4df9c666be31f4431052de9" category="inline-image-macro">ONTAP Select 다중 노드 클러스터 네트워크 구성 개요</block>
@@ -2010,7 +1996,6 @@
   <block id="e1279727a3e288e83709ff4d8d87a0bc" category="section-title">클러스터 네트워크 LIF(e0c, e0d)</block>
   <block id="c4e1348cd1cb2b94fa73f9f1024e7fdb" category="paragraph">ONTAP 포트 e0c 및 e0d는 클러스터 인터페이스의 홈 포트로 위임됩니다. 각 ONTAP Select 클러스터 노드 내에서는 ONTAP 설정 중에 링크 로컬 IP 주소(169.254.x.x)를 사용하여 두 개의 클러스터 인터페이스가 자동으로 생성됩니다.</block>
   <block id="4818cf4fe2c6f6879cfbca778f3edd50" category="admonition">이러한 인터페이스에는 정적 IP 주소를 할당할 수 없으며 추가 클러스터 인터페이스를 생성할 수 없습니다.</block>
-  <block id="f30678c36ec577758e47a558db374927" category="paragraph">클러스터 네트워크 트래픽은 지연 시간이 짧고 라우팅되지 않은 레이어 2 네트워크를 통해 전달되어야 합니다. 클러스터 처리량 및 지연 시간 요구사항 때문에 ONTAP Select 클러스터는 물리적으로 가까운 곳에 위치해야 합니다(예: 멀티팩, 단일 데이터 센터). WAN을 통해 또는 지리적으로 중요한 서로 다른 거리에 있는 HA 노드를 분리하여 4노드, 6노드 또는 8노드 확장 클러스터 구성을 구축하는 것은 지원되지 않습니다. 중재자가 있는 확장 2노드 구성이 지원됩니다.</block>
   <block id="838ad6f06b85f4e42b1bb8d5e586f9ca" category="paragraph">자세한 내용은 섹션을 참조하십시오 <block ref="3a9138e6cecc138f508a809e03f2cd7a" category="inline-link-macro-rx"></block>.</block>
   <block id="8e1717d402d473f63acfe5730635acde" category="admonition">클러스터 네트워크 트래픽의 최대 처리량을 확인하기 위해 이 네트워크 포트는 점보 프레임(7500 ~ 9000 MTU)을 사용하도록 구성됩니다. 올바른 클러스터 작동을 위해 ONTAP Select 클러스터 노드에 내부 네트워크 서비스를 제공하는 모든 업스트림 가상 및 물리적 스위치에서 점보 프레임이 활성화되어 있는지 확인합니다.</block>
   <block id="55e59e9fe203f6cf841ad620c7d26c2c" category="section-title">RAID SyncMirror 트래픽(e0e)</block>
@@ -2108,7 +2093,6 @@
   <block id="7237980e33084af93c84d7c8f28a5410" category="list-text">기본 VLAN이 다른 트래픽에 사용되지 않는 업스트림 스위치에서 제공하는 네이티브 VLAN 사용(VLAN ID가 없는 포트 그룹 할당, 즉 EST 모드)</block>
   <block id="b94aba06fef9275105a811a9294a71a4" category="paragraph">모든 경우 내부 네트워크 트래픽에 대한 VLAN 태깅이 ONTAP Select VM 외부에서 수행됩니다.</block>
   <block id="c915fa70e2bcea503f2392db36d95920" category="admonition">ESX 표준 및 분산형 vSwitch만 지원됩니다. 다른 가상 스위치 또는 ESX 호스트 간의 직접 연결은 지원되지 않습니다. 내부 네트워크를 완전히 열어야 합니다. NAT 또는 방화벽은 지원되지 않습니다.</block>
-  <block id="be0b780dddb345678e56e3a577602164" category="paragraph">ONTAP Select 클러스터 내에서 내부 트래픽과 외부 트래픽은 포트 그룹이라고 하는 가상 계층 2 네트워크 개체를 사용하여 분리됩니다. 이러한 포트 그룹의 적절한 vSwitch 할당은 특히 클러스터, HA 상호 연결 및 미러 복제 서비스를 제공하는 내부 네트워크의 경우 매우 중요합니다. 이러한 네트워크 포트에 대한 네트워크 대역폭이 부족하면 성능이 저하되고 클러스터 노드의 안정성에도 영향을 줄 수 있습니다. 따라서 4노드, 6노드 및 8노드 클러스터에는 내부 ONTAP Select 네트워크에서 10Gb 연결을 사용해야 하며, 1Gb NIC는 지원되지 않습니다. 그러나 수신되는 데이터의 흐름을 ONTAP Select 클러스터로 제한하더라도 안정적으로 운영할 수 있는 기능에는 영향을 미치지 않으므로 외부 네트워크에는 이러한 단점을 포함할 수 있습니다.</block>
   <block id="20d8c400c91f244c437959b1015faf77" category="paragraph">2노드 클러스터는 4노드 클러스터에 필요한 2개의 10Gb 포트 대신 내부 트래픽에 1Gb 포트 4개 또는 단일 10Gb 포트를 사용할 수 있습니다. 서버가 10Gb NIC 카드 4개에 맞지 않는 환경에서는 내부 네트워크에 10Gb NIC 카드 2개를 사용할 수 있고 외부 ONTAP 네트워크에 1Gb NIC 2개를 사용할 수 있습니다.</block>
   <block id="2ce84fe48597ac937066a2883f19084f" category="section-title">내부 네트워크 검증 및 문제 해결</block>
   <block id="a3de182062915588646145ace36c3e22" category="paragraph">다중 노드 클러스터의 내부 네트워크는 네트워크 연결 검사기 기능을 사용하여 검증할 수 있습니다. Network connectivity -check start 명령을 실행하는 Deploy CLI에서 이 기능을 호출할 수 있다.</block>
@@ -2395,7 +2379,6 @@
   <block id="77e5d3b8719596b41c77222a6711e69b" category="section-title">ONTAP Select 9.12.1</block>
   <block id="05dd50ebf48db80deadf4c9a847c2ce4" category="paragraph">ONTAP Select 9.12.1은 핵심 ONTAP 제품의 현재 릴리스에 새로 개발된 기능 중 대부분을 활용할 수 있습니다. ONTAP Select와 관련된 새로운 기능 또는 개선 사항은 포함되어 있지 않습니다.</block>
   <block id="7802fb8cc2dd2205ca511b49141235e0" category="section-title">ONTAP Select 9.11.1</block>
-  <block id="719b97afa778e32343849808db915b66" category="paragraph">ONTAP Select 9.11.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="aacb1ad8ec74092a13074108a4e20c02" category="list-text">VMware ESXi 지원이 향상되었습니다</block>
   <block id="aa46a81eb495f6cb92e19c98c6d7383a" category="list-text">ONTAP Select 9.11.1에는 VMware ESXi 7.0 U3C에 대한 지원이 포함되어 있습니다.</block>
   <block id="5986999240906508e3084d84dd2552d8" category="list-text">VMware NSX-T 지원</block>
@@ -2406,21 +2389,18 @@
   <block id="d2cc16162b6d3a24dc4a4501cf469cb0" category="inline-link">EOA 통지</block>
   <block id="5370055608d6cbcb7f0776601a776aed" category="paragraph">고객이 ESXi용 ONTAP Select를 포함하여 ONTAP Select for KVM에서 다른 ONTAP 플랫폼으로 전체 데이터 마이그레이션을 계획하고 실행하는 것이 좋습니다. 자세한 내용은 를 참조하십시오<block ref="e7f4803e65543a8054dff75dc9e1166a" category="inline-link-rx"></block></block>
   <block id="bdcccc9d04bbc9b8540a1fbdebef3b93" category="section-title">ONTAP Select 9.10.1</block>
-  <block id="d7e7eb95caecb5dfc702a5f7d3cb0071" category="paragraph">ONTAP Select 9.10.1 에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="4774053cb57a95a02a834cf823224b16" category="list-text">ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해 검증되었습니다. OVA 파일 및 ONTAP Select Deploy 관리 유틸리티를 사용하여 구축된 ONTAP Select 단일 노드 클러스터에서 NSX-T를 사용할 경우 기능 문제나 결함이 발생하지 않습니다. 그러나 ONTAP Select 다중 노드 클러스터에서 NSX-T를 사용하는 경우 다음과 같은 요구 사항과 제한 사항에 유의해야 합니다.</block>
   <block id="ad136d3e5fb5acdd03500618ef8e1a95" category="paragraph">클러스터를 구축하여 추가 오버헤드를 고려하기 전에 클러스터 MTU 크기를 수동으로 8800으로 조정해야 합니다. VMware 지침은 NSX-T를 사용할 때 200바이트 버퍼를 허용합니다</block>
   <block id="be4edc608044981ff1193ab01e2a80a8" category="list-text">네트워크 4x10Gb 구성</block>
   <block id="e3f9b3ee4bd0f7a9715c1acd839cb82b" category="paragraph">4개의 NIC로 구성된 VMware ESXi 호스트에 ONTAP Select를 구축하는 경우, Deploy 유틸리티를 사용하면 두 개의 서로 다른 포트 그룹 및 외부 트래픽을 서로 다른 두 포트 그룹으로 분할하는 Best Practice를 따르게 됩니다. 그러나 오버레이 네트워크를 사용하는 경우 이 구성이 작동하지 않으므로 권장 사항을 무시해야 합니다. 이 경우 대신 내부 포트 그룹과 외부 포트 그룹을 하나만 사용해야 합니다.</block>
   <block id="2380ad5ce6796e080b2fcb896e8b4d72" category="list-text">ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 더 이상 구축할 수 없습니다. 그러나 이전 릴리즈에서 9.10.1로 클러스터를 업그레이드하는 경우에도 Deploy 유틸리티를 사용하여 클러스터를 관리할 수 있습니다.</block>
   <block id="5321c0bf4db2c41a876a8455e4fd3037" category="section-title">ONTAP Select 9.9.1</block>
-  <block id="2dc4c31981db6194573548002505f01d" category="paragraph">ONTAP Select 9.9.1에는 몇 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.</block>
   <block id="c92580bf4d34ad8667b38f18db6e63e5" category="list-text">프로세서 제품군 지원</block>
   <block id="5f4c6121d4f63aaa5d6daebc2a2effee" category="list-text">VMware ESXi 지원이 업데이트되었습니다</block>
   <block id="94f6b8f3b96f83ead9cf8f1fff27c5ba" category="list-text">VMware ESXi에 대한 지원은 ONTAP Select 9.9.1로 향상되었습니다. 이제 다음 릴리스가 지원됩니다.</block>
   <block id="2a75a4bfd68197cf6684d89c95157677" category="list-text">ESXi 7.0 U2</block>
   <block id="aa3bb437d4c9050ad360819d6231b58e" category="list-text">ESXi 7.0 U1</block>
   <block id="c4537e24714e3ee09d3a03a894db75f4" category="section-title">ONTAP Select 9.8</block>
-  <block id="00ba796063aa024015a8e3a32ba25b3d" category="paragraph">ONTAP Select 9.8에는 몇 가지 새로운 기능과 변경된 기능이 포함되어 있습니다.</block>
   <block id="db16d4c1e494c28301de7f652ab007e8" category="list-text">고속 인터페이스</block>
   <block id="a15ac8498d522b4bdcfac7e79ef2e02f" category="list-text">고속 인터페이스 기능은 25G(25GbE) 및 40G(40GbE)에 대한 옵션을 제공하여 네트워크 연결을 향상시킵니다. 이러한 빠른 속도를 사용할 때 최상의 성능을 얻으려면 ONTAP Select 설명서에 설명된 대로 포트 매핑 구성과 관련된 모범 사례를 따라야 합니다.</block>
   <block id="420170376a4067e246c6c8ab8f967e8c" category="list-text">ONTAP Select 9.8에는 VMware ESXi 지원과 관련하여 두 가지 변경 사항이 있습니다.</block>
@@ -2533,15 +2513,11 @@
   <block id="5ca1e08722935cc52d1e20fcea7b5428" category="paragraph">클러스터를 생성하는 데 최대 45분이 걸릴 수 있습니다.</block>
   <block id="8e8ec233d7d8b1670dc404b61b73a0b1" category="list-text">여러 단계로 구성된 클러스터 생성 프로세스를 모니터링하여 클러스터가 성공적으로 생성되었는지 확인합니다.</block>
   <block id="7284a07b58626766b72ec946cfd845c9" category="admonition">외부 스토리지 지원 정보는 에 설명되어 있습니다 <block ref="e339e9377e7bf65a8e1fae3dee4b8697" category="inline-link-macro-rx"></block>.</block>
-  <block id="8542ad0a9f97f96320929367de2b74cc" category="list-text">VMware ESXi 7.0 GA(빌드 15843807) 이상</block>
   <block id="d1c880d2d3422bfbdd2ae687b1d78a6f" category="list-text">NVMe over TCP</block>
   <block id="64a49455734301778985c42afcafa1b5" category="list-text">VMware ESXi 8.0 GA(빌드 20513097)</block>
   <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8.0 U1(빌드 21495797)</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">상호 운용성 매트릭스 툴(IMT)</block>
-  <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">VMware ESXi에서 ONTAP Select를 실행하는 경우 지원되는 이전 버전에서 ESXi 7.0 이상으로 ESXi 소프트웨어를 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다.</block>
-  <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">VMware에서 제공하는 절차를 사용하여 ONTAP Select가 실행 중인 하이퍼바이저 호스트를 ESXi 7.0 이상으로 업그레이드합니다.</block>
   <block id="1e2be71e8b4858c0b3e832cba35731d1" category="section-title">ONTAP Select 9.13.1 을 참조하십시오</block>
-  <block id="cdbcb12eafeb6cc1f6a058e9c52a7f8d" category="paragraph">ONTAP Select 9.13.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="58c277c116ff23ffb9879debb95b4968" category="list-text">NVMe over TCP 지원</block>
   <block id="db5f5d6e1e5a3e29724ce78258556ff1" category="list-text">ONTAP Select 9.13.1로 업그레이드할 때 TCP를 통해 NVMe를 지원할 수 있는 새 라이센스가 있어야 합니다. 이 라이선스는 버전 9.13.1에서 처음으로 ONTAP Select를 배포할 때 자동으로 포함됩니다.</block>
   <block id="da691cb71c1f879ed7bf93a9a845601a" category="section-title">가상 머신 이미지를 다운로드합니다</block>
@@ -2978,7 +2954,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3cea28153feb7166a8a64b4330b70220" category="paragraph">이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.</block>
   <block id="de61e01df4f20cf55ac1364c504b72f8" category="section-title">ESXi에서 vNAS를 사용할 때 ONTAP Select 노드를 찾습니다</block>
   <block id="40b6105bb7b93b6c729f3eca12a92208" category="section-title">ONTAP Select 9.14.1</block>
-  <block id="fdd7ed667f9a504cda2e0866cdd90c23" category="paragraph">ONTAP Select 9.14.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="e1ae44499df6fcb90278dfe4d841d33c" category="list-text">KVM 하이퍼바이저 지원</block>
   <block id="b35bd0fa11c21a2e47930e24a2292b8f" category="list-text">Deploy VMware vCenter 플러그인은 더 이상 지원되지 않습니다</block>
   <block id="9eb8d318a230a18438382e0ea392ec2d" category="list-text">ONTAP Select 9.14.1부터는 Deploy VMware vCenter 플러그인이 더 이상 지원되지 않습니다.</block>
@@ -3050,14 +3025,12 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="0eac7bd25176d9e38db43b4181062abe" category="list-text">멀티 테넌트 키 관리자(MTKM)</block>
   <block id="3c5bdd4a077d520c4b4870fb15f37d1b" category="summary">현재 릴리즈에는 ONTAP Select에 대한 몇 가지 새로운 기능 또는 개선 사항이 포함되어 있습니다.</block>
   <block id="f80570d561d36d2a6f83d903ac92764d" category="section-title">ONTAP Select 9.15.1</block>
-  <block id="dd543e83687ed3c39447157a0f0e1822" category="paragraph">ONTAP Select 9.15.1에는 몇 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="ff49a1a2875b63e18d60b0284fd713bf" category="list-text">클러스터 확장 및 축소 지원</block>
   <block id="e84b565f766d2b63406ea62dbdd12c66" category="list-text">ONTAP Select 9.15.1부터 클러스터 확장 및 수축이 지원됩니다.</block>
   <block id="d535a23dc4caf42819a2764f917df8d4" category="list-text">6노드에서 8노드 클러스터로 클러스터 확장</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">자세한 정보</block>
   <block id="5638b273dc7505c1415d93d081293984" category="list-text">클러스터 축소 8노드-6노드 클러스터</block>
   <block id="e1ecf9e1ce05084dbe89253dda1abf54" category="admonition">클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.</block>
-  <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">클러스터를 확장합니다</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">새 노드에 대한 라이센스 세부 정보가 있는지 확인합니다.</block>
   <block id="70be200347cc17e3939c72792fe71b15" category="list-text">페이지 상단의 * Cluster * 탭을 선택하고 목록에서 원하는 클러스터를 선택합니다.</block>
@@ -3083,7 +3056,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">클러스터에 계약되는 데 최대 30분이 소요될 수 있습니다.</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">다중 단계 클러스터 수축 프로세스를 모니터링하여 클러스터가 성공적으로 수축되었는지 확인합니다.</block>
   <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Select는 최대 4개의 VMNIC를 지원합니다.</block>
-  <block id="28986937787872c11df39e20ca126e8d" category="admonition">ESXi 6.5 GA 및 ESXi 6.7 GA가 공급 중지 상태에 도달했습니다. 이러한 버전이 포함된 ONTAP Select 클러스터가 있는 경우 에 따라 지원되는 버전으로 업그레이드해야 합니다<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>.</block>
   <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAP 마스터 라이센스 키</block>
   <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
   <block id="f588ddb32cd79889160082356416d2f3" category="list-text">KVM 하이퍼바이저 지원이 업데이트되었습니다</block>
@@ -3094,7 +3066,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="d62b4235cf2a29152b9bcb3eb1df59d8" category="paragraph">클러스터 확장 기능을 사용하여 6노드 클러스터에서 8노드 클러스터로 클러스터 크기를 늘릴 수 있습니다. 1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 클러스터를 확장하는 기능은 현재 지원되지 않습니다. <block ref="fdb7564d24c88f6d96b0c17d886f76d8" category="inline-link-macro-rx"></block>..</block>
   <block id="185acadc91fc3b4d6d7a0f9ab8464c51" category="paragraph">클러스터 축소 기능을 사용하여 8노드 클러스터에서 6노드 클러스터로 클러스터 크기를 줄일 수 있습니다. 6노드 또는 8노드 클러스터에서 1노드, 2노드 또는 4노드 클러스터로의 클러스터 수축은 현재 지원되지 않습니다. <block ref="8a05acf96f393c0e4f159f197b97e2ff" category="inline-link-macro-rx"></block>..</block>
   <block id="065e8e686a5cc9c043bea6a2b47a6dbc" category="section-title">하드웨어 및 스토리지 고려 사항</block>
-  <block id="226d8636aca6bd1bdcac58203b8ddcd2" category="list-text">6노드 또는 8노드 클러스터를 1노드, 2노드 또는 4노드 클러스터로 축소</block>
   <block id="054e946fb0b83b6a666a6ad91e898f0a" category="doc">ONTAP Select에 대한 작업 개체를 사용한 비동기 처리</block>
   <block id="1203a64f6c4121eab9dbc97f2336a51b" category="doc">브라우저를 사용하여 ONTAP Select 배포 API에 액세스하기 전에</block>
   <block id="d507d585a3bf4790d7db816f3a8055fe" category="doc">ONTAP Select에 액세스하기 전에 Python을 사용하여 API를 배포하십시오</block>
@@ -3169,7 +3140,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="bf2c241347c4076c2039076b440d75de" category="doc">ONTAP Select의 새로운 기능</block>
   <block id="8a4d972efa4a178e4f23653b4b6a1b69" category="paragraph">지원되는 ONTAP Select 버전의 새로운 기능과 향상된 기능에 대해 알아봅니다.</block>
   <block id="fa9e744025392ca74a15477f1e137192" category="section-title">ONTAP Select 9.16.1 을 참조하십시오</block>
-  <block id="26c0a25ef0a35983894d134dbe992481" category="paragraph">ONTAP Select 9.16.1에는 몇 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.</block>
   <block id="6c1d79ac25f0c97bc720f88ff0f156e0" category="list-text">NetApp 라이센스 파일 지원이 업데이트되었습니다</block>
   <block id="a1a2f3308f6033087cf20e84356aa4ac" category="list-text">ONTAP Select 9.16.1부터 NetApp 라이센스 파일(NLF) 지원이 업데이트됩니다. 새로운 NLF 포맷에는 ARP, ONTAP S3 및 S3 SnapMirror 기능에 대한 라이센스가 포함되어 있습니다. <block ref="b5ed3fe3b9ec5f0e955203c12216c0fe" category="inline-link-macro-rx"></block>..</block>
   <block id="9fc3a2fe374c89216150309f04d52677" category="paragraph">새로운 ONTAP Select 9.16.1 배포의 경우 새로운 NLF 형식이 자동으로 적용됩니다. 기존 ONTAP Select 배포를 9.16.1로 업그레이드하면 새 NLF 형식이 적용되지 않습니다. ARP, ONTAP S3 및 S3 SnapMirror 기능 라이센스를 얻으려면 업그레이드 후 업데이트된 NLF를 다운로드해야 합니다. ONTAP Select 9.15.1 이전 버전으로 되돌리면 업그레이드 전에 사용했던 기능 라이센스를 다시 설치해야 합니다.</block>
@@ -3215,7 +3185,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3a13e6fcb6840db51e3e181c41dff37b" category="list-text">ESXi 8.0 U2</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
-  <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7.0 U3</block>
   <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.</block>
   <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">AMD(Advanced Micro Devices) 프로세서는 ONTAP Select에서 지원되지 않습니다.</block>
   <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가 인스턴스를 신속하게 구축할 수 있습니다.</block>
@@ -3223,7 +3192,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">사용자 데이터에 대해 구입한 라이센스와 동일한 양의 스토리지를 할당할 수 있습니다.</block>
   <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">평가 라이센스에서 구입한 라이센스로 노드를 업그레이드할 수 없습니다.</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">vCenter 계정만 사용하여 OVF 템플릿을 구축할 수 있습니다. ESXi 호스트에 직접 설치하는 것은 현재 지원되지 않습니다.</block>
-  <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">vSphere 독립형 클라이언트 또는 vSphere 웹 클라이언트(ESXi 6.5 이상에서는 유일한 옵션)를 사용하여 OVF 템플릿(ova 파일에 포함됨)을 설치해야 합니다. ONTAP Select 배포 관리 유틸리티를 사용하지 않습니다.</block>
   <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">ONTAP Select 클러스터 호스트를 준비합니다</block>
   <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">다음 요구 사항을 사용하여 ONTAP Select 클러스터가 구축되는 ESXi 호스트를 준비합니다. 플랫폼 설명은 VMFS-5 또는 VMFS-6 파일 시스템을 사용하여 포맷된 로컬 DAS(Direct-Attached Storage)를 사용하는 표준 또는 소형 인스턴스 유형 구성을 기반으로 합니다.</block>
   <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXi 호스트를 준비하기 위한 요구 사항</block>
@@ -3258,7 +3226,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="fe8dec8b217b332b88e66ecdf5472b01" category="list-text">필수 조건 * 을 선택합니다.</block>
   <block id="3929bbc1e55fa3a638006eb8e6566b4d" category="list-text">아래로 스크롤하여 요구 사항을 검토하고 * OK * 를 선택합니다.</block>
   <block id="1339b9f22cb64ff9975ba4df2d3c543b" category="admonition">페이지 맨 위에 있는 탭(클러스터, 하이퍼바이저 호스트, 관리)을 선택하여 동일한 단계를 독립적으로 수행할 수 있습니다.</block>
-  <block id="f79319ec1d7b82161a58de3096cafdd0" category="paragraph">다음 단계는 단일 노드 클러스터를 생성할지 아니면 다중 노드 클러스터를 생성할지에 따라 다릅니다. 다중 노드 클러스터에는 2, 4, 6 또는 8개의 노드가 있을 수 있습니다.</block>
   <block id="555e1ae22bd894e4a9fe23fc5bb1ca5e" category="list-text">Welcome to ONTAP Select* 팝업 창이 표시되면 구성 필수 구성 요소가 충족되었는지 확인하고 * OK * 를 선택합니다.</block>
   <block id="1ade53760ce0b2b9ced3db48b79b4e51" category="list-text">Getting Started * cluster launch 페이지가 표시되지 않으면 페이지 맨 위에서 을 선택하고 <block ref="597586a3d1dcebe6ad038a4dde446a9e" category="inline-image-macro-rx" type="image"></block>* Getting Started * 를 선택합니다.</block>
   <block id="820d1873bef6998cbee232163b828a57" category="list-text">시작하기 * 페이지에서 * 업로드 * 를 선택한 다음 로컬 워크스테이션에서 라이센스를 선택하고 * 열기 * 를 선택하여 라이센스를 업로드합니다.</block>
@@ -3377,7 +3344,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="6bf08a2d2d231573eaa714b5221158e6" category="cell">호스트 프로토콜</block>
   <block id="d9271d1702d6357cd68d0248f2b98bfb" category="cell">NFS, SMB/CIFS, iSCSI 및 NVMe over TCP</block>
   <block id="e2c5a3645710b0ed6fec1053fdfe0ead" category="cell">구축 옵션</block>
-  <block id="eb09c1a5eb262d090f2cc7e8158cae4e" category="cell">단일 노드 2노드 클러스터(HA 쌍) 4노드, 6노드 또는 8노드 클러스터</block>
   <block id="8557a15ebd845a53c232f882fe21205a" category="cell">지원되는 용량(노드당)</block>
   <block id="e8551ae26bc9361887df2597e2a2ea57" category="cell">최대 400TB의 원시 데이터(ESXi 및 KVM)</block>
   <block id="3c02a379965ab0dfcd77b1c484450433" category="open-title">하드웨어</block>
@@ -3394,7 +3360,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="0a63727fe995fb5d301d20fb9140de4d" category="cell">10코어/72GB RAM</block>
   <block id="e73d640a676c83c4510d0212e506bb38" category="cell">18코어/136GB RAM</block>
   <block id="522c4ec4d9d59e1a992d989c8d770589" category="cell">네트워크(노드당)</block>
-  <block id="d5fda742cbaf307ce4ca202b12335858" category="cell">단일 노드 클러스터용 1GbE 포트 최소 2개 2노드 클러스터용 1GbE 포트 4개(HA 쌍) 4노드, 6노드 또는 8노드 클러스터용 10GbE 포트 최소 2개</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="open-title">스토리지 유형입니다</block>
   <block id="5939197c86f855d26c9639db3b9a29d6" category="paragraph">다음 표에는 지정된 스토리지에 필요한 최소 라이센스 유형이 나와 있습니다. </block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">소형 및 중형</block>
@@ -3449,7 +3414,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="07dd1826d2d39d21b05b11f5f59d47dd" category="list-text">License Manager는 용량 풀 라이센스를 지원하는 소프트웨어 구성 요소입니다. 현재 배포 관리 유틸리티의 일부입니다. LM은 관리하는 공유 풀에서 ONTAP Select 노드로 스토리지를 임대해 줍니다. License Lock ID_는 각 LM 인스턴스를 고유하게 식별하는 숫자 문자열이므로 각 배포 인스턴스입니다. 라이센스 파일을 생성하려면 Capacity Pool 라이센스 일련 번호와 LLID를 모두 사용해야 합니다.</block>
   <block id="43b16943d6d5ff73da96f41d29e4303d" category="paragraph"><block ref="43b16943d6d5ff73da96f41d29e4303d" category="inline-link-macro-rx"></block></block>
   <block id="24d0d0c7fc9a3866a568dea751e3cd63" category="doc">ONTAP Select의 데이터 보호 및 효율성에 대해 알아보십시오</block>
-  <block id="05ed3d70c9259c59c7d687abfdcbf9be" category="paragraph">ONTAP Select는 ONTAP 스토리지 소프트웨어를 기반으로 구축되어, 가용성이 높은 무공유 스케일아웃 아키텍처를 통해 엔터프라이즈 스토리지 서비스를 효율적으로 제공합니다. 노드당 최대 400TB의 물리적 용량을 갖춘 1, 2, 4, 6 또는 8노드 솔루션을 배포할 수 있습니다. 기본 중복제거 및 압축을 활용하여 실제 용량을 늘림으로써 스토리지 비용을 절감할 수 있습니다. 스케일아웃 아키텍처는 로드 밸런싱 또는 서비스 하드웨어에 대한 고가용성 및 무중단 데이터 이동성을 지원합니다.</block>
   <block id="b489b293d6cbe8b86835d3cac8c315fb" category="section-title">스냅샷 데이터 보호</block>
   <block id="467385c0c4913cc96395e5493d47b3bc" category="paragraph">ONTAP Select에는 스냅샷 및 SnapMirror 소프트웨어를 포함한 데이터 보호 기능이 포함되어 있습니다. 온프레미스, 원격 사이트 또는 클라우드 내 다른 ONTAP 스토리지로 데이터를 빠르게 복제할 수 있습니다. 데이터를 빠르게 복구해야 하는 경우, SnapRestore 소프트웨어에서 로컬 스냅샷을 사용하여 용량이나 파일 개수에 상관없이 몇 초 만에 전체 파일 시스템이나 데이터 볼륨을 복구할 수 있습니다.</block>
   <block id="787fb8fbafed37b77c3881f9e0c851a0" category="section-title">MetroCluster 소프트웨어 정의 스토리지</block>
@@ -3591,7 +3555,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="deb20e04b6a7cd797c67d023a7919cc9" category="inline-link-macro">웹 UI</block>
   <block id="91af5705f16502125e8b2187e64202c0" category="inline-link-macro">CLI를 참조하십시오</block>
   <block id="9b7a3cef1d3f98a8d89d5d50af86ae90" category="paragraph">네트워크 연결 검사기를 실행하세요. <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block> 또는 <block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> 내부 네트워크의 클러스터 노드 간 연결을 확인합니다.</block>
-  <block id="399ac94f70d77c6189cd7c4808326bdd" category="list-text">1, 2 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로 확장</block>
   <block id="f7dcf9444b81db6d7f05c66ad816c0fe" category="paragraph">클러스터 확장이나 축소에서 지원하지 않는 크기로 클러스터의 노드 수를 변경하려면 다음 작업을 수행해야 합니다.</block>
   <block id="f878a51040555cefe376b9b5a963ff25" category="list-text">다음을 사용하여 새 다중 노드 클러스터를 배포합니다. <block ref="e244d19d71425b6ce1016edcf4f160e2" category="inline-link-macro-rx"></block> 또는 <block ref="e7b95b44ed2cf30f5122b04d3c4d28be" category="inline-link-macro-rx"></block> ONTAP Select Deploy 관리 유틸리티와 함께 제공됩니다.</block>
   <block id="a1f41e52e9ddbd9f87ecd032c237b1c0" category="inline-link-macro">SnapMirror 복제</block>
@@ -3636,7 +3599,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8317b4a3fa4d9966b617b5491f76a3b8" category="open-title">에스엑스</block>
   <block id="9c1fae3eadcb237fdb7615bb300fbc53" category="paragraph">장애가 발생한 플렉스는 데이터 미러링을 정상적으로 재개하기 위해 삭제하고 다시 생성해야 합니다. 다중 디스크 장애로 인해 데이터 집계의 성능이 저하되면 루트 집계의 성능도 저하됩니다. ONTAP Select 루트-데이터-데이터(RDD) 파티셔닝 스키마를 사용하여 각 물리적 드라이브를 루트 파티션 하나와 두 개의 데이터 파티션으로 분할합니다. 따라서 하나 이상의 디스크가 손실되면 로컬 루트 또는 원격 루트 집계의 복사본, 로컬 데이터 집계 및 원격 데이터 집계의 복사본을 포함한 여러 집계에 영향을 미칠 수 있습니다.</block>
   <block id="3076e2016b53038d778618dee10b478d" category="paragraph">다음 예제 출력에서는 실패한 플렉스가 삭제되고 다시 생성됩니다.</block>
-  <block id="859b3e34f415b642df5044600cd81ad1" category="summary">NetApp ONTAP Select VMware ESXi 또는 커널 기반 가상 머신(KVM) 하이퍼바이저를 실행하는 다양한 상용 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.17.1 관련 설명서가 포함되어 있습니다.</block>
   <block id="0f1f9d8aa7712455b66d5e8b4b971a5b" category="list-text">NVMe 디스크에 대한 PCI 패스스루를 구성합니다.</block>
   <block id="b6edb9d93c4b2803ccdda9357c898c2a" category="paragraph">구성에서 NVMe 디스크를 사용하는 경우, KVM 호스트가 ONTAP Select 클러스터의 로컬로 연결된 NVMe 디스크에 직접 액세스할 수 있도록 PCI 패스스루(DirectPath IO)를 구성해야 합니다. 다음 작업을 수행하려면 직접 액세스 권한이 필요합니다.</block>
   <block id="f5b991faffa2b9298c79245107008a5c" category="inline-link-macro">NVMe 드라이브를 사용하도록 KVM 호스트 구성</block>
@@ -3645,11 +3607,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="9ad4168b96591d3ce9f13beb07f453ad" category="list-text"><block ref="9ad4168b96591d3ce9f13beb07f453ad" category="inline-link-macro-rx"></block></block>
   <block id="5f6ac3389caa4915b5df5ea4e23cdf3b" category="inline-link-macro">Red Hat 문서</block>
   <block id="1f04c0d85dac41d18c5e719982d2453c" category="paragraph">를 참조하십시오 <block ref="9253ef5506cce823166f2bdf01913569" category="inline-link-macro-rx"></block> KVM 하이퍼바이저에 대한 PCI 패스스루(DirectPath IO)를 구성하는 방법에 대한 지침입니다.</block>
-  <block id="43d46885286ff6d9d1bb3e3666375d7c" category="inline-link">ONTAP Select 9.17.1에 대한 공지</block>
-  <block id="381d9d218a33c87fe7a65bdd140b7718" category="paragraph"><block ref="381d9d218a33c87fe7a65bdd140b7718" category="inline-link-rx"></block></block>
   <block id="3a7c61c685981e316491699fa430a141" category="list-text">SnapMirror 클라우드</block>
   <block id="c5f33228fc937ef0d8daa944cc220984" category="section-title">ONTAP Select 9.17.1</block>
-  <block id="621bccb3ca618202d65c825d13f5c7cc" category="paragraph">ONTAP Select 9.17.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.</block>
   <block id="a1ccdb52aaae23908c894a50ab1c7942" category="list-text">KVM 호스트의 로컬 연결 NVMe 디스크에 대한 소프트웨어 RAID 지원</block>
   <block id="7da7c34592a8b282c418910ab837fc00" category="list-text">ONTAP Select 9.17.1은 커널 기반 가상 머신(KVM) 하이퍼바이저 호스트에서 로컬 ONTAP Select 연결된 NVMe 디스크에 대한 소프트웨어 RAID 지원을 도입합니다.</block>
   <block id="1dc28449401a7f910c3a8509d1d50bae" category="inline-link-macro">PCI 패스스루(DirectPath IO) 구성</block>
@@ -3671,13 +3630,11 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="9fe4db073ef9cb1070ea002413806d7b" category="paragraph">ONTAP Select 9.16.1 및 이전 버전의 경우 NVD는 ONTAP Select 배포에서 NVMe 장치에 대한 지원을 계속 제공합니다.</block>
   <block id="4d4e935615049b9792b8ee30fa5c71d3" category="list-text">ONTAP Select 9.17.1부터 KVM 하이퍼바이저가 Red Hat Enterprise Linux(RHEL) 9.6 및 Rocky Linux 9.6에서 지원됩니다.</block>
   <block id="ac171b57f5c680bf4d0f02d3a2a4fc1f" category="list-text">ONTAP Select 9.16.1부터 KVM 하이퍼바이저가 RHEL 9.5 및 Rocky Linux 9.5에서 지원됩니다.</block>
-  <block id="0ea945de4d54019107b304aa9eca8fa3" category="admonition">ESX 6.5 U2 이상에 설치할 경우 ONTAP Select 시스템 디스크가 SSD에 있든 NVMe 디스크에 있든 관계없이 vNVMEe 드라이버를 사용합니다. 이렇게 하면 VM 하드웨어 수준이 ESX 6.5 이상과 호환되는 13으로 설정됩니다.</block>
   <block id="b819d70810100dd612c72123ee67224d" category="paragraph">KVM 및 ESXi 하이퍼바이저에 ONTAP Select 배포할 수 있습니다.</block>
   <block id="5c4913dc2f0c23f4a31e20e72374ec36" category="paragraph">ONTAP Select 다음 KVM 하이퍼바이저 버전을 지원합니다.</block>
   <block id="106afc8ef14315f6a60e49c2f0227fcf" category="list-text">Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6의 KVM</block>
   <block id="b2270c4043a2f0c3e82238730523c1bd" category="list-text">Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6의 KVM</block>
   <block id="88f7643f9d6082d2e385207946c3b5a2" category="paragraph">ONTAP Select 다음 ESXi 하이퍼바이저 버전을 지원합니다.</block>
-  <block id="8a64553b73285bd3d9851c3641c74431" category="list-text">VMware ESXi 7.0 GA(빌드 15843807 이상)에는 7.0 U3C, U2 및 U1이 포함됩니다.</block>
   <block id="2a861cd8eb5ba0785391c4057414e36a" category="paragraph">지원되는 마이크로프로세서에는 서버용 Intel Xeon 프로세서가 포함됩니다. <block ref="b4ae18ee7ddc8509f21de2805d7b78c6" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="576be828257fef81586078e09f023f12" category="cell">노드 크기</block>
   <block id="3498e0560fa8448ff0a0f15cd1b168f7" category="cell">CPU 코어</block>
@@ -3691,13 +3648,9 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="640e223edcd3fe1348f1d6ff235a0f90" category="cell">프리미엄 또는 프리미엄 XL</block>
   <block id="84bfed00d5c0f440cfe0522a957d8c09" category="cell">18개 이상의 물리적 코어, 그중 16개는 ONTAP Select 용으로 예약됨</block>
   <block id="2ab3f2081ffa300f8e39f366212f2346" category="cell">136GB 이상, ONTAP Select 용으로 128GB 예약됨</block>
-  <block id="71e456c9cf1560175095f47063b9f150" category="inline-link-macro">ONTAP Select 9.17.1 릴리스 노트</block>
-  <block id="7a0780d1a75284704296fa1d6669fe55" category="paragraph">당신은 접근할 수 있습니다 <block ref="578177b2068e55f730d2ab8da37ff1a6" category="inline-link-macro-rx"></block> 현재 버전에 대한 세부 정보를 보려면.</block>
   <block id="a8fb2d9d2ce588a77ffb778ffb1f4887" category="paragraph">NVMe 드라이브를 소프트웨어 RAID와 함께 사용하려면 ESXi 또는 KVM 호스트가 드라이브를 인식하도록 구성해야 합니다.</block>
-  <block id="c06f7735bf993ec75621b52838eec06d" category="list-text">KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1</block>
   <block id="69376d0181427bc8147aa66d54429340" category="list-text">ESXi 또는 KVM 호스트가 지원되는 하이퍼바이저 버전을 실행 중입니다.</block>
   <block id="f151466e45805b85c179d53c716d1730" category="paragraph">ESXi는 다음 하이퍼바이저 버전에서 지원됩니다.</block>
-  <block id="938bda7b4f477005ecd5a1be655a2d94" category="list-text">VMware ESXi 7.0 GA(빌드 15843807 이상), 7.0 U1, U2 및 U3C 포함</block>
   <block id="b9f88b3e1ffa6ae7d67f237344be95ad" category="paragraph">KVM은 다음 하이퍼바이저 버전에서 지원됩니다.</block>
   <block id="94df876ea98d3d9e82f501c53ff28527" category="list-text">Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="9fed076770017e73835f398d2e5b8714" category="list-text">Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6</block>
@@ -3721,7 +3674,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="305009997eb17ffe0901beb32fdc2040" category="paragraph">클러스터 확장을 준비하기 위해 새로운 ESXi 및 KVM 호스트가 인벤토리에 추가되고 새 노드의 세부 정보가 할당됩니다. 클러스터 확장 프로세스를 시작하기 전에 네트워크 사전 검사를 통해 선택된 내부 네트워크를 확인합니다.</block>
   <block id="1c53d6d4916415921dddecf6128580f3" category="list-text">네 번째 HA 쌍에 대해 다음 고가용성(HA) 쌍 구성 세부 정보를 선택하세요.</block>
   <block id="1baec4831214642ebba2ccfdd8a785df" category="list-text">ONTAP 자격 증명을 제공하고 *클러스터 확장*을 선택합니다.</block>
-  <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">ONTAP Select 9.17.1 문서</block>
   <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.</block>
   <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">업그레이드하는 동안 ONTAP Select Deploy를 사용하여 다른 작업을 수행하지 않도록 하세요.  ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보와 제한 사항은 최신 릴리스 노트를 참조하세요.</block>
   <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">1단계: 패키지 다운로드</block>
@@ -3740,7 +3692,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror 액티브 싱크</block>
   <block id="2f6bbdcc3a16c2d18a29e52e65bcab80" category="admonition">ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.</block>
   <block id="eb35a2f875dfa96447c622fdb66d279e" category="list-text">ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원</block>
-  <block id="2654d7a70d79a555a3d2a067d08ca074" category="list-text">ONTAP Select 9.17.1부터 ESXi 호스트의 6노드 및 12노드 클러스터 간 클러스터 확장 및 축소가 지원됩니다.</block>
   <block id="983f8945aaf0213b99984eb7d1654484" category="paragraph">기존 ESXi 클러스터의 클러스터 크기를 다음과 같이 늘릴 수 있습니다.</block>
   <block id="1ba5d5a69c22e4227b754eb7f598a6fc" category="list-text">6개 노드에서 8개, 10개 또는 12개 노드로</block>
   <block id="32f41e079924563332d58835bc015a2a" category="list-text">8개 노드에서 10개 또는 12개 노드까지</block>
@@ -3768,15 +3719,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="cbec5c675188a8b88f95c1615c33fb39" category="list-text">라이브러리 업데이트</block>
   <block id="cbbbf9758b7ac41123821f7ea427538f" category="list-text">라이브러리 항목 업데이트</block>
   <block id="845b12256749d66531d9afd69bc3a33c" category="list-text">지역 도서관 업데이트</block>
-  <block id="b6901598f11464666113bfe479efe49f" category="paragraph">ESXi 및 KVM 하이퍼바이저 호스트에 대한 기존 ONTAP Select 클러스터의 클러스터 크기를 늘릴 수 있습니다.  KVM 호스트의 경우 클러스터 크기를 6개에서 8개 노드로 늘릴 수 있고, 8개에서 6개 노드로 줄일 수 있습니다.  ESXi 호스트의 경우 6개에서 12개 노드 사이로 클러스터 크기를 늘리거나 줄일 수 있습니다.</block>
   <block id="936ee35c221853e402fecb3657e726ba" category="paragraph">다음 클러스터 확장 및 축소는 ESXi 및 KVM 호스트에서 지원되지 않습니다.</block>
   <block id="ca069be0eeb72c96905b0cdbf504214d" category="paragraph">클러스터 확장 및 축소 기능은 다음 KVM 및 ESXi 하이퍼바이저 호스트에서 지원됩니다.</block>
-  <block id="e408638ff8e3e34af8feb723461e1722" category="paragraph">클러스터 확장 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 늘립니다.</block>
-  <block id="3678d282a88e095e0e76381ffa83ff7c" category="paragraph">기존 ESXi 클러스터의 크기를 다음과 같이 늘릴 수 있습니다.</block>
-  <block id="ba14db9083442c41643b3455693e3ee2" category="paragraph">기존 KVM 클러스터의 크기를 6개에서 8개 노드로 늘릴 수 있습니다.</block>
-  <block id="dbdf8658126f3cab82aa007ed31794d3" category="paragraph">클러스터 축소 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 줄입니다.</block>
-  <block id="419d991bb53188641539fa8dfe55b258" category="paragraph">다음과 같은 단위로 기존 ESXi 클러스터의 크기를 줄일 수 있습니다.</block>
-  <block id="50261774776b49c62695c35def3230b0" category="paragraph">기존 클러스터의 크기를 8개 노드에서 6개 노드로 줄일 수 있습니다.</block>
   <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ 하이퍼바이저에 대해 두 개의 코어와 8GB의 RAM을 가정합니다.</block>
   <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">해당되는</block>
   <block id="6799f681592f9a0a7cf264c2b7bcd3d7" category="list-text"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block></block>
@@ -3830,7 +3774,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="c762418e7ca866adad88c4350fc20ef0" category="list-text">ONTAP Select 9.17.1이 처음 설치되었습니다.</block>
   <block id="0bb5222a5975edbdfb5210abc7bbc0d5" category="admonition">ONTAP Select Deploy에 포함된 REST API에는 버전 번호가 지정되어 있습니다. API 버전 번호는 Deploy 릴리스 번호와 무관합니다. ONTAP Select 9.17.1 Deploy 관리 유틸리티에는 REST API 버전 3이 포함되어 있습니다.</block>
   <block id="7b5019dce3bb835acb62c31388f47aef" category="cell">VMware vSphere 9.0 VMware vSphere 8.0GA 및 업데이트 1~3 VMware vSphere 7.0GA 및 업데이트 1~3C</block>
-  <block id="98a200153c1be0c16d526cf021fc6c2c" category="cell">4, 6 또는 8노드 클러스터</block>
   <block id="709b51c435c268c165dc26b6de6a856e" category="list-text">Deploy 관리 유틸리티에는 ONTAP Select 의 단일 버전만 포함되어 있습니다. 포함된 버전은 출시 시점을 기준으로 사용 가능한 최신 버전입니다. ONTAP Select 이미지 설치 기능을 사용하면 Deploy 유틸리티 인스턴스에 이전 버전의 ONTAP Select 추가하여 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다. 보다<block ref="9252191d0d6c29910ebabc98ee426eb0" category="inline-link-macro-rx"></block> .</block>
   <block id="d4859de543e918748cbd58f23dedb243" category="list-text">ONTAP Select 9.17.1에는 VMware ESXi 9.0에 대한 지원이 포함되어 있습니다.</block>
   <block id="bc70eaa4fe619d482b08c680b31e9639" category="paragraph">클러스터를 생성한 후에도 배포 구성 데이터를 정기적으로 백업하는 것이 가장 좋습니다. 특히 2노드 클러스터의 경우, 중재자 구성 데이터가 백업에 포함되므로 더욱 중요합니다.</block>
@@ -3847,7 +3790,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="653a421852b6e9fc7e8da536351d6d57" category="paragraph"><block ref="653a421852b6e9fc7e8da536351d6d57" category="inline-link-macro-rx"></block></block>
   <block id="52628d9c0b40a3d081fa61332a7dbc30" category="section-title">1단계: 호스트 구성</block>
   <block id="4b909310ad00915be4366c1fdc817ef6" category="paragraph">ESXi 또는 KVM 호스트가 드라이브를 인식하도록 구성합니다.</block>
-  <block id="90655b393a7a708ffeaf135abe38468e" category="list-text">ESX 호스트의 경우 지원되는 배포 관리 유틸리티가 있는 ONTAP Select</block>
   <block id="6fb98dfe0687afd13c6606a1e18796b4" category="section-title">2단계: ONTAP Select Deploy 유틸리티 설치</block>
   <block id="d85c74601b5bd33630ff2d0af7a47d20" category="paragraph">클러스터가 성공적으로 배포되면 ONTAP System Manager를 통해 모범 사례에 따라 스토리지를 프로비저닝할 수 있습니다. ONTAP NVMe 스토리지를 최대한 활용할 수 있는 플래시 최적화된 스토리지 효율성 기능을 자동으로 활성화합니다.</block>
   <block id="2cec6a18d96697f2973f92d17add7552" category="doc">CLI를 사용하여 ONTAP Select 클러스터 관리</block>
@@ -3864,17 +3806,14 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="323b40136cc3cd425a7ce6433872e39e" category="section-title">1단계: 배포 구성 데이터 백업</block>
   <block id="2dd89f547668d42e92b18453b0fc2db7" category="section-title">2단계: 배포 가상 머신의 새 인스턴스 설치</block>
   <block id="20db79ddbcecf961179a8654cf93bdfa" category="section-title">3단계: 배포 구성 데이터를 새 가상 머신으로 복원합니다.</block>
-  <block id="35767fb08a64b94abf91d7c25ea1b1d5" category="paragraph">ONTAP ONTAP Select ONTAP Select Deploy 9.17.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
   <block id="4c2a7675fb89ee6113fb93327fabd5f6" category="list-text">ESXi 9.0</block>
   <block id="90facdbe61c2fda7ac079c021778069e" category="section-title">3단계: 배포 완료</block>
-  <block id="7a0165449b5773328368f60f5c262ddd" category="doc">ONTAP Select 위해 VMware ESXi 7.0 이상으로 업그레이드하세요.</block>
   <block id="dd1789a087eda271d0e3deee49558019" category="section-title">VMware ESXi 업그레이드 준비</block>
   <block id="82c36f45db475277ee2310dec3c1e939" category="paragraph">ONTAP Select 클러스터를 호스팅하는 하이퍼바이저에서 ESXi 소프트웨어를 업그레이드하기 전에 사용자 환경에 적합한 업그레이드 절차를 준비하고 선택하세요.</block>
   <block id="0926feade48ead905fb59c610b0ac7fd" category="list-text">*VMware ESXi 업그레이드 방법을 알아보세요*</block>
   <block id="1ca1aaf5b842ffb10893e476d56ee6d7" category="list-text">*업그레이드 절차를 선택하세요*</block>
   <block id="8378d8bf20941add9c4df91829cd0827" category="list-text">ONTAP Select Deploy 사용</block>
   <block id="4057b7ca0c19f851f63420c9ec32a889" category="paragraph">Deploy 유틸리티를 사용하거나 사용하지 않고도 업그레이드가 가능합니다.</block>
-  <block id="017c62abcb9c0a7a31f008ff45eca54a" category="paragraph">Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 더 일반적이고 복원력이 뛰어난 옵션입니다. 하지만 Deploy를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어, 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 7.0으로의 업그레이드가 지원되지 않습니다.</block>
   <block id="2e0e9d07ffda2d85422b14435c592a64" category="list-text">*Deploy 관리 유틸리티 업그레이드*</block>
   <block id="c3a59d3a6472b3e407374a73000fa2d0" category="inline-link-macro">ONTAP Select 릴리스 노트</block>
   <block id="f5d84950dbef357c088050b223201054" category="paragraph">Deploy 유틸리티를 사용하여 업그레이드 절차를 수행하기 전에 Deploy 인스턴스를 업그레이드해야 할 수도 있습니다. 일반적으로 최신 버전의 Deploy로 업그레이드해야 합니다. Deploy 유틸리티는 사용 중인 ONTAP Select 버전을 지원해야 합니다.  를 참조하세요<block ref="d849cafcad7044085f0bad0e874b53aa" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
@@ -3932,7 +3871,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="69c2330b72fdbb0f24306b5344fc83ca" category="list-text">*시험해 보세요!*를 선택하여 중재자 iSCSI 대상을 만듭니다.</block>
   <block id="e2cd7ceedce46e4ea3fd8396ef4baa97" category="list-text">로컬 워크스테이션의 명령 셸에서 sftp 유틸리티를 사용하여 백업 파일을 다음 예와 같이 Deploy 가상 머신에 업로드합니다.</block>
   <block id="5c7a95e189e375455d7a7bdc02ec54ba" category="list-text">구성 데이터를 복원합니다.</block>
-  <block id="662385e6e7c81bc5868ecc810d1b4419" category="paragraph">예제 명령</block>
   <block id="86069ab716d4c2ffd77a81bd3827427f" category="list-text">로컬 워크스테이션의 명령 셸에서 다음을 사용하세요.<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> (Secure Copy Protocol) 유틸리티를 사용하여 이미지 파일을 ONTAP Select .</block>
   <block id="52396dafee59debc72b8fccab2acb4c5" category="paragraph">예제 명령:</block>
   <block id="3817e5dd56e94cb6952f7eb0ab2a6acd" category="summary">ONTAP Select 9.15.1부터 기존 클러스터의 크기를 늘리거나 줄일 수 있습니다.</block>
@@ -3940,4 +3878,64 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="7e6bf0ef053af206603d7df47832fbd5" category="inline-link-macro">ONTAP Select AutoSupport 기능이 구성되었는지 확인하세요.</block>
   <block id="785cc01cf7efbfd5a1fd1d4863d9b83a" category="paragraph">클러스터를 배포한 후,<block ref="af0babf33c9640eb381afcb6484c80f3" category="inline-link-macro-rx"></block> 그런 다음<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> .</block>
   <block id="b7f5f41e99a6f8c3c3a0c1843b24c17b" category="sidebar">ESXi 업그레이드</block>
+  <block id="2b0d4f79e2ddc290a96628d7735b0b3d" category="summary">VMware ESXi에서 ONTAP Select 실행 중인 경우, ESXi 소프트웨어를 이전 지원 버전에서 ESXi 8.0 이상으로 업그레이드할 수 있습니다. 업그레이드하기 전에 프로세스를 이해하고 적절한 업그레이드 절차를 선택해야 합니다.</block>
+  <block id="1335df0f3090f59f014dd0b288b21b8d" category="doc">ONTAP Select 위해 VMware ESXi 8.0 이상으로 업그레이드하세요.</block>
+  <block id="5672e8bfffcafba3716de1eba03f8c81" category="list-text">ONTAP Select</block>
+  <block id="17537cd69440eff402ea1d2fdf7d785c" category="paragraph">단일 노드 클러스터와 다중 노드 클러스터가 모두 지원됩니다.</block>
+  <block id="17af16327a03b8ca52bdf0daa844b0c1" category="paragraph">Deploy 관리 유틸리티를 사용하여 ESXi 업그레이드를 수행하는 것이 더 일반적이고 복원력이 뛰어난 옵션입니다. 하지만 Deploy를 사용할 수 없거나 사용할 수 없는 경우가 있을 수 있습니다. 예를 들어, 이전 버전의 ONTAP Select 및 Deploy 관리 유틸리티에서는 ESXi 8.0으로의 업그레이드가 지원되지 않습니다.</block>
+  <block id="be0322fd0c69452dec4b9d50f45d2e18" category="list-text">VMware에서 제공하는 절차를 사용하여 ONTAP Select 실행되는 하이퍼바이저 호스트를 ESXi 8.0 이상으로 업그레이드합니다.</block>
+  <block id="fd1f31b53e7242c3be0dbe67d6dbb5fb" category="paragraph">ONTAP Select 는 ONTAP 스토리지 소프트웨어를 기반으로 고가용성 무공유 스케일아웃 아키텍처를 통해 엔터프라이즈 스토리지 서비스를 효율적으로 제공합니다. 노드당 NFS, SMB/CIFS 및 iSCSI 연결 스토리지에 대해 최대 400TB의 원시 용량을 제공하는 1개, 2개, 4개, 6개, 8개, 10개 또는 12개의 노드로 솔루션을 배포할 수 있습니다. 기본 중복 제거 및 압축 기능을 활용하여 유효 용량을 늘려 스토리지 비용을 절감할 수 있습니다. 스케일아웃 아키텍처는 고가용성과 무중단 데이터 이동성을 제공하여 로드 밸런싱 또는 서비스 하드웨어로의 데이터 이동을 지원합니다.</block>
+  <block id="cfc747a13fce627579c4fdb16bf71036" category="paragraph">Python 스크립트를 실행하기 전에 환경이 올바르게 구성되었는지 확인해야 합니다.</block>
+  <block id="9bf8bd99f54a07e23d2805398d5369d7" category="paragraph">ONTAP Select HA 배포 모델에는 다중 노드 클러스터(4개, 6개, 8개, 10개 또는 12개 노드)와 2노드 클러스터의 두 가지가 있습니다. 2노드 ONTAP Select 클러스터의 가장 큰 특징은 외부 중재 서비스를 사용하여 스플릿 브레인(split-brain) 시나리오를 해결한다는 것입니다.  ONTAP Deploy VM은 구성하는 모든 2노드 HA 쌍에 대한 기본 중재자 역할을 합니다.</block>
+  <block id="9ddaa0242d12a15ea7e8ee813c0ae382" category="list-text">4노드 ONTAP Select 클러스터는 두 개의 HA 쌍으로 구성됩니다. 6노드, 8노드, 10노드, 12노드 클러스터는 각각 3개, 4개, 5개, 6개의 HA 쌍으로 구성됩니다. 각 HA 쌍 내에서 각 클러스터 노드의 데이터 집계는 동기적으로 미러링되며, 장애 조치 발생 시 데이터 손실이 발생하지 않습니다.</block>
+  <block id="de1606c9dc446d4b683c678bc5b19e2f" category="paragraph">ONTAP Select 클러스터는 2~12개의 노드로 구성됩니다. 각 HA 쌍에는 IP 네트워크를 통해 노드 간에 동기적으로 미러링되는 두 개의 사용자 데이터 사본이 포함됩니다.  이러한 미러링은 사용자에게 투명하며, 데이터 집계의 속성으로, 데이터 집계 생성 프로세스 중에 자동으로 구성됩니다.</block>
+  <block id="628712ef3266c4d16740998b21e51bd5" category="cell">단일 노드 2노드 클러스터(HA 쌍) 4, 6, 8, 10 또는 12노드 클러스터</block>
+  <block id="ac8a3bd368c1513181e25f36d8d90b25" category="cell">단일 노드 클러스터의 경우 최소 2개의 1GbE 포트 2노드 클러스터(HA 쌍)의 경우 최소 4개의 1GbE 포트 4, 6, 8, 10 또는 12노드 클러스터의 경우 최소 2개의 10GbE 포트</block>
+  <block id="222deaabbfe510b32c49226a340e8166" category="paragraph">ONTAP Select 클러스터 내에서 내부 트래픽과 외부 트래픽은 포트 그룹이라는 가상 레이어 2 네트워크 객체를 사용하여 분리됩니다. 이러한 포트 그룹을 올바르게 vSwitch에 할당하는 것은 매우 중요합니다. 특히 클러스터, HA 상호 연결, 미러 복제 서비스를 제공하는 내부 네트워크의 경우 더욱 그렇습니다. 이러한 네트워크 포트에 대한 네트워크 대역폭이 부족하면 성능이 저하되고 클러스터 노드의 안정성에 영향을 미칠 수 있습니다.  따라서 4, 6, 8, 10, 12노드 클러스터에서는 내부 ONTAP Select 네트워크가 10Gb 연결을 사용해야 합니다. 1Gb NIC는 지원되지 않습니다.  그러나 ONTAP Select 클러스터로 들어오는 데이터의 흐름을 제한하더라도 안정적으로 작동하는 능력에는 영향을 미치지 않으므로 외부 네트워크에 대한 트레이드오프가 발생할 수 있습니다.</block>
+  <block id="79fd21e68f8b55d6701fdb3dc8b57721" category="paragraph">이러한 네트워크는 다음 그림에 나타나 있으며, VMware vSphere 플랫폼에서 실행되는 4노드 ONTAP Select 클러스터를 보여줍니다. 6, 8, 10, 12노드 클러스터는 네트워크 레이아웃이 비슷합니다.</block>
+  <block id="06f30d91c5b4e35870f7a74115950ce7" category="paragraph">클러스터 네트워크 트래픽은 대기 시간이 짧고 라우팅되지 않은 2계층 네트워크를 통해 흐르야 합니다. 클러스터 처리량 및 지연 시간 요구 사항으로 인해 ONTAP Select 클러스터는 물리적으로 근접한 위치(예: 멀티팩, 단일 데이터 센터)에 위치해야 합니다.  WAN이나 상당한 지리적 거리를 두고 HA 노드를 분리하여 4개, 6개, 8개, 10개 또는 12개 노드 스트레치 클러스터 구성을 구축하는 것은 지원되지 않습니다. 중재자를 사용한 스트레치된 2노드 구성은 지원됩니다.</block>
+  <block id="b08e028303a5953366cd3dd0357eaa1e" category="cell">4, 6, 8, 10 또는 12노드 클러스터</block>
+  <block id="452e45a3d17c3fc2acb4be240729a77b" category="paragraph">ONTAP Select 클러스터는 1개, 2개, 4개, 6개, 8개, 10개 또는 12개의 노드로 구성됩니다. 각 클러스터 노드는 별도의 가상 머신으로 배포되며 특별히 설계된 ONTAP 9 소프트웨어 버전을 실행합니다.</block>
+  <block id="30612e552a85ef2e572d45df6c66dde5" category="paragraph">NVRAM 자체 VMDK에 배치됩니다. NVRAM 자체 VMDK에 분할하면 ONTAP Select VM이 vNVMe 드라이버를 사용하여 NVRAM VMDK와 통신할 수 있습니다. 또한 ONTAP Select VM은 ESX 8.0 이상과 호환되는 하드웨어 버전 13을 사용해야 합니다.</block>
+  <block id="7bfe859944c8684df0f1e5d48d3e19e7" category="admonition">NVRAM 파티션은 자체 VMDK로 분리됩니다. 이 VMDK는 ESX 8.0 이상 버전에서 제공되는 vNVME 드라이버를 사용하여 연결됩니다. 이러한 변경 사항은 RAID 컨트롤러 캐시의 이점을 누리지 못하는 소프트웨어 RAID를 사용하는 ONTAP Select 설치에서 가장 중요합니다.</block>
+  <block id="cc52ad49f55b8ec4cd8245398800774b" category="list-text">1개, 2개, 4개, 6개, 8개, 10개 또는 12개의 노드로 구성된 _ONTAP Select 클러스터_를 만들 수 있습니다. 다중 노드 클러스터는 항상 하나 이상의 HA 쌍을 포함합니다. 예를 들어, 4노드 클러스터는 2개의 HA 쌍으로 구성됩니다. 단일 노드 클러스터는 HA 기능을 제공하지 않습니다.</block>
+  <block id="5ec5e552cbceca200e1e7e00c7ece71f" category="list-text">OVF 템플릿(ova 파일에 포함)은 vSphere 독립 실행형 클라이언트 또는 vSphere 웹 클라이언트(ESXi 8.0 이상에서는 유일한 옵션)를 사용하여 설치해야 합니다. ONTAP Select Deploy 관리 유틸리티는 사용하지 마세요.</block>
+  <block id="e24ae25ce9bfb1ce4c065eadcdcdd09a" category="inline-link">ONTAP Select 9.18.1에 대한 공지</block>
+  <block id="065d5511cb8e894211e164dae4b44b59" category="paragraph"><block ref="065d5511cb8e894211e164dae4b44b59" category="inline-link-rx"></block></block>
+  <block id="7f9a5208c0fd2a2b8aada8a0fe2106b3" category="section-title">ONTAP Select 9.18.1</block>
+  <block id="aa440a24775cc384ed06594a84a01bed" category="list-text">클러스터 확장 및 축소에 대한 향상된 지원</block>
+  <block id="6cfc3c136010d00411d3802838588e31" category="list-text">ONTAP Select 9.18.1부터 ESXi 및 KVM 하이퍼바이저 호스트의 4노드 및 12노드 ONTAP Select 클러스터 간에 클러스터 확장 및 축소가 지원됩니다.</block>
+  <block id="6d04a0203e7cab41dfaeba82517e732e" category="paragraph">ESXi 또는 KVM 호스트의 기존 클러스터 크기를 다음과 같이 늘릴 수 있습니다.</block>
+  <block id="b78096c34098a5b4b3ffbf97bcf4daec" category="list-text">4개 노드에서 6개, 8개, 10개 또는 12개 노드로</block>
+  <block id="bb5c9bcb06dfca1234e3cdbb66afd69d" category="paragraph">ESXi 또는 KVM 호스트의 기존 클러스터 크기를 다음과 같이 줄일 수 있습니다.</block>
+  <block id="b7c498ba5d0597ad80a98bb00cbd25af" category="list-text">12개 노드에서 10개, 8개, 6개 또는 4개 노드까지</block>
+  <block id="76cbf30b0fc08d8370aa0f23af20ecc9" category="list-text">10개 노드에서 8개, 6개 또는 4개 노드로</block>
+  <block id="51f7c3da494d27037a69b9ef7bfd03bd" category="list-text">8개에서 6개 또는 4개 노드</block>
+  <block id="fe249bdaa41bd176ea8b58c535bc4bbb" category="list-text">6개에서 4개 노드로</block>
+  <block id="398ac50d2d746089dbbd794c676c2ae6" category="list-text">ONTAP Select 9.17.1부터 ESXi 호스트의 6노드 및 12노드 클러스터 간에 클러스터 확장 및 축소가 지원됩니다.</block>
+  <block id="765d6a53848808217d3e9d3acd0b4d1e" category="paragraph">NetApp 시스템 디스크를 호스팅하는 데이터 저장소에 ESX 8.0 이상과 NVMe 디스크를 사용할 것을 권장합니다. 이 구성은 NVRAM 파티션에 최상의 성능을 제공합니다.</block>
+  <block id="37d2070341f61f9632f32998e465484b" category="admonition">ESX 8.0 이상에 설치하는 경우 ONTAP Select 시스템 디스크가 SSD에 있든 NVMe 디스크에 있든 관계없이 vNVMEe 드라이버를 사용합니다. 이렇게 하면 VM 하드웨어 수준이 ESX 8.0 이상과 호환되는 13으로 설정됩니다.</block>
+  <block id="3fcf474605790b0472ff59a3b813e230" category="list-text">파일 다운로드</block>
+  <block id="4f2a0b4125eaf9d8804c99dcd015f5c0" category="list-text">구성 설정 보기</block>
+  <block id="f8418fd648dfec4581baae7b3eee752e" category="list-text">ONTAP Select 클러스터는 1개, 2개, 4개, 6개, 8개, 10개 또는 12개의 노드로 구성됩니다. 애플리케이션 요구 사항에 따라 클러스터 크기를 결정해야 합니다. 예를 들어, 엔터프라이즈 배포에 HA 기능이 필요한 경우 다중 노드 클러스터를 사용해야 합니다.</block>
+  <block id="7683e8313977fc78e9f2aa1cc9935c79" category="admonition">ESXi 7.0 GA가 더 이상 제공되지 않는 상태에 도달했습니다.  이 버전의 ONTAP Select 클러스터가 있는 경우 지원되는 버전으로 업그레이드해야 합니다.<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block> .</block>
+  <block id="ddfba58e606b509b0e3801e64826b46d" category="list-text">VMware ESXi 8.0 GA(빌드 20513097) 이상</block>
+  <block id="ea151d5a1fc2680e8be18f51bd12237d" category="list-text">VMware ESXi 버전 8.0 이상</block>
+  <block id="62080c1e38d010ffa650c0549d2fd463" category="inline-link-macro">ONTAP Select 9.18.1 릴리스 노트</block>
+  <block id="bae2221cd26cec7b066734cfd0888c05" category="paragraph">당신은 접근할 수 있습니다<block ref="b88c41ab6f0bacccf3a706fd6b4f9780" category="inline-link-macro-rx"></block> 현재 버전에 대한 세부 정보를 보려면.</block>
+  <block id="8fce0c649f4d72f417cda254112e0124" category="list-text">ESX 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.7 이상</block>
+  <block id="14d3f202c8554a54e4a6f4f52aa78fb3" category="list-text">KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1 이상</block>
+  <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">아래로 스크롤하여 * ONTAP Select*를 클릭합니다.</block>
+  <block id="bb68cf2408900213fd35084701d5c32c" category="paragraph">ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.15.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
+  <block id="b69fcb807e0b12e6b52ca8806f85c011" category="paragraph">ESXi 및 KVM 하이퍼바이저 호스트에 대한 기존 ONTAP Select 클러스터의 클러스터 크기를 늘리거나 줄입니다.  두 호스트 유형 모두 4개에서 12개 노드 사이로 클러스터 크기를 늘리거나 줄일 수 있습니다.</block>
+  <block id="a0b486320d46bfa4e7a315349c3d059b" category="list-text">1개 또는 2개 노드 클러스터에서 6개, 8개, 10개 또는 12개 노드 클러스터로 확장합니다.</block>
+  <block id="459e1c3cb388ea595c42d32d54d432fb" category="list-text">6, 8, 10 또는 12개 노드 클러스터에서 1개 또는 2개 노드 클러스터로의 수축입니다.</block>
+  <block id="cc3b764df35c22850e017fbdd86460bc" category="paragraph">클러스터 확장 기능을 사용하여 기존 ONTAP Select 클러스터의 크기를 늘립니다.</block>
+  <block id="13835f01e49e3e665400c23d9afdc50c" category="paragraph">ESXi 또는 KVM 호스트에서 기존 클러스터의 크기를 다음과 같이 늘릴 수 있습니다.</block>
+  <block id="d81f6bf9193c8af46601a92f8dcaa1fd" category="paragraph">클러스터를 확장한 후에는 다음을 수행해야 합니다.<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> .</block>
+  <block id="ca7aff0c664c54cdabca6ec7fa0f648c" category="paragraph">클러스터 축소 기능을 사용하여 기존 ONTAP Select 클러스터의 크기를 줄입니다.</block>
+  <block id="916d45d48096cd6fddadca86ec51dd59" category="paragraph">ESXi 또는 KVM 호스트에서 기존 클러스터의 크기를 다음과 같이 줄일 수 있습니다.</block>
+  <block id="79ba28975143977867633095c7f73b2a" category="paragraph">단일 노드 클러스터를 생성할지 다중 노드 클러스터를 생성할지에 따라 단계가 달라집니다. 다중 노드 클러스터에는 2개, 4개, 6개, 8개, 10개 또는 12개의 노드가 있을 수 있습니다.</block>
+  <block id="d3e10155b98b375f7263e8a2fc511046" category="sidebar">NetApp ONTAP Select VMware ESXi 또는 커널 기반 가상 머신(KVM) 하이퍼바이저를 실행하는 다양한 상용 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.18.1 관련 설명서가 포함되어 있습니다.</block>
+  <block id="9819a8f62e77caeb3fdd9bc78f3d0a27" category="sidebar">ONTAP Select 9.18.1 문서</block>
 </blocks>

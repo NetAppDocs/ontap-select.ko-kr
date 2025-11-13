@@ -57,14 +57,13 @@ ONTAP Select 다음 ESXi 하이퍼바이저 버전을 지원합니다.
 * VMware ESXi 8.0 U2
 * VMware ESXi 8.0 U1(빌드 21495797)
 * VMware ESXi 8.0 GA(빌드 20513097)
-* VMware ESXi 7.0 GA(빌드 15843807 이상)에는 7.0 U3C, U2 및 U1이 포함됩니다.
 
 
 
 NOTE: VMware가 동일한 버전을 계속 지원하는 한 NetApp은 ESXi의 지정된 버전에서 ONTAP Select를 지원합니다.
 
 
-NOTE: ESXi 6.5 GA 및 ESXi 6.7 GA가 공급 중지 상태에 도달했습니다. 이러한 버전이 포함된 ONTAP Select 클러스터가 있는 경우 에 따라 지원되는 버전으로 업그레이드해야 합니다 https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^].
+NOTE: ESXi 7.0 GA가 더 이상 제공되지 않는 상태에 도달했습니다.  이 버전의 ONTAP Select 클러스터가 있는 경우 지원되는 버전으로 업그레이드해야 합니다. https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^] .
 
 --
 ====
@@ -111,7 +110,7 @@ NOTE: AMD(Advanced Micro Devices) 프로세서는 ONTAP Select에서 지원되�
 | 2노드 클러스터 또는 MetroCluster SDS | 1GbE 4개 또는 10GbE 1개 | 10GbE 2개 
 
 
-| 4, 6 또는 8노드 클러스터 | 10GbE 2개 | 4 x 10GbE 또는 2 x 25/40GbE 
+| 4, 6, 8, 10 또는 12노드 클러스터 | 10GbE 2개 | 4 x 10GbE 또는 2 x 25/40GbE 
 |===
 
 
