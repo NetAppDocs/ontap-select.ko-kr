@@ -165,7 +165,17 @@ NOTE: 커널 기반 가상 머신(KVM)은 대형 인스턴스 유형을 지원�
 2+| 하이퍼바이저 지원(VMware) 3+| VMware vSphere 9.0 VMware vSphere 8.0GA 및 업데이트 1~3 VMware vSphere 7.0GA 및 업데이트 1~3C 
 
 
-2+| 하이퍼바이저 지원(KVM) 3+| Red Hat Enterprise Linux 64비트(KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6 Rocky Linux(KVM) 9.6 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6 
+2+| 하이퍼바이저 지원(KVM)  a| 
+Red Hat Enterprise Linux 64비트(KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6
+
+Rocky Linux(KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6
+
+*참고*: RHEL 10.0 및 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에는 소프트웨어 RAID 워크플로에 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오.
+
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: RHEL 10 및 ROCKY 10을 사용하여 클러스터 HWR을 생성하는 동안 경고 메시지가 표시됩니다."^]
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10이 설치된 호스트의 클러스터 생성 페이지에서 SWR에 스토리지 풀 및 스토리지 디스크가 표시되지 않음"^]
+
+
 
 
 2+| 관리 소프트웨어 3+| NetApp Active IQ Unified Manager 관리 제품군 ONTAP Select Deploy Utility SnapCenter(선택 사항) 

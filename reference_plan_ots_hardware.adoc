@@ -43,10 +43,19 @@ KVM 및 ESXi 하이퍼바이저에 ONTAP Select 배포할 수 있습니다.
 --
 ONTAP Select 다음 KVM 하이퍼바이저 버전을 지원합니다.
 
-* Red Hat Enterprise Linux 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6의 KVM
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6의 KVM
+* Red Hat Enterprise Linux(RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6 버전에서 KVM 사용
+* Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6 버전에서 KVM 사용
 
 
+[NOTE]
+====
+RHEL 10.0 및 Rocky Linux 10.0 호스트에서 KVM 하이퍼바이저를 사용할 때 소프트웨어 RAID 워크플로우에 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오.
+
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: RHEL 10 및 ROCKY 10을 사용하여 클러스터 HWR을 생성하는 동안 경고 메시지가 표시됩니다."^]
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10이 설치된 호스트의 클러스터 생성 페이지에서 SWR에 스토리지 풀 및 스토리지 디스크가 표시되지 않음"^]
+
+
+====
 --
 .ESXi
 --
