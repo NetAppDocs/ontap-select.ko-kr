@@ -294,8 +294,12 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: 2노드 클러스터에 대한 구축 복구
         url: "/task_cli_deploy_recover_two_node.html"
-  - title: 클러스터의 90일 평가 인스턴스 구축
-    url: "/deploy-evaluation-ontap-select-ovf-template.html"
+  - title: ONTAP Select 사용해 보세요
+    entries:
+    - title: 접근 평가 소프트웨어
+      url: "/access-evaluation-software.html"
+    - title: 클러스터의 90일 평가 인스턴스 구축
+      url: "/deploy-evaluation-ontap-select-ovf-template.html"
   - title: FAQ 를 참조하십시오
     url: "/reference_faq.html"
   - title: 법적 고지

@@ -640,7 +640,6 @@
   <block id="d6c73b916c498a2010460cc1dcfffcbc" category="admonition">MetroCluster SDS를 구축할 때는 분산형 또는 "확장" 토폴로지에서 vSAN을 사용할 수 없습니다.</block>
   <block id="193036e83646828d4e1cd41104fdee82" category="paragraph">배포 관리 유틸리티에 정적 IP 주소를 할당해야 합니다. 이 요구사항은 하나 이상의 ONTAP Select 2노드 클러스터를 관리하는 모든 배포 인스턴스에 적용됩니다.</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.</block>
-  <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.</block>
   <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">원하는 패키지 릴리스를 선택합니다.</block>
   <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">적절한 패키지를 선택하여 다운로드하고 필요에 따라 모든 프롬프트에 응답합니다.</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">VMware Client Integration Plugin을 설치하거나 필요에 따라 유사한 구성을 수행하여 브라우저에서 OVF 기능을 설정합니다</block>
@@ -661,7 +660,6 @@
   <block id="8a356d5d6d9521b33479b519cca56a90" category="list-text">암호를 입력하고 * Enter * 를 누릅니다.</block>
   <block id="c5d6ff59e8e5595e5fc323f4237b333c" category="paragraph">DHCP를 사용하여 네트워킹 정보를 설정하시겠습니까? [n]:</block>
   <block id="79a72de3f5191386741777dd0441f591" category="list-text">정적 구성을 선택하는 경우 필요에 따라 모든 네트워크 구성 정보를 제공합니다.</block>
-  <block id="887ee30caedf2bee91979565f5ddf01e" category="paragraph">웹 사용자 인터페이스에 로그인하여 배포 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행해야 합니다.</block>
   <block id="32be4d152f2326423c990dde583d8768" category="list-text">IP 주소 또는 도메인 이름을 사용하여 브라우저에서 배포 유틸리티를 가리킵니다.</block>
   <block id="cc0e719d3ebda123b94502d26d56a7eb" category="paragraph">'\https://&lt;ip_address&gt;/`</block>
   <block id="533f8108cde4f7f1af2f1fb435cc4710" category="list-text">관리자(admin) 계정 이름 및 암호를 제공하고 로그인합니다.</block>
@@ -2520,9 +2518,6 @@
   <block id="1e2be71e8b4858c0b3e832cba35731d1" category="section-title">ONTAP Select 9.13.1 을 참조하십시오</block>
   <block id="58c277c116ff23ffb9879debb95b4968" category="list-text">NVMe over TCP 지원</block>
   <block id="db5f5d6e1e5a3e29724ce78258556ff1" category="list-text">ONTAP Select 9.13.1로 업그레이드할 때 TCP를 통해 NVMe를 지원할 수 있는 새 라이센스가 있어야 합니다. 이 라이선스는 버전 9.13.1에서 처음으로 ONTAP Select를 배포할 때 자동으로 포함됩니다.</block>
-  <block id="da691cb71c1f879ed7bf93a9a845601a" category="section-title">가상 머신 이미지를 다운로드합니다</block>
-  <block id="8435c401e57e043b0c57edfb0a00c774" category="section-title">ONTAP Select 배포 OVA 서명을 확인합니다</block>
-  <block id="ab07c13a31893a6c9ee2547e7b9df643" category="paragraph">설치 패키지를 설치하기 전에 ONTAP Select OVA(Open Virtualization Appliance) 서명을 확인해야 합니다.</block>
   <block id="cfa6562e428e1a648631dac061567897" category="paragraph">시스템이 다음 요구 사항을 충족하는지 확인합니다.</block>
   <block id="80c9c2739b6086de81c8ec7262f87af8" category="list-text">기본 검증용 OpenSSL 버전 1.0.2에서 3.0</block>
   <block id="03018e3ee63fad9b70308ee5184022f9" category="list-text">OCSP(Online Certificate Status Protocol) 확인을 위한 공용 인터넷 액세스</block>
@@ -2539,8 +2534,6 @@
   <block id="51efe37fbdc37f9d0c55c657a430d296" category="cell">SHA-256 알고리즘이 해시된 후 를 사용하여 RSA(Remote Support Agent)에 의해 서명됩니다<block ref="b6ad60ee94a07b2ba8c24c883ec70503" prefix=" " category="inline-code"></block> 설치 프로그램의 키 및 서명</block>
   <block id="1f463ad70f232a0c4114c51cb2a44a5a" category="list-text">를 확인합니다<block ref="20db26963ac3dc0b119aa4c781855701" prefix=" " category="inline-code"></block> 파일에서 연결된 인증서 및 유효성 검사 명령을 사용하고 있습니다.</block>
   <block id="134cfba28fd247854afe7ce4d31767ad" category="list-text">다음 명령을 사용하여 서명을 확인합니다.</block>
-  <block id="0ba1987cb555e519f115071e917656fc" category="section-title">가상 머신을 구축합니다</block>
-  <block id="25775c61c3281e6d412f48371102d8b3" category="section-title">배포 웹 인터페이스에 로그인합니다</block>
   <block id="db05ec33127afb72e99fdef2dd7e222b" category="section-title">MFA를 구성합니다</block>
   <block id="aef6d7448e31d21fcd5e57734fa1fb88" category="paragraph">ONTAP Select 9.13.1부터 ONTAP Select Deploy 관리자 계정에 대해 다단계 인증(MFA)이 지원됩니다.</block>
   <block id="b43e5dc621bb5f7a6746a0bf53636924" category="inline-link-macro">ONTAP Select PIV(YubiKey Personal Identity Verification) 또는 FIDO2(Fast Identity Online) 인증을 사용하여 CLI MFA 로그인을 배포합니다</block>
@@ -2854,7 +2847,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="d337df11b3ebf63c5a2171392491798f" category="cell">Deploy 유틸리티가 설치된 VMware ESXi 또는 KVM 하이퍼바이저 호스트의 식별자입니다.</block>
   <block id="e827723eb84c3ca87c21fd4dbca2ccda" category="cell">데이터 저장소의 이름입니다</block>
   <block id="d8ca36c2c2dd21202d873bdf26e7ec79" category="cell">가상 머신 파일이 저장된 하이퍼바이저 데이터 저장소의 식별자입니다(약 40GB가 필요함).</block>
-  <block id="1eadabe4e39cf3ae5ce71caf6ddc8447" category="paragraph">OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작해야 합니다. 설치 프로세스의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM:</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">배포 VM에 IP 주소를 동적으로 할당하려는 경우 VMware 환경에서 DHCP를 사용하도록 설정합니다</block>
   <block id="4ecc6637981131c676cdedcda970a661" category="paragraph">ESXi 및 KVM 하이퍼바이저의 경우 VM 이름, 외부 네트워크, 호스트 이름 등 VM을 생성할 때 사용할 구성 정보가 있어야 합니다. 정적 네트워크 구성을 정의할 때 다음과 같은 추가 정보가 필요합니다.</block>
@@ -3187,17 +3179,14 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
   <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.</block>
   <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">AMD(Advanced Micro Devices) 프로세서는 ONTAP Select에서 지원되지 않습니다.</block>
-  <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가 인스턴스를 신속하게 구축할 수 있습니다.</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetApp에서 일련 번호 또는 스토리지 용량 라이센스를 취득할 필요가 없습니다.</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">사용자 데이터에 대해 구입한 라이센스와 동일한 양의 스토리지를 할당할 수 있습니다.</block>
   <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">평가 라이센스에서 구입한 라이센스로 노드를 업그레이드할 수 없습니다.</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">vCenter 계정만 사용하여 OVF 템플릿을 구축할 수 있습니다. ESXi 호스트에 직접 설치하는 것은 현재 지원되지 않습니다.</block>
-  <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">ONTAP Select 클러스터 호스트를 준비합니다</block>
   <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">다음 요구 사항을 사용하여 ONTAP Select 클러스터가 구축되는 ESXi 호스트를 준비합니다. 플랫폼 설명은 VMFS-5 또는 VMFS-6 파일 시스템을 사용하여 포맷된 로컬 DAS(Direct-Attached Storage)를 사용하는 표준 또는 소형 인스턴스 유형 구성을 기반으로 합니다.</block>
   <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">ESXi 호스트를 준비하기 위한 요구 사항</block>
   <block id="40500d60ce10678b5afdd4398f493978" category="paragraph"><block ref="40500d60ce10678b5afdd4398f493978" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a9d35c0cb060ab36e25ffd3d93795556" category="inline-link-macro">ONTAP Select 설치 설명서</block>
-  <block id="246320dc101bf0e3be5986b0320159e6" category="section-title">OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터를 구축합니다</block>
   <block id="a50cac13360eacf7961596b190047155" category="paragraph">지원되는 64비트 ESXi 호스트 서버에서 다음 단계를 완료합니다.</block>
   <block id="e7c78d04f4c3c4a7d36c59b9d2c2b9f7" category="list-text">NetApp 평가판 제품 프로그램 페이지로 이동하여 * ONTAP Select * 를 선택하여 ONTAP Select OVF 템플릿을 로컬 워크스테이션에 다운로드합니다.</block>
   <block id="04b1e5dd71a31edd4beba2e075fb1a5e" category="list-text">관리 Privileges가 있는 계정을 사용하여 VMware vSphere 웹 클라이언트에 로그인합니다.</block>
@@ -3945,4 +3934,57 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="c5a8db185a9f4a35ad276638f9533ab6" category="list-text">레드햇 엔터프라이즈 리눅스(RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="5701e65b5391163c34edb9efc807ee5f" category="list-text">Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6</block>
   <block id="77be5fd15bdb7705f2988a237003df51" category="list-text">레드햇 엔터프라이즈 리눅스(RHEL) 64비트 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
+  <block id="1d635a2bfb4e1fe570efdeb7e95a39b1" category="summary">ONTAP Select 평가 소프트웨어 다운로드 권한을 요청하십시오.</block>
+  <block id="14a6da11ffa9cf53251b9ff57d86f2e3" category="doc">ONTAP Select 평가 소프트웨어에 액세스하세요.</block>
+  <block id="fe359189fa4d670313b3429fe242de5a" category="inline-link-macro">ONTAP Select 평가 소프트웨어</block>
+  <block id="bd6461517f6e69368dd81c758db22e68" category="paragraph">접근 권한이 있습니다 <block ref="ea17960d6170723022eb4d5de3e60125" category="inline-link-macro-rx"></block> 현재 ONTAP Select 고객이고 활성 사용 권한을 보유하고 있거나 NetApp 파트너이며 새로운 Capacity Tiers 평가 라이선스를 다운로드하려는 경우.</block>
+  <block id="2505b030dbef17ccefc751c6bd407012" category="paragraph">만약 위에 해당되는 상황이 아니고 ONTAP Select 평가해 보고 싶으시다면, 다음 단계를 따라 평가판 소프트웨어 다운로드 권한을 요청하실 수 있습니다.</block>
+  <block id="0984c1edd8b74672c83f621be7c2371d" category="list-text">이 지침은 NetApp 영업 담당자, 파트너 및 NetApp 과 거래하는 잠재 고객을 위한 것입니다.</block>
+  <block id="95eebd9bfcccb9d681b457f9e5950b9d" category="list-text">ONTAP Select Capacity Tiers 평가판 라이선스는 설치일로부터 90일 동안만 사용 가능합니다.</block>
+  <block id="b8b1507fe73d7d86ba34a071cf9c893e" category="admonition">평가판 라이선스는 연장할 수 없습니다. 90일이 지나면 라이선스는 더 이상 작동하지 않으며 관련 데이터에 접근할 수 없습니다.</block>
+  <block id="b59b9153304861fe03d53ff01629500a" category="list-text">평가판 소프트웨어에는 ONTAP Select Deploy 관리 유틸리티를 다운로드하고 클러스터를 배포하는 데 필요한 모든 정보가 포함되어 있습니다.</block>
+  <block id="c8a43c95edf40f955992f2d6490e817e" category="section-title">1단계: 계정을 등록하세요</block>
+  <block id="52019818028f8847218f1bbd1674d2d5" category="paragraph">필요한 경우 NetApp 계정 등록을 완료하고 잠재 고객 액세스 권한을 요청하십시오.</block>
+  <block id="89ca1aefb6dc8a80385671197f92b2c0" category="list-text">새 계정을 만들거나 기존 계정에서 로그아웃하세요.</block>
+  <block id="1aa668d559a3a32a44796aeee6978a59" category="open-title">새 계정 만들기</block>
+  <block id="e0de4e570fbdf7cd1204bf43e4569031" category="paragraph">계정을 등록하세요 <block ref="884c90a723b514d4db68b7829e2037e5" category="inline-link-macro-rx"></block> 회사 이메일을 사용하세요.</block>
+  <block id="e72c5fc7da39949d0eca4ed8d5b33c5f" category="admonition">Gmail이나 Yahoo와 같은 무료 이메일 계정은 허용되지 않습니다.</block>
+  <block id="45d98cb0c4dacd6be68da4095e1fa5f2" category="paragraph">새로 생성한 계정으로 로그인되어 있지 않은지 확인하세요.</block>
+  <block id="bffee0a20448efe5e1af0e3c2a7b3eed" category="open-title">기존 계정</block>
+  <block id="36076d78a016dd13b5826e0f1b98ff99" category="paragraph">이미 계정이 있으시면 다음으로 이동하세요. <block ref="49b4f755ae136a93a19c82bfba9113cf" category="inline-link-macro-rx"></block> 그리고 로그인되어 있지 않은지 확인하세요.</block>
+  <block id="73b271af3218cfeb87a3b893f67319c5" category="list-text">"잠재 고객" 수준으로 접근 권한을 높이기 위해 비기술적 지원 사례를 생성합니다.</block>
+  <block id="621bfdc9de339de870581c0c5ab7f5ac" category="list-text">*케이스* 탭을 선택한 다음 *비기술적 케이스 생성*을 선택하세요.</block>
+  <block id="021cb8754bcb517b5e2da0b479f6b87f" category="list-text">피드백 카테고리로 *사용자 등록 문제*를 선택하세요.</block>
+  <block id="9a2b44a070cd576a7900b8d977c23d32" category="list-text">*케이스 생성*을 선택하세요.</block>
+  <block id="c8253ddac731d7f5c7cd042418ea0344" category="paragraph">필수 정보를 모두 입력하고 댓글란에 "제 업무용 이메일 주소는 &lt;본인 이메일 주소&gt;입니다."라고 적어주세요. ONTAP Select 평가 소프트웨어를 다운로드할 수 있도록 잠재고객 접근 권한을 요청드립니다.</block>
+  <block id="69caffff95dcb99d1b140cf8c7e2233d" category="paragraph">NetApp 담당자의 이름을 포함하십시오.</block>
+  <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">*제출*을 선택하세요.</block>
+  <block id="cd5539c344a39b5b21aa6386fb7f43b4" category="section-title">2단계: ONTAP Select 평가 소프트웨어를 다운로드하세요.</block>
+  <block id="86338176a0b992e43f21e99312c31686" category="paragraph">지원 요청이 검토 및 승인되면 NetApp 지원팀에서 제공하신 이메일 주소로 알림을 보내드립니다.</block>
+  <block id="bfd7797955c8d625272041af5917b9f1" category="inline-link">ONTAP Select 평가 소프트웨어를 다운로드하세요.</block>
+  <block id="295eb5017e1bdbd4983bade2d38ed4bf" category="list-text"><block ref="1a62f0f0111db8cadb4b705107e76f14" category="inline-link-rx"></block>.</block>
+  <block id="67c5a52d5c97ff013e91119d354cf46c" category="paragraph">평가판 라이선스 파일은 압축 파일 안에 있습니다.</block>
+  <block id="708b56859c2409a451122056263cefe6" category="inline-link-macro">지원 사례를 개설하세요</block>
+  <block id="1009d81db421db34fbc45926ab8f8191" category="list-text">법적 요건을 준수하려면 다음 사항을 준수해야 합니다. <block ref="3f943e080571fe2dbda7051678ab1855" category="inline-link-macro-rx"></block> 접근 권한을 얻기 전에. 이를 통해 NetApp 필요한 운영 환경에 바로 적용 가능한 소프트웨어를 제공하는 동시에 올바른 관리 및 문서화를 유지할 수 있습니다.</block>
+  <block id="adb988ac2aaf4e14c65785d0a38de873" category="admonition">NetApp 오픈 소스 버전이나 대체 버전이 아닌 "실제 사용 가능한" 버전의 ONTAP Select 제공합니다. 지원 서비스는 정식 라이선스로 업그레이드한 경우에만 제공됩니다.</block>
+  <block id="7d984f4f58da5149b9f3de1a58142fc0" category="paragraph">평가 소프트웨어 다운로드가 완료되면 지침에 따라 ONTAP Select Deploy 관리 유틸리티를 다운로드하고 클러스터를 배포하십시오.</block>
+  <block id="81b88157ccf03378cbd42db625f92b27" category="inline-link-macro">ONTAP Select 구축을 위한 평가판 라이선스에 대해 알아보세요.</block>
+  <block id="3e0aeb759942dd62b97d1e0e9a6a0536" category="list-text"><block ref="3e0aeb759942dd62b97d1e0e9a6a0536" category="inline-link-macro-rx"></block></block>
+  <block id="05bccdd9a59f22e26e09213cf2d2dbff" category="list-text"><block ref="05bccdd9a59f22e26e09213cf2d2dbff" category="inline-link-macro-rx"></block></block>
+  <block id="7c480331728387279e0e8575b8f70765" category="inline-link-macro">ONTAP Select 평가 소프트웨어에 접속하세요.</block>
+  <block id="7e457290f77b37c32546152d0c55879f" category="list-text"><block ref="7e457290f77b37c32546152d0c55879f" category="inline-link-macro-rx"></block></block>
+  <block id="43c2c693f16be58596e5267f1b4d6c8b" category="summary">단일 노드 ONTAP Select 클러스터의 90일 평가판을 배포할 수 있습니다.</block>
+  <block id="f6dbfcdd0f076283f4df3208ab633467" category="paragraph">VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드부터 최대 99개 노드까지 다양한 크기의 ONTAP Select 클러스터에 대한 90일 평가판을 배포할 수 있습니다. 기존 고객이든 신규 고객이든 관계없이 평가판 라이선스를 다운로드할 수 있습니다. 예를 들어, 기존 고객이고 라이선스를 구매하기 전에 새로운 구성을 시험해보고 싶을 수 있습니다.</block>
+  <block id="ced8179cabed6ee9f3127b0c5fafd2db" category="section-title">1단계: ONTAP Select 클러스터 호스트 준비</block>
+  <block id="9e25ed83bcf0bc2a794367ec640f2549" category="section-title">2단계: OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터를 배포합니다.</block>
+  <block id="916c12b3fbccb1ff32e8a4776708798e" category="section-title">1단계: 가상 머신 이미지를 다운로드합니다.</block>
+  <block id="b6754a68a857ab2b2389816249373a57" category="paragraph">NetApp 지원 사이트에서 ONTAP Select 패키지를 다운로드하십시오.</block>
+  <block id="0230ee7e6071858ebc377c057e5e603e" category="section-title">2단계: ONTAP Select Deploy OVA 서명을 확인합니다.</block>
+  <block id="9e0015dd89b19bd3443ad4f4a14527ab" category="paragraph">설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA)의 서명을 확인하십시오.</block>
+  <block id="35f9f1c9a9790bd3fc497db798819083" category="section-title">3단계: 가상 머신 배포</block>
+  <block id="a84a05d08c99af325673887887ed8fdb" category="paragraph">OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작하십시오. 설치 과정의 일부로 네트워크 인터페이스를 DHCP 또는 고정 IP 구성으로 설정합니다.</block>
+  <block id="7e5f2ca43da3004f8d3d7bae3edb7bae" category="section-title">4단계: 배포 웹 인터페이스에 Sign in.</block>
+  <block id="619fea79d54cac08622de23d5f1d57d5" category="paragraph">웹 사용자 인터페이스에 Sign in 배포 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행하십시오.</block>
+  <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">ONTAP Select 사용해 보세요</block>
+  <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">접근 평가 소프트웨어</block>
 </blocks>

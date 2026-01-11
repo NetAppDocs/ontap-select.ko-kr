@@ -64,7 +64,11 @@ ONTAP Select 평가판 클러스터를 업그레이드하여 운영 라이센스
 
 을 참조하십시오 link:task_adm_licenses.html["평가판 라이센스를 운영 라이센스로 변환합니다"] 를 참조하십시오.
 
+.다음은 무엇인가요?
+* link:access-evaluation-software.html["ONTAP Select 평가 소프트웨어에 접속하세요."]
+* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Select 클러스터의 90일 평가 인스턴스를 구축합니다"]
+
+
 .관련 정보
 * link:concept_lic_production.html["프로덕션 배포를 위한 라이선스에 대해 알아보세요"]
-* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Select 클러스터의 90일 평가 인스턴스를 구축합니다"]
 

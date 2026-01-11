@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: access-evaluation-software.html 
+keywords: ontap select, evaluation, software, register, download, access 
+summary: ONTAP Select 평가 소프트웨어 다운로드 권한을 요청하십시오. 
+---
+= ONTAP Select 평가 소프트웨어에 액세스하세요.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+접근 권한이 있습니다 link:https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["ONTAP Select 평가 소프트웨어"^] 현재 ONTAP Select 고객이고 활성 사용 권한을 보유하고 있거나 NetApp 파트너이며 새로운 Capacity Tiers 평가 라이선스를 다운로드하려는 경우.
+
+만약 위에 해당되는 상황이 아니고 ONTAP Select 평가해 보고 싶으시다면, 다음 단계를 따라 평가판 소프트웨어 다운로드 권한을 요청하실 수 있습니다.
+
+.이 작업에 대해
+* 이 지침은 NetApp 영업 담당자, 파트너 및 NetApp 과 거래하는 잠재 고객을 위한 것입니다.
+* ONTAP Select Capacity Tiers 평가판 라이선스는 설치일로부터 90일 동안만 사용 가능합니다.
++
+
+NOTE: 평가판 라이선스는 연장할 수 없습니다. 90일이 지나면 라이선스는 더 이상 작동하지 않으며 관련 데이터에 접근할 수 없습니다.
+
+* 평가판 소프트웨어에는 ONTAP Select Deploy 관리 유틸리티를 다운로드하고 클러스터를 배포하는 데 필요한 모든 정보가 포함되어 있습니다.
+
+
+
+
+== 1단계: 계정을 등록하세요
+
+필요한 경우 NetApp 계정 등록을 완료하고 잠재 고객 액세스 권한을 요청하십시오.
+
+.단계
+. 새 계정을 만들거나 기존 계정에서 로그아웃하세요.
++
+[role="tabbed-block"]
+====
+.새 계정 만들기
+--
+계정을 등록하세요 link:https://mysupport.netapp.com/site/user/registration["NetApp Support 사이트"^] 회사 이메일을 사용하세요.
+
+
+NOTE: Gmail이나 Yahoo와 같은 무료 이메일 계정은 허용되지 않습니다.
+
+새로 생성한 계정으로 로그인되어 있지 않은지 확인하세요.
+
+--
+.기존 계정
+--
+이미 계정이 있으시면 다음으로 이동하세요. link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] 그리고 로그인되어 있지 않은지 확인하세요.
+
+--
+====
+. "잠재 고객" 수준으로 접근 권한을 높이기 위해 비기술적 지원 사례를 생성합니다.
++
+.. *케이스* 탭을 선택한 다음 *비기술적 케이스 생성*을 선택하세요.
+.. 피드백 카테고리로 *사용자 등록 문제*를 선택하세요.
+.. *케이스 생성*을 선택하세요.
++
+필수 정보를 모두 입력하고 댓글란에 "제 업무용 이메일 주소는 <본인 이메일 주소>입니다."라고 적어주세요. ONTAP Select 평가 소프트웨어를 다운로드할 수 있도록 잠재고객 접근 권한을 요청드립니다.
+
++
+NetApp 담당자의 이름을 포함하십시오.
+
+.. *제출*을 선택하세요.
+
+
+
+
+
+
+== 2단계: ONTAP Select 평가 소프트웨어를 다운로드하세요.
+
+지원 요청이 검토 및 승인되면 NetApp 지원팀에서 제공하신 이메일 주소로 알림을 보내드립니다.
+
+.단계
+. https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["ONTAP Select 평가 소프트웨어를 다운로드하세요."^].
++
+평가판 라이선스 파일은 압축 파일 안에 있습니다.
+
+. 법적 요건을 준수하려면 다음 사항을 준수해야 합니다. link:https://mysupport.netapp.com/site/help["지원 사례를 개설하세요"^] 접근 권한을 얻기 전에. 이를 통해 NetApp 필요한 운영 환경에 바로 적용 가능한 소프트웨어를 제공하는 동시에 올바른 관리 및 문서화를 유지할 수 있습니다.
++
+
+NOTE: NetApp 오픈 소스 버전이나 대체 버전이 아닌 "실제 사용 가능한" 버전의 ONTAP Select 제공합니다. 지원 서비스는 정식 라이선스로 업그레이드한 경우에만 제공됩니다.
+
+
+
+.다음은 무엇인가요?
+평가 소프트웨어 다운로드가 완료되면 지침에 따라 ONTAP Select Deploy 관리 유틸리티를 다운로드하고 클러스터를 배포하십시오.
+
+.관련 정보
+* link:concept_lic_evaluation.html["ONTAP Select 구축을 위한 평가판 라이선스에 대해 알아보세요."]
+* link:task_adm_licenses.html#convert-license["평가판 라이센스를 운영 라이센스로 변환합니다"]
+
