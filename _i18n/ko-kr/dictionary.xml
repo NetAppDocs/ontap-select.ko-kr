@@ -1408,16 +1408,10 @@
   <block id="20e5e85bddb25cf1cf39977f4a5b8f1f" category="cell">데이터 집계의 임대 기간</block>
   <block id="a051cb6fe36d0d57186040136f51ded4" category="cell">노드 일련 번호입니다</block>
   <block id="0f4f157087aaf0bd28aa76133fd9d2c3" category="summary">NIC 2개 및 NIC 4개 구성에 대한 ONTAP Select vSwitch 구성 및 로드 밸런싱 정책</block>
-  <block id="96600f2ed0fb970e508d5209faa2adc5" category="paragraph">ONTAP Select는 표준 및 분산형 vSwitch 구성을 모두 사용할 수 있도록 지원합니다. 분산형 vSwitch는 LACP(Link Aggregation 구문을 지원)를 지원합니다. Link Aggregation은 여러 물리적 어댑터에 걸쳐 대역폭을 집계하는 데 사용되는 공통 네트워크 구성입니다. LACP는 공급업체 중립적인 표준이며 물리적 네트워크 포트 그룹을 단일 논리 채널로 묶는 네트워크 엔드포인트에 대해 개방형 프로토콜을 제공합니다. ONTAP Select는 LAG(Link Aggregation Group)로 구성된 포트 그룹과 함께 사용할 수 있습니다. 그러나 LAG 구성을 방지하려면 개별 물리적 포트를 단순 업링크(트렁크) 포트로 사용하는 것이 좋습니다. 이러한 경우 표준 및 분산 vSwitch에 대한 Best Practice가 동일합니다.</block>
   <block id="10e7ad3863cdd2b48f9a7524784cedee" category="paragraph">이 섹션에서는 2개의 NIC 및 4개의 NIC 구성에서 모두 사용해야 하는 vSwitch 구성 및 로드 밸런싱 정책에 대해 설명합니다.</block>
-  <block id="da05a02ceee0169095d6250face3e1a6" category="paragraph">ONTAP Select에서 사용할 포트 그룹을 구성할 때는 다음 Best Practice를 따라야 합니다. 포트 그룹 수준의 로드 밸런싱 정책은 원래 가상 포트 ID를 기준으로 하는 라우트입니다. ESXi 호스트에 연결된 스위치 포트에서 STP를 portfast로 설정하는 것이 좋습니다.</block>
-  <block id="dcd113410e8de0e424c08da8f26e1dbc" category="paragraph">모든 vSwitch 구성에는 최소한 두 개의 물리적 네트워크 어댑터가 하나의 NIC 팀에 번들로 포함됩니다. ONTAP Select는 2노드 클러스터를 위한 단일 10Gb 링크를 지원합니다. 그러나 NIC 집계를 통해 하드웨어 이중화를 구현하는 것은 NetApp 모범 사례입니다.</block>
   <block id="0293fc87704541accd375dc13230c50f" category="paragraph">vSphere 서버에서 NIC 팀은 여러 물리적 네트워크 어댑터를 단일 논리 채널로 묶는 데 사용되는 집계 구조로서, 모든 구성원 포트에서 네트워크 로드를 공유할 수 있습니다. NIC 팀은 물리적 스위치의 지원 없이 생성할 수 있다는 점을 기억해야 합니다. 로드 밸런싱 및 페일오버 정책은 업스트림 스위치 구성을 인식하지 못하는 NIC 팀에 직접 적용할 수 있습니다. 이 경우 정책은 아웃바운드 트래픽에만 적용됩니다.</block>
-  <block id="962c108610eb5a070640fd5feb949ee7" category="admonition">정적 포트 채널은 ONTAP Select에서 지원되지 않습니다. LACP 사용 채널은 분산 vSwitch에서 지원되지만 LACP LAG를 사용하면 LAG 멤버 전체에 걸쳐 부하가 고르게 분산되지 않을 수 있습니다.</block>
-  <block id="65d24c9d61558a8b366aef70cb0aaf2b" category="paragraph">단일 노드 클러스터의 경우 ONTAP Deploy는 외부 네트워크와 동일한 포트 그룹에 대해 포트 그룹을 사용하도록 ONTAP Select VM을 구성하거나, 필요에 따라 클러스터 및 노드 관리 트래픽에 대해 다른 포트 그룹을 사용하도록 구성합니다. 단일 노드 클러스터의 경우 원하는 물리적 포트 수를 외부 포트 그룹에 활성 어댑터로 추가할 수 있습니다.</block>
   <block id="ada616a12184135d755f2a6ccd530c96" category="paragraph">다중 노드 클러스터의 경우 ONTAP 배포는 각 ONTAP Select VM이 내부 네트워크에 대해 하나 또는 두 개의 포트 그룹을 사용하고 외부 네트워크에 대해 하나 또는 두 개의 포트 그룹을 별도로 사용하도록 구성합니다. 클러스터 및 노드 관리 트래픽은 외부 트래픽과 동일한 포트 그룹을 사용하거나 선택적으로 별도의 포트 그룹을 사용할 수 있습니다. 클러스터 및 노드 관리 트래픽은 내부 트래픽과 동일한 포트 그룹을 공유할 수 없습니다.</block>
   <block id="c290c5e002f0a732c59304f5b0fe70da" category="section-title">표준 또는 분산 vSwitch와 노드당 4개의 물리적 포트</block>
-  <block id="2305672b68f3fcd4d97158e1567f1348" category="paragraph">다중 노드 클러스터의 각 노드에 4개의 포트 그룹을 할당할 수 있습니다. 각 포트 그룹에는 다음 그림과 같이 활성 물리적 포트 1개와 대기 물리적 포트 3개가 있습니다.</block>
   <block id="ce0e9f9d478595e72d2141086ae9f75d" category="paragraph">* 노드당 4개의 물리적 포트가 있는 vSwitch *</block>
   <block id="87a3d8fd5fd63cf0600c00dc23888a61" category="inline-image-macro">노드당 4개의 물리적 포트가 있는 vSwitch</block>
   <block id="7651ca0c40d4efc698e62170cd7090ec" category="paragraph"><block ref="7651ca0c40d4efc698e62170cd7090ec" category="inline-image-macro-rx" type="image"></block></block>
@@ -1458,7 +1452,6 @@
   <block id="6f46b92116baa2fe630b25033fb2c0e6" category="cell">활성 어댑터: vmnic4 대기 어댑터: vmnic6, vmnic5, vmnic7</block>
   <block id="26fb40e405c6787f5c9155475ec643d2" category="cell">활성 어댑터: vmnic6 대기 어댑터: vmnic4, vmnic7, vmnic5</block>
   <block id="940b9a48464ec3646e72e186108b51ee" category="section-title">표준 또는 분산 vSwitch와 노드당 두 개의 물리적 포트</block>
-  <block id="7bf41ff56e10e1288ea5b99b9eea56f1" category="paragraph">2개의 고속(25/40Gb) NIC를 사용할 경우 권장 포트 그룹 구성은 4개의 10Gb 어댑터를 사용하는 구성과 개념적으로 매우 유사합니다. 2개의 물리적 어댑터만 사용하는 경우에도 4개의 포트 그룹을 사용해야 합니다. 포트 그룹 지정은 다음과 같습니다.</block>
   <block id="60a83065f51a4fb288f92ed5f3f3e6ff" category="cell">외부 1(e0a, e0b)</block>
   <block id="c6ea565d82c996559ab3190b92e2184c" category="cell">내부 1(e0c, e0e)</block>
   <block id="e36f7006bc8a130c74ace6103753342a" category="cell">내부 2(e0d, e0f)</block>
@@ -1468,7 +1461,6 @@
   <block id="a6c5ebdcab23a94a53b4e0d809a928b9" category="inline-image-macro">노드당 2개의 고속(25/40Gb) 물리적 포트가 있는 vSwitch</block>
   <block id="72b4a9e2850e5c37368d3f887a4ee79e" category="paragraph"><block ref="72b4a9e2850e5c37368d3f887a4ee79e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee9ff79a0430be4d206d034450f94331" category="paragraph">두 개의 물리적 포트(10Gb 이하)를 사용하는 경우 각 포트 그룹에는 활성 어댑터와 대기 어댑터가 서로 반대쪽에 구성되어 있어야 합니다. 내부 네트워크는 다중 노드 ONTAP Select 클러스터에만 존재합니다. 단일 노드 클러스터의 경우 두 어댑터 모두 외부 포트 그룹에서 활성 상태로 구성할 수 있습니다.</block>
-  <block id="70b278867da9b18f6b861f59616de27a" category="paragraph">다음 예에서는 다중 노드 ONTAP Select 클러스터에 대한 내부 및 외부 통신 서비스를 처리하는 두 포트 그룹과 vSwitch의 구성을 보여 줍니다. 내부 네트워크 VMNIC는 이 포트 그룹의 일부이며 대기 모드에서 구성되기 때문에 네트워크 중단 시 외부 네트워크는 내부 네트워크 VMNIC를 사용할 수 있습니다. 그 반대는 외부 네트워크의 경우입니다. 네트워크 중단 시 ONTAP Select VM의 적절한 장애 조치를 위해서는 두 포트 그룹 간에 활성 및 대기 VMNIC를 교대로 사용하는 것이 중요합니다.</block>
   <block id="8b863e843ddaab1e6b236310dfc11e3d" category="paragraph">* 노드당 두 개의 물리적 포트(10Gb 이하)가 있는 vSwitch *</block>
   <block id="0b192facec240b8aef1dfcf704fc55d3" category="inline-image-macro">노드당 두 개의 물리적 포트가 있는 vSwitch</block>
   <block id="40294088ed92f54e85ec516b44b1ec99" category="paragraph"><block ref="40294088ed92f54e85ec516b44b1ec99" category="inline-image-macro-rx" type="image"></block></block>
@@ -1484,7 +1476,6 @@
   <block id="97b13387c67304525d26e84d4e08bd65" category="paragraph">* LACP가 활성화된 분산형 vSwitch를 사용하는 내부 포트 그룹 구성 *</block>
   <block id="164e5bf0b14a04120f4d4c3828747329" category="inline-image-macro">LACP가 활성화된 분산 vSwitch를 사용하는 내부 포트 그룹 구성</block>
   <block id="e30ba3e13f82c433092d944bfb964d6d" category="paragraph"><block ref="e30ba3e13f82c433092d944bfb964d6d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a0cbdc264f5b7833605773dd16cbd5e7" category="admonition">LACP를 사용하려면 업스트림 스위치 포트를 포트 채널로 구성해야 합니다. 분산 vSwitch에서 이 기능을 활성화하기 전에 LACP 지원 포트 채널이 제대로 구성되어 있는지 확인하십시오.</block>
   <block id="a451fb0a81dc4fb9e6df8ff3f0cd6380" category="summary">ONTAP Select를 ROBO(원격 사무소/지사) 환경에 구축할 수 있습니다. ROBO 구축 계획의 일환으로 목표를 지원하는 구성을 선택해야 합니다.</block>
   <block id="1cfe009dafaa293a83a8a143e8aeb868" category="paragraph">ROBO 환경에 ONTAP Select를 구축할 때 두 가지 기본 구성을 사용할 수 있습니다.</block>
   <block id="c4f68953c4ccc7ea124ccc4e8eebd13a" category="admonition">ONTAP Select를 구축할 때 모든 VMware vSphere 라이센스를 사용할 수 있습니다.</block>
@@ -3987,4 +3978,13 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="619fea79d54cac08622de23d5f1d57d5" category="paragraph">웹 사용자 인터페이스에 Sign in 배포 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행하십시오.</block>
   <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">ONTAP Select 사용해 보세요</block>
   <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">접근 평가 소프트웨어</block>
+  <block id="276d590b2be111ae083f54bd5b504fe8" category="paragraph">ONTAP Select 표준 및 분산형 vSwitch 구성을 모두 지원합니다. 분산형 vSwitch는 링크 집합 구조(LACP)를 지원합니다. 링크 집합은 여러 물리적 어댑터에 걸쳐 대역폭을 집계하는 데 사용되는 일반적인 네트워크 구성 요소입니다. LACP는 벤더 중립적인 표준입니다. 이는 물리적 네트워크 포트 그룹을 단일 논리적 채널로 묶는 네트워크 엔드포인트용 개방형 프로토콜을 제공합니다. ONTAP Select 링크 집합 그룹(LAG)으로 구성된 포트 그룹과 함께 작동할 수 있습니다. 하지만 NetApp LAG 구성을 피하기 위해 개별 물리적 포트를 단순 업링크(트렁크) 포트로 사용하는 것을 권장합니다. 이러한 경우 표준 vSwitch와 분산 vSwitch에 대한 모범 사례는 동일합니다.</block>
+  <block id="fc3b15f3ea67bdb8fc3ec8d8e92401b0" category="paragraph">ONTAP Select 의 포트 그룹을 구성할 때는 다음 모범 사례를 따르십시오. 포트 그룹 수준의 로드 밸런싱 정책은 '시작 가상 포트 ID 기반 라우팅'입니다. VMware는 ESXi 호스트에 연결된 스위치 포트에서 STP를 Portfast로 설정할 것을 권장합니다.</block>
+  <block id="fc3d6769c570c96a63f36620bb0017bf" category="paragraph">모든 vSwitch 구성에는 최소 두 개의 물리적 네트워크 어댑터가 하나의 NIC 팀으로 묶여 있어야 합니다. ONTAP Select 2노드 클러스터에 대해 단일 10Gb 링크를 지원합니다. 하지만 NetApp 하드웨어 이중화를 보장하기 위해 NIC 집계를 사용할 것을 권장합니다.</block>
+  <block id="0b06404b1fc0eb6b5008a738720c52d4" category="admonition">ONTAP Select 에서는 정적 포트 채널이 지원되지 않습니다. LACP 지원 채널은 분산형 vSwitch에서 지원되지만, LACP LAG를 사용하면 LAG 멤버 간에 부하 분산이 고르지 않을 수 있습니다.</block>
+  <block id="e6128f1d2ba49d3a9848a10d14efa016" category="paragraph">단일 노드 클러스터의 경우 ONTAP Deploy는 ONTAP Select VM을 구성하여 외부 네트워크에 포트 그룹을 사용하고 클러스터 및 노드 관리 트래픽에 대해 동일한 포트 그룹 또는 선택적으로 다른 포트 그룹을 사용하도록 합니다. 단일 노드 클러스터의 경우, 원하는 수의 물리적 포트를 외부 포트 그룹에 활성 어댑터로 추가할 수 있습니다.</block>
+  <block id="315e6be6bae80f791d4affd9528b854b" category="paragraph">멀티노드 클러스터에서 각 노드에는 최대 4개의 포트 그룹을 할당할 수 있습니다. 각 포트 그룹은 다음 그림과 같이 하나의 활성 물리적 포트와 세 개의 대기 물리적 포트를 갖습니다.</block>
+  <block id="23063442dbfdc1f0a8618060853d7bce" category="paragraph">고속(25/40Gb) NIC 두 개를 사용할 경우 권장되는 포트 그룹 구성은 10Gb 어댑터 네 개를 사용할 때의 구성과 개념적으로 매우 유사합니다. 물리적 어댑터를 두 개만 사용하더라도 포트 그룹은 네 개로 사용하는 것이 좋습니다. 포트 그룹 할당은 다음과 같습니다.</block>
+  <block id="9bc25e03ceb7e341916e8e6cca6a827b" category="paragraph">다음 예는 다중 노드 ONTAP Select 클러스터의 내부 및 외부 통신 서비스를 처리하는 두 개의 포트 그룹과 vSwitch의 구성을 보여줍니다. 내부 네트워크 VMNIC는 이 포트 그룹에 속해 있고 대기 모드로 구성되어 있으므로 네트워크 장애 발생 시 외부 네트워크에서 내부 네트워크 VMNIC를 사용할 수 있습니다. 외부 네트워크의 경우는 정반대입니다. 두 포트 그룹 간에 활성 및 대기 VMNIC를 번갈아 사용하는 것은 네트워크 장애 발생 시 ONTAP Select VM의 올바른 페일오버를 위해 매우 중요합니다.</block>
+  <block id="bad767c4cc128e0a2a4e8d23a72bdbce" category="admonition">LACP를 사용하려면 상위 스위치 포트를 포트 채널로 구성해야 합니다. 분산 vSwitch에서 이 구성을 활성화하기 전에 LACP가 활성화된 포트 채널이 올바르게 구성되었는지 확인하십시오.</block>
 </blocks>
