@@ -3911,20 +3911,13 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="79ba28975143977867633095c7f73b2a" category="paragraph">단일 노드 클러스터를 생성할지 다중 노드 클러스터를 생성할지에 따라 단계가 달라집니다. 다중 노드 클러스터에는 2개, 4개, 6개, 8개, 10개 또는 12개의 노드가 있을 수 있습니다.</block>
   <block id="d3e10155b98b375f7263e8a2fc511046" category="sidebar">NetApp ONTAP Select VMware ESXi 또는 커널 기반 가상 머신(KVM) 하이퍼바이저를 실행하는 다양한 상용 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.18.1 관련 설명서가 포함되어 있습니다.</block>
   <block id="9819a8f62e77caeb3fdd9bc78f3d0a27" category="sidebar">ONTAP Select 9.18.1 문서</block>
-  <block id="b76521bcf27ea3e363a5684a8eadacba" category="paragraph">RHEL 10.0 및 Rocky Linux 10.0 호스트에서 KVM 하이퍼바이저를 사용할 때 소프트웨어 RAID 워크플로우에 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오.</block>
   <block id="7aa075f63e63ec1b0898cf7eebd760f6" category="inline-link-macro">CDEPLOY-4020: ONTAP Select Deploy: RHEL 10 및 ROCKY 10을 사용하여 클러스터 HWR을 생성하는 동안 경고 메시지가 표시됩니다.</block>
   <block id="7ceba9002504861c21a7c60ab97ce4d0" category="list-text"><block ref="7ceba9002504861c21a7c60ab97ce4d0" category="inline-link-macro-rx"></block></block>
   <block id="05e40b852405f8fbe510662799c939d2" category="inline-link-macro">CDEPLOY-4025: ONTAP Select DeployGUI: RHEL10/Rocky 10이 설치된 호스트의 클러스터 생성 페이지에서 SWR에 스토리지 풀 및 스토리지 디스크가 표시되지 않음</block>
   <block id="5b121e358e0c7c08ef9cd2f6ed82464f" category="list-text"><block ref="5b121e358e0c7c08ef9cd2f6ed82464f" category="inline-link-macro-rx"></block></block>
-  <block id="2ae302f55f82ce1e7a86c1e4d2bec1fc" category="paragraph">Red Hat Enterprise Linux 64비트(KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="b3511106033b4eaf52fa527685aee9bf" category="paragraph">Rocky Linux(KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6</block>
-  <block id="ad350138b5fe5c3ae51dcb7a7bee26e5" category="paragraph">*참고*: RHEL 10.0 및 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에는 소프트웨어 RAID 워크플로에 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오.</block>
-  <block id="ad503d6b4f8cd286498a440c78edf47c" category="list-text">ONTAP Select 9.17.1 버전부터 KVM 하이퍼바이저는 Red Hat Enterprise Linux(RHEL) 10.0 및 9.6, 그리고 Rocky Linux 10.0 및 9.6에서 지원됩니다.</block>
-  <block id="9a6b54f1d41a9f7a21b56ebb01706042" category="list-text">Red Hat Enterprise Linux(RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6 버전에서 KVM 사용</block>
   <block id="fc0e52e7a743e546179c3376db422db0" category="list-text">Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6 버전에서 KVM 사용</block>
-  <block id="c5a8db185a9f4a35ad276638f9533ab6" category="list-text">레드햇 엔터프라이즈 리눅스(RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="5701e65b5391163c34edb9efc807ee5f" category="list-text">Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6</block>
-  <block id="77be5fd15bdb7705f2988a237003df51" category="list-text">레드햇 엔터프라이즈 리눅스(RHEL) 64비트 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="1d635a2bfb4e1fe570efdeb7e95a39b1" category="summary">ONTAP Select 평가 소프트웨어 다운로드 권한을 요청하십시오.</block>
   <block id="14a6da11ffa9cf53251b9ff57d86f2e3" category="doc">ONTAP Select 평가 소프트웨어에 액세스하세요.</block>
   <block id="fe359189fa4d670313b3429fe242de5a" category="inline-link-macro">ONTAP Select 평가 소프트웨어</block>
@@ -3987,4 +3980,11 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="23063442dbfdc1f0a8618060853d7bce" category="paragraph">고속(25/40Gb) NIC 두 개를 사용할 경우 권장되는 포트 그룹 구성은 10Gb 어댑터 네 개를 사용할 때의 구성과 개념적으로 매우 유사합니다. 물리적 어댑터를 두 개만 사용하더라도 포트 그룹은 네 개로 사용하는 것이 좋습니다. 포트 그룹 할당은 다음과 같습니다.</block>
   <block id="9bc25e03ceb7e341916e8e6cca6a827b" category="paragraph">다음 예는 다중 노드 ONTAP Select 클러스터의 내부 및 외부 통신 서비스를 처리하는 두 개의 포트 그룹과 vSwitch의 구성을 보여줍니다. 내부 네트워크 VMNIC는 이 포트 그룹에 속해 있고 대기 모드로 구성되어 있으므로 네트워크 장애 발생 시 외부 네트워크에서 내부 네트워크 VMNIC를 사용할 수 있습니다. 외부 네트워크의 경우는 정반대입니다. 두 포트 그룹 간에 활성 및 대기 VMNIC를 번갈아 사용하는 것은 네트워크 장애 발생 시 ONTAP Select VM의 올바른 페일오버를 위해 매우 중요합니다.</block>
   <block id="bad767c4cc128e0a2a4e8d23a72bdbce" category="admonition">LACP를 사용하려면 상위 스위치 포트를 포트 채널로 구성해야 합니다. 분산 vSwitch에서 이 구성을 활성화하기 전에 LACP가 활성화된 포트 채널이 올바르게 구성되었는지 확인하십시오.</block>
+  <block id="666e2d64cc00d0a8b97b0fd56b7dd1f8" category="paragraph">RHEL 10.1 및 10.0과 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에 대한 소프트웨어 RAID 워크플로 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오:</block>
+  <block id="fd03a137fae70421c1edc03522f9a111" category="paragraph">Red Hat Enterprise Linux 64비트(KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
+  <block id="4c593fb6a6971787a6c1b21b1778dbf1" category="paragraph">*참고*: RHEL 10.1 및 10.0과 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에는 소프트웨어 RAID 워크플로우 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오:</block>
+  <block id="cc11bdf4f5765009cf63440bceecaf71" category="list-text">ONTAP Select 9.17.1부터 KVM 하이퍼바이저는 Red Hat Enterprise Linux(RHEL) 10.1, 10.0, 9.7, 9.6 및 Rocky Linux 10.0, 9.6에서 지원됩니다.</block>
+  <block id="9f67ae0fbf0ec858c854905b95acf153" category="list-text">Red Hat Enterprise Linux(RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6의 KVM</block>
+  <block id="02d99372e9e1eb54a9dddd0b08891357" category="list-text">Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
+  <block id="d65f97fb1a167a35c6951233420ba74d" category="list-text">Red Hat Enterprise Linux (RHEL) 64비트 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
 </blocks>
