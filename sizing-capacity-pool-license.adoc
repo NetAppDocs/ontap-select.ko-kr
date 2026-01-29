@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: sizing-capacity-pool-license.html 
+keywords: license, licensing, Capacity Tiers, usable, space 
+summary: Capacity Tiers 라이센스는 각 노드에서 관리하는 기본 디스크 용량을 기준으로 하며, 노드, HA 쌍 또는 클러스터의 사용 가능한 용량을 기준으로 하지 않습니다. 각 Capacity Tiers 라이센스는 지정된 용량에 대해 개별 노드 일련 번호에 할당되며, 관련 지원 계약이 필요합니다. 
+---
+= ONTAP Select Capacity Pools 라이센스 크기 조정 시 고려 사항
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Capacity Pool 라이센스의 라이센스 용량은 전체 TiB 단위로 제공되며 최소 2TiB입니다. 라이센스 용량은 사용 가능한 공간에 오버헤드 계수를 곱하여 계산합니다. 오버헤드 계수는 단일 노드 클러스터와 다중 노드(HA 쌍 기반) 클러스터 간에 차이가 있습니다.
+
+* 단일 노드 클러스터의 오버헤드 계수는 1.13입니다.
+* 다중 노드 클러스터의 오버헤드 계수는 2.67입니다
+
+
+구축에 필요한 용량이 충분한지 확인하려면 사용 가능한 공간을 기준으로 라이센스 용량을 계산해야 합니다.
+
+[cols="25,30,45"]
+|===
+| 설명 | 단일 노드 | HA 쌍 또는 HA와 단일 노드 클러스터의 혼합 
+
+
+| 사용 가능한 공간 | 20TiB | 단일 노드 클러스터당 10TiB HA 쌍의 경우 20TiB 
+
+
+| 라이센스 공간 | 23TiB(20 x 1.13 = 22.6, 다음 전체 TiB로 반올림) | 54 TiB (20 x 2.67 = 53.4, 다음 전체 TiB로 반올림) 
+
+
+| 노드당 최대 사용 가능 공간 *참고*: 노드 또는 HA 쌍당 최대 관리 가능 공간은 400 TiB입니다. | 353 TiB (400 / 1.13)  a| 
+단일 노드 클러스터당:
+
+74TiB[(400/2)/2.67]
+
+HA 쌍 클러스터당:
+
+148 TiB (2 x 74)
+
+|===
+.다음 단계
+link:task_lic_acquire_cp.html["ONTAP Select용 Capacity Pools 라이센스 획득"]

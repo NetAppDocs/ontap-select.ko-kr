@@ -88,32 +88,42 @@ sidebar:
     entries:
     - title: 옵션
       entries:
-      - title: 평가판 라이센스
+      - title: 평가판 라이선스에 대해 알아보기
         url: "/concept_lic_evaluation.html"
       - title: 운영 라이센스
-        url: "/concept_lic_production.html"
-      - title: 플랫폼 라이센스 제공
-        url: "/concept_lic_platforms.html"
-    - title: 용량 풀 라이센스 모델
-      entries:
-      - title: 운영 세부 정보
-        url: "/concept_lic_cp_operation.html"
-      - title: 노드 일련 번호입니다
-        url: "/concept_lic_cp_serial_number.html"
-      - title: 제한 사항
-        url: "/concept_lic_cp_restrictions.html"
-      - title: 용량 풀 대 용량 계층
-        url: "/concept_lic_cp_compare_ct.html"
-      - title: 이점 요약
-        url: "/concept_lic_cp_benefits.html"
-    - title: 구매
+        entries:
+        - title: 프로덕션 라이선스에 대해 알아보기
+          url: "/concept_lic_production.html"
+        - title: 플랫폼 라이센스 제공
+          url: "/concept_lic_platforms.html"
+        - title: 용량 풀 라이센스 모델
+          entries:
+          - title: 운영 세부 정보
+            url: "/concept_lic_cp_operation.html"
+          - title: 노드 일련 번호입니다
+            url: "/concept_lic_cp_serial_number.html"
+          - title: 제한 사항
+            url: "/concept_lic_cp_restrictions.html"
+          - title: 이점 요약
+            url: "/concept_lic_cp_benefits.html"
+        - title: 용량 계층과 용량 풀
+          url: "/concept_lic_cp_compare_ct.html"
+    - title: 라이선스 구매
       entries:
       - title: 라이선스 워크플로
         url: "/concept_lic_workflow.html"
       - title: 용량 계층
-        url: "/task_lic_acquire_ct.html"
+        entries:
+        - title: 라이선스 크기 결정 시 고려 사항
+          url: "/sizing-capacity-tier-license.html"
+        - title: 라이센스 취득
+          url: "/task_lic_acquire_ct.html"
       - title: 용량을 제공합니다
-        url: "/task_lic_acquire_cp.html"
+        entries:
+        - title: 라이선스 크기 결정 시 고려 사항
+          url: "/sizing-capacity-pool-license.html"
+        - title: 라이센스 취득
+          url: "/task_lic_acquire_cp.html"
     - title: ONTAP 기능
       url: "/reference_lic_ontap_features.html"
   - title: 설치합니다

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_lic_cp_compare_ct.html 
 keywords: license, licensing, Capacity Pools, Capacity Tiers, comparing 
-summary: Capacity Pools와 Capacity Tier 라이센스 모델 간에는 여러 가지 차이점이 있습니다. 
+summary: Capacity Tiers 라이센스 모델과 Capacity Pools 라이센스 모델에는 몇 가지 차이점이 있습니다. 
 ---
-= ONTAP Select 용량 풀 라이센스와 용량 계층 라이센스를 비교합니다
+= ONTAP Select 용량 등급 및 용량 풀 라이센스 비교
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -21,13 +21,13 @@ summary: Capacity Pools와 Capacity Tier 라이센스 모델 간에는 여러 �
 |  | 용량 계층 | 용량을 제공합니다 
 
 
-| 라이센스 일련 번호입니다 | NetApp에서 생성하여 노드에 할당된 9자리 숫자 | NetApp에서 생성하여 용량 풀에 할당된 9자리 숫자입니다 
+| 라이센스 일련 번호입니다 | NetApp은 9자리 숫자를 생성하여 노드에 할당합니다 | NetApp은 9자리 숫자를 생성하여 용량 풀에 할당합니다. 
 
 
 | 사용권 잠금 | ONTAP Select 노드에 대해 잠겨 있습니다 | License Manager 인스턴스에 잠겼습니다 
 
 
-| 라이센스 기간 | 영구(갱신 필요 없음) | 구매 기준 고정 기간(갱신 필요) 
+| 라이센스 기간 | 영구(갱신 필요 없음) | 구매를 기준으로 한 고정 기간(갱신 필요) 
 
 
 | 데이터 집계의 임대 기간 | 해당 없음 | 1시간~7일 
@@ -52,4 +52,10 @@ summary: Capacity Pools와 Capacity Tier 라이센스 모델 간에는 여러 �
 
 
 | 적용: 라이센스가 만료되었습니다 | 해당 없음 | 예(유예 기간 없음) 
+
+
+| 최소 라이센스 | 1TiB | 2TiB 
+
+
+| 최대 관리 공간 | 노드당 400 TiB | 노드당 400 TiB 
 |===

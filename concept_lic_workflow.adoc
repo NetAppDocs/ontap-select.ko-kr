@@ -25,5 +25,12 @@ summary: 워크플로우를 따라 ONTAP Select 배포에 대한 라이선스를
 
 image:purchased_license_workflow.png["에서는 운영 ONTAP Select 구축을 위한 스토리지 라이센스를 구입하고 설치하는 데 사용되는 프로세스에 대해 설명합니다."]
 
+.다음은 무엇인가요?
+ONTAP Select 라이센스 크기를 결정할 때 고려해야 할 사항에 대해 알아보십시오.
+
+* link:sizing-capacity-tier-license.html["Capacity Tiers 라이센스"]
+* link:sizing-capacity-pool-license.html["용량 풀 라이센스"]
+
+
 .관련 정보
-link:task_adm_licenses.html["ONTAP Select 라이센스"]
+link:task_adm_licenses.html["ONTAP Select 라이센스 관리에 대해 알아보십시오"]
