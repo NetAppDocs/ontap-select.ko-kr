@@ -40,9 +40,6 @@ ONTAP Select 제품 다운로드 옵션 업데이트:: NetApp Support 사이트�
 
 | ONTAP Select 노드 업그레이드 | ONTAP Select 이미지 | link:concept_adm_upgrading_nodes.html["ONTAP Select 노드 업그레이드"] 
 |===
-
-NOTE: 제품 다운로드 변경 사항은 ONTAP Select 9.17.1, 9.16.1, 9.15.1 및 9.14.1에도 적용됩니다.
-
 --
 클러스터 확장 및 축소에 대한 향상된 지원:: ONTAP Select 9.18.1부터 ESXi 및 KVM 하이퍼바이저 호스트의 4노드 및 12노드 ONTAP Select 클러스터 간에 클러스터 확장 및 축소가 지원됩니다.
 +
