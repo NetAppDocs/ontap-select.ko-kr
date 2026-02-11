@@ -37,15 +37,18 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * NVMe over TCP
 * ONTAP 멀티 테넌시 기능
 * ONTAP S3 를 참조하십시오
+* SnapLock Select
++
+SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock 설명서"^]을(를) 참조하십시오.
+
 * S3 SnapMirror
 * SnapMirror를 참조하십시오
-* SnapMirror 클라우드
+* SnapMirror Cloud
 * SnapRestore
 * SnapVault
 * 스토리지 VM 재해 복구(SVM DR)
 +
-
-NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두를 SVM DR을 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 사용하는 버전 + 2로 제한됩니다. 예를 들어 ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.
+ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두를 SVM DR을 지원합니다. SVM DR 지원은 소스 ONTAP 버전을 사용하는 버전 + 2로 제한됩니다. 예를 들어 ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.
 
 
 
@@ -56,17 +59,13 @@ NOTE: ONTAP Select는 최대 16개의 관계를 통해 소스와 대상 모두�
 다음을 포함하여 기본적으로 활성화되지 않은 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다.
 
 * FabricPool
++
+
+NOTE: StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
+
 * MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
 
 
-[NOTE]
-====
-* ONTAP Select 9.16.1 및 이전 버전의 경우 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)를 다음에서 사용할 수 있습니다.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] .
-* ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
-* StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
-
-
-====
 .관련 정보
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 비교 9"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이센스 키"^]

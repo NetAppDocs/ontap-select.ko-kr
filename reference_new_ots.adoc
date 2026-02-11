@@ -113,19 +113,19 @@ ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원::
 link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
 
 --
-SnapMirror 클라우드 지원:: ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.
+SnapMirror Cloud 지원:: ONTAP Select 9.17.1부터 SnapMirror Cloud가 ONTAP Select에서 지원됩니다. SnapMirror Cloud는 라이선스가 부여된 ONTAP 기능으로, ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 버전 9.17.1로 업그레이드할 때 기본적으로 활성화됩니다.
 +
 --
-https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 통해 개체 스토리지에 대해 알아보세요"^] .
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror Cloud를 이용한 오브젝트 스토리지 백업에 대해 알아보십시오"^].
 
 --
-SnapLock Select Enterprise 지원:: ONTAP Select 9.17.1부터 새로운 배포에는 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)가 자동으로 라이선스됩니다.  ONTAP Select 9.16.1 및 이전 버전에서 업그레이드하려면 SnapLock Select 라이선스를 다운로드해야 합니다.link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^] 그리고 수동으로 적용하세요.
+SnapLock Select 지원:: ONTAP Select 9.17.1 버전부터는 신규 구축 시 SnapLock Select(위변조 방지 스냅샷 잠금 기능 포함) 라이선스가 자동으로 적용됩니다. ONTAP Select 9.16.1 이하 버전에서 업그레이드하는 경우, SnapLock Select 라이선스를 link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^]에서 무료로 다운로드하여 수동으로 적용할 수 있습니다. 자세한 내용은 link:reference_lic_ontap_features.html#enabled-ontap-features["ONTAP 기능은 기본적으로 자동으로 활성화됩니다"]를 참조하십시오.
 다중 노드 클러스터에서 vSAN ESA 지원:: ONTAP Select 9.17.1부터 vSAN Express Storage Architecture(ESA)에 대한 지원이 확장되어 다중 노드 클러스터를 배포할 수 있게 되었습니다.  이 향상된 기능을 사용하면 vSAN ESA 구성을 배포할 수 있습니다.
 +
 --
-vSAN ESA는 ESX 전용 구성이며 vSphere 8에 도입된 VMware vSAN용 새로운 아키텍처입니다. vSAN ESA는 특히 NVMe 기반 TLC 플래시 장치를 사용할 때 향상된 효율성, 확장성 및 성능을 제공하도록 설계되었습니다.
+vSAN ESA는 ESXi 전용 구성이며 vSphere 8에서 도입된 VMware vSAN의 새로운 아키텍처입니다. vSAN ESA는 특히 NVMe 기반 TLC 플래시 장치를 사용할 때 향상된 효율성, 확장성 및 성능을 제공하도록 설계되었습니다.
 
-ONTAP Select Deploy 및 ONTAP Select for ESX는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하여 ONTAP Select 단일 노드 및 다중 노드 클러스터를 구성할 수 있도록 지원합니다.
+ONTAP Select Deploy 및 ONTAP Select for ESXi는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하여 ONTAP Select 단일 노드 및 다중 노드 클러스터 구성을 지원합니다.
 
 [NOTE]
 ====
@@ -194,7 +194,7 @@ KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.15
 
 
 
-NOTE: 클러스터 확장 및 축소 지원은 ESX 클러스터로만 제한됩니다.
+NOTE: 클러스터 확장 및 축소 지원은 ESXi 클러스터로만 제한됩니다.
 
 
 

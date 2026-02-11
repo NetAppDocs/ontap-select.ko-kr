@@ -4,7 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm 
 summary: KVM 하이퍼바이저의 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
 ---
-= ONTAP Select KVM 요구 사항
+= ONTAP Select용 KVM 외부 스토리지 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ CAUTION: 지정하는 스토리지 용량은 외부 스토리지의 허용된 �
 
 == 모범 사례
 
-다음 권장 사항을 준수해야 합니다.
+다음과 같은 모범 사례를 따라야 합니다.
 
 * ONTAP Select 네트워크 및 외부 스토리지에 대한 전용 네트워크 포트, 대역폭 및 vSwitch 구성을 정의합니다
 * 스토리지 사용률을 제한하도록 용량 옵션 구성(ONTAP Select는 외부 스토리지 풀의 전체 용량을 사용할 수 없음)

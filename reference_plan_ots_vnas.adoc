@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_plan_ots_vnas.html 
-keywords: plan, planning, vnas, vmware esxi, 
+keywords: plan, planning, vnas, vmware esxi, external storage 
 summary: VMware ESXi 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
 ---
-= ONTAP Select VMware ESXi 요구 사항
+= ONTAP Select용 VMware ESXi 외부 스토리지 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -53,9 +53,9 @@ CAUTION: 호스트를 구성하거나 스토리지 추가 작업을 수행할 �
 
 == 모범 사례
 
-사용 가능한 VMware 설명서를 참조하여 ESXi 호스트에 대해 식별된 적절한 Best Practice를 준수하십시오. 추가 사항:
+VMware 설명서를 검토하고 ESXi 호스트에 대해 식별된 적용 가능한 모범 사례를 따르십시오. 또한:
 
 * ONTAP Select 네트워크 및 외부 스토리지에 대한 전용 네트워크 포트, 대역폭 및 vSwitch 구성 정의(iSCSI 또는 NFS 사용 시 VMware vSAN 및 일반 스토리지 어레이 트래픽)
 * 용량 옵션을 구성하여 스토리지 사용률을 제한합니다(ONTAP Select는 외부 vNAS 데이터 저장소의 전체 용량을 사용할 수 없음).
-* 가능한 경우 모든 일반 외부 스토리지 어레이가 사용 가능한 이중화 및 HA 기능을 사용하도록 합니다
+* 모든 범용 외부 스토리지 어레이가 가능한 경우 사용 가능한 이중화 및 HA 기능을 사용하는지 확인하십시오
 

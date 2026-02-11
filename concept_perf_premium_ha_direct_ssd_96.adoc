@@ -28,7 +28,7 @@ ONTAP Select(Premium XL) 하드웨어(노드당)
 ** 물리적 코어 32개(소켓 16개 x 2개), 논리 코어 64개
 ** 256GB RAM
 ** 호스트당 드라이브: 24 960GB SSD
-** ESX 6.5U1
+** ESXi 6.5U1
 
 
 
