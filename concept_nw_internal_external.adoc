@@ -72,7 +72,7 @@ ONTAP Deploy 2.10부터 내부 네트워크에서 사용되는 MTU 크기를 7,5
 ONTAP Select 외부 네트워크는 클러스터의 모든 아웃바운드 통신을 담당하므로 단일 노드 및 다중 노드 구성 모두에 존재합니다. 이 네트워크에는 내부 네트워크처럼 엄격하게 정의된 처리량 요구 사항이 없지만, 관리자는 클라이언트와 ONTAP VM 사이에 네트워크 병목 현상이 발생하지 않도록 주의해야 합니다. 성능 문제가 ONTAP Select 문제로 잘못 인식될 수 있기 때문입니다.
 
 
-NOTE: 내부 트래픽과 유사한 방식으로 외부 트래픽은 vSwitch 계층(VST) 및 외부 스위치 계층(EST)에서 태깅될 수 있습니다. 또한, 외부 트래픽은 VGT라는 프로세스에서 ONTAP Select VM 자체에 의해 태깅될 수 있습니다. 섹션을 참조하십시오 link:concept_nw_data_mgmt_separation.html["데이터 및 관리 트래픽 분리"] 를 참조하십시오.
+NOTE: 내부 트래픽과 유사한 방식으로 외부 트래픽은 vSwitch 계층(VST)과 외부 스위치 계층(EST)에서 태그를 지정할 수 있습니다. 또한 외부 트래픽은 VGT라는 프로세스에서 ONTAP Select VM 자체에 의해 태그를 지정할 수 있습니다. 자세한 내용은 link:concept_nw_data_mgmt_separation.html["데이터 및 관리 트래픽 분리"] 섹션을 참조하십시오.
 
 다음 표에서는 ONTAP Select 내부 및 외부 네트워크의 주요 차이점을 보여 줍니다.
 

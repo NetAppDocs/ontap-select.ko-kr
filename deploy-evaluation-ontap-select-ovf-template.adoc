@@ -32,7 +32,7 @@ VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드부터 최대 99개
 
 image:prepare_ESXi_host_requirements.png["ESXi 호스트를 준비하기 위한 요구 사항"]
 
-호스트 구성 옵션에 대한 자세한 내용은 를 link:esxi-host-configuration-and-preparation-checklist.html["ONTAP Select 설치 설명서"]참조하십시오.
+호스트 구성 옵션에 대한 자세한 내용은 link:esxi-host-configuration-and-preparation-checklist.html["ONTAP Select 설치 설명서"]을(를) 참조하십시오.
 
 
 

@@ -23,7 +23,7 @@ ONTAP Select를 구축하기 전에 하이퍼바이저 네트워크를 올바르
 각 ONTAP Select 호스트에서 외부 네트워크 및 내부 네트워크를 지원하도록 가상 스위치를 구성해야 합니다(다중 노드 클러스터만 해당). 다중 노드 클러스터를 구축할 때는 내부 클러스터 네트워크에서 네트워크 연결을 테스트해야 합니다.
 
 
-NOTE: 하이퍼바이저 호스트에서 vSwitch를 구성하는 방법과 고속 인터페이스 기능에 대한 자세한 내용은 을 참조하십시오 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
+NOTE: 하이퍼바이저 호스트에서 vSwitch를 구성하는 방법과 고속 인터페이스 기능에 대한 자세한 내용은 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
 
 
 
@@ -72,7 +72,7 @@ NOTE: 필요한 경우 네트워크 설계에 따라 클러스터 MTU 값을 수
 * NIC2가 활성 상태입니다
 
 
-를 참조하십시오 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 두 개의 NIC 배포에 대한 자세한 내용은 섹션을 참조하십시오.
+2-NIC 구축에 대한 자세한 내용은 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
 
 
 
@@ -111,7 +111,7 @@ NOTE: 필요한 경우 네트워크 설계에 따라 클러스터 MTU 값을 수
 * 대기 모드에서 NIC1, NIC2, NIC3
 
 
-를 참조하십시오 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
+4-NIC 배포에 대한 자세한 내용은 link:concept_nw_concepts_chars.html["딥 다이브 네트워킹"] 섹션을 참조하십시오.
 
 
 

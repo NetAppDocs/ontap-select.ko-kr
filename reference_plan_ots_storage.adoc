@@ -71,7 +71,7 @@ RAID 컨트롤러에 대한 최소 요구 사항은 다음과 같습니다.
 
 
 
-NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 를 참조하십시오 link:concept_stor_concepts_chars.html["심층 분석 스토리지"] 섹션을 참조하십시오.
+NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 추가 구성 요구 사항에 대한 link:concept_stor_concepts_chars.html["심층 분석 스토리지"] 섹션을 참조하십시오.
 
 
 
@@ -86,7 +86,7 @@ NOTE: 하드웨어 RAID 컨트롤러가 있는 경우 를 참조하십시오 lin
 
 === KVM 관련 요구 사항
 
-또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["리눅스 서버 준비"] 자세한 내용은 다음 단계를 참조하세요.
+또한 특정 소프트웨어 패키지 구성 요구 사항이 있습니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["리눅스 서버 준비"] 단계를 참조하십시오.
 
 KVM에 대한 미디어 기대치:: 사용되는 SSD 플래시 저장 장치는 다음과 같은 추가 요구 사항을 충족해야 합니다.
 +
@@ -137,7 +137,7 @@ ONTAP Select 배포를 계획할 때 스토리지 할당 및 사용과 관련된
 가장 중요한 스토리지 제한은 아래에 나와 있습니다. 또한 보다 자세한 내용은 를 검토해야 link:https://mysupport.netapp.com/matrix/["상호 운용성 매트릭스 툴"^]합니다.
 
 
-TIP: ONTAP Select는 스토리지 할당 및 사용과 관련된 몇 가지 제한 사항을 적용합니다. ONTAP Select 클러스터를 구축하거나 라이센스를 구입하기 전에 먼저 이러한 제한 사항을 숙지해야 합니다. 를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["라이센스"] 섹션을 참조하십시오.
+TIP: ONTAP Select는 스토리지 할당 및 사용과 관련된 몇 가지 제한 사항을 적용합니다. ONTAP Select 클러스터를 배포하거나 라이센스를 구매하기 전에 이러한 제한 사항을 숙지해야 합니다. 자세한 내용은 link:concept_lic_evaluation.html["라이센스"] 섹션을 참조하십시오.
 
 
 
