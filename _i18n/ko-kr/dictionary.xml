@@ -2943,10 +2943,8 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8a4d972efa4a178e4f23653b4b6a1b69" category="paragraph">지원되는 ONTAP Select 버전의 새로운 기능과 향상된 기능에 대해 알아봅니다.</block>
   <block id="fa9e744025392ca74a15477f1e137192" category="section-title">ONTAP Select 9.16.1 을 참조하십시오</block>
   <block id="6c1d79ac25f0c97bc720f88ff0f156e0" category="list-text">NetApp 라이센스 파일 지원이 업데이트되었습니다</block>
-  <block id="a1a2f3308f6033087cf20e84356aa4ac" category="list-text">ONTAP Select 9.16.1부터 NetApp 라이센스 파일(NLF) 지원이 업데이트됩니다. 새로운 NLF 포맷에는 ARP, ONTAP S3 및 S3 SnapMirror 기능에 대한 라이센스가 포함되어 있습니다. <block ref="b5ed3fe3b9ec5f0e955203c12216c0fe" category="inline-link-macro-rx"></block>..</block>
   <block id="9fc3a2fe374c89216150309f04d52677" category="paragraph">새로운 ONTAP Select 9.16.1 배포의 경우 새로운 NLF 형식이 자동으로 적용됩니다. 기존 ONTAP Select 배포를 9.16.1로 업그레이드하면 새 NLF 형식이 적용되지 않습니다. ARP, ONTAP S3 및 S3 SnapMirror 기능 라이센스를 얻으려면 업그레이드 후 업데이트된 NLF를 다운로드해야 합니다. ONTAP Select 9.15.1 이전 버전으로 되돌리면 업그레이드 전에 사용했던 기능 라이센스를 다시 설치해야 합니다.</block>
   <block id="9ff1c34bad1597cf08ab1c4399ae7496" category="list-text">자율적 랜섬웨어 방어 지원</block>
-  <block id="0d42d1fa24a02ff9cf9230752f2e8dbc" category="list-text">ONTAP Select 9.16.1은 자율적 랜섬웨어 방어(ARP)를 지원합니다. ONTAP Select 9.16.1은 ARP에 대한 수동 업데이트만 지원하며 자동 업데이트는 지원되지 않습니다. ARP 기능 라이센스는 ONTAP Select 9.16.1용 NLF에 포함되어 있습니다. <block ref="b5ed3fe3b9ec5f0e955203c12216c0fe" category="inline-link-macro-rx"></block>..</block>
   <block id="432f71c7f4f95547896f41e4d812805f" category="list-text">ONTAP Select 9.16.1에는 VMware ESXi 8.0 U3에 대한 지원이 포함되어 있습니다.</block>
   <block id="a011a191055a233d6e8de3b11aacb53c" category="doc">ONTAP Select 배포를 위한 모범 사례 요약</block>
   <block id="5a4ab7845b9d12a7fe46ca9fb4f76647" category="doc">ONTAP Select 배포 하이퍼바이저 호스트 고려 사항</block>
@@ -3185,7 +3183,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="69bbee1943d709d1872e201eef4b29a8" category="paragraph">ONTAP Select는 하이퍼바이저 호스트에 가상 머신으로 구축할 수 있는 ONTAP의 소프트웨어 전용 버전입니다. 이 제품은 Cloud Volumes ONTAP와 같은 기타 소프트웨어 전용 옵션뿐만 아니라 주요 FAS, AFF 및 ASA ONTAP 제품군을 보완합니다.</block>
   <block id="00a3caa2896a927e39b353d23b56eb2d" category="paragraph">ONTAP Select는 내부 디스크 드라이브, NVMe, SSD 또는 HDD 및 외부 어레이 스토리지를 전용 ONTAP 스토리지 시스템에서 제공하는 것과 동일한 여러 이점을 가진 유연한 스토리지 시스템으로 전환해 줍니다. 또한 새로운 서버나 기존 서버 인프라에 ONTAP Select을 배포할 수도 있습니다. ONTAP Select는 관리가 용이하며 ONTAP 기반 솔루션과 동일한 관리 소프트웨어를 활용하므로, 운영 오버헤드와 교육 요구사항이 줄어듭니다.</block>
   <block id="8307546cfa4f0ccad4627a2dcd4f46fa" category="paragraph">ONTAP Select는 용량 계층과 완벽한 유연한 용량 풀을 갖춘 두 가지 보완 라이센스 모델을 통해 용량 소비 요구에 적응합니다. 두 라이센스 모델 모두 용량을 1TB의 증분으로 늘릴 수 있습니다. 예를 들어, 몇 테라바이트의 작은 용량으로 시작하고 프로젝트 규모가 커짐에 따라 용량을 동적으로 추가할 수 있습니다. 용량 풀을 사용하는 경우 프로젝트 완료 시점에 가장 적합한 방식으로 용량을 재배포할 수 있습니다.</block>
-  <block id="d88f78a3aeac7464dce1dfe85df34e06" category="paragraph">ONTAP Select는 VMware vSphere 같은 클라우드 관리 프레임워크에 통합되어 있습니다. 이를 통해 파일 서비스, 홈 디렉토리, 소프트웨어 개발 환경 및 애플리케이션 테스트 등과 같은 새 프로젝트의 구현을 앞당길 수 있습니다.</block>
   <block id="39de1f5e6bbe7e17017c377d3305e9fd" category="paragraph">SnapMirror 소프트웨어를 사용하면 하이브리드 클라우드 전반에서 ONTAP 스토리지 간에 데이터를 이동할 수 있으므로 데이터를 원하는 위치에서 쉽게 액세스할 수 있습니다. 예를 들어, 아이디어를 증명하기 위해 환경을 빠르게 가동할 수 있습니다. 나중에 운영 구축을 위해 프로젝트를 전용 스토리지 플랫폼으로 이동하거나 개발 워크플로우의 일부로 클라우드에서 액세스할 수 있습니다.</block>
   <block id="9c191e042a5bb50dde6bcacd73b9fc18" category="paragraph">소프트웨어를 통해 IT 서비스를 구현 및 제공함으로써 관리자는 이전에는 불가능했던 속도와 민첩성을 신속하게 리소스를 프로비저닝할 수 있습니다. 최신 데이터 센터가 소프트웨어 정의 인프라(SDI) 아키텍처로 전환됨에 따라 가장 중요한 IT 자산을 기본 물리적 인프라와 분리하여 유연성, 확장성 및 프로그래밍 기능을 제공할 수 있습니다.</block>
   <block id="cc0ffc2288900bd57ac4b3e354e5fb49" category="paragraph">ONTAP Select는 소비 기반 라이센스 모델을 도입했습니다. 운영 환경에 ONTAP Select 클러스터를 구축할 때 각 노드 또는 공유 용량 풀의 스토리지 용량이 포함된 라이센스를 구매해야 합니다. Deploy 유틸리티를 사용하여 클러스터 노드의 스토리지 용량을 설정하는 라이센스 파일을 적용해야 합니다.</block>
@@ -3487,7 +3484,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="1b8fd93e725596cfcebcd993f635973a" category="cell">소프트웨어 RAID 구성</block>
   <block id="612323f6c1e52e88287fea6fecdef4e1" category="cell">NVMe 드라이브는 ...</block>
   <block id="0bbdf237a06a8d91581305ad9eaa40be" category="admonition">커널 기반 가상 머신(KVM)은 대형 인스턴스 유형을 지원하지 않습니다.</block>
-  <block id="dd2fc3d451e43974d9ba6b2330d17e5b" category="list-text"><block ref="dd2fc3d451e43974d9ba6b2330d17e5b" category="inline-link-macro-rx"></block></block>
   <block id="89ee8792b4466624e22db7a555dbec1c" category="list-text"><block ref="89ee8792b4466624e22db7a555dbec1c" category="inline-link-macro-rx"></block></block>
   <block id="5d2c9e43b106e440a5e6622384e824eb" category="admonition">VMFS 오버헤드가 0이 아니며(VMware KB 1001618 참조), 데이터스토어에서 사용 가능하다고 보고된 전체 공간을 사용하려고 하면 클러스터 생성 작업 중에 잘못된 오류가 발생합니다.</block>
   <block id="ab38846c124130820f8766b9794e5e9c" category="summary">가상 NAS(vNAS) 배포는 vSAN의 ONTAP Select 클러스터, 일부 HCI 제품, NetApp HCI 기술 및 외부 어레이 유형의 데이터 저장소를 지원합니다. 이러한 구성의 기반 인프라는 데이터스토어 복원력을 제공합니다.</block>
@@ -3640,7 +3636,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="62080c1e38d010ffa650c0549d2fd463" category="inline-link-macro">ONTAP Select 9.18.1 릴리스 노트</block>
   <block id="bae2221cd26cec7b066734cfd0888c05" category="paragraph">당신은 접근할 수 있습니다<block ref="b88c41ab6f0bacccf3a706fd6b4f9780" category="inline-link-macro-rx"></block> 현재 버전에 대한 세부 정보를 보려면.</block>
   <block id="14d3f202c8554a54e4a6f4f52aa78fb3" category="list-text">KVM 호스트의 경우 지원되는 Deploy 관리 유틸리티가 있는 ONTAP Select 9.17.1 이상</block>
-  <block id="bb68cf2408900213fd35084701d5c32c" category="paragraph">ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.15.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
   <block id="b69fcb807e0b12e6b52ca8806f85c011" category="paragraph">ESXi 및 KVM 하이퍼바이저 호스트에 대한 기존 ONTAP Select 클러스터의 클러스터 크기를 늘리거나 줄입니다.  두 호스트 유형 모두 4개에서 12개 노드 사이로 클러스터 크기를 늘리거나 줄일 수 있습니다.</block>
   <block id="a0b486320d46bfa4e7a315349c3d059b" category="list-text">1개 또는 2개 노드 클러스터에서 6개, 8개, 10개 또는 12개 노드 클러스터로 확장합니다.</block>
   <block id="459e1c3cb388ea595c42d32d54d432fb" category="list-text">6, 8, 10 또는 12개 노드 클러스터에서 1개 또는 2개 노드 클러스터로의 수축입니다.</block>
@@ -4044,6 +4039,11 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="5c2e3f1b284a7eb8d03229a6f711a6d8" category="paragraph">ONTAP Select 및 라이센스 갱신에 대한 자세한 내용은 <block ref="244262621d739af44a70be8c211b652b" category="inline-link-macro-rx"></block>의 라이센스, 설치, 업그레이드 및 되돌리기 섹션을 참조하십시오.</block>
   <block id="d3687f9d5cbe754b85309258725912ba" category="paragraph">로컬 하드웨어 RAID 컨트롤러를 사용하는 경우 시스템 데이터와 루트 및 데이터 애그리게이트를 위해 각 노드에 최소 하나의 데이터 저장소(ESXi) 또는 하나의 <block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>를 생성해야 합니다. ONTAP Select 노드 구성 시 스토리지 풀을 연결해야 합니다.</block>
   <block id="01d8de06079a4b45d8794e7643ed43a1" category="paragraph">소프트웨어 RAID를 사용하는 경우 시스템 데이터용 데이터스토어(ESXi) 또는 <block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block>를 하나 이상 생성하고 루트 및 데이터 애그리게이트에 SSD 드라이브를 사용할 수 있는지 확인해야 합니다. ONTAP Select 노드를 구성하는 과정에서 스토리지 풀과 디스크를 연결해야 합니다.</block>
-  <block id="42eb22aac2ec16baf500c0673430b7de" category="paragraph">업그레이드 중에 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하십시오. ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보 및 제한 사항은 <block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="e7600c044897b1df8192df992376a5c1" category="paragraph">이전 버전의 ONTAP Select Deploy 관리 유틸리티가 설치되어 있는 경우 최신 버전으로 업그레이드해야 합니다. ONTAP Select 노드와 ONTAP Select Deploy 구성 요소는 별도로 업그레이드됩니다. 자세한 내용은 <block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="5b6d4054ef7052cdbac6938952fde107" category="paragraph">ONTAP Select는 VMware vSphere 및 KVM(커널 기반 가상 머신)과 같은 클라우드 관리 프레임워크에 통합되어 있습니다. 이를 통해 파일 서비스, 홈 디렉터리, 소프트웨어 개발 환경 및 애플리케이션 테스트와 같은 새로운 프로젝트의 배포 속도를 높일 수 있습니다.</block>
+  <block id="056ac6d6b75fc8c083881fac056a5f00" category="list-text"><block ref="056ac6d6b75fc8c083881fac056a5f00" category="inline-link-macro-rx"></block></block>
+  <block id="242e2d9a4037c878b7c02d92920684a3" category="list-text">ONTAP Select 9.16.1부터 NetApp 라이센스 파일(NLF) 지원이 업데이트되었습니다. 새로운 NLF 형식에는 ARP, ONTAP S3 및 S3 SnapMirror 기능에 대한 라이센스가 포함됩니다. <block ref="6a143c7a682c120f755bb9e007744e73" category="inline-link-macro-rx"></block>.</block>
+  <block id="26b97e8272b5c629fb33f3f308a35b65" category="list-text">ONTAP Select 9.16.1은 Autonomous Ransomware Protection(ARP)에 대한 지원을 도입합니다. ONTAP Select 9.16.1은 ARP에 대한 수동 업데이트만 지원하며 자동 업데이트는 지원되지 않습니다. ARP 기능 라이센스는 ONTAP Select 9.16.1용 NLF에 포함되어 있습니다. <block ref="6a143c7a682c120f755bb9e007744e73" category="inline-link-macro-rx"></block>.</block>
+  <block id="c15e1083b5e8b4f4973ba9286f3ec996" category="paragraph">ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. 이전 버전(예: ONTAP Select Deploy 9.15.1)에서 업그레이드하려면 먼저 ONTAP Select Deploy 9.16.1 또는 9.17.1로 업그레이드한 다음 ONTAP Select Deploy 9.18.1로 업그레이드해야 합니다.</block>
+  <block id="8c58e4482a12bf26ee215d6f58f5c8a8" category="paragraph">업그레이드 중에 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하십시오.</block>
 </blocks>
