@@ -443,16 +443,12 @@
   <block id="85b8b2674420975b303ca7af2cceb0b1" category="inline-link-macro">VMware vCenter Server를 참조하십시오</block>
   <block id="a7e7272f62fd6ddeec2a8fce21757dbf" category="paragraph">필요한 vCenter 권한 목록은 여기 에서 확인할 수 있습니다. <block ref="b5bc3984b5dc3be4e25e9aa47658f334" category="inline-link-macro-rx"></block>.</block>
   <block id="8aeec027b27415f6c0c3d1335de4508f" category="section-title">HA 및 클러스터</block>
-  <block id="f782a001664af23a9a479ac7f8af14db" category="paragraph">MetroCluster SDS는 동기식 복제 솔루션을 제공하고 NetApp MetroCluster 솔루션에 속합니다. 그러나 주요 차이점은 지원되는 거리(~10km vs 300km)와 연결 유형(FC 및 IP 대신 IP 네트워크만 지원됨)입니다.</block>
   <block id="e390fc325e0e3f48a60a9e0c68c6a1b2" category="paragraph">2노드 클러스터는 상호 300m 이내의 동일한 데이터 센터에 있는 클러스터로 정의됩니다. 일반적으로 두 노드는 동일한 네트워크 스위치에 대한 업링크나 스위치 간 링크에 의해 연결된 네트워크 스위치 세트에 대한 업링크를 가지고 있습니다.</block>
-  <block id="e3000fa150dd97eaa370fd81237fc013" category="paragraph">2노드 MetroCluster SDS는 물리적으로 분리된 노드(서로 다른 방, 다른 건물 또는 다른 데이터 센터)와 각 노드의 업링크 연결이 별도의 네트워크 스위치에 연결된 클러스터로 정의됩니다. MetroCluster SDS에는 전용 하드웨어가 필요하지 않지만, 지연 시간(최대 총 10ms 동안 5ms RTT 및 5ms 지터)과 물리적 거리(10Km)를 기준으로 최소 요구 사항 집합을 지원해야 합니다.</block>
   <block id="b26c3202b91162b023a9725e9e6607b8" category="paragraph">MetroCluster SDS는 프리미엄 기능이며 Premium 또는 Premium XL 라이센스가 필요합니다. Premium 라이센스는 HDD 및 SSD 미디어뿐만 아니라 Small 및 Medium VM의 생성을 지원합니다. 이러한 구성은 모두 지원됩니다.</block>
   <block id="80fc0d552c981807521ad39072587462" category="paragraph">ONTAP MetroCluster SDS는 모든 유형의 스토리지 구성(DAS 및 vNAS)을 지원합니다.</block>
   <block id="07c54da58acb4aa2357d4d3f120a2439" category="paragraph">예. 프리미엄 라이센스가 필요하지만 이 라이센스는 소규모 및 중간 규모의 VM과 SSD, 회전식 미디어를 모두 지원합니다.</block>
   <block id="1490bd5ed0a28c21500eff09d45ae2c7" category="paragraph">아니요. 중재자가 있는 2노드 클러스터만 MetroCluster SDS로 구성할 수 있습니다.</block>
   <block id="6596d8aee024f01bd6f7082e0f3f3510" category="paragraph">요구 사항은 다음과 같습니다.</block>
-  <block id="d197104ead309ddefff131940caf98cb" category="list-text">5ms RTT 및 5ms 지터로 ONTAP Select 노드 간 최대 10ms 및 최대 물리적 거리 10km를 지원합니다.</block>
-  <block id="662b3058ddf7c74b83c16f281c0f67ff" category="list-text">Premium 또는 Premium XL 라이센스.</block>
   <block id="78a6c1f8409fb1b96accc51e1971fbdb" category="paragraph">vSAN 데이터 저장소 또는 외부 스토리지 데이터 저장소(즉, vNAS 배포)에서 실행되는 ONTAP Select VM은 vMotion, DRS 및 VMware HA 기능을 지원합니다.</block>
   <block id="afa6b88639bcd7ceb6bf277254bb384e" category="paragraph">이러한 구성은 지원되지 않습니다. ONTAP Select는 클라이언트 트래픽을 전달하는 물리적 네트워크 업링크의 상태를 파악할 수 없습니다. 따라서 ONTAP Select는 HA 하트비트를 사용하여 VM이 클라이언트와 해당 피어에서 동시에 액세스할 수 있도록 합니다. 물리적 연결이 끊어지면 HA 하트비트가 손실되면 다른 노드로 자동 페일오버가 발생하고 이것이 원하는 동작입니다.</block>
   <block id="a8237ab48294323805ebcd87b5ac5e8f" category="paragraph">별도의 물리적 인프라에서 HA 트래픽을 분리하면 Select VM이 피어와 통신할 수 있지만 해당 클라이언트와 통신할 수는 없습니다. 이렇게 하면 자동 HA 프로세스가 방지되고 수동 페일오버가 호출될 때까지 데이터를 사용할 수 없게 됩니다.</block>
@@ -604,7 +600,6 @@
   <block id="29bcfb9b8c7f3dd5f5123092080684d8" category="list-text">ONTAP Select 클러스터 구축:</block>
   <block id="3170be01fdc45e3e10fbe83b1d2be644" category="paragraph">메시지가 나타나면 ONTAP 관리자 계정에 사용할 암호를 입력합니다.</block>
   <block id="1d8edcb67cffc7ed8d5c5ba0f36578b7" category="list-text">클러스터의 상태를 표시하여 성공적으로 배포된 시기를 확인합니다.</block>
-  <block id="f32f31f3f65cf8fd06f0af930a71a5a1" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 선택할 수 있는 구성 옵션입니다. ROBO(Remote Office/Branch Office) 구축과 비슷하지만 두 노드 간의 거리는 최대 10km입니다 향상된 2노드 배포로 추가 사용 사례 시나리오를 제공합니다. MetroCluster SDS 구축을 위한 준비의 일부로 요구사항 및 제한 사항을 숙지해야 합니다.</block>
   <block id="b06ea299e97a88792e784ae5e265bc85" category="paragraph">각 노드에는 프리미엄 이상의 ONTAP Select 라이센스가 있어야 합니다.</block>
   <block id="5dd57c2a315d3af44c2eb40eefc47111" category="section-title">네트워크 구성</block>
   <block id="f2f4f127985b8989606d460ea282483e" category="paragraph">참여 사이트 간에 계층 2 연결이 필요합니다. 다음 구성을 포함하여 10GbE 및 1GbE가 모두 지원됩니다.</block>
@@ -1020,7 +1015,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
   <block id="ffc775822cbd19e463401855c97e8181" category="summary">ONTAP Select MetroCluster SDS는 향상된 보호 기능과 비용 효율적인 구축을 제공합니다.</block>
   <block id="468c7067a5232ce7f7b5f71d1c6e1685" category="paragraph">특정 최소 요구사항을 충족할 경우 2노드 클러스터를 2개 위치 간에 확장 가능 이 아키텍처는 하드웨어 기반 MetroCluster와 단일 데이터 센터 클러스터(하드웨어 정의 또는 소프트웨어 정의) 사이에 적합합니다. ONTAP Select MetroCluster SDS 요구사항을 충족하려면 소프트웨어 정의 스토리지 솔루션의 일반적인 유연성과 IT와 하드웨어 기반 MetroCluster SDS 간의 차이점을 강조합니다. 전용 하드웨어가 필요하지 않습니다.</block>
-  <block id="189f86e135df200ab301cdba9724b737" category="paragraph">MetroCluster와 달리 ONTAP Select는 기존 네트워크 인프라를 사용하며 최대 5ms의 최대 지터로 5ms RTT의 네트워크 지연 시간을 지원하여 총 10ms의 최대 지연 시간을 제공합니다. 최대 거리는 10km이지만, 지연 시간 프로필이 더 중요합니다. 시장 공간의 분리 요구 사항은 실제 거리보다 물리적 분리를 더 많이 필요로 합니다. 경우에 따라 이는 다른 건물을 의미할 수 있습니다. 다른 경우에는, 같은 건물에 있는 다른 방을 의미할 수 있습니다. 실제 물리적 배치와 관계없이 2노드 클러스터를 MetroCluster SDS로 정의하는 것은 각 노드가 별도의 업링크 스위치를 사용한다는 것입니다.</block>
   <block id="c0a1eea8b1af6026a021d360f96c66d8" category="paragraph">2노드 HA 구성의 일부로, 중재자가 페일오버 중에 액티브 노드를 제대로 식별하고 네트워크 파티션 중에 두 노드가 독립적으로 활성 상태로 유지되는 브레인 분할 시나리오를 피해야 합니다. 이 작업은 이전에 사용할 수 있었던 일반 2노드 HA 구성과 동일합니다. 사이트 장애 시 적절한 보호와 페일오버를 위해 중재자는 2개의 HA 노드와 다른 사이트에 있어야 합니다. 중재자와 각 ONTAP Select 노드 사이의 최대 지연 시간은 125ms를 초과할 수 없습니다.</block>
   <block id="7df0d3f86ea85895ce805f02d425a395" category="paragraph">ONTAP Select MetroCluster SDS는 다음과 같은 이점을 제공합니다.</block>
   <block id="efd88036e2c90f7b3284371d9cdbb406" category="list-text">MetroCluster SDS는 0 RPO 및 자동 페일오버로 비즈니스 크리티컬 데이터 보호를 제공합니다. 데이터 스토리지와 애플리케이션 액세스 지점 모두 별도의 작업 없이 정상적인 데이터 센터 또는 노드로 자동 전환됩니다.</block>
@@ -1040,7 +1034,6 @@
   <block id="f8f58e06b7004f2c9a02a8875d2bd10d" category="list-text">NetApp 볼륨 암호화(제한 없는 국가만 해당)</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="eab10597f9ef50e8058170729878869e" category="list-text">MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)</block>
-  <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="inline-link-macro">ONTAP Select와 ONTAP 비교 9</block>
   <block id="5cd0ad520dbcfbdeee9d38a1ad945c17" category="summary">ONTAP Select 클러스터를 구축한 후 표준 ONTAP 소프트웨어 업그레이드 절차를 사용하여 필요에 따라 각 노드의 ONTAP 이미지를 업그레이드할 수 있습니다.</block>
   <block id="047bc25615b74f5ee9ad03d531e71221" category="paragraph">ONTAP Select 클러스터를 구축한 후 필요에 따라 클러스터의 각 노드에서 ONTAP 이미지를 업그레이드할 수 있습니다.</block>
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">배포 관리 유틸리티를 사용하여 기존 ONTAP Select 노드의 업그레이드를 수행할 수 없습니다. Deploy 유틸리티는 새 ONTAP Select 클러스터를 생성하는 데만 사용할 수 있습니다.</block>
@@ -1625,7 +1618,6 @@
   <block id="8b223dc7087ae077b733962bc5c66fff" category="list-text">단일 노드 클러스터</block>
   <block id="84c58882c8429c8f8515c3e7a653c06f" category="paragraph">ONTAP Select VM을 애플리케이션 VM과 함께 배치할 수 있으므로 ROO를 위한 최적의 솔루션이 됩니다.</block>
   <block id="c351b410431306a0c6c9b4caf19ded4f" category="paragraph">ONTAP Select를 사용하여 엔터프라이즈급 파일 서비스를 제공하는 동시에 다른 ONTAP Select 또는 FAS 클러스터로 양방향 복제를 수행하면 복원력이 뛰어난 솔루션이 로우터치 또는 저비용 환경에 구축됩니다. ONTAP Select에는 CIFS, NFS, iSCSI 프로토콜 서비스에 대한 기능 라이센스와 SnapMirror 및 SnapVault 복제 기술이 모두 포함되어 있습니다. 따라서 이러한 모든 기능은 배포 즉시 사용할 수 있습니다.</block>
-  <block id="c2389d581045462585c7d00fa4f67273" category="admonition">모든 VMware vSphere 라이센스가 지원되므로 Enterprise 또는 Enterprise Plus 라이센스 대신 vSphere Remote Office Branch Office Standard 또는 Advanced 라이센스를 선택할 수 있습니다. 이제 모든 vSphere 및 VSAN 라이센스가 지원됩니다.</block>
   <block id="6c7d730bef94b94b16a0eea89a48d7ef" category="paragraph">원격 중재자가 있는 ONTAP Select 2노드 클러스터는 소규모 데이터 센터에 적합한 솔루션입니다. 이 구성에서 HA 기능은 ONTAP Select에서 제공합니다. 2노드 ONTAP Select ROBO 솔루션의 최소 네트워킹 요구사항은 4개의 1Gb 링크입니다. 단일 10Gb 네트워크 연결도 지원됩니다. VSAN에서 실행 중인 vNAS ONTAP Select 솔루션(2노드 VSAN ROBO 구성 포함)도 또 다른 옵션입니다. 이 구성에서는 VSAN에서 HA 기능을 제공합니다. 마지막으로, 데이터를 핵심 위치로 복제하는 단일 노드 ONTAP Select 클러스터는 일반 서버를 기반으로 강력한 엔터프라이즈 데이터 관리 툴 세트를 제공할 수 있습니다.</block>
   <block id="91b24599f00a58f1f331382707a0d6f2" category="paragraph">* 원격 사무실을 기업 데이터 센터로 예약 백업 *</block>
   <block id="8a52c9125fd5cf696cd865c130b46cf7" category="inline-image-macro">회사 데이터 센터에 원격 사무소의 예약된 백업</block>
@@ -1666,7 +1658,6 @@
   <block id="47e419c14abec01f3f254dab003a6aba" category="section-title">2노드 HA와 2노드 확장 HA(MetroCluster SDS) 비교</block>
   <block id="568e700bfd84bf09ea449e03f0b63ec2" category="paragraph">서로 다른 거리에 2노드 액티브/액티브 HA 클러스터를 배치하고 각 노드를 서로 다른 데이터 센터에 배치할 수 있습니다. 2노드 클러스터와 2노드 확장 클러스터(MetroCluster SDS라고도 함)의 유일한 차이점은 노드 간의 네트워크 연결 거리입니다.</block>
   <block id="576271d358b861b1da59de8d0b9547e8" category="paragraph">2노드 클러스터는 300m 거리 내에 두 노드가 같은 데이터 센터에 위치한 클러스터로 정의됩니다. 일반적으로 두 노드는 동일한 네트워크 스위치 또는 ISL(Interswitch Link) 네트워크 스위치 세트에 대한 업링크를 가지고 있습니다.</block>
-  <block id="4e83e8addeafe73c3acbe68952183177" category="paragraph">2노드 MetroCluster SDS는 노드가 물리적으로 300m 이상 분리된 클러스터(다양한 객실, 서로 다른 건물 및 데이터 센터)로 정의됩니다. 또한 각 노드의 업링크 연결은 별도의 네트워크 스위치에 연결됩니다. MetroCluster SDS에는 전용 하드웨어가 필요하지 않습니다. 그러나 환경은 지연(RTT의 경우 최대 5ms, 지터의 경우 5ms) 및 물리적 거리(최대 10ms)에 대한 요구 사항을 준수해야 합니다.</block>
   <block id="526a514c4ab4ec984314911904c226e7" category="admonition">MetroCluster SDS는 로컬 연결 스토리지(DAS)와 공유 스토리지(vNAS) 모두에서 지원됩니다. vNAS 구성은 일반적으로 ONTAP Select VM과 공유 스토리지 간의 네트워크 때문에 지연 시간이 더 길어집니다. MetroCluster SDS 구성은 공유 스토리지 지연 시간을 포함하여 노드 간에 최대 10ms의 지연 시간을 제공해야 합니다. 즉, 공유 스토리지 지연 시간은 이러한 구성에서 무시할 수 없기 때문에 Select VM 간의 지연 시간만을 측정하는 것은 적절하지 않습니다.</block>
   <block id="d1bf7b4cf1d6b51999a759865fb8c66b" category="summary">ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리하는 데 사용되는 관리 유틸리티입니다.</block>
   <block id="b6943de2133c238e306c67b38531d08a" category="paragraph">ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리하는 데 사용되는 관리 유틸리티입니다. 배포는 ONTAP Select 클러스터를 생성하기 전에 설치해야 하는 Linux 가상 시스템으로 패키징됩니다.</block>
@@ -2127,8 +2118,6 @@
   <block id="38f6621fec19ff801692cfd74b3d8e9a" category="paragraph">ONTAP Select 배포는 또한 다음과 같이 ONTAP Select 노드 및 클러스터 관리 IP 주소와 통신할 수 있어야 합니다.</block>
   <block id="fc46f3e8b95ad7a4187367a3d699fabf" category="paragraph">2노드 클러스터의 경우 ONTAP Select는 클러스터 사서함을 호스팅합니다. 각 ONTAP Select 노드는 iSCSI(포트 3260)를 통해 ONTAP Select 배포에 도달할 수 있어야 합니다.</block>
   <block id="81cd6c8ef1512058861a9e8233376fb2" category="paragraph">ONTAP Select 배포 VM이 주로 클러스터를 생성하는 데 사용되는 4노드, 6노드 및 8노드 클러스터와 달리 2노드 클러스터는 ONTAP Select 배포 VM에 지속적으로 의존하여 HA 쿼럼을 수행합니다. ONTAP Select 배포 VM을 사용할 수 없는 경우 장애 조치 서비스가 비활성화됩니다.</block>
-  <block id="a6224d6ddba5805f1ff843d43f7d2f9d" category="list-text">데이터 센터 3개(ONTAP Select용 1개, 각 노드에 1개)</block>
-  <block id="62b01fa16ed3db055815d577d15770ac" category="list-text">125ms RTT와 ONTAP Select Deploy Mediator와 각 ONTAP Select Node 간 최소 5Mbps 대역폭입니다.</block>
   <block id="409b8f72bddc57a6bd095f134c6d8275" category="paragraph">2노드 클러스터는 HA 쿼럼용 ONTAP Select 배포 VM에 지속적으로 의존합니다. 2노드 HA 쿼럼 협상에 참여하는 ONTAP Select 배포 VM은 중재자 VM으로 표시됩니다.</block>
   <block id="3e528ff9b4c46aed11941383fa6d2f9e" category="paragraph">예. ONTAP Select Deploy를 2노드 HA 쌍의 중재자 역할을 함 최대 500ms RTT의 WAN 지연 시간을 지원하고 최소 5Mbps의 대역폭이 필요함</block>
   <block id="28abf93f8fe8302ba488797b5f941425" category="paragraph">중재자 트래픽은 iSCSI로, ONTAP Select 노드 관리 IP 주소에서 시작되어 ONTAP Select 배포 IP 주소에서 종료됩니다. 2노드 클러스터를 사용할 때는 ONTAP Select 노드 관리 IP 주소에 IPv6를 사용할 수 없습니다.</block>
@@ -2860,8 +2849,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="012deed4bd1d789fa86812367047fe25" category="paragraph">클러스터에 계약되는 데 최대 30분이 소요될 수 있습니다.</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">다중 단계 클러스터 수축 프로세스를 모니터링하여 클러스터가 성공적으로 수축되었는지 확인합니다.</block>
   <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Select는 최대 4개의 VMNIC를 지원합니다.</block>
-  <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAP 마스터 라이센스 키</block>
-  <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
   <block id="f588ddb32cd79889160082356416d2f3" category="list-text">KVM 하이퍼바이저 지원이 업데이트되었습니다</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">ONTAP 9.13.1부터 VMware ESXi 8.0.1 GA(빌드 20513097)는 하드웨어 버전 4 이상에서 지원됩니다.</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">원래 Deploy 가상 머신 이미지를 저장합니다.</block>
@@ -3401,7 +3388,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="b9f88b3e1ffa6ae7d67f237344be95ad" category="paragraph">KVM은 다음 하이퍼바이저 버전에서 지원됩니다.</block>
   <block id="3f47eb1c93cfecc035015d51dea43351" category="inline-link-macro">배포 유틸리티 설치</block>
   <block id="650b54030913723e437a2beaa84f5e95" category="inline-link-macro">ONTAP Select 설치</block>
-  <block id="2eb8006ba6af294cdeda2a87c467fa5c" category="paragraph">를 따르세요 <block ref="98f788baf075ad6e86ad4cdcdcd40ae3" category="inline-link-macro-rx"></block> , 그리고 필요한 정보를 검토하세요. <block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block> 그리고 <block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="9ee25f36a4c63773203c1547efed4fc1" category="paragraph">새 ONTAP Select 클러스터를 생성하기 전에 이 절차를 수행해야 합니다. 기존 소프트웨어 RAID NVMe 클러스터에 추가 NVMe 드라이브를 구성하는 절차도 수행할 수 있습니다. 이 경우, 드라이브를 구성한 후 SSD 드라이브를 추가할 때처럼 Deploy를 통해 드라이브를 추가해야 합니다. 가장 큰 차이점은 Deploy가 NVMe 드라이브를 감지하고 노드를 재부팅한다는 것입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때는 재부팅 프로세스에 대해 다음 사항에 유의하십시오.</block>
   <block id="ad1e77dc2d8bf573173118e7a9612d61" category="list-text">*Intel VT for Directed I/O(VT-d)* 설정을 활성화합니다.</block>
   <block id="4c223b348646a303ade4760a9df80f2f" category="list-text">일부 서버는 *Intel Volume Management Device(Intel VMD)*를 지원합니다. 이 기능을 활성화하면 사용 가능한 NVMe 장치가 ESXi 또는 KVM 하이퍼바이저에서 표시되지 않습니다. 진행하기 전에 이 옵션을 비활성화하십시오.</block>
@@ -3480,7 +3466,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="24b31a5062e0cc3718df2e8c8508e0e0" category="cell">...의 하드 디스크 드라이브(HDD)</block>
   <block id="d988863b0fa5744471a52b3a39fbf5e2" category="cell">하드웨어 RAID 구성</block>
   <block id="7e68045ac7e9b9f9bc6e545d526fb361" category="cell">vNAS 구성</block>
-  <block id="059958ba42856eb78f3a321d5b2bd619" category="cell">...의 솔리드 스테이트 드라이브(SSD)</block>
   <block id="1b8fd93e725596cfcebcd993f635973a" category="cell">소프트웨어 RAID 구성</block>
   <block id="612323f6c1e52e88287fea6fecdef4e1" category="cell">NVMe 드라이브는 ...</block>
   <block id="0bbdf237a06a8d91581305ad9eaa40be" category="admonition">커널 기반 가상 머신(KVM)은 대형 인스턴스 유형을 지원하지 않습니다.</block>
@@ -3547,7 +3532,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">예:</block>
   <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">예를 보여주세요</block>
   <block id="fc0aa017cb8518a7c70f2a39ae6553c1" category="list-text">이전에 설치된 버전이 없기 때문에 되돌릴 수 없습니다.</block>
-  <block id="6e1243914ebc1fc5867ce44540c39b39" category="list-text"><block ref="6e1243914ebc1fc5867ce44540c39b39" category="inline-link-macro-rx"></block></block>
   <block id="7df4c22f834073378cbc7bda2a69e5d8" category="paragraph-title">배포 구성 데이터 백업</block>
   <block id="92a0bc38a55c8986f72a9e2f38fb2581" category="paragraph">가장 좋은 방법은 다음과 같습니다.<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> 클러스터를 만든 후에도 정기적으로. 2노드 클러스터의 경우, 백업에 중재자 구성 데이터가 포함되므로 이 작업이 더욱 중요합니다.</block>
   <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">1단계: 설치 이미지 다운로드</block>
@@ -3939,8 +3923,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="1964ee773201a24ef70ec5473580b9b8" category="paragraph-title">ONTAP Select 노드 간의 HA 트래픽을 다른 vSwitch 및/또는 분리된 물리적 포트를 통해 또는 ESXi 호스트 간에 지점 간 IP 케이블을 사용하여 실행할 수 있습니까?</block>
   <block id="90b9d3d3c7c6090df07016c2850a6293" category="paragraph">이 호스트에 액세스할 수 있는 사용자 이름입니다. 이 값은 호스트가 관리 서버(즉, vCenter에서 관리하는 ESXi 호스트)에서 관리되지 않는 경우에만 필요합니다.</block>
   <block id="047fc3d7b951880ca6749f6433cfe2bf" category="list-text">SnapLock Select</block>
-  <block id="62d69997b08663dafba848660e7b1cee" category="inline-link-macro">ONTAP SnapLock 설명서</block>
-  <block id="a2c36271189430a9451913aeb53ffe5c" category="paragraph">SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다. 자세한 내용은 <block ref="4550ac0e247ddc9f80a43ee81b1b5a95" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
   <block id="d7a5c2d00ea9258a0d2580ffe65ad84c" category="list-text">SnapLock Select 지원</block>
   <block id="3ef41e1838b5f933bc2b06f1eb6efb06" category="list-text">ONTAP Select 9.17.1 버전부터는 신규 구축 시 SnapLock Select(위변조 방지 스냅샷 잠금 기능 포함) 라이선스가 자동으로 적용됩니다. ONTAP Select 9.16.1 이하 버전에서 업그레이드하는 경우, SnapLock Select 라이선스를 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>에서 무료로 다운로드하여 수동으로 적용할 수 있습니다. 자세한 내용은 <block ref="c7da6e6f478f90eda131fcbe777888c9" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
   <block id="a8642b6a7959681743079d45db6cce81" category="paragraph">vSAN ESA는 ESXi 전용 구성이며 vSphere 8에서 도입된 VMware vSAN의 새로운 아키텍처입니다. vSAN ESA는 특히 NVMe 기반 TLC 플래시 장치를 사용할 때 향상된 효율성, 확장성 및 성능을 제공하도록 설계되었습니다.</block>
@@ -4046,4 +4028,35 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="26b97e8272b5c629fb33f3f308a35b65" category="list-text">ONTAP Select 9.16.1은 Autonomous Ransomware Protection(ARP)에 대한 지원을 도입합니다. ONTAP Select 9.16.1은 ARP에 대한 수동 업데이트만 지원하며 자동 업데이트는 지원되지 않습니다. ARP 기능 라이센스는 ONTAP Select 9.16.1용 NLF에 포함되어 있습니다. <block ref="6a143c7a682c120f755bb9e007744e73" category="inline-link-macro-rx"></block>.</block>
   <block id="c15e1083b5e8b4f4973ba9286f3ec996" category="paragraph">ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. 이전 버전(예: ONTAP Select Deploy 9.15.1)에서 업그레이드하려면 먼저 ONTAP Select Deploy 9.16.1 또는 9.17.1로 업그레이드한 다음 ONTAP Select Deploy 9.18.1로 업그레이드해야 합니다.</block>
   <block id="8c58e4482a12bf26ee215d6f58f5c8a8" category="paragraph">업그레이드 중에 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하십시오.</block>
+  <block id="8380920f551ca0c124aced59300fc93c" category="paragraph">MetroCluster와 달리 ONTAP Select는 기존 네트워크 인프라를 사용하며 최대 5ms RTT의 네트워크 지연 시간과 최대 5ms의 지터를 지원하여 총 최대 지연 시간이 10ms입니다. 시장 공간에서의 분리 요구 사항은 실제 거리보다 물리적 분리와 더 관련이 있습니다. 경우에 따라 이는 서로 다른 건물을 의미할 수 있습니다. 다른 경우에는 같은 건물 내의 서로 다른 방을 의미할 수 있습니다. 실제 물리적 배치와 관계없이 2노드 클러스터를 MetroCluster SDS로 정의하는 것은 각 노드가 별도의 업링크 스위치를 사용한다는 점입니다.</block>
+  <block id="558e06b6dd08fae765da42c411221de9" category="paragraph">2노드 MetroCluster SDS는 물리적으로 300m 이상 떨어져 있는 노드(다른 방, 다른 건물, 다른 데이터 센터)로 구성된 클러스터를 의미합니다. 또한 각 노드의 업링크 연결은 별도의 네트워크 스위치에 연결됩니다. MetroCluster SDS는 전용 하드웨어가 필요하지 않습니다. 그러나 환경은 지연 시간 요구 사항(RTT 최대 5ms, 지터 최대 5ms, 총 10ms)을 준수해야 합니다.</block>
+  <block id="baa67347be8004d06e741020c161132a" category="cell">SSD(Solid State Drive)는 ...</block>
+  <block id="02eaca23acd9bd60cfee240891736083" category="section-title">FlexCache ONTAP Select를 사용한 쓰기 저장</block>
+  <block id="364dd8ec144e0e3935d770cd30e2eb06" category="paragraph">ONTAP Select는 쓰기 백 기능을 지원하는 FlexCache 캐시 볼륨을 지원합니다. ONTAP Select 인스턴스의 전반적인 성능은 기본형 ONTAP 시스템과 유사합니다.</block>
+  <block id="07e9ae0d622a9d0de28b6d5c6c122728" category="paragraph">ONTAP Select에서 쓰기 후 기능이 있는 FlexCache 캐시 볼륨에는 다음 요구 사항이 있습니다.</block>
+  <block id="1a308ed2e92908395a3c3d28bc751d14" category="list-text">중간 규모(8코어) 또는 대규모(16코어) 인스턴스에서 ONTAP Select를 사용하십시오.</block>
+  <block id="79bc8c2d1606007acb8463332060f779" category="list-text">NVMe 기반 솔리드 스테이트 드라이브를 사용하십시오. SAS 기반 스토리지는 ONTAP Select의 경우 NVMe 기반 스토리지에 비해 성능이 낮습니다.</block>
+  <block id="658463936ea656ed80f747c8212a3943" category="list-text">배포를 시작하기 전에 FlexCache 쓰기 백에 대한 ONTAP Select를 테스트하십시오. FlexCache 쓰기 백은 많은 수의 작은 파일에는 권장되지 않습니다.</block>
+  <block id="ab3c4526c60564cf431475bf92b4af26" category="paragraph">ONTAP Select는 소형 인스턴스(4코어)에서 쓰기 지연 기능을 사용하는 FlexCache 캐시 볼륨을 지원하지 않습니다. 또한 ONTAP Select는 소형, 중형 또는 대형 인스턴스에서 쓰기 지연 기능을 사용하는 FlexCache 원본 볼륨을 지원하지 않습니다.</block>
+  <block id="143ccd7e6088e13e6f29a3406f9cad06" category="inline-link-macro">ONTAP FlexCache 쓰기 백에 대해 알아보세요</block>
+  <block id="574bd528de47f58b7f75445e4e459e7d" category="paragraph"><block ref="574bd528de47f58b7f75445e4e459e7d" category="inline-link-macro-rx"></block></block>
+  <block id="c337422f492f6f6f4bce841427686ed5" category="paragraph">모든 VMware vSphere 라이선스가 지원되므로 Enterprise 또는 Enterprise Plus 라이선스 대신 vSphere Remote Office Branch Office Standard 또는 Advanced 라이선스를 선택할 수 있습니다.</block>
+  <block id="5b7cd8b10696b50beb601fc04fc9c316" category="paragraph">모든 vSphere 및 VSAN 라이센스가 지원됩니다.</block>
+  <block id="deceddca193158f1811fc38d701027b9" category="paragraph">MetroCluster SDS는 동기식 복제 솔루션을 제공하며 NetApp MetroCluster 솔루션 제품군에 속합니다. 하지만 연결 유형이 다르다는 점이 주요 차이점입니다(FC 및 IP가 아닌 IP 네트워크만 지원).</block>
+  <block id="935934c167ea2712b32b8d3627eb504b" category="paragraph">2노드 MetroCluster SDS는 물리적으로 분리된(다른 방, 다른 건물 또는 다른 데이터 센터) 노드가 있는 클러스터로 정의되며 각 노드의 업링크 연결은 별도의 네트워크 스위치에 연결됩니다. MetroCluster SDS는 전용 하드웨어가 필요하지 않지만 환경은 최소 지연 시간 요구 사항(RTT 5ms 및 지터 5ms, 총 최대 10ms)을 지원해야 합니다.</block>
+  <block id="c00a7b346fd0c188d653090f7d4d0c9d" category="list-text">데이터 센터 3곳(ONTAP Select Deploy Mediator용 1곳과 각 노드용 1곳)</block>
+  <block id="046bd5bd096bff2b27e500aa8d2dfa80" category="list-text">RTT 5ms 및 지터 5ms로 최대 총 10ms</block>
+  <block id="1d6a755bc579447fd7ccaf4c366f016d" category="list-text">ONTAP Select Deploy Mediator와 각 ONTAP Select 노드 간의 RTT는 125ms, 최소 대역폭은 5Mbps입니다</block>
+  <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">Premium 또는 Premium XL 라이센스</block>
+  <block id="442ec7099645bccabb5c77484a2a86e7" category="paragraph">ONTAP Select는 쓰기 백업 기능이 있는 FlexCache 캐시 볼륨을 지원합니다. 쓰기 백업 기능이 있는 FlexCache 원본 볼륨은 지원하지 않습니다.</block>
+  <block id="8e27ba9474a19cb9db424e02974a1138" category="inline-link-macro">ONTAP Select를 사용한 FlexCache 쓰기 저장에 대해 자세히 알아보십시오</block>
+  <block id="9a079a12f3415657c4b643769a34e014" category="paragraph"><block ref="9a079a12f3415657c4b643769a34e014" category="inline-link-macro-rx"></block></block>
+  <block id="38b80c13e49233a5fa3471c364fdc493" category="paragraph">SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다.</block>
+  <block id="5641890857d855addbaf3e3074d37f96" category="inline-link-macro">ONTAP SnapLock에 대해 알아보십시오</block>
+  <block id="eef5b24d94b7497050fd72c30a339f6a" category="paragraph"><block ref="eef5b24d94b7497050fd72c30a339f6a" category="inline-link-macro-rx"></block></block>
+  <block id="418abba3a088e4f2cf70e0dd10df26f7" category="list-text"><block ref="418abba3a088e4f2cf70e0dd10df26f7" category="inline-link-macro-rx"></block></block>
+  <block id="c93df15b2b0031a0d9e559d5c8007fb0" category="inline-link-macro">NetApp ONTAP 마스터 라이선스 키에 대해 알아보세요</block>
+  <block id="814128a93dc9cdfaa48e1fb357d9d154" category="list-text"><block ref="814128a93dc9cdfaa48e1fb357d9d154" category="inline-link-macro-rx"></block></block>
+  <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
+  <block id="e16080ba1221020cf277f79a62c290d9" category="paragraph"><block ref="aa150fc2553a8a0c846847314bde8f61" category="inline-link-macro-rx"></block>을 따르고, <block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block> 및 <block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block>에 필요한 정보를 검토하십시오.</block>
 </blocks>

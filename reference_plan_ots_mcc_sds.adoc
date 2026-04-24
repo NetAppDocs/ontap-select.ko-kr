@@ -14,7 +14,7 @@ summary: ONTAP Select 구현을 계획할 때 MetroCluster SDS에 대한 몇 가
 
 
 [role="lead"]
-MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 선택할 수 있는 구성 옵션입니다. ROBO(Remote Office/Branch Office) 구축과 비슷하지만 두 노드 간의 거리는 최대 10km입니다 향상된 2노드 배포로 추가 사용 사례 시나리오를 제공합니다. MetroCluster SDS 구축을 위한 준비의 일부로 요구사항 및 제한 사항을 숙지해야 합니다.
+MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.
 
 MetroCluster SDS를 구축하기 전에 다음 요구사항이 충족되는지 확인하십시오.
 

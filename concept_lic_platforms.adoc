@@ -44,7 +44,7 @@ summary: ONTAP Select 용량 계층 또는 용량 풀 라이센스는 세 가지
 | vNAS 구성 | 예 | 예 | 예 
 
 
-.3+| ...의 솔리드 스테이트 드라이브(SSD) | 하드웨어 RAID 구성 | 아니요 | 예 | 예 
+.3+| SSD(Solid State Drive)는 ... | 하드웨어 RAID 구성 | 아니요 | 예 | 예 
 
 
 | 소프트웨어 RAID 구성 | 아니요 | 예 | 예 
