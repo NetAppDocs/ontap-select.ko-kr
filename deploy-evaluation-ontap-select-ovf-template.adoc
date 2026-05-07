@@ -46,7 +46,7 @@ image:prepare_ESXi_host_requirements.png["ESXi 호스트를 준비하기 위한 
 . 다음 옵션 중 하나를 사용하여 호스트를 선택합니다.
 +
 ** File * > * Deploy OVF Template * 을 선택합니다.
-** Datacenter * 를 선택합니다. 그런 다음 마우스 오른쪽 버튼을 클릭하고 * Deploy OVF Template * 을 선택합니다.
+** *Datacenter*를 선택합니다. 그런 다음 마우스 오른쪽 버튼을 클릭하고 *Deploy OVF Template*을 선택합니다.
 
 
 . 로컬 워크스테이션에서 ONTAP Select 원본 OVA 파일을 선택한 후 * 다음 * 을 선택합니다.

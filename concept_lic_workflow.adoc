@@ -20,7 +20,7 @@ summary: 워크플로우를 따라 ONTAP Select 배포에 대한 라이선스를
 
 9자리 라이센스 일련 번호입니다:: 일련 번호는 노드(용량 계층) 또는 스토리지 풀(용량 풀)에 적용됩니다.
 라이센스 잠금 ID입니다:: Capacity Pool 라이센스를 사용할 때는 배포 인스턴스에 대한 라이센스 잠금 ID가 있어야 합니다
-라이센스 웹 사이트:: 여러 웹 사이트에서 Capacity 계층 및 Capacity Pool 라이센스를 취득합니다
+라이센스 웹 사이트:: Capacity Tier 및 Capacity Pool 라이센스는 서로 다른 웹 사이트에서 취득할 수 있습니다.
 
 
 image:purchased_license_workflow.png["에서는 운영 ONTAP Select 구축을 위한 스토리지 라이센스를 구입하고 설치하는 데 사용되는 프로세스에 대해 설명합니다."]

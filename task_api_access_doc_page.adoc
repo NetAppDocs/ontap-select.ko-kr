@@ -24,7 +24,7 @@ API 문서를 표시하고 API 호출을 수동으로 발급하려면 ONTAP Sele
 
 
 .단계
-. 브라우저에 URL을 입력하고 * Enter * 를 누릅니다.
+. 브라우저에 URL을 입력하고 *Enter*를 선택합니다.
 +
 '\https://<ip_address>/api/ui`
 
