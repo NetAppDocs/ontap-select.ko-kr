@@ -3921,9 +3921,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="3a7c61c685981e316491699fa430a141" category="list-text">SnapMirror 클라우드</block>
   <block id="11afad06b7613110311cd1bf0ce33518" category="list-text">ONTAP Select 9.18.1부터 Rocky Linux 10.1에서 KVM 하이퍼바이저가 지원됩니다.</block>
   <block id="8c4c7ec85ddc20b785383c7e3b83aaf3" category="list-text">SnapMirror 클라우드 지원</block>
-  <block id="8e6364cfe908f51088b3ba968ff3a1ef" category="list-text">ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 버전 9.17.1로 업그레이드할 때 기본적으로 활성화되는 라이센스가 부여된 ONTAP 기능입니다.</block>
-  <block id="138c7cd45c4194bbbdcc248c8d717a95" category="inline-link">SnapMirror 클라우드 백업을 객체 스토리지에 적용하는 방법에 대해 알아보세요</block>
-  <block id="a674f1954e78adeee48a68d3b46f7329" category="paragraph"><block ref="e78089da9b0e2900996a3bebc3fd1588" category="inline-link-rx"></block>.</block>
   <block id="11c2c011b497aeb8d79ad57ac92e7cc5" category="list-text">ONTAP Select 9.17.1부터 KVM 하이퍼바이저는 Red Hat Enterprise Linux(RHEL) 10.1, 10.0, 9.7 및 9.6과 Rocky Linux 10.0, 9.7 및 9.6에서 지원됩니다.</block>
   <block id="666e2d64cc00d0a8b97b0fd56b7dd1f8" category="paragraph">RHEL 10.1 및 10.0과 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에 대한 소프트웨어 RAID 워크플로 제한 사항이 있습니다. 자세한 내용은 다음 기술 자료 문서를 참조하십시오:</block>
   <block id="8e2010beca6ef5a4aa1af1a75a658891" category="list-text">ONTAP Select Deploy 9.14.1 버전이 9.14.1P2보다 낮은 경우, 가능한 한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드해야 합니다. 자세한 내용은 <block ref="6635db952aa4480bb5bc591b4d6d32f6" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
@@ -3970,8 +3967,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="8e27ba9474a19cb9db424e02974a1138" category="inline-link-macro">ONTAP Select를 사용한 FlexCache 쓰기 저장에 대해 자세히 알아보십시오</block>
   <block id="9a079a12f3415657c4b643769a34e014" category="paragraph"><block ref="9a079a12f3415657c4b643769a34e014" category="inline-link-macro-rx"></block></block>
   <block id="38b80c13e49233a5fa3471c364fdc493" category="paragraph">SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다.</block>
-  <block id="5641890857d855addbaf3e3074d37f96" category="inline-link-macro">ONTAP SnapLock에 대해 알아보십시오</block>
-  <block id="eef5b24d94b7497050fd72c30a339f6a" category="paragraph"><block ref="eef5b24d94b7497050fd72c30a339f6a" category="inline-link-macro-rx"></block></block>
   <block id="418abba3a088e4f2cf70e0dd10df26f7" category="list-text"><block ref="418abba3a088e4f2cf70e0dd10df26f7" category="inline-link-macro-rx"></block></block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
   <block id="e16080ba1221020cf277f79a62c290d9" category="paragraph"><block ref="aa150fc2553a8a0c846847314bde8f61" category="inline-link-macro-rx"></block>을 따르고, <block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block> 및 <block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block>에 필요한 정보를 검토하십시오.</block>
@@ -4007,7 +4002,6 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="c6be59d8f4c6188156fe9d80753e59f8" category="inline-link-macro">VMware 하이퍼바이저 및 하드웨어 고려사항</block>
   <block id="d68e21bf4e5582ed1019332f3cd04b09" category="list-text">ONTAP Select 9.19.1부터 ONTAP Select는 KVM(커널 기반 가상 머신) 및 ESXi 하이퍼바이저 호스트에서 AMD 프로세서를 지원합니다. 자세한 내용은 <block ref="db422ba85aa25b901cf43f6d42795d78" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
   <block id="3c833d1ee8d4e9669082a8240b31214c" category="list-text">ONTAP Select 9.17.1에서는 KVM 하이퍼바이저 호스트에 로컬로 연결된 NVMe 디스크에 대한 소프트웨어 RAID 지원이 도입되었습니다.</block>
-  <block id="5eea56b636200eece0ac62ded25f076a" category="list-text">ONTAP Select 9.17.1 버전부터는 신규 구축 시 SnapLock Select(위변조 방지 스냅샷 잠금 기능 포함) 라이선스가 자동으로 적용됩니다. ONTAP Select 9.16.1 이하 버전에서 업그레이드하는 경우, SnapLock Select 라이선스를 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>에서 무료로 다운로드하여 수동으로 적용할 수 있습니다. 자세한 내용은 <block ref="d74e51aab974d5584eeccb899c4795c8" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
   <block id="241b40bcae013c473d9644fea50dbf5c" category="list-text">ONTAP Select 9.16.1부터 NetApp 라이센스 파일(NLF) 지원이 업데이트되었습니다. 새로운 NLF 형식에는 ARP, ONTAP S3 및 S3 SnapMirror 기능에 대한 라이센스가 포함됩니다. <block ref="1c797fc87ce45f1ff9b7973693d40c4e" category="inline-link-macro-rx"></block>.</block>
   <block id="3afaa3f98df333db327702e79529e9a3" category="list-text">ONTAP Select 9.16.1은 Autonomous Ransomware Protection(ARP)에 대한 지원을 도입합니다. ONTAP Select 9.16.1은 ARP에 대한 수동 업데이트만 지원하며 자동 업데이트는 지원되지 않습니다. ARP 기능 라이센스는 ONTAP Select 9.16.1용 NLF에 포함되어 있습니다. <block ref="1c797fc87ce45f1ff9b7973693d40c4e" category="inline-link-macro-rx"></block>.</block>
   <block id="e112325a6b51838d19891eba0316fee2" category="paragraph">ONTAP Select는 Intel Xeon Sandy Bridge 및 Advanced Micro Devices(AMD) 프로세서 기반 CPU 모델을 지원합니다.</block>
@@ -4064,4 +4058,12 @@ ESXi 하이퍼바이저 호스트 또는 Linux KVM 호스트</block>
   <block id="022346328acf67e828e800f24e979488" category="list-text">암호를 입력하고 * Enter * 를 선택합니다.</block>
   <block id="65602a883b3293c14c5c6b3ed9367b58" category="sidebar">NetApp ONTAP Select는 VMware ESXi 또는 KVM(커널 기반 가상 머신) 하이퍼바이저를 실행하는 다양한 일반 하드웨어 서버에 구축할 수 있는 소프트웨어 정의 스토리지 어플라이언스입니다. 유연하고 확장 가능한 프라이빗 클라우드 인프라를 구축하는 데 필요한 민첩성을 제공합니다. 이 사이트에는 ONTAP Select 9.19.1에 대한 설명서가 있습니다.</block>
   <block id="85b340552d2a4b137eb45059da3b6af2" category="sidebar">ONTAP Select 9.19.1 문서</block>
+  <block id="af30d81f9a8c2c0f5b25d08da7858ddc" category="inline-link-macro">ONTAP SnapLock</block>
+  <block id="4f187117101edb6221a27ad094532806" category="paragraph"><block ref="e5be20e426588130203bae7a7e597f79" category="inline-link-macro-rx"></block>에 대해 알아보십시오</block>
+  <block id="b638d0f1dd4c80d3617cfefeec604c5d" category="inline-link-macro">비기술 지원 사례 개설</block>
+  <block id="7a3af7c91740e45930119ddce3bf0d83" category="paragraph"><block ref="edc9445a6277b18c79e0ada4e6ba9f5f" category="inline-link-macro-rx"></block>SnapMirror 클라우드 라이센스를 취득해야 합니다.</block>
+  <block id="d6e5e04c7b9c56d9515955d288b0e813" category="inline-link-macro">SnapMirror 클라우드 백업을 오브젝트 스토리지에 저장</block>
+  <block id="609570e1a92256aa3f9b774f7dbf24fc" category="paragraph"><block ref="4ae01b68125388898638ecb3eb2e59b7" category="inline-link-macro-rx"></block>에 대해 알아보십시오</block>
+  <block id="d8818ebf9ca1095fb7a5372f4292243c" category="list-text">ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select에서 지원됩니다. SnapMirror 클라우드는 기본적으로 ONTAP Select에 대해 라이센스가 부여되지 않습니다. ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 버전 9.17.1로 업그레이드할 때 SnapMirror 클라우드 라이센스를 요청해야 합니다. 자세한 내용은 <block ref="721bf771faed6cfbdee5aa217f7b1ff8" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="852cb5ef58dc20087f2fcb39137748a7" category="list-text">ONTAP Select 9.17.1 버전부터는 신규 구축 시 SnapLock Select(위변조 방지 스냅샷 잠금 기능 포함) 라이선스가 자동으로 적용됩니다. ONTAP Select 9.16.1 이하 버전에서 업그레이드하는 경우, SnapLock Select 라이선스를 <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>에서 무료로 다운로드하여 수동으로 적용할 수 있습니다. 자세한 내용은 <block ref="d74e51aab974d5584eeccb899c4795c8" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
 </blocks>
