@@ -30,7 +30,7 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 * 중복제거 및 압축
 * 키 관리 상호 운용성 프로토콜(KMIP)을 사용한 외부 키 관리
 +
-외부 키 관리는 ONTAP Select에서 지원되는 유일한 키 관리입니다. link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["외부 키 관리 활성화 및 구성"^]에 대해 자세히 알아보십시오.
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["외부 키 관리 활성화 및 구성"^]에 대해 자세히 알아보십시오.
 
 * FlexCache
 +

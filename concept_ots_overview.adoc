@@ -137,7 +137,6 @@ Fibre Channel 및 Fibre Channel over Ethernet은 지원되지 않습니다.
 ONTAP Select와 함께 사용되는 가상화 환경으로 인해 NIC 오프로드 기능은 지원되지 않습니다.
 
 * NetApp 스토리지 암호화 드라이브
-* 온보드 키 관리자
 * ONTAP 포트 속성입니다
 +
 속도, 이중 및 흐름 제어를 포함한 ONTAP 포트의 속성은 수정할 수 없습니다.
