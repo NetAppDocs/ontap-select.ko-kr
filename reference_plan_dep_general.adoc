@@ -125,8 +125,8 @@ NOTE: 계정 정보는 AES 암호화 알고리즘 및 SHA-256 해싱 알고리�
 .자격 증명의 유형입니다
 지원되는 자격 증명 유형은 다음과 같습니다.
 
-* ONTAP Select 노드를 VMware ESXi에 직접 구축할 때 하이퍼바이저 호스트를 인증하는 데 사용되는 호스트입니다
-* VMware vCenter에서 호스트를 관리할 때 ESXi에 ONTAP Select 노드를 구축하는 과정에서 vCenter Server를 인증하는 데 사용되는 vCenter입니다
+* *호스트*: ONTAP Select 노드를 VMware ESXi에 직접 배포할 때 하이퍼바이저 호스트를 인증하는 데 사용됩니다.
+* *vCenter*: 호스트가 VMware vCenter에 의해 관리될 때 ESXi에 ONTAP Select 노드를 배포하는 과정에서 vCenter 서버를 인증하는 데 사용됩니다
 
 
 .액세스

@@ -37,8 +37,8 @@ NOTE: 지원되는 플랫폼에 대한 자세한 내용은 하이퍼바이저별
 .ONTAP Select 노드용 하이퍼바이저 및 관리 유틸리티
 Deploy 관리 유틸리티와 ONTAP Select 노드 모두 가상 머신으로 실행됩니다. 배포 유틸리티에 대해 선택하는 하이퍼바이저는 ONTAP Select 노드에 대해 선택하는 하이퍼바이저와 독립적입니다. 두 가지를 페어링할 때 완벽한 유연성이 있습니다.
 
-* VMware ESXi에서 실행되는 Deploy 유틸리티를 사용하면 VMware ESXi 또는 KVM에서 ONTAP Select 클러스터를 생성하고 관리할 수 있습니다
-* KVM에서 실행되는 배포 유틸리티를 통해 VMware ESXi 또는 KVM에서 ONTAP Select 클러스터를 생성하고 관리할 수 있습니다
+* VMware ESXi에서 실행되는 Deploy 유틸리티는 VMware ESXi 또는 KVM에서 ONTAP Select 클러스터를 생성하고 관리할 수 있습니다.
+* KVM에서 실행되는 Deploy 유틸리티는 VMware ESXi 또는 KVM에서 ONTAP Select 클러스터를 생성하고 관리할 수 있습니다.
 
 
 .호스트당 하나 이상의 ONTAP Select 노드 인스턴스
@@ -69,7 +69,7 @@ ONTAP Select 노드를 ONTAP 하드웨어 기반 클러스터에 직접 추가�
 VMware 환경에 ONTAP Select 배포 유틸리티를 설치하기 전에 고려해야 하는 VMware 환경 관련 몇 가지 요구 사항과 제한 사항이 있습니다.
 
 .ESXi 호스트 서버 하드웨어 요구 사항
-ESXi 하이퍼바이저 호스트가 충족해야 하는 최소 리소스 요구 사항은 몇 가지가 있습니다. ONTAP Select가 구축된 호스트가 다음과 같은 기본 요구 사항을 충족하는지 확인해야 합니다.
+ESXi 하이퍼바이저 호스트는 몇 가지 최소 리소스 요구 사항을 충족해야 합니다. ONTAP Select가 배포된 호스트가 다음 기본 요구 사항을 충족하는지 확인하십시오.
 
 * ESXi 서버:
 +
@@ -84,13 +84,13 @@ ESXi 하이퍼바이저 호스트가 충족해야 하는 최소 리소스 요구
 
 
 .네트워크 연결
-ONTAP Select Deploy 가상 머신 네트워크 인터페이스가 구성되어 있고 관리 IP 주소가 하나만 있는지 확인해야 합니다. DHCP를 사용하여 동적으로 IP 주소를 할당하거나 고정 IP 주소를 수동으로 구성할 수 있습니다.
+ONTAP Select Deploy 가상 머신 네트워크 인터페이스가 구성되어 있고 단일 관리 IP 주소를 가지고 있는지 확인합니다. DHCP를 사용하여 IP 주소를 동적으로 할당하거나 고정 IP 주소를 수동으로 구성할 수 있습니다.
 
 구축 결정에 따라 구축 VM은 vCenter Server, ESXi 하이퍼바이저 호스트 및 관리하는 ONTAP Select 노드에 연결할 수 있어야 합니다. 필요한 트래픽을 허용하도록 방화벽을 구성해야 합니다.
 
-Deploy는 VMware VIX API를 사용하여 vCenter 서버 및 ESXi 호스트와 통신합니다. 처음에는 TCP 포트 443에서 SSL을 통한 SOAP 연결을 설정합니다. 이 후 포트 902에서 SSL을 사용하여 연결이 열립니다. 또한 deploy는 ping 명령을 실행하여 지정한 IP 주소에 ESXi 호스트가 있는지 확인합니다.
+Deploy는 VMware VIX API를 사용하여 vCenter 서버 및 ESXi 호스트와 통신합니다. 처음에는 TCP 포트 443에서 SSL을 통한 SOAP 연결을 설정합니다. 그 후, 포트 902에서 SSL을 사용하여 연결을 엽니다. 또한 Deploy는 PING 명령을 실행하여 사용자가 지정한 IP 주소에 ESXi 호스트가 있는지 확인합니다.
 
-Deploy는 다음 프로토콜을 사용하여 ONTAP Select 노드 및 클러스터 관리 IP 주소와 통신할 수 있어야 합니다.
+또한 Deploy는 다음 프로토콜을 사용하여 ONTAP Select 노드 및 클러스터 관리 IP 주소와 통신할 수 있어야 합니다.
 
 * ping 명령(ICMP)
 * SSH(포트 22)
@@ -106,13 +106,13 @@ ONTAP Select 배포는 IP 버전 4(IPv4)만 지원합니다. IP 버전 6(IPv6)�
 
 
 
-== ONTAP Select Deploy VMware vCenter 서버 고려 사항
+== VMware vCenter 서버 고려 사항
+
+.ESA에 대한 VMware vSphere 권한
+vCenter에서 vSAN Express Storage Architecture(ESA)를 생성하고 관리하려면 다음과 같은 vSphere 콘텐츠 라이브러리 권한이 필요합니다.
 
 
-
-=== ESA에 대한 VMware vSphere 권한
-
-다음은 vCenter에서 vSAN Express Storage Architecture(ESA)를 생성하고 관리하는 데 필요한 vSphere 콘텐츠 라이브러리에 대한 특정 권한 목록입니다.
+NOTE: 콘텐츠 라이브러리 권한에 액세스하려면 관리자가 vCenter Server의 전역 권한에 대한 액세스 권한을 부여해야 합니다.
 
 * 라이브러리 항목 추가
 * 지역 도서관 만들기

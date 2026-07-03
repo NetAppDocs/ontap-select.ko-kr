@@ -138,9 +138,9 @@ ONTAP Select Deploy 및 ONTAP Select for ESXi는 스토리지 풀에 vSAN 또는
 
 [NOTE]
 ====
-콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 액세스해야 합니다.  제한된 역할로 작업하는 경우 vSAN ESA 배포에 필요합니다.
+콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 대한 액세스가 필요합니다. 제한된 역할을 사용하는 vSAN ESA 배포 환경에서는 이러한 액세스가 필수적입니다.
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["콘텐츠 라이브러리 작업에 대한 권한 수준 액세스에 대해 알아보세요."^] .
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["콘텐츠 라이브러리 작업에 대한 액세스 권한 수준 알아보기"].
 
 ====
 --
