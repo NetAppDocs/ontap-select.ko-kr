@@ -23,6 +23,8 @@ TIP: 또한 가능합니다 link:https://docs.netapp.com/us-en/ontap-select/task
 
 
 
+[[step-1-prepare-for-the-deployment]]
+[[prepare-for-deploy]]
 == 1단계: 배포 준비
 
 배포가 성공적으로 이루어지도록 준비하세요.
@@ -87,6 +89,8 @@ NOTE: 페이지 맨 위에 있는 탭(클러스터, 하이퍼바이저 호스트
 
 
 
+[[step-2-create-a-single-node-or-multi-node-cluster]]
+[[create-single-or-multi-node-cluster]]
 == 2단계: 단일 노드 또는 다중 노드 클러스터 만들기
 
 ONTAP Select 배포 웹 사용자 인터페이스를 사용하여 단일 노드 또는 다중 노드 ONTAP Select 클러스터를 배포할 수 있습니다.
@@ -196,6 +200,7 @@ Deploy 관리를 설치하고 초기 구성(암호, AutoSupport 및 vCenter)을 
 ====
 
 
+[[step-3-complete-the-deployment]]
 == 3단계: 배포 완료
 
 클러스터를 배포한 후,link:https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["ONTAP Select AutoSupport 기능이 구성되었는지 확인하세요."^] 그런 다음link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"] .

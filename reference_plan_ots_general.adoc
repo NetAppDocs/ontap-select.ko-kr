@@ -18,6 +18,7 @@ ONTAP Select 배포 계획의 일부로 고려해야 할 몇 가지 일반적인
 
 
 
+[[required-linux-knowledge-and-skills-for-kvm]]
 == KVM에 필요한 Linux 지식 및 기술
 
 KVM 하이퍼바이저가 있는 Linux는 복잡한 작업 환경입니다. ONTAP Select on KVM을 배포하기 전에 필요한 지식과 기술을 갖춰야 합니다.
@@ -61,6 +62,7 @@ KVM 배포 및 관리:: 일반적인 가상화 개념을 잘 알고 있어야 �
 
 
 
+[[cluster-size-and-related-considerations]]
 == 클러스터 크기 및 관련 고려 사항
 
 고려해야 할 클러스터 크기와 관련된 몇 가지 계획 문제가 있습니다.
@@ -71,6 +73,7 @@ KVM 배포 및 관리:: 일반적인 가상화 개념을 잘 알고 있어야 �
 
 
 
+[[hypervisor-host-considerations]]
 == 하이퍼바이저 호스트 고려 사항
 
 하이퍼바이저 호스트와 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다.
@@ -124,6 +127,7 @@ ONTAP Select를 ONTAP 하드웨어 기반 클러스터와 통합:: ONTAP Select 
 
 
 
+[[storage-considerations]]
 == 스토리지 고려 사항
 
 호스트 스토리지와 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다.
@@ -156,6 +160,7 @@ NOTE: ONTAP Select 스토리지 용량은 ONTAP Select 가상 머신에 연결�
 
 
 
+[[authentication-using-the-credential-store]]
 == 자격 증명 저장소를 사용하여 인증합니다
 
 ONTAP Select Deploy 자격 증명 저장소는 계정 정보를 보관하는 데이터베이스 저장소입니다. Deploy는 계정 자격 증명을 사용하여 클러스터 생성 및 관리의 일부로 호스트 인증을 수행합니다. ONTAP Select 배포를 계획할 때 자격 증명 저장소가 어떻게 사용되는지 알고 있어야 합니다.

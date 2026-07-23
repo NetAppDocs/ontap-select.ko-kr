@@ -18,12 +18,14 @@ summary: host modify 명령을 사용하여 이 ONTAP Select 배포 인스턴스
 
 
 
+[[syntax]]
 == 구문
 
 `host modify [-help] [-foreground] -name _name_ -mgmt-server _management_server_ [-username _username_]`
 
 
 
+[[required-parameters]]
 == 필수 매개변수
 
 [cols="35,65"]
@@ -48,6 +50,7 @@ summary: host modify 명령을 사용하여 이 ONTAP Select 배포 인스턴스
 |===
 
 
+[[optional-parameters]]
 == 선택적 매개 변수입니다
 
 [cols="35,65"]

@@ -18,6 +18,7 @@ ONTAP Select 배포 보안의 일부로 수행할 수 있는 몇 가지 관련 �
 
 
 
+[[change-the-deploy-administrator-password]]
 == 배포 관리자 암호를 변경합니다
 
 웹 사용자 인터페이스를 사용하여 필요에 따라 가상 시스템 배포 관리자 계정의 암호를 변경할 수 있습니다.
@@ -30,6 +31,7 @@ ONTAP Select 배포 보안의 일부로 수행할 수 있는 몇 가지 관련 �
 
 
 
+[[add-a-management-server-account]]
 == 관리 서버 계정을 추가합니다
 
 배포 자격 증명 저장소 데이터베이스에 관리 서버 계정을 추가할 수 있습니다.
@@ -67,6 +69,7 @@ ONTAP Select 배포 보안의 일부로 수행할 수 있는 몇 가지 관련 �
 
 
 
+[[configure-mfa]]
 == MFA를 구성합니다
 
 ONTAP Select 9.13.1부터 ONTAP Select Deploy 관리자 계정에 대해 다단계 인증(MFA)이 지원됩니다.
@@ -77,10 +80,12 @@ ONTAP Select 9.13.1부터 ONTAP Select Deploy 관리자 계정에 대해 다단�
 
 
 
+[[ontap-select-deploy-cli-mfa-login-using-yubikey-piv-or-fido2-authentication]]
 == ONTAP Select YubiKey PIV 또는 FIDO2 인증을 사용하여 CLI MFA 로그인을 배포합니다
 
 
 
+[[yubikey-piv]]
 === 유비키 PIV
 
 YubiKey PIN을 구성하고 의 단계에 따라 RSA(Remote Support Agent) 또는 ECDSA(Elliptic Curve Digital Signature Algorithm) 개인 키 및 인증서를 생성하거나 가져옵니다 link:https://docs.netapp.com/us-en/ontap-technical-reports/security.html#multifactor-authentication["TR-4647: ONTAP에서 다중 요소 인증"^].
@@ -91,6 +96,7 @@ YubiKey PIN을 구성하고 의 단계에 따라 RSA(Remote Support Agent) 또�
 
 
 
+[[fido2]]
 === FIDO2입니다
 
 YubiKey FIDO2 인증을 선택한 경우 YubiKey Manager를 사용하여 YubiKey FIDO2 PIN을 구성하고 Windows용 PuTTY-CAC(공용 액세스 카드) 또는 MacOS용 ssh-keygen을 사용하여 FIDO2 키를 생성합니다. 이 작업을 수행하는 단계는 기술 보고서를 참조하십시오 link:https://docs.netapp.com/us-en/ontap-technical-reports/security.html#multifactor-authentication["TR-4647: ONTAP에서 다중 요소 인증"^].
@@ -101,6 +107,7 @@ YubiKey FIDO2 인증을 선택한 경우 YubiKey Manager를 사용하여 YubiKey
 
 
 
+[[obtain-the-yubikey-piv-or-fido2-public-key]]
 === YubiKey PIV 또는 FIDO2 공개 키를 얻습니다
 
 공개 키 가져오기는 Windows 또는 MacOS 클라이언트인지, PIV 또는 FIDO2를 사용하는지 여부에 따라 달라집니다.
@@ -117,6 +124,7 @@ YubiKey FIDO2 인증을 선택한 경우 YubiKey Manager를 사용하여 YubiKey
 
 
 
+[[configure-the-public-key-in-ontap-select-deploy]]
 == ONTAP Select 배포에서 공개 키를 구성합니다
 
 SSH는 관리자 계정에서 공개 키 인증 방법을 사용합니다. 사용되는 명령은 인증 방법이 표준 SSH 공개 키 인증인지, YubiKey PIV인지, FIDO2 인증인지에 관계없이 동일합니다.
@@ -156,6 +164,7 @@ MFA enabled Successfully
 
 
 
+[[log-in-to-ontap-select-deploy-using-yubikey-piv-authentication-over-ssh]]
 == SSH를 통한 YubiKey PIV 인증을 사용하여 ONTAP Select 배포에 로그인합니다
 
 SSH를 통한 YubiKey PIV 인증을 사용하여 ONTAP Select 배포에 로그인할 수 있습니다.
@@ -184,6 +193,7 @@ Version: NetApp Release 9.13.1 Build:6811765 08-17-2023 03:08:09
 ----
 
 
+[[ontap-select-deploy-cli-mfa-login-using-ssh-keygen]]
 == ONTAP Select ssh-keygen을 사용하여 CLI MFA 로그인을 구축합니다
 
 를 클릭합니다 `ssh-keygen` 명령은 SSH에 대한 새 인증 키 쌍을 생성하기 위한 툴입니다. 키 쌍은 로그인 자동화, SSO(Single Sign-On) 및 호스트 인증에 사용됩니다.
@@ -236,6 +246,7 @@ Version: NetApp Release 9.13.1 Build:6811765 08-17-2023 03:08:09
 
 
 
+[[migrate-from-mfa-to-single-factor-authentication]]
 === MFA에서 단일 요소 인증으로 마이그레이션
 
 다음 방법을 사용하여 배포 관리자 계정에 대해 MFA를 사용하지 않도록 설정할 수 있습니다.

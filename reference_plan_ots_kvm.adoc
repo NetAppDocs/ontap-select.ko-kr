@@ -18,6 +18,7 @@ summary: KVM 하이퍼바이저의 사용과 관련하여 고려해야 할 몇 �
 
 
 
+[[basic-requirements-and-restrictions]]
 == 기본 요구 사항 및 제한 사항
 
 ONTAP Select 스토리지 풀에 외부 스토리지를 사용하는 경우 다음과 같은 구성 제한이 적용됩니다.
@@ -33,6 +34,7 @@ CAUTION: 지정하는 스토리지 용량은 외부 스토리지의 허용된 �
 
 
 
+[[best-practices]]
 == 모범 사례
 
 다음과 같은 모범 사례를 따라야 합니다.

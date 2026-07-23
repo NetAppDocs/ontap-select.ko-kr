@@ -21,6 +21,7 @@ NOTE: 물리적 RAID 컨트롤러가 기본 드라이브에 RAID 스트라이핑
 
 
 
+[[raid-controller-configuration-for-local-attached-storage]]
 == 로컬 연결 스토리지를 위한 RAID 컨트롤러 구성
 
 ONTAP Select에 백업 스토리지를 제공하는 로컬로 연결된 모든 디스크는 RAID 컨트롤러 뒤에 있어야 합니다. 대부분의 일반 서버는 다양한 수준의 기능을 갖춘 여러 가격대에 여러 개의 RAID 컨트롤러 옵션을 제공합니다. 이 옵션의 목적은 컨트롤러에 있는 특정 최소 요구사항을 충족하는 경우에 가능한 많은 옵션을 지원하는 것입니다.
@@ -46,6 +47,7 @@ NOTE: 이전 ESXi 릴리스의 최대 익스텐트 및 데이터스토어 크기
 
 
 
+[[raid-mode]]
 == RAID 모드
 
 대부분의 RAID 컨트롤러는 최대 3개의 작업 모드를 지원하며, 각 모드는 쓰기 요청이 취하는 데이터 경로의 상당한 차이를 나타냅니다. 이 세 가지 모드는 다음과 같습니다.
@@ -61,6 +63,7 @@ ONTAP Select를 사용하려면 배터리 백업 또는 플래시 장치가 있�
 
 
 
+[[local-disks-shared-between-ontap-select-and-os]]
 == ONTAP Select와 OS 간에 공유되는 로컬 디스크입니다
 
 가장 일반적인 서버 구성은 모든 로컬로 연결된 스핀들이 단일 RAID 컨트롤러 뒤에 있는 구성입니다. 최소 2개의 LUN을 프로비저닝해야 합니다. 하나는 하이퍼바이저용으로, 다른 하나는 ONTAP Select VM에 대해 프로비저닝해야 합니다.
@@ -77,6 +80,7 @@ ONTAP Select와 동일한 RAID 그룹에서 OS LUN을 프로비저닝하면 하�
 
 
 
+[[local-disks-split-between-ontap-select-and-os]]
 == 로컬 디스크는 ONTAP Select와 OS 간에 분할됩니다
 
 서버 공급업체에서 제공하는 다른 가능한 구성에는 여러 RAID 또는 디스크 컨트롤러를 사용하여 시스템을 구성하는 작업이 포함됩니다. 이 구성에서는 디스크 세트를 하나의 디스크 컨트롤러에서 관리하며, RAID 서비스를 제공할 수도 있고 제공하지 않을 수도 있습니다. 두 번째 디스크 세트는 RAID 5/6 서비스를 제공할 수 있는 하드웨어 RAID 컨트롤러에 의해 관리됩니다.
@@ -91,12 +95,14 @@ image:ST_09.jpg["혼합 RAID/비 RAID 시스템에서 서버 LUN 구성"]
 
 
 
+[[multiple-luns]]
 == 여러 개의 LUN
 
 단일 RAID 그룹/단일 LUN 구성을 변경해야 하는 경우는 두 가지가 있습니다. NL-SAS 또는 SATA 드라이브를 사용하는 경우 RAID 그룹 크기는 드라이브 12개를 초과하지 않아야 합니다. 또한 단일 LUN이 기본 하이퍼바이저 스토리지보다 커지면 개별 파일 시스템 익스텐트 최대 크기 또는 총 스토리지 풀 최대 크기가 제한됩니다. 그런 다음 기본 물리적 스토리지를 여러 LUN으로 분할해야 파일 시스템을 성공적으로 생성할 수 있습니다.
 
 
 
+[[vmware-vsphere-virtual-machine-file-system-limits]]
 == VMware vSphere 가상 머신 파일 시스템 제한
 
 일부 ESXi 버전에서 데이터 저장소의 최대 크기는 64TB입니다.
@@ -126,6 +132,7 @@ VMware는 VMFS 5에서 VMFS 6으로의 데이터 이동 없는 업그레이드�
 
 
 
+[[ontap-select-virtual-disks]]
 == ONTAP Select 가상 디스크
 
 ONTAP Select의 핵심에는 하나 이상의 스토리지 풀에서 프로비저닝된 가상 디스크 집합이 ONTAP에 제공됩니다. ONTAP에는 물리적 디스크로 처리하는 가상 디스크 세트가 제공되며, 스토리지 스택의 나머지 부분은 하이퍼바이저에 의해 추상화됩니다. 다음 그림에서는 물리적 RAID 컨트롤러, 하이퍼바이저 및 ONTAP Select VM 간의 관계를 자세하게 보여 줍니다.
@@ -141,6 +148,7 @@ image:ST_12.jpg["가상 디스크와 물리 디스크 간 매핑"]
 
 
 
+[[virtual-disk-provisioning]]
 == 가상 디스크 프로비저닝
 
 보다 간소화된 사용자 환경을 제공하기 위해 ONTAP Select 관리 툴인 ONTAP Deploy가 관련 스토리지 풀에서 가상 디스크를 자동으로 프로비저닝하고 ONTAP Select VM에 연결합니다. 이 작업은 초기 설정 및 스토리지 추가 작업 중에 자동으로 수행됩니다. ONTAP Select 노드가 HA 쌍의 일부인 경우 가상 디스크는 로컬 및 미러 스토리지 풀에 자동으로 할당됩니다.
@@ -154,6 +162,7 @@ NOTE: ONTAP Select VM에 용량을 추가하면 VMDK 크기가 서로 달라질 
 
 
 
+[[virtualized-nvram]]
 == NVRAM을 가상화했습니다
 
 NetApp FAS 시스템은 일반적으로 비휘발성 플래시 메모리가 포함된 고성능 카드인 물리적 NVRAM PCI 카드를 장착합니다. 이 카드는 들어오는 쓰기를 클라이언트에 즉시 확인할 수 있는 기능을 ONTAP에 부여하여 쓰기 성능을 크게 향상시킵니다. 또한 디스테이징이라고 하는 프로세스에서 수정된 데이터 블록을 느린 스토리지 미디어로 다시 이동하도록 예약할 수도 있습니다.
@@ -164,6 +173,7 @@ NVRAM은 자체 VMDK에 배치됩니다. NVRAM을 자체 VMDK로 분리하면 ON
 
 
 
+[[data-path-explained-nvram-and-raid-controller]]
 == 데이터 경로 설명: NVRAM 및 RAID 컨트롤러
 
 시스템에 유입될 때 쓰기 요청이 취하는 데이터 경로를 따라 가면 가상화된 NVRAM 시스템 파티션과 RAID 컨트롤러 간의 상호 작용이 가장 잘 강조 표시될 수 있습니다.

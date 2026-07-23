@@ -18,6 +18,7 @@ ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용�
 
 
 
+[[step-1-download-the-virtual-machine-image]]
 == 1단계: 가상 머신 이미지를 다운로드합니다.
 
 NetApp 지원 사이트에서 ONTAP Select 패키지를 다운로드하십시오.
@@ -38,6 +39,7 @@ ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표�
 
 
 
+[[step-2-verify-the-ontap-select-deploy-ova-signature]]
 == 2단계: ONTAP Select Deploy OVA 서명을 확인합니다.
 
 설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA)의 서명을 확인하십시오.
@@ -82,6 +84,7 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 
 
+[[step-3-deploy-the-virtual-machine]]
 == 3단계: 가상 머신 배포
 
 OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작하십시오. 설치 과정의 일부로 네트워크 인터페이스를 DHCP 또는 고정 IP 구성으로 설정합니다.
@@ -198,6 +201,7 @@ Use DHCP to set networking information? [n]:
 ====
 
 
+[[step-4-sign-in-to-the-deploy-web-interface]]
 == 4단계: 배포 웹 인터페이스에 Sign in.
 
 웹 사용자 인터페이스에 Sign in하여 Deploy 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행합니다.

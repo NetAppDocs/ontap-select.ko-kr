@@ -18,6 +18,7 @@ ONTAP Select 배포 관리 유틸리티 설치 계획의 일부로 고려해야 
 
 
 
+[[pairing-the-deploy-utility-with-the-ontap-select-clusters]]
 == 배포 유틸리티를 ONTAP Select 클러스터와 페어링합니다
 
 Deploy 유틸리티의 인스턴스를 ONTAP Select 클러스터와 페어링할 때 여러 가지 옵션이 있습니다.
@@ -36,6 +37,7 @@ NOTE: Deploy 유틸리티의 한 인스턴스는 최대 400개의 ONTAP Select �
 
 
 
+[[requirements-related-to-the-kvm-environment]]
 == KVM 환경과 관련된 요구 사항
 
 KVM 하이퍼바이저 환경에 배포 관리 유틸리티를 설치하기 전에 기본 요구 사항을 검토하고 배포 준비를 해야 합니다.
@@ -70,6 +72,7 @@ ONTAP Select 배포는 IP 버전 4(IPv4)만 지원합니다. IP 버전 6(IPv6)�
 
 
 
+[[required-configuration-information]]
 == 필수 구성 정보입니다
 
 배포 계획의 일환으로 ONTAP Select 배포 관리 유틸리티를 설치하기 전에 필요한 구성 정보를 확인해야 합니다.
@@ -88,6 +91,7 @@ VM 파일이 있는 스토리지 풀입니다(약 40GB 필요).
 
 
 
+[[optional-network-configuration-information]]
 == 네트워크 구성 정보(옵션
 
 배포 VM은 기본적으로 DHCP를 사용하여 구성됩니다. 그러나 필요한 경우 VM에 대한 네트워크 인터페이스를 수동으로 구성할 수 있습니다.
@@ -115,6 +119,7 @@ VM 파일이 있는 스토리지 풀입니다(약 40GB 필요).
 
 
 
+[[authentication-using-the-credential-store]]
 == 자격 증명 저장소를 사용하여 인증합니다
 
 ONTAP Select Deploy 자격 증명 저장소는 계정 정보를 보관하는 데이터베이스 저장소입니다. Deploy는 계정 자격 증명을 사용하여 클러스터 생성 및 관리의 일부로 호스트 인증을 수행합니다. ONTAP Select 배포를 계획할 때 자격 증명 저장소가 어떻게 사용되는지 알고 있어야 합니다.

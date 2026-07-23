@@ -18,6 +18,7 @@ ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터�
 
 
 
+[[step-1-prepare-for-the-deployment]]
 == 1단계: 배포 준비
 
 하이퍼바이저에서 ONTAP Select 클러스터를 생성하기 전에 필요한 준비 작업을 이해해야 합니다.
@@ -50,6 +51,7 @@ ONTAP Select 배포 관리 유틸리티와 함께 제공되는 명령줄 인터�
 
 
 
+[[step-2-upload-and-register-a-license-file]]
 == 2단계: 라이선스 파일 업로드 및 등록
 
 저장소 용량이 있는 라이센스 파일을 획득한 후에는 라이센스가 포함된 파일을 배포 가상 머신에 업로드하고 등록해야 합니다.
@@ -91,6 +93,7 @@ license show
 
 
 
+[[step-3-add-hypervisor-hosts]]
 == 3단계: 하이퍼바이저 호스트 추가
 
 ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해야 합니다.
@@ -204,6 +207,7 @@ host show -name 10.234.81.14 -detailed
 ====
 
 
+[[step-4-create-and-configure-an-ontap-select-cluster]]
 == 4단계: ONTAP Select 클러스터 생성 및 구성
 
 ONTAP Select 클러스터를 생성하고 구성해야 합니다. 클러스터를 구성한 후에는 개별 노드를 구성할 수 있습니다.
@@ -253,6 +257,7 @@ cluster show -name <cluster_name> -detailed
 
 
 
+[[step-5-configure-an-ontap-select-node]]
 == 5단계: ONTAP Select 노드 구성
 
 ONTAP Select 클러스터의 각 노드를 구성해야 합니다.
@@ -353,6 +358,7 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 
 
+[[step-6-attach-storage-to-the-ontap-select-nodes]]
 == 6단계: ONTAP Select 노드에 스토리지 연결
 
 ONTAP Select 클러스터의 각 노드에서 사용되는 스토리지를 구성합니다. 모든 노드에는 항상 하나 이상의 스토리지 풀이 할당되어야 합니다. 소프트웨어 RAID를 사용하는 경우 각 노드에 하나 이상의 디스크 드라이브도 할당해야 합니다.
@@ -446,6 +452,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 
 
 
+[[step-7-deploy-an-ontap-select-cluster]]
 == 7단계: ONTAP Select 클러스터 배포
 
 클러스터 및 노드를 구성한 후에는 클러스터를 구축할 수 있습니다.

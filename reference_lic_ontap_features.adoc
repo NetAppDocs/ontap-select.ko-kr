@@ -21,6 +21,8 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 
 
 
+[[ontap-features-licensed-by-default]]
+[[licensed-ontap-features]]
 == 기본적으로 라이센스가 부여되는 ONTAP 기능
 
 다음 ONTAP 기능은 ONTAP Select에서 지원되며 기본적으로 라이센스가 부여됩니다.
@@ -56,6 +58,9 @@ SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 S
 link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]에 대해 알아보십시오
 
 * SnapMirror를 참조하십시오
++
+ONTAP Select는 비동기 SnapMirror에서 일관성 그룹을 지원하지 않습니다.
+
 * SnapRestore
 * SnapVault
 * 스토리지 VM 재해 복구(SVM DR)
@@ -66,6 +71,8 @@ ONTAP Select는 SVM DR을 소스 및 대상으로 모두 지원하며 최대 16�
 
 
 
+[[ontap-features-that-are-separately-licensed]]
+[[other-ontap-features]]
 == ONTAP 기능은 별도로 라이센스가 부여됩니다
 
 기본적으로 라이선스가 부여되지 않은 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다. 여기에는 다음이 포함됩니다.

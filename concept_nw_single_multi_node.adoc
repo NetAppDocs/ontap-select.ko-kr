@@ -18,6 +18,7 @@ ONTAP Select는 단일 노드 및 다중 노드 네트워크 구성을 모두 �
 
 
 
+[[single-node-network-configuration]]
 == 단일 노드 네트워크 구성
 
 단일 노드 ONTAP Select 구성에서는 클러스터, HA 또는 미러 트래픽이 없으므로 ONTAP 내부 네트워크가 필요하지 않습니다.
@@ -41,6 +42,7 @@ NOTE: 단일 노드 클러스터에는 두 개의 어댑터가 충분하지만 N
 
 
 
+[[lif-assignment]]
 === LIF 할당
 
 이 문서의 다중 노드 LIF 할당 섹션에서 설명했듯이 ONTAP는 클러스터 네트워크 트래픽을 데이터 및 관리 트래픽과 분리하기 위해 IPspace를 사용합니다. 이 플랫폼의 단일 노드 버전에는 클러스터 네트워크가 포함되어 있지 않습니다. 따라서 클러스터 IPspace에 포트가 없습니다.
@@ -50,6 +52,7 @@ NOTE: ONTAP Select 클러스터 설정 중에 클러스터 및 노드 관리 LIF
 
 
 
+[[management-and-data-lifs-e0a-e0b-and-e0c]]
 === 관리 및 데이터 LIF(e0a, e0b 및 e0c)
 
 ONTAP 포트 e0a, e0b 및 e0c는 다음과 같은 유형의 트래픽이 포함된 LIF의 후보 포트로 위임됩니다.
@@ -61,6 +64,7 @@ ONTAP 포트 e0a, e0b 및 e0c는 다음과 같은 유형의 트래픽이 포함�
 
 
 
+[[multi-node-network-configuration]]
 == 다중 노드 네트워크 구성
 
 다중 노드 ONTAP Select 네트워크 구성은 두 개의 네트워크로 구성됩니다.
@@ -102,6 +106,7 @@ NOTE: 외부 네트워크 포트 그룹과 내부 네트워크 포트 그룹 모
 
 
 
+[[lif-assignment]]
 === LIF 할당
 
 IPspace가 출시됨에 따라 ONTAP 포트 역할이 더 이상 사용되지 않았습니다. FAS 어레이와 마찬가지로 ONTAP Select 클러스터는 기본 IPspace와 클러스터 IPspace를 모두 포함합니다. 클러스터 IPspace에 네트워크 포트 e0a, e0b 및 e0g 를 기본 IPspace 및 포트 e0c 및 e0d 에 배치하면 해당 포트가 속하지 않은 호스팅 LIF에서 본질적으로 벗어남이 되었다는 것을 알 수 있습니다. ONTAP Select 클러스터 내의 나머지 포트는 내부 서비스를 제공하는 인터페이스의 자동 할당을 통해 사용됩니다. RSM 및 HA 상호 연결 인터페이스와 마찬가지로 ONTAP 셸을 통해 노출되지 않습니다.
@@ -113,6 +118,7 @@ NOTE: 모든 LIF가 ONTAP 명령 셸을 통해 표시되는 것은 아닙니다.
 
 
 
+[[management-and-data-lifs-e0a-e0b-and-e0g]]
 === 관리 및 데이터 LIF(e0a, e0b 및 e0g)
 
 ONTAP 포트 e0a, e0b 및 e0g는 다음 유형의 트래픽이 포함된 LIF의 후보 포트로 위임됩니다.
@@ -127,6 +133,7 @@ NOTE: ONTAP Select 클러스터 설정 중에 클러스터 및 노드 관리 LIF
 
 
 
+[[cluster-network-lifs-e0c-e0d]]
 === 클러스터 네트워크 LIF(e0c, e0d)
 
 ONTAP 포트 e0c 및 e0d는 클러스터 인터페이스의 홈 포트로 위임됩니다. 각 ONTAP Select 클러스터 노드 내에서는 ONTAP 설정 중에 링크 로컬 IP 주소(169.254.x.x)를 사용하여 두 개의 클러스터 인터페이스가 자동으로 생성됩니다.
@@ -143,6 +150,7 @@ NOTE: 클러스터 네트워크 트래픽의 최대 처리량을 보장하기 �
 
 
 
+[[raid-syncmirror-traffic-e0e]]
 === RAID SyncMirror 트래픽(e0e)
 
 HA 파트너 노드 전체에서 블록의 동기식 복제는 네트워크 포트 e0e에 상주하는 내부 네트워크 인터페이스를 사용하여 수행됩니다. 이 기능은 클러스터 설정 중에 ONTAP에서 구성한 네트워크 인터페이스를 사용하여 자동으로 수행되므로 관리자가 구성할 필요가 없습니다.
@@ -152,6 +160,7 @@ NOTE: 포트 e0e는 ONTAP 내부 복제 트래픽을 위해 예약되어 있습�
 
 
 
+[[ha-interconnect-e0f]]
 === HA 인터커넥트(e0f)
 
 NetApp FAS 어레이는 특수 하드웨어를 사용하여 ONTAP 클러스터의 HA 쌍 간에 정보를 전달합니다. 그러나 소프트웨어 정의 환경에서는 InfiniBand 또는 iWARP 디바이스와 같은 이러한 유형의 장비를 사용할 수 없으므로 대체 솔루션이 필요합니다. 여러 가지 가능성을 고려했지만 상호 연결 전송에 배치된 ONTAP 요구 사항에서는 이 기능이 소프트웨어에서 에뮬레이트되어야 했습니다. 결과적으로, ONTAP Select 클러스터 내에서 HA 인터커넥트 기능(일반적으로 하드웨어에서 제공)은 이더넷을 전송 메커니즘으로 사용하여 OS로 설계되었습니다.

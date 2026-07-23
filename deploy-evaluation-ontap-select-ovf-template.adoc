@@ -26,6 +26,7 @@ VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드부터 최대 99개
 
 
 
+[[step-1-prepare-the-ontap-select-cluster-host]]
 == 1단계: ONTAP Select 클러스터 호스트 준비
 
 다음 요구 사항을 사용하여 ONTAP Select 클러스터가 구축되는 ESXi 호스트를 준비합니다. 플랫폼 설명은 VMFS-5 또는 VMFS-6 파일 시스템을 사용하여 포맷된 로컬 DAS(Direct-Attached Storage)를 사용하는 표준 또는 소형 인스턴스 유형 구성을 기반으로 합니다.
@@ -36,6 +37,7 @@ image:prepare_ESXi_host_requirements.png["ESXi 호스트를 준비하기 위한 
 
 
 
+[[step-2-deploy-a-single-node-ontap-select-cluster-using-an-ovf-template]]
 == 2단계: OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터를 배포합니다.
 
 지원되는 64비트 ESXi 호스트 서버에서 다음 단계를 완료합니다.

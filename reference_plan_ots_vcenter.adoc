@@ -21,12 +21,14 @@ NOTE: ONTAP Select가 구축된 ESXi 하이퍼바이저 호스트를 관리하�
 
 
 
+[[administrative-privileges]]
 == 관리 권한
 
 ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관리 권한이 아래에 나와 있습니다.
 
 
 
+[[datastore]]
 === 데이터 저장소
 
 * 공간을 할당합니다
@@ -38,6 +40,7 @@ ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관�
 
 
 
+[[host]]
 === 호스트
 
 구성::
@@ -61,6 +64,7 @@ ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관�
 
 
 
+[[network]]
 === 네트워크
 
 * 네트워크를 할당합니다
@@ -68,6 +72,7 @@ ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관�
 
 
 
+[[virtual-machine]]
 === 가상 머신
 
 구성:: 범주의 모든 권한.
@@ -78,6 +83,7 @@ ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관�
 
 
 
+[[vapp]]
 === vApp
 
 범주의 모든 권한.

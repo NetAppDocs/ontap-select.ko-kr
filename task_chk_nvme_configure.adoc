@@ -20,6 +20,7 @@ NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율
 
 
 
+[[step-1-configure-the-host]]
 == 1단계: 호스트 구성
 
 ESXi 또는 KVM 호스트가 드라이브를 인식하도록 구성합니다.
@@ -109,6 +110,7 @@ image:nvme_03.png["이 호스트를 재부팅합니다"]
 
 
 
+[[step-2-install-the-ontap-select-deploy-utility]]
 == 2단계: ONTAP Select Deploy 유틸리티 설치
 
 호스트가 준비되면 ONTAP Select Deploy 유틸리티를 설치할 수 있습니다. Deploy는 새로 준비된 호스트에 ONTAP Select 스토리지 클러스터를 생성하는 과정을 안내합니다. 이 과정에서 Deploy는 패스스루로 구성된 NVMe 드라이브를 감지하고 ONTAP 데이터 디스크로 사용할 드라이브를 자동으로 선택합니다. 필요한 경우 기본 선택을 조정할 수 있습니다.

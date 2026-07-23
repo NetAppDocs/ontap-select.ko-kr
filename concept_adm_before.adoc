@@ -29,6 +29,7 @@ ONTAP Select 클러스터를 생성한 후 다양한 관리 작업을 수행하�
 
 
 
+[[administer-ontap-select]]
 == ONTAP Select 관리
 
 ONTAP Select 지원의 일환으로 다양한 관리 절차를 사용할 수 있습니다. 또한 배포 관리 유틸리티에만 적용되는 절차가 있습니다. 이 절차의 가장 중요한 내용은 다음과 같습니다. 일반적으로 배포 웹 사용자 인터페이스를 사용합니다.
@@ -38,6 +39,7 @@ NOTE: 또한 가능합니다 link:https://docs.netapp.com/us-en/ontap-select/tas
 
 
 
+[[perform-additional-ontap-configuration]]
 == 추가 ONTAP 구성을 수행합니다
 
 ONTAP Select 클러스터를 구축한 후에는 하드웨어 기반 ONTAP 시스템과 마찬가지로 클러스터를 구성 및 관리할 수 있습니다. 예를 들어, ONTAP System Manager나 ONTAP CLI를 사용하여 ONTAP Select 클러스터를 구성할 수 있습니다.

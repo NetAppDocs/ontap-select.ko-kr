@@ -30,6 +30,7 @@ NOTE: 평가판 라이선스는 연장할 수 없습니다. 90일이 지나면 �
 
 
 
+[[step-1-register-for-an-account]]
 == 1단계: 계정을 등록하세요
 
 필요한 경우 NetApp 계정 등록을 완료하고 잠재 고객 액세스 권한을 요청하십시오.
@@ -73,6 +74,7 @@ NetApp 담당자의 이름을 포함하십시오.
 
 
 
+[[step-2-download-ontap-select-evaluation-software]]
 == 2단계: ONTAP Select 평가 소프트웨어를 다운로드하세요.
 
 지원 요청이 검토 및 승인되면 NetApp 지원팀에서 제공하신 이메일 주소로 알림을 보내드립니다.

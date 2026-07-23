@@ -18,6 +18,7 @@ summary: 특정 스토리지 구성 요소를 살펴보기 전에 ONTAP Select �
 
 
 
+[[phases-of-storage-configuration]]
 == 단계 를 참조하십시오
 
 ONTAP Select 호스트 스토리지의 주요 구성 단계는 다음과 같습니다.
@@ -51,12 +52,14 @@ ONTAP Select 호스트 스토리지의 주요 구성 단계는 다음과 같습�
 
 
 
+[[managed-versus-unmanaged-storage]]
 == 관리되는 스토리지와 관리되지 않는 스토리지의 비교
 
 ONTAP Select에서 직접 액세스하고 제어하는 스토리지는 관리되는 스토리지입니다. 동일한 하이퍼바이저 호스트의 다른 스토리지는 관리되지 않는 스토리지입니다.
 
 
 
+[[homogeneous-physical-storage]]
 === 동종 물리적 스토리지
 
 ONTAP Select 관리 스토리지를 구성하는 모든 물리적 드라이브는 동종이어야 합니다. 즉, 모든 하드웨어가 다음과 같은 특성과 같아야 합니다.
@@ -67,6 +70,7 @@ ONTAP Select 관리 스토리지를 구성하는 모든 물리적 드라이브�
 
 
 
+[[illustration-of-the-local-storage-environment]]
 == 로컬 스토리지 환경의 그림
 
 각 하이퍼바이저 호스트에는 ONTAP Select에서 사용할 수 있는 로컬 디스크 및 기타 논리적 스토리지 구성 요소가 포함되어 있습니다. 이러한 스토리지 구성 요소는 물리적 디스크에서 계층 구조로 정렬됩니다.
@@ -75,6 +79,7 @@ image:ST_01.jpg["로컬 스토리지 환경"]
 
 
 
+[[characteristics-of-the-local-storage-components]]
 === 로컬 스토리지 구성 요소의 특성
 
 ONTAP Select 환경에서 사용되는 로컬 스토리지 구성 요소에 적용되는 몇 가지 개념이 있습니다. ONTAP Select 배포를 준비하기 전에 이러한 개념에 대해 잘 알고 있어야 합니다. 이러한 개념은 RAID 그룹 및 LUN, 스토리지 풀 및 가상 디스크의 범주에 따라 정렬됩니다.
@@ -99,6 +104,7 @@ ONTAP Select 호스트를 구성할 때 다음 사항에 유의해야 합니다.
 
 
 
+[[storage-pool-considerations]]
 === 스토리지 풀 고려 사항
 
 스토리지 풀과 관련된 몇 가지 문제가 있으며, 이러한 문제는 ONTAP Select 구축을 준비하는 과정에서 반드시 숙지해야 합니다.
@@ -116,6 +122,7 @@ ONTAP Select 구축의 일부로 스토리지 풀이 제대로 생성되었는�
 
 
 
+[[manage-the-virtual-disks-on-esxi]]
 === ESXi에서 가상 디스크를 관리합니다
 
 ONTAP Select 구축 준비의 일환으로 가상 디스크와 관련된 몇 가지 문제가 있습니다.
@@ -141,6 +148,7 @@ ONTAP Select 가상 머신은 여러 개의 가상 디스크 드라이브를 할
 
 
 
+[[illustration-of-the-external-storage-environment-on-esxi]]
 == ESXi의 외부 스토리지 환경 그림
 
 ONTAP Select vNAS 솔루션을 사용하면 ONTAP Select는 하이퍼바이저 호스트 외부에 있는 스토리지에 상주하는 데이터 저장소를 사용할 수 있습니다. 데이터 저장소는 VMware vSAN을 사용하여 네트워크를 통해 액세스하거나 외부 스토리지 어레이에서 직접 액세스할 수 있습니다.
@@ -154,6 +162,7 @@ ONTAP Select vNAS 솔루션을 사용하면 ONTAP Select는 하이퍼바이저 �
 
 
 
+[[vsan-datastores]]
 === vSAN 데이터스토어
 
 모든 ESXi 호스트에는 하나 이상의 로컬 VMFS 데이터 저장소가 있을 수 있습니다. 일반적으로 이러한 데이터 저장소는 로컬 호스트에서만 액세스할 수 있습니다. 그러나 VMware vSAN을 사용하면 ESXi 클러스터의 각 호스트가 로컬 데이터처럼 클러스터의 모든 데이터스토어를 공유할 수 있습니다. 다음 그림에서는 vSAN이 ESXi 클러스터의 호스트 간에 공유되는 데이터 저장소 풀을 생성하는 방법을 보여 줍니다.
@@ -162,6 +171,7 @@ image:ST_02.jpg["ESXi 클러스터"]
 
 
 
+[[vmfs-datastore-on-external-storage-array]]
 === 외부 스토리지의 VMFS 데이터 저장소
 
 외부 스토리지에 상주하는 VMFS 데이터 저장소를 생성할 수 있습니다. 스토리지는 여러 네트워크 프로토콜 중 하나를 사용하여 액세스합니다. 다음 그림에서는 iSCSI 프로토콜을 사용하여 액세스하는 외부 스토리지 시스템의 VMFS 데이터 저장소를 보여 줍니다.
@@ -173,6 +183,7 @@ image:ST_03.jpg["ESXi 하이퍼바이저 호스트"]
 
 
 
+[[nfs-datastore-on-external-storage-array]]
 === 외부 스토리지의 NFS 데이터 저장소
 
 외부 스토리지 시스템에 상주하는 NFS 데이터 저장소를 생성할 수 있습니다. 스토리지는 NFS 네트워크 프로토콜을 사용하여 액세스합니다. 다음 그림에서는 NFS 서버 어플라이언스를 통해 액세스하는 외부 스토리지의 NFS 데이터 저장소를 보여 줍니다.

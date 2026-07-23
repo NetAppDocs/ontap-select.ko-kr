@@ -21,6 +21,7 @@ CAUTION: 배포 관리 유틸리티를 사용하여 기존 ONTAP Select 노드�
 
 
 
+[[general-procedure]]
 == 일반 절차
 
 높은 수준에서 기존 ONTAP Select 노드를 업그레이드하려면 다음 단계를 수행해야 합니다.
@@ -39,6 +40,7 @@ ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 
 
 
 
+[[revert-an-ontap-select-node]]
 == ONTAP Select 노드를 되돌립니다
 
 ONTAP Select 노드를 원래 설치된 이전 버전으로 되돌릴 수 없습니다. 예를 들면 다음과 같습니다.
@@ -49,6 +51,7 @@ ONTAP Select 9.17.1이 처음 설치되었습니다.:: 이전에 설치된 버�
 
 
 
+[[use-the-vmxnet3-network-driver]]
 == VMXNET3 네트워크 드라이버를 사용합니다
 
 VMXNET3은 VMware ESXi의 새 클러스터 구축에 포함된 기본 네트워크 드라이버입니다. ONTAP Select 9.4 이하 버전을 실행하는 기존 ONTAP Select 노드를 업그레이드하는 경우 네트워크 드라이버가 자동으로 업그레이드되지 않습니다. VMXNET3으로 수동으로 업그레이드해야 합니다. 업그레이드에 대한 지원은 NetApp 지원에 문의하십시오.

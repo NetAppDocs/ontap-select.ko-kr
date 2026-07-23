@@ -18,6 +18,7 @@ ONTAP Select가 조직에 적합하다고 판단되면 운영 구축을 지원�
 
 
 
+[[common-licensing-characteristics]]
 == 일반적인 라이센스 특성
 
 _Capacity Pools_ 및 _Capacity Tiers_ 라이센스 모델은 여러 면에서 매우 다릅니다. 하지만 두 라이센스 모델은 다음을 포함한 몇 가지 공통적인 특성을 공유합니다.
@@ -33,6 +34,7 @@ _Capacity Pools_ 및 _Capacity Tiers_ 라이센스 모델은 여러 면에서 �
 
 
 
+[[capacity-tiers-licensing-model]]
 == 용량 계층 라이센스 모델
 
 용량 계층 라이센스 모델에는 다음과 같은 여러 가지 특징이 있습니다.
@@ -50,6 +52,7 @@ _Capacity Pools_ 및 _Capacity Tiers_ 라이센스 모델은 여러 면에서 �
 
 
 
+[[capacity-pools-licensing-model]]
 == 용량 풀 라이센스 모델
 
 Capacity Pool 라이센스 모델에는 다음과 같은 여러 가지 특징이 있습니다.

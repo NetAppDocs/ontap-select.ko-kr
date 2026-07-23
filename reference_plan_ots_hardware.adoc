@@ -18,6 +18,7 @@ VMware 환경과 관련하여 고려해야 할 몇 가지 하드웨어 요구 �
 
 
 
+[[hypervisor-requirements]]
 == 하이퍼바이저 요구 사항
 
 ONTAP Select가 실행되는 하이퍼바이저와 관련된 몇 가지 요구 사항이 있습니다.
@@ -27,12 +28,14 @@ NOTE: 당신은 검토해야합니다link:reference_release_notes.html["ONTAP Se
 
 
 
+[[vmware-licensing]]
 === VMware 라이센스 등록
 
 ONTAP Select 클러스터를 구축하려면 ONTAP Select가 실행되는 하이퍼바이저 호스트에 대해 유효한 VMware vSphere 라이센스가 있어야 합니다. 배포에 적합한 라이센스를 사용해야 합니다.
 
 
 
+[[software-compatibility]]
 === 소프트웨어 호환성
 
 KVM 및 ESXi 하이퍼바이저에 ONTAP Select 배포할 수 있습니다.
@@ -69,12 +72,14 @@ NOTE: ESXi 7.0 GA가 더 이상 제공되지 않는 상태에 도달했습니다
 ====
 
 
+[[vmware-vcenter-and-standalone-esxi-hosts]]
 === VMware vCenter 및 독립 실행형 ESXi 호스트
 
 vCenter Server에서 ESXi 하이퍼바이저 호스트를 관리하는 경우 vCenter 자격 증명을 사용하여 호스트를 Deploy 관리 유틸리티에 등록해야 합니다. ESXi 자격 증명을 사용하여 호스트를 독립 실행형 호스트로 등록할 수 없습니다.
 
 
 
+[[core-hardware-requirements]]
 == 핵심 하드웨어 요구 사항
 
 ONTAP Select를 구축하는 물리적 하이퍼바이저 호스트는 몇 가지 하드웨어 요구 사항을 충족해야 합니다. 최소 하드웨어 요구 사항을 충족하는 경우 하이퍼바이저 호스트용 플랫폼을 선택할 수 있습니다. 지원되는 하드웨어 플랫폼은 Cisco, Dell, HP, Fujitsu, Lenovo, 슈퍼마이크로.
@@ -85,6 +90,7 @@ ONTAP Select는 Intel Xeon Sandy Bridge 및 Advanced Micro Devices(AMD) 프로�
 
 
 
+[[basic-hardware-requirements]]
 === 기본 하드웨어 요구 사항
 
 노드 인스턴스 유형 또는 라이센스 제공에 관계없이 모든 플랫폼에 적용되는 몇 가지 일반적인 하드웨어 요구 사항이 있습니다.
@@ -112,6 +118,7 @@ ONTAP Select는 Intel Xeon Sandy Bridge 및 Advanced Micro Devices(AMD) 프로�
 |===
 
 
+[[additional-hardware-requirements-based-on-the-instance-type]]
 === 인스턴스 유형에 따른 추가 하드웨어 요구 사항
 
 노드 인스턴스 유형에 따라 몇 가지 추가 하드웨어 요구 사항이 있습니다.

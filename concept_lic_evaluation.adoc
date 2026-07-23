@@ -38,6 +38,7 @@ ONTAP Select 배포 관리 유틸리티를 다운로드하려면 다음이 필�
 
 
 
+[[licensing-characteristics]]
 == 라이센스 특성
 
 ONTAP Select 평가판 라이센스의 특징은 다음과 같습니다.
@@ -53,6 +54,7 @@ ONTAP Select 평가판 라이센스의 특징은 다음과 같습니다.
 
 
 
+[[upgrade-to-a-production-license]]
 == 운영 라이센스로 업그레이드하십시오
 
 ONTAP Select 평가판 클러스터를 업그레이드하여 운영 라이센스를 사용할 수 있습니다. 다음과 같은 제한 사항을 숙지해야 합니다.
