@@ -4,7 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection 
 summary: 하드웨어 RAID 컨트롤러를 사용할 수 있는 경우, ONTAP Select는 RAID 서비스를 하드웨어 컨트롤러로 이동하여 쓰기 성능 향상 및 물리적 드라이브 장애에 대한 보호를 모두 제공할 수 있습니다. 따라서 ONTAP Select 클러스터 내의 모든 노드에 대한 RAID 보호는 ONTAP 소프트웨어 RAID가 아니라 로컬로 연결된 RAID 컨트롤러에 의해 제공됩니다. 
 ---
-= ONTAP Select 로컬 연결 스토리지를 위한 하드웨어 RAID 서비스
+= 로컬 연결 스토리지를 사용하는 ONTAP Select 용 하드웨어 RAID 서비스
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

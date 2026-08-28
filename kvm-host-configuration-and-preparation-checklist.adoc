@@ -4,7 +4,7 @@ permalink: kvm-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, kvm, host preparation 
 summary: ONTAP Select 노드가 배포된 각 KVM 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다. 
 ---
-= ONTAP Select 위한 KVM 호스트 구성 및 준비 체크리스트
+= ONTAP Select를 위한 KVM 호스트 준비
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

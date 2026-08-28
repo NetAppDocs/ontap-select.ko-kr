@@ -4,7 +4,7 @@ permalink: concept_stor_concepts_chars.html
 keywords: ontap select, storage concepts 
 summary: 특정 스토리지 구성 요소를 살펴보기 전에 ONTAP Select 환경에 적용되는 일반 스토리지 개념을 확인하십시오. 
 ---
-= ONTAP Select 스토리지: 일반 개념 및 특성
+= ONTAP Select의 일반 스토리지 특성에 대해 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

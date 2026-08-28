@@ -4,7 +4,7 @@ permalink: concept_ots_deploy.html
 keywords: ontap select deploy, deploy administration utility, deploy utility, functionality, accessing 
 summary: ONTAP Select 배포는 ONTAP Select 클러스터를 배포 및 관리하는 데 사용되는 관리 유틸리티입니다. 
 ---
-= ONTAP Select 구축
+= ONTAP Select Deploy에 대해 알아보기
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
