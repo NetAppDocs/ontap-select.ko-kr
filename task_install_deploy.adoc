@@ -16,6 +16,9 @@ summary: ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를
 [role="lead"]
 ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.
 
+.시작하기 전에
+link:kvm-host-configuration-and-preparation-checklist.html["사전 설치 체크리스트"]를 검토했습니다.
+
 
 
 [[step-1-download-the-virtual-machine-image]]

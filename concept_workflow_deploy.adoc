@@ -16,4 +16,28 @@ summary: ONTAP Select 클러스터를 구현하는 데 사용할 수 있는 워�
 [role="lead"]
 다음 워크플로우를 사용하여 ONTAP Select 클러스터를 구축하고 관리할 수 있습니다.
 
-image:deploy_workflow2.png["에서는 ONTAP Select 클러스터를 구축하는 데 필요한 전체 워크플로우를 설명합니다."]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"] link:reference_plan_ots_general.html["배포 계획을 수립하고 환경을 준비합니다."]
+[role="quick-margin-para"]
+ONTAP Select 노드, 스토리지, 네트워킹 및 하이퍼바이저 환경에 대한 계획 요구 사항을 검토하십시오. 환경을 사전에 준비하면 배포 문제를 방지하는 데 도움이 됩니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"] link:task_install_deploy.html["ONTAP Select Deploy 관리 유틸리티 설치"]
+[role="quick-margin-para"]
+ONTAP Select 클러스터를 배포하고 관리하는 데 사용하는 유틸리티를 설치하십시오.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3"] link:concept_lic_workflow.html["운영 구축에 필요한 라이센스를 취득합니다"]
+[role="quick-margin-para"]
+운영 구축에 필요한 라이선스를 구매하고 적용합니다. 용량 등급(Capacity Tiers) 또는 용량 풀(Capacity Pools) 라이선스 모델 중에서 선택할 수 있습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] ONTAP Select Deploy 관리 유틸리티를 사용하여 ONTAP Select 클러스터를 배포합니다
+[role="quick-margin-para"]
+Deploy 유틸리티를 사용하여 ONTAP Select 클러스터를 생성하십시오.
+
+[role="quick-margin-list"]
+* link:task_deploy_cluster.html["웹 UI를 사용하여 배포"]
+* link:task_cli_deploy_cluster.html["CLI를 사용하여 배포"]
+* link:reference_api_workflow.html["REST API를 사용하여 배포"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] link:concept_adm_before.html["표준 NetApp 관리 툴 및 인터페이스를 사용하여 ONTAP Select 클러스터를 관리합니다"]
+[role="quick-margin-para"]
+다른 ONTAP 클러스터에 사용하는 것과 동일한 관리 툴 및 인터페이스를 사용하여 ONTAP Select 클러스터를 관리하십시오.

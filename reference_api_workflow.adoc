@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: reference_api_workflow01.html 
+permalink: reference_api_workflow.html 
 keywords: rest api, deploy rest api, rest, workflow, create cluster, curl, json 
-summary: vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select 클러스터를 구축할 수 있습니다. 클러스터는 평가판 라이센스로 생성됩니다. 
+summary: vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select 클러스터를 구축할 수 있습니다. 
 ---
 = ESXi에서 ONTAP Select 단일 노드 평가 클러스터 생성
 :hardbreaks:
@@ -18,18 +18,18 @@ vCenter에서 관리하는 VMware ESXi 호스트에 단일 노드 ONTAP Select �
 
 클러스터 생성 워크플로는 다음과 같은 경우에 다릅니다.
 
-* ESXi 호스트가 vCenter에서 관리되지 않음(독립 실행형 호스트)
-* 클러스터 내에서 여러 노드 또는 호스트가 사용됩니다
-* 클러스터는 구매한 라이센스가 있는 운영 환경에 구축됩니다
-* KVM 하이퍼바이저는 VMware ESXi 대신 사용됩니다
+* ESXi 호스트는 vCenter에서 관리되지 않습니다(독립 실행형 호스트).
+* 클러스터 내에는 여러 개의 노드 또는 호스트가 사용됩니다.
+* 클러스터가 구매한 라이선스를 사용하여 운영 환경에 배포되었습니다.
+* VMware ESXi 대신 KVM 하이퍼바이저가 사용됩니다.
 
 
 
 
-[[1-register-vcenter-server-credential]]
-== vCenter Server 자격 증명을 등록합니다
+[[step-1-register-vcenter-server-credential]]
+== 1단계: vCenter 서버 자격 증명 등록
 
-vCenter Server에서 관리하는 ESXi 호스트에 구축하는 경우 호스트를 등록하기 전에 자격 증명을 추가해야 합니다. 그러면 Deploy 관리 유틸리티에서 자격 증명을 사용하여 vCenter를 인증할 수 있습니다.
+vCenter 서버에서 관리하는 ESXi 호스트에 배포할 때는 호스트를 등록하기 전에 자격 증명을 추가해야 합니다. 그러면 Deploy 관리 유틸리티가 해당 자격 증명을 사용하여 vCenter에 인증할 수 있습니다.
 
 [cols="15,15,70"]
 |===
@@ -70,10 +70,10 @@ JSON 입력(1단계)::
 
 
 
-[[2-register-a-hypervisor-host]]
-== 하이퍼바이저 호스트를 등록합니다
+[[step-2-register-a-hypervisor-host]]
+== 2단계: 하이퍼바이저 호스트 등록
 
-ONTAP Select 노드를 포함하는 가상 머신이 실행될 하이퍼바이저 호스트를 추가해야 합니다.
+ONTAP Select 노드가 포함된 가상 머신이 실행될 하이퍼바이저 호스트를 추가합니다.
 
 [cols="15,15,70"]
 |===
@@ -117,10 +117,10 @@ JSON 입력(02단계)::
 
 
 
-[[3-create-a-cluster]]
-== 클러스터를 생성합니다
+[[step-3-create-a-cluster]]
+== 3단계: 클러스터 생성
 
-ONTAP Select 클러스터를 생성하면 기본 클러스터 구성이 등록되고, 노드 이름은 구축을 통해 자동으로 생성됩니다.
+ONTAP Select 클러스터를 생성하면 기본 클러스터 구성이 등록되고 Deploy에서 노드 이름을 자동으로 생성합니다.
 
 [cols="15,15,70"]
 |===
@@ -157,10 +157,10 @@ JSON 입력(단계 03)::
 
 
 
-[[4-configure-the-cluster]]
-== 클러스터를 구성합니다
+[[step-4-configure-the-cluster]]
+== 4단계: 클러스터 구성
 
-클러스터 구성의 일부로 제공해야 하는 몇 가지 특성이 있습니다.
+클러스터를 구성하는 과정에서 다음 속성을 반드시 제공해야 합니다.
 
 [cols="15,15,70"]
 |===
@@ -169,7 +169,7 @@ JSON 입력(단계 03)::
 
 | 클러스터 | 패치 | /cluster/{cluster_id} 
 |===
-말림:: 클러스터 ID를 제공해야 합니다.
+말림:: 클러스터 ID를 제공하십시오.
 
 
 [source, curl]
@@ -199,10 +199,10 @@ JSON 입력(4단계)::
 
 
 
-[[5-retrieve-the-node-name]]
-== 노드 이름을 검색합니다
+[[step-5-retrieve-the-node-name]]
+== 5단계: 노드 이름 검색
 
-Deploy 관리 유틸리티는 클러스터가 생성될 때 노드 식별자 및 이름을 자동으로 생성합니다. 노드를 구성하기 전에 할당된 ID를 검색해야 합니다.
+Deploy 관리 유틸리티는 클러스터를 생성할 때 노드 식별자와 이름을 자동으로 생성합니다. 노드를 구성하기 전에 할당된 ID를 검색해야 합니다.
 
 [cols="15,15,70"]
 |===
@@ -211,7 +211,7 @@ Deploy 관리 유틸리티는 클러스터가 생성될 때 노드 식별자 및
 
 | 클러스터 | 가져오기 | /cluster/{cluster_id}/노드 
 |===
-말림:: 클러스터 ID를 제공해야 합니다.
+말림:: 클러스터 ID를 제공하십시오.
 
 
 [source, curl]
@@ -230,10 +230,10 @@ curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/clusters/CLUSTERI
 
 
 
-[[6-configure-the-nodes]]
-== 노드를 구성합니다
+[[step-6-configure-the-nodes]]
+== 6단계: 노드 구성
 
-노드를 구성하는 데 사용되는 3개의 API 호출 중 첫 번째인 노드에 대한 기본 구성을 제공해야 합니다.
+노드에 대한 기본 구성을 제공합니다. 이는 노드를 구성하는 데 사용되는 세 가지 API 호출 중 첫 번째입니다.
 
 [cols="15,15,70"]
 |===
@@ -242,14 +242,14 @@ curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/clusters/CLUSTERI
 
 | 클러스터 | 경로 | /cluster/{cluster_id}/nodes/{node_id} 
 |===
-말림:: 클러스터 ID 및 노드 ID를 제공해야 합니다.
+말림:: 클러스터 ID와 노드 ID를 제공하십시오.
 
 
 [source, curl]
 ----
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
 ----
-JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공해야 합니다.
+JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공하십시오.
 
 
 [source, json]
@@ -269,10 +269,10 @@ JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공
 
 
 
-[[7-retrieve-the-node-networks]]
-== 노드 네트워크를 검색합니다
+[[step-7-retrieve-the-node-networks]]
+== 7단계: 노드 네트워크 검색
 
-단일 노드 클러스터에서 노드가 사용하는 데이터 및 관리 네트워크를 식별해야 합니다. 내부 네트워크는 단일 노드 클러스터에서는 사용되지 않습니다.
+단일 노드 클러스터의 노드에서 사용하는 데이터 및 관리 네트워크를 식별합니다. 내부 네트워크는 단일 노드 클러스터에서 사용되지 않습니다.
 
 [cols="15,15,70"]
 |===
@@ -281,7 +281,7 @@ JSON 입력(06 단계):: ONTAP Select 노드가 실행될 호스트 ID를 제공
 
 | 클러스터 | 가져오기 | /cluster/{cluster_id}/nodes/{node_id}/networks입니다 
 |===
-말림:: 클러스터 ID 및 노드 ID를 제공해야 합니다.
+말림:: 클러스터 ID와 노드 ID를 제공하십시오.
 
 
 [source, curl]
@@ -300,10 +300,10 @@ curl -iX GET -u admin:<password> -k 'https://10.21.191.150/api/ clusters/CLUSTER
 
 
 
-[[8-configure-the-node-networking]]
-== 노드 네트워킹을 구성합니다
+[[step-8-configure-the-node-networking]]
+== 8단계: 노드 네트워킹 구성
 
-데이터 및 관리 네트워크를 구성해야 합니다. 내부 네트워크는 단일 노드 클러스터에서는 사용되지 않습니다.
+데이터 및 관리 네트워크를 구성하십시오. 내부 네트워크는 단일 노드 클러스터에서 사용되지 않습니다.
 
 
 NOTE: 다음 API 호출은 각 네트워크에 대해 한 번씩 두 번 실행합니다.
@@ -315,14 +315,14 @@ NOTE: 다음 API 호출은 각 네트워크에 대해 한 번씩 두 번 실행�
 
 | 클러스터 | 패치 | /cluster/{cluster_id}/nodes/{node_id}/networks/{network_id} 
 |===
-말림:: 클러스터 ID, 노드 ID 및 네트워크 ID를 제공해야 합니다.
+말림:: 클러스터 ID, 노드 ID 및 네트워크 ID를 제공하십시오.
 
 
 [source, curl]
 ----
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
 ----
-JSON 입력(08단계):: 네트워크 이름을 제공해야 합니다.
+JSON 입력(08단계):: 네트워크 이름을 입력하십시오.
 
 
 [source, json]
@@ -337,8 +337,8 @@ JSON 입력(08단계):: 네트워크 이름을 제공해야 합니다.
 
 
 
-[[9-configure-the-node-storage-pool]]
-== 노드 스토리지 풀을 구성합니다
+[[step-9-configure-the-node-storage-pool]]
+== 9단계: 노드 스토리지 풀 구성
 
 노드를 구성하는 마지막 단계는 스토리지 풀을 연결하는 것입니다. vSphere 웹 클라이언트를 통해 또는 선택적으로 Deploy REST API를 통해 사용 가능한 스토리지 풀을 확인할 수 있습니다.
 
@@ -349,7 +349,7 @@ JSON 입력(08단계):: 네트워크 이름을 제공해야 합니다.
 
 | 클러스터 | 패치 | /cluster/{cluster_id}/nodes/{node_id}/networks/{network_id} 
 |===
-말림:: 클러스터 ID, 노드 ID 및 네트워크 ID를 제공해야 합니다.
+말림:: 클러스터 ID, 노드 ID 및 네트워크 ID를 제공하십시오.
 
 
 [source, curl]
@@ -376,8 +376,8 @@ JSON 입력(9단계):: 풀 용량은 2TB입니다.
 
 
 
-[[10-deploy-the-cluster]]
-== 10.클러스터를 구축합니다
+[[step-10-deploy-the-cluster]]
+== 10단계: 클러스터 배포
 
 클러스터 및 노드를 구성한 후에는 클러스터를 구축할 수 있습니다.
 
@@ -388,14 +388,14 @@ JSON 입력(9단계):: 풀 용량은 2TB입니다.
 
 | 클러스터 | 게시 | /cluster/{cluster_id}/deploy 
 |===
-말림:: 클러스터 ID를 제공해야 합니다.
+말림:: 클러스터 ID를 제공하십시오.
 
 
 [source, curl]
 ----
 curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
 ----
-JSON 입력(10단계):: ONTAP 관리자 계정의 암호를 입력해야 합니다.
+JSON 입력(10단계):: ONTAP 관리자 계정의 비밀번호를 입력하십시오.
 
 
 [source, json]
