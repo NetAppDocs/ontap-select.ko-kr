@@ -39,7 +39,7 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap/
     - title: ONTAP Select 블로그
       url: https://blog.netapp.com/tag/ontap-select/
-    - title: ONTAP Select 커뮤니티
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select
+    - title: ONTAP 커뮤니티
+      url: https://community.netapp.com/community/categories/ontap
     - title: 상호 운용성 매트릭스
       url: https://mysupport.netapp.com/matrix/
