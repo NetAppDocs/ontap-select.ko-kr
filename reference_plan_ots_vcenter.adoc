@@ -89,4 +89,4 @@ ONTAP Select 클러스터를 생성하고 관리하는 데 필요한 최소 관�
 범주의 모든 권한.
 
 .관련 정보
-link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["vCenter에서 vSAN ESA에 대한 VMware vSphere 권한에 대해 알아보세요."]
+link:plan-deploy-hypervisor.html#vmware-vcenter-server-considerations["vCenter에서 vSAN ESA에 대한 VMware vSphere 권한에 대해 알아보세요."]

@@ -17,7 +17,7 @@ summary: ONTAP Select 호스트 스토리지와 관련하여 고려해야 할 �
 ONTAP Select 호스트 스토리지와 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다.
 
 
-NOTE: ESXi 및 KVM 호스트에 대한 외부 스토리지 지원 정보가 요약되어 있습니다. 자세한 내용은 link:reference_plan_ots_vnas.html["VMware ESXi 요구 사항"] 및 link:reference_plan_ots_kvm.html["KVM 요구 사항"]을 참조하십시오.
+NOTE: ESXi, Hyper-V 및 KVM 호스트에 대한 스토리지 지원 정보가 요약되어 있습니다. 자세한 내용은 link:reference_plan_ots_vnas.html["VMware ESXi 외부 스토리지 요구 사항"], link:plan-ots-hyper-v.html["Hyper-V 스토리지 요구 사항"] 및 link:reference_plan_ots_kvm.html["KVM 외부 스토리지 요구 사항"]을(를) 참조하십시오.
 
 
 

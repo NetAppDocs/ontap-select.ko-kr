@@ -38,19 +38,10 @@ ONTAP Select 클러스터를 구축하려면 ONTAP Select가 실행되는 하이
 [[software-compatibility]]
 === 소프트웨어 호환성
 
-KVM 및 ESXi 하이퍼바이저에 ONTAP Select 배포할 수 있습니다.
+ONTAP Select를 ESXi, Hyper-V 및 KVM 하이퍼바이저에 배
 
 [role="tabbed-block"]
 ====
-.KVM
---
-ONTAP Select 다음 KVM 하이퍼바이저 버전을 지원합니다.
-
-* Red Hat Enterprise Linux(RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6의 KVM
-* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6의 KVM
-
-
---
 .ESXi
 --
 ONTAP Select 다음 ESXi 하이퍼바이저 버전을 지원합니다.
@@ -63,11 +54,29 @@ ONTAP Select 다음 ESXi 하이퍼바이저 버전을 지원합니다.
 * VMware ESXi 8.0 GA(빌드 20513097)
 
 
+[NOTE]
+====
+VMware가 동일한 버전을 계속 지원하는 한 NetApp은 ESXi의 지정된 버전에서 ONTAP Select를 지원합니다.
 
-NOTE: VMware가 동일한 버전을 계속 지원하는 한 NetApp은 ESXi의 지정된 버전에서 ONTAP Select를 지원합니다.
+ESXi 7.0 GA가 더 이상 제공되지 않는 상태에 도달했습니다.  이 버전의 ONTAP Select 클러스터가 있는 경우 지원되는 버전으로 업그레이드해야 합니다. https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^] .
+
+====
+--
+.Hyper-V
+--
+ONTAP Select는 다음 Hyper-V 하이퍼바이저 버전을 지원합니다:
+
+* Microsoft Windows Server 2025 및 2022
 
 
-NOTE: ESXi 7.0 GA가 더 이상 제공되지 않는 상태에 도달했습니다.  이 버전의 ONTAP Select 클러스터가 있는 경우 지원되는 버전으로 업그레이드해야 합니다. https://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴(IMT)"^] .
+--
+.KVM
+--
+ONTAP Select 다음 KVM 하이퍼바이저 버전을 지원합니다.
+
+* Red Hat Enterprise Linux(RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6의 KVM
+* Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6의 KVM
+
 
 --
 ====

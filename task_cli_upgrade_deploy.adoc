@@ -16,7 +16,7 @@ summary: 명령줄 인터페이스를 사용하여 기존 배포 유틸리티 �
 [role="lead"]
 ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 제자리에서 업그레이드합니다.
 
-ONTAP Select Deploy 9.18.1 또는 9.17.1에서 ONTAP Select Deploy 9.19.1로 직접 업그레이드할 수 있습니다. 이전 버전(예: ONTAP Select Deploy 9.16.1)에서 업그레이드하려면 먼저 ONTAP Select Deploy 9.17.1 또는 9.18.1로 업그레이드한 다음 ONTAP Select Deploy 9.19.1로 업그레이드해야 합니다.
+ONTAP Select Deploy 9.19.1 또는 9.18.1에서 ONTAP Select Deploy 9.20.1로 직접 업그레이드할 수 있습니다. 이전 버전(예: ONTAP Select Deploy 9.17.1)에서 업그레이드하려면 먼저 ONTAP Select Deploy 9.18.1 또는 9.19.1로 업그레이드한 다음 ONTAP Select Deploy 9.20.1로 업그레이드해야 합니다.
 
 [NOTE]
 ====

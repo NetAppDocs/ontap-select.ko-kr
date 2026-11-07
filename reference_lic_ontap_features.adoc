@@ -25,73 +25,98 @@ NOTE: 하드웨어별 종속 관계가 있는 ONTAP 기능은 일반적으로 ON
 [[licensed-ontap-features]]
 == 기본적으로 라이센스가 부여되는 ONTAP 기능
 
-다음 ONTAP 기능은 ONTAP Select에서 지원되며 기본적으로 라이센스가 부여됩니다.
+다음 ONTAP 기능은 ONTAP Select에서 지원되며 기본적으로 라이선스가 부여됩니다.
 
-* ARP(자율 랜섬웨어 방어)(수동 업데이트)
-* CIFS를 선택합니다
-* 중복제거 및 압축
-* 키 관리 상호 운용성 프로토콜(KMIP)을 사용한 외부 키 관리
-+
-link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["외부 키 관리 활성화 및 구성"^]에 대해 자세히 알아보십시오.
-
-* FlexCache
-+
-ONTAP Select는 쓰기 백업 기능이 있는 FlexCache 캐시 볼륨을 지원합니다. 쓰기 백업 기능이 있는 FlexCache 원본 볼륨은 지원하지 않습니다.
-
-+
-link:concept_ots_overview.html#flexcache-write-back-with-ontap-select["ONTAP Select를 사용한 FlexCache 쓰기 저장에 대해 자세히 알아보십시오"]
-
-* 플랙스클론
-* iSCSI
-* NDMP
-* NetApp 볼륨 암호화(제한 없는 국가만 해당)
-* NFS 를 참조하십시오
-* NVMe over TCP
-* ONTAP 멀티 테넌시 기능
-* ONTAP S3 를 참조하십시오
-* S3 SnapMirror
-* SnapLock Select
-+
-SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다.
-
-+
-link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]에 대해 알아보십시오
-
-* SnapMirror를 참조하십시오
-+
-ONTAP Select는 비동기 SnapMirror에서 일관성 그룹을 지원하지 않습니다.
-
-* SnapRestore
-* SnapVault
-* 스토리지 VM 재해 복구(SVM DR)
-+
-ONTAP Select는 SVM DR을 소스 및 대상으로 모두 지원하며 최대 16개의 관계를 설정할 수 있습니다. SVM DR 지원은 소스 ONTAP 버전에서 +2 버전까지만 사용할 수 있도록 제한됩니다. 예를 들어, ONTAP Select 9.16.1 소스는 대상 ONTAP 버전 9.16.1, 9.17.1 또는 9.18.1에 연결할 수 있습니다.
+[cols="1,1,1"]
+|===
+| 기능 | 자세히 알아보기 | 참고 
 
 
+| 자율형 랜섬웨어 보호(ARP) | link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP 자율 랜섬웨어 보호"^] | ONTAP Select는 ARP 수동 업데이트만 지원합니다. 
 
+
+| CIFS를 선택합니다 | link:https://docs.netapp.com/us-en/ontap/smb-admin/index.html["ONTAP SMB"^] |  
+
+
+| 중복제거 및 압축 | link:https://docs.netapp.com/us-en/ontap-restapi/storage_volumes_endpoint_overview.html["스토리지 볼륨 관리"^] |  
+
+
+| 키 관리 상호 운용성 프로토콜(KMIP)을 사용한 외부 키 관리 | link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["외부 키 관리 활성화 및 구성"^] |  
+
+
+| FlexCache | link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-guidelines.html["ONTAP FlexCache 쓰기 백"^] | ONTAP Select는 쓰기 백 기능이 있는 FlexCache 캐시 볼륨을 지원합니다. *주의*: ONTAP Select에서 FlexCache 쓰기 백에는 제한 사항이 있습니다. 자세한 내용은 link:concept_ots_overview.html#flexcache-write-back-with-ontap-select["FlexCache ONTAP Select를 사용한 쓰기 저장"]을(를) 참조하십시오. 
+
+
+| 플랙스클론 | link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html["ONTAP FlexClone 볼륨"^] |  
+
+
+| iSCSI  a| 
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_credentials_endpoint_overview.html["iSCSI 자격 증명 관리"^]
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_services_endpoint_overview.html["iSCSI 서비스 관리"^]
+* link:https://docs.netapp.com/us-en/ontap-restapi/protocols_san_iscsi_sessions_endpoint_overview.html["iSCSI 세션 보기"^]
+
+|  
+
+
+| NDMP | link:https://docs.netapp.com/us-en/ontap/tape-backup/ndmp-management-concept.html["ONTAP FlexVol 볼륨용 NDMP"^] |  
+
+
+| NetApp 볼륨 암호화 | link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["ONTAP NetApp 볼륨 및 애그리게이트 암호화"^] | ONTAP Select는 제한이 없는 국가에서만 NetApp 볼륨 암호화를 지원합니다. 
+
+
+| NFS 를 참조하십시오 | link:https://docs.netapp.com/us-en/ontap/nfs-admin/index.html["NFS 프로토콜용 ONTAP 파일 액세스"^] |  
+
+
+| TLS를 통한 NFS | link:https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html["TLS를 통한 NFS 활성화"^] | ONTAP Select는 CLI를 사용하여 TLS를 통한 NFS를 지원합니다. System Manager는 지원되지 않습니다. 
+
+
+| NVMe over TCP | link:https://docs.netapp.com/us-en/ontap-restapi/protocols_nvme_services_endpoint_overview.html["NVMe 서비스 관리"^] |  
+
+
+| ONTAP 멀티 테넌시 기능 | link:https://docs.netapp.com/us-en/ontap/concepts/svm-use-cases-concept.html["ONTAP SVM 사용 사례"^] |  
+
+
+| ONTAP S3 를 참조하십시오 | link:https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3 구성"^] |  
+
+
+| S3 SnapMirror | link:https://docs.netapp.com/us-en/ontap/s3-snapmirror/index.html["ONTAP SnapMirror S3"^] |  
+
+
+| SnapLock Select | link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^] | SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다. 
+
+
+| SnapMirror를 참조하십시오 | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html["ONTAP SnapMirror 비동기 재해 복구"^] | ONTAP Select는 비동기 SnapMirror에서 일관성 그룹을 지원하지 않습니다. 
+
+
+| SnapRestore | link:https://docs.netapp.com/us-en/ontap/data-protection/restore-contents-volume-snapshot-task.html["ONTAP 스냅샷에서 볼륨 내용 복원"^] |  
+
+
+| SnapMirror DR, 아카이브(이전 명칭: SnapVault) | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-replication-workflow-concept.html["ONTAP SnapMirror 복제 워크플로"^] |  
+
+
+| 스토리지 VM 재해 복구(SVM DR) | link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-svm-replication-concept.html["ONTAP SnapMirror SVM 복제"^] | ONTAP Select는 SVM DR을 소스 및 대상으로 모두 지원하며 최대 16개의 관계를 설정할 수 있습니다. SVM DR 지원은 소스 ONTAP 버전에서 +2 버전까지만 사용할 수 있도록 제한됩니다. 예를 들어, ONTAP Select 9.16.1 소스는 대상 ONTAP 버전 9.16.1, 9.17.1 또는 9.18.1에 연결할 수 있습니다. 
+|===
 
 
 [[ontap-features-that-are-separately-licensed]]
 [[other-ontap-features]]
 == ONTAP 기능은 별도로 라이센스가 부여됩니다
 
-기본적으로 라이선스가 부여되지 않은 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다. 여기에는 다음이 포함됩니다.
+ONTAP Select에서 지원되지만 기본적으로 라이선스가 부여되지 않는 다음 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다.
 
-* FabricPool
-+
-
-NOTE: StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다.
-
-* MetroCluster SDS(ONTAP Select 프리미엄 라이센스 오퍼링)
-* SnapMirror 클라우드
-+
-link:https://mysupport.netapp.com/site/help["비기술 지원 사례 개설"^]SnapMirror 클라우드 라이센스를 취득해야 합니다.
-
-+
-link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 오브젝트 스토리지에 저장"^]에 대해 알아보십시오
+[cols="1,1,1"]
+|===
+| 기능 | 자세히 알아보기 | 참고 
 
 
+| FabricPool | link:https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["ONTAP FabricPool"^] | StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다. 
 
+
+| MetroCluster SDS | link:https://docs.netapp.com/us-en/ontap/concepts/mcc-sds-ontap-select.html["MetroCluster ONTAP Select용 SDS"^] | 본 상품은 ONTAP Select 프리미엄 라이선스 상품입니다. 
+
+
+| SnapMirror 클라우드 | link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 오브젝트 스토리지에 저장"^] | link:https://mysupport.netapp.com/site/help["비기술 지원 사례 개설"^]SnapMirror 클라우드 라이센스를 취득해야 합니다. 
+|===
 .관련 정보
 * link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select와 ONTAP 9를 비교해 보십시오"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이센스 키에 대해 알아보십시오"^]

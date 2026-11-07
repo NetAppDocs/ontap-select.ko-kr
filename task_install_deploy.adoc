@@ -17,7 +17,12 @@ summary: ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를
 ONTAP Select 배포 관리 유틸리티를 설치하고 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.
 
 .시작하기 전에
-link:kvm-host-configuration-and-preparation-checklist.html["사전 설치 체크리스트"]를 검토했습니다.
+하이퍼바이저 호스트의 사전 설치 체크리스트를 검토하셨습니다:
+
+* link:esxi-host-configuration-and-preparation-checklist.html["ESXi 호스트 체크리스트"]
+* link:hyper-v-host-configuration-and-preparation-checklist.html["Hyper-V 호스트 체크리스트"]
+* link:kvm-host-configuration-and-preparation-checklist.html["KVM 호스트 체크리스트"]
+
 
 
 
@@ -30,7 +35,7 @@ NetApp 지원 사이트에서 ONTAP Select 패키지를 다운로드하십시오
 https://mysupport.netapp.com/site/user/registration["등록된 NetApp 지원 사이트 계정이 있습니다"^]..
 
 .이 작업에 대해
-ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 가상 머신(VM)으로 패키징되어 있습니다. 단일 압축 파일은 ESXi 호스트용 `OVA` 확장자와 KVM 호스트용 `TGZ` 확장자를 가집니다. 이 VM은 ONTAP Select 노드용 Deploy 서버와 설치 이미지를 제공합니다.
+ONTAP Select Deploy 관리 유틸리티는 Open Virtualization Format 기반의 가상 머신(VM)으로 패키징됩니다. 단일 압축 파일은 ESXi 호스트용 `ova`, Hyper-V용 `vhdx.tgz` 및 KVM 호스트용 `raw.tgz` 접미사를 갖습니다. 이 VM은 ONTAP Select 노드용 Deploy 서버 및 설치 이미지를 제공합니다.
 
 .단계
 . link:https://mysupport.netapp.com/site/downloads/["NetApp Support 사이트 다운로드"^] 페이지에 액세스합니다.
@@ -90,10 +95,15 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 [[step-3-deploy-the-virtual-machine]]
 == 3단계: 가상 머신 배포
 
-OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작하십시오. 설치 과정의 일부로 네트워크 인터페이스를 DHCP 또는 고정 IP 구성으로 설정합니다.
+하이퍼바이저 호스트에 ONTAP Select Deploy 가상 머신을 생성합니다.
 
-.시작하기 전에
 [role="tabbed-block"]
+====
+.ESXi
+--
+OVF VM 이미지를 사용하여 ESXi 호스트에 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일환으로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
+
+--
 ====
 .ESXi
 --
@@ -127,17 +137,12 @@ KVM 하이퍼바이저의 경우, VM 이름, 외부 네트워크, 호스트 이�
 
 
 --
+[]
 ====
 .이 작업에 대해
 vSphere를 사용하는 경우 Deploy OVF template Wizard에는 네트워크 구성을 포함한 모든 구축 구성 정보를 제공하는 양식이 포함되어 있습니다. 그러나 이 양식을 사용하지 않도록 선택한 경우에는 배포 VM의 콘솔을 사용하여 네트워크를 구성할 수 있습니다.
 
 .단계
-수행할 단계는 ESXi 하이퍼바이저를 사용하는지 KVM 하이퍼바이저를 사용하는지에 따라 다릅니다.
-
-[role="tabbed-block"]
-====
-.ESXi
---
 . vSphere Client에 액세스하고 로그인합니다.
 . 계층에서 적절한 위치로 이동하고 * Deploy OVF Template * 을 선택합니다.
 . OVA 파일을 선택하고 Deploy OVF Template 마법사를 완료하십시오. 사용 환경에 맞는 옵션을 선택하십시오.
@@ -169,8 +174,131 @@ DHCP를 사용하여 네트워킹 정보를 설정하시겠습니까? [n]:
 
 
 --
-.KVM
+
 --
+새 가상 머신 마법사를 사용하여 Hyper-V 호스트에 ONTAP Select Deploy VM을 설치하고 시작하십시오.
+
+.시작하기 전에
+Hyper-V 호스트가 다음 요구 사항을 충족하는지 확인하십시오:
+
+[cols="1,2"]
+|===
+| 요구 사항 | 가치 
+
+
+| Hyper-V 역할 | Hyper-V PowerShell 모듈을 포함하여 설치되었습니다. 
+
+
+| VM 세대 | 1세대 
+
+
+| vCPU | 2 
+
+
+| 메모리 | 4GB, 정적(동적 메모리 비활성화) 
+
+
+| 부팅 디스크 | IDE 컨트롤러 0, 위치 0에 연결됨 
+
+
+| 여유 디스크 공간 | VM 디스크를 저장하는 볼륨에 최소 40GB 
+
+
+| 아카이브 툴 | Windows Server 2019 이상에 포함된 tar 
+|===
+다음 정보를 모두 갖추고 있는지 확인하십시오:
+
+[cols="1,2"]
+|===
+| 정보 | 설명 
+
+
+| VM 이름 | Deploy VM의 이름(예: ONTAP-deploy-HV) 
+
+
+| 가상 스위치 이름 | 외부 가상 스위치의 이름(예: ONTAP_Vswitch) 
+
+
+| 물리적 NIC 이름 | Deploy VM 네트워크에 연결된 호스트 네트워크 어댑터 
+
+
+| VLAN ID | 상위 스위치 포트가 태그가 지정된 트래픽을 예상하는 경우에만 필요합니다. 
+
+
+| 호스트 이름입니다 | Deploy VM의 FQDN 또는 짧은 호스트 이름 
+
+
+| 관리자 암호 | 최초 부팅 시 설정되는 관리자 계정 비밀번호 
+|===
+정적 네트워크 구성을 정의할 때 다음 추가 정보가 필요합니다:
+
+* 배포 VM의 IP 주소입니다
+* 넷마스크
+* 게이트웨이(라우터)의 IP 주소
+* Primary DNS 서버의 IP 주소입니다
+* 두 번째 DNS 서버의 IP 주소입니다
+* DNS 검색 도메인
+
+
+.이 작업에 대해
+외부 가상 스위치를 생성하면 물리적 NIC의 네트워크 트래픽이 일시적으로 중단됩니다. 물리적 NIC를 통해 호스트에 원격으로 연결된 경우, 액세스 권한을 잃지 않도록 서버 BMC 등 대역 외 콘솔이나 다른 네트워크 어댑터를 사용하십시오.
+
+.단계
+. Hyper-V 관리자에서 *새로 만들기* > *가상 머신*을 선택하여 새 가상 머신 마법사를 엽니다.
+. *다음*을 선택하십시오.
+. VM 이름을 입력한 다음 *다음*을 선택합니다.
+. *1세대*를 선택한 다음 *다음*을 선택합니다.
++
+
+NOTE: Hyper-V를 사용하는 ONTAP Select는 2세대 가상 머신을 지원하지 않습니다.
+
+. 메모리 용량을 입력한 다음 *다음*을 선택합니다.
++
+
+NOTE: 최소 메모리 요구 사항은 4GB입니다.
+
+. 드롭다운 목록에서 가상 스위치를 선택한 다음 *다음*을 선택하십시오.
+. *기존 가상 하드 디스크* > *찾아보기*를 선택한 다음  `vhdx.tgz` 이미지 파일을 찾아 선택하십시오.
+. *다음*을 선택하십시오.
+. 구성을 확인한 다음 *완료*를 선택하십시오.
+. 필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.
++
+.. 다음 메시지가 표시될 때까지 기다립니다.
++
+[listing]
+----
+Host name :
+----
+.. 호스트 이름을 입력하고 * Enter * 를 선택합니다.
+.. 다음 메시지가 표시될 때까지 기다립니다.
++
+[listing]
+----
+Use DHCP to set networking information? [n]:
+----
+.. 정적 IP 구성을 정의하려면 * n * 을 입력하고, DHCP를 사용하려면 * y * 를 입력하고 * Enter * 를 선택합니다.
+.. 정적 구성을 선택하는 경우 필요에 따라 모든 네트워크 구성 정보를 제공합니다.
+
+
+
+
+--
+
+--
+OVF VM 이미지를 사용하여 KVM 호스트에 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일환으로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
+
+.시작하기 전에
+VM 이름, 외부 네트워크, 호스트 이름 등 VM을 생성할 때 사용할 구성 정보가 있어야 합니다. 정적 네트워크 구성을 정의할 때 다음 추가 정보가 필요합니다:
+
+* 배포 VM의 IP 주소입니다
+* 넷마스크
+* 게이트웨이(라우터)의 IP 주소
+* Primary DNS 서버의 IP 주소입니다
+* 두 번째 DNS 서버의 IP 주소입니다
+* DNS 검색 도메인
+
+
+.단계
 . Linux 서버에서 CLI에 로그인합니다.
 +
 [listing]
@@ -220,6 +348,8 @@ Use DHCP to set networking information? [n]:
 
 
 --
+
+--
 ====
 
 
@@ -231,7 +361,7 @@ Use DHCP to set networking information? [n]:
 .단계
 . IP 주소 또는 도메인 이름을 사용하여 브라우저에서 배포 유틸리티를 가리킵니다.
 +
-'\https://<ip_address>/`
+`\https://<IP_address>/`
 
 . 관리자(admin) 계정 이름 및 암호를 제공하고 로그인합니다.
 . Welcome to*(ONTAP Select* 시작) 팝업 창이 표시되면 필수 구성 요소를 검토하고 *OK*를 선택하여 계속합니다.

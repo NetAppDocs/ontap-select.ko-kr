@@ -19,6 +19,9 @@ NVMe 드라이브를 소프트웨어 RAID와 함께 사용하려면 ESXi 또는 
 NVMe 장치에서 VMDirectPath I/O Pass-Through를 사용하여 데이터 효율성을 극대화합니다. 이 설정은 드라이브를 ONTAP Select 가상 시스템에 노출시켜 ONTAP가 장치에 PCI를 직접 액세스할 수 있도록 합니다.
 
 
+NOTE: ONTAP Select는 Hyper-V 호스트에서 NVMe 드라이브를 SCSI 디스크로 지원합니다. ONTAP Select는 Hyper-V 호스트에서 NVMe 드라이브를 개별 장치 할당(패스스루 장치)으로 지원하지 않습니다.
+
+
 
 [[step-1-configure-the-host]]
 == 1단계: 호스트 구성

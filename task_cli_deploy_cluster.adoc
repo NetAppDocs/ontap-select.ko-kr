@@ -100,49 +100,6 @@ ONTAP Select 노드가 실행될 각 하이퍼바이저 호스트를 등록해�
 
 [role="tabbed-block"]
 ====
-.KVM
---
-ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 등록해야 합니다. 이에 따라 Deploy 관리 유틸리티는 KVM 호스트에 대해 인증합니다.
-
-.이 작업에 대해
-두 개 이상의 하이퍼바이저 호스트가 필요한 경우 이 절차를 사용하여 각 호스트를 추가합니다.
-
-.단계
-. 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
-. 호스트 등록:
-+
-[source, cli]
-----
-host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
-----
-+
-출력 예:
-
-+
-[listing]
-----
-host register -name 10.234.81.14 -hypervisor-type KVM -username root
-----
-+
-메시지가 나타나면 호스트 계정에 대한 암호를 입력합니다.
-
-. 호스트의 상태를 표시하고 인증되었는지 확인합니다.
-+
-[source, cli]
-----
-host show -name <FQDN|IP> -detailed
-----
-+
-출력 예:
-
-+
-[listing]
-----
-host show -name 10.234.81.14 -detailed
-----
-
-
---
 .ESXi
 --
 이 작업의 일부로, 배포 관리 유틸리티는 호스트를 관리하는 vCenter Server에 인증하거나 ESXi 독립 실행형 호스트에 직접 인증합니다.
@@ -201,6 +158,60 @@ host show -name <FQDN|IP> -detailed
 ....
 host show -name 10.234.81.14 -detailed
 ....
+
+
+--
+.Hyper-V 또는 KVM
+--
+ONTAP Select 노드가 실행될 하이퍼바이저 호스트를 등록해야 합니다. 이에 따라 Deploy 관리 유틸리티는 KVM 호스트에 대해 인증합니다.
+
+.이 작업에 대해
+두 개 이상의 하이퍼바이저 호스트가 필요한 경우 이 절차를 사용하여 각 호스트를 추가합니다.
+
+.단계
+. 관리자 계정으로 SSH를 사용하여 배포 유틸리티 CLI에 로그인합니다.
+. 호스트 등록:
++
+*Hyper-V*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type Hyper-V -username <Hyper-V_username>
+----
++
+*KVM*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
+----
++
+출력 예:
+
++
+[listing]
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+메시지가 나타나면 호스트 계정에 대한 암호를 입력합니다.
+
+. 호스트의 상태를 표시하고 인증되었는지 확인합니다.
++
+[source, cli]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+출력 예:
+
++
+[listing]
+----
+host show -name 10.234.81.14 -detailed
+----
 
 
 --
@@ -315,14 +326,14 @@ host network show -host-name 10.234.81.14 -detailed
 +
 [role="tabbed-block"]
 ====
-.ESXi 호스트
+.ESXi
 --
 [source, cli]
 ----
 node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
 ----
 --
-.KVM 호스트
+.Hyper-V 또는 KVM
 --
 [source, cli]
 ----

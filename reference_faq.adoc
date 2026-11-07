@@ -71,7 +71,7 @@ NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 에
 예. ONTAP Select 클러스터의 복원 절차는 FAS 클러스터의 복원 절차와 거의 동일합니다. 그러나 몇 가지 차이점이 있습니다.
 
 * ONTAP Select의 업그레이드된 인스턴스만 되돌릴 수 있으며 원래 설치 버전까지만 되돌릴 수 있습니다. 일반적으로 ONTAP Select가 이전 릴리스를 지원하더라도 새 설치를 이전 코드 릴리즈로 되돌릴 수 없습니다.
-* 소프트웨어 RAID를 사용하는 ONTAP Select(KVM) 및 ONTAP Select(ESXi)의 경우, 소프트웨어 RAID를 지원하지 않는 이전 버전으로 되돌릴 수 없습니다. 또한, ESXi에 ONTAP Select 9.5 이상 버전을 새로 설치하면 VMXNET3 네트워크 드라이버와 (가능한 경우) vNVMe 드라이버가 사용됩니다. 이러한 새 설치는 이전 버전의 ONTAP Select로 되돌릴 수 없습니다.
+* 소프트웨어 RAID를 사용하는 ONTAP Select(ESXi) 및 ONTAP Select(KVM)의 경우, 소프트웨어 RAID를 지원하지 않는 이전 버전으로 되돌릴 수 없습니다. 또한, ESXi에 ONTAP Select 9.5 이상 버전을 새로 설치하면 VMXNET3 네트워크 드라이버와 (가능한 경우) vNVMe 드라이버가 사용됩니다. 이러한 새 설치는 이전 버전의 ONTAP Select로 되돌릴 수 없습니다.
 * ONTAP Select VM도 대형 인스턴스(Premium XL 라이선스 사용)로 업그레이드된 경우, 9.6 이전 버전으로 되돌리는 것은 지원되지 않습니다. 대형 인스턴스 기능이 이전 버전에서는 제공되지 않기 때문입니다.
 
 
@@ -132,8 +132,8 @@ Capacity Pool 구독이 만료된 경우 시스템은 먼저 경고를 표시하
 
 스토리지와 관련된 몇 가지 질문과 답변이 있습니다.
 
-.단일 ONTAP Select Deploy 인스턴스로 ESXi와 KVM 모두에서 클러스터를 생성할 수 있습니까?
-예. ONTAP Select Deploy는 KVM 또는 ESXi에 설치할 수 있으며, 두 설치 환경 모두에서 두 하이퍼바이저 중 하나에 ONTAP Select 클러스터를 생성할 수 있습니다.
+.단일 ONTAP Select Deploy 인스턴스로 ESXi, Hyper-V 및 KVM에서 클러스터를 생성할 수 있습니까?
+예. ONTAP Select Deploy는 ESXi, Hyper-V 또는 KVM에 설치할 수 있으며, 이러한 설치를 통해 해당 하이퍼바이저에 ONTAP Select 클러스터를 생성할 수 있습니다.
 
 .ESXi에서 ONTAP Select를 사용하려면 vCenter가 필수인가요?
 ESXi 호스트가 적절하게 라이선스가 부여된 경우, ESXi 호스트가 vCenter Server에 의해 관리될 필요는 없습니다. 그러나 호스트가 vCenter server에 의해 관리되는 경우, ONTAP Select Deploy를 해당 vCenter Server를 사용하도록 구성해야 합니다. 즉, ESXi 호스트가 vCenter Server에 의해 적극적으로 관리되고 있다면 ONTAP Select Deploy에서 독립형으로 ESXi 호스트를 구성할 수 없습니다. ONTAP Select Deploy VM은 vMotion 또는 VMware HA 이벤트로 인해 ESXi 호스트 간에 발생하는 모든 ONTAP Select VM 마이그레이션을 추적하기 위해 vCenter에 의존한다는 점에 유의하십시오.
@@ -148,21 +148,25 @@ AFF/FAS에서 사용 가능한 모든 RAID 방법을 ONTAP Select에서 사용�
 
 소프트웨어 RAID에 대한 일부 요구 사항은 다음과 같습니다.
 
-* ESXi 및 KVM에서 지원됩니다
+* ESXi, Hyper-V 및 KVM에서 지원됩니다
 +
+** ONTAP Select 9.20.1부터 ONTAP Select는 Hyper-V 하이퍼바이저를 지원합니다.
 ** ONTAP Select 9.14.1부터 KVM 하이퍼바이저에 대한 지원이 복구되었습니다. 이전에는 ONTAP Select 9.10.1에서 KVM 하이퍼바이저에 대한 지원이 제거되었습니다.
 
 
 * 지원되는 물리 디스크 크기: 200GB – 32TB
 * DAS 구성에서만 지원됩니다
 * SSD 또는 NVMe로 지원됩니다
++
+ONTAP Select는 Hyper-V 하이퍼바이저에서 NVMe 드라이브를 SCSI 디스크로 지원합니다. ONTAP Select는 Hyper-V 하이퍼바이저에서 NVMe 드라이브를 개별 장치 할당(패스스루 장치)으로 지원하지 않습니다.
+
 * Premium 또는 Premium XL ONTAP Select 라이센스가 필요합니다
 * 하드웨어 RAID 컨트롤러가 없거나 비활성화되어 있거나 SAS HBA 모드에서 작동해야 합니다
 * 전용 LUN을 기반으로 하는 LVM 스토리지 풀 또는 데이터 저장소는 코어 덤프, 부팅/NVRAM 및 중재자인 시스템 디스크에 사용해야 합니다.
 
 
-.KVM용 ONTAP Select가 여러 NIC 결합을 지원합니까?
-KVM에 설치할 때는 단일 연결 및 단일 브리지를 사용해야 합니다. 물리적 포트가 2개 또는 4개인 호스트에는 동일한 결합의 모든 포트가 있어야 합니다.
+.ONTAP Select for Hyper-V 및 KVM은 다중 NIC 본딩을 지원합니까?
+Hyper-V 또는 KVM에 설치할 때는 단일 본드와 단일 브리지를 사용해야 합니다. 물리적 포트가 두 개 또는 네 개인 호스트는 모든 포트를 동일한 본드에 연결해야 합니다.
 
 .ONTAP Select는 하이퍼바이저 호스트에서 장애가 발생한 물리적 디스크 또는 NIC에 대해 어떻게 보고하거나 경고합니까? ONTAP Select가 하이퍼바이저에서 이 정보를 검색합니까, 아니면 하이퍼바이저 레벨에서 모니터링을 설정해야 합니까?
 하드웨어 RAID 컨트롤러를 사용할 때 ONTAP Select는 주로 기본 서버 문제를 인식하지 못합니다. 서버가 모범 사례에 따라 구성된 경우 일정 수준의 이중화가 존재해야 합니다. 드라이브 장애 시에도 계속 사용할 수 있도록 RAID 5/6 을 권장합니다. 소프트웨어 RAID 구성의 경우 ONTAP는 디스크 오류에 대한 경고를 발행하고, 스페어 드라이브가 있는 경우 드라이브 재구성을 시작합니다.
@@ -187,20 +191,23 @@ ONTAP Select Deploy에는 ONTAP Select 노드의 용량 확장 작업을 지원�
 .ONTAP Select는 vSAN 또는 외부 스토리지 유형 데이터 저장소를 지원합니까?
 ONTAP Select Deploy 및 ONTAP Select for ESXi는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하는 ONTAP Select 단일 노드 클러스터 구성을 지원합니다.
 
-ONTAP Select Deploy and ONTAP Select for KVM은 외부 어레이에서 공유 논리적 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터의 구성을 지원합니다. 스토리지 풀은 iSCSI 또는 FC/FCoE를 기반으로 할 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.
+ONTAP Select Deploy 및 ONTAP Select for KVM은 외부 어레이에서 공유 논리 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터 구성을 지원합니다. 스토리지 풀은 iSCSI, FC/FCoE 및 NFS를 기반으로 할 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.
 
 공유 스토리지의 다중 노드 HA 클러스터가 지원됩니다.
 
 .ONTAP Select는 vSAN 또는 일부 HCI 스택을 포함한 기타 공유 외부 스토리지에서 다중 노드 클러스터를 지원합니까?
-외부 스토리지(다중 노드 vNAS)를 사용하는 다중 노드 클러스터는 ESXi와 KVM 모두에서 지원됩니다. 동일 클러스터 내에서 여러 하이퍼바이저를 혼합하여 사용하는 것은 지원되지 않습니다. 공유 스토리지의 HA 아키텍처는 HA 쌍의 각 노드가 파트너 데이터의 미러 복사본을 보유함을 의미합니다. 하지만 다중 노드 클러스터는 VMware HA 또는 KVM Live Motion에 의존하는 단일 노드 클러스터와 달리 ONTAP 무중단 운영이라는 이점을 제공합니다.
+외부 스토리지(다중 노드 vNAS)를 사용하는 다중 노드 클러스터는 ESXi와 KVM 모두에서 지원됩니다. Hyper-V에서는 다중 노드 vNAS 모델이 지원되지 않습니다. 동일한 클러스터 내에서 하이퍼바이저를 혼합하는 것은 지원되지 않습니다. 공유 스토리지의 HA 아키텍처는 여전히 HA 쌍의 각 노드가 파트너 데이터의 미러 복사본을 가지고 있음을 의미합니다. 그러나 다중 노드 클러스터는 VMware HA 또는 KVM Live Motion에 의존하는 단일 노드 클러스터와 달리 ONTAP 무중단 운영의 이점을 제공합니다.
 
 ONTAP Select Deploy는 동일 호스트에 여러 ONTAP Select VM을 지원하지만, 클러스터 생성 시 이러한 인스턴스가 동일한 ONTAP Select 클러스터에 포함되는 것은 허용하지 않습니다. ESXi 환경의 경우, NetApp은 VMware HA가 동일한 ONTAP Select 클러스터에 속한 여러 ONTAP Select VM을 단일 ESXi 호스트로 마이그레이션하지 않도록 VM 안티 어피니티 규칙을 생성하는 것을 권장합니다. 또한, ONTAP Select Deploy는 관리자(사용자)가 시작한 vMotion 또는 라이브 마이그레이션으로 인해 두 개의 ONTAP Select 노드가 동일한 물리적 호스트에 위치하는 등 모범 사례를 위반한 경우, ONTAP Select Deploy UI와 로그에 경고를 표시합니다. ONTAP Select Deploy가 ONTAP Select VM의 위치를 파악하는 유일한 방법은 클러스터 새로 고침 작업이며, 이는 ONTAP Select Deploy 관리자가 시작해야 하는 수동 작업입니다. ONTAP Select Deploy에는 사전 예방적 모니터링을 지원하는 기능이 없으며, 경고는 Deploy UI 또는 로그를 통해서만 확인할 수 있습니다. 즉, 이 경고는 중앙 집중식 모니터링 인프라로 전달될 수 없습니다.
 
 .ONTAP Select는 VMware의 NSX VXLAN을 지원합니까?
-NSX-V VXLAN 포트 그룹이 지원됩니다. ONTAP MetroCluster SDS를 포함한 다중 노드 HA의 경우 VXLAN 오버헤드를 수용하기 위해 내부 네트워크 MTU를 7500에서 8900 사이(9000 대신)로 구성해야 합니다. 내부 네트워크 MTU는 클러스터 구축 중에 ONTAP Select Deploy를 사용하여 구성할 수 있습니다.
+NSX-V VXLAN 포트 그룹이 지원됩니다. ONTAP MetroCluster SDS를 포함한 멀티노드 HA의 경우, VXLAN 오버헤드를 수용할 수 있도록 내부 네트워크 최대 전송 단위(MTU)를 9000 대신 7500에서 8900 사이로 구성해야 합니다. 내부 네트워크 MTU는 클러스터 배포 중에 ONTAP Select Deploy를 사용하여 구성할 수 있습니다.
 
 .ONTAP Select는 KVM 라이브 마이그레이션을 지원합니까?
 외부 스토리지 스토리지 풀에서 실행되는 ONTAP Select VM은 virsh 라이브 마이그레이션을 지원합니다.
+
+.ONTAP Select는 Hyper-V 라이브 마이그레이션을 지원합니까?
+iSCSI 또는 FC를 통한 클러스터 공유 볼륨 등 공유 스토리지를 사용하여 Windows Server 장애 조치 클러스터 내에 구성된 ONTAP Select 노드 VM은 라이브 마이그레이션을 지원합니다. 로컬 DAS(Direct-Attached Storage)를 사용하는 ONTAP Select는 라이브 마이그레이션을 지원하지 않습니다.
 
 .vSAN AF에 ONTAP Select 프리미엄이 필요합니까?
 아니요. 외부 스토리지 또는 vSAN 구성이 All Flash인지 여부에 관계없이 모든 버전이 지원됩니다.
@@ -211,11 +218,11 @@ Select VM은 vSAN 데이터스토어 저장소 정책을 상속하며 FTT/FTM �
 .여러 ONTAP Select 노드가 서로 다른 Select 클러스터의 일부인 경우 동일한 호스트에서 실행될 수 있습니까?
 vNAS 구성에 대해서만 동일한 호스트에서 여러 ONTAP Select 노드를 구성할 수 있습니다. 단, 이러한 노드가 동일한 ONTAP Select 클러스터에 속하지 않습니다. 동일한 물리적 호스트에 있는 여러 ONTAP Select 노드가 RAID 컨트롤러에 액세스하기 위해 경합하기 때문에 DAS 구성에는 이 기능이 지원되지 않습니다.
 
-.단일 10GE 포트를 가진 호스트에서 ONTAP Select를 실행할 수 있으며, ESXi와 KVM 모두에서 사용할 수 있습니까?
-단일 10GE 포트를 사용하여 외부 네트워크에 연결할 수 있습니다. 하지만 NetApp에서는 제한된 소형 폼 팩터 환경에서만 이 기능을 사용할 것을 권장합니다. 이 기능은 ESXi와 KVM 모두에서 지원됩니다.
+.단일 10GE 포트가 있는 호스트에서 ONTAP Select를 실행할 수 있으며, ESXi, Hyper-V 및 KVM에서 사용할 수 있습니까?
+10GE 포트 하나를 사용하여 외부 네트워크에 연결할 수 있습니다. 하지만 NetApp은 공간이 제한된 소형 폼팩터 환경에서만 이 구성을 사용할 것을 권장합니다. 이 기능은 ESXi, Hyper-V 및 KVM에서 지원됩니다.
 
-.KVM에서 실시간 마이그레이션을 수행하기 위해 실행해야 하는 추가 프로세스는 무엇입니까?
-라이브 마이그레이션에 참여하는 각 호스트에 오픈 소스 CLVM 및 PCS(Pacemaker) 구성 요소를 설치하고 실행해야 합니다. 각 호스트에서 동일한 볼륨 그룹에 액세스하려면 이 권한이 필요합니다.
+.Hyper-V 및 KVM에서 라이브 마이그레이션을 수행하려면 어떤 추가 프로세스를 실행해야 합니까?
+라이브 마이그레이션에 참여하는 각 호스트에 오픈 소스 CLVM 및 pacemaker (pcs) 구성 요소를 설치하고 실행해야 합니다. 이는 각 호스트에서 동일한 볼륨 그룹에 액세스하는 데 필요합니다. 또한, 수신 및 발신 라이브 마이그레이션을 위해 Hyper-V 서버에서 라이브 마이그레이션 기능을 활성화해야 합니다.
 
 
 
@@ -268,7 +275,7 @@ MetroCluster SDS는 프리미엄 기능이며 Premium 또는 Premium XL 라이�
 ONTAP MetroCluster SDS는 모든 유형의 스토리지 구성(DAS 및 vNAS)을 지원합니다.
 
 .ONTAP MetroCluster SDS는 소프트웨어 RAID를 지원합니까?
-예, 소프트웨어 RAID는 KVM과 ESXi 모두에서 SSD 미디어로 지원됩니다.
+예, 소프트웨어 RAID는 ESXi와 KVM 모두에서 SSD 미디어와 함께 지원됩니다.
 
 .ONTAP MetroCluster SDS는 SSD와 회전식 미디어를 모두 지원합니까?
 예. 프리미엄 라이센스가 필요하지만 이 라이센스는 소규모 및 중간 규모의 VM과 SSD, 회전식 미디어를 모두 지원합니다.

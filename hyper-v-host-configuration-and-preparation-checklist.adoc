@@ -1,0 +1,249 @@
+---
+sidebar: sidebar 
+permalink: hyper-v-host-configuration-and-preparation-checklist.html 
+keywords: ontap select, pre-installation checklist, hyper-v, host preparation 
+summary: ONTAP Select 노드가 배포되는 각 Hyper-V 하이퍼바이저 호스트를 준비하십시오. 호스트를 준비할 때 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되었고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인하십시오. 
+---
+= ONTAP Select를 위한 Hyper-V 호스트 준비
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 노드가 배포될 각 Hyper-V 하이퍼바이저 호스트를 준비하십시오. 호스트가 올바르게 구성되어 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인하십시오.
+
+
+NOTE: ONTAP Select Deploy 관리 유틸리티는 하이퍼바이저 호스트의 필수 네트워크 및 스토리지 구성을 수행하지 않습니다. ONTAP Select 클러스터를 배포하기 전에 각 호스트를 수동으로 준비해야 합니다.
+
+
+
+[[step-1-prepare-the-hyper-v-hypervisor-host]]
+[[prepare-hyper-v-server]]
+== 1단계: Hyper-V 하이퍼바이저 호스트를 준비합니다
+
+ONTAP Select 노드가 배포된 각 Windows Hyper-V 서버를 준비합니다.
+
+.이 작업에 대해
+이러한 단계를 수행하는 방법에 대한 자세한 내용은 Windows 설명서를 참조하십시오.
+
+.단계
+. 지원되는 Windows Server 릴리스를 설치하고 서버 관리자, Windows Admin Center 또는 PowerShell을 사용하여 Hyper-V 역할을 활성화합니다.
+. Windows를 로컬 부팅 디스크에 설치하십시오. ONTAP Select에 제공하려는 디스크에 Windows를 설치하지 마십시오.
+. 구성이 다음 요구 사항을 충족하는지 확인하십시오.
++
+** Windows Server 릴리스는 지원되는 것으로 나열되어 있습니다. Deploy 유틸리티는 호스트 등록 중에 제품 이름을 읽고 지원되지 않는 릴리스를 보고합니다.
+** Hyper-V 역할이 활성화되어 있습니다. Deploy 유틸리티는 호스트 등록 중에 이를 확인하며, 역할이 활성화되어 있지 않으면 등록이 실패합니다.
+** 호스트 CPU와 메모리는 Windows Server를 위한 용량을 갖추고 있습니다. Deploy 유틸리티는 노드 크기를 조정할 때 호스트에 2개의 CPU 코어와 8GB의 메모리를 예약합니다.
+
+
+
+
+
+
+[[step-2-provide-remote-management-access-for-deploy]]
+== 2단계: Deploy에 대한 원격 관리 액세스 제공
+
+Deploy 유틸리티는 HTTPS 및 PowerShell 원격 구성을 사용하여 Windows Remote Management(WinRM)를 통해 호스트를 관리합니다. WinRM HTTPS 수신기, 관련 인증서 및 방화벽 규칙을 구성해야 합니다.
+
+.단계
+. WinRM HTTP 활성화:
++
+[source, cli]
+----
+Enable-PSRemoting -Force
+----
+. WinRM 구성 확인:
++
+[source, cli]
+----
+winrm enumerate winrm/config/listener
+----
+. HTTPS 포트 5986에서 네트워크 연결을 허용하는 방화벽 인바운드 규칙을 생성하십시오:
++
+[source, cli]
+----
+New-NetFirewallRule -DisplayName "WinRM HTTPS" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 5986
+----
+. 관련 인증서를 구성하십시오:
++
+[role="tabbed-block"]
+====
+.인증서를 사용할 수 있습니다
+--
+로컬 시스템 인증서 저장소에 유효한 인증서가 이미 있는 경우:
+
+.. 인증서에 대한 PowerShell 원격 접속을 구성합니다:
++
+[source, cli]
+----
+Enable-PSRemoting -Force
+----
+.. 원격 관리를 위해 WinRM 구성:
++
+[source, cli]
+----
+winrm quickconfig -q
+----
+.. WinRM HTTPS 리스너 구성을 확인하십시오:
++
+[source, cli]
+----
+winrm e winrm/config/listener
+----
+
+
+--
+.인증서를 사용할 수 없습니다
+--
+.. 자체 서명 인증서를 생성합니다:
++
+[source, cli]
+----
+$cert = New-SelfSignedCertificate -DnsName $env:COMPUTERNAME -CertStoreLocation Cert:\LocalMachine\My
+----
+.. 인증서를 WinRM 리스너에 바인딩합니다:
++
+[source, cli]
+----
+New-WSManInstance -ResourceURI winrm/config/Listener -SelectorSet @{Transport='HTTPS';Address='*'} -ValueSet @{CertificateThumbprint=$cert.Thumbprint}
+----
+
+
+--
+====
+. 그룹 정책을 구성하려면 *컴퓨터 구성* > *관리 템플릿* > *Windows 구성 요소* > *Windows 원격 관리(WinRM)* > *WinRM 서비스*를 선택하십시오.
+. 구성이 다음 요구 사항을 충족하는지 확인하십시오.
++
+** Deploy 가상 머신(VM)은 TCP 포트 5986의 WinRM HTTPS 리스너에 도달할 수 있습니다. Deploy 유틸리티는 HTTP 또는 TCP 포트 5985를 사용하지 않습니다.
+** 자체 서명된 인증서가 있습니다. Deploy 유틸리티는 인증 기관을 통해 인증서의 유효성을 검사하지 않습니다.
+** 호스트 등록에 사용된 계정은 해당 호스트에 대한 관리자 권한을 가지고 있습니다. Deploy 유틸리티는 Kerberos로 인증합니다. Deploy 유틸리티가 Kerberos를 사용할 수 없는 경우 NTLM으로 대체됩니다.
+** Hyper-V 호스트를 TCP 포트 5986에서 응답하는 고유한 이름으로 등록했습니다. 배포 유틸리티는 등록된 이름을 사용하여 인증서를 가져옵니다.
++
+
+NOTE: Deploy 유틸리티는 인증서를 기록하고 이후 모든 연결 시에 유효성을 검사합니다. 인증서가 교체되면 호스트에 대한 연결이 실패하므로 Deploy 유틸리티에서 호스트를 삭제하고 다시 등록해야 합니다.
+
+
+
+
+
+
+
+[[step-3-prepare-the-host-storage]]
+== 3단계: 호스트 스토리지 준비
+
+Hyper-V 호스트의 스토리지 풀은 ONTAP Select VM과 해당 가상 디스크를 저장하는 로컬 볼륨입니다.
+
+.단계
+. 디스크 관리, 서버 관리자 또는 Windows Admin Center를 사용하여 로컬 볼륨을 생성하십시오. 자세한 내용은 Microsoft 설명서를 참조하십시오.
+. 각 ONTAP Select 노드에 대해 하나 이상의 스토리지 풀을 생성하십시오. 자세한 내용은 Microsoft 설명서를 참조하십시오.
++
+[NOTE]
+====
+** 소프트웨어 RAID를 사용할 때는 스토리지 풀을 생성해야 합니다.
+** 스토리지 풀을 제거하려면 먼저 해당 스토리지 풀을 사용하는 ONTAP Select 클러스터 또는 노드를 삭제한 다음 표준 Windows 툴을 사용하여 볼륨을 삭제하십시오.
+
+
+====
+. 볼륨이 NTFS 또는 ReFS로 포맷되어 있고 드라이브 문자가 할당되었는지 확인하십시오. Deploy 유틸리티는 드라이브 문자로 스토리지 풀을 식별합니다.
++
+[NOTE]
+====
+** Deploy 유틸리티는 볼륨의 2%를 오버헤드로 예약하며 단일 스토리지 풀에서 최대 64TB를 할당할 수 있습니다.
+** 클러스터 공유 볼륨과 SMB 3.0 파일 공유는 ONTAP Select 스토리지 풀로 사용할 수 없습니다.
+** ONTAP Select는 드라이브 문자가 없기 때문에 폴더 경로로만 마운트된 볼륨을 탐색할 수 없습니다.
+
+
+====
+. 소프트웨어 RAID를 사용하는 경우 ONTAP Select를 위해 물리적 디스크를 예약해야 합니다. Hyper-V에서는 PCI 패스스루가 지원되지 않으므로 디스크는 패스스루 물리적 디스크로 VM에 제공됩니다. 물리적 디스크는 다음 요구 사항을 충족해야 합니다.
++
+** 이 디스크들은 각각 최소 200GB의 저장 용량을 가진 SSD 또는 NVMe 디스크입니다.
+** 이 디스크들은 파티션, 볼륨, 드라이브 문자가 없는 원시 디스크입니다.
+** 해당 디스크는 스토리지 공간 풀의 구성원이 아닙니다.
+** 디스크는 온라인 상태로 유지됩니다. Deploy 유틸리티는 각 디스크를 VM에 연결할 때 오프라인 상태로 전환합니다.
+
+
+. 단일 노드 클러스터는 소프트웨어 RAID의 경우 최소 3개의 디스크가 필요하고, 소프트웨어 RAID-DP의 경우 4개 또는 5개의 디스크가 필요합니다. 2노드 클러스터는 소프트웨어 RAID의 경우 6개의 디스크가 필요하거나 소프트웨어 RAID-DP의 경우 10개의 디스크가 필요합니다. ONTAP Select는 노드당 최대 60개의 패스스루 디스크를 지원합니다.
++
+호스트를 등록하기 전에 예약된 디스크가 사용 가능한지 확인하십시오:
+
++
+[source, cli]
+----
+Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, Size
+----
++
+
+NOTE:  `Get-StoragePool` 출력에서 Storage Spaces 풀의 구성원으로 나타나는 디스크는 Deploy 유틸리티에서 제외되며 소프트웨어 RAID에 사용할 수 없습니다.
+
+
+
+
+
+[[step-4-review-the-ontap-select-cluster-configuration]]
+== 4단계: ONTAP Select 클러스터 구성 검토
+
+ONTAP Select를 2노드 또는 4노드 클러스터나 단일 노드 클러스터로 구축할 수 있습니다. 많은 경우, 추가 스토리지 용량과 고가용성(HA) 기능 때문에 멀티노드 클러스터가 더 적합합니다.
+
+다음 그림은 ESXi 호스트의 단일 노드 클러스터 및 4노드 클러스터에 사용되는 ONTAP Select 네트워크를 보여줍니다.
+
+[role="tabbed-block"]
+====
+.단일 노드 클러스터
+--
+다음 그림에서는 단일 노드 클러스터를 보여 줍니다. 외부 네트워크에는 클라이언트, 관리 및 클러스터 간 복제 트래픽(SnapMirror/SnapVault)이 포함됩니다.
+
+image:CHK_01.jpg["단일 노드 클러스터에 네트워크 1개 표시"]
+
+--
+.4노드 클러스터
+--
+다음 그림은 두 개의 네트워크를 보여주는 4노드 클러스터를 보여줍니다. 내부 네트워크는 ONTAP 클러스터 네트워크 서비스를 지원하는 노드 간의 통신을 가능하게 합니다. 외부 네트워크에는 클라이언트, 관리 및 클러스터 간 복제 트래픽(SnapMirror/SnapVault)이 포함됩니다.
+
+image:CHK_02.jpg["2개의 네트워크를 보여 주는 4노드 클러스터"]
+
+--
+.4노드 클러스터 내의 단일 노드
+--
+다음 그림은 4노드 클러스터 내 단일 ONTAP Select VM에 대한 일반적인 네트워크 구성을 보여줍니다. ONTAP 내부 네트워크와 ONTAP 외부 네트워크라는 두 개의 별도 네트워크가 있습니다.
+
+image:CHK_03.jpg["4노드 클러스터 내의 단일 노드"]
+
+--
+====
+
+
+[[step-5-prepare-the-networks]]
+== 5단계: 네트워크 준비
+
+ONTAP Select Deploy는 Hyper-V 가상 스위치를 통해 물리적 네트워크에 연결합니다. 호스트를 등록하기 전에 가상 스위치를 생성해야 합니다.
+
+.이 작업에 대해
+이러한 단계를 수행하는 방법에 대한 자세한 내용은 Windows 설명서를 참조하십시오.
+
+.단계
+. Hyper-V Manager, Windows Admin Center 또는 PowerShell에서 Virtual Switch Manager를 사용하여 스위치를 생성합니다.
++
+ONTAP Select에서 사용하는 각 물리적 어댑터에 대해 외부 가상 스위치를 생성합니다. 단일 노드 클러스터에는 최소 1개의 어댑터가 필요하고 2노드 클러스터에는 최소 2개의 어댑터가 필요합니다.
+
+. 물리적 어댑터의 고급 속성에서 점보 프레임을 설정합니다.
+. 각 가상 스위치에 물리적 어댑터를 하나씩 바인딩합니다.
++
+
+NOTE: NIC 팀 구성 및 Switch Embedded Teaming은 지원되지 않습니다.
+
+. 각 업링크가  `up`인지 확인하십시오.
++
+
+NOTE: 업링크가  `down`인 외부 가상 스위치가 사용 불가능한 것으로 보고됩니다.
+
+. 물리적 스위치 포트 또는 관리 운영 체제 어댑터에서 VLAN 태깅을 구성하십시오. Deploy 유틸리티는 사용 중인 VLAN을 읽어올 뿐, VLAN을 할당하지는 않습니다.
+. 2노드 클러스터의 내부 네트워크는 7500~9000바이트의 최대 전송 단위(MTU)가 필요합니다. 내부 네트워크를 전송하는 어댑터에서 점보 프레임을 활성화하십시오.
++
+
+NOTE: Windows Server는 이더넷 헤더를 포함한 점보 프레임 크기를 보고하므로 9014바이트로 설정된 어댑터는 9000바이트의 MTU를 제공합니다. 이것이 Deploy 유틸리티가 어댑터 설정에 대한 MTU 값을 해석하는 방식입니다. 가상 스위치를 관리 운영 체제와 공유하는 경우, 해당 호스트 어댑터의 IP MTU 또한 Deploy 유틸리티가 보고하는 MTU를 제한합니다.
+
+

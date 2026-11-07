@@ -100,8 +100,8 @@ ONTAP 소프트웨어 RAID는 RAID 4, RAID-DP, RAID-TEC 와 같은 RAID 유형�
 
 
 
-[[passthrough-directpath-io-devices-vs-raw-device-maps-rdms]]
-== 통과 연결(DirectPath IO) 디바이스와 RDM(Raw Device Maps)
+[[passthrough-directpath-io-devices-versus-raw-device-maps-rdms]]
+== 패스스루(DirectPath IO) 장치와 원시 장치 맵(RDM)의 차이점
 
 ESXi 및 KVM 하이퍼바이저는 NVMe 디스크를 RDM(Raw Device Map)으로 지원하지 않습니다. ONTAP Select가 NVMe 디스크를 직접 제어하려면 ESXi 또는 KVM에서 해당 드라이브를 패스스루 장치로 구성해야 합니다. NVMe 장치를 패스스루 장치로 구성하려면 서버 BIOS에서 해당 기능을 지원해야 하며 호스트를 재부팅해야 할 수도 있습니다. 또한 호스트당 할당할 수 있는 패스스루 장치 수에는 제한이 있으며, 이는 플랫폼에 따라 다를 수 있습니다. 하지만 ONTAP Deploy는 ONTAP Select 노드당 최대 14개의 NVMe 장치로 제한합니다. 즉, NVMe 구성은 전체 용량은 다소 제한되지만 매우 높은 IOPS 밀도(IOPS/TB)를 제공합니다. 또는 더 큰 스토리지 용량을 갖춘 고성능 구성을 원하는 경우 권장 구성은 대용량 ONTAP Select VM 크기, 시스템 디스크용 INTEL Optane 카드, 그리고 데이터 스토리지용 적절한 수의 SSD 드라이브입니다.
 
@@ -109,6 +109,9 @@ ESXi 및 KVM 하이퍼바이저는 NVMe 디스크를 RDM(Raw Device Map)으로 �
 NOTE: NVMe 성능을 최대한 활용하려면 대규모 ONTAP Select VM 크기를 고려하십시오.
 
 패스스루 장치와 RDM 사이에는 또 다른 차이점이 있습니다. RDM은 실행 중인 VM에 매핑할 수 있습니다. 패스스루 장치는 VM 재부팅이 필요합니다. 즉, NVMe 드라이브 교체 또는 용량 확장(드라이브 추가) 절차에는 ONTAP Select VM 재부팅이 필요합니다. 드라이브 교체 및 용량 확장(드라이브 추가) 작업은 ONTAP Deploy의 워크플로에 따라 진행됩니다. ONTAP Deploy는 단일 노드 클러스터의 ONTAP Select 재부팅과 HA 쌍의 장애 조치/장애 복구를 관리합니다. 그러나 SSD 데이터 드라이브( ONTAP Select 재부팅/장애 조치 필요 없음)와 NVMe 데이터 드라이브(ONTAP Select 재부팅/장애 조치 필요)의 차이점을 파악하는 것이 중요합니다.
+
+
+NOTE: ONTAP Select는 Hyper-V 하이퍼바이저에서 NVMe 드라이브를 SCSI 디스크로 지원합니다. ONTAP Select는 Hyper-V 하이퍼바이저에서 NVMe 드라이브를 개별 장치 할당(패스스루 장치)으로 지원하지 않습니다.
 
 
 
@@ -128,8 +131,8 @@ FAS 및 AFF 시스템과 마찬가지로, 기존 RAID 그룹에는 동일하거�
 
 
 
-[[match-an-ontap-select-disk-to-the-corresponding-esxi-or-kvm-disk]]
-== ONTAP Select 디스크를 해당 ESXi 또는 KVM 디스크와 일치시킵니다
+[[match-an-ontap-select-disk-to-the-corresponding-esxi-hyper-v-or-kvm-disk]]
+== ONTAP Select 디스크를 해당 ESXi, Hyper-V 또는 KVM 디스크와 매칭하십시오.
 
 ONTAP Select 디스크에는 보통 net x.x.y라는 레이블이 지정됩니다 다음 ONTAP 명령을 사용하여 디스크 UUID를 얻을 수 있습니다.
 
@@ -149,7 +152,7 @@ Plex: -This UID can be matched with the device UID displayed in the ‘storage d
 ----
 image:ST_21.jpg["ONTAP Select 디스크와 해당 ESXi 디스크 일치"]
 
-ESXi 또는 KVM 셸에서 다음 명령을 입력하면 해당 물리적 디스크(naa.unique-id로 식별)의 LED를 깜박일 수 있습니다.
+ESXi, Hyper-V 또는 KVM 셸에서 다음 명령을 입력하면 특정 물리적 디스크(naa.unique-id로 식별됨)의 LED를 깜빡일 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -158,6 +161,13 @@ ESXi 또는 KVM 셸에서 다음 명령을 입력하면 해당 물리적 디스�
 [source, cli]
 ----
 esxcli storage core device set -d <naa_id> -l=locator -L=<seconds>
+----
+--
+.Hyper-V
+--
+[source, cli]
+----
+Enable-PhysicalDiskIdentification -UniqueId <unique_id>
 ----
 --
 .KVM

@@ -14,7 +14,7 @@ summary: ONTAP Select 노드가 배포된 각 ESXi 하이퍼바이저 호스트�
 
 
 [role="lead"]
-ONTAP Select 노드가 배포된 각 ESXi 하이퍼바이저 호스트를 준비합니다. 호스트를 준비할 때는 배포 환경을 신중하게 평가하여 호스트가 올바르게 구성되고 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인합니다.
+ONTAP Select 노드가 배포되는 각 ESXi 하이퍼바이저 호스트를 준비하십시오. 호스트가 올바르게 구성되어 ONTAP Select 클러스터 배포를 지원할 준비가 되었는지 확인하십시오.
 
 
 NOTE: ONTAP Select Deploy 관리 유틸리티는 하이퍼바이저 호스트의 필수 네트워크 및 스토리지 구성을 수행하지 않습니다. ONTAP Select 클러스터를 배포하기 전에 각 호스트를 수동으로 준비해야 합니다.

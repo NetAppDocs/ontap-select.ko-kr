@@ -19,6 +19,23 @@ summary: 현재 릴리즈에는 ONTAP Select에 대한 몇 가지 새로운 기�
 
 
 
+[[ontap-select-9-20-1]]
+== ONTAP Select 9.20.1
+
+Hyper-V 하이퍼바이저 지원:: ONTAP Select 9.20.1부터 Windows Server 2025 및 Windows Server 2022를 실행하는 Microsoft Hyper-V 하이퍼바이저에 ONTAP Select 클러스터를 배포할 수 있습니다. 지원되는 Hyper-V 호스트에서 ONTAP Select Deploy 관리 유틸리티를 사용하여 단일 노드, 2노드 및 4노드 클러스터를 구성하고 관리할 수 있습니다.
++
+--
+* link:plan-ots-hyper-v.html["Hyper-V 스토리지 요구 사항"]에 대해 알아보십시오
+* link:hyper-v-host-configuration-and-preparation-checklist.html["Hyper-V 호스트 구성 및 준비 체크리스트"]에 대해 알아보십시오
+* link:task_install_deploy.html["Hyper-V 호스트에 ONTAP Select Deploy 설치하기"]에 대해 알아보십시오
+
+
+--
+TLS를 통한 NFS 지원:: ONTAP Select 9.20.1부터 ONTAP Select는 CLI를 사용하여 TLS를 통한 NFS를 지원합니다. System Manager는 지원되지 않습니다. 자세한 내용은 link:reference_lic_ontap_features.html#licensed-ontap-features["기본적으로 라이센스가 부여되는 ONTAP 기능"]를 참조하십시오.
+
+
+
+
 [[ontap-select-9-19-1]]
 == ONTAP Select 9.19.1
 
@@ -28,7 +45,7 @@ summary: 현재 릴리즈에는 ONTAP Select에 대한 몇 가지 새로운 기�
 ONTAP Select는 클라우드 키 관리자를 지원하지 않습니다.
 
 --
-Advanced Micro Devices(AMD) 프로세서 지원:: ONTAP Select 9.19.1부터 ONTAP Select는 KVM(커널 기반 가상 머신) 및 ESXi 하이퍼바이저 호스트에서 AMD 프로세서를 지원합니다. 자세한 내용은 link:reference_plan_ots_hardware.html["VMware 하이퍼바이저 및 하드웨어 고려사항"]를 참조하십시오.
+Advanced Micro Devices(AMD) 프로세서 지원:: ONTAP Select 9.19.1부터 ONTAP Select는 ESXi 및 KVM(커널 기반 가상 머신) 하이퍼바이저 호스트에서 AMD 프로세서를 지원합니다. 자세한 내용은 link:reference_plan_ots_hardware.html["VMware 하이퍼바이저 및 하드웨어 고려사항"]를 참조하십시오.
 VMware ESXi 지원이 향상되었습니다:: ONTAP Select 9.19.1은 VMware ESXi 9.1을 지원합니다.
 
 
@@ -78,7 +95,7 @@ ESXi 또는 KVM 호스트의 기존 클러스터 크기를 다음과 같이 줄�
 
 
 --
-link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 ESXi 및 KVM 하이퍼바이저 버전에 대해 알아보십시오."].
 
 --
 KVM 하이퍼바이저 지원이 업데이트되었습니다:: ONTAP Select 9.18.1부터 Rocky Linux 10.1에서 KVM 하이퍼바이저가 지원됩니다.
@@ -101,12 +118,12 @@ KVM 호스트의 로컬 연결 NVMe 디스크에 대한 소프트웨어 RAID 지
 link:concept_stor_swraid_local.html["로컬 연결 스토리지를 위한 소프트웨어 RAID 구성 서비스에 대해 알아보세요"] .
 
 --
-KVM 호스트에서 클러스터 확장 및 축소 지원:: ONTAP Select 9.17.1부터 클러스터 확장 및 축소 기능이 커널 기반 가상 머신(KVM)과 ESXi 하이퍼바이저 호스트 모두에서 지원됩니다. ONTAP Select 9.16.1 및 9.15.1의 경우, 클러스터 확장 및 축소 기능은 ESXi 하이퍼바이저 호스트에서만 지원됩니다.
+KVM 호스트에서 클러스터 확장 및 축소 지원:: ONTAP Select 9.17.1부터 클러스터 확장 및 축소 기능이 ESXi 및 커널 기반 가상 머신(KVM) 하이퍼바이저 호스트 모두에서 지원됩니다. ONTAP Select 9.16.1 및 9.15.1에서는 ESXi 하이퍼바이저 호스트에서만 클러스터 확장 및 축소가 지원됩니다.
 +
 --
 기존 ONTAP Select 클러스터에서 클러스터 확장 및 축소 기능을 사용하여 6노드에서 8노드 클러스터로 크기를 늘리거나 8노드에서 6노드 클러스터로 크기를 줄일 수 있습니다.
 
-link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 ESXi 및 KVM 하이퍼바이저 버전에 대해 알아보십시오."].
 
 --
 ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원:: ONTAP Select 9.17.1부터 ESXi 호스트의 6노드 및 12노드 클러스터 간에 클러스터 확장 및 축소가 지원됩니다.
@@ -128,7 +145,7 @@ ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원::
 
 
 --
-link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."] .
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 ESXi 및 KVM 하이퍼바이저 버전에 대해 알아보십시오."].
 
 --
 SnapMirror 클라우드 지원:: ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select에서 지원됩니다. SnapMirror 클라우드는 기본적으로 ONTAP Select에 대해 라이센스가 부여되지 않습니다. ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 버전 9.17.1로 업그레이드할 때 SnapMirror 클라우드 라이센스를 요청해야 합니다. 자세한 내용은 link:reference_lic_ontap_features.html#other-ontap-features["ONTAP 기능은 별도로 라이센스가 부여됩니다"]을 참조하십시오.
@@ -144,7 +161,7 @@ ONTAP Select Deploy 및 ONTAP Select for ESXi는 스토리지 풀에 vSAN 또는
 ====
 콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 대한 액세스가 필요합니다. 제한된 역할을 사용하는 vSAN ESA 배포 환경에서는 이러한 액세스가 필수적입니다.
 
-link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["콘텐츠 라이브러리 작업에 대한 액세스 권한 수준 알아보기"].
+link:plan-deploy-hypervisor.html#vmware-vcenter-server-considerations["콘텐츠 라이브러리 작업에 대한 액세스 권한 수준 알아보기"].
 
 ====
 --
@@ -280,7 +297,7 @@ VMware NSX-T 지원:: ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 대해
 --
 * 클러스터 MTU
 +
-클러스터를 구축하여 추가 오버헤드를 고려하기 전에 클러스터 MTU 크기를 수동으로 8800으로 조정해야 합니다. VMware 지침은 NSX-T를 사용할 때 200바이트 버퍼를 허용합니다
+클러스터를 배포하기 전에 추가 오버헤드를 고려하여 클러스터 최대 전송 단위(MTU) 크기를 수동으로 8800으로 조정해야 합니다. VMware에서는 NSX-T를 사용할 때 200바이트 버퍼를 허용하도록 권장합니다.
 
 * 네트워크 4x10Gb 구성
 +

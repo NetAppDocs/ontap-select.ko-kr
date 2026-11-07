@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: plan-ots-hyper-v.html 
+keywords: plan, planning, vnas, hyper-v 
+summary: Hyper-V 하이퍼바이저 사용과 관련하여 고려해야 할 몇 가지 계획 문제가 있습니다. 
+---
+= ONTAP Select용 Hyper-V 스토리지 요구사항
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hyper-V 하이퍼바이저에서 ONTAP Select를 구성할 때, ONTAP Select는 가상 머신(VM)과 가상 디스크를 Hyper-V 호스트의 로컬 볼륨에 저장합니다.
+
+
+
+[[basic-requirements-and-restrictions]]
+== 기본 요구 사항 및 제한 사항
+
+Hyper-V 호스트의 ONTAP Select 스토리지 풀에는 다음과 같은 구성 요구 사항 및 제한 사항이 적용됩니다.
+
+* 스토리지 풀은 드라이브 문자가 할당된 NTFS 또는 ReFS 볼륨이어야 합니다. Deploy 유틸리티는 드라이브 문자로 스토리지 풀을 식별합니다.
+* 클러스터 공유 볼륨은 스토리지 풀로 지원되지 않습니다.
+* SMB 3.0 등 네트워크 파일 공유 및 원격 UNC 경로는 스토리지 풀로 지원되지 않습니다.
+* ONTAP Select는 볼륨에 드라이브 문자가 없기 때문에 폴더 경로로만 마운트된 볼륨을 탐색하지 않습니다.
+* ONTAP Select는 Hyper-V 호스트가 LUN을 NTFS 또는 ReFS로 포맷하고 드라이브 문자를 할당하는 경우 FC, FCoE 또는 iSCSI를 사용하여 외부 스토리지 어레이의 LUN을 사용할 수 있습니다. ONTAP Select는 이러한 볼륨을 로컬 호스트 스토리지로 처리합니다. ESXi에서 사용되는 ONTAP Select vNAS 모델은 Hyper-V에 적용되지 않습니다.
+* Storage Spaces 가상 디스크는 NTFS 또는 ReFS로 포맷되고 드라이브 문자가 할당된 경우 스토리지 풀을 포함할 수 있습니다. 그러나 소프트웨어 RAID는 Storage Spaces 풀의 구성원인 물리적 디스크를 사용할 수 없습니다.
+* Hyper-V 구성은 씬 프로비저닝된 스토리지를 인식하지 못합니다. ONTAP Select는 Windows에서 볼륨에 대해 보고하는 용량을 사용합니다.
+
+
+
+
+[[best-practices]]
+== 모범 사례
+
+다음과 같은 모범 사례를 따라야 합니다.
+
+* ONTAP Select 네트워크에 대해 전용 네트워크 어댑터, 대역폭 및 가상 스위치 구성을 정의하십시오. iSCSI 등 외부 스토리지 트래픽은 별도의 어댑터에 유지하십시오.
+* 스토리지 풀 볼륨을 ONTAP Select 전용으로 지정하십시오. 동일한 볼륨에 다른 Hyper-V VM 또는 Windows 워크로드를 배치하지 마십시오. 또한 Windows 부팅 볼륨을 스토리지 풀로 사용하지 마십시오.
+* ONTAP Select가 전체 용량을 소모하지 않도록 볼륨 크기를 조정하십시오.
+* 외부 스토리지 어레이용 Windows MPIO를 구성하여 LUN이 이중화 경로를 통해 제공되도록 합니다.
+
