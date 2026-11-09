@@ -112,7 +112,7 @@ ONTAP Select에서 지원되지만 기본적으로 라이선스가 부여되지 
 | FabricPool | link:https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["ONTAP FabricPool"^] | StorageGRID 활용 시 FabricPool 라이센스가 필요하지 않습니다. 
 
 
-| MetroCluster SDS | link:https://docs.netapp.com/us-en/ontap/concepts/mcc-sds-ontap-select.html["MetroCluster ONTAP Select용 SDS"^] | 본 상품은 ONTAP Select 프리미엄 라이선스 상품입니다. 
+| MetroCluster SDS | link:reference_plan_ots_mcc_sds.html["MetroCluster ONTAP Select용 SDS"] | 본 상품은 ONTAP Select 프리미엄 라이선스 상품입니다. 
 
 
 | SnapMirror 클라우드 | link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 오브젝트 스토리지에 저장"^] | link:https://mysupport.netapp.com/site/help["비기술 지원 사례 개설"^]SnapMirror 클라우드 라이센스를 취득해야 합니다. 

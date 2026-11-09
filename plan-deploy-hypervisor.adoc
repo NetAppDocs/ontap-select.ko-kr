@@ -166,7 +166,7 @@ ONTAP Select 배포는 IP 버전 4(IPv4)만 지원합니다. IP 버전 6(IPv6)�
 --
 .KVM
 --
-KVM 환경에 ONTAP Select Deploy 유틸리티를 설치하기 전에 고려해야 할 하이퍼바이저 환경별 요구 사항 및 제한 사항이 몇 가지 있습니다.
+KVM 환경에 ONTAP Select Deploy 유틸리티를 설치하기 전에 고려해야 할 KVM 하이퍼바이저 환경 특유의 요구 사항 및 제한 사항이 몇 가지 있습니다.
 
 .하드웨어 요구 사항
 ONTAP Select가 배포된 Linux KVM 하이퍼바이저 호스트가 다음 기본 요구 사항을 충족하는지 확인하십시오.
@@ -216,10 +216,10 @@ ONTAP Select 배포는 IP 버전 4(IPv4)만 지원합니다. IP 버전 6(IPv6)�
 ====
 
 
+[[vmware-vsphere-privileges-for-esa]]
 [[vmware-vcenter-server-considerations]]
-== VMware vCenter 서버 고려 사항
+== ESA에 대한 VMware vSphere 권한
 
-.ESA에 대한 VMware vSphere 권한
 vCenter에서 vSAN Express Storage Architecture(ESA)를 생성하고 관리하려면 다음과 같은 vSphere 콘텐츠 라이브러리 권한이 필요합니다.
 
 

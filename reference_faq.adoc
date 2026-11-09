@@ -191,7 +191,7 @@ ONTAP Select Deploy에는 ONTAP Select 노드의 용량 확장 작업을 지원�
 .ONTAP Select는 vSAN 또는 외부 스토리지 유형 데이터 저장소를 지원합니까?
 ONTAP Select Deploy 및 ONTAP Select for ESXi는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하는 ONTAP Select 단일 노드 클러스터 구성을 지원합니다.
 
-ONTAP Select Deploy 및 ONTAP Select for KVM은 외부 어레이에서 공유 논리 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터 구성을 지원합니다. 스토리지 풀은 iSCSI, FC/FCoE 및 NFS를 기반으로 할 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.
+ONTAP Select Deploy 및 ONTAP Select for KVM은 외부 어레이에서 공유 논리 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터 구성을 지원합니다. 스토리지 풀은 iSCSI 또는 FC/FCoE 기반일 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.
 
 공유 스토리지의 다중 노드 HA 클러스터가 지원됩니다.
 

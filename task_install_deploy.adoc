@@ -103,10 +103,7 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 --
 OVF VM 이미지를 사용하여 ESXi 호스트에 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일환으로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
 
---
-====
-.ESXi
---
+.시작하기 전에
 ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM:
 
 * VMware Client Integration Plugin을 설치하거나 필요에 따라 유사한 구성을 수행하여 브라우저에서 OVF 기능을 설정합니다
@@ -123,22 +120,6 @@ VM 이름, 외부 네트워크, 호스트 이름 등 VM을 생성할 때 사용�
 * DNS 검색 도메인
 
 
---
-.KVM
---
-KVM 하이퍼바이저의 경우, VM 이름, 외부 네트워크, 호스트 이름 등 VM을 생성할 때 사용할 구성 정보가 있어야 합니다. 정적 네트워크 구성을 정의할 때 다음 추가 정보가 필요합니다:
-
-* 배포 VM의 IP 주소입니다
-* 넷마스크
-* 게이트웨이(라우터)의 IP 주소
-* Primary DNS 서버의 IP 주소입니다
-* 두 번째 DNS 서버의 IP 주소입니다
-* DNS 검색 도메인
-
-
---
-[]
-====
 .이 작업에 대해
 vSphere를 사용하는 경우 Deploy OVF template Wizard에는 네트워크 구성을 포함한 모든 구축 구성 정보를 제공하는 양식이 포함되어 있습니다. 그러나 이 양식을 사용하지 않도록 선택한 경우에는 배포 VM의 콘솔을 사용하여 네트워크를 구성할 수 있습니다.
 
@@ -174,7 +155,7 @@ DHCP를 사용하여 네트워킹 정보를 설정하시겠습니까? [n]:
 
 
 --
-
+.Hyper-V
 --
 새 가상 머신 마법사를 사용하여 Hyper-V 호스트에 ONTAP Select Deploy VM을 설치하고 시작하십시오.
 
@@ -283,7 +264,7 @@ Use DHCP to set networking information? [n]:
 
 
 --
-
+.KVM
 --
 OVF VM 이미지를 사용하여 KVM 호스트에 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일환으로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
 
@@ -346,8 +327,6 @@ Use DHCP to set networking information? [n]:
 
 
 
-
---
 
 --
 ====
