@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: sizing-capacity-pool-license.html 
-keywords: license, licensing, Capacity Tiers, usable, space 
-summary: Capacity Tiers 라이센스는 각 노드에서 관리하는 기본 디스크 용량을 기준으로 하며, 노드, HA 쌍 또는 클러스터의 사용 가능한 용량을 기준으로 하지 않습니다. 각 Capacity Tiers 라이센스는 지정된 용량에 대해 개별 노드 일련 번호에 할당되며, 관련 지원 계약이 필요합니다. 
+keywords: license, licensing, Capacity Pools, usable, space 
+summary: Capacity Pools 라이선스는 노드, HA 쌍 또는 클러스터의 사용 가능한 용량이 아니라 각 노드에서 관리하는 기본 디스크 용량을 기준으로 합니다. 각 Capacity Pools 라이선스는 지정된 용량에 대해 개별 노드 일련 번호에 할당되며 관련 지원 계약이 필요합니다. 
 ---
 = ONTAP Select의 용량 풀 라이센스 크기 결정
 :hardbreaks:
@@ -14,6 +14,16 @@ summary: Capacity Tiers 라이센스는 각 노드에서 관리하는 기본 디
 
 
 [role="lead"]
+배포에 필요한 충분한 라이선스 용량을 확보하기 위해 사용 가능한 공간과 클러스터 구성 오버헤드를 기준으로 ONTAP Select Capacity Pool 라이선스 크기를 계산합니다.
+
+Capacity Pools 라이선스 크기를 결정하기 전에 다음 고려 사항을 검토해야 합니다.
+
+* 하드웨어 RAID(VMDKs) 및 소프트웨어 RAID(NVMe 또는 SSDs) 구성 모두에서 라이선스 사용량은 데이터 애그리게이트에 할당된 데이터 디스크 또는 데이터 파티션을 기준으로 계산됩니다.
+* ONTAP Select는 RAID-DP 패리티 디스크 및 파티션을 라이선스 사용량에서 제외합니다. 애그리게이트에 추가된 데이터 파티션 및 디스크에 대해서만 라이선스가 부여되므로 RAID-DP 패리티 오버헤드로 인한 추가 라이선스 용량 소모는 없습니다.
+* 대기 드라이브 용량은 애그리게이트 사용 가능 용량에 포함되지 않으며 라이선스 용량을 소모하지 않습니다.
+* 패리티 디스크는 데이터 보호 전용입니다. 볼륨 및 데이터를 저장할 수 있는 실제 저장 공간을 제공하지 않으며, 사용 가능한 용량으로 계산되지 않습니다.
+
+
 용량 풀 라이선스의 허가 용량은 최소 2TB부터 시작하여 TB 단위로 제공됩니다. 허가 용량은 사용 가능한 공간에 오버헤드 계수를 곱하여 계산합니다. 오버헤드 계수는 사용 가능한 공간에서 차감되는 ONTAP Select 소프트웨어 오버헤드 용량을 추정한 값이며, NVMe, SSD, HDD 또는 가상 드라이브의 ONTAP Select 용량을 결정하는 데 적용됩니다. 오버헤드 계수는 단일 노드 클러스터와 다중 노드(HA 쌍 기반) 클러스터 간에 차이가 있습니다.
 
 * 단일 노드 클러스터의 오버헤드 계수는 1.13입니다.

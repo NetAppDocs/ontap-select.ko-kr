@@ -3773,12 +3773,10 @@
   <block id="2dd64bd29dd925332151bac56daee54d" category="list-text">SVM-Migrate</block>
   <block id="191cca9b69f6675fd704265efaee5cd4" category="paragraph">ONTAP Select는 비동기 SnapMirror에서 일관성 그룹을 지원하지 않습니다.</block>
   <block id="4b24c4ea95509e5cbdbe193ec75f463e" category="paragraph">용량 풀 라이선스의 허가 용량은 최소 2TB부터 시작하여 TB 단위로 제공됩니다. 허가 용량은 사용 가능한 공간에 오버헤드 계수를 곱하여 계산합니다. 오버헤드 계수는 사용 가능한 공간에서 차감되는 ONTAP Select 소프트웨어 오버헤드 용량을 추정한 값이며, NVMe, SSD, HDD 또는 가상 드라이브의 ONTAP Select 용량을 결정하는 데 적용됩니다. 오버헤드 계수는 단일 노드 클러스터와 다중 노드(HA 쌍 기반) 클러스터 간에 차이가 있습니다.</block>
-  <block id="b3a8f80cb2ce78cbbf07a7817fabad7d" category="paragraph">배포에 필요한 용량을 충분히 확보하려면 사용 가능한 공간을 기준으로 라이선스 용량을 계산해야 합니다. 예를 들어, HA 쌍에 20TB의 사용 가능한 용량(노드당 10TB)이 필요한 경우:</block>
   <block id="863cc3c84b4e89fdd7579f92bb937ebc" category="list-text">HA 쌍을 사용하면 이중화를 위해 두 노드 간에 데이터가 복제되므로, HA 쌍에서 사용 가능한 데이터 20TB를 확보하려면 노드 중 하나가 오프라인 상태가 될 경우를 대비하여 노드당 20TB가 필요합니다.</block>
   <block id="3e0455dedd9dea9911d6347cfe0aee63" category="list-text">2.67이라는 계수는 각 노드의 용량을 두 배로 늘리고 ONTAP Select가 작동하는 데 필요한 오버헤드 용량(0.67)을 추가합니다.</block>
   <block id="e1b77540ab30a2b9d111bb1c6ae9524f" category="list-text">노드당 라이선스 용량은 27TB(10 x 2.67 = 26.7)입니다. HA 쌍의 경우, 20TB의 사용 가능한 용량을 확보하려면 27TB 라이선스 두 개가 필요합니다.</block>
   <block id="60a2cd8b21b5abdd1f9f570f98aead06" category="paragraph">Capacity Tiers 라이선스의 허가 용량은 최소 1TB부터 시작하여 TB 단위로 제공됩니다. 허가 용량은 사용 가능한 공간에 오버헤드 계수를 곱하여 계산합니다. 오버헤드 계수는 사용 가능한 공간에서 차감되는 ONTAP Select 소프트웨어 오버헤드 용량을 추정하며, NVMe, SSD, HDD 또는 가상 드라이브의 ONTAP Select 용량을 결정하는 데 적용됩니다. 오버헤드 계수는 단일 노드 클러스터와 다중 노드(HA 쌍 기반) 클러스터 간에 차이가 있습니다.</block>
-  <block id="ab9e259cd278dabfae81423ce071874c" category="paragraph">배포에 필요한 용량을 충분히 확보하려면 사용 가능한 공간을 기준으로 라이선스 용량을 계산해야 합니다. 예를 들어, HA 쌍에 10TB의 사용 가능한 용량(노드당 5TB)이 필요한 경우:</block>
   <block id="bd88bf77fede236871bbdaecddefca53" category="list-text">HA 쌍을 사용하면 데이터가 두 노드 사이에 복제되어 이중화가 이루어지므로, HA 쌍에서 10TB의 사용 가능한 데이터를 확보하려면 노드 중 하나가 오프라인 상태가 될 경우를 대비하여 노드당 10TB가 필요합니다.</block>
   <block id="c0945522d1f6ae9ba28c16c4d8e24c38" category="list-text">노드당 라이선스 용량은 14TB(5 x 2.67 = 13.35)입니다. HA 쌍의 경우, 10TB의 사용 가능한 용량을 확보하려면 14TB 라이선스 두 개가 필요합니다.</block>
   <block id="74b1b9052c3c702d9cea5b8cd980a547" category="paragraph">HA 쌍의 노드당:</block>
@@ -4279,4 +4277,14 @@
   <block id="0b3fbf115b7bb8c3a3284542b9840849" category="paragraph">KVM 환경에 ONTAP Select Deploy 유틸리티를 설치하기 전에 고려해야 할 KVM 하이퍼바이저 환경 특유의 요구 사항 및 제한 사항이 몇 가지 있습니다.</block>
   <block id="6ec35a9fea619f9056b56a9cceaecd8a" category="paragraph">ONTAP Select Deploy 및 ONTAP Select for KVM은 외부 어레이에서 공유 논리 스토리지 풀 유형을 사용하여 ONTAP Select 단일 노드 클러스터 구성을 지원합니다. 스토리지 풀은 iSCSI 또는 FC/FCoE 기반일 수 있습니다. 다른 유형의 스토리지 풀은 지원되지 않습니다.</block>
   <block id="bf1bf7b2d6495806e380ad07c5f6c4ac" category="cell"><block ref="bf1bf7b2d6495806e380ad07c5f6c4ac" category="inline-link-macro-rx"></block></block>
+  <block id="973e60ac87d2047ed8383fc1a9ccd1ab" category="summary">Capacity Pools 라이선스는 노드, HA 쌍 또는 클러스터의 사용 가능한 용량이 아니라 각 노드에서 관리하는 기본 디스크 용량을 기준으로 합니다. 각 Capacity Pools 라이선스는 지정된 용량에 대해 개별 노드 일련 번호에 할당되며 관련 지원 계약이 필요합니다.</block>
+  <block id="77abd6d38068ade401e1cda5d6d4f4bf" category="paragraph">배포에 필요한 충분한 라이선스 용량을 확보하기 위해 사용 가능한 공간과 클러스터 구성 오버헤드를 기준으로 ONTAP Select Capacity Pool 라이선스 크기를 계산합니다.</block>
+  <block id="fc16ee53985da42d5d6e0c02fdd5f183" category="paragraph">Capacity Pools 라이선스 크기를 결정하기 전에 다음 고려 사항을 검토해야 합니다.</block>
+  <block id="afbbd458508df60809b6d4aec77f511e" category="list-text">하드웨어 RAID(VMDKs) 및 소프트웨어 RAID(NVMe 또는 SSDs) 구성 모두에서 라이선스 사용량은 데이터 애그리게이트에 할당된 데이터 디스크 또는 데이터 파티션을 기준으로 계산됩니다.</block>
+  <block id="d8d5fad58568a0f0ba995cf205ca4b44" category="list-text">ONTAP Select는 RAID-DP 패리티 디스크 및 파티션을 라이선스 사용량에서 제외합니다. 애그리게이트에 추가된 데이터 파티션 및 디스크에 대해서만 라이선스가 부여되므로 RAID-DP 패리티 오버헤드로 인한 추가 라이선스 용량 소모는 없습니다.</block>
+  <block id="fca20405fb9c0582e499eb228377067f" category="list-text">대기 드라이브 용량은 애그리게이트 사용 가능 용량에 포함되지 않으며 라이선스 용량을 소모하지 않습니다.</block>
+  <block id="95970b7eb58e4eefe52eb37d1c8a622d" category="list-text">패리티 디스크는 데이터 보호 전용입니다. 볼륨 및 데이터를 저장할 수 있는 실제 저장 공간을 제공하지 않으며, 사용 가능한 용량으로 계산되지 않습니다.</block>
+  <block id="94d3cb7d191621094c7273b8f519cdcb" category="paragraph">배포에 필요한 용량을 충분히 확보하려면 사용 가능한 공간을 기준으로 라이선스 용량을 계산해야 합니다. 예를 들어, HA 쌍에 20TB의 사용 가능한 용량(노드당 10TB)이 필요한 경우:</block>
+  <block id="914e50a7e70b439cfca1376c40659db4" category="paragraph">Capacity Tiers 라이선스 크기를 결정하기 전에 다음 사항을 검토해야 합니다:</block>
+  <block id="97a23d2070cc57242b398716549eaa47" category="paragraph">배포에 필요한 용량을 충분히 확보하려면 사용 가능한 공간을 기준으로 라이선스 용량을 계산해야 합니다. 예를 들어, HA 쌍에 10TB의 사용 가능한 용량(노드당 5TB)을 원하는 경우:</block>
 </blocks>
